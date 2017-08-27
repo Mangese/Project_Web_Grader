@@ -1,0 +1,45 @@
+.inputstl {
+  padding: 9px;
+
+  border: solid 1px #173955;
+
+  outline: 0;
+
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left 25,
+    from(#ffffff),
+    color-stop(4%, #aacce8),
+    to(#ffffff)
+  );
+
+  background: -moz-linear-gradient(top, #ffffff, #aacce8 1px, #ffffff 25px);
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+.form-horizontal {
+  display: inherit;
+}
+
+thead {
+  background-color: #20b2aa;
+}
+
+.container-table {
+  width: 80%;
+  height: 300px;
+  margin: 0px auto;
+  margin-top: 50px;
+  padding: 30px 20px;
+  border-radius: 5px;
+  color: #008080;
+  background-color: #ffffff;
+  box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+}
+}
