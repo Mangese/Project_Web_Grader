@@ -37,15 +37,22 @@
 			echo "</br>";
 			if($result)
 			{
-				echo "<font size = '200'>";
-				echo "Result = CORRECT";
+				echo "correct";
+				/*
+				echo "<script type = 'text/javascript'>";
+				echo "window.location = 'StudentUpload.html';";
+				echo "</script>";
+				*/
 			}
 			else
 			{
-				echo "<font size = '200'>";
-				echo "Result = WRONG";
+				echo "wrong";
+				/*
+				echo "<script type = 'text/javascript'>";
+				echo "window.location = 'StudentUpload.html';";
+				echo "</script>";
+				*/
 			}
-			<a herf="success.php">link</a>
 		}
 		else
 		{
