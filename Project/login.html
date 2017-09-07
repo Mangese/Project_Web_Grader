@@ -40,7 +40,6 @@
 </style>
 </head>
 <body>
-
 <script >
 
   function testalert() {
@@ -55,9 +54,6 @@
 <div class="login-container" >
 <h1 >STUDENT WEB GRADER</h1>
 <?php
-session_start();
-  
-    $_SESSION['testsend'] = test_send_from_login;
   
 ?>
         
@@ -83,7 +79,7 @@ session_start();
               <input
                 type="password"
                 class="form-control"
-                id="inputPassword3"
+                name="inputPassword3"
                 placeholder="Password"
               />
             </div>

@@ -48,13 +48,24 @@
 }
 </script>
 <div class="login-container" >
-<h1 >Register</h1>        
+<h1 >Success</h1>        
         <form>
          <?php
          session_start();
 // echo "Hello World!";
-echo "<br>";
-echo "Firstname :".$_POST["txtFirstname"];
+$conn = mysql_connect("localhost","mangese","000000");
+if($conn != FALSE)
+{
+$FN = $_POST["txtFirstname"];
+$LN = $_POST["txtLastname"];
+$UN = $_POST["txtUsername"];
+$SID= $_POST["txtStudentID"];
+$DE = $_POST["sel1"];
+$EM = $_POST["txtEmail"];
+$PW = $_POST["txtPassword"];
+mysql_query("use grader;");
+mysql_query("INSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM');",$conn);
+/*echo "Firstname :".$_POST["txtFirstname"];
 echo "<br>";
 echo "Lastname :".$_POST["txtLastname"];
 echo "<br>";
@@ -71,16 +82,20 @@ echo "<br>";
 echo "Password2 :".$_POST["txtPassword2"]."  **Confirm Password but now dont check**";
 echo "<br>";
 echo $_POST["inputEmail3"];
-echo "<br>";
-if(trim($_POST["txtFirstname"]) == " ")
+echo "<br>";*/
+if(trim($_POST["txtFirstname"]) == "")
 	{
-		
 		echo"<body onload=\"window.alert('Please input Name!'); 
 		return history.back();\">";
 		exit();
 	}
 $testsend = $_SESSION['testsend'];
 echo "$testsend";
+}
+else
+{
+echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
+}
 ?> 
   </form>
 </div>

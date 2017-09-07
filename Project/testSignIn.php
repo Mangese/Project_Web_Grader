@@ -51,23 +51,42 @@
 <h1 >Sign In</h1>        
         <form>
          <?php
-         session_start();
-echo "Hello World!";
-echo "<br>";
-echo $_POST["txtFirstname"];
-echo "<br>";
-echo $_POST["inputEmail3"];
-echo "<br>";
-if(trim($_POST["txtFirstname"]) == " ")
+//         session_start();
+if(trim($_POST["inputEmail3"]) == "")
 	{
-		
-		echo"<body onload=\"window.alert('Please input Name!'); 
+		echo"<body onload=\"window.alert('Please input Email!'); 
 		return history.back();\">";
 		exit();
 	}
-$testsend = $_SESSION['testsend'];
-echo "$testsend";
-?> 
+
+if(trim($_POST["inputPassword3"]) == "")
+	{
+		echo"<body onload=\"window.alert('Please input Password!'); 
+		return history.back();\">";
+		exit();
+	}
+
+$conn = mysql_connect("localhost","mangese","000000");
+if($conn != FALSE)
+{
+mysql_query("use grader;");
+$PW = $_POST["inputPassword3"];
+$UN = $_POST["inputEmail3"];
+$result = mysql_query("select count(*) from user where email = '$UN' and password = md5('$PW');");
+if(mysql_result($result,0)!=0)
+{
+	echo "<script> window.location = 'StudentUpload.html' </script>";
+}
+else
+{
+		echo"<body onload=\"window.alert('Invalid Email or Password!'); 
+		return history.back();\">";
+		exit();
+}
+//$testsend = $_SESSION['testsend'];
+//echo "$testsend";
+}
+?>
   </form>
 </div>
 

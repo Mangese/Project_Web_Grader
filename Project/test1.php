@@ -6,6 +6,7 @@
 	$temp = $_FILES['Uploaded_file']['name'];
 	$file_name = $temp;
 	$temp = substr($temp,0,strpos($temp,"."));
+	echo $temp;
 	exec("gcc $target$temp.c -o $temp.exe",$out1,$re1);
 	if(!$re1)
 	{
@@ -42,13 +43,13 @@
 		{
 		echo "TIMEOUT";
 		}
-		exec("rm $temp.txt");
-		exec("rm $temp.exe");
+		exec("rm '$temp.txt'");
+		exec("rm '$temp.exe'");
 	}
 	else
 	{
 		echo "COMPILE ERROR";
-		exec("rm $target$file_name");
+		exec("rm '$target$file_name' ");
 	}
 ?>
 
