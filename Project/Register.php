@@ -52,9 +52,23 @@
         <form>
          <?php
          session_start();
-echo "Hello World!";
+// echo "Hello World!";
 echo "<br>";
-echo $_POST["txtFirstname"];
+echo "Firstname :".$_POST["txtFirstname"];
+echo "<br>";
+echo "Lastname :".$_POST["txtLastname"];
+echo "<br>";
+echo "Username :".$_POST["txtUsername"];
+echo "<br>";
+echo "Student ID :".$_POST["txtStudentID"];
+echo "<br>";
+echo "Department :".$_POST["sel1"];
+echo "<br>";
+echo "E-mail :".$_POST["txtEmail"];
+echo "<br>";
+echo "Password :".$_POST["txtPassword"];
+echo "<br>";
+echo "Password2 :".$_POST["txtPassword2"]."  **Confirm Password but now dont check**";
 echo "<br>";
 echo $_POST["inputEmail3"];
 echo "<br>";
