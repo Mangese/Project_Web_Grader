@@ -1,5 +1,5 @@
 ﻿# Host: localhost  (Version 5.7.17-log)
-# Date: 2017-08-31 01:25:25
+# Date: 2017-09-07 22:22:17
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -9,7 +9,7 @@
 
 DROP TABLE IF EXISTS `class`;
 CREATE TABLE `class` (
-  `CLASS_ID` varchar(255) NOT NULL DEFAULT '0' COMMENT 'รหัสรายวิชา',
+  `CLASS_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสรายวิชา',
   `Class_Name` varchar(255) DEFAULT NULL COMMENT 'ชื่อวิชา',
   PRIMARY KEY (`CLASS_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=tis620;
@@ -25,11 +25,11 @@ CREATE TABLE `class` (
 
 DROP TABLE IF EXISTS `homework`;
 CREATE TABLE `homework` (
-  `H_ID` varchar(255) NOT NULL DEFAULT 'H_ID' COMMENT 'รหัสงาน',
-  `P_ID` varchar(255) DEFAULT NULL COMMENT 'รหัสโจทย์',
+  `H_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสงาน',
+  `P_ID` int(11) DEFAULT NULL COMMENT 'รหัสโจทย์',
   `DEADLINE` date DEFAULT NULL COMMENT 'กำหนดส่ง',
   `LANGUAGE` varchar(255) DEFAULT NULL COMMENT 'ภาษาที่ใช้ตรวจ',
-  `S_ID` varchar(255) DEFAULT NULL COMMENT 'รหัส section',
+  `S_ID` int(11) DEFAULT NULL COMMENT 'รหัส section',
   `Remark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`H_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=tis620;
@@ -45,10 +45,10 @@ CREATE TABLE `homework` (
 
 DROP TABLE IF EXISTS `problem`;
 CREATE TABLE `problem` (
-  `P_ID` varchar(255) NOT NULL DEFAULT 'PROBLEM' COMMENT 'รหัสโจทย์',
+  `P_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสโจทย์',
   `File_Name` varchar(255) DEFAULT NULL COMMENT 'ชื่อไฟล์ที่อัพโหลด',
-  `Class_ID` varchar(255) DEFAULT NULL COMMENT 'รหัสวิชา',
-  `User_ID` varchar(255) DEFAULT NULL,
+  `Class_ID` int(11) DEFAULT NULL COMMENT 'รหัสวิชา',
+  `User_ID` int(11) DEFAULT NULL,
   `Remark` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`P_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=tis620;
@@ -64,8 +64,9 @@ CREATE TABLE `problem` (
 
 DROP TABLE IF EXISTS `register`;
 CREATE TABLE `register` (
-  `S_ID` varchar(255) DEFAULT NULL COMMENT 'รหัสsection',
-  `User_ID` varchar(255) DEFAULT NULL
+  `S_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสsection',
+  `User_ID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=tis620;
 
 #
@@ -95,10 +96,10 @@ CREATE TABLE `running` (
 
 DROP TABLE IF EXISTS `section`;
 CREATE TABLE `section` (
-  `S_ID` varchar(255) NOT NULL DEFAULT 'S_ID',
+  `S_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Password` varchar(255) DEFAULT NULL COMMENT 'รหัสเข้าร่วมวิชา',
-  `Class_ID` varchar(255) DEFAULT NULL COMMENT 'รหัสรายวิชา',
-  `User_ID` varchar(255) DEFAULT NULL,
+  `Class_ID` int(11) DEFAULT NULL COMMENT 'รหัสรายวิชา',
+  `User_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`S_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=tis620;
 
@@ -113,20 +114,23 @@ CREATE TABLE `section` (
 
 DROP TABLE IF EXISTS `submit`;
 CREATE TABLE `submit` (
-  `SUB_ID` varchar(255) NOT NULL DEFAULT '' COMMENT 'รหัสการส่ง',
-  `User_ID` varchar(255) DEFAULT NULL,
-  `H_ID` varchar(255) DEFAULT NULL COMMENT 'รหัสงาน',
+  `SUB_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสการส่ง',
+  `User_ID` int(11) DEFAULT NULL,
+  `H_ID` int(11) DEFAULT NULL COMMENT 'รหัสงาน',
   `STATUS` varchar(255) DEFAULT NULL COMMENT 'สถานะการตรวจ',
   `SUBMIT_TIME` time DEFAULT NULL COMMENT 'เวลาที่ส่ง',
   `SUBMIT_DATE` date DEFAULT NULL COMMENT 'วันที่ส่ง',
   `SOURCE_FILE` varchar(255) DEFAULT NULL COMMENT 'ชื่อไฟล์ที่ส่ง',
   PRIMARY KEY (`SUB_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=tis620;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=tis620;
 
 #
 # Data for table "submit"
 #
 
+/*!40000 ALTER TABLE `submit` DISABLE KEYS */;
+INSERT INTO `submit` VALUES (1,5713086,0,'$STATUS','02:01:16','2017-08-31','test.c');
+/*!40000 ALTER TABLE `submit` ENABLE KEYS */;
 
 #
 # Structure for table "test_case"
@@ -134,7 +138,7 @@ CREATE TABLE `submit` (
 
 DROP TABLE IF EXISTS `test_case`;
 CREATE TABLE `test_case` (
-  `H_ID` varchar(255) NOT NULL DEFAULT 'H_ID' COMMENT 'รหัสงาน',
+  `H_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสงาน',
   `OPENCASE_FILE` varchar(255) DEFAULT NULL COMMENT 'ตัวอย่างเคสทดลองที่เปิดเผยได้',
   `CLOSECASE_FILE` varchar(255) DEFAULT NULL COMMENT 'เคสที่ใช้ในการตรวจ',
   PRIMARY KEY (`H_ID`)
@@ -156,9 +160,13 @@ CREATE TABLE `user` (
   `Student_ID` varchar(255) DEFAULT NULL COMMENT 'รหัสนักศึกษา',
   `USER_TYPE` varchar(255) DEFAULT NULL COMMENT 'ประเภทผู้ใช้งาน',
   `Remark` varchar(255) DEFAULT NULL,
-  `User_ID` varchar(255) NOT NULL DEFAULT '',
+  `User_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Firstname` varchar(255) DEFAULT NULL,
+  `Lastname` varchar(255) DEFAULT NULL,
+  `Department` varchar(255) DEFAULT NULL,
+  `Email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`User_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=tis620;
+) ENGINE=MyISAM DEFAULT CHARSET=tis620;
 
 #
 # Data for table "user"
