@@ -1,3 +1,3 @@
 <?php
-echo "<script> window.location = '/Project/login.html'; </script>"
+	echo "<script> window.location = '/Project/login.html'; </script>";
 ?>

@@ -48,10 +48,10 @@
 }
 </script>
 <div class="login-container" >
-<h1 >Sign In</h1>        
+<h1 >Sign In</h1>
         <form>
          <?php
-//         session_start();
+         session_start();
 if(trim($_POST["inputEmail3"]) == "")
 	{
 		echo"<body onload=\"window.alert('Please input Email!'); 
@@ -75,7 +75,9 @@ $UN = $_POST["inputEmail3"];
 $result = mysql_query("select count(*) from user where email = '$UN' and password = md5('$PW');");
 if(mysql_result($result,0)!=0)
 {
-	echo "<script> window.location = 'StudentUpload.html' </script>";
+	$_SESSION["user"] = $UN;;
+	$_SESSION["type"] = "Admin";
+	echo "<script> window.location = 'StudentUpload.php' </script>";
 }
 else
 {
