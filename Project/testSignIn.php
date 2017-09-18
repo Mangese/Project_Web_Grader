@@ -54,7 +54,7 @@
          session_start();
 if(trim($_POST["inputEmail3"]) == "")
 	{
-		echo"<body onload=\"window.alert('Please input Email!'); 
+		echo"<body onload=\"window.alert('Please input Username!'); 
 		return history.back();\">";
 		exit();
 	}
@@ -72,7 +72,7 @@ if($conn != FALSE)
 mysql_query("use grader;");
 $PW = $_POST["inputPassword3"];
 $UN = $_POST["inputEmail3"];
-$result = mysql_query("select count(*) from user where email = '$UN' and password = md5('$PW');");
+$result = mysql_query("select count(*) from user where Username = '$UN' and password = md5('$PW');");
 if(mysql_result($result,0)!=0)
 {
 	$_SESSION["user"] = $UN;;
