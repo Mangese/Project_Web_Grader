@@ -30,13 +30,23 @@
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Student</span>
-      <label class="ml-auto ">tangmo eiei</label>
-      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" type="submit">Logout</button>
+      <label class="ml-auto " id = "SessionUser"></label>
+      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" type="button" onclick = "logout()">Logout</button>
     </form>
   </nav>
 
 </head>
-
+<?php
+	session_start();
+	if(!isset($_SESSION["user"]))
+	{
+	echo "<script> alert('Please Login First'); window.location = 'login.html'; </script>";
+	}
+	else
+	{
+	echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
+	}
+?>
 <body>
   <script>
     (function ($) {
@@ -64,8 +74,11 @@
         label.setAttribute("title", labelValue);
       });
     })(jQuery);
+ function logout()
+{
+window.location = "logout.php";
+}
   </script>
-
   <div class="container-table">
     <div class="head-std row">
       <div class="dropdown">
@@ -127,7 +140,7 @@
               <td style="width:15%">
                 001
               </td>
-              <td style="width:40%">
+              <td style="width:40%" onclick = "window.open('TestPdfOpen.pdf','_blank');" >
                 Test 1
               </td>
               <td style="width:15%">
