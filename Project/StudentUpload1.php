@@ -48,6 +48,7 @@
 	}
 ?>
 <body>
+<input type = "hidden" id = "TableUploadHeader"/>
   <script>
     (function ($) {
       var doc = document,
@@ -140,8 +141,8 @@ window.location = "logout.php";
               <td style="width:15%">
                 001
               </td>
-              <td style="width:40%" onclick = "window.open('TestPdfOpen.pdf','_blank');" >
-                Test 1
+              <td style="width:40%" >
+               <a href = "TestPdfOpen.pdf" target = "_blank">Test 1</a>
               </td>
               <td style="width:15%">
                 0
@@ -150,7 +151,7 @@ window.location = "logout.php";
                 Fail
               </td>
               <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#test1">Upload</button>
+                <button type="button" class="btn btn-outline-secondary"  onclick = "document.getElementById('modalValue').innerHTML = 'Test1';" data-toggle="modal" data-target="#test1">Upload</button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="test1" role="dialog">
@@ -158,7 +159,7 @@ window.location = "logout.php";
                     <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">Test 1</h4>
+                        <h4 class="modal-title" id = "modalValue"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <div class="modal-body" style="margin:auto;">
