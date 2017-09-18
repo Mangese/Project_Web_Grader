@@ -77,7 +77,7 @@ if(mysql_result($result,0)!=0)
 {
 	$_SESSION["user"] = $UN;;
 	$_SESSION["type"] = "Admin";
-	echo "<script> window.location = 'StudentUpload.php' </script>";
+	echo "<script> window.location = 'StudentUpload1.php' </script>";
 }
 else
 {
