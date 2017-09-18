@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
 
@@ -167,3 +168,20 @@
 </body>
 
 </html>
+=======
+< ?php
+//Remove spaces in PHP tag
+$destfol = "uploadedimages/";
+$destfol = $destfol . basename( $_FILES['sentfile']['name']) ;
+ 
+if(move_uploaded_file($_FILES['sentfile']['tmp_name'], $destfol))
+ {
+     echo basename( $_FILES['sentfile']['name']). " file uploaded";
+ }
+ else {
+
+     echo "Oops, There was some Problem! Please fix it.";
+ 
+ }
+ ?>
+>>>>>>> f3abc2f39d641ab60e95b6efcbb3fc50a1fca4d9
