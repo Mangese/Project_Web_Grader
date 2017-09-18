@@ -50,6 +50,10 @@
 <body>
 <input type = "hidden" id = "TableUploadHeader"/>
   <script>
+    	$(document).ready(function()
+	{
+	
+	});
     (function ($) {
       var doc = document,
         supportsMultipleFiles = "multiple" in doc.createElement("input");
@@ -151,7 +155,7 @@ window.location = "logout.php";
                 Fail
               </td>
               <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary"  onclick = "document.getElementById('modalValue').innerHTML = 'Test1';" data-toggle="modal" data-target="#test1">Upload</button>
+                <button type="button" class="btn btn-outline-secondary"  onclick = "alert(this.innerHTML); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="test1" role="dialog">
