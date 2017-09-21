@@ -51,7 +51,7 @@
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
       <label class="ml-auto " id = "SessionUser"></label>
-      <button class="btn btn-outline-secondary logout-btn ml-auto my-2 my-sm-0" type="submit">Logout</button>
+      <button class="btn btn-outline-secondary logout-btn ml-auto my-2 my-sm-0" onclick = "logout()" type="button">Logout</button>
     </form>
   </nav>
 </head>

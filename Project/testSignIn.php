@@ -80,8 +80,8 @@ if(mysql_num_rows($result)==1)
 	$_SESSION["type"] = "Admin";
 	while($row = mysql_fetch_assoc($result))
 	{
-	echo "<script> alert('".$row['utp']."'); </script>";
-	if(!strcmp($row['utp'],"T"))
+	$_SESSION["utype"] = $row['utp'];
+	if(strcmp($row['utp'],"T"))
 	{
 	echo "<script> window.location = 'StudentUpload1.php' </script>";
 	}
