@@ -83,6 +83,10 @@
 {
 window.location = "logout.php";
 }
+function ModalHeaderFunc(x)
+{
+$("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
+}
   </script>
   <div class="container-table">
     <div class="head-std row">
@@ -145,7 +149,7 @@ window.location = "logout.php";
               <td style="width:15%">
                 001
               </td>
-              <td style="width:40%" >
+              <td style="width:40%" class = "use">
                <a href = "TestPdfOpen.pdf" target = "_blank">Test 1</a>
               </td>
               <td style="width:15%">
@@ -155,7 +159,7 @@ window.location = "logout.php";
                 Fail
               </td>
               <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary"  onclick = "alert(this.innerHTML); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
+                <button type="button" class="btn btn-outline-secondary"  onclick = "ModalHeaderFunc(this); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="test1" role="dialog">

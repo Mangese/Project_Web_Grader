@@ -72,12 +72,24 @@ if($conn != FALSE)
 mysql_query("use grader;");
 $PW = $_POST["inputPassword3"];
 $UN = $_POST["inputEmail3"];
-$result = mysql_query("select count(*) from user where Username = '$UN' and password = md5('$PW');");
-if(mysql_result($result,0)!=0)
+$result = mysql_query("select count(*),USER_TYPE as utp from user where Username = '$UN' and password = md5('$PW');");
+//$row = mysql_fetch_assoc($result);
+if(mysql_num_rows($result)==1)
 {
 	$_SESSION["user"] = $UN;;
 	$_SESSION["type"] = "Admin";
+	while($row = mysql_fetch_assoc($result))
+	{
+	echo "<script> alert('".$row['utp']."'); </script>";
+	if(!strcmp($row['utp'],"T"))
+	{
 	echo "<script> window.location = 'StudentUpload1.php' </script>";
+	}
+	else
+	{
+	echo "<script> window.location = 'TeacherUpload.php' </script>";
+	}
+	}
 }
 else
 {
@@ -85,8 +97,6 @@ else
 		return history.back();\">";
 		exit();
 }
-//$testsend = $_SESSION['testsend'];
-//echo "$testsend";
 }
 ?>
   </form>
