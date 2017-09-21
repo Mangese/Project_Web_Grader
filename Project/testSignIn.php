@@ -77,7 +77,6 @@ $result = mysql_query("select count(*),USER_TYPE as utp from user where Username
 if(mysql_num_rows($result)==1)
 {
 	$_SESSION["user"] = $UN;;
-	$_SESSION["type"] = "Admin";
 	while($row = mysql_fetch_assoc($result))
 	{
 	$_SESSION["utype"] = $row['utp'];

@@ -59,7 +59,7 @@
 	session_start();
 	if(!isset($_SESSION["user"]))
 	{
-	echo "<script> alert('Please Login First'); window.location = 'login.html'; </script>";
+	echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
 	}
 	else
 	{
