@@ -50,6 +50,7 @@
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
+      <label class="ml-auto " id = "SessionUser"></label>
       <button class="btn btn-outline-secondary logout-btn ml-auto my-2 my-sm-0" type="submit">Logout</button>
     </form>
   </nav>
