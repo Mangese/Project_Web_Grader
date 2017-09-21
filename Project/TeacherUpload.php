@@ -55,7 +55,17 @@
     </form>
   </nav>
 </head>
-
+<?php
+	session_start();
+	if(!isset($_SESSION["user"]))
+	{
+	echo "<script> alert('Please Login First'); window.location = 'login.html'; </script>";
+	}
+	else
+	{
+	echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
+	}
+?>
 <body>
   <script>
     $('#myTab a').click(function (e) {
@@ -104,6 +114,10 @@
     })(jQuery);
   </script>
   <script>
+     function logout()
+{
+window.location = "logout.php";
+}
     function createFun() {
       var x = document.getElementById("selSection");
       var y = document.getElementById("createClass").value;
