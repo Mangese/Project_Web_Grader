@@ -51,7 +51,7 @@
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
       <label class="ml-auto " id = "SessionUser"></label>
-      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick = "logout()" type="button">Logout</button>
+      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick = "logout();" type="button">Logout</button>
     </form>
   </nav>
 </head>
@@ -87,6 +87,10 @@
   </script>
 
   <script>
+	function logout()
+	{
+	window.location = "logout.php";
+	}
     (function ($) {
       var doc = document,
         supportsMultipleFiles = "multiple" in doc.createElement("input");
@@ -114,10 +118,6 @@
     })(jQuery);
   </script>
   <script>
-     function logout()
-{
-window.location = "logout.php";
-}
     function () {
       var x = document.getElementById("selSection");
       var pClass = document.getElementById("createClass").value;
