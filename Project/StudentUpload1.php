@@ -57,16 +57,13 @@
     (function ($) {
       var doc = document,
         supportsMultipleFiles = "multiple" in doc.createElement("input");
-
       $(doc).on("change", ".file > input[type=file]", function () {
         var input = this,
           fileNames = [],
           label = input.nextElementSibling,
           files, len, i = -1, labelValue;
-
         if (supportsMultipleFiles) {
           len = (files = input.files).length;
-
           while (++i < len) {
             fileNames.push(files[i].name);
           }
@@ -74,7 +71,6 @@
         else {
           fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
         }
-
         label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
         label.setAttribute("title", labelValue);
       });
@@ -145,166 +141,47 @@ $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td style="width:15%">
-                001
-              </td>
-              <td style="width:40%" class = "use">
-               <a href = "TestPdfOpen.pdf" target = "_blank">Test 1</a>
-              </td>
-              <td style="width:15%">
-                0
-              </td>
-              <td style="width:15%">
-                Fail
-              </td>
-              <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary"  onclick = "ModalHeaderFunc(this); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
+            <div id = "DataFromAjax">
+              <tr>
+                <td style="width:15%">
+                  001
+                </td>
+                <td style="width:40%" class = "use">
+                 <a href = "TestPdfOpen.pdf" target = "_blank">Test 1</a>
+                </td>
+                <td style="width:15%">
+                  0
+                </td>
+                <td style="width:15%">
+                  Fail
+                </td>
+                <td style="width:15%">
+                  <button type="button" class="btn btn-outline-secondary"  onclick = "ModalHeaderFunc(this); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
 
-                <!-- Modal -->
-                <div class="modal fade" id="test1" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title" id = "modalValue"></h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      </div>
-                      <div class="modal-body" style="margin:auto;">
-                        <label class="file">
-                          <input type="file">
-                          <span class="file-custom"></span>
-                        </label>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Upload</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="test1" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id = "modalValue"></h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body" style="margin:auto;">
+                          <label class="file">
+                            <input type="file">
+                            <span class="file-custom"></span>
+                          </label>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Upload</button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-              </td>
-            </tr>
-            <tr>
-              <td style="width:15%">
-                002
-              </td>
-              <td style="width:40%">
-                Test 2
-              </td>
-              <td style="width:15%">
-                0
-              </td>
-              <td style="width:15%">
-                Fail
-              </td>
-              <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#test2">Upload</button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="test2" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Test 2</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      </div>
-                      <div class="modal-body" style="margin:auto;">
-                        <label class="file">
-                          <input type="file" >
-                          <span class="file-custom"></span>
-                        </label>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Upload</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </td>
-            </tr>
-            <tr>
-              <td style="width:15%">
-                003
-              </td>
-              <td style="width:40%">
-                Test 3
-              </td>
-              <td style="width:15%">
-                0
-              </td>
-              <td style="width:15%">
-                Fail
-              </td>
-              <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#test3">Upload</button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="test3" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Test 3</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      </div>
-                      <div class="modal-body" style="margin:auto;">
-                        <label class="file">
-                          <input type="file">
-                          <span class="file-custom"></span>
-                        </label>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Upload</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </td>
-            </tr>
-            <tr>
-              <td style="width:15%">
-                004
-              </td>
-              <td style="width:40%">
-                Test 4
-              </td>
-              <td style="width:15%">
-                0
-              </td>
-              <td style="width:15%">
-                Fail
-              </td>
-              <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#test4">Upload</button>
-
-                <!-- Modal -->
-                <div class="modal fade" id="test4" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Test 4</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      </div>
-                      <div class="modal-body" style="margin:auto;">
-                        <label class="file">
-                          <input type="file">
-                          <span class="file-custom"></span>
-                        </label>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Upload</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </td>
-            </tr>
+                </td>
+              </tr>
           </tbody>
         </table>
       </div>
