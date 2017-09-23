@@ -54,17 +54,17 @@
 <div class="login-container" >
 <h1 >STUDENT WEB GRADER</h1>
 <?php
-  session_start();
-	if(isset($_SESSION["user"]))
+  	session_start();
+	if(isset($_SESSION["user"]) && isset($_SESSION["utype"]))
 	{
-	if(strcmp($_SESSION["utype"],"T"))
-	{
-	echo "<script> window.location = 'StudentUpload1.php' </script>";
-	}
-	else
-	{
-	echo "<script> window.location = 'TeacherUpload.php' </script>";
-	}
+		if(strcmp($_SESSION["utype"],"T"))
+		{
+		echo "<script> window.location = 'StudentUpload1.php' </script>";
+		}
+		else
+		{
+		echo "<script> window.location = 'TeacherUpload.php' </script>";
+		}
 	}
 ?>
         <form name="from1" method="post" action="testSignIn.php" >

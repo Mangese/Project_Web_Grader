@@ -40,7 +40,7 @@
 	session_start();
 	if(!isset($_SESSION["user"]))
 	{
-	echo "<script> alert('Please Login First'); window.location = 'login.html'; </script>";
+	echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
 	}
 	else
 	{
@@ -48,7 +48,12 @@
 	}
 ?>
 <body>
+<input type = "hidden" id = "TableUploadHeader"/>
   <script>
+    	$(document).ready(function()
+	{
+	
+	});
     (function ($) {
       var doc = document,
         supportsMultipleFiles = "multiple" in doc.createElement("input");
@@ -77,6 +82,10 @@
  function logout()
 {
 window.location = "logout.php";
+}
+function ModalHeaderFunc(x)
+{
+$("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
 }
   </script>
   <div class="container-table">
@@ -140,8 +149,8 @@ window.location = "logout.php";
               <td style="width:15%">
                 001
               </td>
-              <td style="width:40%" onclick = "window.open('TestPdfOpen.pdf','_blank');" >
-                Test 1
+              <td style="width:40%" class = "use">
+               <a href = "TestPdfOpen.pdf" target = "_blank">Test 1</a>
               </td>
               <td style="width:15%">
                 0
@@ -150,7 +159,7 @@ window.location = "logout.php";
                 Fail
               </td>
               <td style="width:15%">
-                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#test1">Upload</button>
+                <button type="button" class="btn btn-outline-secondary"  onclick = "ModalHeaderFunc(this); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
 
                 <!-- Modal -->
                 <div class="modal fade" id="test1" role="dialog">
@@ -158,7 +167,7 @@ window.location = "logout.php";
                     <!-- Modal content-->
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">Test 1</h4>
+                        <h4 class="modal-title" id = "modalValue"></h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
                       <div class="modal-body" style="margin:auto;">

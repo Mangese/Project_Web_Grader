@@ -2,464 +2,573 @@
 <html lang="en">
 
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="theme-color" content="#000000">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
 
-   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
-   
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-      crossorigin="anonymous">
-   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-      crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-      crossorigin="anonymous"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-      crossorigin="anonymous"></script>
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+
+  <!--       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ -->
+  <!-- <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script> -->
 
-   <!-- <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+  />
 
-   <link rel="stylesheet" href="TeacherUpload.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-   <h1>Teacher</h1><br>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> -->
+
+
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="TeacherUpload.css">
+
+  <!-- <h1>Teacher</h1><br> -->
+
+  <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
+    <form class="form-inline">
+      <span class="h3" class="navbar-brand mb-0">Teacher</span>
+      <label class="ml-auto " id = "SessionUser"></label>
+      <button class="btn btn-outline-secondary logout-btn ml-auto my-2 my-sm-0" onclick = "logout()" type="button">Logout</button>
+    </form>
+  </nav>
 </head>
-
+<?php
+	session_start();
+	if(!isset($_SESSION["user"]))
+	{
+	echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
+	}
+	else
+	{
+	echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
+	}
+?>
 <body>
-<script >
+  <script>
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
 
-//   function testalert() {
-//     alert("test alert");
-// }
-
-
-
-$(function() {
-
-  // We can attach the `fileselect` event to all file inputs on the page
-  $(document).on('change', ':file', function() {
-    var input = $(this),
-        numFiles = input.get(0).files ? input.get(0).files.length : 1,
-        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [numFiles, label]);
-  });
-
-  // We can watch for our custom `fileselect` event like this
-  $(document).ready( function() {
-      $(':file').on('fileselect', function(event, numFiles, label) {
-
-          var input = $(this).parents('.input-group').find(':text'),
-              log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-          if( input.length ) {
-              input.val(log);
-          } else {
-              if( log ) alert(log);
-          }
-
+    $(function () {
+      $('#datetimepicker1').datetimepicker({
+        format: 'DD/MM/YYYY'
       });
-  });
+    });
+
+    $(function () {
+      $('#datetimepicker3').datetimepicker({
+        format: 'LT'
+      });
+    });
+  </script>
+
+  <script>
+    (function ($) {
+      var doc = document,
+        supportsMultipleFiles = "multiple" in doc.createElement("input");
+
+      $(doc).on("change", ".file > input[type=file]", function () {
+        var input = this,
+          fileNames = [],
+          label = input.nextElementSibling,
+          files, len, i = -1, labelValue;
+
+        if (supportsMultipleFiles) {
+          len = (files = input.files).length;
+
+          while (++i < len) {
+            fileNames.push(files[i].name);
+          }
+        }
+        else {
+          fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+        }
+
+        label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+        label.setAttribute("title", labelValue);
+      });
+    })(jQuery);
+  </script>
+  <script>
+     function logout()
+{
+window.location = "logout.php";
+}
+    function createFun() {
+      var x = document.getElementById("selSection");
+      var y = document.getElementById("createClass").value;
+      var z = document.getElementById("createSection").value;
+      var a = document.getElementById("year").value;
+      var option = document.createElement("option");
+      option.text = y + "(" + z + ") - " + a + " -";
+      x.add(option);
+    }
+  </script>
   
-});
+  <div class="container-table">
 
 
-function disable() {
-    document.getElementById("myFile").style.display="none"
-    // document.getElementById("myFile").disabled = true;
-}
 
-function undisable() {
-    document.getElementById("myFile").style.display="block"
-    document.getElementById("myFile").disabled = false;
-}
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">Problem</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">Homeworks</a>
+      </li>
+      <li class="nav-item">
 
-</script>
-   <div class="container-table">
-      <div class="head-t row">
-         <div class="dropdown left">
-           <!--  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-               aria-expanded="false">
-               Section
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <a class="dropdown-item" href="#">EGCO111 Computer Programming (CO)</a>
-               <a class="dropdown-item" href="#">EGCO111 Computer Programming (EE)</a>
-               <a class="dropdown-item" href="#">EGCO112 Programming Technique</a>
-            </div> -->
-              <select name="selmain">
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1" role="tabpanel">
+        <div class="head">
+          <br>
+        </div>
+        <table class="table table-striped table-hover main">
+          <thead class="thead">
+            <tr>
+              <th style="width:40%">
+                ชื่อโจทย์
+              </th>
+              <th style="width:20%">
+                วันที่อัพไฟล์
+              </th>
+              <th style="width:20%">
+                ภาษา
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width:40%">
+                โปรแกรมสูตรคูณ
+              </td>
+              <td style="width:20%">
+                20 Aug 2017
+              </td>
+              <td style="width:20%">
+                C
+              </td>
+            </tr>
+            <tr>
+              <td style="width:40%">
+                โปรแกรมหา เลขคู่ เลขคี่
+              </td>
+              <td style="width:20%">
+                23 Sep 2017
+              </td>
+              <td style="width:20%">
+                C++
+              </td>
+            </tr>
+            <tr>
+              <td style="width:40%">
+                โปรแกรมตรวจคะแนนข้อสอบ
+              </td>
+              <td style="width:20%">
+                27 Sep 2017
+              </td>
+              <td style="width:20%">
+                C
+              </td>
+            </tr>
+            <tr>
+              <td style="width:40%">
+                โปรแกรมวาดรูป3เหลี่ยม
+              </td>
+              <td style="width:20%">
+                30 Sep 2017
+              </td>
+              <td style="width:20%">
+                C
+              </td>
+            </tr>
+            <tr>
+              <td style="width:40%">
+                โปรแกรมทอนเงินเป็นเหรียญ
+              </td>
+              <td style="width:20%">
+                22 Sep 2017
+              </td>
+              <td style="width:20%">
+                C++
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="foot-t left">
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal1">Upload</button>
+        </div>
+        <!-- Modal1 -->
+        <div class="modal fade" id="myModal1" role="dialog">
+          <div class="modal-dialog modal-md">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form name="from1" method="post" action="xxx.php" >
+              <div class="modal-header">
+                <!-- <h4 class="modal-title">Section : xxx</h4> -->
+                <h4 class="modal-title">Upload</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+              </div>
+
+              <div class="modal-body left">
+                <label>Problem Name : </label><br>
+                <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
+                <label>File : </label><br>
+                <label class="file">
+                <input type="file">
+                <span class="file-custom" style="width:132%"></span>
+                </label><br>
+                <label>Input : </label><br>
+                <label class="file">
+                <input type="file">
+                <span class="file-custom" style="width:132%"></span>
+                </label><br>
+                <label>Output : </label><br>
+                <label class="file">
+                <input type="file">
+                <span class="file-custom" style="width:132%"></span>
+                </label>
+
+              </div>
+              </form>
+              <div class="modal-footer">
+                <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
+                <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="tab-pane" id="tab2" role="tabpanel">
+        <br>
+        <script>
+          function changePassword() {
+            var x = document.getElementById("selSection").value;
+            if (x == "EGCO111CO") {
+              document.getElementById("sectionPassword").value = "cG3e8d";
+            }
+            else if (x == "EGCO111EE") {
+              document.getElementById("sectionPassword").value = "fFvd9c";
+            }
+            else if (x == "EGCO112") {
+              document.getElementById("sectionPassword").value = "wK7xqh";
+            }
+
+          }
+        </script>
+        <div class="head-t row">
+            <form name="from2" method="post" action="xxx.php" >
+          <div class="dropdown left">
+            <select class="form-control" name="selSection" id="selSection" style="height: 19px; width:155%" onchange="changePassword()">
             <option>Please Select Classroom</option>
-            <option>EGCO111 Computer Programming (CO)</option>
-            <option>EGCO111 Computer Programming (EE)</option>
-            <option>EGCO112 Programming Technique</option>
+            <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
+            <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
+            <option value="EGCO112">EGCO112 Programming Technique</option>
             
           </select>
 
-         </div>
-          
-         <div class="row right">
+          </div>
+          </form>
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Create Section</button>
+          <!-- Modal3 -->
+          <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <form name="from3" method="post" action="xxx.php" >
+                <div class="modal-header">
+                  <h4 class="modal-title">Create Section</h4>
+                  <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body left">
+                    
+
+
+                  <label>Class</label>
+                  <select class="form-control" name="createClass" id="createClass" style="height: 19px; width:80%">
+            <option>Please Select Classroom</option>
+            <option>EGCO111 Computer Programming</option>
+            <option>EGCO112 Programming Technique</option>
+          </select>
+
+
+                  <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
+
+                  <label>Section</label>
+                  <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section">
+
+                  <label>Class</label>
+
+                  <!-- <div class="dropdown"> -->
+                  <select class="form-control" name="year" id="year" style="height: 19px; width: 80%;">
+                          <option>ปีการศึกษา</option>
+                          <script>
+                            var cyear = new Date().getFullYear();
+                            cyear = cyear + 543;
+                            for (var i = cyear - 2; i < cyear + 3; i++) {
+                              for (var j = 1; j < 4; j++) {
+                                document.write('<option value="' + j + '/' + i + '">' + j + '/' + i + '</option>');
+                              }
+                            }
+                          </script>
+                      </select>
+                  <!-- </div> -->
+
+
+                  <!-- <p>Some text in the modal.</p> -->
+
+                </div>
+                <div class="modal-footer">
+                  <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
+                  <button type="submit" class="btn btn-success" onclick="$('#myModal3').modal('hide');createFun();">Create</button>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row right">
+              <form name="from4" method="post" action="xxx.php" >
             <label for="staticEmail" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-1 off-set-1 right">
-               <input type="text" readonly class="form-control-plaintext" id="staticPassword" value="cG3e8d">
+              <input type="text" readonly class="form-control" id="sectionPassword" style="width:700%">
             </div>
-         </div>
-      </div>
-      <table class="table table-striped table-hover main">
-         <thead class="thead-inverse">
-            <tr>
-               <th style="width:20%">
-                  No.
-               </th>
-               <th style="width:40%">
-                  ชื่อโจทย์
-               </th>
-               <th style="width:20%">
-                  กำหนดส่ง
-               </th>
-               <th style="width:20%">
-                  วันที่ส่ง
-               </th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td style="width:20%">
-                  01
-               </td>
-               <td style="width:40%">
-                  Test 1
-               </td>
-               <td style="width:20%">
-                  20 Aug 2017
-               </td>
-               <td style="width:20%">
-                  20 Aug 2017
-               </td>
-            </tr>
-            <tr>
-               <td style="width:20%">
-                  02
-               </td>
-               <td style="width:40%">
-                  Test 2
-               </td>
-               <td style="width:20%">
-                  23 Sep 2017
-               </td>
-               <td style="width:20%">
-                  23 Sep 2017
-               </td>
-            </tr>
-            <tr>
-               <td style="width:20%">
-                  03
-               </td>
-               <td style="width:40%">
-                  Test 3
-               </td>
-               <td style="width:20%">
-                  27 Sep 2017
-               </td>
-               <td style="width:20%">
-                  23 Sep 2017
-               </td>
-            </tr>
-            <tr>
-               <td style="width:20%">
-                  04
-               </td>
-               <td style="width:40%">
-                  Test 4
-               </td>
-               <td style="width:20%">
-                  30 Sep 2017
-               </td>
-               <td style="width:20%">
-                  23 Sep 2017
-               </td>
-            </tr>
-            <tr>
-               <td style="width:20%">
-                  05
-               </td>
-               <td style="width:40%">
-                  Test 5
-               </td>
-               <td style="width:20%">
-                  22 Sep 2017
-               </td>
-               <td style="width:20%">
-                  23 Sep 2017
-               </td>
-            </tr>
-         </tbody>
-      </table>
-      <div class="foot-t row">
-        <!--  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#test1">Upload</button>
-         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#test1">สั่งการบ้าน</button>
-         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#test1">อ่านไม่ออกเปลี่ยนให้ด้วย</button> -->
-         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal1">Upload</button>
-         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Homework</button>
-         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Join Class</button>
-      </div>
-
-       <!-- Modal1 -->
-  <div class="modal fade" id="myModal1" role="dialog">
-    <div class="modal-dialog modal-sm">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <!-- <h4 class="modal-title">Section : xxx</h4> -->
-        <h4 class="modal-title">Upload</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-
-            <div class="col-sm-10">
-            <label>Name</label>
-              <input
-                type="text"
-                class="form-control"
-                name=""
-                placeholder="Name"
-              />
-            </div>
-
-            <div class="col-sm-10 ">
-             <h5><b>File</b></h5>
-             <div class="input-group">
-                <label class="input-group-btn">
-                    <span class="btn btn-primary">
-                        Browse&hellip; <input type="file" style="display: none;" multiple>
-                    </span>
-                </label>
-                <input type="text" class="form-control" readonly>
-             </div>
-
-            </div>
-            <div class="col-sm-10 ">
-             <h5><b>Input</b></h5>
-             <div class="input-group">
-                <label class="input-group-btn">
-                    <span class="btn btn-primary">
-                        Browse&hellip; <input type="file" style="display: none;" multiple>
-                    </span>
-                </label>
-                <input type="text" class="form-control" readonly>
-             </div>
-
-            </div>
-            <div class="col-sm-10 ">
-             <h5><b>Output</b></h5>
-             <div class="input-group">
-                <label class="input-group-btn">
-                    <span class="btn btn-primary">
-                        Browse&hellip; <input type="file" style="display: none;" multiple>
-                    </span>
-                </label>
-                <input type="text" class="form-control" readonly>
-             </div>
-
-            </div>
-
-          <!-- <p>Some text in the modal.</p> -->
-
-        </div>
-        <div class="modal-footer">
-          <button type="button"  class="btn btn-success" data-dismiss="modal">Upload</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal2 -->
-  <div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog modal-md">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <h4 class="modal-title">Homework</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        <div class="modal-body">
-        
-<form>
-<div class="head-t row">
-         <div class="dropdown left">
-            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-               aria-expanded="false">
-               Section
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <a class="dropdown-item" href="#">EGCO111 Computer Programming (CO)</a>
-               <a class="dropdown-item" href="#">EGCO111 Computer Programming (EE)</a>
-               <a class="dropdown-item" href="#">EGCO112 Programming Technique</a>
-            </div> -->
-            <input type=text class="form-control" name="" size=8 placeholder="Search">
-            <!-- <input type="text" name="" placeholder="Search"> -->
-         </div>
-         <div class="row right">
-            <select class="form-control" name="selmain">
-            <option>Class</option>
-            <option>EGCO111 CO</option>
-            <option>EGCO111 EE</option>
-            
-          </select>
-         </div>
-         <button type="button"  class="btn btn-success" data-dismiss="modal">Search</button>
-      </div>
-<table class="table table-striped table-hover main">
-         <thead class="thead-inverse">
-            <tr>
-               <th style="width:20%">
-                  ชื่อโจทย์
-               </th>
-               <th style="width:40%">
-                  ภาษาที่ใช้
-               </th>
-               <th style="width:20%">
-                  เลือก
-               </th>
-               
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td style="width:20%">
-                  Test 1
-               </td>
-               <td style="width:40%">
-                  C
-               </td>
-               <td style="width:20%">
-                  <input type="checkbox" name="vehicle" value="test1C"><br>
-               </td>
-               
-            </tr>
-            <tr>
-               <td style="width:20%">
-                  Test 2
-               </td>
-               <td style="width:40%">
-                  C++
-               </td>
-               <td style="width:20%">
-                  <input type="checkbox" name="vehicle" value="test2CPlus"><br>
-               </td>
-               
-            </tr>
-            <tr>
-               <td style="width:20%">
-                  Test 3
-               </td>
-               <td style="width:40%">
-                  C
-               </td>
-               <td style="width:20%">
-                  <input type="checkbox" name="vehicle" value="test3C"><br>
-               </td>
-               
-            </tr>
-            
-         </tbody>
-      </table>
-  <label >Test Case เดิม</label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" onclick="disable()">Yes
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" onclick="undisable()">No
-    </label>
-    
-  
-  <div class="col-sm-11 ">
-             
-             <div id="myFile" style="display:none;"> 
-             <h5><b>Input</b></h5>
-             <div class="input-group" >
-                <label class="input-group-btn" >
-                    <span class="btn btn-primary">
-                        Browse&hellip; <input type="file"  style="display: none;" multiple>
-                    </span>
-                </label>
-                <input type="text" class="form-control" readonly>
-             </div>
-             <h5><b>Output</b></h5>
-             <div class="input-group" >
-                <label class="input-group-btn" >
-                    <span class="btn btn-primary">
-                        Browse&hellip; <input type="file"  style="display: none;" multiple>
-                    </span>
-                </label>
-                <input type="text" class="form-control" readonly>
-             </div>
-             </div>
-  </div>
-  
             </form>
-
-           
-
-
-  
-          <!-- <p>Some text in the modal.</p> -->
-
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button"  class="btn btn-success" data-dismiss="modal">OK</button>
-        </div>
-      
-    </div>
-  </div>
-</div>
+        <table class="table table-striped table-hover main">
+          <thead class="thead">
+            <tr>
+              <th style="width:20%">
+                ชื่อโจทย์
+              </th>
+              <th style="width:20%">
+                ภาษาที่ใช้
+              </th>
+              <th style="width:20%">
+                จำนวนนักศึกษาที่ส่ง
+              </th>
+              <th style="width:20%">
+                จำนวนนักศึกษาทีผ่าน
+              </th>
+              <th style="width:20%">
+                ดูรายละเอียด
+              </th>
 
-<!-- Modal3 -->
-  <div class="modal fade" id="myModal3" role="dialog">
-    <div class="modal-dialog modal-sm">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-        <h4 class="modal-title">Join Class</h4>
-          <button type="button" align = 'right' class="close" data-dismiss="modal">&times;</button> 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width:20%">
+                โปรแกรมสูตรคูณ
+              </td>
+              <td style="width:20%">
+                C
+              </td>
+              <td style="width:20%">
+
+              </td>
+              <td style="width:20%">
+
+              </td>
+              <td style="width:20%">
+                <button type="button" class="btn btn-outline-secondary">Detail</button>
+              </td>
+
+            </tr>
+            <tr>
+              <td style="width:20%">
+                โปรแกรมหา เลขคู่ เลขคี่
+              </td>
+              <td style="width:20%">
+                C++
+              </td>
+              <td style="width:20%">
+
+              </td>
+              <td style="width:20%">
+
+              </td>
+              <td style="width:20%">
+                <button type="button" class="btn btn-outline-secondary">Detail</button>
+              </td>
+
+            </tr>
+            <tr>
+              <td style="width:20%">
+                โปรแกรมตรวจคะแนนข้อสอบ
+              </td>
+              <td style="width:20%">
+                C
+              </td>
+              <td style="width:20%">
+
+              </td>
+              <td style="width:20%">
+
+              </td>
+              <td style="width:20%">
+                <button type="button" class="btn btn-outline-secondary">Detail</button>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+        <div class="foot-t left">
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Assignment Homework</button>
         </div>
-        <div class="modal-body">
-        
-            <div class="col-sm-11 right">
-            <label>Class</label>
-              <select class="form-control" name="sel1">
-            <option>Please Select Classroom</option>
-            <option>Class1</option>
-            <option>Class2</option>
-            <option>Class3</option>
-            
-          </select>
+        <!-- Modal2 -->
+        <div class="modal fade" id="myModal2" role="dialog">
+          <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <form name="from4" method="post" action="xxx.php" >
+              <div class="modal-header">
+                <h4 class="modal-title">Assignment Homework</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+
+                <form>
+                  <table class="table table-striped table-hover main">
+                    <thead class="thead">
+                      <tr>
+                        <th style="width:30%">
+                          ชื่อโจทย์
+                        </th>
+                        <th style="width:10%">
+                          ภาษาที่ใช้
+                        </th>
+                        <th style="width:25%">
+                          กำหนดส่ง
+                        </th>
+                        <th style="width:25%">
+                          เวลา
+                        </th>
+                        <th style="width:10%">
+                          เลือก
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width:30%">
+                          โปรแกรมวาดรูป3เหลี่ยม
+                        </td>
+                        <td style="width:10%">
+                          C
+                        </td>
+                        <td style="width:25%">
+                          <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                              <input type='text' class="form-control" placeholder="Date Send" />
+                              <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td style="width:25%">
+                          <div class="form-group">
+                            <div class='input-group date' id='datetimepicker3'>
+                              <input type='text' class="form-control" placeholder="Time Send" />
+                              <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-time"></span>
+                              </span>
+                            </div>
+                          </div>
+                        </td>
+                        <td style="width:10%">
+                          <input type="checkbox" name="vehicle" value="test1C"><br>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td style="width:30%">
+                          โปรแกรมทอนเงินเป็นเหรียญ
+                        </td>
+                        <td style="width:10%">
+                          C++
+                        </td>
+                        <td style="width:25%">
+
+                        </td>
+                        <td style="width:25%">
+
+                        </td>
+                        <td style="width:10%">
+                          <input type="checkbox" name="vehicle" value="test1C"><br>
+                        </td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </form>
+
+
+
+
+
+                <!-- <p>Some text in the modal.</p> -->
+
+              </div>
+              <div class="modal-footer">
+                <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
+                <button type="submit" class="btn btn-success" onclick="$('#myModal2').modal('hide');">OK</button>
+              </div>
+</form>
             </div>
-        
-            <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
-            <div class="col-sm-11 right">
-            <label>Section</label>
-               <input type="text" class="form-control" placeholder="Section">
-            </div>
-
-          <!-- <p>Some text in the modal.</p> -->
-
-        </div>
-        <div class="modal-footer">
-          <button type="button"  class="btn btn-success" data-dismiss="modal">Create</button>
+          </div>
         </div>
       </div>
+
     </div>
+
   </div>
-   </div>
+
+
+  <!-- <script type="text/javascript">
+                            var year = new Date().getFullYear();
+                            document.write(year);
+  </script> -->
 
 </body>
 
