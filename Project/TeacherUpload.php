@@ -51,7 +51,7 @@
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
       <label class="ml-auto " id = "SessionUser"></label>
-      <button class="btn btn-outline-secondary logout-btn ml-auto my-2 my-sm-0" onclick = "logout()" type="button">Logout</button>
+      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick = "logout()" type="button">Logout</button>
     </form>
   </nav>
 </head>
@@ -118,13 +118,14 @@
 {
 window.location = "logout.php";
 }
-    function createFun() {
+    function () {
       var x = document.getElementById("selSection");
-      var y = document.getElementById("createClass").value;
-      var z = document.getElementById("createSection").value;
-      var a = document.getElementById("year").value;
+      var pClass = document.getElementById("createClass").value;
+      var pSection = document.getElementById("createSection").value;
+      var pSemester = document.getElementById("semester").value;
+      var pYear = document.getElementById("year").value;
       var option = document.createElement("option");
-      option.text = y + "(" + z + ") - " + a + " -";
+      option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
       x.add(option);
     }
   </script>
@@ -288,14 +289,17 @@ window.location = "logout.php";
             else if (x == "EGCO112") {
               document.getElementById("sectionPassword").value = "wK7xqh";
             }
+            else if (x == "none") {
+              document.getElementById("sectionPassword").value = "";
+            }
 
           }
         </script>
-        <div class="head-t row">
+        <div class="head-t row" style="width:100%">
             <form name="from2" method="post" action="xxx.php" >
           <div class="dropdown left">
-            <select class="form-control" name="selSection" id="selSection" style="height: 19px; width:155%" onchange="changePassword()">
-            <option>Please Select Classroom</option>
+            <select class="form-control" name="selSection" id="selSection" style="height: 19px;" onchange="changePassword()">
+            <option value="none">Please Select Classroom</option>
             <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
             <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
             <option value="EGCO112">EGCO112 Programming Technique</option>
@@ -333,25 +337,30 @@ window.location = "logout.php";
                   <label>Section</label>
                   <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section">
 
-                  <label>Class</label>
+                  <label>Semester</label>
 
                   <!-- <div class="dropdown"> -->
+                  <select class="form-control" name="semester" id="semester" style="height: 19px; width: 80%;">
+                          <option>ภาคการศึกษา</option>
+                          <script>
+                              for (var j = 1; j < 4; j++) {
+                                document.write('<option value="'+j+'">' + j + '</option>');
+                              }
+                      </script>
+                      </select>
+                  <!-- </div> -->
+
+                  <label>Year</label>
                   <select class="form-control" name="year" id="year" style="height: 19px; width: 80%;">
-                          <option>ปีการศึกษา</option>
+                      <option>ปีการศึกษา</option>
                           <script>
                             var cyear = new Date().getFullYear();
                             cyear = cyear + 543;
                             for (var i = cyear - 2; i < cyear + 3; i++) {
-                              for (var j = 1; j < 4; j++) {
-                                document.write('<option value="' + j + '/' + i + '">' + j + '/' + i + '</option>');
-                              }
+                              document.write('<option value="'+i+'">' + i + '</option>');
                             }
-                          </script>
-                      </select>
-                  <!-- </div> -->
-
-
-                  <!-- <p>Some text in the modal.</p> -->
+                      </script>
+                  </select>
 
                 </div>
                 <div class="modal-footer">
@@ -362,14 +371,14 @@ window.location = "logout.php";
               </div>
             </div>
           </div>
-          <div class="row right">
-              <form name="from4" method="post" action="xxx.php" >
+          <!--<div class="row right">-->
+              <form class="row" name="from4" method="post" action="xxx.php" >
             <label for="staticEmail" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-1 off-set-1 right">
+            <div class="col-sm-1 off-set-1">
               <input type="text" readonly class="form-control" id="sectionPassword" style="width:700%">
             </div>
             </form>
-          </div>
+          <!--</div>-->
         </div>
         <table class="table table-striped table-hover main">
           <thead class="thead">
@@ -450,7 +459,7 @@ window.location = "logout.php";
 
           </tbody>
         </table>
-        <div class="foot-t left">
+        <div class="foot-t left" style="margin-top:20px;">
           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Assignment Homework</button>
         </div>
         <!-- Modal2 -->
