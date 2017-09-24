@@ -23,15 +23,15 @@
 			{
 				$array_out = file('output.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
 				$array_in = file($temp.'.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
-				/*$trimmed1 = array_map(function($item)
-				{
-					return preg_replace('/\s+/','',$item)
-				},$array_in);*/
 				$trimmed1 = array_map(function($item)
 				{
 					return preg_replace('/\s+/','',$item)
+				},$array_in);
+				$trimmed2 = array_map(function($item)
+				{
+					return preg_replace('/\s+/','',$item)
 				},$array_out);
-				//$result = ($trimmed1 === $trimmed2);
+				$result = ($trimmed1 === $trimmed2);
 				$result = 1;
 				if($result)
 				{
