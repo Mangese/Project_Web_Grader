@@ -1,7 +1,7 @@
 <?php
 	function test($item)
 	{
-		return preg_replace('/\s+/','',$item)
+		return preg_replace('/\s+/','',$item);
 	}
 	$page = 0;
 	$conn = mysql_connect("localhost","mangese","000000");
