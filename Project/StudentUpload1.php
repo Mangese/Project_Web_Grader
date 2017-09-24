@@ -135,9 +135,32 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
     </div>
     <div id="tabel-wrapper">
       <div id="table-scroll">
+        <table class="table table-striped table-hover main">
+          <thead class="thead">
+            <tr>
+              <th style="width:15%">
+                ID
+              </th>
+              <th style="width:40%">
+                ชื่อโจทย์
+              </th>
+              <th style="width:15%">
+                จำนวนที่ส่ง(ครั้ง)
+              </th>
+              <th style="width:15%">
+                สถานะ
+              </th>
+              <th style="width:15%">
+                Upload
+              </th>
+            </tr>
+          </thead>
+          <tbody>
             <div id = "DataFromAjax">
               
             </div>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
