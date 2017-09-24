@@ -81,16 +81,16 @@ window.location = "logout.php";
 }
 function fillTable()
 {
-  document.getElementById("txtHint").innerHTML = "TEST";
+  document.getElementById("DataFromAjax").innerHTML = "";
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
-  document.getElementById("txtHint").innerHTML = this.responseText;
+  document.getElementById("DataFromAjax").innerHTML = this.responseText;
   alert("success");
   }
   }
-  xmlhttp.open("GET","FillTable.php?Section="+str,true);
+  xmlhttp.open("POST","FillTable.php?Section="+str,true);
   xmlhttp.send();
 }
 function ModalHeaderFunc(x)
