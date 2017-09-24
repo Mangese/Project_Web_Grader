@@ -4,7 +4,7 @@
   {
     mysql_query("use grader;");
     $Section = $_REQUEST["Section"];
-    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName from homework h join section s on h.S_ID = s.S_ID join submit su on su.H_ID = h.H_ID join problem p on p.P_ID = h.P_ID;");
+    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName from homework h join section s on h.S_ID = s.S_ID join submit su on su.H_ID = h.H_ID join problem p on p.P_ID = h.P_ID where s.S_ID = '$Section';");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
