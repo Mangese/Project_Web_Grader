@@ -1,4 +1,8 @@
 <?php
+	function test($item)
+	{
+		return preg_replace('/\s+/','',$item)
+	}
 	$page = 0;
 	$conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
@@ -27,10 +31,7 @@
 				{
 					return preg_replace('/\s+/','',$item)
 				},$array_in);*/
-				$trimmed2 = array_map(function($item)
-				{
-					return preg_replace('/\s+/','',$item)
-				},$array_out);
+				$trimmed2 = array_map("test",$array_out);
 				$result = ($trimmed1 === $trimmed2);
 				$result = 1;
 				if($result)
