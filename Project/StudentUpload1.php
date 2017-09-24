@@ -37,23 +37,23 @@
 
 </head>
 <?php
-	session_start();
-	if(!isset($_SESSION["user"]))
-	{
-	echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
-	}
-	else
-	{
-	echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
-	}
+  session_start();
+  if(!isset($_SESSION["user"]))
+  {
+  echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
+  }
+  else
+  {
+  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
+  }
 ?>
 <body>
 <input type = "hidden" id = "TableUploadHeader"/>
   <script>
-    	$(document).ready(function()
-	{
-	fillTable();
-	});
+      $(document).ready(function()
+  {
+  fillTable();
+  });
     (function ($) {
       var doc = document,
         supportsMultipleFiles = "multiple" in doc.createElement("input");
@@ -81,12 +81,12 @@ window.location = "logout.php";
 }
 function fillTable()
 {
+  $('#DataFromAjax').Removes();
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     $('#DataFromAjax').append(this.responseText);
-  alert("success");
   }
   }
   xmlhttp.open("POST","FillTable.php?Section="+str,true);
@@ -102,10 +102,10 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
     <div class="head-std row">
       <div class="dropdown">
         <select class="form-control" name="selmain" onchange="fillTable();">
-          <option>Select Section</option>
-          <option>EGCO111 Computer Programming (CO)</option>
-          <option>EGCO111 Computer Programming (EE)</option>
-          <option>EGCO112 Programming Technique</option>
+          <option value = "">Select Section</option>
+          <option value = "111">EGCO111 Computer Programming (CO)</option>
+          <option value = "222">EGCO111 Computer Programming (EE)</option>
+          <option value = "112">EGCO112 Programming Technique</option>
         </select>
       </div>
       <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Class</button>
