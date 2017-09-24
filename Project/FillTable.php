@@ -14,7 +14,7 @@
       echo "$RowNum";
       echo "</td>";
       echo "<td style='width:40%' class = 'use'>";
-      echo "<a href = 'TestPdfOpen.pdf' target = '_blank'>Test $RowNum</a>";
+      echo "<a href = 'TestPdfOpen.pdf' target = '_blank'>$Section</a>";
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "0";
