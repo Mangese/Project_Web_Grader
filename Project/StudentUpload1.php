@@ -82,6 +82,7 @@ window.location = "logout.php";
 }
 function fillDropDownSection()
 {
+  alert("test");
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function()
   {
