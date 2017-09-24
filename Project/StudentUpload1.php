@@ -81,12 +81,12 @@ window.location = "logout.php";
 }
 function fillTable()
 {
-  document.getElementById("txtHint").innerHTML = " ";
+  document.getElementById("DataFromAjax").innerHTML = " ";
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
-  document.getElementById("txtHint").innerHTML = this.responseText;
+  document.getElementById("DataFromAjax").innerHTML = this.responseText;
   alert("success");
   }
   }
@@ -135,11 +135,9 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
     </div>
     <div id="tabel-wrapper">
       <div id="table-scroll">
-        
             <div id = "DataFromAjax">
               
             </div>
-          
       </div>
     </div>
   </div>
