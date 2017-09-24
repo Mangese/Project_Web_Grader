@@ -37,7 +37,15 @@
       }
       echo "</td>";
       echo "<td style='width:15%'>";
-      echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this);' data-toggle='modal' ";
+      if(!strcmp($Status, "F"))
+      {
+         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this);' data-toggle='modal' ";
+      }
+      else
+      {
+         echo "<button type='button' class='btn btn-outline-secondary'  data-toggle='modal'";
+      }
+     
       echo "data-target='#test1'>Upload</button>";
       echo "</td>";
       echo "</tr>";
