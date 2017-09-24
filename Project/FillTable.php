@@ -43,7 +43,7 @@
       }
       else
       {
-         echo "<button type='button' class='btn btn-outline-secondary'  data-toggle='modal'";
+         echo "<button type='button' class='btn btn-outline-secondary'  ";
       }
      
       echo "data-target='#test1'>Upload</button>";
