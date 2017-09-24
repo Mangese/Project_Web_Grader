@@ -52,7 +52,7 @@
   <script>
     	$(document).ready(function()
 	{
-	
+	fillTable();
 	});
     (function ($) {
       var doc = document,
@@ -81,8 +81,8 @@ window.location = "logout.php";
 }
 function fillTable()
 {
+  document.getElementById("txtHint").innerHTML = "";
   str = $("#selectClass").val();
-  alert(str);
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
@@ -90,7 +90,7 @@ function fillTable()
   alert("success");
   }
   }
-  xmlhttp.open("POST","FillTable.php?q="+str,true);
+  xmlhttp.open("POST","FillTable.php?Section="+str,true);
   xmlhttp.send();
 }
 function ModalHeaderFunc(x)
@@ -102,7 +102,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
   <div class="container-table">
     <div class="head-std row">
       <div class="dropdown">
-        <select class="form-control" name="selmain">
+        <select class="form-control" name="selmain" onchange="fillTable();">
           <option>Select Section</option>
           <option>EGCO111 Computer Programming (CO)</option>
           <option>EGCO111 Computer Programming (EE)</option>
