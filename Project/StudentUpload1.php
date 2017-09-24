@@ -91,7 +91,7 @@ function fillDropDownSection()
       this.responseText;
     }
   }
-  xmlhttp.open("POST","testDropDown.php?",true);
+  xmlhttp.open("POST","testDropDown.php",true);
   xmlhttp.send();
 }
 function fillTable()
