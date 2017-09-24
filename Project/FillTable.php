@@ -17,7 +17,7 @@
       echo "<td style='width:40%' class = 'use'>";
       $PN = $row['problemName'];
       $FN = $row['fileName'];
-      echo "<a href = 'Problem/$FN.pdf' target = '_blank'>$PN</a>";
+      echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "0";
