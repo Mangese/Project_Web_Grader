@@ -79,9 +79,24 @@
 {
 window.location = "logout.php";
 }
+function fillTable()
+{
+  str = $("#selectClass").val();
+  alert(str);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+  if(this.readyState == 4 && this.status == 200){
+  document.getElementById("txtHint").innerHTML = this.responseText;
+  alert("success");
+  }
+  }
+  xmlhttp.open("POST","FillTable.php?q="+str,true);
+  xmlhttp.send();
+}
 function ModalHeaderFunc(x)
 {
 $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
+document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
 }
   </script>
   <div class="container-table">
@@ -142,46 +157,8 @@ $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
           </thead>
           <tbody>
             <div id = "DataFromAjax">
-              <tr>
-                <td style="width:15%">
-                  001
-                </td>
-                <td style="width:40%" class = "use">
-                 <a href = "TestPdfOpen.pdf" target = "_blank">Test 1</a>
-                </td>
-                <td style="width:15%">
-                  0
-                </td>
-                <td style="width:15%">
-                  Fail
-                </td>
-                <td style="width:15%">
-                  <button type="button" class="btn btn-outline-secondary"  onclick = "ModalHeaderFunc(this); document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();" data-toggle="modal" data-target="#test1">Upload</button>
-
-                  <!-- Modal -->
-                  <div class="modal fade" id="test1" role="dialog">
-                    <div class="modal-dialog">
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h4 class="modal-title" id = "modalValue"></h4>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body" style="margin:auto;">
-                          <label class="file">
-                            <input type="file">
-                            <span class="file-custom"></span>
-                          </label>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="submit" class="btn btn-secondary" data-dismiss="modal">Upload</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </td>
-              </tr>
+              
+            </div>
           </tbody>
         </table>
       </div>
