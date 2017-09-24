@@ -4,7 +4,7 @@
   {
     mysql_query("use grader;");
     $Section = $_REQUEST["Section"];
-    $result = mysql_query("select * from problem;");
+    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName from homework h join section s on h.S_ID = s.S_ID join submit su on su.H_ID = h.H_ID join problem p on p.P_ID = h.P_ID;");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
@@ -14,7 +14,7 @@
       echo "$RowNum";
       echo "</td>";
       echo "<td style='width:40%' class = 'use'>";
-      echo "<a href = 'TestPdfOpen.pdf' target = '_blank'>$Section</a>";
+      echo "<a href = '$row[0].pdf' target = '_blank'>$row[1]</a>";
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "0";
