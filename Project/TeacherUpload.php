@@ -272,7 +272,15 @@
                 <input type="file">
                 <span class="file-custom" style="width:132%"></span>
                 </label>
-
+<label class="radio-inline">
+                    <input type="radio" name="optradio">C
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">C++
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio">Java
+                  </label>
               </div>
               </form>
               <div class="modal-footer">
