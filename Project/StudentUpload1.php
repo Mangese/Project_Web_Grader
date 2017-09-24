@@ -180,7 +180,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
                   </label>
                 </div>
                 <div class='modal-footer'>
-                  <button type='submit' class='btn btn-secondary' data-dismiss='modal'>Upload</button>
+                  <button type='submit' class='btn btn-secondary'>Upload</button>
                 </div>
               </form>
               </div>
