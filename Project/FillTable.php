@@ -26,7 +26,15 @@
       echo "$QTY";
       echo "</td>";
       echo "<td style='width:15%'>";
-      echo "Fail";
+      $Status = $row['status'];
+      if(!strcmp($Status, "F"))
+      {
+        echo "Fail";
+      }
+      else
+      {
+        echo "Pass";
+      }
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this);' data-toggle='modal' ";
