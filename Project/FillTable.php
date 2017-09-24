@@ -39,25 +39,6 @@
       echo "<td style='width:15%'>";
       echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this);' data-toggle='modal' ";
       echo "data-target='#test1'>Upload</button>";
-      echo "<div class='modal fade' id='test1' role='dialog'>";
-      echo "<div class='modal-dialog'>";
-      echo "<div class='modal-content'>";
-      echo "<div class='modal-header'>";
-      echo "<h4 class='modal-title' id = 'modalValue'></h4>";
-      echo "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
-      echo "</div>";
-      echo "<div class='modal-body' style='margin:auto;'>";
-      echo "<label class='file'>";
-      echo "<input type='file'>";
-      echo "<span class='file-custom'></span>";
-      echo "</label>";
-      echo "</div>";
-      echo "<div class='modal-footer'>";
-      echo "<button type='submit' class='btn btn-secondary' data-dismiss='modal'>Upload</button>";
-      echo "</div>";
-      echo "</div>";
-      echo "</div>";
-      echo "</div>";
       echo "</td>";
       echo "</tr>";
     }
