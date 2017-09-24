@@ -52,6 +52,7 @@
   <script>
       $(document).ready(function()
   {
+  fillDropDownSection();
   fillTable();
   });
     (function ($) {
@@ -79,6 +80,19 @@
 {
 window.location = "logout.php";
 }
+function fillDropDownSection()
+{
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function()
+  {
+    if(this.readyState == 4 && this.status == 200)
+    {
+      this.responseText;
+    }
+  }
+  xmlhttp.open("POST","testDropDown.php?",true);
+  xmlhttp.send();
+}
 function fillTable()
 {
   $('#DataFromAjax tbody tr').remove();
@@ -103,9 +117,6 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
       <div class="dropdown">
         <select class="form-control" id = "selectClass" name="selectClass" onchange="fillTable();">
           <option value = "">Select Section</option>
-          <option value = "111">EGCO111 Computer Programming (CO)</option>
-          <option value = "222">EGCO111 Computer Programming (EE)</option>
-          <option value = "112">EGCO112 Programming Technique</option>
         </select>
       </div>
       <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Class</button>
@@ -136,7 +147,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
       <div id="table-scroll">
         <table class="table table-striped table-hover main" id = "DataFromAjax">
           <thead class="thead">
-	   <tr>
+     <tr>
               <th style="width:15%">
                 ID
               </th>
@@ -152,7 +163,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
               <th style="width:15%">
                 Upload
               </th>
-	   </tr>
+     </tr>
           </thead>
           <tbody>
           </tbody>
