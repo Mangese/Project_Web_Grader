@@ -119,7 +119,7 @@
   </script>
   <script>
     function () {
-      var x = document.getElementById("selSection");
+      var x = document.getElementById("selSectionHw");
       var pClass = document.getElementById("createClass").value;
       var pSection = document.getElementById("createSection").value;
       var pSemester = document.getElementById("semester").value;
