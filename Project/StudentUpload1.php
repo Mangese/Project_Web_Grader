@@ -81,7 +81,7 @@ window.location = "logout.php";
 }
 function fillTable()
 {
-  document.getElementById("txtHint").innerHTML = "";
+  document.getElementById("txtHint").innerHTML = " ";
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
