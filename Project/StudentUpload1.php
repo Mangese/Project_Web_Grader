@@ -81,12 +81,11 @@ window.location = "logout.php";
 }
 function fillTable()
 {
-  document.getElementById("DataFromAjax").innerHTML = " ";
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
-  document.getElementById("DataFromAjax").innerHTML = this.responseText;
+    $('#DataFromAjax').append(this.responseText);
   alert("success");
   }
   }
@@ -135,7 +134,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
     </div>
     <div id="tabel-wrapper">
       <div id="table-scroll">
-        <table class="table table-striped table-hover main">
+        <table class="table table-striped table-hover main" id = "DataFromAjax">
           <thead class="thead">
             <tr>
               <th style="width:15%">
@@ -156,9 +155,6 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
             </tr>
           </thead>
           <tbody>
-            <div id = "DataFromAjax">
-              
-            </div>
           </tbody>
         </table>
       </div>
