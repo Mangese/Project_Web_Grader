@@ -151,7 +151,18 @@
     <div class="tab-content">
       <div class="tab-pane active" id="tab1" role="tabpanel">
         <div class="head">
-          <br>
+          <div class="head-t row" style="width:100%">
+          <div class="dropdown left">
+            <select class="form-control" name="selSection" id="selSection" style="height: 19px;" onchange="changePassword()">
+            <option value="none">Please Select Classroom</option>
+            <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
+            <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
+            <option value="EGCO112">EGCO112 Programming Technique</option>
+            
+          </select>
+
+          </div>
+          </form>
         </div>
         <table class="table table-striped table-hover main">
           <thead class="thead">
@@ -279,7 +290,7 @@
         <br>
         <script>
           function changePassword() {
-            var x = document.getElementById("selSection").value;
+            var x = document.getElementById("selSectionHw").value;
             if (x == "EGCO111CO") {
               document.getElementById("sectionPassword").value = "cG3e8d";
             }
@@ -298,8 +309,8 @@
         <div class="head-t row" style="width:100%">
             <form name="from2" method="post" action="xxx.php" >
           <div class="dropdown left">
-            <select class="form-control" name="selSection" id="selSection" style="height: 19px;" onchange="changePassword()">
-            <option value="none">Please Select Classroom</option>
+            <select class="form-control" name="selSectionHw" id="selSectionHw" style="height: 19px;" onchange="changePassword()">
+            <option value="none">Please Select Section</option>
             <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
             <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
             <option value="EGCO112">EGCO112 Programming Technique</option>
