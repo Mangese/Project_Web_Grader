@@ -4,7 +4,7 @@
   {
     mysql_query("use grader;");
     $Section = $_REQUEST["Section"];
-    $result = mysql_query("select * from problem where S_ID = '$Sectuin';");
+    $result = mysql_query("select * from problem;");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
