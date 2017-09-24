@@ -81,7 +81,7 @@ window.location = "logout.php";
 }
 function fillTable()
 {
-  document.getElementById("txtHint").innerHTML = " ";
+  document.getElementById("txtHint").innerHTML = "TEST";
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
@@ -90,7 +90,7 @@ function fillTable()
   alert("success");
   }
   }
-  xmlhttp.open("POST","FillTable.php?Section="+str,true);
+  xmlhttp.open("GET","FillTable.php?Section="+str,true);
   xmlhttp.send();
 }
 function ModalHeaderFunc(x)
