@@ -239,7 +239,7 @@
 
               <!-- Modal content-->
               <div class="modal-content">
-                <form name="from1" method="post" action="xxx.php">
+                <!--<form name="from1" method="post" action="xxx.php"> -->
                   <div class="modal-header">
                     <!-- <h4 class="modal-title">Section : xxx</h4> -->
                     <h4 class="modal-title">Upload</h4>
@@ -281,7 +281,7 @@
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
                     <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
                   </div>
-                </form>
+               <!-- </form> -->
               </div>
             </div>
           </div>
