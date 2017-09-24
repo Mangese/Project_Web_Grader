@@ -4,10 +4,9 @@ $conn = mysql_connect("localhost","mangese","000000");
   {
     session_start();
     $UID = $_SESSION["uid"];
-    echo "alert('$UID');";
     mysql_query("use grader;");
     $result = mysql_query("select s.name as sectionName,s.S_ID as sectionId from register r join section s on r.s_id = s.s_id join user u on u.u_id = r.u_id where u.u_id = '$UID';");
-    echo "var x = document.getElementById("selectClass");";
+    echo "var x = document.getElementById('selectClass');";
     while($row = mysql_fetch_assoc($result))
     {
       $Text = $row['sectionName'];
