@@ -6,6 +6,27 @@
     $Section = $_REQUEST["Section"];
     $result = mysql_query("select * from problem;");
     $RowNum = 0;
+    echo "<table class="table table-striped table-hover main">";
+    echo "<thead class="thead">";
+    echo "<tr>";
+    echo "<th style="width:15%">";
+    echo "ID";
+    echo "</th>";
+    echo "<th style="width:40%">";
+    echo "ชื่อโจทย์";
+    echo "</th>";
+    echo "<th style="width:15%">";
+    echo "จำนวนที่ส่ง(ครั้ง)";
+    echo "</th>";
+    echo "<th style="width:15%">";
+    echo "สถานะ";
+    echo "</th>";
+    echo "<th style="width:15%">";
+    echo "Upload";
+    echo "</th>";
+    echo "</tr>";
+    echo "</thead>";
+    echo "<tbody>";
     while($row = mysql_fetch_assoc($result))
     {
       $RowNum = $RowNum+1;
@@ -47,5 +68,7 @@
       echo "</td>";
       echo "</tr>";
     }
+    echo "</tbody>";
+        echo "</table>";
   }
 ?>
