@@ -23,10 +23,10 @@
 			{
 				$array_out = file('output.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
 				$array_in = file($temp.'.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
-				$trimmed1 = array_map(function($item)
+				/*$trimmed1 = array_map(function($item)
 				{
 					return preg_replace('/\s+/','',$item)
-				},$array_in);
+				},$array_in);*/
 				$trimmed2 = array_map(function($item)
 				{
 					return preg_replace('/\s+/','',$item)
