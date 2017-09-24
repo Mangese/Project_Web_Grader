@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $Section = $_REQUEST["Section"];
     $UID = $_SESSION["uid"];
-    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName,count(su.u_id) as num  ,(case when (select status from submit where su.H_ID = H_id and status = 'P' limit 1) is null then 'F' else 'P' end)  as status from homework h join section s on h.S_ID = s.S_ID join problem p on p.P_ID = h.P_ID left join submit su on su.H_ID = h.H_ID  where s.S_ID = '$Section' group by su.h_id order by su.status desc;");
+    $result = mysql_query("select h.h_id as pid,p.Remark as problemName,p.File_Name as fileName,count(su.u_id) as num  ,(case when (select status from submit where su.H_ID = H_id and status = 'P' limit 1) is null then 'F' else 'P' end)  as status from homework h join section s on h.S_ID = s.S_ID join problem p on p.P_ID = h.P_ID left join submit su on su.H_ID = h.H_ID  where s.S_ID = '$Section' group by h.h_id order by su.status desc;");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
@@ -19,6 +19,7 @@
       echo "<td style='width:40%' class = 'use'>";
       $PN = $row['problemName'];
       $FN = $row['fileName'];
+      $PID = $row['pid'];
       $QTY = $row['num'];
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
@@ -39,7 +40,7 @@
       echo "<td style='width:15%'>";
       if(!strcmp($Status, "F"))
       {
-         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this);' data-toggle='modal' ";
+         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID);' data-toggle='modal' ";
       }
       else
       {

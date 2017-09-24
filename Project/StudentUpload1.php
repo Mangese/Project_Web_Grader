@@ -50,6 +50,10 @@
 <body>
 <input type = "hidden" id = "TableUploadHeader"/>
   <script>
+function logout()
+{
+	window.location = "logout.php";
+}
       $(document).ready(function()
   {
   fillDropDownSection();
@@ -76,10 +80,6 @@
         label.setAttribute("title", labelValue);
       });
     })(jQuery);
- function logout()
-{
-window.location = "logout.php";
-}
 function fillDropDownSection()
 {
   var xmlhttp = new XMLHttpRequest();
@@ -106,10 +106,14 @@ function fillTable()
   xmlhttp.open("POST","FillTable.php?Section="+str,true);
   xmlhttp.send();
 }
-function ModalHeaderFunc(x)
+function ModalHeaderFunc(x,y)
 {
 $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
 document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
+$("#ProblemName").val(y);
+$("#SectionValue").val($("#selectClass").val());
+//alert($("#ProblemName").val());
+//alert($("#SectionValue").val());
 }
   </script>
   <div class="container-table">
@@ -175,7 +179,9 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
                 <div class='modal-body' style='margin:auto;'>
                 <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" />
                   <label class='file'>
-                  <input type='file' name = "Uploaded_file" id = "Uploaded_file">
+                  <input type='hidden' name = "ProblemName" id = "ProblemName">
+		  <input type='hidden' name = "SectionValue" id = "SectionValue">
+		  <input type='file' name = "Uploaded_file" id = "Uploaded_file">
                   <span class='file-custom'></span>
                   </label>
                 </div>

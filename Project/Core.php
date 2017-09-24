@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	$UID = $_SESSION['uid'];
 	$page = 0;
 	$conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
@@ -6,19 +8,23 @@
 		mysql_query("use grader;");
 		$target = "File/";
 		$temp = $_FILES['Uploaded_file']['name'];
+		$PN = $_POST["ProblemName"];
+		$SC = $_POST["SectionValue"];
+		//echo "<script> alert('$SC'); </script>";
+		//echo "<script> alert('$PN'); </script>";
 		$tempName = preg_replace('/\s+/','',$temp);
 		if(!move_uploaded_file($_FILES['Uploaded_file']['tmp_name'],$target.$tempName))
 		{
-		echo "error";
+		echo "<script> alert('error'); </script>";
 		}
 		$temp = $tempName;
 		$file_name = $tempName;
 		$temp = substr($temp,0,strpos($temp,"."));
-		exec("gcc $target$temp.c -o $temp.exe",$out1,$re1);
+		exec("gcc $target$temp.c -o $target$temp.exe",$out1,$re1);
 		if(!$re1)
 		{
 			$status = "W";
-			exec("timeout 1 ./$temp.exe <input.txt > $temp.txt",$out,$re);
+			exec("timeout 1 ./$target$temp.exe <input.txt > $target$temp.txt",$out,$re);
 			if($re != 124)
 			{
 				$array_out = file('output.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
@@ -32,15 +38,14 @@
 					return preg_replace('/\s+/','',$item);
 				},$array_out);
 				$result = ($trimmed1 === $trimmed2);
-				$result = 1;
 				if($result)
 				{
-					$status = "Y";
+					$status = "P";
 					$page = 1;
 				}
 				else
 				{
-					$status = "N";
+					$status = "F";
 					$page = 2;
 				}
 			}
@@ -49,9 +54,9 @@
 			$status = "T";
 			$page = 3;
 			}
-			mysql_query("insert into submit value('TestUpload','5713086','Test01','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempNamp');");
-			exec("rm $temp.txt");
-			exec("rm $temp.exe");
+			mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName');");
+			exec("rm $target$temp.txt");
+			exec("rm $target$temp.exe");
 		}
 		else
 		{
