@@ -147,12 +147,14 @@
           <br>
           <div class="head-t row" style="width:100%">
             <div class="dropdown left">
+		    <form>
               <select class="form-control" name="selSectionPb" id="selSectionPb" style="height: 19px;" onchange="changePassword()">
+<!-- 		       onchange table-->
           <option value="none">Please Select Section</option>
           <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
           <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
           <option value="EGCO112">EGCO112 Programming Technique</option>
-          
+		      </form>
         </select>
 
             </div>
@@ -311,6 +313,7 @@
             <form name="from2" method="post" action="xxx.php">
               <div class="dropdown left">
                 <select class="form-control" name="selSectionHw" id="selSectionHw" style="height: 19px;" onchange="changePassword()">
+<!-- 			 onchange table-->
             <option value="none">Please Select Section</option>
             <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
             <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
