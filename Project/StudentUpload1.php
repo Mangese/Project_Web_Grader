@@ -81,7 +81,7 @@ window.location = "logout.php";
 }
 function fillTable()
 {
-  $('#DataFromAjax').Removes();
+  $('#DataFromAjax tbody tr').remove();
   str = $("#selectClass").val();
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
@@ -101,7 +101,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
   <div class="container-table">
     <div class="head-std row">
       <div class="dropdown">
-        <select class="form-control" name="selmain" onchange="fillTable();">
+        <select class="form-control" id = "selectClass" name="selectClass" onchange="fillTable();">
           <option value = "">Select Section</option>
           <option value = "111">EGCO111 Computer Programming (CO)</option>
           <option value = "222">EGCO111 Computer Programming (EE)</option>
@@ -136,7 +136,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
       <div id="table-scroll">
         <table class="table table-striped table-hover main" id = "DataFromAjax">
           <thead class="thead">
-            <tr>
+	   <tr>
               <th style="width:15%">
                 ID
               </th>
@@ -152,7 +152,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
               <th style="width:15%">
                 Upload
               </th>
-            </tr>
+	   </tr>
           </thead>
           <tbody>
           </tbody>
