@@ -88,7 +88,7 @@ function fillDropDownSection()
   {
     if(this.readyState == 4 && this.status == 200)
     {
-      alert(this.responseText);
+      eval(this.responseText);
     }
   }
   xmlhttp.open("POST","testDropDown.php",true);
