@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $Section = $_REQUEST["Section"];
     $UID = $_SESSION["uid"];
-    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName,count(*) as num from homework h join section s on h.S_ID = s.S_ID join problem p on p.P_ID = h.P_ID left join submit su on su.H_ID = h.H_ID where s.S_ID = '$Section' and u.u_id = '$UID' group by su.h_id;");
+    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName,count(su.u_id) as num  ,(case when (select status from submit where su.H_ID = H_id and status = 'P' limit 1) is null then 'F' else 'P' end)  as status from homework h join section s on h.S_ID = s.S_ID join problem p on p.P_ID = h.P_ID left join submit su on su.H_ID = h.H_ID  where s.S_ID = '111' group by su.h_id order by su.status desc;");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
