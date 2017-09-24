@@ -173,7 +173,7 @@ document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
                   <button type='button' class='close' data-dismiss='modal'>&times;</button>
                 </div>
                 <div class='modal-body' style='margin:auto;'>
-                <form class="form-horizontal" role="form" action="test1.php" method="post" enctype="multipart/form-data" />
+                <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" />
                   <label class='file'>
                   <input type='file' name = "Uploaded_file" id = "Uploaded_file">
                   <span class='file-custom'></span>
