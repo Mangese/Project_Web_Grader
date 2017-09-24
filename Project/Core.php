@@ -26,12 +26,12 @@
 				/*$trimmed1 = array_map(function($item)
 				{
 					return preg_replace('/\s+/','',$item)
-				},$array_in);
+				},$array_in);*/
 				$trimmed1 = array_map(function($item)
 				{
 					return preg_replace('/\s+/','',$item)
 				},$array_out);
-				$result = ($trimmed1 === $trimmed2);*/
+				//$result = ($trimmed1 === $trimmed2);
 				$result = 1;
 				if($result)
 				{
