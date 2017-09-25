@@ -170,15 +170,23 @@
         window.location = "logout.php";
       }
       function createSec() {
-        alert("test");
         var x = document.getElementById("selSectionHw");
         var pClass = document.getElementById("createClass").value;
         var pSection = document.getElementById("createSection").value;
         var pSemester = document.getElementById("semester").value;
         var pYear = document.getElementById("year").value;
+        str = $("#selSectionHw").val();
         var option = document.createElement("option");
         option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
         x.add(option);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          
+        }
+        }
+        xmlhttp.open("POST","createClass.php?text="+option.text+"&class="+str,true);
+        xmlhttp.send();
       }
     </script>
 
