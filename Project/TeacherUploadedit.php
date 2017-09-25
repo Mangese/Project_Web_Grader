@@ -287,7 +287,9 @@
                 <select class="form-control" name="selSectionHw" id="selSectionHw" style="height: 19px;" onchange="changePassword()">
 <!--       onchange table-->
             <option value="">Please Select Section</option>
-            
+            <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
+            <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
+            <option value="EGCO112">EGCO112 Programming Technique</option>
           </select>
 
               </div>
