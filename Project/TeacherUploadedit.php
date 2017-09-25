@@ -113,6 +113,19 @@
         xmlhttp.open("POST","FillTableT.php?class="+str,true);
         xmlhttp.send();
       }
+      function fillTableHw()
+      {
+        $('#TableHw tbody tr').remove();
+        str = $("#selSectionHw").val();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          $('#TableHw').append(this.responseText);
+        }
+        }
+        xmlhttp.open("POST","FillTableHwT.php?class="+str,true);
+        xmlhttp.send();
+      }
     </script>
 
     <script>
@@ -287,9 +300,9 @@
                 <select class="form-control" name="selSectionHw" id="selSectionHw" style="height: 19px;" onchange="changePassword()">
 <!--       onchange table-->
             <option value="">Please Select Section</option>
-            <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
-            <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
-            <option value="EGCO112">EGCO112 Programming Technique</option>
+            <option value="111">EGCO111 Computer Programming (CO)</option>
+            <option value="222">EGCO111 Computer Programming (EE)</option>
+            <option value="112">EGCO112 Programming Technique</option>
           </select>
 
               </div>
@@ -366,7 +379,7 @@
             </form>
             <!--</div>-->
           </div>
-          <table class="table table-striped table-hover main">
+          <table class="table table-striped table-hover main" id = "TableHw">
             <thead class="thead">
               <tr>
                 <th style="width:20%">
@@ -388,60 +401,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="width:20%">
-                  โปรแกรมสูตรคูณ
-                </td>
-                <td style="width:20%">
-                  C
-                </td>
-                <td style="width:20%">
-
-                </td>
-                <td style="width:20%">
-
-                </td>
-                <td style="width:20%">
-                  <button type="button" class="btn btn-outline-secondary">Detail</button>
-                </td>
-
-              </tr>
-              <tr>
-                <td style="width:20%">
-                  โปรแกรมหา เลขคู่ เลขคี่
-                </td>
-                <td style="width:20%">
-                  C++
-                </td>
-                <td style="width:20%">
-
-                </td>
-                <td style="width:20%">
-
-                </td>
-                <td style="width:20%">
-                  <button type="button" class="btn btn-outline-secondary">Detail</button>
-                </td>
-
-              </tr>
-              <tr>
-                <td style="width:20%">
-                  โปรแกรมตรวจคะแนนข้อสอบ
-                </td>
-                <td style="width:20%">
-                  C
-                </td>
-                <td style="width:20%">
-
-                </td>
-                <td style="width:20%">
-
-                </td>
-                <td style="width:20%">
-                  <button type="button" class="btn btn-outline-secondary">Detail</button>
-                </td>
-
-              </tr>
 
 
             </tbody>
