@@ -280,18 +280,14 @@
           <script>
             function changePassword() {
               var x = document.getElementById("selSectionHw").value;
-              if (x == "EGCO111CO") {
-                document.getElementById("sectionPassword").value = "cG3e8d";
-              }
-              else if (x == "EGCO111EE") {
-                document.getElementById("sectionPassword").value = "fFvd9c";
-              }
-              else if (x == "EGCO112") {
-                document.getElementById("sectionPassword").value = "wK7xqh";
-              }
-              else if (x == "none") {
-                document.getElementById("sectionPassword").value = "";
-              }
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          document.getElementById("sectionPassword").value = this.responseText;
+        }
+        }
+        xmlhttp.open("POST","FillSectionPassword.php?class="+x,true);
+        xmlhttp.send();
               fillTableHw();
             }
           </script>
