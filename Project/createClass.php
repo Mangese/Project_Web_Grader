@@ -9,7 +9,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("use grader;");
     $result = mysql_query("insert into section value('','test',$CID,$UID,'$TXT');");
     $RS = mysql_error($result);
-    echo "<script> alert('$RS'); </script>"
+    echo "<script> alert('$RS'); </script>";
   }
     
     
