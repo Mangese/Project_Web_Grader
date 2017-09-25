@@ -5,7 +5,7 @@
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
     $CID = $_REQUEST["class"];
-    $result = mysql_query("select password as password from section where s_id = '$UID';");
+    $result = mysql_query("select password as password from section where s_id = '$CID';");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
