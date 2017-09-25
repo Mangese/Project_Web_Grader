@@ -372,7 +372,7 @@
                     </div>
                     <div class="modal-footer">
                       <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
-                      <button type="submit" class="btn btn-success" onclick="$('#myModal3').modal('hide');createSec();">Create</button>
+                      <button type="button" class="btn btn-success" onclick="$('#myModal3').modal('hide');createSec();">Create</button>
                     </div>
                   </form>
                 </div>
