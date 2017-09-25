@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $CID = $_REQUEST["class"];
     $UID = $_SESSION["uid"];
-    $result = mysql_query("select p.Remark as problemName,p.UploadDate as uploadDate,p.language as lang,(select count((select count(*) from submit where h_id = h.h_id group by u_id,h_id))) as count,(select count(*) from submit where h_id = h.h_id and status = 'P' group by u_id,h_id) as count1 from homework h join problem p on p.p_id = h.p_id join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id  where p.u_id = '$UID' and h.s_id = '$CID' group by h.h_id;");
+    $result = mysql_query("select p.Remark as problemName,p.UploadDate as uploadDate,p.language as lang,(case when (select count((select count(*) from submit where h_id = h.h_id group by u_id,h_id))) is null then 0 else (select count((select count(*) from submit where h_id = h.h_id group by u_id,h_id))) end)  as count,(case when (select count(*) from submit where h_id = h.h_id and status = 'P' group by u_id,h_id) is null then 0 else (select count(*) from submit where h_id = h.h_id and status = 'P' group by u_id,h_id) end ) as count1 from homework h join problem p on p.p_id = h.p_id join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id  where p.u_id = '$UID' and p.c_id = '$CID' group by h.h_id;");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
