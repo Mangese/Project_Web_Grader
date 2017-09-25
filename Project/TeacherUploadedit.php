@@ -66,7 +66,6 @@
 	echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
 	}
 ?>
-
   <body>
     <script>
       $('#myTab a').click(function (e) {
@@ -83,6 +82,32 @@
           format: 'LT'
         });
       });
+      function fillDropDownSection()
+      {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function()
+        {
+          if(this.readyState == 4 && this.status == 200)
+          {
+            eval(this.responseText);
+          }
+        }
+        xmlhttp.open("POST","DropDownForT.php",true);
+        xmlhttp.send();
+      }
+      function fillTable()
+      {
+        $('#DataFromAjax tbody tr').remove();
+        str = $("#selectClass").val();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+          $('#DataFromAjax').append(this.responseText);
+        }
+        }
+        xmlhttp.open("POST","FillTableT.php?class="+str,true);
+        xmlhttp.send();
+      }
     </script>
 
     <script>
@@ -150,16 +175,13 @@
 		    <form>
               <select class="form-control" name="selSectionPb" id="selSectionPb" style="height: 19px;" onchange="changePassword()">
 <!-- 		       onchange table-->
-          <option value="none">Please Select Section</option>
-          <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
-          <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
-          <option value="EGCO112">EGCO112 Programming Technique</option>
+          <option value="none">Please Select Class</option>
 		      </form>
         </select>
 
             </div>
           </div>
-          <table class="table table-striped table-hover main">
+          <table class="table table-striped table-hover main" id = "DataFromAjax">
             <thead class="thead">
               <tr>
                 <th style="width:40%">
@@ -174,61 +196,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="width:40%">
-                  โปรแกรมสูตรคูณ
-                </td>
-                <td style="width:20%">
-                  20 Aug 2017
-                </td>
-                <td style="width:20%">
-                  C
-                </td>
-              </tr>
-              <tr>
-                <td style="width:40%">
-                  โปรแกรมหา เลขคู่ เลขคี่
-                </td>
-                <td style="width:20%">
-                  23 Sep 2017
-                </td>
-                <td style="width:20%">
-                  C++
-                </td>
-              </tr>
-              <tr>
-                <td style="width:40%">
-                  โปรแกรมตรวจคะแนนข้อสอบ
-                </td>
-                <td style="width:20%">
-                  27 Sep 2017
-                </td>
-                <td style="width:20%">
-                  C
-                </td>
-              </tr>
-              <!-- <tr>
-                <td style="width:40%">
-                  โปรแกรมวาดรูป3เหลี่ยม
-                </td>
-                <td style="width:20%">
-                  30 Sep 2017
-                </td>
-                <td style="width:20%">
-                  C
-                </td>
-              </tr> -->
-              <!-- <tr>
-                <td style="width:40%">
-                  โปรแกรมทอนเงินเป็นเหรียญ
-                </td>
-                <td style="width:20%">
-                  22 Sep 2017
-                </td>
-                <td style="width:20%">
-                  C++
-                </td>
-              </tr> -->
             </tbody>
           </table>
 
@@ -312,12 +279,9 @@
           <div class="head-t row" style="width:100%">
             <form name="from2" method="post" action="xxx.php">
               <div class="dropdown left">
-                <select class="form-control" name="selSectionHw" id="selSectionHw" style="height: 19px;" onchange="changePassword()">
+                <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="changePassword()">
 <!-- 			 onchange table-->
-            <option value="none">Please Select Section</option>
-            <option value="EGCO111CO">EGCO111 Computer Programming (CO)</option>
-            <option value="EGCO111EE">EGCO111 Computer Programming (EE)</option>
-            <option value="EGCO112">EGCO112 Programming Technique</option>
+            <option value="">Please Select Section</option>
             
           </select>
 
