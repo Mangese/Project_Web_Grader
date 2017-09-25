@@ -292,6 +292,7 @@
               else if (x == "none") {
                 document.getElementById("sectionPassword").value = "";
               }
+              fillTableHw();
             }
           </script>
           <div class="head-t row" style="width:100%">
