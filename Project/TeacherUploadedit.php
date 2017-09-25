@@ -68,6 +68,11 @@
 ?>
   <body>
     <script>
+	     $(document).ready(function()
+  {
+  fillDropDownSection();
+  fillTable();
+  });
       $('#myTab a').click(function (e) {
         e.preventDefault()
         $(this).tab('show')
@@ -279,7 +284,7 @@
           <div class="head-t row" style="width:100%">
             <form name="from2" method="post" action="xxx.php">
               <div class="dropdown left">
-                <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="changePassword()">
+                <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="FillTable()">
 <!-- 			 onchange table-->
             <option value="">Please Select Section</option>
             
