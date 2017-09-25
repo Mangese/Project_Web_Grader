@@ -88,7 +88,7 @@ if(mysql_num_rows($result)==1)
 	}
 	else
 	{
-	echo "<script> window.location = 'TeacherUpload.php' </script>";
+	echo "<script> window.location = 'TeacherUploadedit.php' </script>";
 	}
 	}
 }
