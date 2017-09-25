@@ -7,9 +7,13 @@ $conn = mysql_connect("localhost","mangese","000000");
     $TXT = $_REQUEST["text"];
     $CID = $_REQUEST["class"];
     mysql_query("use grader;");
-    $result = mysql_query("insert into section value('','test',$CID,$UID,'$TXT');");
-    $RS = mysql_error($result);
-    echo "<script> alert('$RS'); </script>";
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    $result = mysql_query("insert into section value('','$randomString',$CID,$UID,'$TXT');");
   }
     
     
