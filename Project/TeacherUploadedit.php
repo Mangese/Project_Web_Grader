@@ -171,7 +171,7 @@
       }
       function createSec() {
         var x = document.getElementById("selSectionHw");
-        var pClass = $("#createClass").text();
+        var pClass = $('select[name="createClass"] option:selected').text();
         var pSection = document.getElementById("createSection").value;
         var pSemester = document.getElementById("semester").value;
         var pYear = document.getElementById("year").value;
