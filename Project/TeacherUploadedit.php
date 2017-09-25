@@ -126,7 +126,7 @@
             eval(this.responseText);
           }
         }
-        xmlhttp.open("POST","FillDropHw.php",true);
+        xmlhttp.open("POST","FillDropHW.php",true);
         xmlhttp.send();
       }
       function fillTableHw()
