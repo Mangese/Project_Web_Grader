@@ -10,7 +10,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
+    for ($i = 0; $i < 8; $i++) {
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
     $result = mysql_query("insert into section value('','$randomString',$CID,$UID,'$TXT');");
