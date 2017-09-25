@@ -322,7 +322,7 @@
 
                 <!-- Modal content-->
                 <div class="modal-content">
-                  <form name="from3" method="post" action="xxx.php">
+                  <form name="from3" method="post">
                     <div class="modal-header">
                       <h4 class="modal-title">Create Section</h4>
                       <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
@@ -372,7 +372,7 @@
                     </div>
                     <div class="modal-footer">
                       <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
-                      <button type="submit" class="btn btn-success" onclick="$('#myModal3').modal('hide');createFun();">Create</button>
+                      <button type="submit" class="btn btn-success" onclick="$('#myModal3').modal('hide');createSec();">Create</button>
                     </div>
                   </form>
                 </div>
