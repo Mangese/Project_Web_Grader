@@ -170,6 +170,7 @@
         window.location = "logout.php";
       }
       function createSec() {
+        alert("test");
         var x = document.getElementById("selSectionHw");
         var pClass = document.getElementById("createClass").value;
         var pSection = document.getElementById("createSection").value;
