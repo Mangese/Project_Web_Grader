@@ -104,7 +104,6 @@
       {
         $('#DataFromAjax tbody tr').remove();
         str = $("#selectClass").val();
-        alert(str);
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
@@ -179,7 +178,7 @@
           <div class="head-t row" style="width:100%">
             <div class="dropdown left">
         <form>
-              <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="FillTable()">
+              <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="fillTable()">
 <!--           onchange table-->
           <option value="">Please Select Class</option>
           </form>
