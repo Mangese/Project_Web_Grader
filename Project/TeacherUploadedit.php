@@ -283,7 +283,7 @@
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-          document.getElementById("sectionPassword").value = this.responseText;
+          $("#sectionPassword").val(this.responseText);
         }
         }
         xmlhttp.open("POST","FillSectionPassword.php?class="+x,true);
