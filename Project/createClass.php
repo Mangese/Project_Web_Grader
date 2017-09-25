@@ -15,5 +15,5 @@ $conn = mysql_connect("localhost","mangese","000000");
     }
     $result = mysql_query("insert into section value('','$randomString',$CID,$UID,'$TXT');");
   }
-    
+?>
     
