@@ -56,19 +56,19 @@
   </nav>
 </head>
 <?php
-	session_start();
-	if(!isset($_SESSION["user"]))
-	{
-	echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
-	}
-	else
-	{
-	echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
-	}
+  session_start();
+  if(!isset($_SESSION["user"]))
+  {
+  echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
+  }
+  else
+  {
+  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
+  }
 ?>
   <body>
     <script>
-	     $(document).ready(function()
+       $(document).ready(function()
   {
   fillDropDownSection();
   fillTable();
@@ -177,11 +177,11 @@
           <br>
           <div class="head-t row" style="width:100%">
             <div class="dropdown left">
-		    <form>
-              <select class="form-control" name="selSectionPb" id="selSectionPb" style="height: 19px;" onchange="changePassword()">
-<!-- 		       onchange table-->
-          <option value="none">Please Select Class</option>
-		      </form>
+        <form>
+              <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="FillTable()">
+<!--           onchange table-->
+          <option value="">Please Select Class</option>
+          </form>
         </select>
 
             </div>
@@ -284,8 +284,8 @@
           <div class="head-t row" style="width:100%">
             <form name="from2" method="post" action="xxx.php">
               <div class="dropdown left">
-                <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="FillTable()">
-<!-- 			 onchange table-->
+                <select class="form-control" name="selSectionHw" id="selSectionHw" style="height: 19px;" onchange="changePassword()">
+<!--       onchange table-->
             <option value="">Please Select Section</option>
             
           </select>
