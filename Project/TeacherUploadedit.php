@@ -66,14 +66,14 @@
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
   }
 ?>
+
   <body>
     <script>
-       $(document).ready(function()
-  {
-  fillDropDownSection();
-  fillDropHw();
-  fillTable();
-  });
+      $(document).ready(function () {
+        fillDropDownSection();
+        fillDropHw();
+        fillTable();
+      });
       $('#myTab a').click(function (e) {
         e.preventDefault()
         $(this).tab('show')
@@ -88,56 +88,48 @@
           format: 'LT'
         });
       });
-      function fillDropDownSection()
-      {
+      function fillDropDownSection() {
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function()
-        {
-          if(this.readyState == 4 && this.status == 200)
-          {
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
             eval(this.responseText);
           }
         }
-        xmlhttp.open("POST","DropDownForT.php",true);
+        xmlhttp.open("POST", "DropDownForT.php", true);
         xmlhttp.send();
       }
-      function fillTable()
-      {
+      function fillTable() {
         $('#DataFromAjax tbody tr').remove();
         str = $("#selectClass").val();
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-          $('#DataFromAjax').append(this.responseText);
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $('#DataFromAjax').append(this.responseText);
+          }
         }
-        }
-        xmlhttp.open("POST","FillTableT.php?class="+str,true);
+        xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
         xmlhttp.send();
       }
-       function fillDropHw()
-      {
+      function fillDropHw() {
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function()
-        {
-          if(this.readyState == 4 && this.status == 200)
-          {
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
             eval(this.responseText);
           }
         }
-        xmlhttp.open("POST","FillDropHW.php",true);
+        xmlhttp.open("POST", "FillDropHW.php", true);
         xmlhttp.send();
       }
-      function fillTableHw()
-      {
+      function fillTableHw() {
         $('#TableHw tbody tr').remove();
         str = $("#selSectionHw").val();
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-          $('#TableHw').append(this.responseText);
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $('#TableHw').append(this.responseText);
+          }
         }
-        }
-        xmlhttp.open("POST","FillTableHwT.php?class="+str,true);
+        xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
         xmlhttp.send();
       }
     </script>
@@ -180,12 +172,12 @@
         option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
         x.add(option);
         var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-          $("#sectionPassword").val(this.responseText);
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $("#sectionPassword").val(this.responseText);
+          }
         }
-        }
-        xmlhttp.open("POST","createClass.php?text="+option.text+"&class="+str,true);
+        xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
         xmlhttp.send();
       }
     </script>
@@ -213,8 +205,8 @@
           <br>
           <div class="head-t row" style="width:100%">
             <div class="dropdown left">
-        <form>
-              <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="fillTable()">
+              <form>
+                <select class="form-control" name="selectClass" id="selectClass" style="height: 19px;" onchange="fillTable()">
 <!--           onchange table-->
           <option value="">Please Select Class</option>
           </form>
@@ -222,7 +214,7 @@
 
             </div>
           </div>
-          <table class="table table-striped table-hover main" id = "DataFromAjax">
+          <table class="table table-striped table-hover main" id="DataFromAjax">
             <thead class="thead">
               <tr>
                 <th style="width:40%">
@@ -241,7 +233,7 @@
           </table>
 
           <div class="foot-t left">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal1">Upload</button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
           </div>
           <!-- Modal1 -->
           <div class="modal fade" id="myModal1" role="dialog">
@@ -250,48 +242,48 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <!--<form name="from1" method="post" action="xxx.php"> -->
-                  <div class="modal-header">
-                    <!-- <h4 class="modal-title">Section : xxx</h4> -->
-                    <h4 class="modal-title">Upload</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-header">
+                  <!-- <h4 class="modal-title">Section : xxx</h4> -->
+                  <h4 class="modal-title">Upload</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                  </div>
+                </div>
 
-                  <div class="modal-body left">
-                    <label>Problem Name : </label><br>
-                    <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
-                    <label>File : </label><br>
-                    <label class="file">
+                <div class="modal-body left">
+                  <label>Problem Name : </label><br>
+                  <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
+                  <label>File : </label><br>
+                  <label class="file">
                 <input type="file">
                 <span class="file-custom" style="width:132%"></span>
                 </label><br>
-                    <label>Input : </label><br>
-                    <label class="file">
+                  <label>Input : </label><br>
+                  <label class="file">
                 <input type="file">
                 <span class="file-custom" style="width:132%"></span>
                 </label><br>
-                    <label>Output : </label><br>
-                    <label class="file">
+                  <label>Output : </label><br>
+                  <label class="file">
                 <input type="file">
                 <span class="file-custom" style="width:132%"></span>
                 </label><br>
 
-                    <label class="radio-inline">
+                  <label class="radio-inline">
                     <input type="radio" name="optradio" var="C">C
                   </label>
-                    <label class="radio-inline">
+                  <label class="radio-inline">
                     <input type="radio" name="optradio" var="Cpp">C++
                   </label>
-                    <label class="radio-inline">
+                  <label class="radio-inline">
                     <input type="radio" name="optradio" var="Java">Java
                   </label>
-                  </div>
+                </div>
 
-                  <div class="modal-footer">
-                    <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
-                    <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
-                  </div>
-               <!-- </form> -->
+                <div class="modal-footer">
+                  <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
+                  <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
+                </div>
+                <!-- </form> -->
               </div>
             </div>
           </div>
@@ -303,14 +295,14 @@
           <script>
             function changePassword() {
               var x = document.getElementById("selSectionHw").value;
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-          $("#sectionPassword").val(this.responseText);
-        }
-        }
-        xmlhttp.open("POST","FillSectionPassword.php?class="+x,true);
-        xmlhttp.send();
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  $("#sectionPassword").val(this.responseText);
+                }
+              }
+              xmlhttp.open("POST", "FillSectionPassword.php?class=" + x, true);
+              xmlhttp.send();
               fillTableHw();
             }
           </script>
@@ -396,7 +388,7 @@
             </form>
             <!--</div>-->
           </div>
-          <table class="table table-striped table-hover main" id = "TableHw">
+          <table class="table table-striped table-hover main" id="TableHw">
             <thead class="thead">
               <tr>
                 <th style="width:20%">
@@ -423,7 +415,7 @@
             </tbody>
           </table>
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Assignment Homework</button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
           </div>
           <!-- Modal2 -->
           <div class="modal fade" id="myModal2" role="dialog">
@@ -433,7 +425,7 @@
               <div class="modal-content">
                 <form name="from5" method="post" action="xxx.php">
                   <div class="modal-header">
-                    <h4 class="modal-title">Assignment Homework</h4>
+                    <h4 class="modal-title">Assign Homework</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
                   <div class="modal-body">
