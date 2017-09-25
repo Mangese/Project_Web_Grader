@@ -175,14 +175,14 @@
         var pSection = document.getElementById("createSection").value;
         var pSemester = document.getElementById("semester").value;
         var pYear = document.getElementById("year").value;
-        str = $("#selSectionHw").val();
+        str = $("#createClass").val();
         var option = document.createElement("option");
         option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
         x.add(option);
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-          alert("success");
+          
         }
         }
         xmlhttp.open("POST","createClass.php?text="+option.text+"&class="+str,true);
@@ -343,8 +343,8 @@
                       <label>Class</label>
                       <select class="form-control" name="createClass" id="createClass" style="height: 19px; width:80%">
             <option>Please Select Classroom</option>
-            <option>EGCO111 Computer Programming</option>
-            <option>EGCO112 Programming Technique</option>
+            <option value = '3'>EGCO111 Computer Programming</option>
+            <option value = '4'>EGCO112 Programming Technique</option>
           </select>
 
 
