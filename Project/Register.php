@@ -89,7 +89,7 @@ if(trim($_POST["txtFirstname"]) == "")
 		return history.back();\">";
 		exit();
 	}
-echo "<script> window.location = 'login.php'; </script>";
+echo "<script> alert("Success"); window.location = 'login.php'; </script>";
 }
 else
 {
