@@ -106,6 +106,18 @@ function fillTable()
   xmlhttp.open("POST","FillTable.php?Section="+str,true);
   xmlhttp.send();
 }
+function sectionRegister()
+{
+  str = $("#SectionPassword").val();
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+  if(this.readyState == 4 && this.status == 200){
+    eval(this.responseText);
+  }
+  }
+  xmlhttp.open("POST","sectionRegister.php?Password="+str,true);
+  xmlhttp.send();
+}
 function ModalHeaderFunc(x,y)
 {
 $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
@@ -137,11 +149,11 @@ $("#SectionValue").val($("#selectClass").val());
             <div class="modal-body">
               <!--<div class="form-group">-->
               <p>Please Enter Section Password</p>
-              <input class="form-control" type="text" placeholder="Password">
+              <input class="form-control" type="text" placeholder="Password" id = "SectionPassword">
               <!--</div>-->
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-secondary" data-dismiss="modal">Join</button>
+              <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick = "sectionRegister()" >Join</button>
             </div>
           </div>
         </div>
