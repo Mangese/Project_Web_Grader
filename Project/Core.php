@@ -37,6 +37,7 @@
 				{
 					return preg_replace('/\s+/','',$item);
 				},$array_out);
+				echo "<script> alert('$trimmed1 $trimmed2 ');</script>";
 				$result = ($trimmed1 === $trimmed2);
 				if($result)
 				{
