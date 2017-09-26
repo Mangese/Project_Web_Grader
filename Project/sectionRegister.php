@@ -14,6 +14,7 @@
       {
       $Text = $row["name"];
       $val = $row["sid"];
+      mysql_query("insert into section values('$val','$UID')");
       echo "var x = document.getElementById('selectClass');";
       echo "var option = document.createElement('option');";
       echo "option.text = '$Text';";
