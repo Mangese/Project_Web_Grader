@@ -7,7 +7,6 @@
     $PW = $_REQUEST["Password"];
     $UID = $_SESSION["uid"];
     mysql_query("use grader;");
-    echo "alert('$PW $UID');";
     $result = mysql_query("select count(*) as result,name as name,s_id as sid from section where password = '$PW'; ");
     while($row = mysql_fetch_assoc($result))
     {
