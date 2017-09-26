@@ -39,7 +39,7 @@
 <?php
   session_start();
   $UT = $_SESSION["utype"];
-  if(!strcmp($UT,"s"))
+  if(strcmp($UT,"S"))
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUploadedit.php'; </script>";
   }
