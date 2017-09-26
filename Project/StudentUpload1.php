@@ -153,7 +153,7 @@ $("#SectionValue").val($("#selectClass").val());
               <!--</div>-->
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick = "sectionRegister()" >Join</button>
+              <button type="submit" class="btn btn-secondary" onclick = "sectionRegister()" >Join</button>
             </div>
           </div>
         </div>
