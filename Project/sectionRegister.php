@@ -4,7 +4,7 @@
   if($conn != FALSE)
   {
     session_start();
-    $PW = $_REQUEST["Section"];
+    $PW = $_REQUEST["Password"];
     $UID = $_SESSION["uid"];
     mysql_query("use grader;");
     echo "alert('$PW $UID');";
