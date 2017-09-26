@@ -16,10 +16,10 @@
       {
         $val = $row["sid"];
         $result1 = mysql_query("select count(*) as result from register where s_id <> '$val' and u_id <> '$UID'; ");
-        $temp = $row1["result"];
-        echo "alert('$temp');";
         while($row1 = mysql_fetch_assoc($result1))
         {
+          $temp = $row1["result"];
+        echo "alert('$temp');";
           if($row1["result"] == 0)
           {
             $Text = $row["name"];
