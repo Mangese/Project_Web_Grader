@@ -37,10 +37,6 @@
 				{
 					return preg_replace('/\s+/','',$item);
 				},$array_out);
-				print_r($trimmed1);
-				print_r($trimmed2);
-				
-				echo "<script> alert('$al1 $al2 ');</script>";
 				$result = ($trimmed1 === $trimmed2);
 				if($result)
 				{
@@ -66,7 +62,7 @@
 		{
 			exec("rm $target$file_name");
 		}
-		/*echo "<script type = 'text/javascript'>";
+		echo "<script type = 'text/javascript'>";
 		if($page == 0)
 		{
 		echo "window.location = 'STUDENT_WEB_GRADER_STATUS2.html';";
@@ -83,6 +79,6 @@
 		{
 		echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
 		}
-		echo "</script>";*/
+		echo "</script>";
 	}
 ?>
