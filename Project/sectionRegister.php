@@ -10,14 +10,14 @@
     $result = mysql_query("select count(*) as result,name as name,s_id as sid from section where password = '$PW'; ");
     while($row = mysql_fetch_assoc($result))
     {
+      if($row["result"] > 0)
+      {
       $val = $row["sid"];
       $result1 = mysql_query("select count(*) as result from register where s_id <> '$val' and u_id <> '$UID'; ");
       while($row1 = mysql_fetch_assoc($result1))
       {
        if($row1["result"] == 0)
        {
-         if($row["result"] > 0)
-          {
           $Text = $row["name"];
           mysql_query("insert into section values('$val','$UID')");
           echo "var x = document.getElementById('selectClass');";
@@ -26,17 +26,16 @@
           echo "option.value = '$val';";
           echo "x.add(option);";
           }
-          else
-          {
-          echo "alert('Invalid Password');";
-          }
        }
         else
         {
          echo "alert('Already Registered');"; 
         }
       }
-      
+       else
+          {
+          echo "alert('Invalid Password');";
+          }
     }
   }
 ?>
