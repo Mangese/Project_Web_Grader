@@ -22,6 +22,7 @@
         echo "alert('$temp');";
           if($row1["result"] == 0)
           {
+            echo "alert('test');";
             $Text = $row["name"];
             mysql_query("insert into section values('$val','$UID')");
             echo "var x = document.getElementById('selectClass');";
@@ -29,6 +30,7 @@
             echo "option.text = '$Text';";
             echo "option.value = '$val';";
             echo "x.add(option);";
+            echo "alert('$Text $val');";
           }  
           else
           {
