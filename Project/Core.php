@@ -39,7 +39,7 @@
 				},$array_out);
 				$al1 = print_r($trimmed1);
 				$al2 = print_r($trimmed2);
-				echo "<script> alert('al1 al2 ');</script>";
+				echo "<script> alert('$al1 $al2 ');</script>";
 				$result = ($trimmed1 === $trimmed2);
 				if($result)
 				{
