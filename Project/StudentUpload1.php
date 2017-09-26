@@ -38,8 +38,11 @@
 </head>
 <?php
   session_start();
-	$temp = $_SESSION["utype"];
-	echo "<script> alert('$temp'); </script>";
+  $UT = $_SESSION["utype"];
+  if(!strcmp($UT,"s")
+  {
+	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUploadedit.php'; </script>";
+  }
   if(!isset($_SESSION["user"]))
   {
   echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
