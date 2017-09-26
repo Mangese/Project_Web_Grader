@@ -10,6 +10,8 @@
     $result = mysql_query("select count(*) as result,name as name,s_id as sid from section where password = '$PW'; ");
     while($row = mysql_fetch_assoc($result))
     {
+      $temp = $row["result"];
+      echo "alert('$temp');";
       if($row["result"] > 0)
       {
         $val = $row["sid"];
