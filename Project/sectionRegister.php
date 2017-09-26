@@ -24,7 +24,7 @@
           {
             echo "alert('test');";
             $Text = $row["name"];
-            mysql_query("insert into section values($val,$UID);");
+            mysql_query("insert into register values($val,$UID);");
             echo "var x = document.getElementById('selectClass');";
             echo "var option = document.createElement('option');";
             echo "option.text = '$Text';";
