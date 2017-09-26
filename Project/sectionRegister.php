@@ -14,7 +14,7 @@
       $result1 = mysql_query("select count(*) as result from register where s_id <> '$val' and u_id <> '$UID'; ");
       while($row1 = mysql_fetch_assoc($result1))
       {
-       if($row1["result"] != 0)
+       if($row1["result"] == 0)
        {
          if($row["result"] > 0)
           {
