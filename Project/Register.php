@@ -89,8 +89,7 @@ if(trim($_POST["txtFirstname"]) == "")
 		return history.back();\">";
 		exit();
 	}
-$testsend = $_SESSION['testsend'];
-echo "$testsend";
+echo "<script> window.location = 'login.php' </script>":
 }
 else
 {
