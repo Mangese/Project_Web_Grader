@@ -129,7 +129,7 @@
 	            x = document.getElementById("selSectionHw").value;
 		    y = document.getElementById("AssignButton");
 		    
-	      if(x == "")
+	      if(x != "")
 	      {
 		 
 		 y.style.display = 'block';      
