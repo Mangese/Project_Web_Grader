@@ -140,7 +140,7 @@ $("#SectionValue").val($("#selectClass").val());
           <option value = "">Select Section</option>
         </select>
       </div>
-      <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Class</button>
+      <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Section</button>
       <!-- Modal -->
       <div class="modal fade" id="joinClass" role="dialog">
         <div class="modal-dialog">
@@ -148,7 +148,7 @@ $("#SectionValue").val($("#selectClass").val());
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Join Class</h4>
+              <h4 class="modal-title">Join Section</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
