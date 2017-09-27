@@ -78,6 +78,7 @@
         fillDropDownSection();
         fillDropHw();
         fillTable();
+	fillTableHw() 
       });
       $('#myTab a').click(function (e) {
         e.preventDefault()
@@ -114,6 +115,15 @@
         }
         xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
         xmlhttp.send();
+	y = document.getElementById("UploadButton");
+	if(str != "")
+	{
+		y.style.display = 'block'; 
+	}
+	else
+	{
+		y.style.display = 'block'; 
+	}
       }
       function fillDropHw() {
         var xmlhttp = new XMLHttpRequest();
@@ -250,7 +260,7 @@
           </table>
 
           <div class="foot-t left">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
+            <button type="button" class="btn btn-secondary" id = "UploadButton" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
           </div>
           <!-- Modal1 -->
           <div class="modal fade" id="myModal1" role="dialog">
