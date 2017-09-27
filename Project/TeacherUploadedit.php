@@ -107,6 +107,9 @@
       function fillTable() {
 	x = document.getElementById("selectClass").value;
 	y = document.getElementById("UploadButton");
+	      alert("Test");
+	      alert(x);
+	      alert(y.style.display);
 	if(x != "")
 	{
 		y.style.display = 'block'; 
@@ -150,7 +153,7 @@
 	      {
 		y.style.display = 'none';      
 	      }
-	      alert("Test");
+	      
         $('#TableHw tbody tr').remove();
         str = $("#selSectionHw").val();
         var xmlhttp = new XMLHttpRequest();
