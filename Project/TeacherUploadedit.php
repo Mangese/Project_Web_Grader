@@ -309,6 +309,16 @@
               xmlhttp.open("POST", "FillSectionPassword.php?class=" + x, true);
               xmlhttp.send();
               fillTableHw();
+		    y = document.getElementById("AssignButton");
+	      if(x!=null && !x.isEmpty())
+	      {
+		 
+		 y.style.display = 'block';      
+	      }
+	      else
+	      {
+		y.style.display = 'none';      
+	      }
             }
           </script>
           <div class="head-t row" style="width:100%">
@@ -420,7 +430,7 @@
             </tbody>
           </table>
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
+            <button type="button" class="btn btn-secondary" id = "AssignButton" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
           </div>
           <!-- Modal2 -->
           <div class="modal fade" id="myModal2" role="dialog">
