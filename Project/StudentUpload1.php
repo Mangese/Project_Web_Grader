@@ -38,11 +38,7 @@
 </head>
 <?php
   session_start();
-  $UT = $_SESSION["utype"];
-  if(strcmp($UT,"S"))
-  {
-	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUploadedit.php'; </script>";
-  }
+  
   if(!isset($_SESSION["user"]))
   {
   echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
@@ -50,6 +46,11 @@
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
+	  $UT = $_SESSION["utype"];
+  if(strcmp($UT,"S"))
+  {
+	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUploadedit.php'; </script>";
+  }
   }
 ?>
 <body>
