@@ -105,6 +105,16 @@
         xmlhttp.send();
       }
       function fillTable() {
+	      x = document.getElementById("selectClass").value;
+	y = document.getElementById("UploadButton");
+	if(x != "")
+	{
+		y.style.display = 'block'; 
+	}
+	else
+	{
+		y.style.display = 'block'; 
+	}
         $('#DataFromAjax tbody tr').remove();
         str = $("#selectClass").val();
         var xmlhttp = new XMLHttpRequest();
@@ -115,15 +125,7 @@
         }
         xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
         xmlhttp.send();
-	y = document.getElementById("UploadButton");
-	if(str != "")
-	{
-		y.style.display = 'block'; 
-	}
-	else
-	{
-		y.style.display = 'block'; 
-	}
+	
       }
       function fillDropHw() {
         var xmlhttp = new XMLHttpRequest();
