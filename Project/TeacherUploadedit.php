@@ -310,6 +310,7 @@
               xmlhttp.send();
               fillTableHw();
 		    y = document.getElementById("AssignButton");
+		    alert(x);
 	      if(x!=null && !x.isEmpty())
 	      {
 		 
