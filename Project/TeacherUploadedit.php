@@ -107,16 +107,13 @@
       function fillTable() {
 	x = document.getElementById("selectClass").value;
 	y = document.getElementById("UploadButton");
-	      alert("Test");
-	      alert(x);
-	      alert(y.style.display);
 	if(x != "")
 	{
 		y.style.display = 'block'; 
 	}
 	else
 	{
-		y.style.display = 'block'; 
+		y.style.display = 'none'; 
 	}
         $('#DataFromAjax tbody tr').remove();
         str = $("#selectClass").val();
