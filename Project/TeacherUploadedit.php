@@ -105,7 +105,7 @@
         xmlhttp.send();
       }
       function fillTable() {
-	      x = document.getElementById("selectClass").value;
+	x = document.getElementById("selectClass").value;
 	y = document.getElementById("UploadButton");
 	if(x != "")
 	{
@@ -150,6 +150,7 @@
 	      {
 		y.style.display = 'none';      
 	      }
+	      alert("Test");
         $('#TableHw tbody tr').remove();
         str = $("#selSectionHw").val();
         var xmlhttp = new XMLHttpRequest();
