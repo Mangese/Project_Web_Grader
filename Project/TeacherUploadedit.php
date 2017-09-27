@@ -126,6 +126,18 @@
         xmlhttp.send();
       }
       function fillTableHw() {
+	            x = document.getElementById("selSectionHw").value;
+		    y = document.getElementById("AssignButton");
+		    
+	      if(x == "")
+	      {
+		 
+		 y.style.display = 'block';      
+	      }
+	      else
+	      {
+		y.style.display = 'none';      
+	      }
         $('#TableHw tbody tr').remove();
         str = $("#selSectionHw").val();
         var xmlhttp = new XMLHttpRequest();
@@ -309,17 +321,7 @@
               xmlhttp.open("POST", "FillSectionPassword.php?class=" + x, true);
               xmlhttp.send();
               fillTableHw();
-		    y = document.getElementById("AssignButton");
-		    alert(x);
-	      if(x!=null && !x.isEmpty())
-	      {
-		 
-		 y.style.display = 'block';      
-	      }
-	      else
-	      {
-		y.style.display = 'none';      
-	      }
+	
             }
           </script>
           <div class="head-t row" style="width:100%">
