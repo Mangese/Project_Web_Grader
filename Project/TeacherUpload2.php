@@ -127,8 +127,6 @@
     }
     function fillUploadCID() {
 	$("#ClassId").val($("#selectClass").val());
-	str = $("#ClassId").val();
-        alert(str);
     }
     function fillTableHw() {
       x = document.getElementById("selSectionHw").value;
@@ -263,7 +261,7 @@
 
             <!-- Modal content-->
             <div class="modal-content">
-              <form name="form1" method="post" action="ProblemUpload.php">
+             <form name="form1" method="post" action="ProblemUpload.php">
               <div class="modal-header">
                 <!-- <h4 class="modal-title">Section : xxx</h4> -->
                 <h4 class="modal-title">Upload</h4>
