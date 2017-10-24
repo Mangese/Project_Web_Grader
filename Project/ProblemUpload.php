@@ -6,6 +6,7 @@
   	$CID = $_POST["ClassID"];
 	$PTYPE = $_POST["optradio"];
 	$PNAME = $_POST["ProblemNameUp"];
+		echo "<script> alert('$PNAME'); </script>";
 
 $conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
@@ -24,15 +25,12 @@ $conn = mysql_connect("localhost","mangese","000000");
     $OUTN = $GenFilename."OUT.out";
 		if(!move_uploaded_file($_FILES['PDFFile']['tmp_name'],$target.$PDFN))
 		{
-		echo "<script> alert('error1'); </script>";
 		}
     if(!move_uploaded_file($_FILES['InFile']['tmp_name'],$target.$INN))
 		{
-		echo "<script> alert('error2'); </script>";
 		}
     if(!move_uploaded_file($_FILES['OutFile']['tmp_name'],$target.$OUTN))
 		{
-		echo "<script> alert('error3'); </script>";
 		}
 	mysql_query("insert into problem(File_name,C_ID,U_ID,REMARK,inputfile,outputfile,uploaddate,language) values ('$PDFN',$CID,$UID,'$PNAME','$INN','$OUTN',DATE_FORMAT(now(),'%Y-%m-%d'),'$PTYPE');");
 	}
