@@ -22,7 +22,7 @@
 		{
 		echo "<script> alert('error1'); </script>";
 		}
-    if(!move_uploaded_file($_FILES['Inile']['tmp_name'],$target.$INN))
+    if(!move_uploaded_file($_FILES['InFile']['tmp_name'],$target.$INN))
 		{
 		echo "<script> alert('error2'); </script>";
 		}
