@@ -59,7 +59,7 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
-?
+?>
 
 <body>
   <!--Start script-->
