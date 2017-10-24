@@ -272,7 +272,7 @@
               <div class="modal-body left">
                   <input type='hidden' name = "ClassID" id = "ClassID">
                 <label>Problem Name : </label><br>
-                <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
+                <input name = "ProblemNameUp" id = "ProblemNameUp" type="text" class="form-control" style="width:90%" placeholder="Problem Name">
                 <label>File : </label><br>
                 <label class="file">
                                 <input type="file" id = "PDFFile" name = "PDFFile">
