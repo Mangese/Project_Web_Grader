@@ -224,7 +224,7 @@
 
       <div class="tab-pane active" id="tab1" role="tabpanel">
         <!--Selection-->
-        <form class="form-inline" style="margin-top:20px; margin-bottom:20px;">
+         <form class="form-inline" style="margin-top:20px; margin-bottom:20px;"> 
           <div class="form-group mx-sm-4">
             <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()">
                              <option value="">Please Select Class</option>
@@ -261,7 +261,7 @@
 
             <!-- Modal content-->
             <div class="modal-content">
-             <form name="form1" method="post" action="ProblemUpload.php">
+             <!-- <form name="form1" method="post" action="ProblemUpload.php"> -->
               <div class="modal-header">
                 <!-- <h4 class="modal-title">Section : xxx</h4> -->
                 <h4 class="modal-title">Upload</h4>
@@ -303,7 +303,7 @@
                 <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
                 <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
               </div>
-              </form> 
+             <!--  </form> --> 
             </div>
           </div>
         </div>
