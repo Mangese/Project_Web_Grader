@@ -36,5 +36,6 @@
 		{
 		echo "<script> alert('error3'); </script>";
 		}
+	mysql_query("insert into problem(File_name,C_ID,U_ID,REMARK,inputfile,outputfile,uploaddate,language) values ('$PDFN',$CID,$UID,'$PNAME','$INN','$OUTN',DATE_FORMAT(now(),'%Y-%m-%d'),'$PTYPE');");
 	}
 ?>
