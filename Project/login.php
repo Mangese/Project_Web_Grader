@@ -63,7 +63,7 @@
 		}
 		else
 		{
-		echo "<script> window.location = 'TeacherUpload.php' </script>";
+		echo "<script> window.location = 'TeacherUpload2.php' </script>";
 		}
 	}
 ?>
