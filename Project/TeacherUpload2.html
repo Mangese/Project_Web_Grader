@@ -308,6 +308,22 @@
             <!-- End Tab 1 -->
 
             <div class="tab-pane" id="tab2" role="tabpanel">
+
+                <script>
+                    function changePassword() {
+                        var x = document.getElementById("selSectionHw").value;
+                        var xmlhttp = new XMLHttpRequest();
+                        xmlhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                $("#sectionPassword").val(this.responseText);
+                            }
+                        }
+                        xmlhttp.open("POST", "FillSectionPassword.php?class=" + x, true);
+                        xmlhttp.send();
+                        fillTableHw();
+                    }
+                </script>
+
                 <!--Head part-->
                 <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
                     <!--Head 1-->

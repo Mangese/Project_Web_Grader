@@ -210,3 +210,7 @@ tr {
   color: #ffffff;
   background-color: #1c9c95;
 }
+
+.form-inline label {
+  display: inherit;
+}
