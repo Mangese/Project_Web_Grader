@@ -270,7 +270,7 @@
               </div>
 
               <div class="modal-body left">
-		<input type="hidden" id = "ClassId" name = "ClassId">
+                  <input type='hidden' name = "ClassID" id = "ClassID">
                 <label>Problem Name : </label><br>
                 <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
                 <label>File : </label><br>
