@@ -258,7 +258,7 @@
 
             <!-- Modal content-->
             <div class="modal-content">
-              <!--<form name="from1" method="post" action=""> -->
+              <form name="form1" method="post" action="ProblemUpload.php">
               <div class="modal-header">
                 <!-- <h4 class="modal-title">Section : xxx</h4> -->
                 <h4 class="modal-title">Upload</h4>
@@ -270,17 +270,17 @@
                 <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
                 <label>File : </label><br>
                 <label class="file">
-                                <input type="file">
+                                <input type="file" id = "PDFFile" name = "PDFFile">
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
                 <label>Input : </label><br>
                 <label class="file">
-                                <input type="file">
+                                <input type="file" id = "InFile" name = "InFile">
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
                 <label>Output : </label><br>
                 <label class="file">
-                                <input type="file">
+                                <input type="file" id = "OutFile" name = "OutFile">
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
 
@@ -299,7 +299,7 @@
                 <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
                 <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
               </div>
-              <!-- </form> -->
+              </form> 
             </div>
           </div>
         </div>
