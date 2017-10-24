@@ -126,7 +126,7 @@
       xmlhttp.send();
     }
     function fillUploadCID() {
-	$("#ClassId").val($("#selectClass").val());
+	$("#ClassID").val($("#selectClass").val());
     }
     function fillTableHw() {
       x = document.getElementById("selSectionHw").value;
