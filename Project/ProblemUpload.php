@@ -1,9 +1,12 @@
 <?php
 	session_start();
 	$UID = $_SESSION['uid'];
-  $CID = $_POST["ClassID"];
-		echo "<script> alert('$UID'); </script>";
-		echo "<script> alert('$CID'); </script>";
+  	$CID = $_POST["ClassID"];
+	$PTYPE = $_POST["optradio"];
+	$PNAME = $_POST["ProblemNameUp"];
+
+		echo "<script> alert('$PTYPE'); </script>";
+		echo "<script> alert('$PNAME'); </script>";
 
 	$conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
