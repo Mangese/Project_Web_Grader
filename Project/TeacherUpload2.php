@@ -43,7 +43,7 @@
     </form>
   </nav>
 </head>
-<!--<?php
+<?php
   session_start();
 
   if(!isset($_SESSION["user"]))
@@ -52,8 +52,6 @@
   }
   else
   {
-	  $temp123 = $_SESSION["user"];
-	  echo "<script> alert('$temp123'); </script>";
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
@@ -61,7 +59,7 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
-?>-->
+?
 
 <body>
   <!--Start script-->
