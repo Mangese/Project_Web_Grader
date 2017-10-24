@@ -260,7 +260,7 @@
           <div class="modal-dialog modal-md">
 
             <!-- Modal content-->
-	<form name="form1" method="post" action="ProblemUpload.php">
+	<form name="form1" method="post" action="ProblemUpload.php" enctype="multipart/form-data" >
 
             <div class="modal-content">
               <div class="modal-header">
