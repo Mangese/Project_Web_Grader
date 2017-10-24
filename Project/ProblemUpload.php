@@ -5,7 +5,7 @@ header('charset=utf-8');
   	$CID = $_POST["ClassID"];
 	$PTYPE = $_POST["optradio"];
 	$PNAME = $_POST["ProblemNameUp"];
-$th_name =iconv("UTF-8","ISO-8859-1//TRANSLIT",$_POST['ProblemNameUp']);
+$th_name =iconv("utf-8","ISO-8859-1//TRANSLIT",$_POST['ProblemNameUp']);
 echo "<script> alert('$th_name'); </script>";
 	
 ?>
