@@ -126,7 +126,7 @@
       xmlhttp.send();
     }
     function fillUploadCID() {
-	str = $("#selectClass").val();
+	str = $("#ClassID").val($("#selectClass").val());
         alert(str);
     }
     function fillTableHw() {
