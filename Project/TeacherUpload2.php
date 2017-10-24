@@ -56,7 +56,7 @@
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
   {
-	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUploadedit.php'; </script>";
+	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
 ?>-->
