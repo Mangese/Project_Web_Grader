@@ -11,7 +11,7 @@ $conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
 	{
 		mysql_query("use grader;");
-		mysql_query("SET NAMES TIS620");
+		mysql_query("SET NAMES UTF8");
 
 		$target = "Problem/";
     $result = mysql_query("select concat((select classname from class where C_ID = '$CID'),'$UID',DATE_FORMAT(now(),'%Y%m%d'),count(*)) as genname from problem p where U_ID = '$UID' and C_ID = '$CID';");
