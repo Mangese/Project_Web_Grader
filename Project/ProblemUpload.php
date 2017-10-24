@@ -1,5 +1,5 @@
 <?php
- header("content-type: application/x-javascript; charset=utf-8");	session_start();
+        session_start();
 	$UID = $_SESSION['uid'];
   	$CID = $_POST["ClassID"];
 	$PTYPE = $_POST["optradio"];
