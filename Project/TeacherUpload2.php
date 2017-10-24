@@ -125,6 +125,10 @@
       xmlhttp.open("POST", "FillDropHW.php", true);
       xmlhttp.send();
     }
+    function fillUploadCID() {
+	str = $("#selectClass").val();
+        alert(str);
+    }
     function fillTableHw() {
       x = document.getElementById("selSectionHw").value;
       y = document.getElementById("AssignButton");
@@ -250,7 +254,7 @@
 
         <!--Foot Part-->
         <div class="foot-t left">
-          <button type="button" class="btn btn-secondary" id="UploadButton" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
+          <button type="button" class="btn btn-secondary" id="UploadButton" onclick = "fillUploadCID();" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
         </div>
         <!-- Modal1 -->
         <div class="modal fade" id="myModal1" role="dialog">
@@ -266,6 +270,7 @@
               </div>
 
               <div class="modal-body left">
+		<input type="hidden" id = "ClassId" name = "ClassId">
                 <label>Problem Name : </label><br>
                 <input type="text" class="form-control" style="width:90%" placeholder="Problem Name">
                 <label>File : </label><br>
