@@ -1,4 +1,6 @@
 <?php
+    header("content-type: txt/html; charset=TIS-620");
+
         session_start();
 	$UID = $_SESSION['uid'];
   	$CID = $_POST["ClassID"];
