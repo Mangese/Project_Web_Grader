@@ -1,5 +1,5 @@
 <?php
-    header("content-type: txt/html; charset=utf-8");
+    header("content-type: text/html; charset=utf-8");
 
         session_start();
 	$UID = $_SESSION['uid'];
