@@ -52,6 +52,8 @@
   }
   else
   {
+	  $temp123 = $_SESSION["user"];
+	  echo "<script> alert('$temp123'); </script>";
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."' </script>";
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
