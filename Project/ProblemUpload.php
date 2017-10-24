@@ -4,11 +4,12 @@
   	$CID = $_POST["ClassID"];
 	$PTYPE = $_POST["optradio"];
 	$PNAME = $_POST["ProblemNameUp"];
-mysql_query("SET NAMES TIS620");
 $conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
 	{
 		mysql_query("use grader;");
+		mysql_query("SET NAMES TIS620");
+
 		$target = "Problem/";
     $result = mysql_query("select concat((select classname from class where C_ID = p.C_ID),'$UID',DATE_FORMAT(now(),'%Y%m%d'),count(*)) as genname from problem p where U_ID = '$UID' and C_ID = '$CID';");
     while($row = mysql_fetch_assoc($result))
