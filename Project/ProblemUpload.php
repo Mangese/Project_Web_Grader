@@ -17,15 +17,15 @@
     $OUTN = $GenFilename."OUT.out";
 		if(!move_uploaded_file($_FILES['PDFFile']['tmp_name'],$target.$PDFN))
 		{
-		echo "<script> alert('error'); </script>";
+		echo "<script> alert('error1'); </script>";
 		}
     if(!move_uploaded_file($_FILES['Inile']['tmp_name'],$target.$INN))
 		{
-		echo "<script> alert('error'); </script>";
+		echo "<script> alert('error2'); </script>";
 		}
     if(!move_uploaded_file($_FILES['OutFile']['tmp_name'],$target.$INN))
 		{
-		echo "<script> alert('error'); </script>";
+		echo "<script> alert('error3'); </script>";
 		}
 	}
 ?>
