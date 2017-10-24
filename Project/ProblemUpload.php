@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
+header('charset=utf-8');
 	session_start();
 	$UID = $_SESSION['uid'];
   	$CID = $_POST["ClassID"];
