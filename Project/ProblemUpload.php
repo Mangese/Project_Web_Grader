@@ -10,7 +10,7 @@
 	{
 		mysql_query("use grader;");
 		$target = "File/";
-    $result = mysql_query("select concat((select classname from class where C_ID = p.C_ID),U_ID,DATE_FORMAT(now(),'%Y%m%d'),count(*)) as genname from problem p where U_ID = $UID and C_ID = $CID;");
+    $result = mysql_query("select concat((select classname from class where C_ID = p.C_ID),U_ID,DATE_FORMAT(now(),'%Y%m%d'),count(*)) as genname from problem p where U_ID = '$UID' and C_ID = '$CID';");
     while($row = mysql_fetch_assoc($result))
     {
       $GenFilename = $row['genname'];
