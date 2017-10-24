@@ -4,13 +4,6 @@
   	$CID = $_POST["ClassID"];
 	$PTYPE = $_POST["optradio"];
 	$PNAME = $_POST["ProblemNameUp"];
-
-		echo "<script> alert('$PTYPE'); </script>";
-		echo "<script> alert('$PNAME'); </script>";
-		echo "<script> alert('$CID'); </script>";
-		echo "<script> alert('$UID'); </script>";
-
-
 	$conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
 	{
