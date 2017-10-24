@@ -272,7 +272,7 @@
               <div class="modal-body left">
                   <input type='hidden' name = "ClassID" id = "ClassID">
                 <label>Problem Name : </label><br>
-                <input name = "ProblemNameUp" id = "ProblemNameUp" type="text" class="form-control" style="width:90%" placeholder="Problem Name">
+                <input  type="text" name = "ProblemNameUp" id = "ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name">
                 <label>File : </label><br>
                 <label class="file">
                                 <input type="file" id = "PDFFile" name = "PDFFile">
@@ -290,13 +290,13 @@
                                 </label><br>
 
                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" var="C">C
+                                    <input type="radio" name="optradio" id = "optradio" var="C">C
                                 </label>
                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" var="Cpp">C++
+                                    <input type="radio" name="optradio" id = "optradio" var="Cpp">C++
                                 </label>
                 <label class="radio-inline">
-                                    <input type="radio" name="optradio" var="Java">Java
+                                    <input type="radio" name="optradio" id = "optradio" var="Java">Java
                                 </label>
               </div>
 
