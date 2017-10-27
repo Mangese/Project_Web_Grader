@@ -11,7 +11,7 @@
 		$PN = $_POST["ProblemName"];
 		$SC = $_POST["SectionValue"];
 		//echo "<script> alert('$SC'); </script>";
-		//echo "<script> alert('$PN'); </script>";
+		echo "<script> alert('$PN'); </script>";
 		$tempName = preg_replace('/\s+/','',$temp);
 		if(!move_uploaded_file($_FILES['Uploaded_file']['tmp_name'],$target.$tempName))
 		{
