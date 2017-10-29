@@ -43,7 +43,7 @@
     </form>
   </nav>
 </head>
-<?php
+<!-- <?php
   session_start();
 
   if(!isset($_SESSION["user"]))
@@ -59,7 +59,7 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
-?>
+?> -->
 
 <body>
   <!--Start script-->
@@ -126,7 +126,7 @@
       xmlhttp.send();
     }
     function fillUploadCID() {
-	$("#ClassID").val($("#selectClass").val());
+      $("#ClassID").val($("#selectClass").val());
     }
     function fillTableHw() {
       x = document.getElementById("selSectionHw").value;
@@ -224,7 +224,7 @@
 
       <div class="tab-pane active" id="tab1" role="tabpanel">
         <!--Selection-->
-         <form class="form-inline" style="margin-top:20px; margin-bottom:20px;"> 
+        <form class="form-inline" style="margin-top:20px; margin-bottom:20px;">
           <div class="form-group mx-sm-4">
             <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()">
                              <option value="">Please Select Class</option>
@@ -237,13 +237,13 @@
           <thead class="thead">
             <tr>
               <th style="width:40%">
-                ชื่อโจทย์
+                Exam name
               </th>
               <th style="width:20%">
-                วันที่อัพไฟล์
+                Date upload
               </th>
               <th style="width:20%">
-                ภาษา
+                Language
               </th>
             </tr>
           </thead>
@@ -253,60 +253,60 @@
 
         <!--Foot Part-->
         <div class="foot-t left">
-          <button type="button" class="btn btn-secondary" id="UploadButton" onclick = "fillUploadCID();" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
+          <button type="button" class="btn btn-secondary" id="UploadButton" onclick="fillUploadCID();" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
         </div>
         <!-- Modal1 -->
         <div class="modal fade" id="myModal1" role="dialog">
           <div class="modal-dialog modal-md">
 
             <!-- Modal content-->
-	<form accept-charset="utf-8" name="form1" method="post" action="ProblemUpload.php" enctype="multipart/form-data" >
+            <form accept-charset="utf-8" name="form1" method="post" action="ProblemUpload.php" enctype="multipart/form-data">
 
-            <div class="modal-content">
-              <div class="modal-header">
-                <!-- <h4 class="modal-title">Section : xxx</h4> -->
-                <h4 class="modal-title">Upload</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- <h4 class="modal-title">Section : xxx</h4> -->
+                  <h4 class="modal-title">Upload</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
 
-              <div class="modal-body left">
-                  <input type='hidden' name = "ClassID" id = "ClassID">
-                <label>Problem Name : </label><br>
-                <input  type="text" name = "ProblemNameUp" id = "ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name">
-                <label>File : </label><br>
-                <label class="file">
+                <div class="modal-body left">
+                  <input type='hidden' name="ClassID" id="ClassID">
+                  <label>Problem Name : </label><br>
+                  <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name">
+                  <label>File : </label><br>
+                  <label class="file">
                                 <input type="file" id = "PDFFile" name = "PDFFile">
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
-                <label>Input : </label><br>
-                <label class="file">
+                  <label>Input : </label><br>
+                  <label class="file">
                                 <input type="file" id = "InFile" name = "InFile">
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
-                <label>Output : </label><br>
-                <label class="file">
+                  <label>Output : </label><br>
+                  <label class="file">
                                 <input type="file" id = "OutFile" name = "OutFile">
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
 
-                <label class="radio-inline">
+                  <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="C">C
                                 </label>
-                <label class="radio-inline">
+                  <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="Cpp">C++
                                 </label>
-                <label class="radio-inline">
+                  <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="Java">Java
                                 </label>
-              </div>
+                </div>
 
-              <div class="modal-footer">
-                <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
-                <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
+                <div class="modal-footer">
+                  <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
+                  <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
+                </div>
+
               </div>
-             
-            </div>
-	   </form>
+            </form>
           </div>
         </div>
         <!--End Modal1-->
@@ -379,7 +379,7 @@
 
                       <!-- <div class="dropdown"> -->
                       <select class="form-control" name="semester" id="semester" style="width: 80%;">
-                                                <option>ภาคการศึกษา</option>
+                                                <option>Semester</option>
                                                 <script>
                                                   for (var j = 1; j < 4; j++) {
                                                     document.write('<option value="' + j + '">' + j + '</option>');
@@ -390,7 +390,7 @@
 
                       <label>Year</label>
                       <select class="form-control" name="year" id="year" style="width: 80%;">
-                                                <option>ปีการศึกษา</option>
+                                                <option>Year</option>
                                                     <script>
                                                       var cyear = new Date().getFullYear();
                                                       cyear = cyear + 543;
@@ -421,19 +421,19 @@
           <thead class="thead">
             <tr>
               <th style="width:20%">
-                ชื่อโจทย์
+                Exam name
               </th>
               <th style="width:20%">
-                ภาษาที่ใช้
+                Language
               </th>
               <th style="width:20%">
-                จำนวนนักศึกษาที่ส่ง
+                Amount student sent
               </th>
               <th style="width:20%">
-                จำนวนนักศึกษาทีผ่าน
+                Amount student pass
               </th>
               <th style="width:20%">
-                ดูรายละเอียด
+                Detail
               </th>
             </tr>
           </thead>
@@ -462,26 +462,26 @@
                     <thead class="thead">
                       <tr>
                         <th style="width:30%">
-                          ชื่อโจทย์
+                          Exam name
                         </th>
                         <th style="width:10%">
-                          ภาษาที่ใช้
+                          Language
                         </th>
                         <th style="width:25%">
-                          กำหนดส่ง
+                          Deadline
                         </th>
                         <th style="width:25%">
-                          เวลา
+                          Time
                         </th>
                         <th style="width:10%">
-                          เลือก
+                          Select
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td style="width:30%">
-                          โปรแกรมวาดรูป3เหลี่ยม
+                          Exam1
                         </td>
                         <td style="width:10%">
                           C
@@ -512,7 +512,7 @@
                       </tr>
                       <tr>
                         <td style="width:30%">
-                          โปรแกรมทอนเงินเป็นเหรียญ
+                          Exam2
                         </td>
                         <td style="width:10%">
                           C++
@@ -569,7 +569,7 @@
                 <script>
                                                       var numOfProb = 10
                                                       for (var i = 1; i <= numOfProb; i++)
-                                                        document.write('<th style="min-width:30px">ข้อ ' + i + '</th>')
+                                                        document.write('<th style="min-width:30px">ex ' + i + '</th>')
                 </script>
                 <th style="width:100px">
                   Pass
@@ -582,12 +582,12 @@
                   5713999
                 </td>
                 <td style="width:250px">
-                  นายไก่กา ปากระป๋อง
+                  name1 surname1
                 </td>
                 <script>
-                                                        var numOfProb = 10
-                                                        for (var i = 1; i <= numOfProb; i++)
-                                                          document.write('<td style="min-width:30px"><i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" data-toggle="modal" data-target="#myModal0" ></i></td>')
+                                                      var numOfProb = 10
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" data-toggle="modal" data-target="#myModal0" ></i></td>')
                 </script>
                 <td style="width:100px">
                   10/10
@@ -598,12 +598,12 @@
                   5713555
                 </td>
                 <td style="width:250px">
-                  นายไข่ กลมดิ้ก
+                  name2 surname2
                 </td>
                 <script>
-                                                        var numOfProb = 10
-                                                        for (var i = 1; i <= numOfProb; i++)
-                                                          document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                                                      var numOfProb = 10
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
                 </script>
                 <td style="width:100px">
                   0/10
@@ -616,13 +616,13 @@
 
                 </td>
                 <td style="width:250px">
-		 <B>สรุปตามรายข้อ</B>
+                  <B>Conclusion</B>
                 </td>
                 <script>
-                                                        var numOfProb = 10
-                                                        var sum = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "3", "4", "2", "4", "2", "3", "4", "2"]
-                                                        for (var i = 0; i < numOfProb; i++)
-                                                          document.write('<th style="min-width:30px">' + sum[i] + '</th>')
+                                                      var numOfProb = 10
+                                                      var sum = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "3", "4", "2", "4", "2", "3", "4", "2"]
+                                                      for (var i = 0; i < numOfProb; i++)
+                                                        document.write('<th style="min-width:30px">' + sum[i] + '</th>')
                 </script>
                 <td style="width:100px">
 
@@ -642,7 +642,7 @@
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">ข้อx</h4>
+                <h4 class="modal-title">ex x</h4>
                 <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body left">
@@ -650,13 +650,13 @@
                   <thead class="thead">
                     <tr>
                       <th style="width:60%">
-                        ชื่อไฟล์
+                        File name
                       </th>
                       <th style="width:30%">
-                        สถานะ
+                        Status
                       </th>
                       <th style="width:10%">
-                        เลือก
+                        Select
                       </th>
                     </tr>
                   </thead>
