@@ -54,162 +54,165 @@
   }
 ?>
 
-<body>
-  <input type="hidden" id="TableUploadHeader" />
-  <script>
-    function logout() {
-      window.location = "logout.php";
-    }
-    $(document).ready(function () {
-      fillDropDownSection();
-      fillTable();
-    });
-    (function ($) {
-      var doc = document,
-        supportsMultipleFiles = "multiple" in doc.createElement("input");
-      $(doc).on("change", ".file > input[type=file]", function () {
-        var input = this,
-          fileNames = [],
-          label = input.nextElementSibling,
-          files, len, i = -1, labelValue;
-        if (supportsMultipleFiles) {
-          len = (files = input.files).length;
-          while (++i < len) {
-            fileNames.push(files[i].name);
-          }
-        }
-        else {
-          fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
-        }
-        label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
-        label.setAttribute("title", labelValue);
-      });
-    })(jQuery);
-    function fillDropDownSection() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          eval(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "testDropDown.php", true);
-      xmlhttp.send();
-    }
-    function fillTable() {
-      $('#DataFromAjax tbody tr').remove();
-      str = $("#selectClass").val();
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          $('#DataFromAjax').append(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "FillTable.php?Section=" + str, true);
-      xmlhttp.send();
-    }
-    function sectionRegister() {
-      str = $("#SectionPassword").val();
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          eval(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
-      xmlhttp.send();
-    }
-    function ModalHeaderFunc(x, y) {
-      $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
-      document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
-      $("#ProblemName").val(y);
-      $("#SectionValue").val($("#selectClass").val());
-      //alert($("#ProblemName").val());
-      //alert($("#SectionValue").val());
-    }
-  </script>
-  <div class="container-table">
-    <div class="head-std row">
-      <div class="dropdown">
-        <select class="form-control" id="selectClass" name="selectClass" onchange="fillTable();">
+  <body>
+    <input type="hidden" id="TableUploadHeader" />
+    <script>
+                  function logout() {
+                    window.location = "logout.php";
+                  }
+                  $(document).ready(function () {
+                    fillDropDownSection();
+                    fillTable();
+                  });
+                  (function ($) {
+                    var doc = document,
+                      supportsMultipleFiles = "multiple" in doc.createElement("input");
+                    $(doc).on("change", ".file > input[type=file]", function () {
+                      var input = this,
+                        fileNames = [],
+                        label = input.nextElementSibling,
+                        files, len, i = -1, labelValue;
+                      if (supportsMultipleFiles) {
+                        len = (files = input.files).length;
+                        while (++i < len) {
+                          fileNames.push(files[i].name);
+                        }
+                      }
+                      else {
+                        fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+                      }
+                      label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+                      label.setAttribute("title", labelValue);
+                    });
+                  })(jQuery);
+                  function fillDropDownSection() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "testDropDown.php", true);
+                    xmlhttp.send();
+                  }
+                  function fillTable() {
+                    $('#DataFromAjax tbody tr').remove();
+                    str = $("#selectClass").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#DataFromAjax').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTable.php?Section=" + str, true);
+                    xmlhttp.send();
+                  }
+                  function sectionRegister() {
+                    str = $("#SectionPassword").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
+                    xmlhttp.send();
+                  }
+                  function ModalHeaderFunc(x, y) {
+                    $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
+                    document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
+                    $("#ProblemName").val(y);
+                    $("#SectionValue").val($("#selectClass").val());
+                    //alert($("#ProblemName").val());
+                    //alert($("#SectionValue").val());
+                  }
+    </script>
+    <div class="container-table">
+      <div class="head-std row">
+        <div class="dropdown">
+          <select class="form-control" id="selectClass" name="selectClass" onchange="fillTable();">
           <option value = "">Select Section</option>
         </select>
-      </div>
-      <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Section</button>
-      <!-- Modal -->
-      <div class="modal fade" id="joinClass" role="dialog">
-        <div class="modal-dialog">
+        </div>
+        <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Section</button>
+        <!-- Modal -->
+        <div class="modal fade" id="joinClass" role="dialog">
+          <div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Join Section</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <!--<div class="form-group">-->
-              <p>Please Enter Section Password</p>
-              <input class="form-control" type="text" placeholder="Password" id="SectionPassword">
-              <!--</div>-->
-            </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-secondary" onclick="sectionRegister()">Join</button>
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Join Section</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <!--<div class="form-group">-->
+                <p>Please Enter Section Password</p>
+                <input class="form-control" type="text" placeholder="Password" id="SectionPassword">
+                <!--</div>-->
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" onclick="sectionRegister()">Join</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="tabel-wrapper">
-      <div id="table-scroll">
-        <table class="table table-striped table-hover main" id="DataFromAjax">
-          <thead class="thead">
-            <tr>
-              <th style="width:15%">
-                ID
-              </th>
-              <th style="width:40%">
-                ชื่อโจทย์
-              </th>
-              <th style="width:15%">
-                จำนวนที่ส่ง(ครั้ง)
-              </th>
-              <th style="width:15%">
-                สถานะ
-              </th>
-              <th style="width:15%">
-                Upload
-              </th>
-            </tr>
-          </thead>
-          <div class='modal fade' id='test1' role='dialog'>
-            <div class='modal-dialog'>
-              <div class='modal-content'>
-                <div class='modal-header'>
-                  <h4 class='modal-title' id='modalValue'></h4>
-                  <button type='button' class='close' data-dismiss='modal'>&times;</button>
-                </div>
-                <div class='modal-body' style='margin:auto;'>
-                  <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" />
-                  <label class='file'>
+      <div id="tabel-wrapper">
+        <div id="table-scroll">
+          <table class="table table-striped table-hover main" id="DataFromAjax">
+            <thead class="thead">
+              <tr>
+                <th style="width:15%">
+                  ID
+                </th>
+                <th style="width:30%">
+                  <!-- ชื่อโจทย์ -->
+                  Exam name
+                </th>
+                <th style="width:25%">
+                  <!-- จำนวนที่ส่ง(ครั้ง) -->
+                  Number of submissions
+                </th>
+                <th style="width:15%">
+                  <!-- สถานะ -->
+                  Status
+                </th>
+                <th style="width:15%">
+                  Upload
+                </th>
+              </tr>
+            </thead>
+            <div class='modal fade' id='test1' role='dialog'>
+              <div class='modal-dialog'>
+                <div class='modal-content'>
+                  <div class='modal-header'>
+                    <h4 class='modal-title' id='modalValue'></h4>
+                    <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                  </div>
+                  <div class='modal-body' style='margin:auto;'>
+                    <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" />
+                    <label class='file'>
                   <input type='hidden' name = "ProblemName" id = "ProblemName">
 		  <input type='hidden' name = "SectionValue" id = "SectionValue">
 		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c" required>
                   <span class='file-custom'></span>
                   </label>
+                  </div>
+                  <div class='modal-footer'>
+                    <button type='submit' class='btn btn-secondary'>Upload</button>
+                  </div>
+                  </form>
                 </div>
-                <div class='modal-footer'>
-                  <button type='submit' class='btn btn-secondary'>Upload</button>
-                </div>
-                </form>
               </div>
             </div>
-          </div>
-          <tbody>
-          </tbody>
-        </table>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
 
-</body>
+  </body>
 
 </html>
