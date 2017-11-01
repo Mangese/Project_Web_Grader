@@ -30,8 +30,8 @@
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Student</span>
-      <label class="ml-auto " id = "SessionUser"></label>
-      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" type="button" onclick = "logout()">Logout</button>
+      <label class="ml-auto " id="SessionUser"></label>
+      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
     </form>
   </nav>
 
@@ -53,18 +53,17 @@
   }
   }
 ?>
+
 <body>
-<input type = "hidden" id = "TableUploadHeader"/>
+  <input type="hidden" id="TableUploadHeader" />
   <script>
-function logout()
-{
-	window.location = "logout.php";
-}
-      $(document).ready(function()
-  {
-  fillDropDownSection();
-  fillTable();
-  });
+    function logout() {
+      window.location = "logout.php";
+    }
+    $(document).ready(function () {
+      fillDropDownSection();
+      fillTable();
+    });
     (function ($) {
       var doc = document,
         supportsMultipleFiles = "multiple" in doc.createElement("input");
@@ -86,58 +85,52 @@ function logout()
         label.setAttribute("title", labelValue);
       });
     })(jQuery);
-function fillDropDownSection()
-{
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function()
-  {
-    if(this.readyState == 4 && this.status == 200)
-    {
-      eval(this.responseText);
+    function fillDropDownSection() {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          eval(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "testDropDown.php", true);
+      xmlhttp.send();
     }
-  }
-  xmlhttp.open("POST","testDropDown.php",true);
-  xmlhttp.send();
-}
-function fillTable()
-{
-  $('#DataFromAjax tbody tr').remove();
-  str = $("#selectClass").val();
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function(){
-  if(this.readyState == 4 && this.status == 200){
-    $('#DataFromAjax').append(this.responseText);
-  }
-  }
-  xmlhttp.open("POST","FillTable.php?Section="+str,true);
-  xmlhttp.send();
-}
-function sectionRegister()
-{
-  str = $("#SectionPassword").val();
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function(){
-  if(this.readyState == 4 && this.status == 200){
-    eval(this.responseText);
-  }
-  }
-  xmlhttp.open("POST","sectionRegister.php?Password="+str,true);
-  xmlhttp.send();
-}
-function ModalHeaderFunc(x,y)
-{
-$("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
-document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
-$("#ProblemName").val(y);
-$("#SectionValue").val($("#selectClass").val());
-//alert($("#ProblemName").val());
-//alert($("#SectionValue").val());
-}
+    function fillTable() {
+      $('#DataFromAjax tbody tr').remove();
+      str = $("#selectClass").val();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          $('#DataFromAjax').append(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "FillTable.php?Section=" + str, true);
+      xmlhttp.send();
+    }
+    function sectionRegister() {
+      str = $("#SectionPassword").val();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          eval(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
+      xmlhttp.send();
+    }
+    function ModalHeaderFunc(x, y) {
+      $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
+      document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
+      $("#ProblemName").val(y);
+      $("#SectionValue").val($("#selectClass").val());
+      //alert($("#ProblemName").val());
+      //alert($("#SectionValue").val());
+    }
   </script>
   <div class="container-table">
     <div class="head-std row">
       <div class="dropdown">
-        <select class="form-control" id = "selectClass" name="selectClass" onchange="fillTable();">
+        <select class="form-control" id="selectClass" name="selectClass" onchange="fillTable();">
           <option value = "">Select Section</option>
         </select>
       </div>
@@ -155,11 +148,11 @@ $("#SectionValue").val($("#selectClass").val());
             <div class="modal-body">
               <!--<div class="form-group">-->
               <p>Please Enter Section Password</p>
-              <input class="form-control" type="text" placeholder="Password" id = "SectionPassword">
+              <input class="form-control" type="text" placeholder="Password" id="SectionPassword">
               <!--</div>-->
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-secondary" onclick = "sectionRegister()" >Join</button>
+              <button type="submit" class="btn btn-secondary" onclick="sectionRegister()">Join</button>
             </div>
           </div>
         </div>
@@ -167,9 +160,9 @@ $("#SectionValue").val($("#selectClass").val());
     </div>
     <div id="tabel-wrapper">
       <div id="table-scroll">
-        <table class="table table-striped table-hover main" id = "DataFromAjax">
+        <table class="table table-striped table-hover main" id="DataFromAjax">
           <thead class="thead">
-     <tr>
+            <tr>
               <th style="width:15%">
                 ID
               </th>
@@ -185,28 +178,28 @@ $("#SectionValue").val($("#selectClass").val());
               <th style="width:15%">
                 Upload
               </th>
-     </tr>
+            </tr>
           </thead>
           <div class='modal fade' id='test1' role='dialog'>
             <div class='modal-dialog'>
               <div class='modal-content'>
                 <div class='modal-header'>
-                  <h4 class='modal-title' id = 'modalValue'></h4>
+                  <h4 class='modal-title' id='modalValue'></h4>
                   <button type='button' class='close' data-dismiss='modal'>&times;</button>
                 </div>
                 <div class='modal-body' style='margin:auto;'>
-                <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" />
+                  <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" />
                   <label class='file'>
                   <input type='hidden' name = "ProblemName" id = "ProblemName">
 		  <input type='hidden' name = "SectionValue" id = "SectionValue">
-		  <input type='file' name = "Uploaded_file" id = "Uploaded_file">
+		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c" required>
                   <span class='file-custom'></span>
                   </label>
                 </div>
                 <div class='modal-footer'>
                   <button type='submit' class='btn btn-secondary'>Upload</button>
                 </div>
-              </form>
+                </form>
               </div>
             </div>
           </div>
