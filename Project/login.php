@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>login</title>
   <meta charset="utf-8">
@@ -9,51 +10,65 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
-  body {
-    background-color: #f2f2f2;
-}
+    body {
+      background-color: #f2f2f2;
+    }
 
-.login-container {
-  width: 80%;
-  height: 500px;
-  margin: 0px auto;
-  margin-top: 80px;
-  padding: 30px 20px;
-  border-radius: 5px;
-  text-align: center;
-  color: #008080;
-  background-color: #ffffff;
-  box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
-}
-.modal-content{
-	text-align: left;
-}
-/*
-.shiftleft{
+    .login-container {
+      width: 80%;
+      height: 500px;
+      margin: 0px auto;
+      margin-top: 80px;
+      padding: 30px 20px;
+      border-radius: 5px;
+      text-align: center;
+      color: #008080;
+      background-color: #ffffff;
+      box-shadow: 0 0px 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+    }
 
- float: left; 
-}
-.in-line{
-
-  display: inline
-}*/
-</style>
+    .modal-content {
+      text-align: left;
+    }
+  </style>
 </head>
+
 <body>
-<script >
+  <script>
+    function testalert() {
+      alert("test alert");
+    }
+    function goRegister() {
+      alert("go register page");
+      window.location.assign("Register.php");
+    }
 
-  function testalert() {
-    alert("test alert");
-}
-  function goRegister() {
-  	alert("go register page");
-    window.location.assign("Register.php");
-}
+    var check = function () {
+      var password = document.getElementById("txtPassword")
+      var confirm_password = document.getElementById("txtPassword2");
+      if (password.value == confirm_password.value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = '*matching*';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = "*Passwords Don't Match *";
+        //confirm_password.setCustomValidity("Passwords Don't Match");
+      }
+    }
 
-</script>
-<div class="login-container" >
-<h1 >STUDENT WEB GRADER</h1>
-<?php
+
+
+// function validatePassword(){
+//   if(password.value != confirm_password.value) {
+//     confirm_password.setCustomValidity("Passwords Don't Match");
+//   } else {
+//     confirm_password.setCustomValidity('');
+//   }
+// }
+  </script>
+  <div class="login-container">
+    <h1>STUDENT WEB GRADER</h1>
+    <?php
   	session_start();
 	if(isset($_SESSION["user"]) && isset($_SESSION["utype"]))
 	{
@@ -67,149 +82,117 @@
 		}
 	}
 ?>
-        <form name="from1" method="post" action="testSignIn.php" >
-          <div class="form-group row">
-            <label for="inputEmail" class="col-sm-4 col-form-label">
+
+
+    <form name="from1" method="post" action="testSignIn.php">
+      <div class="form-group row">
+        <label for="inputEmail" class="col-sm-4 col-form-label">
               <!-- Email -->
             </label>
-            <div class="col-sm-4">
-              <input
-                type="text"
-                class="form-control"
-                name="inputEmail3"
-                placeholder="Username"
-              />
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputPassword" class="col-sm-4 col-form-label">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="inputEmail3" placeholder="Username" required/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-4 col-form-label">
               <!-- Password -->
             </label>
-            <div class="col-sm-4">
-              <input
-                type="password"
-                class="form-control"
-                name="inputPassword3"
-                placeholder="Password"
-              />
+        <div class="col-sm-4">
+          <input type="password" class="form-control" name="inputPassword3" placeholder="Password" required/>
+        </div>
+      </div>
+      <div class="in-line">
+        <!--<button onclick="goRegister()" class="btn btn-primary">Sign in</button>-->
+        <button type="submit" class="btn btn-success" data-dismiss="modal">Sign in</button>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Register</button>
+      </div>
+    </form>
+    <form name="from2" method="post" action="Register.php">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Register</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" name="txtFirstname" placeholder="Firstname" required minlength=2 pattern="[A-Za-z]{2,}"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" name="txtLastname" placeholder="Lastname" required minlength=3 pattern="[A-Za-z]{3,}"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" name="txtUsername" placeholder="Username" required minlength=6 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" name="txtStudentID" placeholder="Student ID (EX. 5713XXX)" required minlength=7 maxlength=7
+                    pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <select class="form-control" id="sel1" name="sel1" required>
+		        <option value="">Department</option>
+		        <option value="Biomedical Engineering">Biomedical Engineering</option>
+		        <option value="Civil Engineering">Civil Engineering</option>
+		        <option value="Chemical Engineering">Chemical Engineering</option>
+		        <option value="Computer Engineering">Computer Engineering</option>
+		        <option value="Electrical Engineering">Electrical Engineering</option>
+		        <option value="Industrial Engineering">Industrial Engineering</option>
+		        <option value="Mechanical Engineering">Mechanical Engineering</option>
+		      </select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" name="txtEmail" placeholder="E-mail" required/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password" required/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Confirm Password" required
+                    onkeyup='check();' />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-12">
+                  <p id="message"></p>
+                </div>
+              </div>
+              <!-- <p>Some text in the modal.</p> -->
+
+            </div>
+            <div class="modal-footer">
+              <!--<button type="button" onclick="goRegister()" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
+              <!--<button type="submit" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
+              <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Create Account</button>
             </div>
           </div>
-      <div class="in-line">
-      <!--<button onclick="goRegister()" class="btn btn-primary">Sign in</button>-->
-      <button type="submit" class="btn btn-success" data-dismiss="modal">Sign in</button>
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Register</button>
-      </div>
-      </form>
-      <form name="from2" method="post" action="Register.php" >
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Register</h4>
-        </div>
-        <div class="modal-body">
-        <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="text"
-                class="form-control"
-                name="txtFirstname"
-                placeholder="Firstname"
-              />
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="text"
-                class="form-control"
-                name="txtLastname"
-                placeholder="Lastname"
-              />
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="text"
-                class="form-control"
-                name="txtUsername"
-                placeholder="Username"
-              />
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="text"
-                class="form-control"
-                name="txtStudentID"
-                placeholder="Student ID (EX. 5713XXX)"
-              />
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <select class="form-control" id="sel1" name="sel1">
-		        <option>Department</option>
-		        <option>Biomedical Engineering</option>
-		        <option>Civil Engineering</option>
-		        <option>Chemical Engineering</option>
-		        <option>Computer Engineering</option>
-		        <option>Electrical Engineering</option>
-		        <option>Industrial Engineering</option>
-		        <option>Mechanical Engineering</option>
-		      </select>
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="email"
-                class="form-control"
-                name="txtEmail"
-                placeholder="E-mail"
-              />
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="password"
-                class="form-control"
-                name="txtPassword"
-                placeholder="Password"
-              />
-            </div>
-         </div>
-         <div class="form-group row">
-            <div class="col-sm-12">
-              <input
-                type="password"
-                class="form-control"
-                name="txtPassword2"
-                placeholder="Confirm Password"
-              />
-            </div>
-         </div>
-          <!-- <p>Some text in the modal.</p> -->
-
-        </div>
-        <div class="modal-footer">
-          <!--<button type="button" onclick="goRegister()" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
-          <!--<button type="submit" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
-          <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Create Account</button>
         </div>
       </div>
-    </div>
+    </form>
   </div>
-  </form>
-</div>
 
 
 </body>
+
 </html>
