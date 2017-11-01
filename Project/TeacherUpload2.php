@@ -43,7 +43,7 @@
     </form>
   </nav>
 </head>
-<!-- <?php
+<?php
   session_start();
 
   if(!isset($_SESSION["user"]))
@@ -59,326 +59,326 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
-?> -->
+?>
 
-<body>
-  <!--Start script-->
-  <script>
-    $(document).ready(function () {
-      fillDropDownSection();
-      fillDropHw();
-      fillTable();
-      fillTableHw()
-    });
-    $('#myTab a').click(function (e) {
-      e.preventDefault()
-      $(this).tab('show')
-    })
-    $(function () {
-      $('#datetimepicker1').datetimepicker({
-        format: 'DD/MM/YYYY'
-      });
-    });
-    $(function () {
-      $('#datetimepicker3').datetimepicker({
-        format: 'LT'
-      });
-    });
-    function fillDropDownSection() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          eval(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "DropDownForT.php", true);
-      xmlhttp.send();
-    }
-    function fillTable() {
-      x = document.getElementById("selectClass").value;
-      y = document.getElementById("UploadButton");
-      if (x != "") {
-        y.style.display = 'block';
-      }
-      else {
-        y.style.display = 'none';
-      }
-      $('#DataFromAjax tbody tr').remove();
-      str = $("#selectClass").val();
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          $('#DataFromAjax').append(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
-      xmlhttp.send();
+  <body>
+    <!--Start script-->
+    <script>
+                  $(document).ready(function () {
+                    fillDropDownSection();
+                    fillDropHw();
+                    fillTable();
+                    fillTableHw()
+                  });
+                  $('#myTab a').click(function (e) {
+                    e.preventDefault()
+                    $(this).tab('show')
+                  })
+                  $(function () {
+                    $('#datetimepicker1').datetimepicker({
+                      format: 'DD/MM/YYYY'
+                    });
+                  });
+                  $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                      format: 'LT'
+                    });
+                  });
+                  function fillDropDownSection() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "DropDownForT.php", true);
+                    xmlhttp.send();
+                  }
+                  function fillTable() {
+                    x = document.getElementById("selectClass").value;
+                    y = document.getElementById("UploadButton");
+                    if (x != "") {
+                      y.style.display = 'block';
+                    }
+                    else {
+                      y.style.display = 'none';
+                    }
+                    $('#DataFromAjax tbody tr').remove();
+                    str = $("#selectClass").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#DataFromAjax').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
+                    xmlhttp.send();
 
-    }
-    function fillDropHw() {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          eval(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "FillDropHW.php", true);
-      xmlhttp.send();
-    }
-    function fillUploadCID() {
-      $("#ClassID").val($("#selectClass").val());
-    }
-    function fillTableHw() {
-      x = document.getElementById("selSectionHw").value;
-      y = document.getElementById("AssignButton");
+                  }
+                  function fillDropHw() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillDropHW.php", true);
+                    xmlhttp.send();
+                  }
+                  function fillUploadCID() {
+                    $("#ClassID").val($("#selectClass").val());
+                  }
+                  function fillTableHw() {
+                    x = document.getElementById("selSectionHw").value;
+                    y = document.getElementById("AssignButton");
 
-      if (x != "") {
+                    if (x != "") {
 
-        y.style.display = 'block';
-      }
-      else {
-        y.style.display = 'none';
-      }
+                      y.style.display = 'block';
+                    }
+                    else {
+                      y.style.display = 'none';
+                    }
 
-      $('#TableHw tbody tr').remove();
-      str = $("#selSectionHw").val();
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          $('#TableHw').append(this.responseText);
-        }
-      }
-      xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
-      xmlhttp.send();
-    }
-  </script>
+                    $('#TableHw tbody tr').remove();
+                    str = $("#selSectionHw").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#TableHw').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
+                    xmlhttp.send();
+                  }
+    </script>
 
-  <script>
-    (function ($) {
-      var doc = document,
-        supportsMultipleFiles = "multiple" in doc.createElement("input");
-      $(doc).on("change", ".file > input[type=file]", function () {
-        var input = this,
-          fileNames = [],
-          label = input.nextElementSibling,
-          files, len, i = -1, labelValue;
-        if (supportsMultipleFiles) {
-          len = (files = input.files).length;
-          while (++i < len) {
-            fileNames.push(files[i].name);
+    <script>
+      (function ($) {
+        var doc = document,
+          supportsMultipleFiles = "multiple" in doc.createElement("input");
+        $(doc).on("change", ".file > input[type=file]", function () {
+          var input = this,
+            fileNames = [],
+            label = input.nextElementSibling,
+            files, len, i = -1, labelValue;
+          if (supportsMultipleFiles) {
+            len = (files = input.files).length;
+            while (++i < len) {
+              fileNames.push(files[i].name);
+            }
+          }
+          else {
+            fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+          }
+          label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+          label.setAttribute("title", labelValue);
+        });
+      })(jQuery);
+    </script>
+    <script>
+      function logout() {
+        window.location = "logout.php";
+      }
+      function createSec() {
+        var x = document.getElementById("selSectionHw");
+        var pClass = $('select[name="createClass"] option:selected').text();
+        var pSection = document.getElementById("createSection").value;
+        var pSemester = document.getElementById("semester").value;
+        var pYear = document.getElementById("year").value;
+        str = $("#createClass").val();
+        var option = document.createElement("option");
+        option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
+        x.add(option);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $("#sectionPassword").val(this.responseText);
           }
         }
-        else {
-          fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
-        }
-        label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
-        label.setAttribute("title", labelValue);
-      });
-    })(jQuery);
-  </script>
-  <script>
-    function logout() {
-      window.location = "logout.php";
-    }
-    function createSec() {
-      var x = document.getElementById("selSectionHw");
-      var pClass = $('select[name="createClass"] option:selected').text();
-      var pSection = document.getElementById("createSection").value;
-      var pSemester = document.getElementById("semester").value;
-      var pYear = document.getElementById("year").value;
-      str = $("#createClass").val();
-      var option = document.createElement("option");
-      option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
-      x.add(option);
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          $("#sectionPassword").val(this.responseText);
-        }
+        xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
+        xmlhttp.send();
       }
-      xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
-      xmlhttp.send();
-    }
-  </script>
-  <!--End script-->
+    </script>
+    <!--End script-->
 
 
 
-  <div class="container-table">
+    <div class="container-table">
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">Problem</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">Homeworks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">Results</a>
-      </li>
-    </ul>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab">Problem</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab2" role="tab">Homeworks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">Results</a>
+        </li>
+      </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
+      <!-- Tab panes -->
+      <div class="tab-content">
 
-      <div class="tab-pane active" id="tab1" role="tabpanel">
-        <!--Selection-->
-        <form class="form-inline" style="margin-top:20px; margin-bottom:20px;">
-          <div class="form-group mx-sm-4">
-            <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()">
+        <div class="tab-pane active" id="tab1" role="tabpanel">
+          <!--Selection-->
+          <form class="form-inline" style="margin-top:20px; margin-bottom:20px;">
+            <div class="form-group mx-sm-4">
+              <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()">
                              <option value="">Please Select Class</option>
                         </select>
+            </div>
+          </form>
+
+          <!--Table-->
+          <table class="table table-striped table-hover main" id="DataFromAjax">
+            <thead class="thead">
+              <tr>
+                <th style="width:40%">
+                  Exam name
+                </th>
+                <th style="width:20%">
+                  Date upload
+                </th>
+                <th style="width:20%">
+                  Language
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <!--Foot Part-->
+          <div class="foot-t left">
+            <button type="button" class="btn btn-secondary" id="UploadButton" onclick="fillUploadCID();" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
           </div>
-        </form>
+          <!-- Modal1 -->
+          <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal-dialog modal-md">
 
-        <!--Table-->
-        <table class="table table-striped table-hover main" id="DataFromAjax">
-          <thead class="thead">
-            <tr>
-              <th style="width:40%">
-                Exam name
-              </th>
-              <th style="width:20%">
-                Date upload
-              </th>
-              <th style="width:20%">
-                Language
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+              <!-- Modal content-->
+              <form accept-charset="utf-8" name="form1" method="post" action="ProblemUpload.php" enctype="multipart/form-data">
 
-        <!--Foot Part-->
-        <div class="foot-t left">
-          <button type="button" class="btn btn-secondary" id="UploadButton" onclick="fillUploadCID();" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
-        </div>
-        <!-- Modal1 -->
-        <div class="modal fade" id="myModal1" role="dialog">
-          <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <!-- <h4 class="modal-title">Section : xxx</h4> -->
+                    <h4 class="modal-title">Upload</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
 
-            <!-- Modal content-->
-            <form accept-charset="utf-8" name="form1" method="post" action="ProblemUpload.php" enctype="multipart/form-data">
-
-              <div class="modal-content">
-                <div class="modal-header">
-                  <!-- <h4 class="modal-title">Section : xxx</h4> -->
-                  <h4 class="modal-title">Upload</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <div class="modal-body left">
-                  <input type='hidden' name="ClassID" id="ClassID">
-                  <label>Problem Name : </label><br>
-                  <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name">
-                  <label>File : </label><br>
-                  <label class="file">
-                                <input type="file" id = "PDFFile" name = "PDFFile">
+                  <div class="modal-body left">
+                    <input type='hidden' name="ClassID" id="ClassID">
+                    <label>Problem Name : </label><br>
+                    <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name">
+                    <label>File : </label><br>
+                    <label class="file">
+                                <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required>
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
-                  <label>Input : </label><br>
-                  <label class="file">
-                                <input type="file" id = "InFile" name = "InFile">
+                    <label>Input : </label><br>
+                    <label class="file">
+                                <input type="file" id = "InFile" name = "InFile" accept=".zip" required>
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
-                  <label>Output : </label><br>
-                  <label class="file">
-                                <input type="file" id = "OutFile" name = "OutFile">
+                    <label>Output : </label><br>
+                    <label class="file">
+                                <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required>
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
 
-                  <label class="radio-inline">
+                    <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="C">C
                                 </label>
-                  <label class="radio-inline">
+                    <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="Cpp">C++
                                 </label>
-                  <label class="radio-inline">
+                    <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="Java">Java
                                 </label>
-                </div>
+                  </div>
 
-                <div class="modal-footer">
-                  <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
-                  <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
-                </div>
+                  <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-success" data-dismiss="modal">Upload</button>-->
+                    <button type="submit" class="btn btn-success" onclick="$('#myModal1').modal('hide')">Upload</button>
+                  </div>
 
-              </div>
-            </form>
+                </div>
+              </form>
+            </div>
           </div>
+          <!--End Modal1-->
+
         </div>
-        <!--End Modal1-->
+        <!-- End Tab 1 -->
 
-      </div>
-      <!-- End Tab 1 -->
+        <div class="tab-pane" id="tab2" role="tabpanel">
 
-      <div class="tab-pane" id="tab2" role="tabpanel">
-
-        <script>
-          function changePassword() {
-            var x = document.getElementById("selSectionHw").value;
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function () {
-              if (this.readyState == 4 && this.status == 200) {
-                $("#sectionPassword").val(this.responseText);
+          <script>
+            function changePassword() {
+              var x = document.getElementById("selSectionHw").value;
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  $("#sectionPassword").val(this.responseText);
+                }
               }
+              xmlhttp.open("POST", "FillSectionPassword.php?class=" + x, true);
+              xmlhttp.send();
+              fillTableHw();
             }
-            xmlhttp.open("POST", "FillSectionPassword.php?class=" + x, true);
-            xmlhttp.send();
-            fillTableHw();
-          }
-        </script>
+          </script>
 
-        <!--Head part-->
-        <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
-          <!--Head 1-->
-          <div class="form-group mx-sm-4">
-            <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()">
+          <!--Head part-->
+          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
+            <!--Head 1-->
+            <div class="form-group mx-sm-4">
+              <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()">
                             <option value="">
                                 Please Select Section
                             </option>
                         </select>
-          </div>
+            </div>
 
-          <!--Head 2-->
-          <div class="form-group mx-sm-4">
-            <label for="staticPassword" style="margin-right:12px">Password  </label>
-            <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px">
-          </div>
+            <!--Head 2-->
+            <div class="form-group mx-sm-4">
+              <label for="staticPassword" style="margin-right:12px">Password  </label>
+              <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px">
+            </div>
 
-          <!--Head 3-->
-          <div class="form-group mx-sm-4">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Create Section</button>
-            <!-- Modal3 -->
-            <div class="modal fade" id="myModal3" role="dialog">
-              <div class="modal-dialog modal-sm">
+            <!--Head 3-->
+            <div class="form-group mx-sm-4">
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Create Section</button>
+              <!-- Modal3 -->
+              <div class="modal fade" id="myModal3" role="dialog">
+                <div class="modal-dialog modal-sm">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <form name="from3" method="post">
-                    <div class="modal-header">
-                      <h4 class="modal-title">Create Section</h4>
-                      <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body left">
-                      <label>Class</label>
-                      <select class="form-control" name="createClass" id="createClass" style="width:80%">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <form name="from3" method="post">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Create Section</h4>
+                        <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <div class="modal-body left">
+                        <label>Class</label>
+                        <select class="form-control" name="createClass" id="createClass" style="width:80%">
                                                 <option>Please Select Classroom</option>
                                                 <option value = '3'>EGCO111 Computer Programming</option>
                                                 <option value = '4'>EGCO112 Programming Technique</option>
                                             </select>
 
-                      <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
+                        <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
-                      <label>Section</label>
-                      <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section">
+                        <label>Section</label>
+                        <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section">
 
-                      <label>Semester</label>
+                        <label>Semester</label>
 
-                      <!-- <div class="dropdown"> -->
-                      <select class="form-control" name="semester" id="semester" style="width: 80%;">
+                        <!-- <div class="dropdown"> -->
+                        <select class="form-control" name="semester" id="semester" style="width: 80%;">
                                                 <option>Semester</option>
                                                 <script>
                                                   for (var j = 1; j < 4; j++) {
@@ -386,10 +386,10 @@
                                                   }
                                                 </script>
                                             </select>
-                      <!-- </div> -->
+                        <!-- </div> -->
 
-                      <label>Year</label>
-                      <select class="form-control" name="year" id="year" style="width: 80%;">
+                        <label>Year</label>
+                        <select class="form-control" name="year" id="year" style="width: 80%;">
                                                 <option>Year</option>
                                                     <script>
                                                       var cyear = new Date().getFullYear();
@@ -400,78 +400,260 @@
                                                     </script>
                                             </select>
 
-                    </div>
-                    <div class="modal-footer">
-                      <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
-                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button>
-                    </div>
-                  </form>
+                      </div>
+                      <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
+              <!--End Modal-->
             </div>
-            <!--End Modal-->
+            <!--End Head 3-->
+
+          </form>
+          <!--End Head part-->
+
+          <!--Table part-->
+          <table class="table table-striped table-hover main" id="TableHw">
+            <thead class="thead">
+              <tr>
+                <th style="width:20%">
+                  Exam name
+                </th>
+                <th style="width:20%">
+                  Language
+                </th>
+                <th style="width:20%">
+                  Amount student sent
+                </th>
+                <th style="width:20%">
+                  Amount student pass
+                </th>
+                <th style="width:20%">
+                  Detail
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <!--Foot part-->
+          <div class="foot-t left" style="margin-top:20px;">
+            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
           </div>
-          <!--End Head 3-->
+          <!-- Modal2 -->
+          <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog modal-lg">
 
-        </form>
-        <!--End Head part-->
+              <!-- Modal content-->
+              <div class="modal-content">
+                <form name="from5" method="post" action="xxx.php">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Assign Homework</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
 
-        <!--Table part-->
-        <table class="table table-striped table-hover main" id="TableHw">
-          <thead class="thead">
-            <tr>
-              <th style="width:20%">
-                Exam name
-              </th>
-              <th style="width:20%">
-                Language
-              </th>
-              <th style="width:20%">
-                Amount student sent
-              </th>
-              <th style="width:20%">
-                Amount student pass
-              </th>
-              <th style="width:20%">
-                Detail
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+                  <div class="modal-body">
+                    <table class="table table-striped table-hover main">
+                      <thead class="thead">
+                        <tr>
+                          <th style="width:30%">
+                            Exam name
+                          </th>
+                          <th style="width:10%">
+                            Language
+                          </th>
+                          <th style="width:25%">
+                            Deadline
+                          </th>
+                          <th style="width:25%">
+                            Time
+                          </th>
+                          <th style="width:10%">
+                            Select
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="width:30%">
+                            Exam1
+                          </td>
+                          <td style="width:10%">
+                            C
+                          </td>
+                          <td style="width:25%">
+                            <div class="form-group">
+                              <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" placeholder="Date Send" />
+                                <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                          <td style="width:25%">
+                            <div class="form-group">
+                              <div class='input-group date' id='datetimepicker3'>
+                                <input type='text' class="form-control" placeholder="Time Send" />
+                                <span class="input-group-addon">
+                                                                <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                              </div>
+                            </div>
+                          </td>
+                          <td style="width:10%">
+                            <input type="checkbox" name="vehicle" value="test1C"><br>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="width:30%">
+                            Exam2
+                          </td>
+                          <td style="width:10%">
+                            C++
+                          </td>
+                          <td style="width:25%">
 
-        <!--Foot part-->
-        <div class="foot-t left" style="margin-top:20px;">
-          <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
+                          </td>
+                          <td style="width:25%">
+
+                          </td>
+                          <td style="width:10%">
+                            <input type="checkbox" name="vehicle" value="test1C"><br>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--End modal-body-->
+
+                  <div class="modal-footer">
+                    <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
+                    <button type="submit" class="btn btn-success" onclick="$('#myModal2').modal('hide');">OK</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
         </div>
-        <!-- Modal2 -->
-        <div class="modal fade" id="myModal2" role="dialog">
-          <div class="modal-dialog modal-lg">
+        <!-- End Tab 2 -->
 
-            <!-- Modal content-->
-            <div class="modal-content">
-              <form name="from5" method="post" action="xxx.php">
+        <div class="tab-pane" id="tab3" role="tabpanel">
+          <!--Head part-->
+          <form class="form-inline" style="margin-top:20px; margin-bottom:20px">
+            <div class="form-group mx-sm-4">
+              <select class="form-control" name="selSectionRs" id="selSectionRs">
+                              <option value="">Please Select Section</option>
+                          </select>
+            </div>
+          </form>
+
+          <!--Table part-->
+          <div class="table-wrapper">
+            <table class="table table-bordered table-striped table-hover main" id="Result">
+              <thead class="thead">
+                <tr style="width:100%">
+                  <th style="width:100px">
+                    ID
+                  </th>
+                  <th style="width:250px">
+                    Name
+                  </th>
+                  <script>
+                                                      var numOfProb = 10
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<th style="min-width:30px">ex ' + i + '</th>')
+                  </script>
+                  <th style="width:100px">
+                    Pass
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713999
+                  </td>
+                  <td style="width:250px">
+                    name1 surname1
+                  </td>
+                  <script>
+                                                      var numOfProb = 10
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" data-toggle="modal" data-target="#myModal0" ></i></td>')
+                  </script>
+                  <td style="width:100px">
+                    10/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713555
+                  </td>
+                  <td style="width:250px">
+                    name2 surname2
+                  </td>
+                  <script>
+                                                      var numOfProb = 10
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px">
+                    0/10
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td style="width:100px">
+
+                  </td>
+                  <td style="width:250px">
+                    <B>Conclusion</B>
+                  </td>
+                  <script>
+                                                      var numOfProb = 10
+                                                      var sum = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "3", "4", "2", "4", "2", "3", "4", "2"]
+                                                      for (var i = 0; i < numOfProb; i++)
+                                                        document.write('<th style="min-width:30px">' + sum[i] + '</th>')
+                  </script>
+                  <td style="width:100px">
+
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <!--End Table part-->
+
+          <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->
+
+          <!-- Modal0 -->
+          <div class="modal fade" id="myModal0" role="dialog">
+            <div class="modal-dialog modal-md">
+
+              <!-- Modal content-->
+              <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Assign Homework</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">ex x</h4>
+                  <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
                 </div>
-
-                <div class="modal-body">
+                <div class="modal-body left">
                   <table class="table table-striped table-hover main">
                     <thead class="thead">
                       <tr>
+                        <th style="width:60%">
+                          File name
+                        </th>
                         <th style="width:30%">
-                          Exam name
-                        </th>
-                        <th style="width:10%">
-                          Language
-                        </th>
-                        <th style="width:25%">
-                          Deadline
-                        </th>
-                        <th style="width:25%">
-                          Time
+                          Status
                         </th>
                         <th style="width:10%">
                           Select
@@ -480,232 +662,50 @@
                     </thead>
                     <tbody>
                       <tr>
+                        <td style="width:60%">
+                          exFilePass
+                        </td>
                         <td style="width:30%">
-                          Exam1
+                          Correct
                         </td>
                         <td style="width:10%">
-                          C
-                        </td>
-                        <td style="width:25%">
-                          <div class="form-group">
-                            <div class='input-group date' id='datetimepicker1'>
-                              <input type='text' class="form-control" placeholder="Date Send" />
-                              <span class="input-group-addon">
-                                                                <span class="glyphicon glyphicon-calendar"></span>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                        <td style="width:25%">
-                          <div class="form-group">
-                            <div class='input-group date' id='datetimepicker3'>
-                              <input type='text' class="form-control" placeholder="Time Send" />
-                              <span class="input-group-addon">
-                                                                <span class="glyphicon glyphicon-time"></span>
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                        <td style="width:10%">
-                          <input type="checkbox" name="vehicle" value="test1C"><br>
+                          <input type="checkbox" name="" value=""><br>
                         </td>
                       </tr>
                       <tr>
+                        <td style="width:60%">
+                          exFileFail
+                        </td>
                         <td style="width:30%">
-                          Exam2
+                          Fail
                         </td>
                         <td style="width:10%">
-                          C++
-                        </td>
-                        <td style="width:25%">
-
-                        </td>
-                        <td style="width:25%">
-
-                        </td>
-                        <td style="width:10%">
-                          <input type="checkbox" name="vehicle" value="test1C"><br>
+                          <input type="checkbox" name="" value=""><br>
                         </td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <!--End modal-body-->
 
+
+                </div>
                 <div class="modal-footer">
-                  <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="submit" class="btn btn-success" onclick="$('#myModal2').modal('hide');">OK</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
+                  <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> -->
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-      <!-- End Tab 2 -->
-
-      <div class="tab-pane" id="tab3" role="tabpanel">
-        <!--Head part-->
-        <form class="form-inline" style="margin-top:20px; margin-bottom:20px">
-          <div class="form-group mx-sm-4">
-            <select class="form-control" name="selSectionRs" id="selSectionRs">
-                              <option value="">Please Select Section</option>
-                          </select>
-          </div>
-        </form>
-
-        <!--Table part-->
-        <div class="table-wrapper">
-          <table class="table table-bordered table-striped table-hover main" id="Result">
-            <thead class="thead">
-              <tr style="width:100%">
-                <th style="width:100px">
-                  ID
-                </th>
-                <th style="width:250px">
-                  Name
-                </th>
-                <script>
-                                                      var numOfProb = 10
-                                                      for (var i = 1; i <= numOfProb; i++)
-                                                        document.write('<th style="min-width:30px">ex ' + i + '</th>')
-                </script>
-                <th style="width:100px">
-                  Pass
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="width:100%">
-                <td style="width:100px">
-                  5713999
-                </td>
-                <td style="width:250px">
-                  name1 surname1
-                </td>
-                <script>
-                                                      var numOfProb = 10
-                                                      for (var i = 1; i <= numOfProb; i++)
-                                                        document.write('<td style="min-width:30px"><i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" data-toggle="modal" data-target="#myModal0" ></i></td>')
-                </script>
-                <td style="width:100px">
-                  10/10
-                </td>
-              </tr>
-              <tr style="width:100%">
-                <td style="width:100px">
-                  5713555
-                </td>
-                <td style="width:250px">
-                  name2 surname2
-                </td>
-                <script>
-                                                      var numOfProb = 10
-                                                      for (var i = 1; i <= numOfProb; i++)
-                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
-                </script>
-                <td style="width:100px">
-                  0/10
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td style="width:100px">
-
-                </td>
-                <td style="width:250px">
-                  <B>Conclusion</B>
-                </td>
-                <script>
-                                                      var numOfProb = 10
-                                                      var sum = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "3", "4", "2", "4", "2", "3", "4", "2"]
-                                                      for (var i = 0; i < numOfProb; i++)
-                                                        document.write('<th style="min-width:30px">' + sum[i] + '</th>')
-                </script>
-                <td style="width:100px">
-
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-        <!--End Table part-->
-
-        <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->
-
-        <!-- Modal0 -->
-        <div class="modal fade" id="myModal0" role="dialog">
-          <div class="modal-dialog modal-md">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">ex x</h4>
-                <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body left">
-                <table class="table table-striped table-hover main">
-                  <thead class="thead">
-                    <tr>
-                      <th style="width:60%">
-                        File name
-                      </th>
-                      <th style="width:30%">
-                        Status
-                      </th>
-                      <th style="width:10%">
-                        Select
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style="width:60%">
-                        exFilePass
-                      </td>
-                      <td style="width:30%">
-                        Correct
-                      </td>
-                      <td style="width:10%">
-                        <input type="checkbox" name="" value=""><br>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="width:60%">
-                        exFileFail
-                      </td>
-                      <td style="width:30%">
-                        Fail
-                      </td>
-                      <td style="width:10%">
-                        <input type="checkbox" name="" value=""><br>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
-                <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> -->
               </div>
             </div>
           </div>
+          <!-- End modal 0 -->
+
         </div>
-        <!-- End modal 0 -->
+        <!-- End Tab 3 -->
 
       </div>
-      <!-- End Tab 3 -->
+      <!-- Tab panes -->
 
     </div>
-    <!-- Tab panes -->
+    <!--container-table-->
 
-  </div>
-  <!--container-table-->
-
-</body>
+  </body>
 
 </html>
