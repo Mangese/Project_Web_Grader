@@ -53,9 +53,8 @@
         message.innerHTML = '*matching*';
       } else {
         message.style.color = 'red';
-        message.innerHTML = "*Passwords Don't Match *";
-        confirm_password.setCustomValidity("Passwords Don't Match!!");
-
+        message.innerHTML = "*Passwords Doesn't Match *";
+        confirm_password.setCustomValidity("Passwords Doesn't Match!!");
       }
     }
   </script>
@@ -116,20 +115,20 @@
               <div class="modal-body">
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" class="form-control" id="txtFirstname" name="txtFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,,\nInput only (A-Z,a-z)');"
-                      oninput="setCustomValidity('')" minlength=2 pattern="[A-Za-z]{2,}" />
+                    <input type="text" class="form-control" id="txtFirstname" name="txtFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
+                      oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" class="form-control" name="txtLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,,\nInput only (A-Z,a-z)');"
-                      oninput="setCustomValidity('')" minlength=3 pattern="[A-Za-z]{3,}" />
+                    <input type="text" class="form-control" name="txtLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                      oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="text" class="form-control" name="txtUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,,\nInput only (A-Z,a-z,0-9)');"
-                      oninput="setCustomValidity('')" minlength=6 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                    <input type="text" class="form-control" name="txtUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                      oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
                   </div>
                 </div>
                 <div class="form-group row">
@@ -156,19 +155,20 @@
                 <div class="form-group row">
                   <div class="col-sm-12">
                     <input type="email" class="form-control" name="txtEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
-                      oninput="setCustomValidity('')" />
+                      oninput="setCustomValidity('')" maxlength=30/>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-12">
-                    <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password" required oninvalid="this.setCustomValidity('Enter your password');"
-                      oninput="setCustomValidity('')" />
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-12">
-                    <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Confirm Password" required
+                    <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password" minlength=6 maxlength=30
+                      required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                       onkeyup='check();' />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Confirm Password" minlength=6
+                      maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                   </div>
                 </div>
                 <div class="form-group row">
