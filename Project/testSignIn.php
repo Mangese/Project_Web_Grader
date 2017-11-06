@@ -94,7 +94,7 @@ if(mysql_num_rows($result)==1)
 }
 else
 {
-		echo"<body onload=\"window.alert('Invalid Email or Password!'); 
+		echo"<body onload=\"window.alert('Invalid Username or Password!'); 
 		return history.back();\">";
 		exit();
 }
