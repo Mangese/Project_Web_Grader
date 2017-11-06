@@ -22,6 +22,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
 
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>
 
@@ -127,6 +129,7 @@
                     //alert($("#SectionValue").val());
                   }
     </script>
+
     <div class="container-table">
       <div class="head-std row">
         <div class="dropdown">
@@ -163,20 +166,24 @@
           <table class="table table-striped table-hover main" id="DataFromAjax">
             <thead class="thead">
               <tr>
-                <th style="width:15%">
+                <th style="width:15%" onclick="sortTable(0)">
                   ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:30%">
+                <th style="width:30%" onclick="sortTable(1)">
                   <!-- ชื่อโจทย์ -->
                   Exam name
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:25%">
+                <th style="width:25%" onclick="sortTable(2)">
                   <!-- จำนวนที่ส่ง(ครั้ง) -->
                   Number of submissions
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:15%">
+                <th style="width:15%" onclick="sortTable(3)">
                   <!-- สถานะ -->
                   Status
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
                 <th style="width:15%">
                   Upload
@@ -209,6 +216,46 @@
             <tbody>
             </tbody>
           </table>
+
+          <!--Start Sort Script-->
+          <script>
+            function sortTable(col) {
+              var table, rows, switching, i, x, y, shouldSwitch;
+              table = document.getElementById("DataFromAjax");
+              switching = true;
+              /*Make a loop that will continue until
+              no switching has been done:*/
+              while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++) {
+                  //start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /*Get the two elements you want to compare,
+                  one from current row and one from the next:*/
+                  x = rows[i].getElementsByTagName("TD")[col];
+                  y = rows[i + 1].getElementsByTagName("TD")[col];
+                  //check if the two rows should switch place:
+                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                }
+                if (shouldSwitch) {
+                  /*If a switch has been marked, make the switch
+                  and mark that a switch has been done:*/
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                }
+              }
+            }
+            </script>
+            <!--End Script-->
+
         </div>
       </div>
     </div>

@@ -236,20 +236,63 @@
           <table class="table table-striped table-hover main" id="DataFromAjax">
             <thead class="thead">
               <tr>
-                <th style="width:40%">
+                <th style="width:40%" onclick="sortTable(0)">
                   Exam name
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%">
+                <th style="width:20%" onclick="sortTable(1)">
                   Date upload
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%">
+                <th style="width:20%" onclick="sortTable(2)">
                   Language
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
               </tr>
             </thead>
             <tbody>
             </tbody>
           </table>
+          <!--End Table-->
+
+          <!--Start Sort Script-->
+          <script>
+            function sortTable(col) {
+              var table, rows, switching, i, x, y, shouldSwitch;
+              table = document.getElementById("DataFromAjax");
+              switching = true;
+              /*Make a loop that will continue until
+              no switching has been done:*/
+              while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++) {
+                  //start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /*Get the two elements you want to compare,
+                  one from current row and one from the next:*/
+                  x = rows[i].getElementsByTagName("TD")[col];
+                  y = rows[i + 1].getElementsByTagName("TD")[col];
+                  //check if the two rows should switch place:
+                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                }
+                if (shouldSwitch) {
+                  /*If a switch has been marked, make the switch
+                  and mark that a switch has been done:*/
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                }
+              }
+            }
+            </script>
+            <!--End Script-->
 
           <!--Foot Part-->
           <div class="foot-t left">
@@ -420,17 +463,21 @@
           <table class="table table-striped table-hover main" id="TableHw">
             <thead class="thead">
               <tr>
-                <th style="width:20%">
+                <th style="width:20%" onclick="sortTable(0)">
                   Exam name
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%">
+                <th style="width:20%" onclick="sortTable(1)">
                   Language
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%">
+                <th style="width:20%" onclick="sortTable(2)">
                   Amount student sent
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%">
+                <th style="width:20%" onclick="sortTable(3)">
                   Amount student pass
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
                 <th style="width:20%">
                   Detail
@@ -440,6 +487,46 @@
             <tbody>
             </tbody>
           </table>
+          <!--End Table-->
+
+          <!--Start Sort Script-->
+          <script>
+            function sortTable(col) {
+              var table, rows, switching, i, x, y, shouldSwitch;
+              table = document.getElementById("TableHw");
+              switching = true;
+              /*Make a loop that will continue until
+              no switching has been done:*/
+              while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++) {
+                  //start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /*Get the two elements you want to compare,
+                  one from current row and one from the next:*/
+                  x = rows[i].getElementsByTagName("TD")[col];
+                  y = rows[i + 1].getElementsByTagName("TD")[col];
+                  //check if the two rows should switch place:
+                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                }
+                if (shouldSwitch) {
+                  /*If a switch has been marked, make the switch
+                  and mark that a switch has been done:*/
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                }
+              }
+            }
+            </script>
+            <!--End Script-->
 
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
@@ -560,19 +647,22 @@
             <table class="table table-bordered table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
-                  <th style="width:100px">
+                  <th style="width:100px" onclick="sortTable(0)">
                     ID
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:250px">
+                  <th style="width:250px" onclick="sortTable(1)">
                     Name
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <script>
-                                                      var numOfProb = 10
+                                                      var numOfProb = 20
                                                       for (var i = 1; i <= numOfProb; i++)
                                                         document.write('<th style="min-width:30px">ex ' + i + '</th>')
                   </script>
-                  <th style="width:100px">
+                  <th style="width:100px" onclick="sortTable(22)">
                     Pass
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                 </tr>
               </thead>
@@ -583,13 +673,13 @@
                   </td>
                   <td style="width:250px">
                     name1 surname1
-                  </td>
+                  </td >
                   <script>
-                                                      var numOfProb = 10
+                                                      var numOfProb = 20
                                                       for (var i = 1; i <= numOfProb; i++)
                                                         document.write('<td style="min-width:30px"><i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" data-toggle="modal" data-target="#myModal0" ></i></td>')
                   </script>
-                  <td style="width:100px">
+                  <td style="width:100px; text-align:center;">
                     10/10
                   </td>
                 </tr>
@@ -601,11 +691,187 @@
                     name2 surname2
                   </td>
                   <script>
-                                                      var numOfProb = 10
+                                                      var numOfProb = 20
                                                       for (var i = 1; i <= numOfProb; i++)
                                                         document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
                   </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
                   <td style="width:100px">
+                    5713003
+                  </td>
+                  <td style="width:250px">
+                    name12 surname12
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713456
+                  </td>
+                  <td style="width:250px">
+                    name22 surname22
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713987
+                  </td>
+                  <td style="width:250px">
+                    name25 surname25
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713590
+                  </td>
+                  <td style="width:250px">
+                    name62 surname62
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713123
+                  </td>
+                  <td style="width:250px">
+                    name7 surname7
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713666
+                  </td>
+                  <td style="width:250px">
+                    name20 surname20
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713488
+                  </td>
+                  <td style="width:250px">
+                    name99 surname99
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713500
+                  </td>
+                  <td style="width:250px">
+                    name30 surname30
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713900
+                  </td>
+                  <td style="width:250px">
+                    name10 surname10
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713222
+                  </td>
+                  <td style="width:250px">
+                    name4 surname4
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
+                    0/10
+                  </td>
+                </tr>
+                <tr style="width:100%">
+                  <td style="width:100px">
+                    5713000
+                  </td>
+                  <td style="width:250px">
+                    name6 surname6
+                  </td>
+                  <script>
+                                                      var numOfProb = 20
+                                                      for (var i = 1; i <= numOfProb; i++)
+                                                        document.write('<td style="min-width:30px"><i class="fa fa-times" aria-hidden="true" style="color:#E74C3C"></i></td>')
+                  </script>
+                  <td style="width:100px; text-align:center;">
                     0/10
                   </td>
                 </tr>
@@ -619,8 +885,8 @@
                     <B>Conclusion</B>
                   </td>
                   <script>
-                                                      var numOfProb = 10
-                                                      var sum = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "3", "4", "2", "4", "2", "3", "4", "2"]
+                                                      var numOfProb = 20
+                                                      var sum = ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
                                                       for (var i = 0; i < numOfProb; i++)
                                                         document.write('<th style="min-width:30px">' + sum[i] + '</th>')
                   </script>
@@ -632,6 +898,45 @@
             </table>
           </div>
           <!--End Table part-->
+
+          <!--Start Sort Script-->
+          <script>
+            function sortTable(col) {
+              var table, rows, switching, i, x, y, shouldSwitch;
+              table = document.getElementById("Result");
+              switching = true;
+              /*Make a loop that will continue until
+              no switching has been done:*/
+              while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.getElementsByTagName("TR");
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 2); i++) {
+                  //start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /*Get the two elements you want to compare,
+                  one from current row and one from the next:*/
+                  x = rows[i].getElementsByTagName("TD")[col];
+                  y = rows[i + 1].getElementsByTagName("TD")[col];
+                  //check if the two rows should switch place:
+                  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                    //if so, mark as a switch and break the loop:
+                    shouldSwitch= true;
+                    break;
+                  }
+                }
+                if (shouldSwitch) {
+                  /*If a switch has been marked, make the switch
+                  and mark that a switch has been done:*/
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                }
+              }
+            }
+            </script>
+            <!--End Script-->
 
           <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->
 
