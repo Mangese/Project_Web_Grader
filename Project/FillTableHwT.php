@@ -18,7 +18,7 @@
       $SQTY = $row['count'];
       $LN = $row['lang'];
       $FN = $row['fileName'];
-      echo "<tr style="width:100%">";
+      echo "<tr style='width:100%'>";
          echo "<td style='width:800px'>";
            echo "$PN";
          echo "</td>";
