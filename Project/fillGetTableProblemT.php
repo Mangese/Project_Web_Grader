@@ -45,7 +45,7 @@
       echo "</div>";
       echo "</div>";
       echo "</td>";
-      echo "<td style='width:25%'>";
+      echo "<td style='width:10%'>";
       echo "<input type='checkbox' name='vehicle' value=''><br>";
       echo "</td>";
       echo "</tr>";
