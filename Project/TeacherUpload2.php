@@ -134,12 +134,12 @@
                     var classcode = b.split('EGCO');
                     //var classcode = a[0];
 
-                    $('#DataFromAjax tbody tr').remove();
+                    $('#modalGetTableProblem tbody tr').remove();
                     //str = $("#selectClass").val();
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
-                        $('#DataFromAjax').append(this.responseText);
+                        $('#modalGetTableProblem').append(this.responseText);
                       }
                     }
                     xmlhttp.open("POST", "fillGetTableProblemT.php?class=" + classcode, true);
@@ -596,10 +596,11 @@
 
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#myModal2" onclick="fillGetTableProblem()">Assign Homework</button>
+            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#modalGetTableProblem"
+              onclick="fillGetTableProblem()">Assign Homework</button>
           </div>
-          <!-- Modal2 -->
-          <div class="modal fade" id="myModal2" role="dialog">
+          <!-- modalGetTableProblem -->
+          <div class="modal fade" id="modalGetTableProblem" role="dialog">
             <div class="modal-dialog modal-lg">
 
               <!-- Modal content-->
@@ -687,7 +688,7 @@
 
                   <div class="modal-footer">
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                    <button type="submit" class="btn btn-success" onclick="$('#myModal2').modal('hide');">OK</button>
+                    <button type="submit" class="btn btn-success" onclick="$('#modalGetTableProblem').modal('hide');">OK</button>
                   </div>
                 </form>
               </div>
