@@ -69,8 +69,9 @@
                     fillDropHw();
                     fillTable();
                     fillTableHw();
-		    fillDropCreateClass();
-		    fillDropResult();		  
+                    fillDropCreateClass();
+                    fillDropResult();
+                    fillGetTableProblem();
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
@@ -117,7 +118,36 @@
                     xmlhttp.send();
 
                   }
-		  function fillDropCreateClass() {
+                  function fillGetTableProblem() {
+                    x = document.getElementById("selSectionHw").value;
+                    y = document.getElementById("AssignButton");
+                    if (x != "") {
+                      y.style.display = 'block';
+                    }
+                    else {
+                      y.style.display = 'none';
+                    }
+
+
+                    var n = str.split(' ');
+                    var b = n[0];
+                    var a = b.split('EGCO');
+                    var classcode = a[1]
+
+                    $('#DataFromAjax tbody tr').remove();
+                    str = $("#selectClass").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#DataFromAjax').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "fillGetTableProblemT.php?class=" + classcode, true);
+                    xmlhttp.send();
+
+                  }
+
+                  function fillDropCreateClass() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
@@ -137,7 +167,7 @@
                     xmlhttp.open("POST", "FillDropHW.php", true);
                     xmlhttp.send();
                   }
-	    	  function fillDropResult() {
+                  function fillDropResult() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
@@ -220,7 +250,7 @@
         }
         xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
         xmlhttp.send();
-	fillDropResult();
+        fillDropResult();
       }
     </script>
     <!--End script-->
@@ -565,7 +595,7 @@
 
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
+            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#myModal2" onclick="fillGetTableProblem()">Assign Homework</button>
           </div>
           <!-- Modal2 -->
           <div class="modal fade" id="myModal2" role="dialog">
@@ -601,7 +631,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <!-- <tr>
                           <td style="width:30%">
                             Exam1
                           </td>
@@ -613,7 +643,7 @@
                               <div class='input-group date' id='datetimepicker1'>
                                 <input type='text' class="form-control" placeholder="Date Send" />
                                 <span class="input-group-addon">
-                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                               </div>
                             </div>
@@ -648,7 +678,7 @@
                           <td style="width:10%">
                             <input type="checkbox" name="vehicle" value="test1C"><br>
                           </td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
