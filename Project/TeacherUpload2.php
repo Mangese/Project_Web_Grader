@@ -130,9 +130,9 @@
 
 
                     var n = x.split(' ');
-                    var b = n[0];
-                    var a = b.split('EGCO');
-                    var classcode = a[0];
+                    //var b = n[0];
+                    var classcode = n.split('EGCO');
+                    //var classcode = a[0];
 
                     $('#DataFromAjax tbody tr').remove();
                     //str = $("#selectClass").val();
@@ -142,8 +142,8 @@
                         $('#DataFromAjax').append(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "fillGetTableProblemT.php?class=" + a, true);
-                    alert("testfun classcode= " + classcode + "\n val a =" + a);
+                    xmlhttp.open("POST", "fillGetTableProblemT.php?class=" + classcode, true);
+                    alert("testfun classcode= " + classcode + "\n val n =" + n);
                     xmlhttp.send();
 
                   }
