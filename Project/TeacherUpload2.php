@@ -132,7 +132,7 @@
                     var n = str.split(' ');
                     var b = n[0];
                     var a = b.split('EGCO');
-                    var classcode = a[1].value;
+                    var classcode = a[1];
 
                     $('#DataFromAjax tbody tr').remove();
                     str = $("#selectClass").val();
