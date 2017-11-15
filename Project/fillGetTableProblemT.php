@@ -13,6 +13,8 @@
 echo "<script type='text/javascript'>alert('$inphp');</script>";
     while($row = mysql_fetch_assoc($result))
     {
+      $www = "inwhile";
+echo "<script type='text/javascript'>alert('$www');</script>";
       $RowNum = $RowNum+1;
       $PN = $row['problemName'];
       // $UD = $row['uploadDate'];
