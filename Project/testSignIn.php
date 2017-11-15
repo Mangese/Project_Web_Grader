@@ -72,31 +72,34 @@ if($conn != FALSE)
 mysql_query("use grader;");
 $PW = $_POST["inputPassword3"];
 $UN = $_POST["inputEmail3"];
-$result = mysql_query("select count(*),USER_TYPE as utp,u_id as uid from user where Username = '$UN' and password = md5('$PW');");
+$result = mysql_query("select count(*) as status,USER_TYPE as utp,u_id as uid from user where Username = '$UN' and password = md5('$PW');");
 //$row = mysql_fetch_assoc($result);
 if(mysql_num_rows($result)==1)
 {
-	$_SESSION["user"] = $UN;
-
 	while($row = mysql_fetch_assoc($result))
 	{
-	$_SESSION["utype"] = $row['utp'];
-	$_SESSION["uid"] = $row['uid'];
-	if(strcmp($row['utp'],"T"))
-	{
-	echo "<script> window.location = 'StudentUpload1.php' </script>";
+		if($row['status']==1)
+		{
+			$_SESSION["user"] = $UN;
+			$_SESSION["utype"] = $row['utp'];
+			$_SESSION["uid"] = $row['uid'];
+			if(strcmp($row['utp'],"T"))
+			{
+			echo "<script> window.location = 'StudentUpload1.php' </script>";
+			}
+			else
+			{
+			echo "<script> window.location = 'TeacherUpload2.php' </script>";
+			}	
+		}
+		else
+		{
+			echo"<body onload=\"window.alert('Invalid Username or Password!'); 
+			return history.back();\">";
+			exit();
+		}
+	
 	}
-	else
-	{
-	echo "<script> window.location = 'TeacherUpload2.php' </script>";
-	}
-	}
-}
-else
-{
-		echo"<body onload=\"window.alert('Invalid Username or Password!'); 
-		return history.back();\">";
-		exit();
 }
 }
 ?>

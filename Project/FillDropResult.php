@@ -6,7 +6,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UID = $_SESSION["uid"];
     mysql_query("use grader;");
     $result = mysql_query("select s.s_id as sid,s.name as sectionName from user u join section s on u.u_id = s.u_id where u.u_id = '$UID' group by s.s_id;");
-    echo "var x = document.getElementById('selSectionHw');";
+    echo "var x = document.getElementById('selSectionRs');";
     while($row = mysql_fetch_assoc($result))
     {
       $Text = $row['sectionName'];
