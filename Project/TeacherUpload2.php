@@ -259,15 +259,15 @@
             <table class="table table-striped table-hover main" id="DataFromAjax">
               <thead class="thead">
                 <tr>
-                  <th style="width:40%" onclick="sortTable(0)">
+                  <th style="width:40%" onclick="sortTable1(0)">
                     Exam name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%" onclick="sortTable(1)">
+                  <th style="width:20%" onclick="sortTable1(1)">
                     Date upload
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%" onclick="sortTable(2)">
+                  <th style="width:20%" onclick="sortTable1(2)">
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -284,7 +284,7 @@
 
           <!--Start Sort Script-->
           <script>
-            function sortTable(col) {
+            function sortTable1(col) {
               var table, rows, switching, i, x, y, shouldSwitch;
               table = document.getElementById("DataFromAjax");
               switching = true;
@@ -486,47 +486,47 @@
 
           <!--Table part-->
           <div class="table-wrapper-problem">
-          <table class="table table-striped table-hover main" id="TableHw">
-            <thead class="thead">
-              <tr style="width:100%">
-                <th style="width:800px" onclick="sortTable(0)">
-                  Exam name
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:200px" onclick="sortTable(1)">
-                  Language
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:700px" onclick="sortTable(2)">
-                  Amount student sent
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:700px" onclick="sortTable(3)">
-                  Amount student pass
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:500px" onclick="sortTable(4)">
-                  Assign date
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:500px" onclick="sortTable(5)">
-                  Due date
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:200px">
-                  Delete
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
+            <table class="table table-striped table-hover main" id="TableHw">
+              <thead class="thead">
+                <tr style="width:100%">
+                  <th style="width:800px" onclick="sortTable2(0)">
+                    Exam name
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:200px" onclick="sortTable2(1)">
+                    Language
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:700px" onclick="sortTable2(2)">
+                    Amount student sent
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:700px" onclick="sortTable2(3)">
+                    Amount student pass
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:500px" onclick="sortTable2(4)">
+                    Assign date
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:500px" onclick="sortTable2(5)">
+                    Due date
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:200px">
+                    Delete
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
           </div>
           <!--End Table-->
 
           <!--Start Sort Script-->
           <script>
-                                                      function sortTable(col) {
+                                                      function sortTable2(col) {
                                                         var table, rows, switching, i, x, y, shouldSwitch;
                                                         table = document.getElementById("TableHw");
                                                         switching = true;
