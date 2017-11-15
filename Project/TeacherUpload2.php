@@ -232,26 +232,31 @@
             </div>
           </form>
           <!--Table-->
-          <table class="table table-striped table-hover main" id="DataFromAjax">
-            <thead class="thead">
-              <tr>
-                <th style="width:40%" onclick="sortTable(0)">
-                  Exam name
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:20%" onclick="sortTable(1)">
-                  Date upload
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:20%" onclick="sortTable(2)">
-                  Language
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
+          <div class="table-wrapper-problem">
+            <table class="table table-striped table-hover main" id="DataFromAjax">
+              <thead class="thead">
+                <tr>
+                  <th style="width:40%" onclick="sortTable(0)">
+                    Exam name
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:20%" onclick="sortTable(1)">
+                    Date upload
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:20%" onclick="sortTable(2)">
+                    Language
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:20%">
+                    Delete
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
           <!--End Table-->
 
           <!--Start Sort Script-->
@@ -459,7 +464,7 @@
           <!--End Head part-->
 
           <!--Table part-->
-          <!-- <div class="table-wrapper"> -->
+          <div class="table-wrapper-problem">
           <table class="table table-striped table-hover main" id="TableHw">
             <thead class="thead">
               <tr style="width:100%">
@@ -495,7 +500,7 @@
             <tbody>
             </tbody>
           </table>
-          <!-- </div> -->
+          </div>
           <!--End Table-->
 
           <!--Start Sort Script-->

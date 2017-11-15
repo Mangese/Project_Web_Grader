@@ -38,7 +38,7 @@ body {
 }
 
 .foot-t {
-  margin-top: 50px;
+  margin-top: 20px;
   justify-content: space-around;
 }
 
@@ -95,7 +95,7 @@ tr {
 
 .container-table {
   width: 80%;
-  height: 400px;
+  height: 420px;
   margin: 0px auto;
   margin-top: 50px;
   padding: 30px 20px;
@@ -213,6 +213,11 @@ tr {
 
 .form-inline label {
   display: inherit;
+}
+
+.table-wrapper-problem {
+  height: 235px;
+  overflow-y: scroll;
 }
 
 .table-wrapper {
