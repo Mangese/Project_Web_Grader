@@ -78,7 +78,7 @@ if(mysql_num_rows($result)==1)
 {
 	while($row = mysql_fetch_assoc($result))
 	{
-		if($row['status']==0)
+		if($row['status']==1)
 		{
 			$_SESSION["user"] = $UN;
 			$_SESSION["utype"] = $row['utp'];
