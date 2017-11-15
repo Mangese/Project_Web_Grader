@@ -17,5 +17,4 @@ $conn = mysql_connect("localhost","mangese","000000");
       echo "x.add(option);";
     }
   }
-    
-    
+?>
