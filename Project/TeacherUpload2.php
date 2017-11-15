@@ -129,13 +129,13 @@
                     // }
 
 
-                    var n = str.split(' ');
-                    var b = n[0];
+                    var n = x.split(' ');
+                    var b = n[0].value;
                     var a = b.split('EGCO');
-                    var classcode = a[1];
+                    var classcode = a[1].value;
 
                     $('#DataFromAjax tbody tr').remove();
-                    str = $("#selectClass").val();
+                    //str = $("#selectClass").val();
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
