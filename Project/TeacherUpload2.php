@@ -68,7 +68,8 @@
                     fillDropDownSection();
                     fillDropHw();
                     fillTable();
-                    fillTableHw()
+                    fillTableHw();
+		    fillDropResult;		  
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
@@ -123,6 +124,16 @@
                       }
                     }
                     xmlhttp.open("POST", "FillDropHW.php", true);
+                    xmlhttp.send();
+                  }
+	    	  function fillDropResult() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillDropResult.php", true);
                     xmlhttp.send();
                   }
                   function fillUploadCID() {
@@ -198,6 +209,7 @@
         }
         xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
         xmlhttp.send();
+	fillDropResult();
       }
     </script>
     <!--End script-->
