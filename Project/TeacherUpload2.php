@@ -69,6 +69,7 @@
                     fillDropHw();
                     fillTable();
                     fillTableHw();
+		    fillDropCreateClass();
 		    fillDropResult();		  
                   });
                   $('#myTab a').click(function (e) {
@@ -115,6 +116,16 @@
                     xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
                     xmlhttp.send();
 
+                  }
+		  function fillDropCreateClass() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillDropCreateClass.php", true);
+                    xmlhttp.send();
                   }
                   function fillDropHw() {
                     var xmlhttp = new XMLHttpRequest();
@@ -420,8 +431,6 @@
                         <label>Class</label>
                         <select class="form-control" name="createClass" id="createClass" style="width:80%">
                                                 <option>Please Select Classroom</option>
-                                                <option value = '3'>EGCO111 Computer Programming</option>
-                                                <option value = '4'>EGCO112 Programming Technique</option>
                                             </select>
 
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
