@@ -6,7 +6,6 @@
   	$CID = $_POST["ClassID"];
 	$PTYPE = $_POST["optradio"];
 	$PNAME = $_POST["ProblemNameUp"];
-		echo "<script> alert('$PNAME'); </script>";
 
 $conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
@@ -34,5 +33,5 @@ $conn = mysql_connect("localhost","mangese","000000");
 		}
 	mysql_query("insert into problem(File_name,C_ID,U_ID,REMARK,inputfile,outputfile,uploaddate,language) values ('$PDFN',$CID,$UID,'$PNAME','$INN','$OUTN',DATE_FORMAT(now(),'%Y-%m-%d'),'$PTYPE');");
 	}
-	
+    echo "<script> window.location = 'TeacherUpload2.php' </script>";
 ?>
