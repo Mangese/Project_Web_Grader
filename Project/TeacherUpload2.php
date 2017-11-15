@@ -69,7 +69,7 @@
                     fillDropHw();
                     fillTable();
                     fillTableHw();
-		    fillDropResult;		  
+		    fillDropResult();		  
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
