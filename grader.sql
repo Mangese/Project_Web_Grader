@@ -1,5 +1,5 @@
 ﻿# Host: 192.168.1.103  (Version 5.5.57-0ubuntu0.14.04.1)
-# Date: 2017-11-16 20:48:15
+# Date: 2017-11-16 20:52:57
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -30,7 +30,6 @@ DROP TABLE IF EXISTS `homework`;
 CREATE TABLE `homework` (
   `H_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสงาน',
   `P_ID` int(11) DEFAULT NULL COMMENT 'รหัสโจทย์',
-  `DEADLINE` date DEFAULT NULL COMMENT 'กำหนดส่ง',
   `LANGUAGE` varchar(255) DEFAULT NULL COMMENT 'ภาษาที่ใช้ตรวจ',
   `S_ID` int(11) DEFAULT NULL COMMENT 'รหัส section',
   `Remark` varchar(255) DEFAULT NULL,
@@ -47,7 +46,7 @@ CREATE TABLE `homework` (
 #
 
 /*!40000 ALTER TABLE `homework` DISABLE KEYS */;
-INSERT INTO `homework` VALUES (1,1,NULL,'C',111,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20'),(2,2,NULL,'C',222,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20'),(3,2,NULL,'C',111,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20');
+INSERT INTO `homework` VALUES (1,1,'C',111,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20'),(2,2,'C',222,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20'),(3,2,'C',111,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20');
 /*!40000 ALTER TABLE `homework` ENABLE KEYS */;
 
 #
