@@ -38,7 +38,7 @@
            echo "Due date";
          echo "</td>";
          echo "<td style='width:200px'>";
-           echo "<i class='fa fa-minus-circle' aria-hidden='true' style='color:#E74C3C'></i>";
+           echo "<button type='button' class='btn btn-danger'>Delete</button>";
        echo "</tr>";
     }
   }
