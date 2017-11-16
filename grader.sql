@@ -1,5 +1,5 @@
-﻿# Host: 192.168.1.54  (Version 5.5.57-0ubuntu0.14.04.1)
-# Date: 2017-11-09 04:17:14
+﻿# Host: 192.168.1.103  (Version 5.5.57-0ubuntu0.14.04.1)
+# Date: 2017-11-16 20:52:57
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -30,10 +30,14 @@ DROP TABLE IF EXISTS `homework`;
 CREATE TABLE `homework` (
   `H_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสงาน',
   `P_ID` int(11) DEFAULT NULL COMMENT 'รหัสโจทย์',
-  `DEADLINE` date DEFAULT NULL COMMENT 'กำหนดส่ง',
   `LANGUAGE` varchar(255) DEFAULT NULL COMMENT 'ภาษาที่ใช้ตรวจ',
   `S_ID` int(11) DEFAULT NULL COMMENT 'รหัส section',
   `Remark` varchar(255) DEFAULT NULL,
+  `DeleteFlag` varchar(255) DEFAULT NULL,
+  `AssignDate` date DEFAULT NULL,
+  `AssignTime` time DEFAULT NULL,
+  `Deadlinedate` date DEFAULT NULL,
+  `DeadlineTime` time DEFAULT NULL,
   PRIMARY KEY (`H_ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
@@ -42,7 +46,7 @@ CREATE TABLE `homework` (
 #
 
 /*!40000 ALTER TABLE `homework` DISABLE KEYS */;
-INSERT INTO `homework` VALUES (1,1,NULL,'C',111,NULL),(2,2,NULL,'C',222,NULL),(3,2,NULL,'C',111,NULL);
+INSERT INTO `homework` VALUES (1,1,'C',111,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20'),(2,2,'C',222,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20'),(3,2,'C',111,NULL,NULL,'2017-11-16','17:18:20','2017-11-16','17:18:20');
 /*!40000 ALTER TABLE `homework` ENABLE KEYS */;
 
 #
@@ -60,6 +64,7 @@ CREATE TABLE `problem` (
   `OutputFile` varchar(255) DEFAULT NULL,
   `UploadDate` date DEFAULT NULL,
   `Language` varchar(255) DEFAULT NULL,
+  `DeleteFlag` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`P_ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
@@ -68,7 +73,7 @@ CREATE TABLE `problem` (
 #
 
 /*!40000 ALTER TABLE `problem` DISABLE KEYS */;
-INSERT INTO `problem` VALUES (1,'TEST1.pdf',1,5,'โจทย์Cอย่างง่าย','','','2017-09-25','C'),(2,'TEST2.pdf',1,5,'วาดรูปสามเหลี่ยม',NULL,NULL,'2017-09-25','C'),(20,'EGCO1125201710250PDF.pdf',2,5,'ทดสอบระบบ','EGCO1125201710250IN.in','EGCO1125201710250OUT.out','2017-10-25','Java'),(21,'EGCO1115201710272PDF.pdf',1,5,'Problem1(27/10/60)','EGCO1115201710272IN.in','EGCO1115201710272OUT.out','2017-10-27','Cpp');
+INSERT INTO `problem` VALUES (1,'TEST1.pdf',1,5,'โจทย์Cอย่างง่าย','','','2017-09-25','C',NULL),(2,'TEST2.pdf',1,5,'วาดรูปสามเหลี่ยม',NULL,NULL,'2017-09-25','C',NULL),(20,'EGCO1125201710250PDF.pdf',2,5,'ทดสอบระบบ','EGCO1125201710250IN.in','EGCO1125201710250OUT.out','2017-10-25','Java',NULL),(21,'EGCO1115201710272PDF.pdf',1,5,'Problem1(27/10/60)','EGCO1115201710272IN.in','EGCO1115201710272OUT.out','2017-10-27','Cpp',NULL);
 /*!40000 ALTER TABLE `problem` ENABLE KEYS */;
 
 #

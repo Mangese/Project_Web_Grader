@@ -11,10 +11,10 @@
 
 
   <!--bootstrap 4-->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+ -    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
@@ -69,23 +69,36 @@
                     fillDropHw();
                     fillTable();
                     fillTableHw();
-		    fillDropCreateClass();
-		    fillDropResult();		  
+                    fillDropCreateClass();
+                    fillDropResult();
+                    fillGetTableProblem();
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
                     $(this).tab('show')
                   })
-                  $(function () {
-                    $('#datetimepicker1').datetimepicker({
+//                   $(function () {
+//                     $('#datetimepicker1').datetimepicker({
+//                       format: 'DD/MM/YYYY'
+//                     });
+//                   });
+	    function DMYpicker(x) {
+                    //alert(x);
+                    $('#' + x).datetimepicker({
                       format: 'DD/MM/YYYY'
                     });
-                  });
-                  $(function () {
-                    $('#datetimepicker3').datetimepicker({
+                  }
+//                   $(function () {
+//                     $('#datetimepicker3').datetimepicker({
+//                       format: 'LT'
+//                     });
+//                   });
+	    function Timepicker(y) {
+  //alert(y);
+                    $('#'+y).datetimepicker({
                       format: 'LT'
                     });
-                  });
+                  }
                   function fillDropDownSection() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -95,6 +108,21 @@
                     }
                     xmlhttp.open("POST", "DropDownForT.php", true);
                     xmlhttp.send();
+                  }
+	    	  function RealDelete()
+	          {
+	           y = $('#DeleteModalCheck').val();
+		    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                      }
+                    }
+                    xmlhttp.open("POST", "DeleteProblem.php?pid="+y, true);
+                    xmlhttp.send();
+		   fillTable();   
+	    	  }
+                  function DeleteProblem(x,y) {
+		    $('#DeleteModalCheck').val(y);
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
@@ -117,7 +145,36 @@
                     xmlhttp.send();
 
                   }
-		  function fillDropCreateClass() {
+                  function fillGetTableProblem() {
+                    x = document.getElementById("selSectionHw").value;
+                    y = document.getElementById("AssignButton");
+                    // if (x != "") {
+                    //   y.style.display = 'block';
+                    // }
+                    // else {
+                    //   y.style.display = 'none';
+                    // }
+
+
+                    var n = x.split(' ');
+                    var b = n[0];
+                    var classcode = b.split('EGCO');
+                    //var classcode = a[0];
+
+                    $('#getProblem tbody tr').remove();
+                    //str = $("#selectClass").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#getProblem').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + classcode, true);
+                    xmlhttp.send();
+
+                  }
+
+                  function fillDropCreateClass() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
@@ -137,7 +194,7 @@
                     xmlhttp.open("POST", "FillDropHW.php", true);
                     xmlhttp.send();
                   }
-	    	  function fillDropResult() {
+                  function fillDropResult() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
@@ -174,7 +231,7 @@
                     xmlhttp.send();
                   }
     </script>
-
+<input type = "hidden" id = "DeleteModalCheck"/>
     <script>
                   (function ($) {
                     var doc = document,
@@ -220,7 +277,7 @@
         }
         xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
         xmlhttp.send();
-	fillDropResult();
+        fillDropResult();
       }
     </script>
     <!--End script-->
@@ -565,10 +622,11 @@
 
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#myModal2">Assign Homework</button>
+            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#modalAssignHomework"
+              onclick="fillGetTableProblem()">Assign Homework</button>
           </div>
-          <!-- Modal2 -->
-          <div class="modal fade" id="myModal2" role="dialog">
+          <!-- modalAssignHomework -->
+          <div class="modal fade" id="modalAssignHomework" role="dialog">
             <div class="modal-dialog modal-lg">
 
               <!-- Modal content-->
@@ -580,7 +638,7 @@
                   </div>
 
                   <div class="modal-body">
-                    <table class="table table-striped table-hover main">
+                    <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
                           <th style="width:30%">
@@ -601,7 +659,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <!-- <tr>
                           <td style="width:30%">
                             Exam1
                           </td>
@@ -613,7 +671,7 @@
                               <div class='input-group date' id='datetimepicker1'>
                                 <input type='text' class="form-control" placeholder="Date Send" />
                                 <span class="input-group-addon">
-                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                               </div>
                             </div>
@@ -648,7 +706,7 @@
                           <td style="width:10%">
                             <input type="checkbox" name="vehicle" value="test1C"><br>
                           </td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
@@ -656,7 +714,7 @@
 
                   <div class="modal-footer">
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                    <button type="submit" class="btn btn-success" onclick="$('#myModal2').modal('hide');">OK</button>
+                    <button type="submit" class="btn btn-success" onclick="$('#modalAssignHomework').modal('hide');">OK</button>
                   </div>
                 </form>
               </div>
@@ -1045,7 +1103,35 @@
 
     </div>
     <!--container-table-->
+	<div class="modal fade" id="modalChackDelete" role="dialog">
+	    <div class="modal-dialog modal-sm">
 
+	      <!-- Modal content-->
+	      <div class="modal-content">
+		<form name="from5" method="post">
+		  <!-- <div class="modal-header">
+		    <h4 class="modal-title">Delete Chacking</h4>
+		    <button type="button" class="close" data-dismiss="modal">&times;</button>
+		  </div> -->
+
+		  <div class="modal-body " style="text-align: center; margin-bottom:20px;">
+
+		    <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+		    <button type="button" class="btn btn-success" onclick = "RealDelete();" data-dismiss="modal" style="margin-right:5px">Yes</button>
+		    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+
+
+		  </div>
+		  <!--End modal-body-->
+
+		  <!-- <div class="modal-footer">
+		    <!- -<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+		    <button type="submit" class="btn btn-success" onclick="$('#modalChackDelete').modal('hide');">Delete</button>
+		  </div> -->
+		</form>
+	      </div>
+	    </div>
+	  </div>
   </body>
 
 </html>
