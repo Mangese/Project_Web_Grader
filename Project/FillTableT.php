@@ -28,7 +28,7 @@
       echo "$LN";
       echo "</td>";
       echo "<td style='width:20%'>";
-      echo "<i class='fa fa-minus-circle' aria-hidden='true' style='color:#E74C3C' onclick = 'DeleteProblem(this,$PID)';></i>";
+      echo "<button type='button' class='btn btn-danger' onclick = 'DeleteProblem(this,$PID)';>Delete</button>";
       echo "</td>";
       echo "</tr>";
     }
