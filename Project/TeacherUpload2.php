@@ -162,14 +162,14 @@
                     //var classcode = a[0];
 
                     $('#getProblem tbody tr').remove();
-                    //str = $("#selectClass").val();
+                    str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
                         $('#getProblem').append(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + classcode, true);
+                    xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + str, true);
                     xmlhttp.send();
 
                   }
@@ -221,7 +221,6 @@
 
                     $('#TableHw tbody tr').remove();
                     str = $("#selSectionHw").val();
-	            alert(str);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
