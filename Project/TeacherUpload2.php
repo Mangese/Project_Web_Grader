@@ -109,6 +109,10 @@
                     xmlhttp.open("POST", "DropDownForT.php", true);
                     xmlhttp.send();
                   }
+	    
+                  function DeleteProblem(x) {
+                    alert($(x).closest("tr").find(".use").text());
+                  }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
                     y = document.getElementById("UploadButton");
