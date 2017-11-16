@@ -77,11 +77,17 @@
                     e.preventDefault()
                     $(this).tab('show')
                   })
-                  $(function () {
-                    $('#datetimepicker1').datetimepicker({
+//                   $(function () {
+//                     $('#datetimepicker1').datetimepicker({
+//                       format: 'DD/MM/YYYY'
+//                     });
+//                   });
+	    function DMYpicker(x) {
+                    //alert(x);
+                    $('#' + x).datetimepicker({
                       format: 'DD/MM/YYYY'
                     });
-                  });
+                  }
                   $(function () {
                     $('#datetimepicker3').datetimepicker({
                       format: 'LT'
