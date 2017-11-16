@@ -109,14 +109,10 @@
                     xmlhttp.open("POST", "DropDownForT.php", true);
                     xmlhttp.send();
                   }
-	    
-                  function DeleteProblem(x,y) {
-		    $('#DeleteModalCheck').val(true);
-		    $('#modalChackDelete').modal('show');
-		    check = $('#DeleteModalCheck').val();
-		    if(!check)
-		    {    
-	            alert("success");
+	    	  function RealDelete()
+	          {
+	           y = $('#DeleteModalCheck').val();
+		   alert("success");
 		    var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
@@ -124,8 +120,11 @@
                     }
                     xmlhttp.open("POST", "DeleteProblem.php?pid="+y, true);
                     xmlhttp.send();
-		   fillTable(); 
-		    }
+		   fillTable();   
+	    	  }
+                  function DeleteProblem(x,y) {
+		    $('#DeleteModalCheck').val(y);
+		    $('#myModal').modal('toggle');
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
@@ -1120,7 +1119,7 @@
 		  <div class="modal-body " style="text-align: center; margin-bottom:20px;">
 
 		    <h5 style="margin-bottom:20px">Do you want to delete?</h5>
-		    <button type="button" class="btn btn-success" onclick = "$('#DeleteModalCheck').val(false);" data-dismiss="modal" style="margin-right:5px">Yes</button>
+		    <button type="button" class="btn btn-success" onclick = "RealDelete();" data-dismiss="modal" style="margin-right:5px">Yes</button>
 		    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 
 
