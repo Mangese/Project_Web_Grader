@@ -111,14 +111,21 @@
                   }
 	    
                   function DeleteProblem(x,y) {
-			  var xmlhttp = new XMLHttpRequest();
+		    $('#DeleteModalCheck').val(true);
+		    $('#modalChackDelete').modal('show');
+		    check = $('#DeleteModalCheck').val();
+		    if(!check)
+		    {    
+	            alert("success");
+		    var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
                       }
                     }
                     xmlhttp.open("POST", "DeleteProblem.php?pid="+y, true);
                     xmlhttp.send();
-		   fillTable();
+		   fillTable(); 
+		    }
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
@@ -227,7 +234,7 @@
                     xmlhttp.send();
                   }
     </script>
-
+<input type = "hidden" id = "DeleteModalCheck"/>
     <script>
                   (function ($) {
                     var doc = document,
@@ -1104,7 +1111,7 @@
 
 	      <!-- Modal content-->
 	      <div class="modal-content">
-		<form name="from5" method="post" action="xxx.php">
+		<form name="from5" method="post">
 		  <!-- <div class="modal-header">
 		    <h4 class="modal-title">Delete Chacking</h4>
 		    <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -1113,7 +1120,7 @@
 		  <div class="modal-body " style="text-align: center; margin-bottom:20px;">
 
 		    <h5 style="margin-bottom:20px">Do you want to delete?</h5>
-		    <button type="button" class="btn btn-success" data-dismiss="modal" style="margin-right:5px">Yes</button>
+		    <button type="button" class="btn btn-success" onclick = "$('#DeleteModalCheck').val(false);" data-dismiss="modal" style="margin-right:5px">Yes</button>
 		    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 
 
