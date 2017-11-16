@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $CID = $_REQUEST["class"];
     $UID = $_SESSION["uid"];
-    $result1 = mysql_query("select count(*) from submit where s_id = 'SID'");
+    $sum = mysql_query("select count(*) from homework where s_id = '111';");
     $result2 = mysql_query("select su.status,u.name from submit su join user u on u.u_id = su.u_id");  
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
