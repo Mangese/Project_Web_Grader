@@ -110,8 +110,9 @@
                     xmlhttp.send();
                   }
 	    
-                  function DeleteProblem(x) {
+                  function DeleteProblem(x,y) {
                     alert($(x).closest("tr").find(".use").text());
+		    alert(y);
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
@@ -159,7 +160,6 @@
                       }
                     }
                     xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + classcode, true);
-                    alert("testfun classcode= " + classcode + "\n val a =" + b);
                     xmlhttp.send();
 
                   }
