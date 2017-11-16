@@ -2,14 +2,14 @@
 <script>
 function check()
   {
-    $('table test [type="checkbox"]').each(function(i, chk) {
+    $('table [type="checkbox"]').each(function(i, chk) {
     if (chk.checked) {
       console.log("Checked!", i, chk);
     }
   });
   }
 </script>
-<table name = "test">
+<table>
   <tr>
     <td class="categories">World</td>
     <td class="category_enabled" style="float: right;">
