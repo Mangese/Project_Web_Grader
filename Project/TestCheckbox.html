@@ -1,0 +1,33 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('table [type="checkbox"]').each(function(i, chk) {
+    if (chk.checked) {
+      console.log("Checked!", i, chk);
+    }
+  });
+
+});
+</script>
+<table>
+  <tr>
+    <td class="categories">World</td>
+    <td class="category_enabled" style="float: right;">
+      <input type="checkbox" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="categories">Economy</td>
+    <td class="category_enabled" style="float: right;">
+      <input type="checkbox" checked />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="categories">Ψυχαγωγία</td>
+    <td class="category_enabled" style="float: right;">
+      <input type="checkbox" />
+    </td>
+  </tr>
+</table>
