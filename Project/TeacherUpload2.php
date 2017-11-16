@@ -123,7 +123,6 @@
 	    	  }
                   function DeleteProblem(x,y) {
 		    $('#DeleteModalCheck').val(y);
-		    $('#myModal').modal('toggle');
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
