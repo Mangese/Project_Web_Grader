@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $CID = $_REQUEST["class"];
     $UID = $_SESSION["uid"];
-    $result = mysql_query("select p.Remark as problemName,p.language as lang ,p.u_id as u_teacher,s.s_id as section from problem p join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id join section s on s.c_id = c.c_id where s.s_id = $CID and p.u_id = $UID;");
+    $result = mysql_query("select p.Remark as problemName,p.language as lang ,p.u_id as u_teacher,s.s_id as section from problem p join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id join section s on s.c_id = c.c_id where s.s_id = $CID and p.u_id = $UID and p.deleteflag is null;");
     $RowNum = 0;
     $inphp = "inphp";
 //echo "<script type='text/javascript'>alert('$inphp');</script>";
