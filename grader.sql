@@ -1,5 +1,5 @@
 ﻿# Host: 192.168.1.192  (Version 5.5.57-0ubuntu0.14.04.1)
-# Date: 2017-11-16 16:40:37
+# Date: 2017-11-16 17:14:15
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -35,6 +35,8 @@ CREATE TABLE `homework` (
   `S_ID` int(11) DEFAULT NULL COMMENT 'รหัส section',
   `Remark` varchar(255) DEFAULT NULL,
   `DeleteFlag` varchar(255) DEFAULT NULL,
+  `Date` date DEFAULT NULL,
+  `Time` time DEFAULT NULL,
   PRIMARY KEY (`H_ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
@@ -43,7 +45,7 @@ CREATE TABLE `homework` (
 #
 
 /*!40000 ALTER TABLE `homework` DISABLE KEYS */;
-INSERT INTO `homework` VALUES (1,1,NULL,'C',111,NULL,NULL),(2,2,NULL,'C',222,NULL,NULL),(3,2,NULL,'C',111,NULL,NULL);
+INSERT INTO `homework` VALUES (1,1,NULL,'C',111,NULL,NULL,NULL,NULL),(2,2,NULL,'C',222,NULL,NULL,NULL,NULL),(3,2,NULL,'C',111,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `homework` ENABLE KEYS */;
 
 #
