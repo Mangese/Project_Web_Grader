@@ -10,11 +10,11 @@
     $result = mysql_query("select p.Remark as problemName,p.language as lang ,p.u_id as u_teacher,s.s_id as section from problem p join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id join section s on s.c_id = c.c_id where s.s_id = $CID and p.u_id = $UID;");
     $RowNum = 0;
     $inphp = "inphp";
-echo "<script type='text/javascript'>alert('$inphp');</script>";
+//echo "<script type='text/javascript'>alert('$inphp');</script>";
     while($row = mysql_fetch_assoc($result))
     {
       $www = "inwhile";
-echo "<script type='text/javascript'>alert('$www');</script>";
+//echo "<script type='text/javascript'>alert('$www');</script>";
       $RowNum = $RowNum+1;
       $PN = $row['problemName'];
       // $UD = $row['uploadDate'];
