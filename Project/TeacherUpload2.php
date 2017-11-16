@@ -118,7 +118,7 @@
                     }
                     xmlhttp.open("POST", "DeleteProblem.php?pid="+y, true);
                     xmlhttp.send();
-		   location.reload();
+		   fillTable();
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
