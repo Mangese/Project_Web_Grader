@@ -28,8 +28,7 @@
       echo "$LN";
       echo "</td>";
       echo "<td style='width:20%'>";
-      echo "<button type='button' class='btn btn-danger' data-toggle="modal" data-target="#modalChackDelete" data-backdrop="static"
-      data-keyboard="false" onclick = 'DeleteProblem(this,$PID)';>Delete</button>";
+      echo "<button type='button' class='btn btn-danger' onclick = 'DeleteProblem(this,$PID)';>Delete</button>";
       echo "</td>";
       echo "</tr>";
     }
