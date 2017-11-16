@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $CID = $_REQUEST["class"];
     $UID = $_SESSION["uid"];
-    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName,p.p_id as problemid,p.UploadDate as uploadDate,p.language as lang from problem p join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id where p.u_id = '$UID' and p.c_id = '$CID' and p.deleteflag <> 'Y';");
+    $result = mysql_query("select p.Remark as problemName,p.File_Name as fileName,p.p_id as problemid,p.UploadDate as uploadDate,p.language as lang from problem p join user u on u.u_id = p.u_id join class c on c.c_id = p.c_id where p.u_id = '$UID' and p.c_id = '$CID' and p.deleteflag is null;");
     $RowNum = 0;
     while($row = mysql_fetch_assoc($result))
     {
