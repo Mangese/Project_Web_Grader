@@ -20,8 +20,8 @@ $conn = mysql_connect("localhost","mangese","000000");
       $GenFilename = $row['genname'];
     }
     $PDFN = $GenFilename."PDF.pdf";
-    $INN = $GenFilename."IN.in";
-    $OUTN = $GenFilename."OUT.out";
+    $INN = $GenFilename."IN.zip";
+    $OUTN = $GenFilename."OUT.zip";
 		if(!move_uploaded_file($_FILES['PDFFile']['tmp_name'],$target.$PDFN))
 		{
 		}
