@@ -134,15 +134,15 @@
                     var classcode = b.split('EGCO');
                     //var classcode = a[0];
 
-                    $('#modalGetTableProblem tbody tr').remove();
+                    $('#getProblem tbody tr').remove();
                     //str = $("#selectClass").val();
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
-                        $('#modalGetTableProblem').append(this.responseText);
+                        $('#getProblem').append(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "fillGetTableProblemT.php?class=" + classcode, true);
+                    xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + classcode, true);
                     alert("testfun classcode= " + classcode + "\n val a =" + b);
                     xmlhttp.send();
 
@@ -596,11 +596,11 @@
 
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#modalGetTableProblem"
+            <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#modalAssignHomework"
               onclick="fillGetTableProblem()">Assign Homework</button>
           </div>
-          <!-- modalGetTableProblem -->
-          <div class="modal fade" id="modalGetTableProblem" role="dialog">
+          <!-- modalAssignHomework -->
+          <div class="modal fade" id="modalAssignHomework" role="dialog">
             <div class="modal-dialog modal-lg">
 
               <!-- Modal content-->
@@ -612,7 +612,7 @@
                   </div>
 
                   <div class="modal-body">
-                    <table class="table table-striped table-hover main">
+                    <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
                           <th style="width:30%">
@@ -688,7 +688,7 @@
 
                   <div class="modal-footer">
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                    <button type="submit" class="btn btn-success" onclick="$('#modalGetTableProblem').modal('hide');">OK</button>
+                    <button type="submit" class="btn btn-success" onclick="$('#modalAssignHomework').modal('hide');">OK</button>
                   </div>
                 </form>
               </div>
