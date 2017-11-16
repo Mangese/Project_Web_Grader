@@ -4,8 +4,7 @@ function check()
   {
     $('table [type="checkbox"]').each(function(i, chk) {
     if (chk.checked) {
-      console.log("Checked!", i, chk);
-      console.log("Test!", document.getElementById("tblBlah").rows[i].cells[0].innerHTML);
+      console.log("Test!",i, document.getElementById("tblBlah").rows[i].cells[0].innerHTML);
     }
   });
   }
