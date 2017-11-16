@@ -5,7 +5,7 @@ function check()
     $('table [type="checkbox"]').each(function(i, chk) {
     if (chk.checked) {
       console.log("Checked!", i, chk);
-      console.log("Test!", document.getElementById("tblBlah").rows[i].columns[1].innerHTML);
+      console.log("Test!", document.getElementById("tblBlah").rows[i].cells[1].innerHTML);
     }
   });
   }
