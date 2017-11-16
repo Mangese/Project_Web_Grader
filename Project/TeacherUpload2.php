@@ -111,8 +111,14 @@
                   }
 	    
                   function DeleteProblem(x,y) {
-                    alert($(x).closest("tr").find(".use").text());
-		    alert(y);
+			  var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "DeleteProblem.php?pid="+y, true);
+                    xmlhttp.send();
                   }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
