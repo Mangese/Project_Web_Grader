@@ -88,11 +88,17 @@
                       format: 'DD/MM/YYYY'
                     });
                   }
-                  $(function () {
-                    $('#datetimepicker3').datetimepicker({
+//                   $(function () {
+//                     $('#datetimepicker3').datetimepicker({
+//                       format: 'LT'
+//                     });
+//                   });
+	    function Timepicker(y) {
+  //alert(y);
+                    $('#'+y).datetimepicker({
                       format: 'LT'
                     });
-                  });
+                  }
                   function fillDropDownSection() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
