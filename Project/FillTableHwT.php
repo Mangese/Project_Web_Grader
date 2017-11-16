@@ -19,7 +19,7 @@
       $SQTY = $row['count'];
       $LN = $row['lang'];
       $FN = $row['fileName'];
-      $AD = $row['assignedate'];
+      $AD = $row['assigndate'];
       $DD = $row['deadlinedate'];
       echo "<tr style='width:100%'>";
          echo "<td style='width:800px'>";
