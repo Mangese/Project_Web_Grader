@@ -132,7 +132,7 @@
 				num = i+1;
 				dateName = "datetimepicker"+num.toString()+"Name";
 				timeName = "timepicker"+num.toString()+"Name";
-      		  		console.log(document.getElementById(tempName).value,document.getElementById(timeName).value,chk.value);
+      		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
   		  }
