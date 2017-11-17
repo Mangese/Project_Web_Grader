@@ -16,7 +16,7 @@
       echo "<td style='width:6%'>";
       echo "$RowNum";
       echo "</td>";
-      echo "<td style='width:24%' class = 'use'>";
+      echo "<td style='width:27%' class = 'use'>";
       $PN = $row['problemName'];
       $FN = $row['fileName'];
       $PID = $row['pid'];
@@ -41,7 +41,7 @@ echo "<td style='width:22%'>";
         echo "Pass";
       }
       echo "</td>";
-      echo "<td style='width:16%'>";
+      echo "<td style='width:13%'>";
       if(!strcmp($Status, "F"))
       {
          echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID);' data-toggle='modal' ";
