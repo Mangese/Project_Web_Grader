@@ -90,7 +90,7 @@
  echo "</div>";
                         echo "</td>";
                         echo "<td style='width:10%'>";
-                          echo "<input type='checkbox' name='vehicle' value='test1C'><br>";
+                          echo "<input type='checkbox' name='selectedProblemToAssign' onchange = 'check();'><br>";
                         echo "</td>";
                       echo "</tr>";
     }
