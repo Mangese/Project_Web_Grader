@@ -230,8 +230,6 @@
                     }
                     xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
                     xmlhttp.send();
-
-                    alert("test");
                   }
                   function fillTableResult() {
                     x = document.getElementById("selSectionRs").value;
