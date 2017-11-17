@@ -73,7 +73,6 @@
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
-                    alert("hello");
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
@@ -231,6 +230,8 @@
                     }
                     xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
                     xmlhttp.send();
+
+                    alert("test");
                   }
                   function fillTableResult() {
                     x = document.getElementById("selSectionRs").value;
