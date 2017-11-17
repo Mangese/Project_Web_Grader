@@ -127,6 +127,7 @@
                   }
 	    	  function check()
   		  {
+			var x = 0;
     		  	$('table [type="checkbox"]').each(function(i, chk) {
     		  	if (chk.checked) {
 				num = i+1;
@@ -134,13 +135,21 @@
 				timeName = "timepicker"+num.toString()+"Name";
 				if(document.getElementById(dateName).value == "")
 				{
-				alert("Date Null");	
+				x = 1;
 				}
 				alert(document.getElementById(dateName).value);
 				alert(document.getElementById(timeName).value);
       		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
+			if(x == 0)
+			{
+			alert("Please input all detail");
+			}
+			else
+			{
+			alert("Success");
+			}
   		  }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
