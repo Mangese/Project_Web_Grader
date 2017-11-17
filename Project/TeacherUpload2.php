@@ -129,7 +129,8 @@
   		  {
     		  	$('table [type="checkbox"]').each(function(i, chk) {
     		  	if (chk.checked) {
-				tempName = "datetimepicker"+i.toString();
+				num = i+1;
+				tempName = "datetimepicker"+num.toString();
 				alert(tempName);
       		  		console.log(document.getElementById("datetimepicker"+i.toString()).value,chk.value);
     		  	}
