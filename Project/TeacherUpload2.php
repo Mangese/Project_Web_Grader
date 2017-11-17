@@ -131,7 +131,7 @@
     		  	if (chk.checked) {
 				num = i+1;
 				tempName = "datetimepicker"+num.toString();
-				alert(tempName);
+				alert(document.getElementById(tempName).value);
       		  		//console.log(document.getElementById("datetimepicker"+i.toString()).value,chk.value);
     		  	}
   		  	});
