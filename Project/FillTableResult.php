@@ -18,7 +18,7 @@
     }
 
     while($row = mysql_fetch_assoc($sumStudentInSec)){
-      $sumStd = $row['sumStudentInSec']
+      $sumStd = $row['sumStudentInSec'];
     }
    }
 ?>
