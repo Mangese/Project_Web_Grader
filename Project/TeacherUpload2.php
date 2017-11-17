@@ -132,7 +132,7 @@
 				num = i+1;
 				dateName = "datetimepicker"+num.toString()+"Name";
 				timeName = "timepicker"+num.toString()+"Name";
-				if(document.getElementById(dateName).value == null)
+				if(document.getElementById(dateName).value == "")
 				{
 				alert("Date Null");	
 				}
