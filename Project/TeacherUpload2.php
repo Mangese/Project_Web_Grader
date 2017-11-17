@@ -69,6 +69,7 @@
                     fillDropHw();
                     fillTable();
                     fillTableHw();
+                    fillTableResult();
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
@@ -229,6 +230,25 @@
                     }
                     xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
                     xmlhttp.send();
+                  }
+                  function fillTableResult() {
+                    x = document.getElementById("selSectionRs").value;
+                    
+                    $('#Result tbody tr').remove();
+                    str = $("#selSectionRs").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#Result').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
+                    xmlhttp.send();
+                    <?php 
+                    $tempsumval = $_SESSION["sumpb"];
+                    echo "<script> $('#sumplob').val($tempsumval);</script>"
+                    ?>
+                    alert($('#sumplob').val());
                   }
     </script>
 <input type = "hidden" id = "DeleteModalCheck"/>
@@ -748,8 +768,9 @@
                     Name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
+                  <input type = "hidden" id = "sumplob"/>
                   <script>
-                    var numOfProb = 20
+                    var numOfProb = $("#sumplob").val();
                     for (var i = 1; i <= numOfProb; i++)
                       document.write('<th style="min-width:30px">ex ' + i + '</th>')
                   </script>
@@ -760,7 +781,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr style="width:100%">
+                <!-- <tr style="width:100%">
                   <td style="width:100px">
                     5713999
                   </td>
@@ -967,7 +988,7 @@
                   <td style="width:100px; text-align:center;">
                     0/10
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
               <tfoot>
                 <tr>
