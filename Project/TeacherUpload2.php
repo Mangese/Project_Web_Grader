@@ -97,7 +97,8 @@
 	    function Timepicker(y) {
   //alert(y);
                     $('#'+y).datetimepicker({
-                      format: 'LT'
+                      use24hours: true,
+        	      format: 'HH:mm'
                     });
                   }
                   function fillDropDownSection() {
