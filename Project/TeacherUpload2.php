@@ -154,7 +154,7 @@
       		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
-			$('#modalAssignHomework').modal('hide');
+			location.reload();
 			}
   		  }
                   function fillTable() {
