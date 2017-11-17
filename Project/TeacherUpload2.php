@@ -746,7 +746,7 @@
           <!--Head part-->
           <form class="form-inline" style="margin-top:20px; margin-bottom:20px">
             <div class="form-group mx-sm-4">
-              <select class="form-control" name="selSectionRs" id="selSectionRs">
+              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange = "fillTableResult();">
                               <option value="">Please Select Section</option>
                           </select>
             </div>
