@@ -71,9 +71,10 @@
                         echo "<td style='width:25%'>";
                           echo "<div class='form-group'>";
       $tempdate = 'datetimepicker'.$RowNum;
+      $tempdateName = 'datetimepicker'.$RowNum.'Name';
       $temptime = 'timepicker'.$RowNum;
   echo "<div class='input-group date' id='$tempdate' onclick = 'DMYpicker(this.id)'>";
-   echo "<input type='text' class='form-control' placeholder='Date Send' />";
+   echo "<input type='text' class='form-control' id = '$tempdateName' placeholder='Date Send' />";
      echo "<span class='input-group-addon' >";
       echo "<span class='glyphicon glyphicon-calendar'></span>";
      echo "</span>";
