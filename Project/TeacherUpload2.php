@@ -137,7 +137,6 @@
 				{
 				x = 1;
 				}
-      		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
 			if(x == 1)
@@ -147,6 +146,15 @@
 			else
 			{
 			alert("Success");
+				$('table [type="checkbox"]').each(function(i, chk) {
+    		  	if (chk.checked) {
+				num = i+1;
+				dateName = "datetimepicker"+num.toString()+"Name";
+				timeName = "timepicker"+num.toString()+"Name";
+      		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
+    		  	}
+  		  	});
+			$('#modalAssignHomework').modal('hide');
 			}
   		  }
                   function fillTable() {
@@ -754,7 +762,7 @@
 
                   <div class="modal-footer">
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                    <button type="submit" class="btn btn-success" onclick="$('#modalAssignHomework').modal('hide');">OK</button>
+                    <button type="button" class="btn btn-success" onclick="check();">OK</button>
                   </div>
                 </form>
               </div>
