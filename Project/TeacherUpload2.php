@@ -246,10 +246,7 @@
                     }
                     xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
                     xmlhttp.send();
-                    <?php 
-                    $tempsumval = $_SESSION["sumpb"];
-                    echo "<script> $('#sumplob').val($tempsumval);</script>"
-                    ?>
+                  
                     
                   }
     </script>
