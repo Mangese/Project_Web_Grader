@@ -73,6 +73,7 @@
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
+                    alert("hello");
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
@@ -248,8 +249,7 @@
                     $tempsumval = $_SESSION["sumpb"];
                     echo "<script> $('#sumplob').val($tempsumval);</script>"
                     ?>
-                    //alert($('#sumplob').val());
-                    alert("hello");
+                    
                   }
     </script>
 <input type = "hidden" id = "DeleteModalCheck"/>
