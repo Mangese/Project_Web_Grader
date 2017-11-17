@@ -129,7 +129,7 @@
   		  {
     		  	$('table [type="checkbox"]').each(function(i, chk) {
     		  	if (chk.checked) {
-      		  		console.log(document.getElementById("getProblem").rows[i+1].cells[3].nodeValue,chk.value);
+      		  		console.log(document.getElementById("datetimepicker"+i).value,chk.value);
     		  	}
   		  	});
   		  }
