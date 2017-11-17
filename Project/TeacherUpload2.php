@@ -125,6 +125,14 @@
                   function DeleteProblem(x,y) {
 		    $('#DeleteModalCheck').val(y);
                   }
+	    	  function check()
+  		  {
+    		  	$('table [type="checkbox"]').each(function(i, chk) {
+    		  	if (chk.checked) {
+      		  		console.log("Test!",i, document.getElementById("getProblem").rows[i].cells[0].innerHTML);
+    		  	}
+  		  	});
+  		  }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
                     y = document.getElementById("UploadButton");
