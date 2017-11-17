@@ -12,7 +12,7 @@
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
 
     while($row = mysql_fetch_assoc($sumPb)){
-      $sumPlob = $row['sumPloblem']
+      $sumPlob = $row['sumPloblem'];
     }
 
     while($row = mysql_fetch_assoc($result1)){
