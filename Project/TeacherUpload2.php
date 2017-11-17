@@ -129,7 +129,7 @@
   		  {
     		  	$('table [type="checkbox"]').each(function(i, chk) {
     		  	if (chk.checked) {
-      		  		console.log("Test!",i, document.getElementById("getProblem").rows[i].cells[0].innerHTML);
+      		  		console.log("Test!",i, document.getElementById("getProblem").rows[i+1].cells[0].innerHTML);
     		  	}
   		  	});
   		  }
