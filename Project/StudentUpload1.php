@@ -175,12 +175,12 @@
                 Exam name
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
-              <th style="width:35%" onclick="sortTable(2)">
+              <th style="width:28%" onclick="sortTable(2)">
                 <!-- Deadline -->
                 Deadline
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
-              <th style="width:15%" onclick="sortTable(2)">
+              <th style="width:22%" onclick="sortTable(2)">
                 <!-- จำนวนที่ส่ง(ครั้ง) -->
                 Number of submissions
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
