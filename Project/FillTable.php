@@ -30,7 +30,7 @@ echo "<td style='width:28%'>";
       echo "<td style='width:22%'>";
       echo "$QTY";
       echo "</td>";
-      echo "<td style='width:15%'>";
+      echo "<td style='width:12%'>";
       $Status = $row['status'];
       if(!strcmp($Status, "F"))
       {
@@ -41,7 +41,7 @@ echo "<td style='width:28%'>";
         echo "Pass";
       }
       echo "</td>";
-      echo "<td style='width:15%'>";
+      echo "<td style='width:18%'>";
       if(!strcmp($Status, "F"))
       {
          echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID);' data-toggle='modal' ";
