@@ -97,7 +97,7 @@
 	    function Timepicker(y) {
   //alert(y);
                     $('#'+y).datetimepicker({
-                      format: 'LT'
+        	      format: 'HH:mm'
                     });
                   }
                   function fillDropDownSection() {
@@ -125,6 +125,38 @@
                   function DeleteProblem(x,y) {
 		    $('#DeleteModalCheck').val(y);
                   }
+	    	  function check()
+  		  {
+			var x = 0;
+    		  	$('table [type="checkbox"]').each(function(i, chk) {
+    		  	if (chk.checked) {
+				num = i+1;
+				dateName = "datetimepicker"+num.toString()+"Name";
+				timeName = "timepicker"+num.toString()+"Name";
+				if(document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "")
+				{
+				x = 1;
+				}
+    		  	}
+  		  	});
+			if(x == 1)
+			{
+			alert("Please input all detail");
+			}
+			else
+			{
+			alert("Success");
+				$('table [type="checkbox"]').each(function(i, chk) {
+    		  	if (chk.checked) {
+				num = i+1;
+				dateName = "datetimepicker"+num.toString()+"Name";
+				timeName = "timepicker"+num.toString()+"Name";
+      		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
+    		  	}
+  		  	});
+			location.reload();
+			}
+  		  }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
                     y = document.getElementById("UploadButton");
@@ -730,7 +762,7 @@
 
                   <div class="modal-footer">
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                    <button type="submit" class="btn btn-success" onclick="$('#modalAssignHomework').modal('hide');">OK</button>
+                    <button type="button" class="btn btn-success" onclick="check();">OK</button>
                   </div>
                 </form>
               </div>
