@@ -24,10 +24,10 @@
       $DD = $row['deadline'];
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
-echo "<td style='width:35%'>";
+echo "<td style='width:28%'>";
       echo "$DD";
       echo "</td>";
-      echo "<td style='width:15%'>";
+      echo "<td style='width:22%'>";
       echo "$QTY";
       echo "</td>";
       echo "<td style='width:15%'>";
