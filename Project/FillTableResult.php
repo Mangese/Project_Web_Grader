@@ -14,6 +14,7 @@
     while($row = mysql_fetch_assoc($sumProblem)){
       $sumPb = $row['sumPloblem'];
       $_SESSION["sumpb"] = $sumPb;
+      echo "alert('$sumPb');";
     }
 
     while($row = mysql_fetch_assoc($sumStudentInSec)){
