@@ -24,7 +24,7 @@
       $DD = $row['deadline'];
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
-echo "<td style='width:22%'>";
+echo "<td style='width:27%'>";
       echo "$DD";
       echo "</td>";
       echo "<td style='width:21%'>";
@@ -41,7 +41,7 @@ echo "<td style='width:22%'>";
         echo "Pass";
       }
       echo "</td>";
-      echo "<td style='width:18%'>";
+      echo "<td style='width:13%'>";
       if(!strcmp($Status, "F"))
       {
          echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID);' data-toggle='modal' ";
