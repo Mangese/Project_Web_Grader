@@ -170,7 +170,7 @@
                 ID
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
-              <th style="width:22%" onclick="sortTable(1)">
+              <th style="width:27%" onclick="sortTable(1)">
                 <!-- ชื่อโจทย์ -->
                 Exam name
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
@@ -190,7 +190,7 @@
                 Status
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
-              <th style="width:18%">
+              <th style="width:13%">
                 Upload
               </th>
             </tr>
