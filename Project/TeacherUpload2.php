@@ -97,7 +97,6 @@
 	    function Timepicker(y) {
   //alert(y);
                     $('#'+y).datetimepicker({
-                      use24hours: true,
         	      format: 'HH:mm'
                     });
                   }
