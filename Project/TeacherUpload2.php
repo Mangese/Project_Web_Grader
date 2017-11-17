@@ -133,7 +133,7 @@
 				num = i+1;
 				dateName = "datetimepicker"+num.toString()+"Name";
 				timeName = "timepicker"+num.toString()+"Name";
-				if(document.getElementById(dateName).value == "")
+				if(document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "")
 				{
 				x = 1;
 				}
@@ -142,7 +142,7 @@
       		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
-			if(x == 0)
+			if(x == 1)
 			{
 			alert("Please input all detail");
 			}
