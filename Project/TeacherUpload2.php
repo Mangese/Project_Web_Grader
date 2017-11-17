@@ -137,8 +137,6 @@
 				{
 				x = 1;
 				}
-				alert(document.getElementById(dateName).value);
-				alert(document.getElementById(timeName).value);
       		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
