@@ -185,12 +185,12 @@
                 Number of submissions
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
-              <th style="width:12%" onclick="sortTable(3)">
+              <th style="width:15%" onclick="sortTable(3)">
                 <!-- สถานะ -->
                 Status
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
-              <th style="width:18%">
+              <th style="width:15%">
                 Upload
               </th>
             </tr>
