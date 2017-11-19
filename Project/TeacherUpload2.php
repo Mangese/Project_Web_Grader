@@ -11,8 +11,8 @@
 
 
   <!--bootstrap 4-->
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
- -    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    - crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
     crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
@@ -78,34 +78,45 @@
                     e.preventDefault()
                     $(this).tab('show')
                   })
-//                   $(function () {
-//                     $('#datetimepicker1').datetimepicker({
-//                       format: 'DD/MM/YYYY'
-//                     });
-//                   });
-	    function DMYpicker(x) {
+                  //                   $(function () {
+                  //                     $('#datetimepicker1').datetimepicker({
+                  //                       format: 'DD/MM/YYYY'
+                  //                     });
+                  //                   });
+                  function DMYpicker(x) {
                     //alert(x);
                     $('#' + x).datetimepicker({
                       format: 'YYYY-MM-DD'
                     });
                   }
-//                   $(function () {
-//                     $('#datetimepicker3').datetimepicker({
-//                       format: 'LT'
-//                     });
-//                   });
-	    function Timepicker(y) {
-  //alert(y);
-                    $('#'+y).datetimepicker({
-        	      format: 'HH:mm'
+                  //                   $(function () {
+                  //                     $('#datetimepicker3').datetimepicker({
+                  //                       format: 'LT'
+                  //                     });
+                  //                   });
+                  function Timepicker(y) {
+                    //alert(y);
+                    $('#' + y).datetimepicker({
+                      format: 'HH:mm'
                     });
                   }
-	          function ResultModalHeader(x,y,z)
-	    {
-		    alert(x);
-		    alert(y);
-		    alert(z);
-	    }
+                  function ResultModalHeader(x, y, z) {
+                    alert(x);
+                    alert(y);
+                    alert(z);
+                    $('#tb3LastSendFile tbody tr').remove();
+                    str = $("#selSectionHw").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#tb3LastSendFile').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "fillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&sectionreq=" + y, true);
+                    xmlhttp.send();
+                  }
+
+
                   function fillDropDownSection() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -116,74 +127,68 @@
                     xmlhttp.open("POST", "DropDownForT.php", true);
                     xmlhttp.send();
                   }
-	    	  function RealDelete()
-	          {
-	           y = $('#DeleteModalCheck').val();
-		    var xmlhttp = new XMLHttpRequest();
+                  function RealDelete() {
+                    y = $('#DeleteModalCheck').val();
+                    var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
                       }
                     }
-                    xmlhttp.open("POST", "DeleteProblem.php?pid="+y, true);
+                    xmlhttp.open("POST", "DeleteProblem.php?pid=" + y, true);
                     xmlhttp.send();
-		   fillTable();   
-	    	  }
-                  function DeleteProblem(x,y) {
-		    $('#DeleteModalCheck').val(y);
+                    fillTable();
                   }
-	    function RealDeleteHw()
-	          {
-	           y = $('#DeleteModalCheck').val();
-		    var xmlhttp = new XMLHttpRequest();
+                  function DeleteProblem(x, y) {
+                    $('#DeleteModalCheck').val(y);
+                  }
+                  function RealDeleteHw() {
+                    y = $('#DeleteModalCheck').val();
+                    var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
                       }
                     }
-                    xmlhttp.open("POST", "DeleteHw.php?hid="+y, true);
+                    xmlhttp.open("POST", "DeleteHw.php?hid=" + y, true);
                     xmlhttp.send();
-		   fillTableHw();   
-	    	  }
-                  function DeleteHw(x,y) {
-		    $('#DeleteModalCheck').val(y);
+                    fillTableHw();
                   }
-	    	  function check()
-  		  {
-			var x = 0;
-    		  	$('table [type="checkbox"]').each(function(i, chk) {
-    		  	if (chk.checked) {
-				num = i+1;
-				dateName = "datetimepicker"+num.toString()+"Name";
-				timeName = "timepicker"+num.toString()+"Name";
-				if(document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "")
-				{
-				x = 1;
-				}
-    		  	}
-  		  	});
-			if(x == 1)
-			{
-			alert("Please input all detail");
-			}
-			else
-			{
-				$('table [type="checkbox"]').each(function(i, chk) {
-    		  	if (chk.checked) {
-				num = i+1;
-				dateName = "datetimepicker"+num.toString()+"Name";
-				timeName = "timepicker"+num.toString()+"Name";
-				str = $("#selSectionHw").val();
-				var xmlhttp = new XMLHttpRequest();
-				    xmlhttp.onreadystatechange = function () {
-				      if (this.readyState == 4 && this.status == 200) {
-					eval(this.responseText);
-				      }
-				    }
-				    xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" +  str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value, true);
-				    xmlhttp.send();
-    		  	}
-  		  	});
-			}
-  		  }
+                  function DeleteHw(x, y) {
+                    $('#DeleteModalCheck').val(y);
+                  }
+                  function check() {
+                    var x = 0;
+                    $('table [type="checkbox"]').each(function (i, chk) {
+                      if (chk.checked) {
+                        num = i + 1;
+                        dateName = "datetimepicker" + num.toString() + "Name";
+                        timeName = "timepicker" + num.toString() + "Name";
+                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
+                          x = 1;
+                        }
+                      }
+                    });
+                    if (x == 1) {
+                      alert("Please input all detail");
+                    }
+                    else {
+                      $('table [type="checkbox"]').each(function (i, chk) {
+                        if (chk.checked) {
+                          num = i + 1;
+                          dateName = "datetimepicker" + num.toString() + "Name";
+                          timeName = "timepicker" + num.toString() + "Name";
+                          str = $("#selSectionHw").val();
+                          var xmlhttp = new XMLHttpRequest();
+                          xmlhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                              eval(this.responseText);
+                            }
+                          }
+                          xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value, true);
+                          xmlhttp.send();
+                        }
+                      });
+                    }
+                  }
                   function fillTable() {
                     x = document.getElementById("selectClass").value;
                     y = document.getElementById("UploadButton");
@@ -208,18 +213,6 @@
                   function fillGetTableProblem() {
                     x = document.getElementById("selSectionHw").value;
                     y = document.getElementById("AssignButton");
-                    // if (x != "") {
-                    //   y.style.display = 'block';
-                    // }
-                    // else {
-                    //   y.style.display = 'none';
-                    // }
-
-
-                    var n = x.split(' ');
-                    var b = n[0];
-                    var classcode = b.split('EGCO');
-                    //var classcode = a[0];
 
                     $('#getProblem tbody tr').remove();
                     str = $("#selSectionHw").val();
@@ -293,7 +286,7 @@
                   function fillTableResult() {
                     x = document.getElementById("selSectionRs").value;
                     $('#Result thead tr').remove();
-		                $('#Result tbody tr').remove();
+                    $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -303,11 +296,11 @@
                     }
                     xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
                     xmlhttp.send();
-                  
-                    
+
+
                   }
     </script>
-<input type = "hidden" id = "DeleteModalCheck"/>
+    <input type="hidden" id="DeleteModalCheck" />
     <script>
                   (function ($) {
                     var doc = document,
@@ -354,7 +347,7 @@
         xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
         xmlhttp.send();
         fillDropResult();
-	fillDropDownSection();
+        fillDropDownSection();
       }
     </script>
     <!--End script-->
@@ -806,7 +799,7 @@
           <!--Head part-->
           <form class="form-inline" style="margin-top:20px; margin-bottom:20px">
             <div class="form-group mx-sm-4">
-              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange = "fillTableResult();">
+              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();">
                               <option value="">Please Select Section</option>
                           </select>
             </div>
@@ -894,7 +887,7 @@
                   <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body left">
-                  <table class="table table-striped table-hover main">
+                  <table class="table table-striped table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
                         <th style="width:35%">
@@ -917,8 +910,8 @@
                           timesend
                         </td>
                         <td style="width:30%">
-<!--                           <input type="checkbox" name="" value=""><br> -->
-				Correct
+                          <!--                           <input type="checkbox" name="" value=""><br> -->
+                          Correct
                         </td>
                       </tr>
                       <tr>
@@ -929,8 +922,8 @@
                           timesend
                         </td>
                         <td style="width:30%">
-<!--                           <input type="checkbox" name="" value=""><br> -->
-				Fail
+                          <!--                           <input type="checkbox" name="" value=""><br> -->
+                          Fail
                         </td>
                       </tr>
                     </tbody>
@@ -955,64 +948,64 @@
 
     </div>
     <!--container-table-->
-	<div class="modal fade" id="modalChackDelete" role="dialog">
-	    <div class="modal-dialog modal-sm">
+    <div class="modal fade" id="modalChackDelete" role="dialog">
+      <div class="modal-dialog modal-sm">
 
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<form name="from5" method="post">
-		  <!-- <div class="modal-header">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <form name="from5" method="post">
+            <!-- <div class="modal-header">
 		    <h4 class="modal-title">Delete Chacking</h4>
 		    <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  </div> -->
 
-		  <div class="modal-body " style="text-align: center; margin-bottom:20px;">
+            <div class="modal-body " style="text-align: center; margin-bottom:20px;">
 
-		    <h5 style="margin-bottom:20px">Do you want to delete?</h5>
-		    <button type="button" class="btn btn-success" onclick = "RealDelete();" data-dismiss="modal" style="margin-right:5px">Yes</button>
-		    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+              <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+              <button type="button" class="btn btn-success" onclick="RealDelete();" data-dismiss="modal" style="margin-right:5px">Yes</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 
 
-		  </div>
-		  <!--End modal-body-->
+            </div>
+            <!--End modal-body-->
 
-		  <!-- <div class="modal-footer">
+            <!-- <div class="modal-footer">
 		    <!- -<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
 		    <button type="submit" class="btn btn-success" onclick="$('#modalChackDelete').modal('hide');">Delete</button>
 		  </div> -->
-		</form>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="modal fade" id="modalChackDeleteHw" role="dialog">
-	    <div class="modal-dialog modal-sm">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalChackDeleteHw" role="dialog">
+      <div class="modal-dialog modal-sm">
 
-	      <!-- Modal content-->
-	      <div class="modal-content">
-		<form name="from5" method="post">
-		  <!-- <div class="modal-header">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <form name="from5" method="post">
+            <!-- <div class="modal-header">
 		    <h4 class="modal-title">Delete Chacking</h4>
 		    <button type="button" class="close" data-dismiss="modal">&times;</button>
 		  </div> -->
 
-		  <div class="modal-body " style="text-align: center; margin-bottom:20px;">
+            <div class="modal-body " style="text-align: center; margin-bottom:20px;">
 
-		    <h5 style="margin-bottom:20px">Do you want to delete?</h5>
-		    <button type="button" class="btn btn-success" onclick = "RealDeleteHw();" data-dismiss="modal" style="margin-right:5px">Yes</button>
-		    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+              <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+              <button type="button" class="btn btn-success" onclick="RealDeleteHw();" data-dismiss="modal" style="margin-right:5px">Yes</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 
 
-		  </div>
-		  <!--End modal-body-->
+            </div>
+            <!--End modal-body-->
 
-		  <!-- <div class="modal-footer">
+            <!-- <div class="modal-footer">
 		    <!- -<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
 		    <button type="submit" class="btn btn-success" onclick="$('#modalChackDelete').modal('hide');">Delete</button>
 		  </div> -->
-		</form>
-	      </div>
-	    </div>
-	  </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>
