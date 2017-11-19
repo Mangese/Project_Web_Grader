@@ -101,9 +101,9 @@
                     });
                   }
                   function ResultModalHeader(x, y, z) {
-                    alert(x);
-                    alert(y);
-                    alert(z);
+                    // alert(x);
+                    // alert(y);
+                    // alert(z);
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
@@ -878,7 +878,7 @@
 
           <!-- Modal0 -->
           <div class="modal fade" id="modalSourceFileSend" role="dialog">
-            <div class="modal-dialog modal-md">
+            <div class="modal-dialog modal-lg">
 
               <!-- Modal content-->
               <div class="modal-content">
@@ -893,10 +893,13 @@
                         <th style="width:35%">
                           File name
                         </th>
-                        <th style="width:35%">
+                        <th style="width:18%">
+                          Submit date
+                        </th>
+                        <th style="width:18%">
                           Submit time
                         </th>
-                        <th style="width:30%">
+                        <th style="width:29%">
                           Status
                         </th>
                       </tr>
