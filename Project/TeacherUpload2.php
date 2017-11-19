@@ -112,7 +112,7 @@
                         $('#tb3LastSendFile').append(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "fillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
+                    xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
                     xmlhttp.send();
                   }
 
