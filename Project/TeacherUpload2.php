@@ -86,7 +86,7 @@
 	    function DMYpicker(x) {
                     //alert(x);
                     $('#' + x).datetimepicker({
-                      format: 'DD/MM/YYYY'
+                      format: 'YYYY-MM-DD'
                     });
                   }
 //                   $(function () {
