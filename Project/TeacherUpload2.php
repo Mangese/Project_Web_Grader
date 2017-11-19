@@ -133,7 +133,7 @@
                       if (this.readyState == 4 && this.status == 200) {
                       }
                     }
-                    xmlhttp.open("POST", "DeleteHw.php?pid="+y, true);
+                    xmlhttp.open("POST", "DeleteHw.php?hid="+y, true);
                     xmlhttp.send();
 		   fillTableHw();   
 	    	  }
