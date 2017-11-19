@@ -72,7 +72,7 @@ if($conn != FALSE)
 mysql_query("use grader;");
 $PW = $_POST["inputPassword3"];
 $UN = $_POST["inputEmail3"];
-$result = mysql_query("select count(*) as status,USER_TYPE as utp,u_id as uid from user where Username = '$UN' and password = md5('$PW');");
+$result = mysql_query("select count(*) as status,USER_TYPE as utp,firstname as firstname,lastname as lastname,u_id as uid from user where Username = '$UN' and password = md5('$PW');");
 //$row = mysql_fetch_assoc($result);
 if(mysql_num_rows($result)==1)
 {
@@ -81,6 +81,8 @@ if(mysql_num_rows($result)==1)
 		if($row['status']==1)
 		{
 			$_SESSION["user"] = $UN;
+			$_SESSION["firstname"] = $row['firstname'];
+			$_SESSION["lastname"] = $row['lastname'];
 			$_SESSION["utype"] = $row['utp'];
 			$_SESSION["uid"] = $row['uid'];
 			if(strcmp($row['utp'],"T"))
