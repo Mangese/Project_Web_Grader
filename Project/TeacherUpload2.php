@@ -807,7 +807,7 @@
                   <input type = "hidden" id = "sumplob"/>
                   <script>
                     // var numOfProb = $("#sumplob").val();
-                    var numOfProb = 3
+                    var numOfProb = 5
                     for (var i = 1; i <= numOfProb; i++)
                       document.write('<th style="min-width:30px">ex ' + i + '</th>')
                   </script>
