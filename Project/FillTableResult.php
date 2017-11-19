@@ -47,27 +47,27 @@
       echo "</tr>";
     }
 
-    while($row = mysql_fetch_assoc($result3)){
-      $HID = $row['hid'];
-      echo "<tr style='width:100%'>";
-        echo "<td style='width:100px'>";
-        echo "</td>";
-        echo "<td style='width:250px'>";
-          echo "<B>Conclusion</B>";
-        echo "</td>";
+    // while($row = mysql_fetch_assoc($result3)){
+    //   $HID = $row['hid'];
+    //   echo "<tr style='width:100%'>";
+    //     echo "<td style='width:100px'>";
+    //     echo "</td>";
+    //     echo "<td style='width:250px'>";
+    //       echo "<B>Conclusion</B>";
+    //     echo "</td>";
             
-      $result4 = mysql_query("select count(*) as sumbyproblem from submit where status = "P" and h_id = '$HID';"); 
-      while($row = mysql_fetch_assoc($result4)){
-        $sumByPloblem = $row['sumbyproblem'];
-        echo "<td style='min-width:30px'>";
-          echo "$sumByPloblem";
-        echo "</td>";
-      }
-        echo "<td style='width:100px'>";
+    //   $result4 = mysql_query("select count(*) as sumbyproblem from submit where status = "P" and h_id = '$HID';"); 
+    //   while($row = mysql_fetch_assoc($result4)){
+    //     $sumByPloblem = $row['sumbyproblem'];
+    //     echo "<td style='min-width:30px'>";
+    //       echo "$sumByPloblem";
+    //     echo "</td>";
+    //   }
+    //     echo "<td style='width:100px'>";
       
-        echo "</td>";
-      echo "</tr>";
-    }
+    //     echo "</td>";
+    //   echo "</tr>";
+    // }
 
   }
 ?>
