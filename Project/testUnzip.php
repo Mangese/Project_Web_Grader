@@ -1,16 +1,22 @@
 <?php
   $baseTarget = "Problem/";
-  $FileName = "EGCO1111201711192IN.zip";
-  $UnzipTarget = "UnzipInputField/";
+  $FileName = "EGCO1111201711192"."IN.zip";
+  $FileName = "EGCO1111201711192"."OUT.zip";
+  $UnzipTargetIn = "UnzipInputField/";
+  $UnzipTargetOut = "UnzipOutputField/";
   $rm = "*";
-  exec("rm $baseTarget$UnzipTarget$rm");
-  exec("unzip $baseTarget$FileName -d $baseTarget$UnzipTarget");
+  exec("rm $baseTarget$UnzipTargetIn$rm");
+  exec("rm $baseTarget$UnzipTargetOut$rm");
+  exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
+  exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
   $count = 1;
-  $countName = $count.".in";
-  while(file_exists("$baseTarget$UnzipTarget$countName"))
+  $countNameIn = $count.".in";
+  $countNameOut = $count.".out";
+  while((file_exists("$baseTarget$UnzipTarget$countNameIn")&&(file_exists("$baseTarget$UnzipTarget$countNameOut"))))
   {
-  echo $countName." ";  
+  echo $countNameIn." ".$countNameOut." ";  
   $count = $count+1;
-  $countName = $count.".in";
+  $countNameIn = $count.".in";
+  $countNameOut = $count.".out";
   }
 ?>
