@@ -100,10 +100,11 @@
         	      format: 'HH:mm'
                     });
                   }
-	          function ResultModalHeader(x,y)
+	          function ResultModalHeader(x,y,z)
 	    {
 		    alert(x);
 		    alert(y);
+		    alert(z);
 	    }
                   function fillDropDownSection() {
                     var xmlhttp = new XMLHttpRequest();
