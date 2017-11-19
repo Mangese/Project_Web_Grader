@@ -9,7 +9,7 @@
   while(file_exists("$baseTarget$UnzipTarget$countName"))
   {
   $countName = $count.".in";
-  echo $countName;  
+  echo $countName." ";  
   $count = $count+1;
   }
 ?>
