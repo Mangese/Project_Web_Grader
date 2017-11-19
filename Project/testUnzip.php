@@ -1,7 +1,7 @@
 <?php
   $baseTarget = "Problem/";
-  $FileName = "EGCO1111201711192"."IN.zip";
-  $FileName = "EGCO1111201711192"."OUT.zip";
+  $FileNameIn = "EGCO1111201711192"."IN.zip";
+  $FileNameOut = "EGCO1111201711192"."OUT.zip";
   $UnzipTargetIn = "UnzipInputField/";
   $UnzipTargetOut = "UnzipOutputField/";
   $rm = "*";
