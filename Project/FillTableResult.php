@@ -10,7 +10,8 @@
 
     $sumPb = mysql_query("select count(*) as sumPloblem from homework where s_id = '$SID';");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
-
+    $result3 = mysql_query("select h_id as hid from homework where s_id = '$SID' order by h_id");
+    
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
     }
@@ -42,6 +43,28 @@
         echo "<td style='width:100px; text-align:center;'>";
           $passPerSum = $sumPass.'/'.$sumPlob;
           echo "$passPerSum";
+        echo "</td>";
+      echo "</tr>";
+    }
+
+    while($row = mysql_fetch_assoc($result3)){
+      $HID = $row['hid'];
+      echo "<tr style='width:100%'>";
+        echo "<td style='width:100px'>";
+        echo "</td>";
+        echo "<td style='width:250px'>";
+          echo "<B>Conclusion</B>";
+        echo "</td>";
+            
+      $result4 = mysql_query("select count(*) as sumbyproblem from submit where status = "P" and h_id = '$HID';"); 
+      while($row = mysql_fetch_assoc($result4)){
+        $sumByPloblem = $row['sumbyproblem'];
+        echo "<th style='min-width:30px'>";
+          echo "$sumByPloblem";
+        echo "</th>";
+      }
+        echo "<td style='width:100px'>";
+      
         echo "</td>";
       echo "</tr>";
     }
