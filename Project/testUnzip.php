@@ -16,7 +16,7 @@
   {
   echo $countNameIn." ".$countNameOut." ";  
   exec("cat $baseTarget$UnzipTargetOut$countNameOut",$out,$re);
-  echo $out;
+  print_r($out);
   $count = $count+1;
   $countNameIn = $count.".in";
   $countNameOut = $count.".out";
