@@ -151,7 +151,15 @@
 				num = i+1;
 				dateName = "datetimepicker"+num.toString()+"Name";
 				timeName = "timepicker"+num.toString()+"Name";
-      		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
+				str = $("#selSectionHw").val();
+				var xmlhttp = new XMLHttpRequest();
+				    xmlhttp.onreadystatechange = function () {
+				      if (this.readyState == 4 && this.status == 200) {
+					eval(this.responseText);
+				      }
+				    }
+				    xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" +  str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value, true);
+				    xmlhttp.send();
     		  	}
   		  	});
 			}
