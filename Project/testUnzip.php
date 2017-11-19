@@ -15,8 +15,7 @@
   while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$baseTarget$UnzipTargetOut$countNameOut"))))
   {
   echo $countNameIn." ".$countNameOut." ";  
-  exec("cat $baseTarget$UnzipTargetOut$countNameOut",$out,$re);
-  print_r($out);
+    //function in here
   $count = $count+1;
   $countNameIn = $count.".in";
   $countNameOut = $count.".out";
