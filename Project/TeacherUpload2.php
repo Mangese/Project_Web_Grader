@@ -902,7 +902,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <!-- <tr>
                         <td style="width:35%">
                           exFilePass
                         </td>
@@ -910,7 +910,7 @@
                           timesend
                         </td>
                         <td style="width:30%">
-                          <!--                           <input type="checkbox" name="" value=""><br> -->
+                                                     <input type="checkbox" name="" value=""><br> 
                           Correct
                         </td>
                       </tr>
@@ -922,19 +922,19 @@
                           timesend
                         </td>
                         <td style="width:30%">
-                          <!--                           <input type="checkbox" name="" value=""><br> -->
+                                                     <input type="checkbox" name="" value=""><br> 
                           Fail
                         </td>
-                      </tr>
+                      </tr> -->
                     </tbody>
                   </table>
 
 
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                   <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
-                  <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> -->
-                </div>
+                  <!- - <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> - ->
+                </div> -->
               </div>
             </div>
           </div>
