@@ -33,10 +33,11 @@
           echo "<td style='min-width:30px'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
-              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
+//               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' data-toggle='modal' data-target='#myModal0'></i>";
             }
             else {
-              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C'></i>";
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' data-toggle='modal' data-target='#myModal0'></i>";
             }
           echo "</td>";
         }
