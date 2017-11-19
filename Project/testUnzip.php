@@ -6,7 +6,7 @@
   exec("rm $baseTarget$UnzipTarget$rm");
   exec("unzip $baseTarget$FileName -d $baseTarget$UnzipTarget");
   $count = 1;
-  $countName = count.".in";
+  $countName = $count.".in";
   echo $countName;  
   while(file_exists("$countName"))
   {
