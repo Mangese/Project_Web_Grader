@@ -1027,7 +1027,7 @@
                   </td>
                 </tr> -->
               </tbody>
-              <tfoot>
+              <!-- <tfoot>
                 <tr>
                   <td style="width:100px">
 
@@ -1045,7 +1045,7 @@
 
                   </td>
                 </tr>
-              </tfoot>
+              </tfoot> -->
             </table>
           </div>
           <!--End Table part-->

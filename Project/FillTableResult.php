@@ -59,9 +59,9 @@
       $result4 = mysql_query("select count(*) as sumbyproblem from submit where status = "P" and h_id = '$HID';"); 
       while($row = mysql_fetch_assoc($result4)){
         $sumByPloblem = $row['sumbyproblem'];
-        echo "<th style='min-width:30px'>";
+        echo "<td style='min-width:30px'>";
           echo "$sumByPloblem";
-        echo "</th>";
+        echo "</td>";
       }
         echo "<td style='width:100px'>";
       
