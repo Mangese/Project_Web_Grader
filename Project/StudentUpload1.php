@@ -47,7 +47,7 @@
   }
   else
   {
-  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["user"]."'; </script>";
+  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
 	  $UT = $_SESSION["utype"];
   if(strcmp($UT,"S"))
   {
