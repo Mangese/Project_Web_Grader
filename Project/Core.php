@@ -16,7 +16,6 @@
 		$PN = $_POST["ProblemName"];
 		$SC = $_POST["SectionValue"];
 		//echo "<script> alert('$SC'); </script>";
-		echo "<script> alert('$PN'); </script>";
 		$tempName = $GenFilename;
 		if(!move_uploaded_file($_FILES['Uploaded_file']['tmp_name'],$target.$tempName))
 		{
@@ -28,36 +27,52 @@
 		exec("gcc $target$temp.c -o $target$temp.exe",$out1,$re1);
 		if(!$re1)
 		{
-			$status = "W";
-			exec("timeout 1 ./$target$temp.exe <input.txt > $target$temp.txt",$out,$re);
-			if($re != 124)
+			$baseTarget = "Problem/";
+			$FileNameIn = "EGCO1111201711192"."IN.zip";
+			$FileNameOut = "EGCO1111201711192"."OUT.zip";
+			$UnzipTargetIn = "UnzipInputField/";
+			$UnzipTargetOut = "UnzipOutputField/";
+			$rm = "*";
+			exec("rm $baseTarget$UnzipTargetIn$rm");
+			exec("rm $baseTarget$UnzipTargetOut$rm");
+			exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
+			exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
+			$count = 1;
+			$countNameIn = $count.".in";
+			$countNameOut = $count.".out";
+			$page = 1;
+			$status = "P";
+			while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$baseTarget$UnzipTargetOut$countNameOut"))))
 			{
-				$array_out = file('output.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
-				$array_in = file($target.$temp.'.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
-				$trimmed1 = array_map(function($item)
+				echo $countNameIn." ".$countNameOut." ";  
+				exec("timeout 1 ./$target$temp.exe < $baseTarget$UnzipTargetIn$countNameIn > $baseTarget$UnzipTargetOut$countNameOut",$out,$re);
+				if($re != 124)
 				{
-					return preg_replace('/\s+/','',$item);
-				},$array_in);
-				$trimmed2 = array_map(function($item)
-				{
-					return preg_replace('/\s+/','',$item);
-				},$array_out);
-				$result = ($trimmed1 === $trimmed2);
-				if($result)
-				{
-					$status = "P";
-					$page = 1;
+					$array_out = file('output.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
+					$array_in = file($target.$temp.'.txt',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
+					$trimmed1 = array_map(function($item)
+					{
+						return preg_replace('/\s+/','',$item);
+					},$array_in);
+					$trimmed2 = array_map(function($item)
+					{
+						return preg_replace('/\s+/','',$item);
+					},$array_out);
+					$result = ($trimmed1 === $trimmed2);
+					if(!$result)
+					{
+						$status = "F";
+						$page = 2;
+					}
 				}
 				else
 				{
-					$status = "F";
-					$page = 2;
+				$status = "T";
+				$page = 3;
 				}
-			}
-			else
-			{
-			$status = "T";
-			$page = 3;
+				$count = $count+1;
+				$countNameIn = $count.".in";
+				$countNameOut = $count.".out";
 			}
 			mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName');");
 			exec("rm $target$temp.txt");
