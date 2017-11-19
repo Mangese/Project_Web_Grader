@@ -326,6 +326,7 @@
         xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
         xmlhttp.send();
         fillDropResult();
+	fillDropDownSection();
       }
     </script>
     <!--End script-->
