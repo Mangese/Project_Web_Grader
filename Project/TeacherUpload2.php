@@ -891,7 +891,7 @@
                     <thead class="thead">
                       <tr>
                         <th style="width:35%">
-                          File name
+                          Number of submit
                         </th>
                         <th style="width:18%">
                           Submit date
