@@ -908,10 +908,11 @@
                           exFilePass
                         </td>
                         <td style="width:30%">
-                          Correct
+                          timesend
                         </td>
                         <td style="width:10%">
-                          <input type="checkbox" name="" value=""><br>
+<!--                           <input type="checkbox" name="" value=""><br> -->
+				Correct
                         </td>
                       </tr>
                       <tr>
@@ -919,10 +920,11 @@
                           exFileFail
                         </td>
                         <td style="width:30%">
-                          Fail
+                          timesend
                         </td>
                         <td style="width:10%">
-                          <input type="checkbox" name="" value=""><br>
+<!--                           <input type="checkbox" name="" value=""><br> -->
+				Fail
                         </td>
                       </tr>
                     </tbody>
