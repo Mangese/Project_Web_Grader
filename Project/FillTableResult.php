@@ -10,7 +10,7 @@
 
     $sumPb = mysql_query("select count(*) as sumPloblem from homework where s_id = '$SID';");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
-    $result3 = mysql_query("select h_id as hid from homework where s_id = '$SID' order by h_id;");
+    $result3 = mysql_query("select h_id as hid from homework where s_id = '$SID' and deleteflag is null order by h_id;");
     
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
