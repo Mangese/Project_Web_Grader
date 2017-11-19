@@ -154,7 +154,6 @@
       		  		console.log(document.getElementById(dateName).value,document.getElementById(timeName).value,chk.value);
     		  	}
   		  	});
-			location.reload();
 			}
   		  }
                   function fillTable() {
