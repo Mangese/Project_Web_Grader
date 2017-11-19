@@ -891,38 +891,38 @@
                   <table class="table table-striped table-hover main">
                     <thead class="thead">
                       <tr>
-                        <th style="width:60%">
+                        <th style="width:35%">
                           File name
                         </th>
-                        <th style="width:30%">
+                        <th style="width:35%">
                           Submit time
                         </th>
-                        <th style="width:10%">
+                        <th style="width:30%">
                           Status
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td style="width:60%">
+                        <td style="width:35%">
                           exFilePass
                         </td>
-                        <td style="width:30%">
+                        <td style="width:35%">
                           timesend
                         </td>
-                        <td style="width:10%">
+                        <td style="width:30%">
 <!--                           <input type="checkbox" name="" value=""><br> -->
 				Correct
                         </td>
                       </tr>
                       <tr>
-                        <td style="width:60%">
+                        <td style="width:35%">
                           exFileFail
                         </td>
-                        <td style="width:30%">
+                        <td style="width:35%">
                           timesend
                         </td>
-                        <td style="width:10%">
+                        <td style="width:30%">
 <!--                           <input type="checkbox" name="" value=""><br> -->
 				Fail
                         </td>
