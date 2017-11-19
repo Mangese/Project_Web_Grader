@@ -145,7 +145,6 @@
 			}
 			else
 			{
-			alert("Success");
 				$('table [type="checkbox"]').each(function(i, chk) {
     		  	if (chk.checked) {
 				num = i+1;
