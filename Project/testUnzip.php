@@ -12,7 +12,7 @@
   $count = 1;
   $countNameIn = $count.".in";
   $countNameOut = $count.".out";
-  while((file_exists("$baseTarget$UnzipTarget$countNameIn")&&(file_exists("$baseTarget$UnzipTarget$countNameOut"))))
+  while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$baseTarget$UnzipTargetOut$countNameOut"))))
   {
   echo $countNameIn." ".$countNameOut." ";  
   $count = $count+1;
