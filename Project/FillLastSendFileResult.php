@@ -5,7 +5,6 @@ if($conn != FALSE)
   session_start();
   mysql_query("use grader;");
   mysql_query("set NAMES UTF8;");
-//   $CID = $_REQUEST["sectionreq"];
   $UID = $_REQUEST["uidreq"];
   $HID = $_REQUEST["hidreq"];
   // $UID = $_SESSION["uid"];
@@ -16,10 +15,10 @@ if($conn != FALSE)
     $FN = $row['source_file'];
     $STA = $row['status'];
     $ST = $row['submit'];
+    $RowNum =  $RowNum + 1 ;
     echo "<tr>";
-    
     echo "<td style='width:35%'>";
-    echo "$FN";
+    echo "$RowNum";
     echo "</td>";
     echo "<td style='width:35%'>";
     echo "$ST";
