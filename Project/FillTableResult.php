@@ -37,10 +37,11 @@
         echo "</tr>";
       echo "</thead>";
     }
-
+    $CountRowForModal = 0;
     while($row = mysql_fetch_assoc($result1)){
       $ID = $row['stdId'];
       $NAME = $row['name'];
+      $CountRowForModal = $CountRowForModal + 1 ;
       $sumPass = 0;
       echo "<tr style='width:100%'>";
         echo "<td style='width:100px'>";
@@ -57,10 +58,10 @@
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
             else {
-              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
           echo "</td>";
         }
