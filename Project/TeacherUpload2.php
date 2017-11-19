@@ -878,7 +878,7 @@
           <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->
 
           <!-- Modal0 -->
-          <div class="modal fade" id="myModal0" role="dialog">
+          <div class="modal fade" id="modalSourceFileSend" role="dialog">
             <div class="modal-dialog modal-md">
 
               <!-- Modal content-->
@@ -895,10 +895,10 @@
                           File name
                         </th>
                         <th style="width:30%">
-                          Status
+                          Submit time
                         </th>
                         <th style="width:10%">
-                          Select
+                          Status
                         </th>
                       </tr>
                     </thead>
