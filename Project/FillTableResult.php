@@ -49,17 +49,18 @@
         echo "<td style='width:250px'>";
           echo "$NAME";
         echo "</td>";
-        $result2 = mysql_query("select (case when status is null then 'N' when (select status from submit where su.H_ID = H_id and u_id = su.u_id and status = 'P' limit 1) is null then 'F' else 'P' end) as status from homework h left join submit su on su.h_id = h.h_id where su.u_id = '$ID' or su.u_id is null and h.s_id = '$SID' and h.deleteflag is null group by su.u_id,su.h_id order by h.h_id;");        
+        $result2 = mysql_query("select (case when status is null then 'N' when (select status from submit where su.H_ID = H_id and u_id = su.u_id and status = 'P' limit 1) is null then 'F' else 'P' end) as status,h.h_id as hid from homework h left join submit su on su.h_id = h.h_id where su.u_id = '$ID' or su.u_id is null and h.s_id = '$SID' and h.deleteflag is null group by su.u_id,su.h_id order by h.h_id;");        
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
+          $HidModal = $row['hid'];
           echo "<td style='min-width:30px'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = "ResultModalHeader($ID,$HidModal);" data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
             else {
-              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = "ResultModalHeader($ID,$HidModal);" data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
           echo "</td>";
         }
