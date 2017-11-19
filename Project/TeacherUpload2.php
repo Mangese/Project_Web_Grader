@@ -272,7 +272,7 @@
                   function fillTableResult() {
                     x = document.getElementById("selSectionRs").value;
                    // $('#Result tbody tr').remove();
-		    $('#Result tbody tr').remove();
+		    $('#Result thead tbody tr').remove();
                     str = $("#selSectionRs").val();
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
