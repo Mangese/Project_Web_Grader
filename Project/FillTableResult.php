@@ -14,6 +14,28 @@
     
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
+      echo "<thead class='thead'>";
+        echo "<tr style='width:100%'>";
+          echo "<th style='width:100px' onclick='sortTable(0)'>";
+            echo "ID";
+            echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
+          echo "</th>";
+          echo "<th style='width:250px' onclick='sortTable(1)'>";
+            echo "Name";
+            echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
+          echo "</th>";
+          for ($i = 1; $i <= $sumPlob; $i++){
+            echo "<th style='min-width:30px'>";
+              echo "Ex$i";
+            echo "</th>";
+          }
+          $sortLastCol = $sumPlob+2
+          echo "<th style='width:250px' onclick='sortTable($sortLastCol)'>";
+            echo "Pass";
+            echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
+          echo "</th>";
+        echo "</tr>";
+      echo "</thead>";
     }
 
     while($row = mysql_fetch_assoc($result1)){
@@ -50,7 +72,7 @@
 
     while($row = mysql_fetch_assoc($result3)){
       $HID = $row['hid'];
-      echo "<tr style='width:100% background-color:#70C1B3'>";
+      echo "<tr style='width:100%; background-color:#70C1B3;'>";
         echo "<td style='width:100px'>";
         echo "</td>";
         echo "<td style='width:250px'>";
