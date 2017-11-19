@@ -72,7 +72,7 @@
 
     while($row = mysql_fetch_assoc($result3)){
       $HID = $row['hid'];
-      echo "<tr style='width:100%; background-color:#B2DBBF; color:#ffffff;'>";
+      echo "<tr style='width:100%; background-color:#B2DBBF;'>";
         echo "<td style='width:100px'>";
         echo "</td>";
         echo "<td style='width:250px'>";
