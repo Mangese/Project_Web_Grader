@@ -6,10 +6,10 @@
   exec("rm $baseTarget$UnzipTarget$rm");
   exec("unzip $baseTarget$FileName -d $baseTarget$UnzipTarget");
   $count = 1;
+  while(file_exists("$baseTarget$UnzipTarget$countName"))
+  {
   $countName = $count.".in";
   echo $countName;  
-  while(file_exists("$countName"))
-  {
-  echo $countName;  
+  $count = $count+1;
   }
 ?>
