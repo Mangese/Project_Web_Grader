@@ -38,7 +38,7 @@
   </nav>
 
 </head>
-<!-- <?php
+<?php
   session_start();
   
   if(!isset($_SESSION["user"]))
@@ -54,7 +54,7 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUpload2.php'; </script>";
   }
   }
-?> -->
+?>
 
 <body>
   <input type="hidden" id="TableUploadHeader" />
