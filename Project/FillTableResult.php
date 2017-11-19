@@ -30,7 +30,7 @@
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
           echo "<td style='min-width:30px'>";
-            if (strcmp($STATUS,"P")){
+            if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
             }
