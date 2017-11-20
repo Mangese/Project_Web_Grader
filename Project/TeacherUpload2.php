@@ -105,7 +105,7 @@
                     // alert(y);
                     alert(stuid);
 			  alert(qq);
-			  document.getElementById('modalValueResult').innerHTML = "StudentID. " stuid+ " Problem "+ qq;
+			  document.getElementById('modalValueResult').innerHTML = "StudentID. "+ stuid+ " Problem "+ qq;
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
