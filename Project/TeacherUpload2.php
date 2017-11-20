@@ -105,7 +105,7 @@
                     // alert(y);
                     // alert(z);
 			  alert(qq);
-			  document.getElementById('modalValue').innerHTML = qq.val();
+			  document.getElementById('modalValueResult').innerHTML = qq.val();
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
