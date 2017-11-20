@@ -9,7 +9,7 @@
     $UID = $_SESSION["uid"];
 
     $sumPb = mysql_query("select count(*) as sumPloblem from homework where s_id = '$SID' and deleteflag is null;");
-    $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
+    $result1 = mysql_query("select firstname,concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework where s_id = '$SID' and deleteflag is null order by h_id;");
     
     while($row = mysql_fetch_assoc($sumPb)){
@@ -42,7 +42,7 @@
       $ID = $row['stdId'];
       $NAME = $row['name'];
       $FN = $row['firstname'];
-      $LN = $row['lastname'];
+      //$LN = $row['lastname'];
       $CountRowForModal = $CountRowForModal + 1 ;
       $sumPass = 0;
       echo "<tr style='width:100%'>";
@@ -65,10 +65,10 @@
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$modalResultHeader,$NAME);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$modalResultHeader,$FN);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
             else {
-              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$modalResultHeader,$NAME);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$modalResultHeader,$FN);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
           echo "</td>";
         }
