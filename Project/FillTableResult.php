@@ -57,6 +57,10 @@
           $STATUS = $row['status'];
           $HidModal = $row['hid'];
           $numprob = $numprob + 1;
+          $submitCountResult = mysql_query(" select count(*) as num from submit where u_id = '$ID' and h_id = '$HidModal';");
+          while($row = mysql_fetch_assoc($submitCountResult)){
+            $submitCount = $row['num'];
+          }
           echo "<td style='min-width:30px'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
