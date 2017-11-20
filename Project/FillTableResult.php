@@ -57,7 +57,7 @@
           $STATUS = $row['status'];
           $HidModal = $row['hid'];
           $numprob = $numprob + 1;
-          $modalResultHeader = 'ex'.$numprob;
+          $modalResultHeader = $numprob;
           echo "<td style='min-width:30px'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
