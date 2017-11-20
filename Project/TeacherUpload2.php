@@ -100,12 +100,12 @@
                       format: 'HH:mm'
                     });
                   }
-                  function ResultModalHeader(x, y, z, qq) {
+                  function ResultModalHeader(x, y, z, qq,stuid) {
                     // alert(x);
                     // alert(y);
-//                     alert(name);
+                    alert(stuid);
 			  alert(qq);
-			  document.getElementById('modalValueResult').innerHTML = z+ " ex "+ qq;
+			  document.getElementById('modalValueResult').innerHTML = "StudentID. " stuid+ " Problem "+ qq;
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
