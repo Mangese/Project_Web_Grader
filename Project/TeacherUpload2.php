@@ -106,6 +106,8 @@
                     alert(submitcount);
 			  alert(qq);
 			  document.getElementById('modalValueResult').innerHTML = "StudentID. "+ stuid+ " Homework "+ qq;
+			  document.getElementById('submitCount').innerHTML = "Total submission : "+ submitcount;
+			  submitCount
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
@@ -931,6 +933,7 @@
                           Fail
                         </td>
                       </tr> -->
+			     <h3 id='submitCount'></h3>
                     </tbody>
                   </table>
 
