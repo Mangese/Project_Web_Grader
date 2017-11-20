@@ -103,8 +103,8 @@
                   function ResultModalHeader(x, y, z, qq,stuid,submitcount) {
                     // alert(x);
                     // alert(y);
-                    alert(submitcount);
-			  alert(qq);
+//                     alert(submitcount);
+// 			  alert(qq);
 			  document.getElementById('modalValueResult').innerHTML = "StudentID. "+ stuid+ " Homework "+ qq;
 			  document.getElementById('submitCount').innerHTML = "Total submission : "+ submitcount;
 			  submitCount
