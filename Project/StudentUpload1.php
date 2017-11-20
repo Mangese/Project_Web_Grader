@@ -125,7 +125,7 @@
       document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
       $("#ProblemName").val(y);
       $("#SectionValue").val($("#selectClass").val());
-	    alert($("#modalValue").val());
+	    alert($("#TableUploadHeader").val());
 //       alert($("#ProblemName").val());
 //       alert($("#SectionValue").val());
     }
