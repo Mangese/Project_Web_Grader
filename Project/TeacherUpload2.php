@@ -103,7 +103,7 @@
                   function ResultModalHeader(x, y, z, qq) {
                     // alert(x);
                     // alert(y);
-                     alert(name);
+                    // alert(name);
 			  alert(qq);
 			  document.getElementById('modalValueResult').innerHTML = name+ " ex "+ qq;
                     $('#tb3LastSendFile tbody tr').remove();
