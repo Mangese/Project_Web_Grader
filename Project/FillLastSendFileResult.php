@@ -13,6 +13,7 @@ if($conn != FALSE)
   $RowNum = 0;
   while($row = mysql_fetch_assoc($result))
   {
+    $Target = "File/";
     $FN = $row['source_file'];
     $STA = $row['status'];
     $SD = $row['submit_date'];
@@ -32,7 +33,7 @@ if($conn != FALSE)
     echo "$STA";
     echo "</td>";
     echo "<td style='width:20%'>";
-    echo "<a href='$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
+    echo "<a href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
     echo "</td>";
    
     echo "</tr>";
