@@ -100,10 +100,11 @@
                       format: 'HH:mm'
                     });
                   }
-                  function ResultModalHeader(x, y, z) {
+                  function ResultModalHeader(x, y, z, qq) {
                     // alert(x);
                     // alert(y);
                     // alert(z);
+			  alert(qq);
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
