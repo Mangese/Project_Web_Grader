@@ -100,7 +100,7 @@
                       format: 'HH:mm'
                     });
                   }
-                  function ResultModalHeader(x, y, z, qq, name) {
+                  function ResultModalHeader(x, y, z, qq) {
                     // alert(x);
                     // alert(y);
                      alert(name);
