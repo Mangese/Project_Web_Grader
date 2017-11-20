@@ -104,8 +104,8 @@
                     // alert(x);
                     // alert(y);
                     // alert(z);
-			  alert(qq);
-			  document.getElementById('modalValueResult').innerHTML = name+ "ex "+ qq;
+			  alert(name);
+			  document.getElementById('modalValueResult').innerHTML = "ex "+ qq;
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
