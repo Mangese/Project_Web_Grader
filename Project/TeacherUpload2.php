@@ -100,12 +100,12 @@
                       format: 'HH:mm'
                     });
                   }
-                  function ResultModalHeader(x, y, z, qq,name) {
+                  function ResultModalHeader(x, y, z, qq) {
                     // alert(x);
                     // alert(y);
-                    alert(name);
+//                     alert(name);
 			  alert(qq);
-			  document.getElementById('modalValueResult').innerHTML = name+ " ex "+ qq;
+			  document.getElementById('modalValueResult').innerHTML = z+ " ex "+ qq;
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
