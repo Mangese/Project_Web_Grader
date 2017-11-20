@@ -907,7 +907,7 @@
                           Status
                         </th>
 			      <th style="width:20%">
-                          Status
+                          Download
                         </th>
                       </tr>
                     </thead>
