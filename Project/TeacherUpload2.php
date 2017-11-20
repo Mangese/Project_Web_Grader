@@ -894,16 +894,19 @@
                   <table class="table table-striped table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
-                        <th style="width:35%">
-                          Number of submit
+                        <th style="width:15%">
+                          No.
                         </th>
-                        <th style="width:18%">
+                        <th style="width:25%">
                           Submit date
                         </th>
-                        <th style="width:18%">
+                        <th style="width:25%">
                           Submit time
                         </th>
-                        <th style="width:29%">
+                        <th style="width:15%">
+                          Status
+                        </th>
+			      <th style="width:20%">
                           Status
                         </th>
                       </tr>
