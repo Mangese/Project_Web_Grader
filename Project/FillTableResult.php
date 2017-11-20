@@ -64,10 +64,10 @@
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo '<i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" onclick = "ResultModalHeader($ID,$HidModal,$CountRowForModal,$modalResultHeader,"'.$NAME.'"); data-toggle="modal" data-target="#modalSourceFileSend"></i>';
+              echo 'alert("test");';
             }
             else {
-              echo '<i class="fa fa-check" aria-hidden="true" style="color:#2ECC71" onclick = "ResultModalHeader($ID,$HidModal,$CountRowForModal,$modalResultHeader,"'.$NAME.'"); data-toggle="modal" data-target="#modalSourceFileSend"></i>';
+              echo 'alert("test");';
             }
           echo "</td>";
         }
