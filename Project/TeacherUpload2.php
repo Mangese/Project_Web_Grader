@@ -100,10 +100,10 @@
                       format: 'HH:mm'
                     });
                   }
-                  function ResultModalHeader(x, y, z, qq,stuid) {
+                  function ResultModalHeader(x, y, z, qq,stuid,submitcount) {
                     // alert(x);
                     // alert(y);
-                    alert(stuid);
+                    alert(submitcount);
 			  alert(qq);
 			  document.getElementById('modalValueResult').innerHTML = "StudentID. "+ stuid+ " Homework "+ qq;
                     $('#tb3LastSendFile tbody tr').remove();
