@@ -36,6 +36,5 @@ if($conn != FALSE)
    
     echo "</tr>";
   }
-  echo "<i class='fa fa-download' aria-hidden='true'></i>";
 }
 ?>
