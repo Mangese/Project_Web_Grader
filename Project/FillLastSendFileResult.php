@@ -31,7 +31,7 @@ if($conn != FALSE)
     echo "$STA";
     echo "</td>";
     echo "<td style='width:20%'>";
-    echo "<i class='fa fa-download' aria-hidden='true'></i>";
+    echo "<a href='http://www.google.com'><i class='fa fa-download' aria-hidden='true'></i></a>";
     echo "</td>";
    
     echo "</tr>";
