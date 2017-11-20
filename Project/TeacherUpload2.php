@@ -105,6 +105,7 @@
                     // alert(y);
                     // alert(z);
 			  alert(qq);
+			  document.getElementById('modalValue').innerHTML = qq.val();
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
@@ -884,7 +885,7 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">ex x</h4>
+                  <h4 class="modal-title" id='modalValueResult'></h4>
                   <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body left">
