@@ -57,17 +57,14 @@
           $STATUS = $row['status'];
           $HidModal = $row['hid'];
           $numprob = $numprob + 1;
-          $ProblemHeader = $NAME;
-          $modalResultHeader = $numprob;
-//           $modalResultHeader = 'ex '.$numprob;
           echo "<td style='min-width:30px'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo 'alert("test");';
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
             else {
-              echo 'alert("test");';
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
           echo "</td>";
         }
