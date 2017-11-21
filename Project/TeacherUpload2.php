@@ -81,7 +81,7 @@
                     $(this).tab('show')
                   })
                   //                   $(function () {
-                  //                     $('#datetimepicker1').datetimepicker({
+                  //                     $('#datetimepicker1').datepicker({
                   //                       format: 'DD/MM/YYYY'
                   //                     });
                   //                   });
@@ -95,7 +95,7 @@
                     });
                   }
                   //                   $(function () {
-                  //                     $('#datetimepicker3').datetimepicker({
+                  //                     $('#datetimepicker3').datepicker({
                   //                       format: 'LT'
                   //                     });
                   //                   });
