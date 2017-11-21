@@ -577,11 +577,9 @@
                       </div>
                       <div class="modal-body left">
                         <label>Class</label>
-                        <select class="form-control" name="createClass" id="createClass" style="width:80%;" required oninvalid="this.setCustomValidity('Please select some class');"
-                      oninput="setCustomValidity('')">
+                        <select class="form-control" name="createClass" id="createClass" style="width:80%">
                                                 <option>Please Select Classroom</option>
                                             </select>
-
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
                         <label>Section</label>
@@ -590,8 +588,7 @@
                         <label>Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control" name="semester" id="semester" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some semetster');"
-                      oninput="setCustomValidity('')">
+                        <select class="form-control" name="semester" id="semester" style="width: 80%;">
                                                 <option>Semester</option>
                                                 <script>
                                                   for (var j = 1; j < 4; j++) {
@@ -602,8 +599,7 @@
                         <!-- </div> -->
 
                         <label>Year</label>
-                        <select class="form-control" name="year" id="year" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some year');"
-                      oninput="setCustomValidity('')">
+                        <select class="form-control" name="year" id="year" style="width: 80%;">
                                                 <option>Year</option>
                                                     <script>
                                                       var cyear = new Date().getFullYear();
