@@ -352,6 +352,7 @@
         xmlhttp.send();
         fillDropResult();
         fillDropDownSection();
+	changePassword();
       }
     </script>
     <!--End script-->
