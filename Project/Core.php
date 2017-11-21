@@ -1,19 +1,19 @@
 <?php
 	session_start();
 	$UID = $_SESSION['uid'];
+	$PN = $_POST["ProblemName"];
 	$page = 0;
 	$conn = mysql_connect("localhost","mangese","000000");
 	if($conn != FALSE)
 	{
 		mysql_query("use grader;");
-		$QueryName = mysql_query("select concat(u_id,h_id,sub_id,'.c') as name from submit where u_id = '$UID' and h_id = '5';");
+		$QueryName = mysql_query("select concat(u_id,h_id,sub_id,'.c') as name from submit where u_id = '$UID' and h_id = '$PN';");
 		while($row = mysql_fetch_assoc($QueryName))
     	{
     		$GenFilename = $row['name'];
     	}
 		$target = "File/";
 		$temp = $_FILES['Uploaded_file']['name'];
-		$PN = $_POST["ProblemName"];
 		$SC = $_POST["SectionValue"];
 		//echo "<script> alert('$SC'); </script>";
 		$tempName = $GenFilename;
