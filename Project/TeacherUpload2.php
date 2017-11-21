@@ -648,27 +648,27 @@
                     Exam No
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:800px" onclick="sortTable2(0)">
+                  <th style="width:800px" onclick="sortTable2(1)">
                     Exam name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:200px" onclick="sortTable2(1)">
+                  <th style="width:200px" onclick="sortTable2(2)">
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:700px" onclick="SortTable(2,'N')">
+                  <th style="width:700px" onclick="SortTable(3,'N')">
                     Amount student sent
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:700px" onclick="SortTable2(3,'N')">
+                  <th style="width:700px" onclick="SortTable2(4,'N')">
                     Amount student pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:500px" onclick="sortTable2(4)">
+                  <th style="width:500px" onclick="sortTable2(5)">
                     Assign date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:500px" onclick="sortTable2(5)">
+                  <th style="width:500px" onclick="sortTable2(6)">
                     Due date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -990,9 +990,11 @@
           <!--Start Sort Script-->
           <script>
                     function sortTable(col) {
-                      var table, rows, switching, i, x, y, shouldSwitch;
-                      table = document.getElementById("Result");
+                      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                      table = document.getElementById("TableHw");
                       switching = true;
+                      //Set the sorting direction to ascending:
+                      dir = "asc"; 
                       /*Make a loop that will continue until
                       no switching has been done:*/
                       while (switching) {
@@ -1008,11 +1010,20 @@
                           one from current row and one from the next:*/
                           x = rows[i].getElementsByTagName("TD")[col];
                           y = rows[i + 1].getElementsByTagName("TD")[col];
-                          //check if the two rows should switch place:
-                          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                            //if so, mark as a switch and break the loop:
-                            shouldSwitch = true;
-                            break;
+                          /*check if the two rows should switch place,
+                          based on the direction, asc or desc:*/
+                          if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                              //if so, mark as a switch and break the loop:
+                              shouldSwitch= true;
+                              break;
+                            }
+                          } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                              //if so, mark as a switch and break the loop:
+                              shouldSwitch= true;
+                              break;
+                            }
                           }
                         }
                         if (shouldSwitch) {
@@ -1020,11 +1031,120 @@
                           and mark that a switch has been done:*/
                           rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                           switching = true;
+                          //Each time a switch is done, increase this count by 1:
+                          switchcount ++;      
+                        } else {
+                          /*If no switching has been done AND the direction is "asc",
+                          set the direction to "desc" and run the while loop again.*/
+                          if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                          }
                         }
                       }
                     }
           </script>
           <!--End Script-->
+
+          <!-- Sort Number Script -->
+          <script type="text/javascript">
+
+            var TableIDvalue = "Result";
+
+            var TableLastSortedColumn = -2;
+            function SortTable2() {
+            var sortColumn = parseInt(arguments[0]);
+            var type = arguments.length > 1 ? arguments[1] : 'T';
+            var dateformat = arguments.length > 2 ? arguments[2] : '';
+            var table = document.getElementById(TableIDvalue);
+            var tbody = table.getElementsByTagName("tbody")[0];
+            var rows = tbody.getElementsByTagName("tr");
+            var arrayOfRows = new Array();
+            type = type.toUpperCase();
+            dateformat = dateformat.toLowerCase();
+            for(var i=0, len=rows.length; i<len; i++) {
+              arrayOfRows[i] = new Object;
+              arrayOfRows[i].oldIndex = i;
+              var celltext = rows[i].getElementsByTagName("td")[sortColumn].innerHTML.replace(/<[^>]*>/g,"");
+              if( type=='D' ) { arrayOfRows[i].value = GetDateSortingKey(dateformat,celltext); }
+              else {
+                var re = type=="N" ? /[^\.\-\+\d]/g : /[^a-zA-Z0-9]/g;
+                arrayOfRows[i].value = celltext.replace(re,"").substr(0,25).toLowerCase();
+                }
+              }
+            if (sortColumn == TableLastSortedColumn) { arrayOfRows.reverse(); }
+            else {
+              TableLastSortedColumn = sortColumn;
+              switch(type) {
+                case "N" : arrayOfRows.sort(CompareRowOfNumbers); break;
+                case "D" : arrayOfRows.sort(CompareRowOfNumbers); break;
+                default  : arrayOfRows.sort(CompareRowOfText);
+                }
+              }
+            var newTableBody = document.createElement("tbody");
+            for(var i=0, len=arrayOfRows.length; i<len; i++) {
+              newTableBody.appendChild(rows[arrayOfRows[i].oldIndex].cloneNode(true));
+              }
+            table.replaceChild(newTableBody,tbody);
+            } // function SortTable()
+
+            function CompareRowOfText(a,b) {
+            var aval = a.value;
+            var bval = b.value;
+            return( aval == bval ? 0 : (aval > bval ? 1 : -1) );
+            } // function CompareRowOfText()
+
+            function CompareRowOfNumbers(a,b) {
+            var aval = /\d/.test(a.value) ? parseFloat(a.value) : 0;
+            var bval = /\d/.test(b.value) ? parseFloat(b.value) : 0;
+            return( aval == bval ? 0 : (aval > bval ? 1 : -1) );
+            } // function CompareRowOfNumbers()
+
+            function GetDateSortingKey(format,text) {
+            if( format.length < 1 ) { return ""; }
+            format = format.toLowerCase();
+            text = text.toLowerCase();
+            text = text.replace(/^[^a-z0-9]*/,"");
+            text = text.replace(/[^a-z0-9]*$/,"");
+            if( text.length < 1 ) { return ""; }
+            text = text.replace(/[^a-z0-9]+/g,",");
+            var date = text.split(",");
+            if( date.length < 3 ) { return ""; }
+            var d=0, m=0, y=0;
+            for( var i=0; i<3; i++ ) {
+              var ts = format.substr(i,1);
+              if( ts == "d" ) { d = date[i]; }
+              else if( ts == "m" ) { m = date[i]; }
+              else if( ts == "y" ) { y = date[i]; }
+              }
+            d = d.replace(/^0/,"");
+            if( d < 10 ) { d = "0" + d; }
+            if( /[a-z]/.test(m) ) {
+              m = m.substr(0,3);
+              switch(m) {
+                case "jan" : m = String(1); break;
+                case "feb" : m = String(2); break;
+                case "mar" : m = String(3); break;
+                case "apr" : m = String(4); break;
+                case "may" : m = String(5); break;
+                case "jun" : m = String(6); break;
+                case "jul" : m = String(7); break;
+                case "aug" : m = String(8); break;
+                case "sep" : m = String(9); break;
+                case "oct" : m = String(10); break;
+                case "nov" : m = String(11); break;
+                case "dec" : m = String(12); break;
+                default    : m = String(0);
+                }
+              }
+            m = m.replace(/^0/,"");
+            if( m < 10 ) { m = "0" + m; }
+            y = parseInt(y);
+            if( y < 100 ) { y = parseInt(y) + 2000; }
+            return "" + String(y) + "" + String(m) + "" + String(d) + "";
+            } // function GetDateSortingKey()
+          </script>
+          <!-- End Sort Number Script -->
 
           <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->
 
