@@ -104,7 +104,6 @@
                   function Timepicker(y) {
                     //alert(y);
                     $('#' + y).datetimepicker({
-		       minDate:new Date(),
                       format: 'HH:mm'
 			    
                     });
