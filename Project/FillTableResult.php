@@ -50,8 +50,8 @@
         echo "<td style='width:250px'>";
           echo "$NAME";
         echo "</td>";
-        $result2 = mysql_query("select (case when status is null then 'N' when (select status from submit where su.H_ID = H_id and u_id = su.u_id and status = 'P' limit 1) is null then 'F' else 'P' end) as status,h.h_id as hid from homework h left join submit su on su.h_id = h.h_id where su.u_id = '$ID' or su.u_id is null and h.s_id = '$SID' and h.deleteflag is null group by su.u_id,su.h_id order by h.h_id;");
-        
+        $result2 = mysql_query("select h_id,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as test from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
+
         $numprob = 0;
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
