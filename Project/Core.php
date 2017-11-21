@@ -7,7 +7,7 @@
 	if($conn != FALSE)
 	{
 		mysql_query("use grader;");
-		$QueryName = mysql_query("select concat(u_id,h_id,sub_id,'.c') as name from submit where u_id = '$UID' and h_id = '$PN';");
+		$QueryName = mysql_query("select concat($UID,$PN,count(*),'.c') as name from submit where u_id = '$UID' and h_id = '$PN';");
 		while($row = mysql_fetch_assoc($QueryName))
     	{
     		$GenFilename = $row['name'];
@@ -27,9 +27,13 @@
 		exec("gcc $target$temp.c -o $target$temp.exe",$out1,$re1);
 		if(!$re1)
 		{
+			$testCase = mysql_query("select InputFile as input,OutputFile as output from homework h join problem p on p.p_id = h.p_id where h.h_id = '$PN';"); 
 			$baseTarget = "Problem/";
-			$FileNameIn = "EGCO1111201711192"."IN.zip";
-			$FileNameOut = "EGCO1111201711192"."OUT.zip";
+			while($row = mysql_fetch_assoc($testCase))
+    			{
+    				$FileNameIn = $row['input'];
+				$FileNameOut = $row['output'];
+    			}
 			$UnzipTargetIn = "UnzipInputField/";
 			$UnzipTargetOut = "UnzipOutputField/";
 			$rm = "*";
