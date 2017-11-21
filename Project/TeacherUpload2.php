@@ -613,7 +613,7 @@
                       </div>
                       <div class="modal-footer">
                         <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
-                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button>
+                        <button type="submit" class="btn btn-success"  data-target="#myModal3" onclick="createSec();">Create</button>
                       </div>
                     </form>
                   </div>
