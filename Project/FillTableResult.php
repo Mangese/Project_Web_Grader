@@ -79,14 +79,15 @@
         echo "</td>";
       echo "</tr>";
     }
-    while($row = mysql_fetch_assoc($result3)){
-      $HID = $row['hid'];
+    
       echo "<tr style='width:100%; background-color:#B2DBBF;'>";
         echo "<td style='width:100px'>";
         echo "</td>";
         echo "<td style='width:250px'>";
           echo "<B>Conclusion</B>";
         echo "</td>";
+    while($row = mysql_fetch_assoc($result3)){
+      $HID = $row['hid'];
             
       $result4 = mysql_query("select count(*) as sumbyproblem from submit where status = 'P' and h_id = '$HID';"); 
       while($row = mysql_fetch_assoc($result4)){
@@ -95,10 +96,11 @@
           echo "$sumByPloblem";
         echo "</td>";
       }
+    }
+    
         echo "<td style='width:100px'>";
       
         echo "</td>";
       echo "</tr>";
-    }
   }
 ?>
