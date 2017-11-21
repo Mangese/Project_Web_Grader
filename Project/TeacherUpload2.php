@@ -314,6 +314,10 @@
 
                   }
     </script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+
     <input type="hidden" id="DeleteModalCheck" />
     <script>
                   (function ($) {
@@ -353,7 +357,25 @@
 	var classCheck = $('select[name="createClass"] option:selected').val();
 	if(!!x && !!classCheck && !!pSection && !!pSemester && !!pYear)
 	{
-		alert("test");	
+		var option = document.createElement("option");
+        option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
+        x.add(option);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $("#sectionPassword").val(this.responseText);
+          }
+        }
+        xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
+        xmlhttp.send();
+        fillDropResult();
+        fillDropDownSection();
+	changePassword();
+	$("#myModal3").modal('hide');
+	}
+	else
+	{
+	alert("Please input all detail");	
 	}
         
       }
