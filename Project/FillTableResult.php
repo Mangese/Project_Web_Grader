@@ -7,7 +7,7 @@
     mysql_query("set NAMES UTF8;");
     $SID = $_REQUEST["section"];
     $UID = $_SESSION["uid"];
-    $sumPb = mysql_query("select count(*) as sumPloblem from homework where s_id = '$SID' and deleteflag is null;");
+    $sumPb = mysql_query("select count(*) as sumPloblem from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework where s_id = '$SID' and deleteflag is null order by h_id;");
     
