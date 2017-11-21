@@ -115,7 +115,6 @@
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
           eval(this.responseText);
-	  location.reload();
         }
       }
       xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
@@ -157,7 +156,7 @@
               <!--</div>-->
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-secondary" onclick="sectionRegister()">Join</button>
+              <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="sectionRegister()">Join</button>
             </div>
           </div>
         </div>
