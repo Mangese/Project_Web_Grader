@@ -583,7 +583,7 @@
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
                         <label>Section</label>
-                        <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section">
+                        <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section" required >
 
                         <label>Semester</label>
 
@@ -613,7 +613,7 @@
                       </div>
                       <div class="modal-footer">
                         <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button>
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button>
                       </div>
                     </form>
                   </div>
