@@ -1048,12 +1048,12 @@
           <!--End Script-->
 
           <!-- Sort Number Script -->
-          <!-- <script type="text/javascript">
+          <script type="text/javascript">
 
             var TableIDvalue = "Result";
 
             var TableLastSortedColumn = -2;
-            function SortTable2() {
+            function SortTable() {
             var sortColumn = parseInt(arguments[0]);
             var type = arguments.length > 1 ? arguments[1] : 'T';
             var dateformat = arguments.length > 2 ? arguments[2] : '';
@@ -1144,7 +1144,8 @@
             if( y < 100 ) { y = parseInt(y) + 2000; }
             return "" + String(y) + "" + String(m) + "" + String(d) + "";
             } // function GetDateSortingKey()
-          </script> -->
+            </script>
+
           <!-- End Sort Number Script -->
 
           <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->

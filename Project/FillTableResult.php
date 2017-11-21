@@ -15,11 +15,11 @@
       $sumPlob = $row['sumPloblem'];
       echo "<thead class='thead'>";
         echo "<tr style='width:100%'>";
-          echo "<th style='width:100px' onclick='sortTable(0)'>";
+          echo "<th style='width:100px' onclick='SortTable(0,'T')'>";
             echo "ID";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-          echo "<th style='width:250px' onclick='sortTable(1)'>";
+          echo "<th style='width:250px' onclick='SortTable(1,'T')'>";
             echo "Name";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
@@ -29,7 +29,7 @@
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
-          echo "<th style='width:250px' onclick='SortTable2($sortLastCol,'N')'>";
+          echo "<th style='width:250px' onclick='SortTable($sortLastCol,'N')'>";
             echo "Pass";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
