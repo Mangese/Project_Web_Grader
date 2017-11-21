@@ -67,7 +67,8 @@
 					},$array_out);
 					echo "test";
 					print_r($trimmed1);
-					echo " ";
+					
+					echo "\r\n";
 					print_r($trimmed2);
 					$result = ($trimmed1 === $trimmed2);
 					if(!$result)
