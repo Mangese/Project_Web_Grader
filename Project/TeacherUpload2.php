@@ -189,6 +189,7 @@
                           }
                           xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value, true);
                           xmlhttp.send();
+			 location.reload();
                         }
                       });
                     }
@@ -721,9 +722,6 @@
                     <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
-			  <th style="width:30%">
-                            Exam No.
-                          </th>
                           <th style="width:30%">
                             Exam name
                           </th>
