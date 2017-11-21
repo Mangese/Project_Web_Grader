@@ -343,26 +343,18 @@
         window.location = "logout.php";
       }
       function createSec() {
+	
         var x = document.getElementById("selSectionHw");
         var pClass = $('select[name="createClass"] option:selected').text();
         var pSection = document.getElementById("createSection").value;
         var pSemester = document.getElementById("semester").value;
         var pYear = document.getElementById("year").value;
-        str = $("#createClass").val();
-        var option = document.createElement("option");
-        option.text = pClass + "(" + pSection + ") - " + pSemester + "/" + pYear + " -";
-        x.add(option);
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            $("#sectionPassword").val(this.responseText);
-          }
-        }
-        xmlhttp.open("POST", "createClass.php?text=" + option.text + "&class=" + str, true);
-        xmlhttp.send();
-        fillDropResult();
-        fillDropDownSection();
-	changePassword();
+       	str = $("#createClass").val();
+	if(!x && !pClass && pSection && pSemester && pYear)
+	{
+		alert("test");	
+	}
+        
       }
     </script>
     <!--End script-->
