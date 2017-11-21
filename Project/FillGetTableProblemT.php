@@ -35,7 +35,7 @@
       $tempdateName = 'datetimepicker'.$RowNum.'Name';
       $temptime = 'timepicker'.$RowNum;
       $temptimeName = 'timepicker'.$RowNum.'Name';
-      echo "<div class='input-group date' id='$tempdate' onclick = 'DMYpicker(this.id)' >";
+      echo "<div class='input-group date' id='$tempdate' onclick = 'DMYpicker(this.id)'style='color: #111111; background-color: #FFFFFF;'>";
       echo "<input type='text' class='form-control' id = '$tempdateName' placeholder='Date Send' />";
       echo "<span class='input-group-addon' >";
       echo "<span class='glyphicon glyphicon-calendar'></span>";
