@@ -314,10 +314,6 @@
 
                   }
     </script>
-	 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<!-- BS JavaScript -->
-<script type="text/javascript" src="js/bootstrap.js"></script>
-
 
     <input type="hidden" id="DeleteModalCheck" />
     <script>
@@ -372,7 +368,7 @@
         fillDropResult();
         fillDropDownSection();
 	changePassword();
-	$("#myModal3").modal('hide');
+	location.reload();
 	}
 	else
 	{
