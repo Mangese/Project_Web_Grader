@@ -716,6 +716,9 @@
                     <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
+			  <th style="width:30%">
+                            Exam No.
+                          </th>
                           <th style="width:30%">
                             Exam name
                           </th>
