@@ -578,7 +578,7 @@
                       <div class="modal-body left">
                         <label>Class</label>
                         <select class="form-control" name="createClass" id="createClass" style="width:80% required oninvalid="this.setCustomValidity('Please select some class');"
-                      oninput="setCustomValidity('')">">
+                      oninput="setCustomValidity('')">
                                                 <option>Please Select Classroom</option>
                                             </select>
 
@@ -591,7 +591,7 @@
 
                         <!-- <div class="dropdown"> -->
                         <select class="form-control" name="semester" id="semester" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some semetster');"
-                      oninput="setCustomValidity('')">>
+                      oninput="setCustomValidity('')">
                                                 <option>Semester</option>
                                                 <script>
                                                   for (var j = 1; j < 4; j++) {
@@ -603,7 +603,7 @@
 
                         <label>Year</label>
                         <select class="form-control" name="year" id="year" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some year');"
-                      oninput="setCustomValidity('')">>
+                      oninput="setCustomValidity('')">
                                                 <option>Year</option>
                                                     <script>
                                                       var cyear = new Date().getFullYear();
