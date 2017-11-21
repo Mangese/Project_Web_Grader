@@ -84,7 +84,7 @@
 		}
 		else
 		{
-			exec("rm $target$file_name");
+			//exec("rm $target$file_name");
 		}
 		echo "<script type = 'text/javascript'>";
 		if($page == 0)
