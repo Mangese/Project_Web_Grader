@@ -30,7 +30,7 @@
       echo "$LN";
       echo "</td>";
       echo "<td style='width:25%'>";
-      echo "<div class='form-group'>";
+      echo "<div class='form-group' style='color: #111111; background-color: #FFFFFF;'>";
       $tempdate = 'datetimepicker'.$RowNum;
       $tempdateName = 'datetimepicker'.$RowNum.'Name';
       $temptime = 'timepicker'.$RowNum;
