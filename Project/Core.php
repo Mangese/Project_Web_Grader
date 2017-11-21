@@ -65,10 +65,11 @@
 					{
 						return preg_replace('/\s+/','',$item);
 					},$array_out);
-					echo "test";
+					echo "array1";
 					print_r($trimmed1);
 					
-					echo "\r\n";
+					echo "<br>";
+					echo "array2";
 					print_r($trimmed2);
 					$result = ($trimmed1 === $trimmed2);
 					if(!$result)
