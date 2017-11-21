@@ -664,11 +664,11 @@
                     Amount Pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:500px" onclick="SortNumber(5,'N')">
+                  <th style="width:500px" onclick="SortNumber(5,'T')">
                     Assign Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:500px" onclick="SortNumber(6,'N')">
+                  <th style="width:500px" onclick="SortNumber(6,'T')">
                     Due Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
