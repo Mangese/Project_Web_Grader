@@ -53,8 +53,8 @@
 				exec("timeout 1 ./$target$temp.exe < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$out,$re);
 				if($re != 124)
 				{
-					$array_out = file($OutputFromSubmit,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
-					$array_in = file($baseTarget$UnzipTargetOut$countNameOut,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
+					$array_out = file('$OutputFromSubmit',FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
+					$array_in = file($baseTarget.$UnzipTargetOut.$countNameOut,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
 					$trimmed1 = array_map(function($item)
 					{
 						return preg_replace('/\s+/','',$item);
