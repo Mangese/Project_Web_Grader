@@ -414,11 +414,11 @@
               <thead class="thead">
                 <tr>
                   <th style="width:40%" onclick="sortTable1(0)">
-                    Exam name
+                    Ploblem name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:20%" onclick="sortTable1(1)">
-                    Date upload
+                    Upload Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:20%" onclick="sortTable1(2)">
@@ -644,12 +644,12 @@
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
-		              <th style="width:800px" onclick="sortTable2(0)">
-                    Exam No
+		              <th style="width:100px" onclick="SortNumber(0,'N')">
+                    Exam No.
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:800px" onclick="sortTable2(1)">
-                    Exam name
+                    Exam Name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:200px" onclick="sortTable2(2)">
@@ -657,19 +657,19 @@
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:700px" onclick="sortTable2(3)">
-                    Amount student sent
+                    Amount Submit
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:700px" onclick="sortTable2(4)">
-                    Amount student pass
+                    Amount Pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:500px" onclick="sortTable2(5)">
-                    Assign date
+                    Assign Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:500px" onclick="sortTable2(6)">
-                    Due date
+                    Due Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:200px">
@@ -748,7 +748,7 @@
             var TableIDvalue = "TableHw";
 
             var TableLastSortedColumn = -1;
-            function SortTable() {
+            function SortNumber() {
             var sortColumn = parseInt(arguments[0]);
             var type = arguments.length > 1 ? arguments[1] : 'T';
             var dateformat = arguments.length > 2 ? arguments[2] : '';
@@ -839,7 +839,8 @@
             if( y < 100 ) { y = parseInt(y) + 2000; }
             return "" + String(y) + "" + String(m) + "" + String(d) + "";
             } // function GetDateSortingKey()
-          </script>
+            </script>
+
           <!-- End Sort Number Script -->
 
           <!--Foot part-->
