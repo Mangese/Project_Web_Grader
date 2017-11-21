@@ -24,7 +24,7 @@
       $AD = $row['assigndate'];
       $DD = $row['deadlinedate'];
       echo "<tr style='width:100%'>";
-      echo "<td style='width:800px'>";
+      echo "<td style='width:120px'>";
            echo "$RowNum";
          echo "</td>";
          echo "<td style='width:800px'>";

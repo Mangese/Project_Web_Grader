@@ -644,31 +644,31 @@
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
-		              <th style="width:100px" onclick="SortNumber(0,'N')">
+		              <th style="width:120px" onclick="SortNumber(0,'N')">
                     Exam No.
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:800px" onclick="sortTable2(1)">
+                  <th style="width:800px" onclick="SortNumber(1,'T')">
                     Exam Name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:200px" onclick="sortTable2(2)">
+                  <th style="width:200px" onclick="SortNumber(2,'T')">
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:700px" onclick="sortTable2(3)">
+                  <th style="width:700px" onclick="SortNumber(3,'N')">
                     Amount Submit
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:700px" onclick="sortTable2(4)">
+                  <th style="width:700px" onclick="SortNumber(4,'N')">
                     Amount Pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:500px" onclick="sortTable2(5)">
+                  <th style="width:500px" onclick="SortNumber(5,'N')">
                     Assign Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:500px" onclick="sortTable2(6)">
+                  <th style="width:500px" onclick="SortNumber(6,'N')">
                     Due Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
