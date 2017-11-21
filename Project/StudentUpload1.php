@@ -173,7 +173,7 @@
               </th>
               <th style="width:27%" onclick="sortTable(1)">
                 <!-- ชื่อโจทย์ -->
-                Problem name
+                Exam name
                 <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
               </th>
               <th style="width:22%" onclick="sortTable(2)">
