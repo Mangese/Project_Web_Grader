@@ -350,6 +350,10 @@
         var pSemester = document.getElementById("semester").value;
         var pYear = document.getElementById("year").value;
        	str = $("#createClass").val();
+	alert(x);
+	alert(pClass);
+	alert(pSection);
+	alert(pYear);
 	if(!x && !pClass && pSection && pSemester && pYear)
 	{
 		alert("test");	
