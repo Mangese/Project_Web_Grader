@@ -488,20 +488,17 @@
                       oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" />
                     <label>File : </label><br>
                     <label class="file">
-                                <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required oninvalid="this.setCustomValidity('Please add file');"
-                      oninput="setCustomValidity('')"  />
+                                <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
                     <label>Input : </label><br>
                     <label class="file">
-                                <input type="file" id = "InFile" name = "InFile" accept=".zip" required oninvalid="this.setCustomValidity('Please add input file');"
-                      oninput="setCustomValidity('')"  />
+                                <input type="file" id = "InFile" name = "InFile" accept=".zip" required  />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
                     <label>Output : </label><br>
                     <label class="file">
-                                <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required oninvalid="this.setCustomValidity('Please add output file');"
-                      oninput="setCustomValidity('')"  />
+                                <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
 
