@@ -621,6 +621,10 @@
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
+		<th style="width:800px" onclick="sortTable2(0)">
+                    Exam No
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
                   <th style="width:800px" onclick="sortTable2(0)">
                     Exam name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
