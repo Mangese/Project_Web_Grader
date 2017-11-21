@@ -30,12 +30,12 @@
       echo "$LN";
       echo "</td>";
       echo "<td style='width:25%'>";
-      echo "<div class='form-group' >";
+      echo "<div class='form-group'>";
       $tempdate = 'datetimepicker'.$RowNum;
       $tempdateName = 'datetimepicker'.$RowNum.'Name';
       $temptime = 'timepicker'.$RowNum;
       $temptimeName = 'timepicker'.$RowNum.'Name';
-      echo "<div class='input-group date' id='$tempdate' onclick = 'DMYpicker(this.id)' ";
+      echo "<div class='input-group date' id='$tempdate' onclick = 'DMYpicker(this.id)' >";
       echo "<input type='text' class='form-control' id = '$tempdateName' placeholder='Date Send' />";
       echo "<span class='input-group-addon' >";
       echo "<span class='glyphicon glyphicon-calendar'></span>";
