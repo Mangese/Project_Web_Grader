@@ -351,7 +351,7 @@
         var pYear = document.getElementById("year").value;
        	str = $("#createClass").val();
 	var classCheck = $('select[name="createClass"] option:selected').val();
-	if(!!x && !!pClass && !!pSection && !!pSemester && !!pYear)
+	if(!!x && !!classCheck && !!pSection && !!pSemester && !!pYear)
 	{
 		alert("test");	
 	}
