@@ -24,7 +24,7 @@
 		$temp = $tempName;
 		$file_name = $tempName;
 		$temp = substr($temp,0,strpos($temp,"."));
-		exec("gcc $target$temp.c -o $target$temp.exe",$out1,$re1);
+		exec("g++ $target$temp.c -o $target$temp.exe",$out1,$re1);
 		if(!$re1)
 		{
 			$testCase = mysql_query("select InputFile as input,OutputFile as output from homework h join problem p on p.p_id = h.p_id where h.h_id = '$PN';"); 
