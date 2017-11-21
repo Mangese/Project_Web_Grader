@@ -107,7 +107,7 @@
 // 			  alert(qq);
 			  document.getElementById('modalValueResult').innerHTML = "StudentID. "+ stuid+ " Homework "+ qq;
 			  document.getElementById('submitCount').innerHTML = "Total submission : "+ submitcount;
-			  submitCount
+			  //submitCount
                     $('#tb3LastSendFile tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
