@@ -92,7 +92,7 @@
 		{
 			exec("rm $target$file_name");
 		}
-		echo "<script type = 'text/javascript'>";
+		//echo "<script type = 'text/javascript'>";
 		if($page == 0)
 		{
 		//echo "window.location = 'STUDENT_WEB_GRADER_STATUS2.html';";
@@ -109,6 +109,6 @@
 		{
 		//echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
 		}
-		echo "</script>";
+		//echo "</script>";
 	}
 ?>
