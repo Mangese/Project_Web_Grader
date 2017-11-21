@@ -474,22 +474,25 @@
 
                   <div class="modal-body left">
                     <input type='hidden' name="ClassID" id="ClassID">
-                    <label>Problem Name : </label><br>
+                    <label>Problem name : </label><br>
                     <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name" required oninvalid="this.setCustomValidity('Problem name is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 4');"
                       oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" />
                     <label>File : </label><br>
                     <label class="file">
-                                <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required>
+                                <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required oninvalid="this.setCustomValidity('Please add file');"
+                      oninput="setCustomValidity('')"  />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
                     <label>Input : </label><br>
                     <label class="file">
-                                <input type="file" id = "InFile" name = "InFile" accept=".zip" required>
+                                <input type="file" id = "InFile" name = "InFile" accept=".zip" required oninvalid="this.setCustomValidity('Please add input file');"
+                      oninput="setCustomValidity('')"  />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
                     <label>Output : </label><br>
                     <label class="file">
-                                <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required>
+                                <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required oninvalid="this.setCustomValidity('Please add output file');"
+                      oninput="setCustomValidity('')"  />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
 
