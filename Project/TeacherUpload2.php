@@ -503,9 +503,9 @@
                                 </label><br>
 
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "optradio" value="C">C
+                                    <input type="radio" name="optradio" id = "optradio" value="C" required>C
                                 </label>
-                    <label class="radio-inline" required >
+                    <label class="radio-inline"  >
                                     <input type="radio" name="optradio" id = "optradio" value="Cpp">C++
                                 </label>
 <!--                     <label class="radio-inline">
