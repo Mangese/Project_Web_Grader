@@ -89,8 +89,9 @@
                     //alert(x);
 			  
                     $('#' + x).datetimepicker({
-                      format: 'YYYY-MM-DD',
-			    minDate: 0
+			    minDate: 0,
+                      format: 'YYYY-MM-DD'
+			    
 
                     });
                   }
@@ -102,8 +103,9 @@
                   function Timepicker(y) {
                     //alert(y);
                     $('#' + y).datetimepicker({
-                      format: 'HH:mm',
-			    minDate: 0
+			    minDate: 0,
+                      format: 'HH:mm'
+			    
                     });
                   }
                   function ResultModalHeader(x, y, z, qq,stuid,submitcount) {
