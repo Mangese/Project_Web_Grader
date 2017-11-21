@@ -583,7 +583,8 @@
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
                         <label>Section</label>
-                        <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section" required >
+                        <input type="text" class="form-control" name="createSection" id="createSection" style="width:80%" placeholder="Section" required oninvalid="this.setCustomValidity('Section is empty,\nInput only (A-Z,a-z,0-9)');"
+                      oninput="setCustomValidity('')" minlength=1 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{1,}" />
 
                         <label>Semester</label>
 
