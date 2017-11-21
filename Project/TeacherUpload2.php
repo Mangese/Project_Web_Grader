@@ -644,7 +644,7 @@
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
-		              <th style="width:800px" onclick="SortTable(0,'N')">
+		              <th style="width:800px" onclick="sortTable2(0)">
                     Exam No
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -656,11 +656,11 @@
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:700px" onclick="SortTable(3,'N')">
+                  <th style="width:700px" onclick="sortTable2(3)">
                     Amount student sent
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:700px" onclick="SortTable2(4,'N')">
+                  <th style="width:700px" onclick="sortTable2(4)">
                     Amount student pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -991,7 +991,7 @@
           <script>
                     function sortTable(col) {
                       var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-                      table = document.getElementById("TableHw");
+                      table = document.getElementById("Result");
                       switching = true;
                       //Set the sorting direction to ascending:
                       dir = "asc"; 
@@ -1047,7 +1047,7 @@
           <!--End Script-->
 
           <!-- Sort Number Script -->
-          <script type="text/javascript">
+          <!-- <script type="text/javascript">
 
             var TableIDvalue = "Result";
 
@@ -1143,7 +1143,7 @@
             if( y < 100 ) { y = parseInt(y) + 2000; }
             return "" + String(y) + "" + String(m) + "" + String(d) + "";
             } // function GetDateSortingKey()
-          </script>
+          </script> -->
           <!-- End Sort Number Script -->
 
           <!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal0">Infer</button> -->

@@ -29,7 +29,7 @@
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
-          echo "<th style='width:250px' onclick='SortTable($sortLastCol,'N')'>";
+          echo "<th style='width:250px' onclick='SortTable2($sortLastCol,'N')'>";
             echo "Pass";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
