@@ -355,7 +355,7 @@
 	alert(classCheck);
 	alert(pSection);
 	alert(pYear);
-	if(!x && !pClass && pSection && pSemester && pYear)
+	if(!!x && !!pClass && !!pSection && !!pSemester && !!pYear)
 	{
 		alert("test");	
 	}
