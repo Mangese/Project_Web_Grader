@@ -62,6 +62,9 @@
 					{
 						return preg_replace('/\s+/','',$item);
 					},$array_out);
+					print_r($trimmed1);
+					echo " ";
+					print_r($trimmed2);
 					$result = ($trimmed1 === $trimmed2);
 					if(!$result)
 					{
@@ -89,19 +92,19 @@
 		echo "<script type = 'text/javascript'>";
 		if($page == 0)
 		{
-		echo "window.location = 'STUDENT_WEB_GRADER_STATUS2.html';";
+		//echo "window.location = 'STUDENT_WEB_GRADER_STATUS2.html';";
 		}
 		else if($page == 1)
 		{
-		echo "window.location = 'STUDENT_WEB_GRADER_STATUS1.html';";
+		//echo "window.location = 'STUDENT_WEB_GRADER_STATUS1.html';";
 		}
 		else if($page == 2)
 		{
-		echo "window.location = 'STUDENT_WEB_GRADER_STATUS4.html';";
+		//echo "window.location = 'STUDENT_WEB_GRADER_STATUS4.html';";
 		}
 		else
 		{
-		echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
+		//echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
 		}
 		echo "</script>";
 	}
