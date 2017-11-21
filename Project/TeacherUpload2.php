@@ -656,19 +656,19 @@
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:10%" onclick="SortNumber(3,'N')">
-                    Amount Submit
+                  <th style="width:13%" onclick="SortNumber(3,'N')">
+                    Total Submit
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:10%" onclick="SortNumber(4,'N')">
-                    Amount Pass
+                  <th style="width:13%" onclick="SortNumber(4,'N')">
+                    Total Pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:15%" onclick="SortNumber(5,'T')">
+                  <th style="width:12%" onclick="SortNumber(5,'T')">
                     Assign Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:15%" onclick="SortNumber(6,'T')">
+                  <th style="width:12%" onclick="SortNumber(6,'T')">
                     Due Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
