@@ -88,7 +88,8 @@
                   function DMYpicker(x) {
                     //alert(x);
 			  
-                    $('#' + x).datetimepicker({
+                    $('#' + x).datepicker({
+			    minDate: 0,
                       format: 'YYYY-MM-DD'
 			    
 
@@ -101,12 +102,11 @@
                   //                   });
                   function Timepicker(y) {
                     //alert(y);
-                    $('#' + y).datetimepicker({
+                    $('#' + y).datepicker({
+		       minDate: 0,
                       format: 'HH:mm'
 			    
                     });
-			   $('#' + x).datepicker({ minDate: 0});
-			  $('#' + y).datepicker({ minDate: 0});
 
                   }
                   function ResultModalHeader(x, y, z, qq,stuid,submitcount) {
