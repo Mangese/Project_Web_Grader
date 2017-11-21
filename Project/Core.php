@@ -47,8 +47,10 @@
 			$page = 1;
 			$status = "P";
 			$OutputFromSubmit = "output.txt";
+			echo "<script> alert('beforeLoopInput'); </script>";
 			while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
 			{
+				echo "<script> alert('loop'); </script>";
 				echo $countNameIn." ".$countNameOut." ";  
 				exec("timeout 1 ./$target$temp.exe < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$out,$re);
 				if($re != 124)
