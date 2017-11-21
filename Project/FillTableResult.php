@@ -7,7 +7,6 @@
     mysql_query("set NAMES UTF8;");
     $SID = $_REQUEST["section"];
     $UID = $_SESSION["uid"];
-
     $sumPb = mysql_query("select count(*) as sumPloblem from homework where s_id = '$SID' and deleteflag is null;");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework where s_id = '$SID' and deleteflag is null order by h_id;");
@@ -50,8 +49,8 @@
         echo "<td style='width:250px'>";
           echo "$NAME";
         echo "</td>";
-        $result2 = mysql_query("select h_id,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
-
+        $result2 = mysql_query("select (case when status is null then 'N' when (select status from submit where su.H_ID = H_id and u_id = su.u_id and status = 'P' limit 1) is null then 'F' else 'P' end) as status,h.h_id as hid from homework h left join submit su on su.h_id = h.h_id where su.u_id = '$ID' or su.u_id is null and h.s_id = '$SID' and h.deleteflag is null group by su.u_id,su.h_id order by h.h_id;");
+        
         $numprob = 0;
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
@@ -80,7 +79,6 @@
         echo "</td>";
       echo "</tr>";
     }
-
     while($row = mysql_fetch_assoc($result3)){
       $HID = $row['hid'];
       echo "<tr style='width:100%; background-color:#B2DBBF;'>";
@@ -102,6 +100,5 @@
         echo "</td>";
       echo "</tr>";
     }
-
   }
 ?>
