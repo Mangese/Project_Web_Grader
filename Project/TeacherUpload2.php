@@ -577,8 +577,8 @@
                       </div>
                       <div class="modal-body left">
                         <label>Class</label>
-                        <select class="form-control" name="createClass" id="createClass" style="width:80%">
-                                                <option>Please Select Classroom</option>
+                        <select class="form-control" name="createClass" id="createClass" style="width:80%" required oninvalid="this.setCustomValidity('Please select some class');" oninput="setCustomValidity('')">
+                                                <option value="">Please Select Classroom</option>
                                             </select>
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
