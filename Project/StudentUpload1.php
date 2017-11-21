@@ -115,6 +115,7 @@
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
           eval(this.responseText);
+	  location.reload();
         }
       }
       xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
