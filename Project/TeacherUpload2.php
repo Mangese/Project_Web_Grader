@@ -614,7 +614,7 @@
                       </div>
                       <div class="modal-footer">
                         <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
-                        <button type="submit" class="btn btn-success"  onclick="createSec().modal('hide')">Create</button>
+                        <button type="button" class="btn btn-success"  onclick="createSec()">Create</button>
                       </div>
                     </form>
                   </div>
