@@ -588,8 +588,8 @@
                         <label>Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control" name="semester" id="semester" style="width: 80%;">
-                                                <option>Semester</option>
+                        <select class="form-control" name="semester" id="semester" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some semester');" oninput="setCustomValidity('')">
+                                                <option value="">Semester</option>
                                                 <script>
                                                   for (var j = 1; j < 4; j++) {
                                                     document.write('<option value="' + j + '">' + j + '</option>');
@@ -599,8 +599,8 @@
                         <!-- </div> -->
 
                         <label>Year</label>
-                        <select class="form-control" name="year" id="year" style="width: 80%;">
-                                                <option>Year</option>
+                        <select class="form-control" name="year" id="year" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some year');" oninput="setCustomValidity('')">
+                                                <option value="">Year</option>
                                                     <script>
                                                       var cyear = new Date().getFullYear();
                                                       cyear = cyear + 543;
