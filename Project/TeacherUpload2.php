@@ -63,8 +63,6 @@
 
   <body>
     <!--Start script-->
-	  	  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script>
                   $(document).ready(function () {
@@ -91,7 +89,7 @@
                   function DMYpicker(x) {
                     //alert(x);
 			  
-                    $('#' + x).datepicker({
+                    $('#' + x).datetimepicker({
 			    minDate: 0,
                       format: 'YYYY-MM-DD'
 			    
@@ -105,7 +103,7 @@
                   //                   });
                   function Timepicker(y) {
                     //alert(y);
-                    $('#' + y).datepicker({
+                    $('#' + y).datetimepicker({
 		       minDate: 0,
                       format: 'HH:mm'
 			    
