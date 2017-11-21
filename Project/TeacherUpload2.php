@@ -73,6 +73,8 @@
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
+		
+
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
@@ -85,8 +87,11 @@
                   //                   });
                   function DMYpicker(x) {
                     //alert(x);
+			  
                     $('#' + x).datetimepicker({
-                      format: 'YYYY-MM-DD'
+                      format: 'YYYY-MM-DD',
+			    minDate: 0
+
                     });
                   }
                   //                   $(function () {
@@ -97,7 +102,8 @@
                   function Timepicker(y) {
                     //alert(y);
                     $('#' + y).datetimepicker({
-                      format: 'HH:mm'
+                      format: 'HH:mm',
+			    minDate: 0
                     });
                   }
                   function ResultModalHeader(x, y, z, qq,stuid,submitcount) {
