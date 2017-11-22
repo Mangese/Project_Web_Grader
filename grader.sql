@@ -1,5 +1,5 @@
-﻿# Host: 192.168.1.105  (Version 5.5.57-0ubuntu0.14.04.1)
-# Date: 2017-11-19 15:01:23
+﻿# Host: 172.20.10.4  (Version 5.5.57-0ubuntu0.14.04.1)
+# Date: 2017-11-22 10:34:03
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -12,7 +12,7 @@ CREATE TABLE `class` (
   `C_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสรายวิชา',
   `ClassName` varchar(255) DEFAULT NULL COMMENT 'ชื่อวิชา',
   PRIMARY KEY (`C_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "class"
@@ -39,7 +39,7 @@ CREATE TABLE `homework` (
   `Deadlinedate` date DEFAULT NULL,
   `DeadlineTime` time DEFAULT NULL,
   PRIMARY KEY (`H_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "homework"
@@ -63,7 +63,7 @@ CREATE TABLE `problem` (
   `Language` varchar(255) DEFAULT NULL,
   `DeleteFlag` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`P_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #
 # Data for table "problem"
@@ -79,7 +79,7 @@ CREATE TABLE `register` (
   `S_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสsection',
   `U_ID` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`S_ID`,`U_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=239 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #
 # Data for table "register"
@@ -114,31 +114,10 @@ CREATE TABLE `section` (
   `U_ID` int(11) DEFAULT NULL,
   `Name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`S_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=240 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 #
 # Data for table "section"
-#
-
-
-#
-# Structure for table "submit"
-#
-
-DROP TABLE IF EXISTS `submit`;
-CREATE TABLE `submit` (
-  `SUB_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสการส่ง',
-  `U_ID` int(11) DEFAULT NULL,
-  `H_ID` int(11) DEFAULT NULL COMMENT 'รหัสงาน',
-  `STATUS` varchar(255) DEFAULT NULL COMMENT 'สถานะการตรวจ',
-  `SUBMIT_TIME` time DEFAULT NULL COMMENT 'เวลาที่ส่ง',
-  `SUBMIT_DATE` date DEFAULT NULL COMMENT 'วันที่ส่ง',
-  `SOURCE_FILE` varchar(255) DEFAULT NULL COMMENT 'ชื่อไฟล์ที่ส่ง',
-  PRIMARY KEY (`SUB_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
-
-#
-# Data for table "submit"
 #
 
 
@@ -176,7 +155,7 @@ CREATE TABLE `user` (
   `Department` varchar(255) DEFAULT NULL,
   `Email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`U_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5713092 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 #
 # Data for table "user"
