@@ -18,7 +18,7 @@
       echo "</td>";
       echo "<td style='width:27%' class = 'use'>";
       $PN = $row['problemName'];
-      $LANG = $row['language'];
+      $LA = $row['language'];
       $FN = $row['fileName'];
       $PID = $row['pid'];
       $QTY = $row['num'];
@@ -45,7 +45,7 @@ echo "<td style='width:22%'>";
       echo "<td style='width:13%'>";
       if(!strcmp($Status, "F"))
       {
-         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LANG);' data-toggle='modal' ";
+         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LA);' data-toggle='modal' ";
       }
       else
       {
