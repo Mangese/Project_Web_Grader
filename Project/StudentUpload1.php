@@ -209,6 +209,7 @@
                   <input type='hidden' name = "ProblemName" id = "ProblemName">
 		  <input type='hidden' name = "SectionValue" id = "SectionValue">
 		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c" required>
+		  <input type='text' name = "Main_file" id = "Main_file" placeholder="File name of main class">
                   <span class='file-custom'></span>
                   </label>
                 </div>
