@@ -125,9 +125,9 @@
       document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
       $("#ProblemName").val(y);
       $("#SectionValue").val($("#selectClass").val());
-	    alert($("#TableUploadHeader").val());
-      alert($("#ProblemName").val());
-      alert($("#SectionValue").val());
+// 	    alert($("#TableUploadHeader").val()); ชื่อโจท์
+//       alert($("#ProblemName").val()); ไอดีโจทย์
+//       alert($("#SectionValue").val()); ไอดีเซค
     }
   </script>
 
