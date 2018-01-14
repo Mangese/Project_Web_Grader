@@ -520,9 +520,9 @@
                     <label class="radio-inline"  >
                                     <input type="radio" name="optradio" id = "optradio" value="Cpp">C++
                                 </label>
-<!--                     <label class="radio-inline">
+                    <label class="radio-inline">
                                     <input type="radio" name="optradio" id = "optradio" value="Java">Java
-                                </label> -->
+                                </label>
                   </div>
 
                   <div class="modal-footer">
