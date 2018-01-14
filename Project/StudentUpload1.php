@@ -211,7 +211,7 @@
 		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c" required>
                   <span class='file-custom'></span>
                   </label>
-			<input type='text' name = "Main_file" id = "Main_file" placeholder="File name of main class">
+			<input class="form-control" type='text' name = "Main_file" id = "Main_file" placeholder="File name of main class">
                 </div>
                 <div class='modal-footer'>
                   <button type='submit' class='btn btn-secondary'>Upload</button>
