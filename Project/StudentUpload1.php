@@ -215,7 +215,7 @@
                   <span class='file-custom'></span>
                   </label>
                       <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class (ex. mainfile.java)" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
-                      oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]+\.[j]{1}+[a]{1}+[v]{1}+[a]{1}" />
+                      oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]+\.[j-j]{1}+[a-a]{1}+[v-v]{1}+[a-a]{1}" />
                     </div>
                     <div class='modal-footer'>
                       <button type='submit' class='btn btn-secondary'>Upload</button>
