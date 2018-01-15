@@ -120,7 +120,7 @@
                     xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
                     xmlhttp.send();
                   }
-                  function ModalHeaderFunc(x, y, a) {
+                  function ModalHeaderFunc(x, y,) {
                     $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
                     document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
                     $("#ProblemName").val(y);
@@ -128,7 +128,7 @@
                     	    alert($("#TableUploadHeader").val()); 
                           alert($("#ProblemName").val()); 
                           alert($("#SectionValue").val()); 
-                    alert(a);
+                    alert("test");
                   }
     </script>
 
