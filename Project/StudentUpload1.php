@@ -204,20 +204,45 @@
                     <h4 class='modal-title' id='modalValue'></h4>
                     <button type='button' class='close' data-dismiss='modal'>&times;</button>
                   </div>
-                  <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data" >
-                  <div class='modal-body' style='margin:auto;'>
-                    
-                    <label class='file'>
+                  <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data">
+                    <div class='modal-body' style='margin:auto;'>
+
+                      <label class='file'>
                   <input type='hidden' name = "ProblemName" id = "ProblemName">
 		  <input type='hidden' name = "SectionValue" id = "SectionValue">
 		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".zip" required>
                   <span class='file-custom'></span>
                   </label>
-                    <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class">
+                      <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class">
+                    </div>
+                    <div class='modal-footer'>
+                      <button type='submit' class='btn btn-secondary'>Upload</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class='modal fade' id='notjavaUpload' role='dialog'>
+              <div class='modal-dialog'>
+                <div class='modal-content'>
+                  <div class='modal-header'>
+                    <h4 class='modal-title' id='modalValue'></h4>
+                    <button type='button' class='close' data-dismiss='modal'>&times;</button>
                   </div>
-                  <div class='modal-footer'>
-                    <button type='submit' class='btn btn-secondary'>Upload</button>
-                  </div>
+                  <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data">
+                    <div class='modal-body' style='margin:auto;'>
+
+                      <label class='file'>
+                  <input type='hidden' name = "ProblemName" id = "ProblemName">
+		  <input type='hidden' name = "SectionValue" id = "SectionValue">
+		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c" required>
+                  <span class='file-custom'></span>
+                  </label>
+                      <!-- <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class"> -->
+                    </div>
+                    <div class='modal-footer'>
+                      <button type='submit' class='btn btn-secondary'>Upload</button>
+                    </div>
                   </form>
                 </div>
               </div>
