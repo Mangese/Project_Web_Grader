@@ -126,10 +126,10 @@
                     document.getElementById('modalValue1').innerHTML = $('#TableUploadHeader').val();
                     $("#ProblemName").val(y);
                     $("#SectionValue").val($("#selectClass").val());
-                    alert($("#TableUploadHeader").val());
-                    alert($("#ProblemName").val());
-                    alert($("#SectionValue").val());
-                    alert(z);
+//                     alert($("#TableUploadHeader").val());
+//                     alert($("#ProblemName").val());
+//                     alert($("#SectionValue").val());
+//                     alert(z);
                   }
     </script>
 
