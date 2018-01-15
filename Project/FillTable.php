@@ -47,8 +47,8 @@ echo "<td style='width:22%'>";
       if(!strcmp($Status, "F"))
       {
       if(!strcmp($LA, "Java")){
-         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'alert(); ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
-        echo "data-target='#javaUpload'>Upload</button>";
+         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
+         echo "data-target='#javaUpload'>Upload</button>";
       }else
       {
         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
