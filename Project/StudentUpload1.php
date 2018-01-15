@@ -197,7 +197,7 @@
                 </th>
               </tr>
             </thead>
-            <div class='modal fade' id='test1' role='dialog'>
+            <div class='modal fade' id='javaUpload' role='dialog'>
               <div class='modal-dialog'>
                 <div class='modal-content'>
                   <div class='modal-header'>
@@ -210,7 +210,7 @@
                     <label class='file'>
                   <input type='hidden' name = "ProblemName" id = "ProblemName">
 		  <input type='hidden' name = "SectionValue" id = "SectionValue">
-		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c" required>
+		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".zip" required>
                   <span class='file-custom'></span>
                   </label>
                     <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class">
