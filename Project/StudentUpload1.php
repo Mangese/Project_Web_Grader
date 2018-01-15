@@ -123,6 +123,7 @@
                   function ModalHeaderFunc(x, y, z) {
                     $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
                     document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
+                    document.getElementById('modalValue1').innerHTML = $('#TableUploadHeader').val();
                     $("#ProblemName").val(y);
                     $("#SectionValue").val($("#selectClass").val());
                     alert($("#TableUploadHeader").val());
@@ -226,7 +227,7 @@
               <div class='modal-dialog'>
                 <div class='modal-content'>
                   <div class='modal-header'>
-                    <h4 class='modal-title' id='modalValue'></h4>
+                    <h4 class='modal-title' id='modalValue1'></h4>
                     <button type='button' class='close' data-dismiss='modal'>&times;</button>
                   </div>
                   <form class="form-horizontal" role="form" action="Core.php" method="post" enctype="multipart/form-data">
