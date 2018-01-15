@@ -48,6 +48,10 @@ echo "<td style='width:22%'>";
       {
       if(!strcmp($LA, "Java")){
          echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'alert(); ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
+      }else
+      {
+        echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
+
       }
       }
       else
