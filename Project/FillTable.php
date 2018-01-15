@@ -52,7 +52,7 @@ echo "<td style='width:22%'>";
       }else
       {
         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
-        echo ">not java upload</button>";
+        echo "data-target='#notjavaUpload'>Upload</button>";
       }
       }
       else
