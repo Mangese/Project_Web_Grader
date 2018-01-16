@@ -214,7 +214,7 @@
 		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".zip" required>
                   <span class='file-custom'></span>
                   </label>
-			    <label>File name of main class : </label><br>
+			    <p>File name of main class : </p>
                       <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="ex. mainfile.java" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
                       oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]+\.['java']{4}$" />
                     </div>
