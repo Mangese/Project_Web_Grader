@@ -13,10 +13,10 @@
     {
       $RowNum = $RowNum+1;
       echo "<tr>";
-      echo "<td style='width:6%'>";
+      echo "<td style='width:5%'>";
       echo "$RowNum";
       echo "</td>";
-      echo "<td style='width:27%' class = 'use'>";
+      echo "<td style='width:22%' class = 'use'>";
       $PN = $row['problemName'];
       $LA = $row['language'];
       $FN = $row['fileName'];
@@ -26,13 +26,16 @@
       $DD = $row['deadline'];
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
-echo "<td style='width:22%'>";
+      echo "<td style='width:10%'>";
+      echo "$LA";
+      echo "</td>";
+      echo "<td style='width:20%'>";
       echo "$DD";
       echo "</td>";
       echo "<td style='width:21%'>";
       echo "$QTY";
       echo "</td>";
-      echo "<td style='width:11%'>";
+      echo "<td style='width:10%'>";
       $Status = $row['status'];
       if(!strcmp($Status, "F"))
       {
@@ -43,7 +46,7 @@ echo "<td style='width:22%'>";
         echo "Pass";
       }
       echo "</td>";
-      echo "<td style='width:13%'>";
+      echo "<td style='width:12%'>";
       if(!strcmp($Status, "F"))
       {
       if(!strcmp($LA, "Java")){
