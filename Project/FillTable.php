@@ -16,7 +16,7 @@
       echo "<td style='width:6%'>";
       echo "$RowNum";
       echo "</td>";
-      echo "<td style='width:20%' class = 'use'>";
+      echo "<td style='width:18%' class = 'use'>";
       $PN = $row['problemName'];
       $LA = $row['language'];
       $FN = $row['fileName'];
@@ -29,7 +29,7 @@
       echo "<td style='width:11%'>";
       echo "$LA";
       echo "</td>";
-      echo "<td style='width:20%'>";
+      echo "<td style='width:22%'>";
       echo "$DD";
       echo "</td>";
       echo "<td style='width:21%'>";
