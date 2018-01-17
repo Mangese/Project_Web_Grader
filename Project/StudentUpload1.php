@@ -57,8 +57,10 @@
 ?>
 
   <body>
-    <input type="hidden" id="TableUploadHeader" />
-    <input type="hidden" id="TableUploadHeader1" />
+    <!-- <input type="hidden" id="TableUploadHeader" />
+    <input type="hidden" id="TableUploadHeader1" /> -->
+    <input type="" id="TableUploadHeader" />
+    <input type="" id="TableUploadHeader1" />
     <script>
                   function logout() {
                     window.location = "logout.php";
