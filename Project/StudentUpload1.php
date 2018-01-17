@@ -57,10 +57,8 @@
 ?>
 
   <body>
-    <!-- <input type="hidden" id="TableUploadHeader" />
-    <input type="hidden" id="TableUploadHeader1" /> -->
-    <input type="" id="TableUploadHeader" />
-    <input type="" id="TableUploadHeader1" />
+    <input type="hidden" id="TableUploadHeader" />
+    <input type="hidden" id="TableUploadHeader1" />
     <script>
                   function logout() {
                     window.location = "logout.php";
@@ -129,10 +127,10 @@
                     document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
                     $("#ProblemName").val(y);
                     $("#SectionValue").val($("#selectClass").val());
-                    alert($("#TableUploadHeader").val());
-                    alert($("#ProblemName").val());
-                    alert($("#SectionValue").val());
-                    alert(z);
+//                     alert($("#TableUploadHeader").val());
+//                     alert($("#ProblemName").val());
+//                     alert($("#SectionValue").val());
+//                     alert(z);
                   }
 
                   // fun for not hava
@@ -141,10 +139,10 @@
                     document.getElementById('modalValue1').innerHTML = $('#TableUploadHeader1').val();
                     $("#ProblemName1").val(y);
                     $("#SectionValue1").val($("#selectClass").val());
-                    alert($("#TableUploadHeader1").val());
-                    alert($("#ProblemName1").val());
-                    alert($("#SectionValue1").val());
-                    alert(z);
+//                     alert($("#TableUploadHeader1").val());
+//                     alert($("#ProblemName1").val());
+//                     alert($("#SectionValue1").val());
+//                     alert(z);
                   }
     </script>
 
