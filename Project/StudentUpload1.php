@@ -127,10 +127,10 @@
                     document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
                     $("#ProblemName").val(y);
                     $("#SectionValue").val($("#selectClass").val());
-//                     alert($("#TableUploadHeader").val());
-//                     alert($("#ProblemName").val());
-//                     alert($("#SectionValue").val());
-//                     alert(z);
+                    //                     alert($("#TableUploadHeader").val());
+                    //                     alert($("#ProblemName").val());
+                    //                     alert($("#SectionValue").val());
+                    //                     alert(z);
                   }
 
                   // fun for not hava
@@ -139,10 +139,10 @@
                     document.getElementById('modalValue1').innerHTML = $('#TableUploadHeader1').val();
                     $("#ProblemName1").val(y);
                     $("#SectionValue1").val($("#selectClass").val());
-//                     alert($("#TableUploadHeader1").val());
-//                     alert($("#ProblemName1").val());
-//                     alert($("#SectionValue1").val());
-//                     alert(z);
+                    //                     alert($("#TableUploadHeader1").val());
+                    //                     alert($("#ProblemName1").val());
+                    //                     alert($("#SectionValue1").val());
+                    //                     alert(z);
                   }
     </script>
 
@@ -196,12 +196,12 @@
                   Deadline
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:21%" onclick="sortTable(2)">
+                <th style="width:21%" onclick="sortTable(3)">
                   <!-- จำนวนที่ส่ง(ครั้ง) -->
                   Number of submissions
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:11%" onclick="sortTable(3)">
+                <th style="width:11%" onclick="sortTable(4)">
                   <!-- สถานะ -->
                   Status
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
