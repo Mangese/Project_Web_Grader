@@ -58,6 +58,7 @@
 
   <body>
     <input type="hidden" id="TableUploadHeader" />
+    <input type="hidden" id="TableUploadHeader1" />
     <script>
                   function logout() {
                     window.location = "logout.php";
@@ -120,16 +121,28 @@
                     xmlhttp.open("POST", "sectionRegister.php?Password=" + str, true);
                     xmlhttp.send();
                   }
+                  // fun for java
                   function ModalHeaderFunc(x, y, z) {
                     $("#TableUploadHeader").val($(x).closest("tr").find(".use").text());
                     document.getElementById('modalValue').innerHTML = $('#TableUploadHeader').val();
-                    document.getElementById('modalValue1').innerHTML = $('#TableUploadHeader').val();
                     $("#ProblemName").val(y);
                     $("#SectionValue").val($("#selectClass").val());
-//                     alert($("#TableUploadHeader").val());
-//                     alert($("#ProblemName").val());
-//                     alert($("#SectionValue").val());
-//                     alert(z);
+                    //                     alert($("#TableUploadHeader").val());
+                    //                     alert($("#ProblemName").val());
+                    //                     alert($("#SectionValue").val());
+                    //                     alert(z);
+                  }
+
+                  // fun for not hava
+                  function ModalHeaderFunc1(x, y, z) {
+                    $("#TableUploadHeader1").val($(x).closest("tr").find(".use").text());
+                    document.getElementById('modalValue1').innerHTML = $('#TableUploadHeader1').val();
+                    $("#ProblemName1").val(y);
+                    $("#SectionValue1").val($("#selectClass").val());
+                    //                     alert($("#TableUploadHeader1").val());
+                    //                     alert($("#ProblemName1").val());
+                    //                     alert($("#SectionValue1").val());
+                    //                     alert(z);
                   }
     </script>
 
@@ -198,6 +211,8 @@
                 </th>
               </tr>
             </thead>
+
+            <!-- modal java upload -->
             <div class='modal fade' id='javaUpload' role='dialog'>
               <div class='modal-dialog'>
                 <div class='modal-content'>
@@ -214,9 +229,10 @@
 		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".zip" required>
                   <span class='file-custom'></span>
                   </label>
-			    <p>File name of main class : </p>
+                      <p>File name of main class : </p>
                       <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="ex. mainfile.java" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
-                      oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]+\.['java']{4}$" />
+                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]+\.['java']{4}$"
+                      />
                     </div>
                     <div class='modal-footer'>
                       <button type='submit' class='btn btn-secondary'>Upload</button>
@@ -225,6 +241,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- modal notjava upload -->
             <div class='modal fade' id='notjavaUpload' role='dialog'>
               <div class='modal-dialog'>
                 <div class='modal-content'>
@@ -236,9 +254,9 @@
                     <div class='modal-body' style='margin:auto;'>
 
                       <label class='file'>
-                  <input type='hidden' name = "ProblemName" id = "ProblemName">
-		  <input type='hidden' name = "SectionValue" id = "SectionValue">
-		  <input type='file' name = "Uploaded_file" id = "Uploaded_file" accept=".c,.cpp" required>
+                  <input type='hidden' name = "ProblemName1" id = "ProblemName1">
+		  <input type='hidden' name = "SectionValue1" id = "SectionValue1">
+		  <input type='file' name = "Uploaded_file1" id = "Uploaded_file1" accept=".c,.cpp" required>
                   <span class='file-custom'></span>
                   </label>
                       <!-- <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class"> -->
@@ -250,6 +268,8 @@
                 </div>
               </div>
             </div>
+
+
             <tbody>
             </tbody>
           </table>
