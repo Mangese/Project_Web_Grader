@@ -256,9 +256,9 @@
                     <div class='modal-body' style='margin:auto;'>
 
                       <label class='file'>
-                  <input type='hidden' name = "ProblemName1" id = "ProblemName1">
-		  <input type='hidden' name = "SectionValue1" id = "SectionValue1">
-		  <input type='file' name = "Uploaded_file1" id = "Uploaded_file1" accept=".c,.cpp" required>
+                  <input type='hidden' name = "ProblemName1" id = "ProblemName">
+		  <input type='hidden' name = "SectionValue1" id = "SectionValue">
+		  <input type='file' name = "Uploaded_file1" id = "Uploaded_file" accept=".c,.cpp" required>
                   <span class='file-custom'></span>
                   </label>
                       <!-- <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class"> -->
