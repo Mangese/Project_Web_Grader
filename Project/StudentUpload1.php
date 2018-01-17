@@ -182,31 +182,36 @@
           <table class="table table-striped table-hover main" id="DataFromAjax">
             <thead class="thead">
               <tr>
-                <th style="width:6%" onclick="sortTable(0)">
+                <th style="width5%" onclick="sortTable(0)">
                   ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:27%" onclick="sortTable(1)">
+                <th style="width:22%" onclick="sortTable(1)">
                   <!-- ชื่อโจทย์ -->
                   Problem name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:22%" onclick="sortTable(2)">
+                <th style="width:10%" onclick="sortTable(2)">
+                  <!-- ภาษา -->
+                  Language
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:20%" onclick="sortTable(3)">
                   <!-- Deadline -->
                   Deadline
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:21%" onclick="sortTable(3)">
+                <th style="width:21%" onclick="sortTable(4)">
                   <!-- จำนวนที่ส่ง(ครั้ง) -->
                   Number of submissions
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:11%" onclick="sortTable(4)">
+                <th style="width:10%" onclick="sortTable(5)">
                   <!-- สถานะ -->
                   Status
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:13%">
+                <th style="width:12%">
                   Upload
                 </th>
               </tr>
