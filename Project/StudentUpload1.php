@@ -186,7 +186,7 @@
                   ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%" onclick="sortTable(1)">
+                <th style="width:18%" onclick="sortTable(1)">
                   <!-- ชื่อโจทย์ -->
                   Problem name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
@@ -196,7 +196,7 @@
                   Language
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%" onclick="sortTable(2)">
+                <th style="width:22%" onclick="sortTable(2)">
                   <!-- Deadline -->
                   Deadline
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
