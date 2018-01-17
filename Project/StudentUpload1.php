@@ -191,22 +191,22 @@
                   Problem name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:10%" onclick="sortTable(2)">
+                <th style="width:10%" onclick="sortTable(1)">
                   <!-- ภาษา -->
                   Language
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%" onclick="sortTable(3)">
+                <th style="width:20%" onclick="sortTable(2)">
                   <!-- Deadline -->
                   Deadline
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:21%" onclick="sortTable(4)">
+                <th style="width:21%" onclick="sortTable(3)">
                   <!-- จำนวนที่ส่ง(ครั้ง) -->
                   Number of submissions
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:10%" onclick="sortTable(5)">
+                <th style="width:10%" onclick="sortTable(4)">
                   <!-- สถานะ -->
                   Status
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
