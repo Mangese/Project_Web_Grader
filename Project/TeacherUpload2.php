@@ -1090,9 +1090,6 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <tfoot>
-                      hello
-                    </tfoot>
                     <h5 id='submitCount'></h5>
                   </table>
 
