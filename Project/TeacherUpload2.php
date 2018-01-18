@@ -1094,7 +1094,7 @@
                       <h5 id='submitCount'></h5>
                       <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
                       <h5>/</h5>
-                      <h5 id='fullMark'>Full mark</h5>
+                      <h5 id='fullMark' style="position:absolute;right:15px;">Full mark</h5>
                     </div>
                     <br>
                   </table>
