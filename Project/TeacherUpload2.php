@@ -1092,11 +1092,11 @@
                     </tbody>
                     <div class="form-inline">
                       <h5 id='submitCount'></h5>
-                      <span style="position:absolute;right:25px;">
+                      
                         <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
                         <h5>/</h5>
                         <h5 id='fullMark'>Full mark</h5>
-                      </span>
+                      
                     </div>
                     <br>
                   </table>
