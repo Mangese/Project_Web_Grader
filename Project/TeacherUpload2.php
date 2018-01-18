@@ -1090,10 +1090,10 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <p>
+                    <form class="form-inline">
                       <h5 id='submitCount'></h5>
                       <input type="text" class="form-control col-3" name="" placeholder="Mark">
-                    </p>
+                    </form>
                   </table>
                 </div>
                 <!-- <div class="modal-footer">
