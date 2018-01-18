@@ -1093,7 +1093,7 @@
                     <div class="form-inline">
                       <h5 id='submitCount'></h5>
                       <input type="text" class="form-control" style="border:none;" name="" placeholder="Mark">
-			    /<p>Full mark</p>
+			   <h5>/</h5> <h5 id='fullMark'>Full mark</h5>
                     </div>
                     <br>
                   </table>
