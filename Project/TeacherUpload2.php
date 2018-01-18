@@ -1093,7 +1093,7 @@
                     <h5 id='submitCount'></h5>
                   </table>
 			
-			<input type="text" class="form-control" name="" placeholder="Mark"><br>
+			<input type="text" class="form-control col-3" name="" placeholder="Mark"><br>
 
 
                 </div>
