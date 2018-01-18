@@ -1090,8 +1090,10 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <h5 id='submitCount'></h5>
-                    <input type="text" class="form-control col-3" name="" placeholder="Mark"><br>
+                    <p>
+                      <h5 id='submitCount'></h5>
+                      <input type="text" class="form-control col-3" name="" placeholder="Mark">
+                    </p>
                   </table>
                 </div>
                 <!-- <div class="modal-footer">
@@ -1100,7 +1102,7 @@
                 </div> -->
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="button" class="btn btn-success" >Mark submit</button>
+                  <button type="button" class="btn btn-success">Mark submit</button>
                 </div>
               </div>
             </div>
