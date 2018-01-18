@@ -1068,19 +1068,22 @@
                   <table class="table table-striped table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
-                        <th style="width:15%">
+                        <th style="width:7%">
                           No.
                         </th>
-                        <th style="width:25%">
+                        <th style="width:23%">
                           Submit date
                         </th>
-                        <th style="width:25%">
+                        <th style="width:23%">
                           Submit time
                         </th>
-                        <th style="width:15%">
+                        <th style="width:14%">
                           Status
                         </th>
-                        <th style="width:20%">
+                        <th style="width:15%">
+                          Test case
+                        </th>
+                        <th style="width:18%">
                           Download
                         </th>
                       </tr>
