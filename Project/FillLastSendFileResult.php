@@ -20,19 +20,22 @@ if($conn != FALSE)
     $ST = $row['submit_time'];
     $RowNum =  $RowNum + 1 ;
     echo "<tr>";
-    echo "<td style='width:15%'>";
+    echo "<td style='width:7%'>";
     echo "$RowNum";
     echo "</td>";
-    echo "<td style='width:25%'>";
+    echo "<td style='width:23%'>";
     echo "$SD";
     echo "</td>";
-    echo "<td style='width:25%'>";
+    echo "<td style='width:23%'>";
     echo "$ST";
     echo "</td>";
-    echo "<td style='width:15%'>";
+    echo "<td style='width:14%'>";
     echo "$STA";
     echo "</td>";
-    echo "<td style='width:20%'>";
+    echo "<td style='width:15%'>";
+    echo "Test case";
+    echo "</td>";
+    echo "<td style='width:18%'>";
     echo "<a href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
     echo "</td>";
    
