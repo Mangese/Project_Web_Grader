@@ -1089,32 +1089,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <!-- <tr>
-                        <td style="width:35%">
-                          exFilePass
-                        </td>
-                        <td style="width:35%">
-                          timesend
-                        </td>
-                        <td style="width:30%">
-                                                     <input type="checkbox" name="" value=""><br> 
-                          Correct
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="width:35%">
-                          exFileFail
-                        </td>
-                        <td style="width:35%">
-                          timesend
-                        </td>
-                        <td style="width:30%">
-                                                     <input type="checkbox" name="" value=""><br> 
-                          Fail
-                        </td>
-                      </tr> -->
-
                     </tbody>
+                    <tfoot>
+                      hello
+                    </tfoot>
                     <h5 id='submitCount'></h5>
                   </table>
 
