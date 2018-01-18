@@ -1092,7 +1092,7 @@
                     </tbody>
                     <div class="form-inline">
                       <h5 id='submitCount'></h5>
-                      <input type="text" class="form-control right" name="" placeholder="Mark">
+                      <input type="text" class="btn btn-outline-secondary" name="" placeholder="Mark">
                     </div>
                     <br>
                   </table>
