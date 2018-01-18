@@ -1092,8 +1092,8 @@
                     </tbody>
                     <h5 id='submitCount'></h5>
                   </table>
-			
-			<input type="text" class="form-control col-3" name="" placeholder="Mark"><br>
+
+                  <input type="text" class="form-control col-3" name="" placeholder="Mark"><br>
 
 
                 </div>
@@ -1101,6 +1101,10 @@
                   <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
                   <!- - <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> - ->
                 </div> -->
+                <div class="modal-footer">
+                  <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
+                  <button type="button" class="btn btn-success" >Mark submit</button>
+                </div>
               </div>
             </div>
           </div>
