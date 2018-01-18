@@ -41,6 +41,7 @@ if($conn != FALSE)
    
     echo "</tr>";
   }
+  echo "<input type='text' placeholder='Mark'>";
 }
-<input type="text" placeholder="Mark">
+
 ?>
