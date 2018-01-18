@@ -1091,11 +1091,8 @@
                     <tbody>
                     </tbody>
                     <h5 id='submitCount'></h5>
+                    <input type="text" class="form-control col-3" name="" placeholder="Mark"><br>
                   </table>
-
-                  <input type="text" class="form-control col-3" name="" placeholder="Mark"><br>
-
-
                 </div>
                 <!-- <div class="modal-footer">
                   <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
