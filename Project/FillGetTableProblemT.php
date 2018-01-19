@@ -23,10 +23,10 @@
       // $FN = $row['fileName'];
 
       echo "<tr>";
-      echo "<td style='width:22%'>";
+      echo "<td style='width:15%'>";
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:8%'>";
+      echo "<td style='width:15%'>";
       echo "Full mark";
       echo "</td>";
       echo "<td style='width:10%'>";
