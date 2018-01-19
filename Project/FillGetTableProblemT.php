@@ -21,13 +21,16 @@
       // $UD = $row['uploadDate'];
       $LN = $row['lang'];
       // $FN = $row['fileName'];
-
+      
+      $fullMark = 'fullMark'.$RowNum;
+      $fullMarkName = 'fullMark'.$RowNum.'Name';
+      
       echo "<tr>";
       echo "<td style='width:18%'>";
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
       echo "<td style='width:13%'>";
-      echo "<input type='text' class='form-control' style='width:50%' placeholder='Full mark'";
+      echo "<input type='text' class='form-control' style='width:50%' id = '$fullMarkName' placeholder='Mark'";
       echo "</td>";
       echo "<td style='width:10%'>";
       echo "$LN";
