@@ -866,10 +866,10 @@
                     <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
-                          <th style="width:22%">
+                          <th style="width:15%">
                             Exam name
                           </th>
-                          <th style="width:8%">
+                          <th style="width:15%">
                             Full mark
                           </th>
                           <th style="width:10%">
@@ -1092,11 +1092,11 @@
                     </tbody>
                     <div class="form-inline">
                       <h5 id='submitCount'></h5>
-                      
-                        <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
-                        <h5>/</h5>
-                        <h5 id='fullMark'>Full mark</h5>
-                      
+
+                      <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
+                      <h5>/</h5>
+                      <h5 id='fullMark'>Full mark</h5>
+
                     </div>
                     <br>
                   </table>
