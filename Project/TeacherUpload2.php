@@ -866,10 +866,10 @@
                     <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
-                          <th style="width:15%">
+                          <th style="width:18%">
                             Exam name
                           </th>
-                          <th style="width:15%">
+                          <th style="width:13%">
                             Full mark
                           </th>
                           <th style="width:10%">
@@ -881,7 +881,7 @@
                           <th style="width:25%">
                             Time
                           </th>
-                          <th style="width:10%">
+                          <th style="width:9%">
                             Select
                           </th>
                         </tr>
