@@ -27,7 +27,7 @@
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
       echo "<td style='width:13%'>";
-      echo "<input type='text' class='form-control' style='width:13%' placeholder='Full mark'";
+      echo "<input type='text' class='form-control' style='width:50%' placeholder='Full mark'";
       echo "</td>";
       echo "<td style='width:10%'>";
       echo "$LN";
