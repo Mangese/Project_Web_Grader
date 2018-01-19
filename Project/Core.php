@@ -50,12 +50,14 @@
 			$countNameOut = $count.".out";
 			$page = 1;
 			$countCorrect = 0;
+			$countAll = 0;
 			$status = "P";
 			$OutputFromSubmit = "output.txt";
 			while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
 			{
 				echo $countNameIn." ".$countNameOut." ";  
 				exec("timeout 1 ./$target$temp.exe < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$out,$re);
+				$countAll = $countAll + 1;
 				if($re != 124)
 				{
 					$array_out = file($target.$OutputFromSubmit,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
@@ -89,7 +91,7 @@
 				$countNameIn = $count.".in";
 				$countNameOut = $count.".out";
 			}
-			mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName','$countCorrect','');");
+			mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName','$countCorrect','$countAll','');");
 			exec("rm $target$temp.txt");
 			exec("rm $target$temp.exe");
 		}
