@@ -23,10 +23,10 @@
       // $FN = $row['fileName'];
 
       echo "<tr>";
-      echo "<td style='width:15%'>";
+      echo "<td style='width:18%'>";
       echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:15%'>";
+      echo "<td style='width:13%'>";
       echo "Full mark";
       echo "</td>";
       echo "<td style='width:10%'>";
@@ -56,7 +56,7 @@
       echo "</div>";
       echo "</div>";
       echo "</td>";
-      echo "<td style='width:10%' >";
+      echo "<td style='width:9%' >";
       echo "<input type='checkbox' name='selectedProblemToAssign' value = '$PID' ><br>";
       echo "</td>";
       echo "</tr>";
