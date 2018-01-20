@@ -204,7 +204,7 @@
                           alert(dateName);
                           alert(timeName);
                           alert(fullMarkName);
-				alert(date);
+				alert(document.getElementById(dateName).value);
                           
                         }
                       });
