@@ -203,6 +203,7 @@
                           location.reload();
                           alert(dateName);
                           alert(timeName);
+				alert(timeName.value);
                           alert(fullMarkName);
 				alert(fullMarkName.value);
                         }
