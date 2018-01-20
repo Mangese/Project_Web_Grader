@@ -175,7 +175,8 @@
                         num = i + 1;
                         dateName = "datetimepicker" + num.toString() + "Name";
                         timeName = "timepicker" + num.toString() + "Name";
-                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
+                        fullMarkName = "fullMark" + num.toString() + "Name";
+                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "" || document.getElementById(fullMarkName).value == "") {
                           x = 1;
                         }
                       }
@@ -189,6 +190,7 @@
                           num = i + 1;
                           dateName = "datetimepicker" + num.toString() + "Name";
                           timeName = "timepicker" + num.toString() + "Name";
+                          fullMarkName = "fullMark" + num.toString() + "Name";
                           str = $("#selSectionHw").val();
                           var xmlhttp = new XMLHttpRequest();
                           xmlhttp.onreadystatechange = function () {
@@ -196,7 +198,7 @@
                               eval(this.responseText);
                             }
                           }
-                          xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value, true);
+                          xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value + "&fullMark=" + document.getElementById(fullMarkName).value, true);
                           xmlhttp.send();
                           location.reload();
                         }
