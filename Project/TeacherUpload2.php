@@ -205,6 +205,8 @@
                           alert(timeName);
                           alert(fullMarkName);
 				alert(document.getElementById(dateName).value);
+				alert(document.getElementById(timeName).value);
+				alert(document.getElementById(fullMarkName).value);
                           
                         }
                       });
