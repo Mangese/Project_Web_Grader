@@ -204,6 +204,7 @@
                           alert(dateName);
                           alert(timeName);
                           alert(fullMarkName);
+				alert(fullMarkName.value);
                         }
                       });
                     }
