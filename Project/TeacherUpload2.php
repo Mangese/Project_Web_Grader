@@ -201,11 +201,9 @@
                           xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value + "&fullMark=" + document.getElementById(fullMarkName).value, true);
                           xmlhttp.send();
                           location.reload();
-                          alert(dateName);
-                          alert(timeName);
-				alert(timeName.value);
-                          alert(fullMarkName);
-				alert(fullMarkName.value);
+//                           alert(dateName);
+//                           alert(timeName);
+//                           alert(fullMarkName);
                         }
                       });
                     }
