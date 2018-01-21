@@ -63,16 +63,20 @@
     <?php
   	session_start();
 	if(isset($_SESSION["user"]) && isset($_SESSION["utype"]))
-	{
-		if(strcmp($_SESSION["utype"],"T"))
+	{	if(!strcmp($_SESSION["utype"],"A"))
 		{
-		echo "<script> window.location = 'StudentUpload1.php' </script>";
+		echo "<script> window.location = 'TeacherUpload.php' </script>";
 		}
-		else
+		if(!strcmp($_SESSION["utype"],"T"))
 		{
 		echo "<script> window.location = 'TeacherUpload2.php' </script>";
 		}
+		else if(!strcmp($_SESSION["utype"],"S"))
+		{
+		echo "<script> window.location = 'StudentUpload1.php' </script>";
+		}
 	}
+	  
 ?>
 
 
