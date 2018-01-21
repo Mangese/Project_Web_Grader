@@ -37,7 +37,7 @@
 
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
-      <span class="h3" class="navbar-brand mb-0">Teacher</span>
+      <span class="h3" class="navbar-brand mb-0">Admin</span>
       <label class="ml-auto " id="SessionUser"></label>
       <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick="logout()" type="button">Logout</button>
     </form>
