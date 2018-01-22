@@ -1108,10 +1108,8 @@
                         <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
                           <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
                         </div>
-                        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                          <h5>/</h5>
-                        </div>
                         <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+			  <h5>/</h5>
                           <h5 id='fullMark'>Full mark</h5>
                         </div>
                       </div>
