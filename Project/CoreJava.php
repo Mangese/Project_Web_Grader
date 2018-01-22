@@ -28,5 +28,6 @@ if($conn != FALSE)
 	$rm = "*";
 	exec("rm $baseTarget$UnzipTarget$rm");
 	exec("unzip $baseTarget$file_name -d $baseTarget$UnzipTarget");
+	exec("javac $baseTarget$UnzipTarget$rm");
 }
 ?>
