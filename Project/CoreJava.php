@@ -22,6 +22,7 @@ if($conn != FALSE)
 	}
 	$temp = $tempName;
 	$file_name = $tempName;
-	$temp = substr($temp,0,strpos($temp,"."));
+	echo "<script> alert('$temp'); </script>";
+	
 }
 ?>
