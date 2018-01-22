@@ -1099,14 +1099,20 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <div class="form-inline">
-                      <h5 id='submitCount'></h5>
+			   <div class="container">
 
-                      <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
-                      <h5>/</h5>
-                      <h5 id='fullMark'>Full mark</h5>
+			      <div class="row">
+				<div class="col-xs-1 col-sm-1 col-md-6 col-lg-6">
+				  <h5 id='submitCount'></h5>
+				</div>
+				<div class="col-xs-1 col-sm-1 col-md-6 col-lg-6">
+				  <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
+				  <h5>/</h5>
+				  <h5 id='fullMark'>Full mark</h5>
+				</div>
+			      </div>
 
-                    </div>
+			    </div>
                     <br>
                   </table>
                 </div>
