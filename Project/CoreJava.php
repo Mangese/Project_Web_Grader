@@ -23,6 +23,10 @@ if($conn != FALSE)
 	$temp = $tempName;
 	$file_name = $tempName;
 	echo "<script> alert('$temp'); </script>";
-	
+	$UnzipTarget = "UnzipPlace/";
+	$baseTarget = "File/";
+	$rm = "*";
+	exec("rm $baseTarget$UnzipTarget$rm");
+	exec("unzip $baseTarget$file_name -d $baseTarget$UnzipTarget");
 }
 ?>
