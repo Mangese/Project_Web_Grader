@@ -6,7 +6,7 @@ $page = 0;
 $conn = mysql_connect("localhost","mangese","000000");
 if($conn != FALSE)
 {
-	$FT = substr($_FILES['Uploaded_file']['name'];,strpos($_FILES['Uploaded_file']['name'];,"."));
+	$FT = substr($_FILES['Uploaded_file']['name'],-2);
 	echo "<script> alert('$FT'); </script>";
 	mysql_query("use grader;");
 	echo "<script> alert('UID = $UID'); </script>";
