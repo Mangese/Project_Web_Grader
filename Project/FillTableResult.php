@@ -27,8 +27,8 @@
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
             echo "<th style='min-width:30px'>";
-              echo "Ex$i ";
-            echo "$fullmarkT";
+              echo "Ex$i";
+            echo "A$fullmarkT";
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
