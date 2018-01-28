@@ -12,7 +12,7 @@
     $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.h_id;");
     $fullMark = mysql_query("select fullMark as fullMarkQ from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
       
-    while( $row = mysql_fetch_assoc($sumPb) && $row1=mysql_fetch_row($fullMark)){
+    while( ($row = mysql_fetch_assoc($sumPb)) && ($row1=mysql_fetch_row($fullMark)) ){
       $sumPlob = $row['sumPloblem'];
       $fullMarkT = $row1['fullMarkQ'];
       echo "<thead class='thead'>";
