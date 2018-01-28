@@ -10,11 +10,10 @@
     $sumPb = mysql_query("select count(*) as sumPloblem from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.h_id;");
-    $fullMark = mysql_query("select fullMark as fullMarkQ from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
-      
-    while( ($row = mysql_fetch_assoc($sumPb)) && ($row1=mysql_fetch_row($fullMark)) ){
+    $fullMark = mysql_query("select fullMark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
+    
+    while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
-      $fullMarkT = $row1['fullMarkQ'];
       echo "<thead class='thead'>";
         echo "<tr style='width:100%'>";
           echo "<th style='width:100px' onclick='sortTable(0)'>";
@@ -25,10 +24,9 @@
             echo "Name";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-          for ($i = 1; $i <= $sumPlob; $i++ && $fullMarkT++ ){
+          for ($i = 1; $i <= $sumPlob; $i++){
             echo "<th style='min-width:30px'>";
-              echo "Ex$i ";
-            echo "$fullMarkT";
+              echo "Ex$i";
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
