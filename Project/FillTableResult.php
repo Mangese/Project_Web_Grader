@@ -14,7 +14,7 @@
       
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
-      $fullmarkT = $row['fullmarkQ'];
+      
       echo "<thead class='thead'>";
         echo "<tr style='width:100%'>";
           echo "<th style='width:100px' onclick='sortTable(0)'>";
@@ -27,8 +27,8 @@
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
             echo "<th style='min-width:30px'>";
-              echo "Ex$i";
-            echo "A$fullmarkT";
+              echo "Ex$i ";
+            echo "$fullmark";
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
