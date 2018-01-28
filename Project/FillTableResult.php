@@ -25,7 +25,7 @@
             echo "Name";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-          for ($i = 1; $i <= $sumPlob; $i++){
+          for ($i = 1; $i <= $sumPlob; $i++ && $fullMarkT++ ){
             echo "<th style='min-width:30px'>";
               echo "Ex$i ";
             echo "$fullMarkT";
