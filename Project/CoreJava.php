@@ -67,7 +67,40 @@ if($conn != FALSE)
 			$count = $count+1;
 			$countNameIn = $count.".in";
 			$countNameOut = $count.".out";
-
+			$countAll = $countAll + 1;
+			if($re != 124)
+			{
+				$array_out = file($target.$OutputFromSubmit,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
+				$array_in = file($baseTarget.$UnzipTargetOut.$countNameOut,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
+				$trimmed1 = array_map(function($item)
+				{
+					return preg_replace('/\s+/','',$item);
+				},$array_in);
+				$trimmed2 = array_map(function($item)
+				{
+					return preg_replace('/\s+/','',$item);
+				},$array_out);
+				$result = ($trimmed1 === $trimmed2);
+				if(!$result)
+				{
+					$status = "F";
+					$page = 2;
+				}
+				else
+				{
+					$countCorrect = $countCorrect+1;	
+				}
+				exec("rm $target$OutputFromSubmit");
+			}
+			else
+			{
+				$status = "T";
+				$page = 3;
+			}
+			$count = $count+1;
+			$countNameIn = $count.".in";
+			$countNameOut = $count.".out";
+			echo "<script> alert('Result = $status') </script>";
 		}
 	}
 }
