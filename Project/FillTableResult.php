@@ -29,7 +29,11 @@
               echo "Ex$i ";
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];
+            if($Full === NULL){
+              echo "is null";
+            }else{
             echo "( $Full )";
+            }
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
