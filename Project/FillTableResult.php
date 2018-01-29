@@ -26,10 +26,10 @@
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
             echo "<th style='min-width:30px'>";
-              echo "Ex$i";
+              echo "Ex$i ";
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];
-            echo " $Full";
+            echo "( $Full )";
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
