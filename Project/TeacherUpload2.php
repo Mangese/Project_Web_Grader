@@ -118,12 +118,15 @@
 			  
 			  var fullMarkV = document.getElementById("fullMark");
 			  var setMarkV = document.getElementById("setMark");
+			  var markSubBtnV = document.getElementById("markSubBtn");
 			    if (getFullMark != "") {
 				fullMarkV .style.display = "block";
 				setMarkV .style.display = "block";
+				markSubBtnV .style.display = "block";
 			    } else {
 				fullMarkV .style.display = "none";
-				setMarkV .style.display = "none";    
+				setMarkV .style.display = "none";
+				markSubBtnV .style.display = "none";
 			    }
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
@@ -1134,7 +1137,7 @@
                 </div> -->
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="button" class="btn btn-success">Mark submit</button>
+                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success">Mark submit</button>
                 </div>
               </div>
             </div>
