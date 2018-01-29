@@ -70,8 +70,8 @@
       $('#accountManagementTb tbody tr').remove();
       // str = $("#selSectionHw").val();
       typeSearch = $("#selectType").val();
-      // sidSearch = $("#SIDSearch").val();
-      var sidSearch = document.getElementById("SIDSearch").value;
+      sidSearch = $("#SIDSearch").val();
+      // var sidSearch = document.getElementById("SIDSearch").value;
       nameSearch = $("#nameSearch").val();
       alert(typeSearch);
       alert(sidSearch);
