@@ -116,12 +116,15 @@
                     // 			  alert(qq);
 			  alert(getFullMark);
 			  var fullMarkV = document.getElementById("fullMark");
+			  var setMarkV = document.getElementById("setMark");
 			 
-    if (getFullMark == '') {
-        fullMarkV.style.display = "block";
-    } else {
-        fullMarkV.style.display = "none";
-    }
+			    if (getFullMark != '') {
+				fullMarkV.style.display = "block";
+				setMarkV.style.display = "block";
+			    } else {
+				fullMarkV.style.display = "none";
+				setMarkV.style.display = "none";
+			    }
 			  
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
@@ -1115,7 +1118,7 @@
                           <h5 id='submitCount'></h5>
                         </div>
                         <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
-                          <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
+                          <input type="text" id='setMark' style="border:none; text-align:right;" name="" placeholder="Mark">
                         </div>
                         <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
                           <h5 id='fullMark'>/Full mark</h5>
