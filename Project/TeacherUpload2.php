@@ -117,16 +117,13 @@
 // 			  alert(getFullMark);
 			  var fullMarkV = document.getElementById("fullMark");
 			  var setMarkV = document.getElementById("setMark");
-// 			  var markSubmitfooterV = document.getElementById("markSubmitfooter");
 			 markSubmitfooterV.style.display = "block";
 			    if (getFullMark != '') {
 				fullMarkV.style.display = "block";
 				setMarkV.style.display = "block";
-// 				markSubmitfooterV.style.display = "block";
 			    } else {
 				fullMarkV.style.display = "none";
-				setMarkV.style.display = "none";
-// 				markSubmitfooterV.style.display = "none";    
+				setMarkV.style.display = "none";  
 			    }
 			  
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
@@ -1136,7 +1133,7 @@
                   <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
                   <!- - <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> - ->
                 </div> -->
-                <div class="modal-footer" id="markSubmitfooter">
+                <div class="modal-footer" >
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
                   <button type="button" class="btn btn-success">Mark submit</button>
                 </div>
