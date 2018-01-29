@@ -109,23 +109,11 @@
                     });
 
                   }
-                  function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
+                  function ResultModalHeader(x, y, z, qq, stuid, submitcount) {
                     // alert(x);
                     // alert(y);
                     //                     alert(submitcount);
                     // 			  alert(qq);
-// 			  alert(getFullMark);
-			  var fullMarkV = document.getElementById("fullMark");
-			  var setMarkV = document.getElementById("setMark");
-			 markSubmitfooterV.style.display = "block";
-			    if (getFullMark != '') {
-				fullMarkV.style.display = "block";
-				setMarkV.style.display = "block";
-			    } else {
-				fullMarkV.style.display = "none";
-				setMarkV.style.display = "none";  
-			    }
-			  
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
                     //submitCount
@@ -188,7 +176,7 @@
                         dateName = "datetimepicker" + num.toString() + "Name";
                         timeName = "timepicker" + num.toString() + "Name";
                         fullMarkName = "fullMark" + num.toString() + "Name";
-                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
+                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "" || document.getElementById(fullMarkName).value == "") {
                           x = 1;
                         }
                       }
@@ -1118,7 +1106,7 @@
                           <h5 id='submitCount'></h5>
                         </div>
                         <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
-                          <input type="text" id='setMark' style="border:none; text-align:right;" name="" placeholder="Mark">
+                          <input type="text" style="border:none; text-align:right;" name="" placeholder="Mark">
                         </div>
                         <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
                           <h5 id='fullMark'>/Full mark</h5>
@@ -1133,7 +1121,7 @@
                   <button type="button" class="btn btn-success" data-dismiss="modal">Download</button>
                   <!- - <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3" onclick="createSec();">Create</button> - ->
                 </div> -->
-                <div class="modal-footer" >
+                <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
                   <button type="button" class="btn btn-success">Mark submit</button>
                 </div>
