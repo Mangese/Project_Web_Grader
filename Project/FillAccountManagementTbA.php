@@ -8,6 +8,8 @@
     $TSR = $_REQUEST["typeSearch"];
     $SIDSR = $_REQUEST["sidSearch"];
     $NSR = $_REQUEST["nameSearch"];
+    $message = "test alert in php";
+    echo "<script type='text/javascript'>alert('$message');</script>";
     $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type='$TSR' and student_id='$SIDSR' and firstname='$NSR' ;");
     while($row = mysql_fetch_assoc($result))
