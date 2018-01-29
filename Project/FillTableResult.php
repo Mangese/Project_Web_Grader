@@ -10,7 +10,7 @@
     $sumPb = mysql_query("select count(*) as sumPloblem from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.h_id;");
-    $fullMark = mysql_query("select fullMark as fullMark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
+    $fullMark = mysql_query("select fullMark as Mark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
     
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
@@ -27,8 +27,8 @@
           for ($i = 1; $i <= $sumPlob; $i++){
             echo "<th style='min-width:30px'>";
               echo "Ex$i";
-            $rowFullMark = mysql_fetch_assoc($FullMark);
-            $Full = $rowFullMark['fullMark'];
+            $rowFullMark = mysql_fetch_assoc($fullMark);
+            $Full = $rowFullMark['Mark'];
             echo "$Full";
             echo "</th>";
           }
