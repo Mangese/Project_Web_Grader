@@ -68,10 +68,8 @@
 
       alert("in fun fillaccountManagementTb");
       $('#accountManagementTb tbody tr').remove();
-      // str = $("#selSectionHw").val();
       typeSearch = $("#selectType").val();
       sidSearch = $("#SIDSearch").val();
-      // var sidSearch = document.getElementById("SIDSearch").value;
       nameSearch = $("#nameSearch").val();
       alert(typeSearch);
       alert(sidSearch);
@@ -83,7 +81,7 @@
           $('#accountManagementTb').append(this.responseText);
         }
       }
-      xmlhttp.open("POST", "FillAccountManagementTbA.php?test=" + str, true);
+      xmlhttp.open("POST", "FillAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
       xmlhttp.send();
     }
   </script>
