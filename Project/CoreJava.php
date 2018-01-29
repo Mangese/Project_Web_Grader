@@ -27,13 +27,13 @@ if($conn != FALSE)
 	$baseTargetToCompile = "File/";
 	$rm = "*";
 	$OutReturnValue = "File/UnzipPlace/Computer";
-	echo "<script> alert('rm $baseTargetToCompile$UnzipTarget$rm') </script>";
-	echo "<script> alert('javac $baseTargetToCompile$UnzipTarget$rm') </script>";
+	//echo "<script> alert('rm $baseTargetToCompile$UnzipTarget$rm') </script>";
+	//echo "<script> alert('javac $baseTargetToCompile$UnzipTarget$rm') </script>";
 	exec("rm $baseTargetToCompile$UnzipTarget$rm");
 	exec("unzip $baseTargetToCompile$file_name -d $baseTargetToCompile$UnzipTarget");
 	exec("javac $baseTargetToCompile$UnzipTarget$rm",$outC,$reC);
-	echo "<script> alert('Out Error Compile = $outC') </script>";
-	echo "<script> alert('Out result Com = $reC') </script>";
+	//echo "<script> alert('Out Error Compile = $outC') </script>";
+	//echo "<script> alert('Out result Com = $reC') </script>";
 	if(!$re1)
 	{
 		$testCase = mysql_query("select InputFile as input,OutputFile as output from homework h join problem p on p.p_id = h.p_id where h.h_id = '$PN';"); 
@@ -60,13 +60,10 @@ if($conn != FALSE)
 		$OutputFromSubmit = "output.txt";	
 		while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
 		{
-			echo "<script> alert('timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit'); </script>";
+		//	echo "<script> alert('timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit'); </script>";
 			exec("timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$outR,$reR);
-			echo "<script> alert('Out error Run = $outR') </script>";
-			echo "<script> alert('Out result Run = $reR') </script>";
-			$count = $count+1;
-			$countNameIn = $count.".in";
-			$countNameOut = $count.".out";
+		//	echo "<script> alert('Out error Run = $outR') </script>";
+		//	echo "<script> alert('Out result Run = $reR') </script>";
 			$countAll = $countAll + 1;
 			if($re != 124)
 			{
