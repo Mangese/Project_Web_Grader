@@ -115,6 +115,14 @@
                     //                     alert(submitcount);
                     // 			  alert(qq);
 			  alert(getFullMark);
+			  var fullMarkV = document.getElementById("fullMark");
+			 
+    if (getFullMark == '') {
+        fullMarkV.style.display = "block";
+    } else {
+        fullMarkV.style.display = "none";
+    }
+			  
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
                     //submitCount
