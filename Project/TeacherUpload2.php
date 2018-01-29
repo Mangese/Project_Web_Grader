@@ -118,7 +118,7 @@
 			  var fullMarkV = document.getElementById("fullMark");
 			  var setMarkV = document.getElementById("setMark");
 			  var markSubmitfooterV = document.getElementById("markSubmitfooter");
-			 
+			 markSubmitfooterV.style.display = "block";
 			    if (getFullMark != '') {
 				fullMarkV.style.display = "block";
 				setMarkV.style.display = "block";
