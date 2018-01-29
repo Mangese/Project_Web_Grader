@@ -27,7 +27,7 @@ if($conn != FALSE)
 	$baseTargetToCompile = "File/";
 	$rm = "*";
 	$OutReturnValue = "File/UnzipPlace/Computer";
-	exec("rm $baseTarget$UnzipTarget$rm");
+	exec("rm $baseTargetToCompile$UnzipTarget$rm");
 	exec("unzip $baseTargetToCompile$file_name -d $baseTarget$UnzipTarget");
 	exec("javac $baseTargetToCompile$UnzipTarget$rm",$outC,$reC);
 	echo "<script> alert('Out Error Compile = $outC') </script>";
