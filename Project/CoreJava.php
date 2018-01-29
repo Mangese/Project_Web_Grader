@@ -34,7 +34,7 @@ if($conn != FALSE)
 	exec("javac $baseTargetToCompile$UnzipTarget$rm",$outC,$reC);
 	//echo "<script> alert('Out Error Compile = $outC') </script>";
 	//echo "<script> alert('Out result Com = $reC') </script>";
-	if(!$re1)
+	if(!$reC)
 	{
 		$testCase = mysql_query("select InputFile as input,OutputFile as output from homework h join problem p on p.p_id = h.p_id where h.h_id = '$PN';"); 
 		$baseTarget = "Problem/";
