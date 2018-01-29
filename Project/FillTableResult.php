@@ -61,6 +61,7 @@
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
           $HidModal = $row['hid'];
+          $fullMarkModal = $row['fullMark'];
           $numprob = $numprob + 1;
           $submitCountResult = mysql_query(" select count(*) as num from submit where u_id = '$ID' and h_id = '$HidModal';");
           while($row = mysql_fetch_assoc($submitCountResult)){
@@ -70,10 +71,10 @@
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
             }
             else {
-              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
 //               echo '<i class="fa fa-times" aria-hidden="true" style="color:#E74C3C" onclick = ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,"' . $NAME. '"); data-toggle="modal" data-target="#modalSourceFileSend">''</i>';
               
             }
