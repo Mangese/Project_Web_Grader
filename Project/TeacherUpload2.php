@@ -117,16 +117,16 @@
 // 			  alert(getFullMark);
 			  var fullMarkV = document.getElementById("fullMark");
 			  var setMarkV = document.getElementById("setMark");
-			  var markSubmitfooterV = document.getElementById("markSubmitfooter");
+// 			  var markSubmitfooterV = document.getElementById("markSubmitfooter");
 			 markSubmitfooterV.style.display = "block";
 			    if (getFullMark != '') {
 				fullMarkV.style.display = "block";
 				setMarkV.style.display = "block";
-				markSubmitfooterV.style.display = "block";
+// 				markSubmitfooterV.style.display = "block";
 			    } else {
 				fullMarkV.style.display = "none";
 				setMarkV.style.display = "none";
-				markSubmitfooterV.style.display = "none";    
+// 				markSubmitfooterV.style.display = "none";    
 			    }
 			  
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
