@@ -176,7 +176,7 @@
                         dateName = "datetimepicker" + num.toString() + "Name";
                         timeName = "timepicker" + num.toString() + "Name";
                         fullMarkName = "fullMark" + num.toString() + "Name";
-                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "" || document.getElementById(fullMarkName).value == "") {
+                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
                       }
