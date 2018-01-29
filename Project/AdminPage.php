@@ -107,14 +107,19 @@
         <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:5px; justify-content: space-between;">
 
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="Radio" id="Radio1" value="student" checked>
+            <!-- <input class="form-check-input" type="radio" name="Radio" id="Radio1" value="student" checked>
             <label class="form-check-label" for="Radio1">
                             Student
                         </label>
             <input class="form-check-input ml-3" type="radio" name="Radio" id="Radio2" value="teacher">
             <label class="form-check-label" for="Radio2">
                             Teacher
-                        </label>
+                        </label> -->
+            <select class="form-control ml-3" id="selectType">
+                            <option value="">Please select type</option>
+                            <option value="S">Student</option>
+                            <option value="T">Teacher</option>
+                        </select>
           </div>
 
           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Add Account</button>
@@ -210,11 +215,12 @@
 
         <div class="form-inline mx-2 mb-3">
           <label>Search by</label>
-          <select class="form-control ml-3" id="exampleFormControlSelect1">
+          <!-- <select class="form-control ml-3" id="exampleFormControlSelect1">
                         <option value="name">Name</option>
                         <option value="SID">Student ID</option>
-                    </select>
-          <input class="form-control ml-3" type="text" placeholder="Search">
+                    </select> -->
+          <input class="form-control ml-3" type="text" id="" name="" placeholder="StudentID">
+          <input class="form-control ml-3" type="text" id="" name="" placeholder="Name">
           <button type="button" class="btn btn-secondary ml-3" onclick="fillaccountManagementTb()">Search</button>
 
         </div>
