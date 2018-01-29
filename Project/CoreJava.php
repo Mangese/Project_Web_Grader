@@ -30,7 +30,7 @@ if($conn != FALSE)
 	exec("rm $baseTarget$UnzipTarget$rm");
 	exec("unzip $baseTarget$file_name -d $baseTarget$UnzipTarget");
 	exec("javac $baseTarget$UnzipTarget$rm",$outC,$reC);
-	exec("java -classpath $baseTarget$UnzipTarget Computer",$outR,$reR);
+	exec("timeout 1 java -classpath $baseTarget$UnzipTarget Computer",$outR,$reR);
 	echo "<script> alert('Out Error Compile = $outC') </script>";
 	echo "<script> alert('Out result Com = $reC') </script>";
 	echo "<script> alert('Out error Run = $outR') </script>";
