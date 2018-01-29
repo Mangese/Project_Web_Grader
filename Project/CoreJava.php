@@ -61,6 +61,10 @@ if($conn != FALSE)
 			exec("timeout 1 java -classpath $baseTarget$UnzipTarget Computer",$outR,$reR);
 			echo "<script> alert('Out error Run = $outR') </script>";
 			echo "<script> alert('Out result Run = $reR') </script>";
+			$count = $count+1;
+			$countNameIn = $count.".in";
+			$countNameOut = $count.".out";
+
 		}
 	}
 }
