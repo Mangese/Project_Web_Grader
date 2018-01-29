@@ -69,6 +69,8 @@
       alert("in fun fillaccountManagementTb");
       $('#accountManagementTb tbody tr').remove();
       // str = $("#selSectionHw").val();
+      typeSearch = $("#selectType").val();
+      alert(typeSearch);
       str = "";
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -219,8 +221,8 @@
                         <option value="name">Name</option>
                         <option value="SID">Student ID</option>
                     </select> -->
-          <input class="form-control ml-3" type="text" id="" name="" placeholder="StudentID">
-          <input class="form-control ml-3" type="text" id="" name="" placeholder="Name">
+          <input class="form-control ml-3" type="text" id="SIDSearch" name="SIDSearch" placeholder="StudentID">
+          <input class="form-control ml-3" type="text" id="nameSearch" name="nameSearch" placeholder="Name">
           <button type="button" class="btn btn-secondary ml-3" onclick="fillaccountManagementTb()">Search</button>
 
         </div>
