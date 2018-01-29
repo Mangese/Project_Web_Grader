@@ -24,12 +24,12 @@ if($conn != FALSE)
 	$file_name = $tempName;
 	echo "<script> alert('$temp'); </script>";
 	$UnzipTarget = "UnzipPlace/";
-	$baseTarget = "File/";
+	$baseTargetToCompile = "File/";
 	$rm = "*";
 	$OutReturnValue = "File/UnzipPlace/Computer";
 	exec("rm $baseTarget$UnzipTarget$rm");
-	exec("unzip $baseTarget$file_name -d $baseTarget$UnzipTarget");
-	exec("javac $baseTarget$UnzipTarget$rm",$outC,$reC);
+	exec("unzip $baseTargetToCompile$file_name -d $baseTarget$UnzipTarget");
+	exec("javac $baseTargetToCompile$UnzipTarget$rm",$outC,$reC);
 	echo "<script> alert('Out Error Compile = $outC') </script>";
 	echo "<script> alert('Out result Com = $reC') </script>";
 	if(!$re1)
@@ -58,7 +58,7 @@ if($conn != FALSE)
 		$OutputFromSubmit = "output.txt";	
 		while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
 		{
-			echo "<script> alert('timeout 1 java -classpath $baseTarget$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit'); </script>";
+			echo "<script> alert('timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit'); </script>";
 			exec("timeout 1 java -classpath $baseTarget$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$outR,$reR);
 			echo "<script> alert('Out error Run = $outR') </script>";
 			echo "<script> alert('Out result Run = $reR') </script>";
