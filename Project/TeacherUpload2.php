@@ -109,12 +109,12 @@
                     });
 
                   }
-                  function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
+                  function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMarkf) {
                     // alert(x);
                     // alert(y);
                     //                     alert(submitcount);
-                    // 			  alert(qq);
-			  alret(getFullMark);
+                     			  alert(qq);
+			  alret(getFullMarkf);
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
                     //submitCount
