@@ -100,5 +100,24 @@ if($conn != FALSE)
 			echo "<script> alert('Result = $status') </script>";
 		}
 	}
+	echo "<script type = 'text/javascript'>";
+	if($page == 0)
+	{
+		echo "window.location = 'STUDENT_WEB_GRADER_STATUS2.html';";
+	}
+	else if($page == 1)
+	{
+		echo "window.location = 'STUDENT_WEB_GRADER_STATUS1.html';";
+	}
+	else if($page == 2)
+	{
+		echo "window.location = 'STUDENT_WEB_GRADER_STATUS4.html';";
+	}
+	else
+	{
+		echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
+	}
+	echo "</script>";
+
 }
 ?>
