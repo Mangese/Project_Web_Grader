@@ -70,7 +70,11 @@
       $('#accountManagementTb tbody tr').remove();
       // str = $("#selSectionHw").val();
       typeSearch = $("#selectType").val();
+      sidSearch = $("#SIDSearch").val();
+      nameSearch = $("#nameSearch").val();
       alert(typeSearch);
+      alert(sidSearch);
+      alert(nameSearch);
       str = "";
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
