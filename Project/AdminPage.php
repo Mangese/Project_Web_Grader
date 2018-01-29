@@ -41,10 +41,10 @@
   </nav>
 </head>
 
-<?php
+<!-- <?php
   session_start();
 
-  <!-- if(!isset($_SESSION["user"]))
+   if(!isset($_SESSION["user"]))
   {
   echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
   }
@@ -56,8 +56,8 @@
   {
     echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
-  } -->
-  ?>
+  } 
+  ?> -->
 
   <body>
     <script>
