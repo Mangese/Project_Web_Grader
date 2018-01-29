@@ -30,10 +30,38 @@ if($conn != FALSE)
 	exec("rm $baseTarget$UnzipTarget$rm");
 	exec("unzip $baseTarget$file_name -d $baseTarget$UnzipTarget");
 	exec("javac $baseTarget$UnzipTarget$rm",$outC,$reC);
-	exec("timeout 1 java -classpath $baseTarget$UnzipTarget Computer",$outR,$reR);
 	echo "<script> alert('Out Error Compile = $outC') </script>";
 	echo "<script> alert('Out result Com = $reC') </script>";
-	echo "<script> alert('Out error Run = $outR') </script>";
-	echo "<script> alert('Out result Run = $reR') </script>";
+	if(!$re1)
+	{
+		$testCase = mysql_query("select InputFile as input,OutputFile as output from homework h join problem p on p.p_id = h.p_id where h.h_id = '$PN';"); 
+		$baseTarget = "Problem/";
+		while($row = mysql_fetch_assoc($testCase))
+		{
+			$FileNameIn = $row['input'];
+			$FileNameOut = $row['output'];
+		}
+		$UnzipTargetIn = "UnzipInputField/";
+		$UnzipTargetOut = "UnzipOutputField/";
+		$rm = "*";
+		exec("rm $baseTarget$UnzipTargetIn$rm");
+		exec("rm $baseTarget$UnzipTargetOut$rm");
+		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
+		exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
+		$count = 1;
+		$countNameIn = $count.".in";
+		$countNameOut = $count.".out";
+		$page = 1;
+		$countCorrect = 0;
+		$countAll = 0;
+		$status = "P";
+		$OutputFromSubmit = "output.txt";	
+		while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
+		{
+			exec("timeout 1 java -classpath $baseTarget$UnzipTarget Computer",$outR,$reR);
+			echo "<script> alert('Out error Run = $outR') </script>";
+			echo "<script> alert('Out result Run = $reR') </script>";
+		}
+	}
 }
 ?>
