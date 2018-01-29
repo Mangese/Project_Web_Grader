@@ -65,7 +65,7 @@ if($conn != FALSE)
 		//	echo "<script> alert('Out error Run = $outR') </script>";
 		//	echo "<script> alert('Out result Run = $reR') </script>";
 			$countAll = $countAll + 1;
-			if($re != 124)
+			if($reR != 124)
 			{
 				$array_out = file($target.$OutputFromSubmit,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
 				$array_in = file($baseTarget.$UnzipTargetOut.$countNameOut,FILE_IGNORE_NEW_LINES| FILE_SKIP_EMPTY_LINES);
@@ -99,6 +99,10 @@ if($conn != FALSE)
 			$countNameOut = $count.".out";
 			echo "<script> alert('Result = $status') </script>";
 		}
+	}
+	else
+	{
+		exec("rm $baseTargetToCompile$file_name");
 	}
 	echo "<script type = 'text/javascript'>";
 	if($page == 0)
