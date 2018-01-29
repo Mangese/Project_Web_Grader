@@ -30,7 +30,7 @@ if($conn != FALSE)
 	echo "<script> alert('rm $baseTargetToCompile$UnzipTarget$rm') </script>";
 	echo "<script> alert('javac $baseTargetToCompile$UnzipTarget$rm') </script>";
 	exec("rm $baseTargetToCompile$UnzipTarget$rm");
-	exec("unzip $baseTargetToCompile$file_name -d $baseTarget$UnzipTarget");
+	exec("unzip $baseTargetToCompile$file_name -d $baseTargetToCompile$UnzipTarget");
 	exec("javac $baseTargetToCompile$UnzipTarget$rm",$outC,$reC);
 	echo "<script> alert('Out Error Compile = $outC') </script>";
 	echo "<script> alert('Out result Com = $reC') </script>";
