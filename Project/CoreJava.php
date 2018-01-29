@@ -26,10 +26,11 @@ if($conn != FALSE)
 	$UnzipTarget = "UnzipPlace/";
 	$baseTarget = "File/";
 	$rm = "*";
+	$OutReturnValue = "File/UnzipPlace/Computer";
 	exec("rm $baseTarget$UnzipTarget$rm");
 	exec("unzip $baseTarget$file_name -d $baseTarget$UnzipTarget");
 	exec("javac $baseTarget$UnzipTarget$rm",$outC,$reC);
-	exec("java $baseTarget$UnzipTargetComputer",$outR,$reR);
+	exec("java $OutReturnValue",$outR,$reR);
 	echo "<script> alert('Out Error Compile = $outC') </script>";
 	echo "<script> alert('Out result Com = $reC') </script>";
 	echo "<script> alert('Out error Run = $outR') </script>";
