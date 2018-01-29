@@ -61,7 +61,7 @@ if($conn != FALSE)
 		while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
 		{
 			echo "<script> alert('timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit'); </script>";
-			exec("timeout 1 java -classpath $baseTarget$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$outR,$reR);
+			exec("timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$outR,$reR);
 			echo "<script> alert('Out error Run = $outR') </script>";
 			echo "<script> alert('Out result Run = $reR') </script>";
 			$count = $count+1;
