@@ -117,10 +117,13 @@
  			  alert(getFullMark);
 			  
 			  var fullMarkV = document.getElementById("fullMark");
-			    if (getFullMark == "") {
+			  var setMarkV = document.getElementById("setMark");
+			    if (getFullMark != "") {
 				fullMarkV .style.display = "block";
+				setMarkV .style.display = "block";
 			    } else {
 				fullMarkV .style.display = "none";
+				setMarkV .style.display = "none";    
 			    }
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
