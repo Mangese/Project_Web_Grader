@@ -412,7 +412,7 @@
       <div class="tab-pane" id="tab2" role="tabpane2">
 
         <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:5px; justify-content: space-between;">
-          <div class="form-inline mx-2 mb-3">
+          <div class="form-inline">
             <label>Class ID</label>
             <input class="form-control ml-3 mr-4" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
             <label>Class Name</label>
@@ -420,29 +420,31 @@
             <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
           </div>
 
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addClass">Add Class</button>
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addClass">Create Class</button>
         </form>
         
         <!-- Modal -->
-        <!-- <div class="modal fade" id="addClass" role="dialog">
-          <div class="modal-dialog modal-md"> -->
+        <div class="modal fade" id="addClass" role="dialog">
+          <div class="modal-dialog modal-md">
             <!-- Modal content-->
-            <!-- <div class="modal-content">
+            <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Add Class</h4>
+                <h4 class="modal-title">Create Class</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body">
+                <label>Class Name</label><br/>
+                <input class="form-control ml-3" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-success" onclick="">Save</button>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <!-- <div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -460,8 +462,8 @@
               </div>
             </div>
           </div>
-        </div>
-        
+        </div> -->
+
       </div>
       <!-- End Tab2 -->
 
