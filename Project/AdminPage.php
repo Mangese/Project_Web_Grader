@@ -76,7 +76,7 @@
 
     function fillaccountManagementTb() {
 
-      alert("in fun fillaccountManagementTb");
+      // alert("in fun fillaccountManagementTb");
       $('#accountManagementTb tbody tr').remove();
       typeSearch = $("#selectType").val();
       sidSearch = $("#SIDSearch").val();
