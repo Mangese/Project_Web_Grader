@@ -119,7 +119,7 @@
                     var fullMarkV = document.getElementById("fullMark");
                     var setMarkV = document.getElementById("setMark");
                     var markSubBtnV = document.getElementById("markSubBtn");
-                    document.getElementById("fullMark").value = getFullMark;
+                    document.getElementById('fullMark').innerHTML = "/ " + getFullMark;
                     if (getFullMark != "") {
                       fullMarkV.style.display = "block";
                       setMarkV.style.display = "block";
