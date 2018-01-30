@@ -96,7 +96,7 @@ if($conn != FALSE)
 		if($countAll == 0)
 		{
 			$status = "F";	
-			$page = 2;
+			$page = 4;
 		}
 		mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName','$countCorrect','$countAll','');");
 		exec("rm $target$temp.txt");
@@ -118,6 +118,10 @@ if($conn != FALSE)
 	else if($page == 2)
 	{
 		echo "window.location = 'STUDENT_WEB_GRADER_STATUS4.html';";
+	}
+	else if($page == 4)
+	{
+		echo "window.location = 'STUDENT_WEB_GRADER_STATUS5.html';";
 	}
 	else
 	{
