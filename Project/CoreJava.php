@@ -98,6 +98,16 @@ if($conn != FALSE)
 			$countNameIn = $count.".in";
 			$countNameOut = $count.".out";
 			echo "<script> alert('Result = $status') </script>";
+			
+		}
+		if($countAll == 0)
+		{
+			$status = "E";	
+			$page = 4;
+		}
+		else
+		{
+			mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName','$countCorrect','$countAll','');");
 		}
 	}
 	else
