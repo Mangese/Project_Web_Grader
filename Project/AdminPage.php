@@ -61,6 +61,15 @@
 
 <body>
   <script>
+    function selectTypeOnChange() {
+      typeSearch = $("#selectType").val();
+      alert(typeSearch);
+      if (typeSearch == 'T') {
+        document.getElementById("SIDSearch").disabled = true;
+      }
+
+    }
+
     function fillaccountManagementTb() {
       // x = document.getElementById("selSectionHw").value;
       // y = document.getElementById("AssignButton");
@@ -74,7 +83,7 @@
       alert(typeSearch);
       alert(sidSearch);
       alert(nameSearch);
-      str = "";
+
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -120,7 +129,7 @@
             <label class="form-check-label" for="Radio2">
                             Teacher
                         </label> -->
-            <select class="form-control ml-3" id="selectType">
+            <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
                             <option value="">Please select type</option>
                             <option value="S">Student</option>
                             <option value="T">Teacher</option>
