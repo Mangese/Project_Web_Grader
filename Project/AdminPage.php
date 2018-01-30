@@ -141,7 +141,7 @@
                         </select>
           </div>
 
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Add Account</button>
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Create Account</button>
 
         </form>
 
@@ -152,7 +152,7 @@
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Add Account</h4>
+                  <h4 class="modal-title">Create Account</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -223,8 +223,6 @@
                 </div>
 
                 <div class="modal-footer">
-                  <!--<button type="button" onclick="goRegister()" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
-                  <!--<button type="submit" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
                   <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Create Account</button>
                 </div>
               </div>
@@ -397,16 +395,9 @@
                           maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                       </div>
                     </div>
-                    <!-- <div class="form-group row">
-                                        <div class="col-sm-12">
-                                        <p id="message"></p>
-                                        </div>
-                                    </div> -->
                   </div>
 
                   <div class="modal-footer">
-                    <!--<button type="button" onclick="goRegister()" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
-                    <!--<button type="submit" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
                     <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Save</button>
                   </div>
                 </div>
@@ -418,17 +409,68 @@
       </div>
       <!-- End Tab1 -->
 
-      <div class="tab-pane active" id="tab2" role="tabpane2">
+      <div class="tab-pane" id="tab2" role="tabpane2">
 
+        <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:5px; justify-content: space-between;">
+          <div class="form-inline mx-2 mb-3">
+            <label>Class ID</label>
+            <input class="form-control ml-3 mr-4" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
+            <label>Class Name</label>
+            <input class="form-control ml-3" type="text" id="classNameSearch" name="classNameSearch" placeholder="Class Name">
+            <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+          </div>
+
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addClass">Add Class</button>
+        </form>
+        
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="addClass" role="dialog">
+          <div class="modal-dialog modal-md"> -->
+            <!-- Modal content-->
+            <!-- <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Add Class</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success" onclick="">Save</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="modelTitleId">Create Class</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <label>Class Name</label>
+                <input class="form-control ml-3" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success" onclick="">Create Class</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
       <!-- End Tab2 -->
 
-      <div class="tab-pane active" id="tab3" role="tabpane3">
+      <div class="tab-pane" id="tab3" role="tabpane3">
 
       </div>
       <!-- End Tab3 -->
 
-      <div class="tab-pane active" id="tab4" role="tabpane4">
+      <div class="tab-pane" id="tab4" role="tabpane4">
 
       </div>
       <!-- End Tab4 -->
