@@ -66,6 +66,7 @@
       // alert(typeSearch);
       if (typeSearch == 'T') {
         document.getElementById("SIDSearch").disabled = true;
+        typeSearch ='';
       }
       else {
         document.getElementById("SIDSearch").disabled = false;
