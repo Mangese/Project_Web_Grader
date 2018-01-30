@@ -109,25 +109,25 @@
                     });
 
                   }
-                  function ResultModalHeader(x, y, z, qq, stuid, submitcount,getFullMark) {
-                	  alert(x);
-        	          alert(y);
-                          alert(submitcount);
-             		  alert(qq);
- 			  alert(getFullMark);
-			  
-			  var fullMarkV = document.getElementById("fullMark");
-			  var setMarkV = document.getElementById("setMark");
-			  var markSubBtnV = document.getElementById("markSubBtn");
-			    if (getFullMark != "") {
-				fullMarkV .style.display = "block";
-				setMarkV .style.display = "block";
-				markSubBtnV .style.display = "block";
-			    } else {
-				fullMarkV .style.display = "none";
-				setMarkV .style.display = "none";
-				markSubBtnV .style.display = "none";
-			    }
+                  function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
+                    alert(x);
+                    alert(y);
+                    alert(submitcount);
+                    alert(qq);
+                    alert(getFullMark);
+
+                    var fullMarkV = document.getElementById("fullMark");
+                    var setMarkV = document.getElementById("setMark");
+                    var markSubBtnV = document.getElementById("markSubBtn");
+                    if (getFullMark != "") {
+                      fullMarkV.style.display = "block";
+                      setMarkV.style.display = "block";
+                      markSubBtnV.style.display = "block";
+                    } else {
+                      fullMarkV.style.display = "none";
+                      setMarkV.style.display = "none";
+                      markSubBtnV.style.display = "none";
+                    }
                     document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
                     document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
                     //submitCount
@@ -190,7 +190,7 @@
                         dateName = "datetimepicker" + num.toString() + "Name";
                         timeName = "timepicker" + num.toString() + "Name";
                         fullMarkName = "fullMark" + num.toString() + "Name";
-                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "" || document.getElementById(fullMarkName).value == "") {
+                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
                       }
@@ -218,10 +218,10 @@
                           alert(dateName);
                           alert(timeName);
                           alert(fullMarkName);
-				alert(document.getElementById(dateName).value);
-				alert(document.getElementById(timeName).value);
-				alert(document.getElementById(fullMarkName).value);
-                          
+                          alert(document.getElementById(dateName).value);
+                          alert(document.getElementById(timeName).value);
+                          alert(document.getElementById(fullMarkName).value);
+
                         }
                       });
                     }
@@ -1113,7 +1113,7 @@
                     </thead>
                     <tbody>
                     </tbody>
-			   <div class="container">
+                    <div class="container">
 
                       <div class="row">
                         <div class="col-xs-1 col-sm-1 col-md-5 col-lg-5">
