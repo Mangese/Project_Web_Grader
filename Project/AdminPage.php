@@ -297,22 +297,22 @@
             </thead>
             <tbody>
               <tr>
-                <td style="width:15%" onclick="sortTable1(0)">
+                <td style="width:15%">
                   Student ID
                 </td>
-                <td style="width:15%" onclick="sortTable1(1)">
+                <td style="width:15%">
                   Username
                 </td>
-                <td style="width:15%" onclick="sortTable1(2)">
+                <td style="width:15%">
                   Firstname
                 </td>
-                <td style="width:15%" onclick="sortTable1(3)">
+                <td style="width:15%">
                   Lastname
                 </td>
-                <td style="width:15%" onclick="sortTable1(4)">
+                <td style="width:15%">
                   Department
                 </td>
-                <td style="width:15%" onclick="sortTable1(5)">
+                <td style="width:15%">
                   Email
                 </td>
                 <td style="width:5%">
@@ -411,7 +411,7 @@
 
       <div class="tab-pane" id="tab2" role="tabpane2">
 
-        <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:5px; justify-content: space-between;">
+        <form class="form-inline mx-2 mb-3" style="margin-top:20px; justify-content: space-between;">
           <div class="form-inline">
             <label>Class ID</label>
             <input class="form-control ml-3 mr-4" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
@@ -437,32 +437,72 @@
                 <input class="form-control ml-3" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-success" onclick="">Save</button>
+                <button type="submit" class="btn btn-success" onclick="">Create Class</button>
               </div>
             </div>
           </div>
         </div>
 
+        <!--Table-->
+        <div class="table-wrapper-account">
+          <table class="table table-striped table-hover main" id="accountManagementTb">
+            <thead class="thead">
+              <tr>
+                <th style="width:20%" onclick="sortTable1(0)">
+                  Class ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:50%" onclick="sortTable1(1)">
+                  Class Name
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:15%">
+                  Edit
+                </th>
+                <th style="width:15%">
+                  Delete
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="width:20%">
+                  1
+                </td>
+                <td style="width:50%">
+                  EGCO111 Computer Programming
+                </td>
+                <td style="width:15%">
+                  <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#editClass"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                </td>
+                <td style="width:15%">
+                  <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--End Table-->
+
         <!-- Modal -->
-        <!-- <div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <div class="modal fade" id="editClass" role="dialog">
+          <div class="modal-dialog modal-md">
+            <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title" id="modelTitleId">Create Class</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+                <h4 class="modal-title">Create Class</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-              <div class="modal-body">
-                <label>Class Name</label>
-                <input class="form-control ml-3" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
+              <div class="modal-body mx-2">
+                <label>New Class Name</label><br/>
+                <input class="form-control mx-2" type="text" id="addNewClassName" name="addNewClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-success" onclick="">Create Class</button>
+                <button type="submit" class="btn btn-success" onclick="">Save</button>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
 
       </div>
       <!-- End Tab2 -->
