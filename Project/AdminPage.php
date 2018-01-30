@@ -123,22 +123,14 @@
         <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:10px; justify-content: space-between;">
 
           <div class="form-check form-check-inline">
-            <!-- <input class="form-check-input" type="radio" name="Radio" id="Radio1" value="student" checked>
-            <label class="form-check-label" for="Radio1">
-                            Student
-                        </label>
-            <input class="form-check-input ml-3" type="radio" name="Radio" id="Radio2" value="teacher">
-            <label class="form-check-label" for="Radio2">
-                            Teacher
-                        </label> -->
             <label>
               Select type
             </label>
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
-                            <option value="">All type</option>
-                            <option value="S">Student</option>
-                            <option value="T">Teacher</option>
-                        </select>
+                <option value="">All type</option>
+                <option value="S">Student</option>
+                <option value="T">Teacher</option>
+            </select>
           </div>
 
           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Create Account</button>
@@ -226,31 +218,11 @@
 
         <div class="form-inline mx-2 mb-3">
           <label>Search by</label>
-          <!-- <select class="form-control ml-3" id="exampleFormControlSelect1">
-                        <option value="name">Name</option>
-                        <option value="SID">Student ID</option>
-                    </select> -->
-          <input class="form-control ml-4" type="text" id="SIDSearch" name="SIDSearch" placeholder="StudentID">
+          <input class="form-control ml-4" type="text" id="stdIDSearch" name="stdIDSearch" placeholder="StudentID">
           <input class="form-control ml-3" type="text" id="nameSearch" name="nameSearch" placeholder="Name">
           <button type="button" class="btn btn-secondary ml-3" onclick="fillaccountManagementTb()">Search</button>
 
         </div>
-
-        <!-- <div class="dropdown" style="width:200px">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Search by
-                    </button>
-                    <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Name</a>
-                        <a class="dropdown-item" href="#">Student ID</a>
-                    </div>
-                </div>
-
-                <script>
-                    $(".dropdown-menu a").click(function(){
-                    $(".btn:first-child").html($(this).text()+' <span class="caret"></span>');
-                    });
-                </script> -->
 
         <!--Table-->
         <div class="table-wrapper-account">
