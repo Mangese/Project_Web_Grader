@@ -132,8 +132,8 @@
                             Teacher
                         </label> -->
             <label>
-                          Select type
-                        </label>
+              Select type
+            </label>
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
                             <option value="">All type</option>
                             <option value="S">Student</option>
@@ -215,12 +215,6 @@
                         maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <p id="message"></p>
-                    </div>
-                  </div>
-                </div>
 
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Create Account</button>
@@ -324,88 +318,89 @@
               </tr>
             </tbody>
           </table>
+        </div>
+        <!--End Table-->
 
-          <form name="editAccountModal" method="post">
-            <!-- Modal -->
-            <div class="modal fade" id="myModal2" role="dialog">
-              <div class="modal-dialog modal-sm">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title">Edit Account</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="text" class="form-control" id="txtFirstname2" name="txtFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
-                          oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="text" class="form-control" name="txtLastname2" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
-                          oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="text" class="form-control" name="txtUsername2" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
-                          oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="text" class="form-control" name="txtStudentID2" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
-                          oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <select class="form-control" id="sel2" name="sel2" required oninvalid="this.setCustomValidity('Please select some department');"
-                          oninput="setCustomValidity('')">
-                                                <option value="">Department</option>
-                                                <option value="Biomedical Engineering">Biomedical Engineering</option>
-                                                <option value="Civil Engineering">Civil Engineering</option>
-                                                <option value="Chemical Engineering">Chemical Engineering</option>
-                                                <option value="Computer Engineering">Computer Engineering</option>
-                                                <option value="Electrical Engineering">Electrical Engineering</option>
-                                                <option value="Industrial Engineering">Industrial Engineering</option>
-                                                <option value="Mechanical Engineering">Mechanical Engineering</option>
-                                            </select>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="email" class="form-control" name="txtEmail2" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
-                          oninput="setCustomValidity('')" maxlength=30/>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="password" class="form-control" id="txtNewPassword" name="txtNewPassword" placeholder="New Password" minlength=6 maxlength=30
-                          required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
-                          onkeyup='check();' />
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <div class="col-sm-12">
-                        <input type="password" class="form-control" id="txtNewPassword2" name="txtNewPassword2" placeholder="Confirm New Password" minlength=6
-                          maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
-                      </div>
+        <form name="editAccountModal" method="post">
+          <!-- Modal -->
+          <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Edit Account</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" id="txtFirstname2" name="txtFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
+                        oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                     </div>
                   </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" name="txtLastname2" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                        oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" name="txtUsername2" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" name="txtStudentID2" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
+                        oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <select class="form-control" id="sel2" name="sel2" required oninvalid="this.setCustomValidity('Please select some department');"
+                        oninput="setCustomValidity('')">
+                                              <option value="">Department</option>
+                                              <option value="Biomedical Engineering">Biomedical Engineering</option>
+                                              <option value="Civil Engineering">Civil Engineering</option>
+                                              <option value="Chemical Engineering">Chemical Engineering</option>
+                                              <option value="Computer Engineering">Computer Engineering</option>
+                                              <option value="Electrical Engineering">Electrical Engineering</option>
+                                              <option value="Industrial Engineering">Industrial Engineering</option>
+                                              <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                          </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="email" class="form-control" name="txtEmail2" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
+                        oninput="setCustomValidity('')" maxlength=30/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="password" class="form-control" id="txtNewPassword" name="txtNewPassword" placeholder="New Password" minlength=6 maxlength=30
+                        required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
+                        onkeyup='check();' />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <input type="password" class="form-control" id="txtNewPassword2" name="txtNewPassword2" placeholder="Confirm New Password" minlength=6
+                        maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
+                    </div>
+                  </div>
+                </div>
 
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Save</button>
-                  </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Save</button>
                 </div>
               </div>
             </div>
-          </form>
-        </div>
-        <!--End Table-->
+          </div>
+        </form>
+        
       </div>
       <!-- End Tab1 -->
 
@@ -489,7 +484,7 @@
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Create Class</h4>
+                <h4 class="modal-title">Edit Class</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body mx-2">
@@ -507,6 +502,89 @@
       <!-- End Tab2 -->
 
       <div class="tab-pane" id="tab3" role="tabpane3">
+
+        <div class="form-inline">
+          <label>Search by</label>
+          <input class="form-control ml-3" type="text" id="SIDSearch" name="SIDSearch" placeholder="Section ID">
+          <input class="form-control ml-3" type="text" id="sectionNameSearch" name="sectionNameSearch" placeholder="Section Name">
+          <input class="form-control ml-3" type="text" id="createBySearch" name="createBySearch" placeholder="Lecturer Name">
+          <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+        </div>
+
+        <!--Table-->
+        <div class="table-wrapper-account">
+          <table class="table table-striped table-hover main" id="accountManagementTb">
+            <thead class="thead">
+              <tr>
+                <th style="width:15%" onclick="sortTable1(0)">
+                  Section ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:35%" onclick="sortTable1(1)">
+                  Section Name
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:15%" onclick="sortTable1(2)">
+                  Password
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:15%" onclick="sortTable1(3)">
+                  Create by
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:10%">
+                  Edit
+                </th>
+                <th style="width:10%">
+                  Delete
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="width:15%">
+                  1
+                </td>
+                <td style="width:35%">
+                  EGCO
+                </td>
+                <td style="width:15%">
+                  d9JR24
+                </td>
+                <td style="width:15%">
+                  Teacher1
+                </td>
+                <td style="width:10%">
+                  <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#editSection"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                </td>
+                <td style="width:10%">
+                  <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--End Table-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="editSection" role="dialog">
+          <div class="modal-dialog modal-md">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Edit Section</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body mx-2">
+                <label>New Section Name</label><br/>
+                <input class="form-control" type="text" id="editSectionName" name="editSectionName" placeholder="Section Name">
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success" onclick="">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
       <!-- End Tab3 -->
