@@ -96,6 +96,7 @@ if($conn != FALSE)
 		if($countAll == 0)
 		{
 			$status = "F";	
+			$page = 2;
 		}
 		mysql_query("insert into submit value('','$UID','$PN','$status',DATE_FORMAT(now(),'%H:%i:%s'),DATE_FORMAT(now(),'%Y:%m:%d'),'$tempName','$countCorrect','$countAll','');");
 		exec("rm $target$temp.txt");
