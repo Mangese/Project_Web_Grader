@@ -30,7 +30,7 @@
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];
             if($Full != ''){
-              echo "( $Full )";
+              echo "($Full)";
             }
             echo "</th>";
           }
