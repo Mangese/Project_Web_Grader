@@ -119,9 +119,23 @@
 
       <!-- Tab 1 -->
       <div class="tab-pane active" id="tab1" role="tabpanel">
-        <input type="text">
-        <button>blink</button>
+        
+        <!--Search input-->
+        <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:10px; justify-content: space-between;">
 
+          <div class="form-check form-check-inline">
+            <label>Select type</label>
+            <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
+                <option value="">All type</option>
+                <option value="S">Student</option>
+                <option value="T">Teacher</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Create Account</button>
+
+        </form>
+        
       </div>
       <!-- End Tab1 -->
 
