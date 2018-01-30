@@ -67,6 +67,10 @@
       if (typeSearch == 'T') {
         document.getElementById("SIDSearch").disabled = true;
       }
+      else {
+        document.getElementById("SIDSearch").disabled = false;
+      }
+
 
     }
 
