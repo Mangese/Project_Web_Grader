@@ -134,8 +134,7 @@
 
         </form>
 
-        <div>
-        <form name="addAccountModal" method="post">
+        <div name="addAccountModal" method="post">
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-md">
@@ -212,7 +211,6 @@
               </div>
             </div>
           </div>
-        </form>
         </div>
 
         <div class="form-inline mx-2 mb-3">
