@@ -14,7 +14,11 @@
     // echo "<script type='text/javascript'>alert('$SIDSR');</script>";
     // echo "<script type='text/javascript'>alert('$NSR');</script>";
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
-    $result = mysql_query("select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
+    if($TSR != 'S'){
+      $result = mysql_query("select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
+    }else{
+      $result = mysql_query("select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
+    }
     while($row = mysql_fetch_assoc($result))
     {
       
