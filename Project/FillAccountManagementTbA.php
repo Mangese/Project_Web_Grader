@@ -30,10 +30,10 @@
       $EM = $row['Email'];
       echo "<tr>";
       echo "<td style='width:15%'>";
-      echo "$UN";
+      echo "$SID";
       echo "</td>";
       echo "<td style='width:15%'>";
-      echo "$SID";
+      echo "$UN";
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "$FN";
