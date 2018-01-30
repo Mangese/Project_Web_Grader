@@ -224,76 +224,7 @@
 
         </div>
 
-        <!--Table-->
-        <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="accountManagementTb">
-            <thead class="thead">
-              <tr>
-                <th style="width:15%" onclick="sortTable1(0)">
-                  Student ID
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:15%" onclick="sortTable1(1)">
-                  Username
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:15%" onclick="sortTable1(2)">
-                  Firstname
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:15%" onclick="sortTable1(3)">
-                  Lastname
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:15%" onclick="sortTable1(4)">
-                  Department
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:15%" onclick="sortTable1(5)">
-                  Email
-                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                </th>
-                <th style="width:5%">
-                  Edit
-                </th>
-                <th style="width:5%">
-                  Delete
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="width:15%">
-                  Student ID
-                </td>
-                <td style="width:15%">
-                  Username
-                </td>
-                <td style="width:15%">
-                  Firstname
-                </td>
-                <td style="width:15%">
-                  Lastname
-                </td>
-                <td style="width:15%">
-                  Department
-                </td>
-                <td style="width:15%">
-                  Email
-                </td>
-                <td style="width:5%">
-                  <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#myModal2"><i class="fa fa-edit" aria-hidden="true"></i></button>
-                </td>
-                <td style="width:5%">
-                  <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-
-        </div>
-        <!--End Table-->
+        
         
       </div>
       <!-- End Tab1 -->
