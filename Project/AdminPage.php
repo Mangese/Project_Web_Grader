@@ -130,8 +130,11 @@
             <label class="form-check-label" for="Radio2">
                             Teacher
                         </label> -->
+            <label>
+                          Select type
+                        </label>
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
-                            <option value="">Please select type</option>
+                            <option value="">All type</option>
                             <option value="S">Student</option>
                             <option value="T">Teacher</option>
                         </select>
