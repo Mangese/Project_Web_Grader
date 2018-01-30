@@ -122,9 +122,7 @@
         <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:10px; justify-content: space-between;">
 
           <div class="form-check form-check-inline">
-            <label>
-              Select type
-            </label>
+            <label>Select type</label>
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
                 <option value="">All type</option>
                 <option value="S">Student</option>
@@ -136,6 +134,7 @@
 
         </form>
 
+        <div>
         <form name="addAccountModal" method="post">
           <!-- Modal -->
           <div class="modal fade" id="myModal" role="dialog">
@@ -214,6 +213,7 @@
             </div>
           </div>
         </form>
+        </div>
 
         <div class="form-inline mx-2 mb-3">
           <label>Search by</label>
