@@ -63,7 +63,7 @@
   <script>
     function selectTypeOnChange() {
       typeSearch = $("#selectType").val();
-      alert(typeSearch);
+      // alert(typeSearch);
       if (typeSearch == 'T') {
         document.getElementById("SIDSearch").disabled = true;
       }
@@ -75,18 +75,15 @@
     }
 
     function fillaccountManagementTb() {
-      // x = document.getElementById("selSectionHw").value;
-      // y = document.getElementById("AssignButton");
-
 
       alert("in fun fillaccountManagementTb");
       $('#accountManagementTb tbody tr').remove();
       typeSearch = $("#selectType").val();
       sidSearch = $("#SIDSearch").val();
       nameSearch = $("#nameSearch").val();
-      alert(typeSearch);
-      alert(sidSearch);
-      alert(nameSearch);
+      // alert(typeSearch);
+      // alert(sidSearch);
+      // alert(nameSearch);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
