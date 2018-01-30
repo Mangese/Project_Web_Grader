@@ -120,7 +120,7 @@
 
       <div class="tab-pane active" id="tab1" role="tabpanel">
         <!--Search input-->
-        <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:5px; justify-content: space-between;">
+        <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:10px; justify-content: space-between;">
 
           <div class="form-check form-check-inline">
             <!-- <input class="form-check-input" type="radio" name="Radio" id="Radio1" value="student" checked>
@@ -236,7 +236,7 @@
                         <option value="name">Name</option>
                         <option value="SID">Student ID</option>
                     </select> -->
-          <input class="form-control ml-3" type="text" id="SIDSearch" name="SIDSearch" placeholder="StudentID">
+          <input class="form-control ml-4" type="text" id="SIDSearch" name="SIDSearch" placeholder="StudentID">
           <input class="form-control ml-3" type="text" id="nameSearch" name="nameSearch" placeholder="Name">
           <button type="button" class="btn btn-secondary ml-3" onclick="fillaccountManagementTb()">Search</button>
 
@@ -413,9 +413,8 @@
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px; justify-content: space-between;">
           <div class="form-inline">
-            <label>Class ID</label>
-            <input class="form-control ml-3 mr-4" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
-            <label>Class Name</label>
+            <label>Search by</label>
+            <input class="form-control ml-3" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
             <input class="form-control ml-3" type="text" id="classNameSearch" name="classNameSearch" placeholder="Class Name">
             <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
           </div>
@@ -432,9 +431,9 @@
                 <h4 class="modal-title">Create Class</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body mx-2">
                 <label>Class Name</label><br/>
-                <input class="form-control ml-3" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
+                <input class="form-control" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-success" onclick="">Create Class</button>
@@ -495,7 +494,7 @@
               </div>
               <div class="modal-body mx-2">
                 <label>New Class Name</label><br/>
-                <input class="form-control mx-2" type="text" id="addNewClassName" name="addNewClassName" placeholder="Class Name">
+                <input class="form-control" type="text" id="addNewClassName" name="addNewClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-success" onclick="">Save</button>
