@@ -142,6 +142,16 @@
                     }
                     xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
                     xmlhttp.send();
+
+                    if (markSubBtnV.onclick) {
+                      alert(x);
+
+                      alert(qq);
+                      alert(setMarkV.value);
+
+                      alert(getFullMark);
+
+                    }
                   }
 
 
