@@ -162,7 +162,8 @@
 
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
-                      if (readyState == 4 && status == 200) {
+                      if (this.readyState == 4 && this.status == 200) {
+                        // eval(responseText);
                         alert("ok");
                       }
                     }
