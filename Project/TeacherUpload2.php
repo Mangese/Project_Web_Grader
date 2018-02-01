@@ -116,6 +116,10 @@
                     // alert(submitcount);
                     alert(qq);
                     alert(getFullMark);
+                    $("#idmoc").val(x);
+                    $("#pidmoc").val(y);
+                    $("#fullmarkmoc").val(getFullMark);
+
 
                     var fullMarkV = document.getElementById("fullMark");
                     var setMarkV = document.getElementById("setMark");
@@ -401,9 +405,10 @@
       }
     </script>
     <!--End script-->
-
+    <!-- <input id="idmoc" type="hidden"> -->
     <input id="idmoc" type="hidden">
     <input id="pidmoc" type="hidden">
+    <input id="fullmarkmoc" type="hidden">
 
     <div class="container-table">
 
