@@ -34,9 +34,9 @@ if(mysql_num_rows($result)==1)
 			$_SESSION["lastname"] = $row['lastname'];
 			$_SESSION["utype"] = $row['utp'];
 			$_SESSION["uid"] = $row['uid'];
-			if(strcmp($row['utp'],"T"))
+			if(!strcmp($row['utp'],"T"))
 			{
-			echo "<script> window.location = 'StudentUpload1.php' </script>";
+			echo "<script> window.location = 'TeacherUpload2.php' </script>";
 			}
 			else if(!strcmp($row['utp'],"A"))
 			{
@@ -44,7 +44,7 @@ if(mysql_num_rows($result)==1)
 			}
 			else
 			{
-			echo "<script> window.location = 'TeacherUpload2.php' </script>";
+			echo "<script> window.location = 'StudentUpload1.php' </script>";
 			}	
 		}
 		else
