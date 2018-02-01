@@ -163,8 +163,9 @@
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
-                        // eval(responseText);
+
                         alert("ok");
+                        eval(this.responseText);
                       }
                     }
                     xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq, true);
