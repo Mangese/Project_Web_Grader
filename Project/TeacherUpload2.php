@@ -149,6 +149,24 @@
                     xmlhttp.send();
                   }
 
+                  function markSubfunc() {
+
+                    var hidreq = $("#idmoc").val();
+                    alert(hidreq);
+                    // $("#pidmoc").val(y);
+                    // $("#fullmarkmoc").val(getFullMark);
+
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#tb3LastSendFile').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
+                    xmlhttp.send();
+
+                  }
+
 
                   function fillDropDownSection() {
                     var xmlhttp = new XMLHttpRequest();
@@ -406,9 +424,9 @@
     </script>
     <!--End script-->
     <!-- <input id="idmoc" type="hidden"> -->
-    <input id="idmoc" type="">
-    <input id="pidmoc" type="">
-    <input id="fullmarkmoc" type="">
+    <input id="idmoc" type="hidden">
+    <input id="pidmoc" type="hidden">
+    <input id="fullmarkmoc" type="hidden">
 
     <div class="container-table">
 
@@ -1145,7 +1163,7 @@
                 </div> -->
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" data-dismiss="modal">Mark submit</button>
+                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" onclick="markSubfunc();">Mark submit</button>
                 </div>
               </div>
             </div>
