@@ -7,11 +7,11 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UID = $_REQUEST["uidreq"];
      $PID = $_REQUEST["pidreq"];
      $TM = $_REQUEST["setMark"];
-     
+     echo "alert('in php');";
     echo "alert($UID);";
     echo "alert($PID);";
     echo "alert($TM);";
-    echo "alert('test');";
+    
     
     
     
