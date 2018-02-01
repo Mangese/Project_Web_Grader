@@ -152,9 +152,12 @@
                   function markSubfunc() {
 
                     var hidreq = $("#idmoc").val();
+                    var pidreq = $("#pidmoc").val();
+                    var fullmark = $("#fullmarkmoc").val();
+
                     alert(hidreq);
-                    // $("#pidmoc").val(y);
-                    // $("#fullmarkmoc").val(getFullMark);
+                    alert(pidreq);
+                    alert(fullmark);
 
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
