@@ -3,9 +3,13 @@ $conn = mysql_connect("localhost","mangese","000000");
   if($conn != FALSE)
   {
     session_start();
+    
     $UID = $_REQUEST["uidreq"];
-    $HID = $_REQUEST["hidreq"];
-    $TM = $_REQUEST["setMarkreq"];
+    $PID = $_REQUEST["pidreq"];
+    $TM = $_REQUEST["setMark"];
+    $FM = $_REQUEST["fullmark"];
+
+    fullmark
     $message = "test alert in php";
     echo "<script type='text/javascript'>alert('$message');</script>";
     
