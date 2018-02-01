@@ -2,6 +2,7 @@
 session_start();
 $UID = $_SESSION['uid'];
 $PN = $_POST["ProblemName"];
+$MC = $_POST["MainClass"];
 $page = 0;
 $conn = mysql_connect("localhost","mangese","000000");
 if($conn != FALSE)
@@ -23,7 +24,9 @@ if($conn != FALSE)
 	$temp = $tempName;
 	$file_name = $tempName;
 	echo "<script> alert('$temp'); </script>";
+	echo "<script> alert('$MC'); </script>";
 	$UnzipTarget = "UnzipPlace/";
+	
 	$baseTargetToCompile = "File/";
 	$rm = "*";
 	$OutReturnValue = "File/UnzipPlace/Computer";
