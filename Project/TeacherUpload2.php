@@ -147,11 +147,18 @@
 
                     markSubBtnV.onclick = function markSubfun() {
                       alert(x);
-
                       alert(qq);
                       alert(setMarkV.value);
-
                       alert(getFullMark);
+
+                      var xmlhttpmarksub = new XMLHttpRequest();
+                      xmlhttpmarksub.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                        }
+                      }
+                      xmlhttpmarksub.open("POST", "FillSetMark.php?uidreq=" + x + "&hidreq=" + y + "&setMarkreq=" + setMarkV.value, true);
+                      xmlhttpmarksub.send();
+
 
                     }
 
