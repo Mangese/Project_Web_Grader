@@ -38,7 +38,7 @@ if(mysql_num_rows($result)==1)
 			{
 			echo "<script> window.location = 'StudentUpload1.php' </script>";
 			}
-			else if(strcmp($row['utp'],"A"))
+			else if(!strcmp($row['utp'],"A"))
 			{
 			echo "<script> window.location = 'AdminPage.php' </script>";
 			}
