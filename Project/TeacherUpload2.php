@@ -143,7 +143,7 @@
                     xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
                     xmlhttp.send();
 
-                    if (markSubBtnV.onclick) {
+                    if (document.getElementById("markSubBtn").onclick) {
                       alert(x);
 
                       alert(qq);
