@@ -418,7 +418,8 @@
           <a class="nav-link" data-toggle="tab" href="#tab3" role="tab">Results</a>
         </li>
       </ul>
-
+      <input id="idmoc">
+      <input id="pidmoc">
       <!-- Tab panes -->
       <div class="tab-content">
 
