@@ -402,8 +402,8 @@
     </script>
     <!--End script-->
 
-    <!-- <input id="idmoc">
-    <input id="pidmoc"> -->
+    <input id="idmoc" type="hidden">
+    <input id="pidmoc" type="hidden">
 
     <div class="container-table">
 
