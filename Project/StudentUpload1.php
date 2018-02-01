@@ -54,6 +54,10 @@
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUpload2.php'; </script>";
   }
+  else if(!strcmp($UT,"A"))
+  {
+	echo "<script> alert('Invalid Page'); window.location = 'AdminPage.php'; </script>";  
+  }
   }
 ?>
 
