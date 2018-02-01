@@ -45,13 +45,13 @@
     $CountRowForModal = 0;
     while($row = mysql_fetch_assoc($result1)){
       $ID = $row['u_id'];
-      $SID = $row['std_id'];
+      $StdID = $row['std_id'];
       $NAME = $row['name'];
       $CountRowForModal = $CountRowForModal + 1 ;
       $sumPass = 0;
       echo "<tr style='width:100%'>";
         echo "<td style='width:100px'>";
-          echo "$SID";
+          echo "$StdID";
         echo "</td>";
         echo "<td style='width:250px'>";
           echo "$NAME";
