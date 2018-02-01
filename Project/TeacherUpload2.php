@@ -168,6 +168,7 @@
                     }
                     xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
                     xmlhttp.send();
+                    fillTableResult();
                     // location.reload();
 
                   }
