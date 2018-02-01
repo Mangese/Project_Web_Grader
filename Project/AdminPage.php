@@ -87,9 +87,9 @@
       typeSearch = $("#selectType").val();
       sidSearch = $("#stdIDSearch").val();
       nameSearch = $("#nameSearch").val();
-      alert(typeSearch);
-      alert(sidSearch);
-      alert(nameSearch);
+      // alert(typeSearch);
+      // alert(sidSearch);
+      // alert(nameSearch);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
