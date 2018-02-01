@@ -5,9 +5,9 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     
     $UID = $_REQUEST["uidreq"];
-    $PID = $_REQUEST["pidreq"];
-    $TM = $_REQUEST["setMark"];
-    $FM = $_REQUEST["fullmark"];
+    // $PID = $_REQUEST["pidreq"];
+    // $TM = $_REQUEST["setMark"];
+    // $FM = $_REQUEST["fullmark"];
 
     $message = "test alert in php";
     echo "<script type='text/javascript'>alert('$message');</script>";
