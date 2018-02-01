@@ -17,7 +17,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+  />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
@@ -27,7 +28,8 @@
 
   <!-- Date Picker -->
   <script src="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
-  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css"
+  />
 
 
   <!--Font Awesome-->
@@ -68,11 +70,11 @@
       typeSearch = $("#selectType").val();
       // alert(typeSearch);
       if (typeSearch == 'T') {
-        document.getElementById("SIDSearch").disabled = true;
-        document.getElementById('SIDSearch').value = '';
+        document.getElementById("stdIDSearch").disabled = true;
+        document.getElementById('stdIDSearch').value = '';
       }
       else {
-        document.getElementById("SIDSearch").disabled = false;
+        document.getElementById("stdIDSearch").disabled = false;
       }
 
 
@@ -83,11 +85,11 @@
       // alert("in fun fillaccountManagementTb");
       $('#accountManagementTb tbody tr').remove();
       typeSearch = $("#selectType").val();
-      sidSearch = $("#SIDSearch").val();
+      sidSearch = $("#stdIDSearch").val();
       nameSearch = $("#nameSearch").val();
-       alert(typeSearch);
-       alert(sidSearch);
-       alert(nameSearch);
+      alert(typeSearch);
+      alert(sidSearch);
+      alert(nameSearch);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -123,7 +125,7 @@
 
       <!-- Tab 1 -->
       <div class="tab-pane active" id="tab1" role="tabpanel">
-        
+
         <!--Search input-->
         <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:10px; justify-content: space-between;">
 
@@ -153,7 +155,8 @@
                 <div class="modal-body">
                   <div class="form-group row mt-3">
                     <div class="col-sm-12">
-                      <select class="form-control" id="addUserType" name="addUserType" required oninvalid="this.setCustomValidity('Please select some type');" oninput="setCustomValidity('')">
+                      <select class="form-control" id="addUserType" name="addUserType" required oninvalid="this.setCustomValidity('Please select some type');"
+                        oninput="setCustomValidity('')">
                         <option value="">User type</option>
                         <option value="Lecturer">Lecturer</option>
                         <option value="Student">Student</option>
@@ -175,7 +178,8 @@
                   <div class="form-group row">
                     <div class="col-sm-12">
                       <input type="text" class="form-control" name="addUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
-                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
+                      />
                     </div>
                   </div>
                   <div class="form-group row">
@@ -186,7 +190,8 @@
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <select class="form-control" id="addDepartment" name="addDepartment" required oninvalid="this.setCustomValidity('Please select some department');" oninput="setCustomValidity('')">
+                      <select class="form-control" id="addDepartment" name="addDepartment" required oninvalid="this.setCustomValidity('Please select some department');"
+                        oninput="setCustomValidity('')">
                         <option value="">Department</option>
                         <option value="Biomedical Engineering">Biomedical Engineering</option>
                         <option value="Civil Engineering">Civil Engineering</option>
@@ -217,7 +222,8 @@
                         maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
                   </div>
-                </div><!--End Modal Body-->
+                </div>
+                <!--End Modal Body-->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-success" onclick="">Create Account</button>
                 </div>
@@ -328,7 +334,8 @@
                   <div class="form-group row">
                     <div class="col-sm-12">
                       <input type="text" class="form-control" name="editUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
-                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
+                      />
                     </div>
                   </div>
                   <div class="form-group row">
@@ -339,7 +346,8 @@
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <select class="form-control" id="editDepartment" name="editDepartment" required oninvalid="this.setCustomValidity('Please select some department');" oninput="setCustomValidity('')">
+                      <select class="form-control" id="editDepartment" name="editDepartment" required oninvalid="this.setCustomValidity('Please select some department');"
+                        oninput="setCustomValidity('')">
                         <option value="">Department</option>
                         <option value="Biomedical Engineering">Biomedical Engineering</option>
                         <option value="Civil Engineering">Civil Engineering</option>
@@ -359,8 +367,8 @@
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="password" class="form-control" id="editPassword" name="editPassword" placeholder="New Password" minlength=6 maxlength=30
-                        required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
+                      <input type="password" class="form-control" id="editPassword" name="editPassword" placeholder="New Password" minlength=6
+                        maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                         onkeyup='check();' />
                     </div>
                   </div>
@@ -370,7 +378,8 @@
                         maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
                   </div>
-                </div><!--End Modal Body-->
+                </div>
+                <!--End Modal Body-->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-success" onclick="">Save</button>
                 </div>
@@ -395,7 +404,7 @@
 
           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addClass">Create Class</button>
         </form>
-        
+
         <!-- Modal -->
         <div class="modal fade" id="addClass" role="dialog">
           <div class="modal-dialog modal-md">
@@ -476,7 +485,7 @@
             </div>
           </div>
         </div>
-    
+
       </div>
       <!-- End Tab2 -->
 
@@ -567,8 +576,8 @@
             </div>
           </div>
         </div>
-    
-        
+
+
       </div>
       <!-- End Tab3 -->
 
@@ -578,26 +587,26 @@
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
             <label class="mr-3">Start Date :</label>
-            <input  id="startDate" width="200" />
+            <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
             <input id="endDate" width="200" />
           </div>
           <script>
-              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-              $('#startDate').datepicker({
-                  uiLibrary: 'bootstrap4',
-                  iconsLibrary: 'fontawesome',
-                  maxDate: function () {
-                      return $('#endDate').val();
-                  }
-              });
-              $('#endDate').datepicker({
-                  uiLibrary: 'bootstrap4',
-                  iconsLibrary: 'fontawesome',
-                  minDate: function () {
-                      return $('#startDate').val();
-                  }
-              });
+            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+            $('#startDate').datepicker({
+              uiLibrary: 'bootstrap4',
+              iconsLibrary: 'fontawesome',
+              maxDate: function () {
+                return $('#endDate').val();
+              }
+            });
+            $('#endDate').datepicker({
+              uiLibrary: 'bootstrap4',
+              iconsLibrary: 'fontawesome',
+              minDate: function () {
+                return $('#startDate').val();
+              }
+            });
           </script>
           <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
         </form>
@@ -608,7 +617,7 @@
             <thead class="thead">
               <tr>
                 <th style="width:10%" onclick="sortTable1(0)">
-                    <label class="form-check-label">
+                  <label class="form-check-label">
                       <input type="checkbox" class="form-check-input">
                       All
                     </label>
@@ -641,9 +650,9 @@
           </table>
         </div>
         <!--End Table-->
-        
+
         <button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-      
+
       </div>
       <!-- End Tab4 -->
     </div>
