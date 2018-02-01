@@ -50,7 +50,7 @@
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
 	  $UT = $_SESSION["utype"];
-  if(strcmp($UT,"S"))
+  if(!strcmp($UT,"T"))
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUpload2.php'; </script>";
   }
