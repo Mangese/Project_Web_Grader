@@ -240,7 +240,7 @@
                   <span class='file-custom'></span>
                   </label>
                       <p>Name of main class : </p>
-                      <input class="form-control" type='text' name="Main_Class" id="Main_Class" placeholder="ex. mainfile" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
+                      <input class="form-control" type='text' name="MainClass" id="MainClass" placeholder="ex. mainfile" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
                         oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}$"
                       />
                     </div>
