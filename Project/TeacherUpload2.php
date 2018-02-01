@@ -145,24 +145,28 @@
                     xmlhttp.send();
 
 
-                    markSubBtnV.onclick = function markSubfun() {
-                      alert(x);
-                      alert(y);
-                      // alert(qq);
-                      alert(setMarkV.value);
-                      alert(getFullMark);
+                    markSubBtnV.onclick = function markSubfun(x, y, setMarkV, getFullMark) {
 
-                      var xmlhttpmarksub = new XMLHttpRequest();
-                      xmlhttpmarksub.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                          eval(this.responseText);
-                        }
-                      }
-                      xmlhttpmarksub.open("POST", "FillSetMark.php?uidreq=" + x + "&hidreq=" + y + "&setMarkreq=" + setMarkV.value, true);
-                      xmlhttpmarksub.send();
 
 
                     }
+
+                  }
+                  function markSubfun(x, y, setMarkV, getFullMark) {
+                    alert(x);
+                    alert(y);
+                    // alert(qq);
+                    alert(setMarkV.value);
+                    alert(getFullMark);
+
+                    // var xmlhttpmarksub = new XMLHttpRequest();
+                    // xmlhttpmarksub.onreadystatechange = function () {
+                    //   if (this.readyState == 4 && this.status == 200) {
+                    //     eval(this.responseText);
+                    //   }
+                    // }
+                    // xmlhttpmarksub.open("POST", "FillSetMark.php?uidreq=" + x + "&hidreq=" + y + "&setMarkreq=" + setMarkV.value, true);
+                    // xmlhttpmarksub.send();
 
                   }
 
