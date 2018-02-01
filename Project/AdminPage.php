@@ -134,7 +134,7 @@
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
                 <option value="">All type</option>
                 <option value="S">Student</option>
-                <option value="T">Teacher</option>
+                <option value="T">Lecturer</option>
             </select>
           </div>
 
