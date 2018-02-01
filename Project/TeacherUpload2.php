@@ -111,11 +111,11 @@
 
                   }
                   function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
-                    alert(x);
-                    // alert(y);
-                    // alert(submitcount);
-                    alert(qq);
-                    alert(getFullMark);
+                    // alert(x);
+                    // // alert(y);
+                    // // alert(submitcount);
+                    // alert(qq);
+                    // alert(getFullMark);
                     $("#idmoc").val(x);
                     $("#pidmoc").val(y);
                     $("#fullmarkmoc").val(getFullMark);
@@ -156,9 +156,9 @@
                     var setMark = $("#setMark").val();
                     var fullmark = $("#fullmarkmoc").val();
 
-                    alert(uidreq);
-                    alert(pidreq);
-                    alert(fullmark);
+                    // alert(uidreq);
+                    // alert(pidreq);
+                    // alert(fullmark);
 
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -168,6 +168,7 @@
                     }
                     xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
                     xmlhttp.send();
+                    // location.reload();
 
                   }
 
@@ -1167,7 +1168,7 @@
                 </div> -->
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" onclick="markSubfunc();">Mark submit</button>
+                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" onclick="markSubfunc(); " data-dismiss="modal">Mark submit</button>
                 </div>
               </div>
             </div>
