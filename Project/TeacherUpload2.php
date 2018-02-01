@@ -111,8 +111,8 @@
                   }
                   function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
                     alert(x);
-                    alert(y);
-                    alert(submitcount);
+                    // alert(y);
+                    // alert(submitcount);
                     alert(qq);
                     alert(getFullMark);
 
