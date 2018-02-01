@@ -149,27 +149,27 @@
                     xmlhttp.send();
                   }
 
-                  function markSubfunc() {
+                  // function markSubfunc() {
 
-                    var uidreq = $("#idmoc").val();
-                    var pidreq = $("#pidmoc").val();
-                    var setMark = $("#setMark").val();
-                    var fullmark = $("#fullmarkmoc").val();
+                  //   var uidreq = $("#idmoc").val();
+                  //   var pidreq = $("#pidmoc").val();
+                  //   var setMark = $("#setMark").val();
+                  //   var fullmark = $("#fullmarkmoc").val();
 
-                    alert(uidreq);
-                    alert(pidreq);
-                    alert(fullmark);
+                  //   alert(uidreq);
+                  //   alert(pidreq);
+                  //   alert(fullmark);
 
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function () {
-                      if (this.readyState == 4 && this.status == 200) {
-                        eval(this.responseText);
-                      }
-                    }
-                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark + "&fullmark=" + fullmark, true);
-                    xmlhttp.send();
+                  //   var xmlhttp = new XMLHttpRequest();
+                  //   xmlhttp.onreadystatechange = function () {
+                  //     if (this.readyState == 4 && this.status == 200) {
+                  //       eval(this.responseText);
+                  //     }
+                  //   }
+                  //   xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark + "&fullmark=" + fullmark, true);
+                  //   xmlhttp.send();
 
-                  }
+                  // }
 
 
                   function fillDropDownSection() {
