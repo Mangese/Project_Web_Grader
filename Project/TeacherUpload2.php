@@ -166,7 +166,7 @@
                         eval(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + pidreq + "&pidreq=" + setMark + "&setMark=", true);
+                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
                     xmlhttp.send();
 
                   }
