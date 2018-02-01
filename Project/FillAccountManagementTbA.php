@@ -8,11 +8,11 @@
     $TSR = $_REQUEST["typeSearch"];
     $SIDSR = $_REQUEST["sidSearch"];
     $NSR = $_REQUEST["nameSearch"];
-    // $message = "test alert in php";
-//      echo "<script type='text/javascript'>alert('$message');</script>";
-//      echo "<script type='text/javascript'>alert('$TSR');</script>";
-//      echo "<script type='text/javascript'>alert('$SIDSR');</script>";
-//      echo "<script type='text/javascript'>alert('$NSR');</script>";
+     $message = "test alert in php";
+      echo "<script type='text/javascript'>alert('$message');</script>";
+      echo "<script type='text/javascript'>alert('$TSR');</script>";
+      echo "<script type='text/javascript'>alert('$SIDSR');</script>";
+      echo "<script type='text/javascript'>alert('$NSR');</script>";
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     if($SIDSR == ''){
       $result = mysql_query("select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
