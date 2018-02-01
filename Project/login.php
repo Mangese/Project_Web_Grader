@@ -65,7 +65,7 @@
 	if(isset($_SESSION["user"]) && isset($_SESSION["utype"]))
 	{	if(!strcmp($_SESSION["utype"],"A"))
 		{
-		echo "<script> window.location = 'Admin.php' </script>";
+		echo "<script> window.location = 'AdminPage.php' </script>";
 		}
 		if(!strcmp($_SESSION["utype"],"T"))
 		{
