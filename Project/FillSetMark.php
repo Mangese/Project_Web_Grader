@@ -5,11 +5,12 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     
     $UID = $_REQUEST["uidreq"];
-    // $PID = $_REQUEST["pidreq"];
-    // $TM = $_REQUEST["setMark"];
-    // $FM = $_REQUEST["fullmark"];
-
-    $message = "test alert in php";
+     $PID = $_REQUEST["pidreq"];
+     $TM = $_REQUEST["setMark"];
+     
+    echo "alert($UID);";
+    echo "alert($PID);";
+    echo "alert($TM);";
     echo "alert('test');";
     
     
