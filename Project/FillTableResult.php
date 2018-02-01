@@ -8,7 +8,7 @@
     $SID = $_REQUEST["section"];
     $UID = $_SESSION["uid"];
     $sumPb = mysql_query("select count(*) as sumPloblem from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
-    $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.student_id as stdId from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
+    $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as u_id,student_id as std_id from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.h_id;");
     $fullMark = mysql_query("select (case when fullMark is null then '' else fullMark end) as Mark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
     
@@ -44,13 +44,14 @@
     }
     $CountRowForModal = 0;
     while($row = mysql_fetch_assoc($result1)){
-      $ID = $row['stdId'];
+      $ID = $row['u_id'];
+      $SID = $row['std_id'];
       $NAME = $row['name'];
       $CountRowForModal = $CountRowForModal + 1 ;
       $sumPass = 0;
       echo "<tr style='width:100%'>";
         echo "<td style='width:100px'>";
-          echo "$ID";
+          echo "$SID";
         echo "</td>";
         echo "<td style='width:250px'>";
           echo "$NAME";
