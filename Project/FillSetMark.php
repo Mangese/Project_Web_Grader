@@ -10,7 +10,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // $FM = $_REQUEST["fullmark"];
 
     $message = "test alert in php";
-    echo "<script>alert('$message');</script>";
+    echo "<script>alert('test');</script>";
     
     
     
