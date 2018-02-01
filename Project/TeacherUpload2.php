@@ -151,21 +151,22 @@
 
                   function markSubfunc() {
 
-                    var hidreq = $("#idmoc").val();
+                    var uidreq = $("#idmoc").val();
                     var pidreq = $("#pidmoc").val();
+                    var setMark = $("#setMark").val();
                     var fullmark = $("#fullmarkmoc").val();
 
-                    alert(hidreq);
+                    alert(uidreq);
                     alert(pidreq);
                     alert(fullmark);
 
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
-                        $('#tb3LastSendFile').append(this.responseText);
+                        eval(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
+                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark + "&fullmark=" + fullmark, true);
                     xmlhttp.send();
 
                   }
