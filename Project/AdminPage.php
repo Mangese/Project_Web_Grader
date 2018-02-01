@@ -46,26 +46,32 @@
   </nav>
 </head>
 
-<!-- <?php
+ <?php
   session_start();
-
-  if(!isset($_SESSION["user"]))
+if(!isset($_SESSION["user"]))
   {
   echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
   }
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
-  $UT = $_SESSION["utype"];
-  if(strcmp($UT,"T"))
+	  $UT = $_SESSION["utype"];
+  if(!strcmp($UT,"S"))
   {
-    echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
+	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
+  }
+  else if(!strcmp($UT,"T"))
+  {
+	echo "<script> alert('Invalid Page'); window.location = 'TeacherUpload2.php'; </script>";
   }
   }
-  ?> -->
+  ?>
 
 <body>
   <script>
+    function logout() {
+                    window.location = "logout.php";
+                  }
     function selectTypeOnChange() {
       typeSearch = $("#selectType").val();
       // alert(typeSearch);
