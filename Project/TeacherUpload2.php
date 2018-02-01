@@ -147,7 +147,8 @@
 
                     markSubBtnV.onclick = function markSubfun() {
                       alert(x);
-                      alert(qq);
+                      alert(y);
+                      // alert(qq);
                       alert(setMarkV.value);
                       alert(getFullMark);
 
