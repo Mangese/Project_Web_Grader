@@ -151,7 +151,8 @@
                       alert(setMarkV.value);
 
                       alert(getFullMark);
-                      $('#modalSourceFileSend').modal('hide');
+                      $('.modalSourceFileSend').modal('hide')
+                      // $('#modalSourceFileSend').modal('hide');
                     }
 
                   }
