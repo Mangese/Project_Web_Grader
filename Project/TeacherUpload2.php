@@ -151,7 +151,7 @@
                       alert(setMarkV.value);
 
                       alert(getFullMark);
-                      $('#modalSourceFileSend').modal('hide');
+                      // $('#modalSourceFileSend').modal('hide');
                     }
 
                   }
@@ -1150,7 +1150,7 @@
                 </div> -->
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success">Mark submit</button>
+                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" onclick="$('#modalID').modal('hide')">Mark submit</button>
                 </div>
               </div>
             </div>
