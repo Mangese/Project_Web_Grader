@@ -143,29 +143,6 @@
                     }
                     xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
                     xmlhttp.send();
-
-
-                    markSubBtnV.onclick = function markSubfun(x, y) {
-
-                    }
-
-                  }
-                  function markSubfun(uid, hid) {
-                    alert(uid);
-                    alert(hid);
-                    // alert(qq);
-                    // alert(setMarkV.value);
-                    // alert(getFullMark);
-
-
-                    // xmlhttp.onreadystatechange = function () {
-                    //   if (this.readyState == 4 && this.status == 200) {
-                    //     eval(this.responseText);
-                    //   }
-                    // }
-                    // xmlhttp.open("POST", "FillSetMark.php?uidreq=" + x + "&hidreq=" + y + "&setMarkreq=" + setMarkV.value, true);
-                    // xmlhttp.send();
-
                   }
 
 
