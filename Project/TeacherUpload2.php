@@ -406,9 +406,9 @@
     </script>
     <!--End script-->
     <!-- <input id="idmoc" type="hidden"> -->
-    <input id="idmoc" type="hidden">
-    <input id="pidmoc" type="hidden">
-    <input id="fullmarkmoc" type="hidden">
+    <input id="idmoc" type="">
+    <input id="pidmoc" type="">
+    <input id="fullmarkmoc" type="">
 
     <div class="container-table">
 
