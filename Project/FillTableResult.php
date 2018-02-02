@@ -56,12 +56,15 @@
         echo "<td style='width:250px'>";
           echo "$NAME";
         echo "</td>";
-        $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
-        
+//         $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
+        $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark,(case when (select teachermark from submit su where su.u_id = '3' and su.h_id = h.h_id limit 1 ) is null then '' else ((select teachermark from submit su where su.u_id = '$ID' and su.h_id = h.h_id limit 1 )) end) as teachermark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
+       
+
         $numprob = 0;
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
           $HidModal = $row['hid'];
+          $teacherMark = $row['teachermark'];
           $fullMarkModal = $row['fullMark'];
           $fullMarkModal1 = '"' .$fullMarkModal. '"';
           $numprob = $numprob + 1;
@@ -74,9 +77,11 @@
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "$teacherMark";
             }
             else {
               echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "$teacherMark";
 //               echo '<i class="fa fa-times" aria-hidden="true" style="color:#E74C3C" onclick = ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,"' . $NAME. '"); data-toggle="modal" data-target="#modalSourceFileSend">''</i>';
               
             }
