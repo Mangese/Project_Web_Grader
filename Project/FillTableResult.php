@@ -9,8 +9,8 @@
     $UID = $_SESSION["uid"];
     $sumPb = mysql_query("select count(*) as sumPloblem from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as u_id,student_id as std_id from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
-    $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.h_id;");
-    $fullMark = mysql_query("select (case when fullMark is null then '' else fullMark end) as Mark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null;");
+    $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.AssignDate;");
+    $fullMark = mysql_query("select (case when fullMark is null then '' else fullMark end) as Mark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null order by h.AssignDate;");
     
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
@@ -57,7 +57,7 @@
           echo "$NAME";
         echo "</td>";
 //         $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
-        $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark,(case when (select teachermark from submit su where su.u_id = '3' and su.h_id = h.h_id limit 1 ) is null then '' else ((select teachermark from submit su where su.u_id = '$ID' and su.h_id = h.h_id limit 1 )) end) as teachermark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
+        $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark,(case when (select teachermark from submit su where su.u_id = '3' and su.h_id = h.h_id limit 1 ) is null then '' else ((select teachermark from submit su where su.u_id = '$ID' and su.h_id = h.h_id limit 1 )) end) as teachermark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.AssignDate;");
        
 
         $numprob = 0;
