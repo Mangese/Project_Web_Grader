@@ -130,15 +130,15 @@ if(!isset($_SESSION["user"]))
 
                 function fillSectionManagementTb() {
 
-                  alert("in fun SectionManagementTb");
+                  // alert("in fun SectionManagementTb");
                   $('#SectionManagementTb tbody tr').remove();
                   sectionIDSearch = $("#SectionIDSearch").val();
                   sectionNameSearch = $("#sectionNameSearch").val();
                   createBySearch = $("#createBySearch").val();
 
-                  alert(sectionIDSearch);
-                  alert(sectionNameSearch);
-                  alert(createBySearch);
+                  // alert(sectionIDSearch);
+                  // alert(sectionNameSearch);
+                  // alert(createBySearch);
 
 
                   var xmlhttp = new XMLHttpRequest();
