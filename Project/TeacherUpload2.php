@@ -351,10 +351,13 @@
                     xmlhttp.send();
                   }
                   function fillTableResult() {
-                    x = document.getElementById("selSectionRs").value;
+                    // x = document.getElementById("selSectionRs").value;
                     $('#Result thead tr').remove();
                     $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
+                    setMark = $("#setMark").val();
+
+                    alert(setMark);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
