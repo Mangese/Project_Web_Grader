@@ -61,6 +61,7 @@
        
 
         $numprob = 0;
+        $sumMark = 0;
         while($row = mysql_fetch_assoc($result2)){
           $STATUS = $row['status'];
           $HidModal = $row['hid'];
@@ -72,6 +73,7 @@
           while($row = mysql_fetch_assoc($submitCountResult)){
             $submitCount = $row['num'];
           }
+          $sumMark = $sumMark + $teacherMark;
           echo "<td style='min-width:30px'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
@@ -94,6 +96,8 @@
         echo "<td style='width:100px; text-align:center;'>";
           $passPerSum = $sumPass.'/'.$sumPlob;
           echo "$passPerSum";
+          echo "    ";
+          echo "$sumMark";
         echo "</td>";
       echo "</tr>";
     }
