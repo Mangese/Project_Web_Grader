@@ -11,11 +11,11 @@
     
  
 
-    $message = "test alert in php";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    echo "<script type='text/javascript'>alert('$SID');</script>";
-    echo "<script type='text/javascript'>alert('$SN');</script>";
-    echo "<script type='text/javascript'>alert('$CB');</script>";
+    // $message = "test alert in php";
+    // echo "<script type='text/javascript'>alert('$message');</script>";
+    // echo "<script type='text/javascript'>alert('$SID');</script>";
+    // echo "<script type='text/javascript'>alert('$SN');</script>";
+    // echo "<script type='text/javascript'>alert('$CB');</script>";
     
      $result = mysql_query(
        "select s.s_id as sid ,s.name as nameSec,s.password as password,u.firstname as createSecBy from section s left join user u on s.u_id=u.u_id where s.s_id like '%$SID%' and s.name like '%$SN%' and u.firstname like '%$CB%';"
