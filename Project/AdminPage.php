@@ -127,6 +127,29 @@ if(!isset($_SESSION["user"]))
                   xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
                   xmlhttp.send();
                 }
+
+                function fillSectionManagementTb() {
+
+                  alert("in fun SectionManagementTb");
+                  $('#SectionManagementTb tbody tr').remove();
+                  sectionIDSearch = $("#SectionIDSearch").val();
+                  sectionNameSearch = $("#sectionNameSearch").val();
+                  createBySearch = $("#createBySearch").val();
+
+                  alert(sectionIDSearch);
+                  alert(sectionNameSearch);
+                  alert(createBySearch);
+
+
+                  // var xmlhttp = new XMLHttpRequest();
+                  // xmlhttp.onreadystatechange = function () {
+                  //   if (this.readyState == 4 && this.status == 200) {
+                  //     $('#classManagementTb').append(this.responseText);
+                  //   }
+                  // }
+                  // xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
+                  // xmlhttp.send();
+                }
     </script>
 
     <div class="container-table">
@@ -522,10 +545,10 @@ if(!isset($_SESSION["user"]))
           <form class="form-inline mx-2 mb-3" style="margin-top:20px">
             <div class="form-inline">
               <label>Search by</label>
-              <input class="form-control ml-3" type="text" id="SIDSearch" name="SIDSearch" placeholder="Section ID">
+              <input class="form-control ml-3" type="text" id="SectionIDSearch" name="SectionIDSearch" placeholder="Section ID">
               <input class="form-control ml-3" type="text" id="sectionNameSearch" name="sectionNameSearch" placeholder="Section Name">
               <input class="form-control ml-3" type="text" id="createBySearch" name="createBySearch" placeholder="Lecturer Name">
-              <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+              <button type="button" class="btn btn-secondary ml-3" onclick="fillSectionManagementTb()">Search</button>
             </div>
           </form>
 
