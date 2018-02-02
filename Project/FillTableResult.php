@@ -97,15 +97,16 @@
             }
           echo "</td>";
         }
-        echo "<td style='width:100px; text-align:center;'>";
+        echo "<td style='width:50px; text-align:center;'>";
           $passPerSum = $sumPass.'/'.$sumPlob;
           echo "$passPerSum";
           
         echo "</td>";
-       echo "<td style='width:100px; text-align:center;'>";
+       echo "<td style='width:50px; text-align:center;'>";
           $passPerSum = $sumPass.'/'.$sumPlob;
           echo "$sumMark";
-          
+          echo "/";
+          echo "$fullMarkModal";
         echo "</td>";
       
       echo "</tr>";
@@ -129,6 +130,9 @@
     }
     
         echo "<td style='width:100px'>";
+      
+        echo "</td>";
+    echo "<td style='width:100px'>";
       
         echo "</td>";
       echo "</tr>";
