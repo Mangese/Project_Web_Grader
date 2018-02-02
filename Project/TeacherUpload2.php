@@ -54,12 +54,17 @@
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
-  $UT = $_SESSION["utype"];
-  if(strcmp($UT,"T"))
+	  $UT = $_SESSION["utype"];
+  if(!strcmp($UT,"S"))
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
+  else if(!strcmp($UT,"A"))
+  {
+	echo "<script> alert('Invalid Page'); window.location = 'AdminPage.php'; </script>";  
   }
+  }
+
 ?>
 
   <body>
