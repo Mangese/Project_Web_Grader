@@ -141,14 +141,14 @@ if(!isset($_SESSION["user"]))
                   alert(createBySearch);
 
 
-                  // var xmlhttp = new XMLHttpRequest();
-                  // xmlhttp.onreadystatechange = function () {
-                  //   if (this.readyState == 4 && this.status == 200) {
-                  //     $('#classManagementTb').append(this.responseText);
-                  //   }
-                  // }
-                  // xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
-                  // xmlhttp.send();
+                  var xmlhttp = new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                      $('#SectionManagementTb').append(this.responseText);
+                    }
+                  }
+                  xmlhttp.open("POST", "FillSectionManagementTbA.php?sectionIDSearch=" + sectionIDSearch + "&sectionNameSearch=" + sectionNameSearch + "&createBySearch=" + createBySearch, true);
+                  xmlhttp.send();
                 }
     </script>
 
