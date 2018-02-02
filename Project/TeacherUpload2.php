@@ -357,7 +357,7 @@
                     str = $("#selSectionRs").val();
                     setMark = $("#setMark").val();
 
-                    alert(setMark);
+                    alert("mark from fillTable " + setMark);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
