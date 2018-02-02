@@ -109,7 +109,7 @@ if(!isset($_SESSION["user"]))
 
                 function fillclassManagementTb() {
 
-                  // alert("in fun fillaccountManagementTb");
+                  alert("in fun fillclassManagementTb");
                   $('#classManagementTb tbody tr').remove();
                   CIDSearch = $("#CIDSearch").val();
                   classNameSearch = $("#classNameSearch").val();
@@ -426,7 +426,7 @@ if(!isset($_SESSION["user"]))
               <label>Search by</label>
               <input class="form-control ml-3" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
               <input class="form-control ml-3" type="text" id="classNameSearch" name="classNameSearch" placeholder="Class Name">
-              <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+              <button type="button" class="btn btn-secondary ml-3" onclick="fillclassManagementTb()">Search</button>
             </div>
 
             <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addClass">Create Class</button>
