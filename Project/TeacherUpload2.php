@@ -54,17 +54,12 @@
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
-	  $UT = $_SESSION["utype"];
-  if(!strcmp($UT,"S"))
+  $UT = $_SESSION["utype"];
+  if(strcmp($UT,"T"))
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
-  else if(!strcmp($UT,"A"))
-  {
-	echo "<script> alert('Invalid Page'); window.location = 'AdminPage.php'; </script>";  
   }
-  }
-
 ?>
 
   <body>
@@ -364,16 +359,16 @@
                     uidreq = $("#idmoc").val();
                     hidreq = $("#pidmoc").val();
                     setMark = $("#setMark").val();
-                    alert("uid from fillTable " + uidreq);
-                    alert("hid from fillTable " + hidreq);
-                    alert("mark from fillTable " + setMark);
+                    // alert("uid from fillTable " + uidreq);
+                    // alert("hid from fillTable " + hidreq);
+                    // alert("mark from fillTable " + setMark);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
                         $('#Result').append(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "FillTableResult.php?section=" + str + "&setMarkShow=" + setMark, true);
+                    xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
                     xmlhttp.send();
 
 
