@@ -355,8 +355,12 @@
                     $('#Result thead tr').remove();
                     $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
-                    setMark = $("#setMark").val();
 
+                    uidreq = $("#idmoc").val();
+                    hidreq = $("#pidmoc").val();
+                    setMark = $("#setMark").val();
+                    alert("uid from fillTable " + setMark);
+                    alert("hid from fillTable " + setMark);
                     alert("mark from fillTable " + setMark);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -364,7 +368,7 @@
                         $('#Result').append(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
+                    xmlhttp.open("POST", "FillTableResult.php?section=" + str + "&setMarkShow=" + setMark, true);
                     xmlhttp.send();
 
 
