@@ -17,27 +17,38 @@
     echo "<script type='text/javascript'>alert('$SN');</script>";
     echo "<script type='text/javascript'>alert('$CB');</script>";
     
-    // $result = mysql_query("select c_id as c_id,classname as classname from class where c_id  like '%$CID%' and classname like '%$CN%';");
+     $result = mysql_query(
+       "select s.s_id as sid ,s.name as nameSec,s.password as password,u.firstname as createSecBy from section s left join user u on s.u_id=u.u_id where s.s_id like '%$SID%' and s.name like '%$SN%' and u.firstname like '%$CB%';"
+      );
     
-    // while($row = mysql_fetch_assoc($result))
-    // {
-    //   $CIDT = $row['c_id'];
-    //   $CNT = $row['classname'];
+    while($row = mysql_fetch_assoc($result))
+    {
+      $SIDT = $row['sid'];
+      $SNT = $row['nameSec'];
+      $PWT = $row['password'];
+      $CSBT = $row['createSecBy'];
+
       
-    //   echo "<tr>";
-    //   echo "<td style='width:20%'>";
-    //   echo "$CIDT";
-    //   echo "</td>";
-    //   echo "<td style='width:50%'>";
-    //   echo "$CNT";
-    //   echo "</td>";
-    //   echo "<td style='width:15%'>";
-    //   echo "edit";
-    //   echo "</td>";
-    //   echo "<td style='width:15%'>";
-    //   echo "delete";
-    //   echo "</td>";
-    //   echo "</tr>";
-    // }
+      echo "<tr>";
+      echo "<td style='width:15%'>";
+      echo "$SIDT";
+      echo "</td>";
+      echo "<td style='width:35%'>";
+      echo "$SNT";
+      echo "</td>";
+      echo "<td style='width:15%'>";
+      echo "$PWT";
+      echo "</td>";
+      echo "<td style='width:15%'>";
+      echo "$CSBT";
+      echo "</td>";
+      echo "<td style='width:10%'>";
+      echo "edit";
+      echo "</td>";
+      echo "<td style='width:10%'>";
+      echo "delete";
+      echo "</td>";
+      echo "</tr>";
+    }
   }
 ?>
