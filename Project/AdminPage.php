@@ -272,11 +272,11 @@ if(!isset($_SESSION["user"]))
               <thead class="thead">
                 <tr>
                   <th style="width:15%" onclick="sortTable1(0)">
-                    Student ID
+                    Username
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:15%" onclick="sortTable1(1)">
-                    Username
+                    Student ID
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:15%" onclick="sortTable1(2)">
