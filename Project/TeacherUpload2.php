@@ -245,12 +245,12 @@
                           xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value + "&fullMark=" + document.getElementById(fullMarkName).value, true);
                           xmlhttp.send();
                           location.reload();
-                          alert(dateName);
-                          alert(timeName);
-                          alert(fullMarkName);
-                          alert(document.getElementById(dateName).value);
-                          alert(document.getElementById(timeName).value);
-                          alert(document.getElementById(fullMarkName).value);
+                          // alert(dateName);
+                          // alert(timeName);
+                          // alert(fullMarkName);
+                          // alert(document.getElementById(dateName).value);
+                          // alert(document.getElementById(timeName).value);
+                          // alert(document.getElementById(fullMarkName).value);
 
                         }
                       });
