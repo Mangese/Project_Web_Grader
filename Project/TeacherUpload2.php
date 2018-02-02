@@ -359,8 +359,8 @@
                     uidreq = $("#idmoc").val();
                     hidreq = $("#pidmoc").val();
                     setMark = $("#setMark").val();
-                    alert("uid from fillTable " + setMark);
-                    alert("hid from fillTable " + setMark);
+                    alert("uid from fillTable " + uidreq);
+                    alert("hid from fillTable " + hidreq);
                     alert("mark from fillTable " + setMark);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
