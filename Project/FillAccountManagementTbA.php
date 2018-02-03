@@ -51,7 +51,7 @@
       echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount'><i class='fa fa-edit' aria-hidden='true'></i></button>";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "delete";
+      echo "<button type='button' class='btn btn-outline-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";
       echo "</td>";
       echo "</tr>";
     }
