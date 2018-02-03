@@ -393,7 +393,7 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="editLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                      <input type="text" class="form-control" id="editLastname" name="editLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                     </div>
                     <div class="col-sm-2">
@@ -402,7 +402,7 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="editUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                      <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                         oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
                       />
                     </div>
@@ -412,8 +412,9 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" name="editStudentID" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
-                        oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                      <input type="text" class="form-control" id="editStudentID" name="editStudentID" placeholder="Student ID (EX. 5713XXX)" required
+                        oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
+                        minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                     </div>
                     <div class="col-sm-2">
                       <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckStdID">
