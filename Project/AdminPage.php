@@ -108,7 +108,7 @@ if(!isset($_SESSION["user"]))
                 }
 
                 function editAccountManagementTb(th, uid) {
-                  alert(uid);
+                  alert("uid is:" + uid);
 
                 }
 
