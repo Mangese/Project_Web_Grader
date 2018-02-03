@@ -378,6 +378,7 @@ if(!isset($_SESSION["user"]))
                       <div class="col-sm-12">
                         <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
                           oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                       </div>
                     </div>
                     <div class="form-group row">
