@@ -107,6 +107,11 @@ if(!isset($_SESSION["user"]))
                   xmlhttp.send();
                 }
 
+                function editAccountManagementTb(th, uid) {
+                  alert(uid);
+
+                }
+
                 function fillclassManagementTb() {
 
                   alert("in fun fillclassManagementTb");
