@@ -397,9 +397,9 @@ if(!isset($_SESSION["user"]))
                       <input type="text" class="form-control" name="editUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                         oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
                       />
-                      <div class="col-sm-2">
-                        <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
-                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
                     </div>
                   </div>
                   <div class="form-group row">
