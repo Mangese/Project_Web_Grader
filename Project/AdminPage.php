@@ -453,9 +453,6 @@ if(!isset($_SESSION["user"]))
                       <input type="password" class="form-control" id="editPassword2" name="editPassword2" placeholder="Confirm New Password" minlength=6
                         maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
-                    <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckConfirmPass">
-                    </div>
                   </div>
                 </div>
                 <!--End Modal Body-->
