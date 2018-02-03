@@ -109,6 +109,14 @@ if(!isset($_SESSION["user"]))
 
     function editAccountManagementTb(th, uid) {
       alert("uid is:" + uid);
+      document.getElementById("editFirstname").disabled = true;
+      document.getElementById("editLastname").disabled = true;
+      document.getElementById("editUsername").disabled = true;
+      document.getElementById("editStudentID").disabled = true;
+      document.getElementById("editDepartment").disabled = true;
+      document.getElementById("editEmail").disabled = true;
+      document.getElementById("editPassword").disabled = true;
+      document.getElementById("editPassword2").disabled = true;
 
     }
 
@@ -431,7 +439,7 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" name="editEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
+                      <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
                         oninput="setCustomValidity('')" maxlength=30/>
                     </div>
                     <div class="col-sm-2">
