@@ -380,7 +380,7 @@ if(!isset($_SESSION["user"]))
                         oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
                     </div>
                   </div>
                   <!-- <div class="form-group row">
