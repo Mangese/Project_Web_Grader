@@ -376,11 +376,11 @@ if(!isset($_SESSION["user"]))
                 <div class="modal-body">
                   <div class="form-group row">
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
+                      <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckFirstname">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -389,7 +389,7 @@ if(!isset($_SESSION["user"]))
                         oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckLastname">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -399,7 +399,7 @@ if(!isset($_SESSION["user"]))
                       />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckUsername">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -408,7 +408,7 @@ if(!isset($_SESSION["user"]))
                         oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckStdID">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -426,7 +426,7 @@ if(!isset($_SESSION["user"]))
                       </select>
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckDepart">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -435,7 +435,7 @@ if(!isset($_SESSION["user"]))
                         oninput="setCustomValidity('')" maxlength=30/>
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckEmail">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -445,7 +445,7 @@ if(!isset($_SESSION["user"]))
                         onkeyup='check();' />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckPass">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -454,7 +454,7 @@ if(!isset($_SESSION["user"]))
                         maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckConfirmPass">
                     </div>
                   </div>
                 </div>
