@@ -114,50 +114,59 @@ if(!isset($_SESSION["user"]))
 
     function checkBoxEdit(num) {
       EditFN = document.getElementById("editFirstname");
+      EditLN = document.getElementById("editLastname");
+      EditUN = document.getElementById("editUsername");
+      EditsID = document.getElementById("editStudentID");
+      EditDM = document.getElementById("editDepartment");
+      EditMail = document.getElementById("editEmail");
+      EditP = document.getElementById("editPassword");
+      EditP2 = document.getElementById("editPassword2");
+
       if (num == 1) {
         if (document.getElementById("defaultCheckFirstname").checked == true) {
           EditFN.disabled = false;
         } else {
           EditFN.disabled = true;
         }
+      } else if (num == 2) {
+        if (document.getElementById("defaultCheckLastname").checked == true) {
+          EditLN.disabled = false;
+        } else {
+          EditLN.disabled = true;
+        }
+      } else if (num == 3) {
+        if (document.getElementById("defaultCheckUsername").checked == true) {
+          EditUN.disabled = false;
+        } else {
+          EditUN.disabled = true;
+        }
+      } else if (num == 4) {
+        if (document.getElementById("defaultCheckStdID").checked == true) {
+          EditsID.disabled = false;
+        } else {
+          EditsID.disabled = true;
+        }
+      } else if (num == 5) {
+        if (document.getElementById("defaultCheckDepart").checked == true) {
+          EditDM.disabled = false;
+        } else {
+          EditDM.disabled = true;
+        }
+      } else if (num == 6) {
+        if (document.getElementById("defaultCheckEmail").checked == true) {
+          EditMail.disabled = false;
+        } else {
+          EditMail.disabled = true;
+        }
+      } else if (num == 7) {
+        if (document.getElementById("defaultCheckPass").checked == true) {
+          EditP.disabled = false;
+          EditP2.disabled = false;
+        } else {
+          EditP.disabled = true;
+          EditP2.disabled = true;
+        }
       }
-      // else if (num == 2) {
-      //   if (document.getElementById("defaultCheckLastname").checked == true) {
-      //     document.getElementById("editLastname").disabled = false;
-      //   } else {
-      //     document.getElementById("editLastname").disabled = true;
-      //   }
-      // }else if (num == 3) {
-      //   if (document.getElementById("defaultCheckLastname").checked == true) {
-      //     document.getElementById("editLastname").disabled = false;
-      //   } else {
-      //     document.getElementById("editLastname").disabled = true;
-      //   }
-      // }else if (num == 4) {
-      //   if (document.getElementById("defaultCheckLastname").checked == true) {
-      //     document.getElementById("editLastname").disabled = false;
-      //   } else {
-      //     document.getElementById("editLastname").disabled = true;
-      //   }
-      // }else if (num == 5) {
-      //   if (document.getElementById("defaultCheckLastname").checked == true) {
-      //     document.getElementById("editLastname").disabled = false;
-      //   } else {
-      //     document.getElementById("editLastname").disabled = true;
-      //   }
-      // }else if (num == 6) {
-      //   if (document.getElementById("defaultCheckLastname").checked == true) {
-      //     document.getElementById("editLastname").disabled = false;
-      //   } else {
-      //     document.getElementById("editLastname").disabled = true;
-      //   }
-      // }else if (num == 7) {
-      //   if (document.getElementById("defaultCheckLastname").checked == true) {
-      //     document.getElementById("editLastname").disabled = false;
-      //   } else {
-      //     document.getElementById("editLastname").disabled = true;
-      //   }
-      // }
     }
 
     function fillclassManagementTb() {
@@ -448,7 +457,7 @@ if(!isset($_SESSION["user"]))
                       />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckUsername">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckUsername" onclick="checkBoxEdit(3)">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -458,7 +467,7 @@ if(!isset($_SESSION["user"]))
                         minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckStdID">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckStdID" onclick="checkBoxEdit(4)">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -476,7 +485,7 @@ if(!isset($_SESSION["user"]))
                       </select>
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckDepart">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckDepart" onclick="checkBoxEdit(5)">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -485,7 +494,7 @@ if(!isset($_SESSION["user"]))
                         oninput="setCustomValidity('')" maxlength=30/>
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckEmail">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckEmail" onclick="checkBoxEdit(6)">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -495,7 +504,7 @@ if(!isset($_SESSION["user"]))
                         onkeyup='check();' />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckPass">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckPass" onclick="checkBoxEdit(7)">
                     </div>
                   </div>
                   <div class="form-group row">
