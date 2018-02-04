@@ -74,7 +74,7 @@ if(!isset($_SESSION["user"]))
     }
 
     $(document).ready(function () {
-      document.getElementById(endDate).val();
+      document.getElementById('endDate').val();
 
 
     });
