@@ -118,7 +118,7 @@ if(!isset($_SESSION["user"]))
       document.getElementById("editPassword").disabled = true;
       document.getElementById("editPassword2").disabled = true;
 
-      if ($("#defaultCheckFirstname").checked = true) {
+      if ($("#defaultCheckFirstname").checked = false) {
         alert("5555");
       } else {
         alert("else defaultCheckFirstname");
