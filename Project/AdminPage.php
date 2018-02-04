@@ -150,6 +150,10 @@ if(!isset($_SESSION["user"]))
       alert("cid is:" + cid);
     }
 
+    function editSectionManagementTb(th, sid) {
+      alert("sid is:" + sid);
+    }
+
     function checkBoxEdit(num) {
       EditFN = document.getElementById("editFirstname");
       EditLN = document.getElementById("editLastname");
