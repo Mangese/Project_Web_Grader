@@ -86,11 +86,12 @@ if(!isset($_SESSION["user"]))
 
     }
     function userType() {
-      if (document.getElementById("addUserType").val() == 'T') {
-        alert("addUserType =T");
-        document.getElementById("addUsername").disabled = true;
-      } else
-        document.getElementById("addUsername").disabled = false;
+      alert("inusertype");
+      // if (document.getElementById("addUserType").val() == 'T') {
+      //   alert("addUserType =T");
+      //   document.getElementById("addUsername").disabled = true;
+      // } else
+      //   document.getElementById("addUsername").disabled = false;
     }
 
     function fillaccountManagementTb() {
