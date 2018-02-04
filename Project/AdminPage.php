@@ -114,7 +114,8 @@ if(!isset($_SESSION["user"]))
 
     function checkBoxEdit(num) {
       if (num == 1) {
-        document.getElementById("editFirstname").disabled = false;
+        if (document.getElementById("defaultCheckFirstname").checked == true)
+          document.getElementById("editFirstname").disabled = false;
       }
 
     }
