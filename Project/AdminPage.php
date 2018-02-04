@@ -86,13 +86,13 @@ if(!isset($_SESSION["user"]))
 
     }
     function userType() {
-      alert("inusertype");
+      // alert("inusertype");
       typeSelect = $("#addUserType").val();
       if (typeSelect == 'T') {
-        alert("addUserType =T");
-        document.getElementById("addUsername").disabled = true;
+        // alert("addUserType =T");
+        document.getElementById("addStudentID").disabled = true;
       } else
-        document.getElementById("addUsername").disabled = false;
+        document.getElementById("addStudentID").disabled = false;
     }
 
     function fillaccountManagementTb() {
@@ -306,8 +306,9 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addStudentID" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
-                        oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                      <input type="text" class="form-control" name="addStudentID" id="addStudentID" placeholder="Student ID (EX. 5713XXX)" required
+                        oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
+                        minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                     </div>
                   </div>
                   <div class="form-group row">
