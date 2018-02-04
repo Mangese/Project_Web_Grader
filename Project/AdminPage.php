@@ -777,6 +777,8 @@ if(!isset($_SESSION["user"]))
               iconsLibrary: 'fontawesome',
               maxDate: function () {
                 return $('#endDate').val();
+                alert("in maxdate");
+                alert($('#endDate').val());
               }
             });
             $('#endDate').datepicker({
@@ -784,6 +786,8 @@ if(!isset($_SESSION["user"]))
               iconsLibrary: 'fontawesome',
               minDate: function () {
                 return $('#startDate').val();
+                alert("in mindate");
+                alert($('#startDate').val());
               }
             });
           </script>
