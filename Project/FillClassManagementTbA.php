@@ -29,7 +29,7 @@
       echo "$CNT";
       echo "</td>";
       echo "<td style='width:15%'>";
-      echo "edit";
+      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editClass'><i class='fa fa-edit' aria-hidden='true' onclick = 'editClassManagementTb(this,$CIDT)';></i></button>";
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "delete";
