@@ -209,13 +209,13 @@ if(!isset($_SESSION["user"]))
 
     function fillclassManagementTb() {
 
-      alert("in fun fillclassManagementTb");
+      // alert("in fun fillclassManagementTb");
       $('#classManagementTb tbody tr').remove();
       CIDSearch = $("#CIDSearch").val();
       classNameSearch = $("#classNameSearch").val();
 
-      alert(CIDSearch);
-      alert(classNameSearch);
+      // alert(CIDSearch);
+      // alert(classNameSearch);
 
 
       var xmlhttp = new XMLHttpRequest();
