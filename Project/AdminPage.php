@@ -116,7 +116,7 @@ if(!isset($_SESSION["user"]))
       if (num == 1) {
         if (document.getElementById("defaultCheckFirstname").checked == true)
           document.getElementById("editFirstname").disabled = false;
-      }
+      } else document.getElementById("editFirstname").disabled = true;
 
     }
 
