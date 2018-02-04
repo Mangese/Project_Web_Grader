@@ -86,7 +86,7 @@ if(!isset($_SESSION["user"]))
 
     }
     function userType() {
-      if (document.getElementById("addUserType").val() == T) {
+      if (document.getElementById("addUserType").val() == 'T') {
         alert("addUserType =T");
         document.getElementById("addUsername").disabled = true;
       } else
@@ -252,8 +252,9 @@ if(!isset($_SESSION["user"]))
             <label>Select type</label>
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
                 <option value="">All type</option>
-                <option value="S">Student</option>
                 <option value="T">Lecturer</option>
+                <option value="S">Student</option>
+                
             </select>
           </div>
 
