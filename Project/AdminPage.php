@@ -144,7 +144,10 @@ if(!isset($_SESSION["user"]))
 
     function editAccountManagementTb(th, uid) {
       alert("uid is:" + uid);
+    }
 
+    function editClassManagementTb(th, cid) {
+      alert("cid is:" + cid);
     }
 
     function checkBoxEdit(num) {
