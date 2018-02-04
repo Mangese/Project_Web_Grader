@@ -109,18 +109,13 @@ if(!isset($_SESSION["user"]))
 
     function editAccountManagementTb(th, uid) {
       alert("uid is:" + uid);
-      // document.getElementById("editFirstname").disabled = true;
-      // document.getElementById("editLastname").disabled = true;
-      // document.getElementById("editUsername").disabled = true;
-      // document.getElementById("editStudentID").disabled = true;
-      // document.getElementById("editDepartment").disabled = true;
-      // document.getElementById("editEmail").disabled = true;
-      // document.getElementById("editPassword").disabled = true;
-      // document.getElementById("editPassword2").disabled = true;
+
     }
 
-    function checkboxedit(num) {
-
+    function checkBoxEdit(num) {
+      if (num == 1) {
+        $("#editFirstname").toggleDisabled();
+      }
 
     }
 
@@ -393,7 +388,7 @@ if(!isset($_SESSION["user"]))
                         minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckFirstname">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckFirstname" onclick="checkBoxEdit(1)">
                     </div>
                   </div>
                   <div class="form-group row">
