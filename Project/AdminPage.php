@@ -113,13 +113,51 @@ if(!isset($_SESSION["user"]))
     }
 
     function checkBoxEdit(num) {
+      EditFN = document.getElementById("editFirstname");
       if (num == 1) {
         if (document.getElementById("defaultCheckFirstname").checked == true) {
-          document.getElementById("editFirstname").disabled = false;
+          EditFN.disabled = false;
         } else {
-          document.getElementById("editFirstname").disabled = true;
+          EditFN.disabled = true;
         }
       }
+      // else if (num == 2) {
+      //   if (document.getElementById("defaultCheckLastname").checked == true) {
+      //     document.getElementById("editLastname").disabled = false;
+      //   } else {
+      //     document.getElementById("editLastname").disabled = true;
+      //   }
+      // }else if (num == 3) {
+      //   if (document.getElementById("defaultCheckLastname").checked == true) {
+      //     document.getElementById("editLastname").disabled = false;
+      //   } else {
+      //     document.getElementById("editLastname").disabled = true;
+      //   }
+      // }else if (num == 4) {
+      //   if (document.getElementById("defaultCheckLastname").checked == true) {
+      //     document.getElementById("editLastname").disabled = false;
+      //   } else {
+      //     document.getElementById("editLastname").disabled = true;
+      //   }
+      // }else if (num == 5) {
+      //   if (document.getElementById("defaultCheckLastname").checked == true) {
+      //     document.getElementById("editLastname").disabled = false;
+      //   } else {
+      //     document.getElementById("editLastname").disabled = true;
+      //   }
+      // }else if (num == 6) {
+      //   if (document.getElementById("defaultCheckLastname").checked == true) {
+      //     document.getElementById("editLastname").disabled = false;
+      //   } else {
+      //     document.getElementById("editLastname").disabled = true;
+      //   }
+      // }else if (num == 7) {
+      //   if (document.getElementById("defaultCheckLastname").checked == true) {
+      //     document.getElementById("editLastname").disabled = false;
+      //   } else {
+      //     document.getElementById("editLastname").disabled = true;
+      //   }
+      // }
     }
 
     function fillclassManagementTb() {
@@ -400,7 +438,7 @@ if(!isset($_SESSION["user"]))
                         oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                     </div>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckLastname">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckLastname" onclick="checkBoxEdit(2)">
                     </div>
                   </div>
                   <div class="form-group row">
