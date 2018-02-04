@@ -85,6 +85,12 @@ if(!isset($_SESSION["user"]))
 
 
     }
+    function userType() {
+      if (document.getElementById("addUserType").val() == T) {
+        document.getElementById("addUsername").disabled = true;
+      } else
+        document.getElementById("addUsername").disabled = false;
+    }
 
     function fillaccountManagementTb() {
 
@@ -267,11 +273,11 @@ if(!isset($_SESSION["user"]))
                 <div class="modal-body">
                   <div class="form-group row mt-3">
                     <div class="col-sm-12">
-                      <select class="form-control" id="addUserType" name="addUserType" required oninvalid="this.setCustomValidity('Please select some type');"
+                      <select class="form-control" id="addUserType" name="addUserType" onchange="userType()" required oninvalid="this.setCustomValidity('Please select some type');"
                         oninput="setCustomValidity('')">
                         <option value="">User type</option>
-                        <option value="Lecturer">Lecturer</option>
-                        <option value="Student">Student</option>
+                        <option value="T">Lecturer</option>
+                        <option value="S">Student</option>
                       </select>
                     </div>
                   </div>
@@ -289,7 +295,7 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                      <input type="text" class="form-control" name="addUsername" id="addUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                         oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
                       />
                     </div>
