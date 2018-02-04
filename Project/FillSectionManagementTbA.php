@@ -46,7 +46,7 @@
       echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editSection' onclick = 'editSectionManagementTb(this,$SIDT)';><i class='fa fa-edit' aria-hidden='true'></i></button>";
       echo "</td>";
       echo "<td style='width:10%'>";
-      echo "delete";
+      echo "<button type='button' class='btn btn-outline-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";      
       echo "</td>";
       echo "</tr>";
     }
