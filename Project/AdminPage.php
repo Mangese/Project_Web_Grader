@@ -775,18 +775,16 @@ if(!isset($_SESSION["user"]))
             $('#startDate').datepicker({
               uiLibrary: 'bootstrap4',
               iconsLibrary: 'fontawesome',
-              format: 'YY-MM-DD',
-              // maxDate: function () {
-              //   return $('#endDate').val();
-              // }
+              maxDate: function () {
+                return $('#endDate').val();
+              }
             });
             $('#endDate').datepicker({
               uiLibrary: 'bootstrap4',
               iconsLibrary: 'fontawesome',
-              format: 'YY-MM-DD',
-              // minDate: function () {
-              //   return $('#startDate').val();
-              // }
+              minDate: function () {
+                return $('#startDate').val();
+              }
             });
           </script>
           <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
