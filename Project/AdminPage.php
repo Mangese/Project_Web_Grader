@@ -72,6 +72,13 @@ if(!isset($_SESSION["user"]))
     function logout() {
       window.location = "logout.php";
     }
+
+    $(document).ready(function () {
+      document.getElementById(endDate).val();
+
+
+    });
+
     function selectTypeOnChange() {
       typeSearch = $("#selectType").val();
       // alert(typeSearch);
@@ -777,6 +784,7 @@ if(!isset($_SESSION["user"]))
               iconsLibrary: 'fontawesome',
               maxDate: function () {
                 return $('#endDate').val();
+
               }
             });
             $('#endDate').datepicker({
