@@ -775,7 +775,7 @@ if(!isset($_SESSION["user"]))
             $('#startDate').datepicker({
               uiLibrary: 'bootstrap4',
               iconsLibrary: 'fontawesome',
-              format: 'YY-MM-DD'
+              format: 'YY-MM-DD',
               // maxDate: function () {
               //   return $('#endDate').val();
               // }
@@ -783,7 +783,7 @@ if(!isset($_SESSION["user"]))
             $('#endDate').datepicker({
               uiLibrary: 'bootstrap4',
               iconsLibrary: 'fontawesome',
-              format: 'YY-MM-DD'
+              format: 'YY-MM-DD',
               // minDate: function () {
               //   return $('#startDate').val();
               // }
