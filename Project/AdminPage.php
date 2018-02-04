@@ -88,7 +88,15 @@ if(!isset($_SESSION["user"]))
       // alert("inusertype");
       typeSelect = $("#addUserType").val();
       if (typeSelect == 'T') {
-        alert("addUserType =T");
+        // alert("addUserType =T");
+        document.getElementById("addFirstname").disabled = true;
+        document.getElementById("addLastname").disabled = true;
+        document.getElementById("addUsername").disabled = true;
+        document.getElementById("addStudentID").disabled = true;
+        document.getElementById("addDepartment").disabled = true;
+        document.getElementById("addEmail").disabled = true;
+        document.getElementById("addPassword").disabled = true;
+        document.getElementById("addPassword2").disabled = true;
         document.getElementById("addFirstname").disabled = false;
         document.getElementById("addLastname").disabled = false;
         document.getElementById("addUsername").disabled = false;
@@ -97,7 +105,7 @@ if(!isset($_SESSION["user"]))
         document.getElementById("addPassword").disabled = false;
         document.getElementById("addPassword2").disabled = false;
       } else if (typeSelect == 'S') {
-        alert("addUserType =S");
+        // alert("addUserType =S");
         document.getElementById("addFirstname").disabled = false;
         document.getElementById("addLastname").disabled = false;
         document.getElementById("addUsername").disabled = false;
