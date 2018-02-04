@@ -115,7 +115,7 @@ if(!isset($_SESSION["user"]))
     function checkBoxEdit(num) {
       alert(num);
       if (num == 1) {
-        $("#editFirstname").disabled = false;
+        $("#editFirstname").disabled = true;
       }
 
     }
