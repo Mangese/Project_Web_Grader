@@ -118,6 +118,12 @@ if(!isset($_SESSION["user"]))
       document.getElementById("editPassword").disabled = true;
       document.getElementById("editPassword2").disabled = true;
 
+      if ($("#defaultCheckFirstname").checked = true) {
+        alert("5555");
+      } else {
+        alert("else defaultCheckFirstname");
+
+      }
     }
 
     function fillclassManagementTb() {
