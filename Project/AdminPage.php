@@ -114,55 +114,56 @@ if(!isset($_SESSION["user"]))
 
     function checkBoxEdit(num) {
       if (num == 1) {
-        if (document.getElementById("defaultCheckFirstname").checked == true)
+        if (document.getElementById("defaultCheckFirstname").checked == true) {
           document.getElementById("editFirstname").disabled = false;
-      } else document.getElementById("editFirstname").disabled = true;
-
-    }
-
-    function fillclassManagementTb() {
-
-      alert("in fun fillclassManagementTb");
-      $('#classManagementTb tbody tr').remove();
-      CIDSearch = $("#CIDSearch").val();
-      classNameSearch = $("#classNameSearch").val();
-
-      alert(CIDSearch);
-      alert(classNameSearch);
-
-
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          $('#classManagementTb').append(this.responseText);
+        } else {
+          document.getElementById("editFirstname").disabled = true;
         }
       }
-      xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
-      xmlhttp.send();
-    }
 
-    function fillSectionManagementTb() {
+      function fillclassManagementTb() {
 
-      // alert("in fun SectionManagementTb");
-      $('#SectionManagementTb tbody tr').remove();
-      sectionIDSearch = $("#SectionIDSearch").val();
-      sectionNameSearch = $("#sectionNameSearch").val();
-      createBySearch = $("#createBySearch").val();
+        alert("in fun fillclassManagementTb");
+        $('#classManagementTb tbody tr').remove();
+        CIDSearch = $("#CIDSearch").val();
+        classNameSearch = $("#classNameSearch").val();
 
-      // alert(sectionIDSearch);
-      // alert(sectionNameSearch);
-      // alert(createBySearch);
+        alert(CIDSearch);
+        alert(classNameSearch);
 
 
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          $('#SectionManagementTb').append(this.responseText);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $('#classManagementTb').append(this.responseText);
+          }
         }
+        xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
+        xmlhttp.send();
       }
-      xmlhttp.open("POST", "FillSectionManagementTbA.php?sectionIDSearch=" + sectionIDSearch + "&sectionNameSearch=" + sectionNameSearch + "&createBySearch=" + createBySearch, true);
-      xmlhttp.send();
-    }
+
+      function fillSectionManagementTb() {
+
+        // alert("in fun SectionManagementTb");
+        $('#SectionManagementTb tbody tr').remove();
+        sectionIDSearch = $("#SectionIDSearch").val();
+        sectionNameSearch = $("#sectionNameSearch").val();
+        createBySearch = $("#createBySearch").val();
+
+        // alert(sectionIDSearch);
+        // alert(sectionNameSearch);
+        // alert(createBySearch);
+
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            $('#SectionManagementTb').append(this.responseText);
+          }
+        }
+        xmlhttp.open("POST", "FillSectionManagementTbA.php?sectionIDSearch=" + sectionIDSearch + "&sectionNameSearch=" + sectionNameSearch + "&createBySearch=" + createBySearch, true);
+        xmlhttp.send();
+      }
   </script>
 
   <div class="container-table">
