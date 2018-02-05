@@ -766,16 +766,20 @@ if(!isset($_SESSION["user"]))
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
+            <input type="radio" name="typeFile" value="flag" checked> Flag &emsp;
+            <input type="radio" name="typeFile" value="fileSubmit"> File Submit &emsp;
             <label class="mr-3">Start Date :</label>
             <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
             <input id="endDate" width="200" />
           </div>
+          <input id="typeFilemoc" type="hidden">
           <script>
             var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
             $('#startDate').datepicker({
               uiLibrary: 'bootstrap4',
               iconsLibrary: 'fontawesome',
+              format: 'yyyy-mm-dd',
               maxDate: function () {
                 return $('#endDate').val();
               }
@@ -783,13 +787,38 @@ if(!isset($_SESSION["user"]))
             $('#endDate').datepicker({
               uiLibrary: 'bootstrap4',
               iconsLibrary: 'fontawesome',
+              format: 'yyyy-mm-dd',
               minDate: function () {
                 return $('#startDate').val();
               }
             });
           </script>
-          <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+          <button type="button" class="btn btn-secondary ml-3" onclick="fillFileManagement()">Search</button>
         </form>
+
+        <script>
+            function fillFileManagement() {
+              alert("in testDate");
+              var sdate = $('#startDate').datepicker().val();
+              var edate = $('#endDate').datepicker().val();
+              // if (document.getElementById('flag').checked) {
+              //   aler("flag on");
+              //   // rate_value = document.getElementById('r1').value;
+              // }
+              if ($('input[name=typeFile]:checked').val() == 'flag') {
+                tFile = document.getElementById('typeFilemoc').value = 'flag';
+                alert(tFile);
+              } else {
+                tFile = document.getElementById('typeFilemoc').value = 'fileSubmit';
+                alert(tFile);
+              }
+              alert("start date is: " + sdate);
+              alert("end date is: " + edate);
+              // alert("type file is: " + tFile);
+
+
+            }
+        </script>
 
         <!--Table-->
         <div class="table-wrapper-account">
