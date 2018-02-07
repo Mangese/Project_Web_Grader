@@ -178,7 +178,9 @@
               <div class="modal-body mx-2">
                 <div class="form-inline" style="justify-content:space-between">
                   <label>Please Enter Section Password</label>
-                  <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;" data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer"></i>
+                  <div data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer">
+                    <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;"></i>
+                  </div>
                 </div>
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
