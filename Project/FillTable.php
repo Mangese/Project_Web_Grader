@@ -39,11 +39,11 @@
       $Status = $row['status'];
       if(!strcmp($Status, "F"))
       {
-        echo "<div style='color:red'>Fail</div>";
+        echo "<div style='color:#E74C3C'>Fail</div>";
       }
       else
       {
-        echo "Pass";
+        echo "<div style='color:#2ECC71'>Pass";
       }
       echo "</td>";
       echo "<td style='width:12%'>";
