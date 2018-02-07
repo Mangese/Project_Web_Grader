@@ -178,8 +178,7 @@
               <div class="modal-body mx-2">
                 <div class="form-inline" style="justify-content:space-between">
                   <label>Please Enter Section Password</label>
-                  <!-- <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;" data-toggle="tooltip" data-placement="bottom" title="Password from lecturer"></i> -->
-                  <i class="fa fa-info-circle tooltipp" style="color:#5bc0de; font-size:2rem;"></i>
+                  <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;" data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer"></i>
                 </div>
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
@@ -355,17 +354,8 @@
       </div>
     </div>
 
-    <h1>Examples of CSS ToolTips!</h1>
+    <!-- <h1>Examples of CSS ToolTips!</h1> -->
 		<!-- <p>Here are some examples of a <label class="tooltipp" href="#">Classic<span class="classic">This is just an example of what you can do using a CSS tooltipp, feel free to get creative and produce your own!</span></label>, <a class="tooltipp" href="#">Critical<span class="custom critical"><img src="Critical.png" alt="Error" height="48" width="48" /><em>Critical</em>This is just an example of what you can do using a CSS tooltipp, feel free to get creative and produce your own!</span></a>, <a class="tooltipp" href="#">Help<span class="custom help"><img src="Help.png" alt="Help" height="48" width="48" /><em>Help</em>This is just an example of what you can do using a CSS tooltipp, feel free to get creative and produce your own!</span></a>, <a class="tooltipp" href="#">Information<span class="custom info"><img src="Info.png" alt="Information" height="48" width="48" /><em>Information</em>This is just an example of what you can do using a CSS tooltipp, feel free to get creative and produce your own!</span></a> and <a class="tooltipp" href="#">Warning<span class="custom warning"><img src="Warning.png" alt="Warning" height="48" width="48" /><em>Warning</em>This is just an example of what you can do using a CSS tooltipp, feel free to get creative and produce your own!</span></a> CSS powered tooltipp. This is just an example of what you can do so feel free to get creative and produce your own!</p> -->
-    <p>
-      Here are some examples of a 
-      <a class="tooltipp" href="#">
-        Classic
-        <!-- <span class="classic">
-          This is just an example of what you can do using a CSS tooltipp, feel free to get creative and produce your own!
-        </span> -->
-      </a>
-    </p>
     
   </body>
 

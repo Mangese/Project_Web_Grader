@@ -24,7 +24,7 @@
       $PID = $row['pid'];
       $QTY = $row['num'];
       $DD = $row['deadline'];
-      echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
+      echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
       echo "<td style='width:11%'>";
       echo "$LA";
