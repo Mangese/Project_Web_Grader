@@ -356,7 +356,7 @@
 
     <h1>Examples of CSS ToolTips!</h1>
 		<!-- <p>Here are some examples of a <label class="tooltip" href="#">Classic<span class="classic">This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></label>, <a class="tooltip" href="#">Critical<span class="custom critical"><img src="Critical.png" alt="Error" height="48" width="48" /><em>Critical</em>This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a>, <a class="tooltip" href="#">Help<span class="custom help"><img src="Help.png" alt="Help" height="48" width="48" /><em>Help</em>This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a>, <a class="tooltip" href="#">Information<span class="custom info"><img src="Info.png" alt="Information" height="48" width="48" /><em>Information</em>This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a> and <a class="tooltip" href="#">Warning<span class="custom warning"><img src="Warning.png" alt="Warning" height="48" width="48" /><em>Warning</em>This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a> CSS powered tooltip. This is just an example of what you can do so feel free to get creative and produce your own!</p> -->
-    <p>Here are some examples of a <label class="tooltip" href="#">Classic</label></p>
+    <p>Here are some examples of a <label class="tooltipp" href="#">Classic</label></p>
     
   </body>
 
