@@ -39,7 +39,7 @@
       $Status = $row['status'];
       if(!strcmp($Status, "F"))
       {
-        echo "Fail";
+        echo "<div style='color:red'>Fail</div>";
       }
       else
       {
