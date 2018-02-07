@@ -170,7 +170,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body mx-2">
-                <div style="justify-content: space-between">
+                <div class="form-inline mb-3" style="justify-content: space-between">
                   <p>Please Enter Section Password</p>
                   <i class="fa fa-info-circle" aria-hidden="true"></i>
                 </div>
