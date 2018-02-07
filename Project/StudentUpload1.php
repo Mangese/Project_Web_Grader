@@ -29,6 +29,7 @@
   <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>
 
   <link rel="stylesheet" href="StudentUpload1.css">
+  <link rel="stylesheet" href="Tooltip.css">
 
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
@@ -151,14 +152,21 @@
                   }
     </script>
 
+    <script>
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
+
     <div class="container-table">
       <div class="head-std row">
         <div class="dropdown">
           <select class="form-control" id="selectClass" name="selectClass" onchange="fillTable();">
-          <option value = "">Select Section</option>
-        </select>
+            <option value = "">Select Section</option>
+          </select>
         </div>
         <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Section</button>
+        <a class="tooltip" href="#">Classic<span class="classic">This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a>
         <!-- Modal -->
         <div class="modal fade" id="joinClass" role="dialog">
           <div class="modal-dialog">
@@ -172,7 +180,7 @@
               <div class="modal-body mx-2">
                 <div class="form-inline" style="justify-content:space-between">
                   <label>Please Enter Section Password</label>
-                  <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;"></i>
+                  <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;" data-toggle="tooltip" data-placement="bottom" title="Password from lecturer"></i>
                 </div>
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
