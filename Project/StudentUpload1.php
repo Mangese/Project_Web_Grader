@@ -170,9 +170,9 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body mx-2">
-                <div class="form-inline" style="justify-content: space-between">
+                <div class="form-inline" style="justify-content:space-between">
                   <label>Please Enter Section Password</label>
-                  <i class="fas fa-info-circle" style="color: #5bc0de"></i>
+                  <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;"></i>
                 </div>
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
