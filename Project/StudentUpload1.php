@@ -166,7 +166,6 @@
           </select>
         </div>
         <button type="button" class="btn btn-secondary right" data-toggle="modal" data-target="#joinClass">Join Section</button>
-        <a class="tooltip" href="#">Classic<span class="classic">This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a>
         <!-- Modal -->
         <div class="modal fade" id="joinClass" role="dialog">
           <div class="modal-dialog">
@@ -355,6 +354,8 @@
         </div>
       </div>
     </div>
+
+    <p><a class="tooltip" href="#">Classic<span class="classic">This is just an example of what you can do using a CSS tooltip, feel free to get creative and produce your own!</span></a></p>
 
   </body>
 
