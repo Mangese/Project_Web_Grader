@@ -80,17 +80,17 @@
           }
           $sumMark = $sumMark + $teacherMark;
           $sumFullMark = $sumFullMark + $fullMarkModal;
-          echo "<td style='min-width:30px'>";
+          echo "<td style='min-width:30px' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo "<div data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'><i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i></div>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
                 echo "=$teacherMark pt.";
               }
             }
             else {
-              echo "<div data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'><i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i></div>";
+              echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
                  echo " =$teacherMark pt.";
               }
