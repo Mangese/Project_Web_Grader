@@ -126,7 +126,7 @@
       while($row = mysql_fetch_assoc($result4)){
         $sumByPloblem = $row['sumbyproblem'];
         echo "<td style='min-width:30px; font-weight:bold';>";
-          echo "<a href = 'testDiceCorre.php' target = '_blank'>$sumByPloblem</a>";
+          echo "<a href = 'testDiceCorre.php?hid=$HID>' target = '_blank'>$sumByPloblem</a>";
         echo "</td>";
       }
     }
