@@ -19,7 +19,7 @@
       $FN = $row['fileName'];
       echo "<tr>";
       echo "<td style='width:40%' class = 'use'>";
-      echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
+      echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
       echo "<td style='width:20%'>";
       echo "$UD";

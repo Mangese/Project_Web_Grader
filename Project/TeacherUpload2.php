@@ -435,6 +435,12 @@
 
       }
     </script>
+
+    <script>
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
     <!--End script-->
     <!-- <input id="idmoc" type="hidden"> -->
     <input id="idmoc" type="hidden">
@@ -631,7 +637,7 @@
             <!--Head 2-->
             <div class="form-group mx-sm-4">
               <label for="staticPassword" style="margin-right:12px">Password  </label>
-              <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px">
+              <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px" data-toggle="tooltip" data-placement="bottom" title="Password for students to join Section">
             </div>
 
             <!--Head 3-->

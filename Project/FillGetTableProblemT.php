@@ -27,7 +27,7 @@
       
       echo "<tr>";
       echo "<td style='width:18%'>";
-      echo "<a href = 'Problem/$FN' target = '_blank'>$PN</a>";
+      echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
       echo "<td style='width:13%'>";
       echo "<input type='text' class='form-control' style='width:50%' id = '$fullMarkName' placeholder='Mark'";
