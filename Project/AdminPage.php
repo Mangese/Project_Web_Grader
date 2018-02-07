@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Admin-Grader</title>
 
   <!--bootstrap 4-->
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -17,7 +17,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+  />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
@@ -27,7 +28,8 @@
 
   <!-- Date Picker -->
   <script src="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
-  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css"
+  />
 
 
   <!--Font Awesome-->
@@ -46,36 +48,78 @@
 
 <!-- <?php
   session_start();
-
-  if(!isset($_SESSION["user"]))
+if(!isset($_SESSION["user"]))
   {
   echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
   }
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
-  $UT = $_SESSION["utype"];
-  if(strcmp($UT,"T"))
+	  $UT = $_SESSION["utype"];
+  if(!strcmp($UT,"S"))
   {
-    echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
+	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
+  }
+  else if(!strcmp($UT,"T"))
+  {
+	echo "<script> alert('Invalid Page'); window.location = 'TeacherUpload2.php'; </script>";
   }
   }
   ?> -->
 
 <body>
   <script>
+    function logout() {
+      window.location = "logout.php";
+    }
+
     function selectTypeOnChange() {
       typeSearch = $("#selectType").val();
       // alert(typeSearch);
       if (typeSearch == 'T') {
-        document.getElementById("SIDSearch").disabled = true;
-        document.getElementById('SIDSearch').value = '';
+        document.getElementById("stdIDSearch").disabled = true;
+        document.getElementById('stdIDSearch').value = '';
       }
       else {
-        document.getElementById("SIDSearch").disabled = false;
+        document.getElementById("stdIDSearch").disabled = false;
       }
+    }
+    function addUserDisableTrue() {
+      document.getElementById("addFirstname").disabled = true;
+      document.getElementById("addLastname").disabled = true;
+      document.getElementById("addUsername").disabled = true;
+      document.getElementById("addStudentID").disabled = true;
+      document.getElementById("addDepartment").disabled = true;
+      document.getElementById("addEmail").disabled = true;
+      document.getElementById("addPassword").disabled = true;
+      document.getElementById("addPassword2").disabled = true;
+    }
+    function addUserDisableFalse() {
+      document.getElementById("addFirstname").disabled = false;
+      document.getElementById("addLastname").disabled = false;
+      document.getElementById("addUsername").disabled = false;
+      document.getElementById("addDepartment").disabled = false;
+      document.getElementById("addEmail").disabled = false;
+      document.getElementById("addPassword").disabled = false;
+      document.getElementById("addPassword2").disabled = false;
+    }
 
+    function userType() {
+      // alert("inusertype");
+      typeSelect = $("#addUserType").val();
+      if (typeSelect == 'T') {
+        // alert("addUserType =T");
+        addUserDisableTrue();
+        addUserDisableFalse();
 
+      } else if (typeSelect == 'S') {
+        // alert("addUserType =S");
+        addUserDisableFalse();
+        document.getElementById("addStudentID").disabled = false;
+      }
+      else {
+        addUserDisableTrue();
+      }
     }
 
     function fillaccountManagementTb() {
@@ -83,7 +127,7 @@
       // alert("in fun fillaccountManagementTb");
       $('#accountManagementTb tbody tr').remove();
       typeSearch = $("#selectType").val();
-      sidSearch = $("#SIDSearch").val();
+      sidSearch = $("#stdIDSearch").val();
       nameSearch = $("#nameSearch").val();
       // alert(typeSearch);
       // alert(sidSearch);
@@ -96,6 +140,119 @@
         }
       }
       xmlhttp.open("POST", "FillAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
+      xmlhttp.send();
+    }
+
+    function editAccountManagementTb(th, uid) {
+      alert("uid is:" + uid);
+    }
+
+    function editClassManagementTb(th, cid) {
+      alert("cid is:" + cid);
+    }
+
+    function editSectionManagementTb(th, sid) {
+      alert("sid is:" + sid);
+    }
+
+    function checkBoxEdit(num) {
+      EditFN = document.getElementById("editFirstname");
+      EditLN = document.getElementById("editLastname");
+      EditUN = document.getElementById("editUsername");
+      EditsID = document.getElementById("editStudentID");
+      EditDM = document.getElementById("editDepartment");
+      EditMail = document.getElementById("editEmail");
+      EditP = document.getElementById("editPassword");
+      EditP2 = document.getElementById("editPassword2");
+
+      if (num == 1) {
+        if (document.getElementById("defaultCheckFirstname").checked == true) {
+          EditFN.disabled = false;
+        } else {
+          EditFN.disabled = true;
+        }
+      } else if (num == 2) {
+        if (document.getElementById("defaultCheckLastname").checked == true) {
+          EditLN.disabled = false;
+        } else {
+          EditLN.disabled = true;
+        }
+      } else if (num == 3) {
+        if (document.getElementById("defaultCheckUsername").checked == true) {
+          EditUN.disabled = false;
+        } else {
+          EditUN.disabled = true;
+        }
+      } else if (num == 4) {
+        if (document.getElementById("defaultCheckStdID").checked == true) {
+          EditsID.disabled = false;
+        } else {
+          EditsID.disabled = true;
+        }
+      } else if (num == 5) {
+        if (document.getElementById("defaultCheckDepart").checked == true) {
+          EditDM.disabled = false;
+        } else {
+          EditDM.disabled = true;
+        }
+      } else if (num == 6) {
+        if (document.getElementById("defaultCheckEmail").checked == true) {
+          EditMail.disabled = false;
+        } else {
+          EditMail.disabled = true;
+        }
+      } else if (num == 7) {
+        if (document.getElementById("defaultCheckPass").checked == true) {
+          EditP.disabled = false;
+          EditP2.disabled = false;
+        } else {
+          EditP.disabled = true;
+          EditP2.disabled = true;
+        }
+      }
+    }
+
+    function fillclassManagementTb() {
+
+      // alert("in fun fillclassManagementTb");
+      $('#classManagementTb tbody tr').remove();
+      CIDSearch = $("#CIDSearch").val();
+      classNameSearch = $("#classNameSearch").val();
+
+      // alert(CIDSearch);
+      // alert(classNameSearch);
+
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          $('#classManagementTb').append(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
+      xmlhttp.send();
+    }
+
+    function fillSectionManagementTb() {
+
+      // alert("in fun SectionManagementTb");
+      $('#SectionManagementTb tbody tr').remove();
+      sectionIDSearch = $("#SectionIDSearch").val();
+      sectionNameSearch = $("#sectionNameSearch").val();
+      createBySearch = $("#createBySearch").val();
+
+      // alert(sectionIDSearch);
+      // alert(sectionNameSearch);
+      // alert(createBySearch);
+
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          $('#SectionManagementTb').append(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "FillSectionManagementTbA.php?sectionIDSearch=" + sectionIDSearch + "&sectionNameSearch=" + sectionNameSearch + "&createBySearch=" + createBySearch, true);
       xmlhttp.send();
     }
   </script>
@@ -123,7 +280,7 @@
 
       <!-- Tab 1 -->
       <div class="tab-pane active" id="tab1" role="tabpanel">
-        
+
         <!--Search input-->
         <form class="form-inline mx-2" style="margin-top:20px; margin-bottom:10px; justify-content: space-between;">
 
@@ -131,8 +288,9 @@
             <label>Select type</label>
             <select class="form-control ml-3" id="selectType" onchange="selectTypeOnChange()">
                 <option value="">All type</option>
+                <option value="T">Lecturer</option>
                 <option value="S">Student</option>
-                <option value="T">Teacher</option>
+                
             </select>
           </div>
 
@@ -153,40 +311,44 @@
                 <div class="modal-body">
                   <div class="form-group row mt-3">
                     <div class="col-sm-12">
-                      <select class="form-control" id="addUserType" name="addUserType" required oninvalid="this.setCustomValidity('Please select some type');" oninput="setCustomValidity('')">
+                      <select class="form-control" id="addUserType" name="addUserType" onchange="userType()" required oninvalid="this.setCustomValidity('Please select some type');"
+                        oninput="setCustomValidity('')">
                         <option value="">User type</option>
-                        <option value="Lecturer">Lecturer</option>
-                        <option value="Student">Student</option>
+                        <option value="T">Lecturer</option>
+                        <option value="S">Student</option>
                       </select>
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="addFirstname" name="addFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
+                      <input type="text" class="form-control" id="addFirstname" name="addFirstname" placeholder="Firstname" disabled required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                      <input type="text" class="form-control" name="addLastname" id="addLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
-                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                      <input type="text" class="form-control" name="addUsername" id="addUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
+                      />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addStudentID" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
-                        oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                      <input type="text" class="form-control" name="addStudentID" id="addStudentID" placeholder="Student ID (EX. 5713XXX)" disabled
+                        required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
+                        minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <select class="form-control" id="addDepartment" name="addDepartment" required oninvalid="this.setCustomValidity('Please select some department');" oninput="setCustomValidity('')">
+                      <select class="form-control" id="addDepartment" name="addDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
+                        oninput="setCustomValidity('')">
                         <option value="">Department</option>
                         <option value="Biomedical Engineering">Biomedical Engineering</option>
                         <option value="Civil Engineering">Civil Engineering</option>
@@ -200,24 +362,25 @@
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="email" class="form-control" name="addEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
+                      <input type="email" class="form-control" name="addEmail" id="addEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
                         oninput="setCustomValidity('')" maxlength=30/>
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
                       <input type="password" class="form-control" id="addPassword" name="addPassword" placeholder="Password" minlength=6 maxlength=30
-                        required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
+                        disabled required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                         onkeyup='check();' />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
                       <input type="password" class="form-control" id="addPassword2" name="addPassword2" placeholder="Confirm Password" minlength=6
-                        maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
+                        maxlength=30 disabled required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
                   </div>
-                </div><!--End Modal Body-->
+                </div>
+                <!--End Modal Body-->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-success" onclick="">Create Account</button>
                 </div>
@@ -239,11 +402,11 @@
             <thead class="thead">
               <tr>
                 <th style="width:15%" onclick="sortTable1(0)">
-                  Student ID
+                  Username
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
                 <th style="width:15%" onclick="sortTable1(1)">
-                  Username
+                  Student ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
                 <th style="width:15%" onclick="sortTable1(2)">
@@ -313,33 +476,49 @@
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                  <div class="form-group row mt-3">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
-                        oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" disabled required
+                        oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');" oninput="setCustomValidity('')"
+                        minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
+                    </div>
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckFirstname" onclick="checkBoxEdit(1)">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" name="editLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editLastname" name="editLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" name="editUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
-                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckLastname" onclick="checkBoxEdit(2)">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="text" class="form-control" name="editStudentID" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
-                        oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                        oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
+                      />
+                    </div>
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckUsername" onclick="checkBoxEdit(3)">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col-sm-12">
-                      <select class="form-control" id="editDepartment" name="editDepartment" required oninvalid="this.setCustomValidity('Please select some department');" oninput="setCustomValidity('')">
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editStudentID" name="editStudentID" disabled placeholder="Student ID (EX. 5713XXX)"
+                        required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
+                        minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                    </div>
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckStdID" onclick="checkBoxEdit(4)">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
+                        oninput="setCustomValidity('')">
                         <option value="">Department</option>
                         <option value="Biomedical Engineering">Biomedical Engineering</option>
                         <option value="Civil Engineering">Civil Engineering</option>
@@ -350,27 +529,37 @@
                         <option value="Mechanical Engineering">Mechanical Engineering</option>
                       </select>
                     </div>
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckDepart" onclick="checkBoxEdit(5)">
+                    </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="email" class="form-control" name="editEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
                         oninput="setCustomValidity('')" maxlength=30/>
                     </div>
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckEmail" onclick="checkBoxEdit(6)">
+                    </div>
                   </div>
                   <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="password" class="form-control" id="editPassword" name="editPassword" placeholder="New Password" minlength=6 maxlength=30
-                        required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="editPassword" name="editPassword" disabled placeholder="New Password" minlength=6
+                        maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                         onkeyup='check();' />
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <input type="password" class="form-control" id="editPassword2" name="editPassword2" placeholder="Confirm New Password" minlength=6
-                        maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
+                    <div class="col-sm-2">
+                      <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckPass" onclick="checkBoxEdit(7)">
                     </div>
                   </div>
-                </div><!--End Modal Body-->
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
+                        minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
+                    </div>
+                  </div>
+                </div>
+                <!--End Modal Body-->
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-success" onclick="">Save</button>
                 </div>
@@ -390,12 +579,12 @@
             <label>Search by</label>
             <input class="form-control ml-3" type="text" id="CIDSearch" name="CIDSearch" placeholder="Class ID">
             <input class="form-control ml-3" type="text" id="classNameSearch" name="classNameSearch" placeholder="Class Name">
-            <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+            <button type="button" class="btn btn-secondary ml-3" onclick="fillclassManagementTb()">Search</button>
           </div>
 
           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addClass">Create Class</button>
         </form>
-        
+
         <!-- Modal -->
         <div class="modal fade" id="addClass" role="dialog">
           <div class="modal-dialog modal-md">
@@ -418,7 +607,7 @@
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="accountManagementTb">
+          <table class="table table-striped table-hover main" id="classManagementTb">
             <thead class="thead">
               <tr>
                 <th style="width:20%" onclick="sortTable1(0)">
@@ -476,7 +665,7 @@
             </div>
           </div>
         </div>
-    
+
       </div>
       <!-- End Tab2 -->
 
@@ -486,10 +675,10 @@
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
             <label>Search by</label>
-            <input class="form-control ml-3" type="text" id="SIDSearch" name="SIDSearch" placeholder="Section ID">
+            <input class="form-control ml-3" type="text" id="SectionIDSearch" name="SectionIDSearch" placeholder="Section ID">
             <input class="form-control ml-3" type="text" id="sectionNameSearch" name="sectionNameSearch" placeholder="Section Name">
             <input class="form-control ml-3" type="text" id="createBySearch" name="createBySearch" placeholder="Lecturer Name">
-            <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+            <button type="button" class="btn btn-secondary ml-3" onclick="fillSectionManagementTb()">Search</button>
           </div>
         </form>
 
@@ -567,8 +756,8 @@
             </div>
           </div>
         </div>
-    
-        
+
+
       </div>
       <!-- End Tab3 -->
 
@@ -577,30 +766,59 @@
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
+            <input type="radio" name="typeFile" value="flag" checked> Flag &emsp;
+            <input type="radio" name="typeFile" value="fileSubmit"> File Submit &emsp;
             <label class="mr-3">Start Date :</label>
-            <input  id="startDate" width="200" />
+            <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
             <input id="endDate" width="200" />
           </div>
+          <input id="typeFilemoc" type="hidden">
           <script>
-              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-              $('#startDate').datepicker({
-                  uiLibrary: 'bootstrap4',
-                  iconsLibrary: 'fontawesome',
-                  maxDate: function () {
-                      return $('#endDate').val();
-                  }
-              });
-              $('#endDate').datepicker({
-                  uiLibrary: 'bootstrap4',
-                  iconsLibrary: 'fontawesome',
-                  minDate: function () {
-                      return $('#startDate').val();
-                  }
-              });
+            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+            $('#startDate').datepicker({
+              uiLibrary: 'bootstrap4',
+              iconsLibrary: 'fontawesome',
+              format: 'yyyy-mm-dd',
+              maxDate: function () {
+                return $('#endDate').val();
+              }
+            });
+            $('#endDate').datepicker({
+              uiLibrary: 'bootstrap4',
+              iconsLibrary: 'fontawesome',
+              format: 'yyyy-mm-dd',
+              minDate: function () {
+                return $('#startDate').val();
+              }
+            });
           </script>
-          <button type="button" class="btn btn-secondary ml-3" onclick="">Search</button>
+          <button type="button" class="btn btn-secondary ml-3" onclick="fillFileManagement()">Search</button>
         </form>
+
+        <script>
+            function fillFileManagement() {
+              alert("in testDate");
+              var sdate = $('#startDate').datepicker().val();
+              var edate = $('#endDate').datepicker().val();
+              // if (document.getElementById('flag').checked) {
+              //   aler("flag on");
+              //   // rate_value = document.getElementById('r1').value;
+              // }
+              if ($('input[name=typeFile]:checked').val() == 'flag') {
+                tFile = document.getElementById('typeFilemoc').value = 'flag';
+                alert(tFile);
+              } else {
+                tFile = document.getElementById('typeFilemoc').value = 'fileSubmit';
+                alert(tFile);
+              }
+              alert("start date is: " + sdate);
+              alert("end date is: " + edate);
+              // alert("type file is: " + tFile);
+
+
+            }
+        </script>
 
         <!--Table-->
         <div class="table-wrapper-account">
@@ -608,7 +826,7 @@
             <thead class="thead">
               <tr>
                 <th style="width:10%" onclick="sortTable1(0)">
-                    <label class="form-check-label">
+                  <label class="form-check-label">
                       <input type="checkbox" class="form-check-input">
                       All
                     </label>
@@ -641,9 +859,9 @@
           </table>
         </div>
         <!--End Table-->
-        
+
         <button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-      
+
       </div>
       <!-- End Tab4 -->
     </div>

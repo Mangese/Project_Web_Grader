@@ -2,6 +2,7 @@
 session_start();
 $UID = $_SESSION['uid'];
 $PN = $_POST["ProblemName"];
+$MC = $_POST["MainClass"];
 $page = 0;
 $conn = mysql_connect("localhost","mangese","000000");
 if($conn != FALSE)
@@ -23,7 +24,9 @@ if($conn != FALSE)
 	$temp = $tempName;
 	$file_name = $tempName;
 	echo "<script> alert('$temp'); </script>";
+	echo "<script> alert('$MC'); </script>";
 	$UnzipTarget = "UnzipPlace/";
+	
 	$baseTargetToCompile = "File/";
 	$rm = "*";
 	$OutReturnValue = "File/UnzipPlace/Computer";
@@ -61,7 +64,7 @@ if($conn != FALSE)
 		while((file_exists("$baseTarget$UnzipTargetIn$countNameIn")&&(file_exists("$target"))))
 		{
 		//	echo "<script> alert('timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit'); </script>";
-			exec("timeout 1 java -classpath $baseTargetToCompile$UnzipTarget Computer < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$outR,$reR);
+			exec("timeout 1 java -classpath $baseTargetToCompile$UnzipTarget $MC < $baseTarget$UnzipTargetIn$countNameIn > $target$OutputFromSubmit",$outR,$reR);
 		//	echo "<script> alert('Out error Run = $outR') </script>";
 		//	echo "<script> alert('Out result Run = $reR') </script>";
 			$countAll = $countAll + 1;

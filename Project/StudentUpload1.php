@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<title>Student-Grader</title>	
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
@@ -49,9 +50,13 @@
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
 	  $UT = $_SESSION["utype"];
-  if(strcmp($UT,"S"))
+  if(!strcmp($UT,"T"))
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'TeacherUpload2.php'; </script>";
+  }
+  else if(!strcmp($UT,"A"))
+  {
+	echo "<script> alert('Invalid Page'); window.location = 'AdminPage.php'; </script>";  
   }
   }
 ?>
@@ -235,7 +240,7 @@
                   <span class='file-custom'></span>
                   </label>
                       <p>Name of main class : </p>
-                      <input class="form-control" type='text' name="Main_Class" id="Main_Class" placeholder="ex. mainfile" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
+                      <input class="form-control" type='text' name="MainClass" id="MainClass" placeholder="ex. mainfile" required oninvalid="this.setCustomValidity('Please enter file name of main class,,\nex. mainfile.java');"
                         oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}$"
                       />
                     </div>

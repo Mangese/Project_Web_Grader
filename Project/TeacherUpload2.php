@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <title>Teacher-Grader</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
@@ -110,11 +111,15 @@
 
                   }
                   function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
-                    alert(x);
-                    alert(y);
-                    alert(submitcount);
-                    alert(qq);
-                    alert(getFullMark);
+                    // alert(x);
+                    // // alert(y);
+                    // // alert(submitcount);
+                    // alert(qq);
+                    // alert(getFullMark);
+                    $("#idmoc").val(x);
+                    $("#pidmoc").val(y);
+                    $("#fullmarkmoc").val(getFullMark);
+
 
                     var fullMarkV = document.getElementById("fullMark");
                     var setMarkV = document.getElementById("setMark");
@@ -142,6 +147,30 @@
                     }
                     xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
                     xmlhttp.send();
+                  }
+
+                  function markSubfunc() {
+
+                    var uidreq = $("#idmoc").val();
+                    var pidreq = $("#pidmoc").val();
+                    var setMark = $("#setMark").val();
+                    var fullmark = $("#fullmarkmoc").val();
+
+                    // alert(uidreq);
+                    // alert(pidreq);
+                    // alert(fullmark);
+
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
+                    xmlhttp.send();
+                    fillTableResult();
+                    // location.reload();
+
                   }
 
 
@@ -216,12 +245,12 @@
                           xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value + "&fullMark=" + document.getElementById(fullMarkName).value, true);
                           xmlhttp.send();
                           location.reload();
-                          alert(dateName);
-                          alert(timeName);
-                          alert(fullMarkName);
-                          alert(document.getElementById(dateName).value);
-                          alert(document.getElementById(timeName).value);
-                          alert(document.getElementById(fullMarkName).value);
+                          // alert(dateName);
+                          // alert(timeName);
+                          // alert(fullMarkName);
+                          // alert(document.getElementById(dateName).value);
+                          // alert(document.getElementById(timeName).value);
+                          // alert(document.getElementById(fullMarkName).value);
 
                         }
                       });
@@ -322,10 +351,17 @@
                     xmlhttp.send();
                   }
                   function fillTableResult() {
-                    x = document.getElementById("selSectionRs").value;
+                    // x = document.getElementById("selSectionRs").value;
                     $('#Result thead tr').remove();
                     $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
+
+                    uidreq = $("#idmoc").val();
+                    hidreq = $("#pidmoc").val();
+                    setMark = $("#setMark").val();
+                    // alert("uid from fillTable " + uidreq);
+                    // alert("hid from fillTable " + hidreq);
+                    // alert("mark from fillTable " + setMark);
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
                       if (this.readyState == 4 && this.status == 200) {
@@ -400,8 +436,10 @@
       }
     </script>
     <!--End script-->
-
-
+    <!-- <input id="idmoc" type="hidden"> -->
+    <input id="idmoc" type="hidden">
+    <input id="pidmoc" type="hidden">
+    <input id="fullmarkmoc" type="hidden">
 
     <div class="container-table">
 
@@ -1138,7 +1176,7 @@
                 </div> -->
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success">Mark submit</button>
+                  <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" onclick="markSubfunc(); " data-dismiss="modal">Mark submit</button>
                 </div>
               </div>
             </div>

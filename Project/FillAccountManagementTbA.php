@@ -14,10 +14,10 @@
     // echo "<script type='text/javascript'>alert('$SIDSR');</script>";
     // echo "<script type='text/javascript'>alert('$NSR');</script>";
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
-    if($TSR == 'T'){
-      $result = mysql_query("select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
+    if($SIDSR == ''){
+      $result = mysql_query("select u_id as uid,username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
     }else{
-      $result = mysql_query("select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
+      $result = mysql_query("select u_id as uid,username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
     }
     while($row = mysql_fetch_assoc($result))
     {
@@ -28,12 +28,13 @@
       $LN = $row['lastName'];
       $DM = $row['department'];
       $EM = $row['Email'];
+      $UID = $row['uid'];
       echo "<tr>";
       echo "<td style='width:15%'>";
-      echo "$SID";
+      echo "$UN";
       echo "</td>";
       echo "<td style='width:15%'>";
-      echo "$UN";
+      echo "$SID";
       echo "</td>";
       echo "<td style='width:15%'>";
       echo "$FN";
@@ -48,10 +49,10 @@
       echo "$EM";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "edit";
+      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "delete";
+      echo "<button type='button' class='btn btn-outline-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";
       echo "</td>";
       echo "</tr>";
     }
