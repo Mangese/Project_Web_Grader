@@ -170,11 +170,11 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body mx-2">
-                <div class="form-inline mb-3" style="justify-content: space-between">
+                <div class="form-inline" style="justify-content: space-between">
                   <p>Please Enter Section Password</p>
                   <i class="fa fa-info-circle" aria-hidden="true"></i>
                 </div>
-                <input class="form-control" type="text" placeholder="Password" id="SectionPassword">
+                <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="sectionRegister()">Join</button>
