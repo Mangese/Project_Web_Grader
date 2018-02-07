@@ -50,17 +50,17 @@
       if(!strcmp($Status, "F"))
       {
       if(!strcmp($LA, "Java")){
-         echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
+         echo "<button type='button' class='btn btn-outline-secondary btn-sm'  onclick = 'ModalHeaderFunc(this,$PID,$LA1);' data-toggle='modal' ";
          echo "data-target='#javaUpload'>Upload</button>";
       }else
       {
-        echo "<button type='button' class='btn btn-outline-secondary'  onclick = 'ModalHeaderFunc1(this,$PID,$LA1);' data-toggle='modal' ";
+        echo "<button type='button' class='btn btn-outline-secondary btn-sm'  onclick = 'ModalHeaderFunc1(this,$PID,$LA1);' data-toggle='modal' ";
         echo "data-target='#notjavaUpload'>Upload</button>";
       }
       }
       else
       {
-         echo "<button type='button' class='btn btn-outline-secondary'  ";
+         echo "<button type='button' class='btn btn-outline-secondary btn-sm'  ";
         echo ">Upload</button>";
       }
      

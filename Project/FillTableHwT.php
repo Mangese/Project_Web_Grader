@@ -46,7 +46,7 @@
           echo "$DD";
         echo "</td>";
         echo "<td style='width:10%'>";
-          echo "<button type='button' class='btn btn-danger'  data-toggle='modal' data-target='#modalChackDeleteHw' data-backdrop='static' data-keyboard='false' onclick = 'DeleteHw(this,$HID)';>Delete</button>";
+          echo "<button type='button' class='btn btn-danger btn-sm'  data-toggle='modal' data-target='#modalChackDeleteHw' data-backdrop='static' data-keyboard='false' onclick = 'DeleteHw(this,$HID)';>Delete</button>";
         echo "</td>";      
       echo "</tr>";
     }

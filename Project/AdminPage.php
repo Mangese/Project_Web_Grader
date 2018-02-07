@@ -454,10 +454,10 @@ if(!isset($_SESSION["user"]))
                   Email
                 </td>
                 <td style="width:5%">
-                  <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#editAccount"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                  <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editAccount"><i class="fa fa-edit" aria-hidden="true"></i></button>
                 </td>
                 <td style="width:5%">
-                  <button type="button" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                  <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
               </tr>
             </tbody>
