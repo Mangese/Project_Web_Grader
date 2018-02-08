@@ -155,8 +155,7 @@ if(!isset($_SESSION["user"]))
       // alert("utype is:" + utype);
       if (sid == '') {
         alert("no sid");
-
-      }
+      } else alert("sid =" + sid);
 
       // var xmlhttp = new XMLHttpRequest();
       // xmlhttp.onreadystatechange = function () {
