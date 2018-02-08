@@ -154,11 +154,11 @@ if(!isset($_SESSION["user"]))
       // alert("email is:" + email);
       // alert("utype is:" + utype);
       EditFN = document.getElementById("editFirstname").value = fname;
-      // EditLN = document.getElementById("editLastname");
-      // EditUN = document.getElementById("editUsername");
-      // EditsID = document.getElementById("editStudentID");
-      // // EditDM = document.getElementById("editDepartment");
-      // EditMail = document.getElementById("editEmail");
+      EditLN = document.getElementById("editLastname").value = lname;
+      EditUN = document.getElementById("editUsername").value = uname;
+      EditsID = document.getElementById("editStudentID").value = sid;
+      // EditDM = document.getElementById("editDepartment");
+      EditMail = document.getElementById("editEmail").value = email;
       // EditP = document.getElementById("editPassword");
       // EditP2 = document.getElementById("editPassword2");
       if (sid == '') {
@@ -384,7 +384,8 @@ if(!isset($_SESSION["user"]))
                         <option value="Biomedical Engineering">Biomedical Engineering</option>
                         <option value="Civil Engineering">Civil Engineering</option>
                         <option value="Chemical Engineering">Chemical Engineering</option>
-                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="CO">Computer Engineering</option>
+                        <!-- <option value="Computer Engineering">Computer Engineering</option> -->
                         <option value="Electrical Engineering">Electrical Engineering</option>
                         <option value="Industrial Engineering">Industrial Engineering</option>
                         <option value="Mechanical Engineering">Mechanical Engineering</option>
