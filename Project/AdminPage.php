@@ -157,7 +157,7 @@ if(!isset($_SESSION["user"]))
       EditLN = document.getElementById("editLastname").value = lname;
       EditUN = document.getElementById("editUsername").value = uname;
       EditsID = document.getElementById("editStudentID").value = sid;
-      EditDM = document.getElementById("editDepartment").val = depart;
+      EditDM = document.getElementById("editDepartment").selectedIndex = depart;
       EditMail = document.getElementById("editEmail").value = email;
       // EditP = document.getElementById("editPassword");
       // EditP2 = document.getElementById("editPassword2");
