@@ -145,22 +145,18 @@ if(!isset($_SESSION["user"]))
 
     // editAccountManagementTb(this,$UID,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)
     function editAccountManagementTb(th, uid, sid, uname, fname, lname, depart, email, utype) {
-      alert("uid is:" + uid);
-      alert("sid is:" + sid);
-      alert("uname is:" + uname);
-      alert("fname is:" + fname);
-      alert("lname is:" + lname);
-      alert("depart is:" + depart);
-      alert("email is:" + email);
-      alert("utype is:" + utype);
-      // alert("in fun fillaccountManagementTb");
+      // alert("uid is:" + uid);
+      // alert("sid is:" + sid);
+      // alert("uname is:" + uname);
+      // alert("fname is:" + fname);
+      // alert("lname is:" + lname);
+      // alert("depart is:" + depart);
+      // alert("email is:" + email);
+      // alert("utype is:" + utype);
+      if (sid == '') {
+        alert("no sid");
 
-      // typeSearch = $("#selectType").val();
-      // sidSearch = $("#stdIDSearch").val();
-      // nameSearch = $("#nameSearch").val();
-      // alert(typeSearch);
-      // alert(sidSearch);
-      // alert(nameSearch);
+      }
 
       // var xmlhttp = new XMLHttpRequest();
       // xmlhttp.onreadystatechange = function () {
