@@ -27,6 +27,7 @@ if($NumFile > 1)
 	}	
 	*/
 	print_r($UArray);
+	echo "</br>";
 	print_r($FArray);
 	}
 }
