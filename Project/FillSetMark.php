@@ -11,7 +11,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert($UID);";
     // echo "alert($PID);";
     // echo "alert($TM);";
-    echo "$TM";
 
      mysql_query("use grader;");
      mysql_query("update submit set TeacherMark = '$TM' where u_id = '$UID' and h_id = '$HID';");
