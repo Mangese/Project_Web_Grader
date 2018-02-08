@@ -8,23 +8,24 @@ while($row = mysql_fetch_assoc($NumberOfFile))
 {
 $NumFile = $row['num'];	
 }
+exec("cd File/");
 if($NumFile > 1)
 {
 	$countFile = 1;
 	while($row = mysql_fetch_assoc($QueryName))
 	{
 		$FN = $row['fileName'];
-		exec("echo -n '$FN' > File/input.txt");
+		exec("echo -n '$FN' > input.txt");
 		echo $FN;
 		echo "</br>";
-		exec("./File/FingerPrintGenerator < File/input.txt > File/output$countFile.txt ",$out,$re);
+		exec("./FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
 		print_r($out);
 		echo $re;
 		echo "</br>";
 		$countFile = $countFile+1;
 		if($countFile > 2)
 		{
-			exec("./File/Dice",$out1,$re1);
+			exec("./Dice",$out1,$re1);
 			print_r($out1);
 			echo $re1;
 			echo "</br>";
