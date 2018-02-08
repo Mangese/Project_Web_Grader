@@ -155,6 +155,7 @@ if(!isset($_SESSION["user"]))
       // alert("utype is:" + utype);
       if (sid == '') {
         alert("no sid");
+        document.getElementById("defaultCheckStdID").disabled = true;
       } else alert("sid =" + sid);
 
       // var xmlhttp = new XMLHttpRequest();
