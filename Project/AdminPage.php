@@ -144,10 +144,10 @@ if(!isset($_SESSION["user"]))
     }
 
     // editAccountManagementTb(this,$UID,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)
-    function editAccountManagementTb(th, uid, uname, fname, lname, depart, email, utype) {
+    function editAccountManagementTb(th, uid, sid, uname, fname, lname, depart, email, utype) {
       alert("uid is:" + uid);
+      alert("sid is:" + sid);
       alert("uname is:" + uname);
-      // // alert("sid is:" + sid);
       alert("fname is:" + fname);
       alert("lname is:" + lname);
       alert("depart is:" + depart);
