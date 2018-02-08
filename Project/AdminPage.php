@@ -156,8 +156,10 @@ if(!isset($_SESSION["user"]))
       if (sid == '') {
         alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
-      } else alert("sid =" + sid);
-
+      } else {
+        alert("sid =" + sid);
+        document.getElementById("defaultCheckStdID").disabled = false;
+      }
       // var xmlhttp = new XMLHttpRequest();
       // xmlhttp.onreadystatechange = function () {
       //   if (this.readyState == 4 && this.status == 200) {
