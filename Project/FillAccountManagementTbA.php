@@ -50,7 +50,7 @@
       echo "$EM";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$UN,$FN,$LN,$DM,$EM,$UT)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
+      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$UN,$FN,$LN)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
       echo "</td>";
       echo "<td style='width:5%'>";
       echo "<button type='button' class='btn btn-outline-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";
