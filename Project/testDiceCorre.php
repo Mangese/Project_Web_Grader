@@ -10,10 +10,16 @@ $NumFile = $row['num'];
 }
 if($NumFile > 1)
 {
+	$countFile = 1;
 	while($row = mysql_fetch_assoc($QueryName))
 	{
 		$FN = $row['fileName'];
-   		echo "<script> alert('$FN'); </script>";
+		exec("./File/FingerPrintGenerator < input.txt > output$CountFile.txt ");
+		$countFile = $countFile+1;
+		if($countFile > 2)
+		{
+			$countFile = 1;
+		}
 	}	
 }
 
