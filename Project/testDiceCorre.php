@@ -16,9 +16,11 @@ if($NumFile > 1)
 		$FN = $row['fileName'];
 		exec("echo -n '$FN' > input.txt");
 		echo $FN;
+		echo "</br>";
 		exec("./File/FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
 		print_r($out);
 		echo $re;
+		echo "</br>";
 		$countFile = $countFile+1;
 		if($countFile > 2)
 		{
