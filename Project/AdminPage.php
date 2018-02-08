@@ -381,13 +381,13 @@ if(!isset($_SESSION["user"]))
                       <select class="form-control" id="addDepartment" name="addDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
                         oninput="setCustomValidity('')">
                         <option value="">Department</option>
-                        <option value="Biomedical Engineering">Biomedical Engineering</option>
-                        <option value="Civil Engineering">Civil Engineering</option>
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                        <option value="Computer Engineering">Computer Engineering</option>
-                        <option value="Electrical Engineering">Electrical Engineering</option>
-                        <option value="Industrial Engineering">Industrial Engineering</option>
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="BE">Biomedical Engineering</option>
+                        <option value="CE">Civil Engineering</option>
+                        <option value="CHE">Chemical Engineering</option>
+                        <option value="CO">Computer Engineering</option>
+                        <option value="EE">Electrical Engineering</option>
+                        <option value="IE">Industrial Engineering</option>
+                        <option value="ME">Mechanical Engineering</option>
                       </select>
                     </div>
                   </div>
@@ -551,14 +551,13 @@ if(!isset($_SESSION["user"]))
                       <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
                         oninput="setCustomValidity('')">
                         <option value="">Department</option>
-                        <option value="Biomedical Engineering">Biomedical Engineering</option>
-                        <option value="Civil Engineering">Civil Engineering</option>
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                        <!-- <option value="Computer Engineering">Computer Engineering</option> -->
+                        <option value="BE">Biomedical Engineering</option>
+                        <option value="CE">Civil Engineering</option>
+                        <option value="CHE">Chemical Engineering</option>
                         <option value="CO">Computer Engineering</option>
-                        <option value="Electrical Engineering">Electrical Engineering</option>
-                        <option value="Industrial Engineering">Industrial Engineering</option>
-                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="EE">Electrical Engineering</option>
+                        <option value="IE">Industrial Engineering</option>
+                        <option value="ME">Mechanical Engineering</option>
                       </select>
                     </div>
                     <div class="col-sm-2">
