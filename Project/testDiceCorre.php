@@ -23,12 +23,12 @@ if($NumFile > 1)
 		/*exec("echo -n '$FN' > input.txt");
 		exec("./FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
 		$countFile = $countFile+1;
-
+*/
 	}	
-	*/
+	
 	print_r($UArray);
 	echo "</br>";
 	print_r($FArray);
-	}
+
 }
 ?>
