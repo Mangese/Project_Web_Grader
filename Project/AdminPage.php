@@ -153,6 +153,14 @@ if(!isset($_SESSION["user"]))
       // alert("depart is:" + depart);
       // alert("email is:" + email);
       // alert("utype is:" + utype);
+      EditFN = document.getElementById("editFirstname").value = fname;
+      // EditLN = document.getElementById("editLastname");
+      // EditUN = document.getElementById("editUsername");
+      // EditsID = document.getElementById("editStudentID");
+      // // EditDM = document.getElementById("editDepartment");
+      // EditMail = document.getElementById("editEmail");
+      // EditP = document.getElementById("editPassword");
+      // EditP2 = document.getElementById("editPassword2");
       if (sid == '') {
         alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
