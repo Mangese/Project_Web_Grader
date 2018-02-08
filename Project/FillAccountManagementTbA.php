@@ -15,9 +15,9 @@
     // echo "<script type='text/javascript'>alert('$NSR');</script>";
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     if($SIDSR == ''){
-      $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
+      $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
     }else{
-      $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
+      $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
     }
     while($row = mysql_fetch_assoc($result))
     {
@@ -57,7 +57,7 @@
       echo "$EM";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
+      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$SID,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
       echo "</td>";
       echo "<td style='width:5%'>";
       echo "<button type='button' class='btn btn-outline-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";
