@@ -143,18 +143,16 @@ if(!isset($_SESSION["user"]))
       xmlhttp.send();
     }
 
-    // editAccountManagementTb(this, $UID, $UN, $FN, $LN, $DM, $EM, $UT)
-    // function editAccountManagementTb(th, uid, uname, fname, lname, depart, email, utype) {
-    // editAccountManagementTb(this,$UID,$UN,$FN,$LN,$DM,$EM,$UT)
-    function editAccountManagementTb(th, uid, uname, fname, lname) {
+    // editAccountManagementTb(this,$UID,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)
+    function editAccountManagementTb(th, uid, uname, fname, lname, depart, email, utype) {
       alert("uid is:" + uid);
       alert("uname is:" + uname);
       // // alert("sid is:" + sid);
       alert("fname is:" + fname);
       alert("lname is:" + lname);
-      // alert("depart is:" + depart);
-      // alert("email is:" + email);
-      // alert("utype is:" + utype);
+      alert("depart is:" + depart);
+      alert("email is:" + email);
+      alert("utype is:" + utype);
       // alert("in fun fillaccountManagementTb");
 
       // typeSearch = $("#selectType").val();
