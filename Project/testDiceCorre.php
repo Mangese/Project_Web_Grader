@@ -13,30 +13,21 @@ if($NumFile > 1)
 {
 	$countFile = 1;
 	$UArray = array();
+	$FArray = array();
 	while($row = mysql_fetch_assoc($QueryName))
 	{
 		$uid = $row['uid'];
 		array_push($UArray,"$uid");
-		/*$FN = $row['fileName'];
-		exec("echo -n '$FN' > input.txt");
-		echo $FN;
-		echo "</br>";
+		$FN = $row['fileName'];
+		array_push($FArray,"$FN");
+		/*exec("echo -n '$FN' > input.txt");
 		exec("./FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
-		print_r($out);
-		echo $re;
-		echo "</br>";
 		$countFile = $countFile+1;
-		if($countFile > 2)
-		{
-			exec("./Dice",$out1,$re1);
-			print_r($out1);
-			echo $re1;
-			echo "</br>";
-			$countFile = 1;
-		}*/
 
 	}	
+	*/
 	print_r($UArray);
-}
+	print_r($FArray);
+	}
 
 ?>
