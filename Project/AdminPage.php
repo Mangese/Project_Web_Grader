@@ -150,7 +150,7 @@ if(!isset($_SESSION["user"]))
       // alert("uname is:" + uname);
       // alert("fname is:" + fname);
       // alert("lname is:" + lname);
-      // alert("depart is:" + depart);
+      alert("depart is:" + depart);
       // alert("email is:" + email);
       // alert("utype is:" + utype);
       EditFN = document.getElementById("editFirstname").value = fname;
