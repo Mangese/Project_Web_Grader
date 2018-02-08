@@ -27,6 +27,7 @@ if($NumFile > 1)
 			exec("./File/Dice",$out1,$re1);
 			print_r($out1);
 			echo $re1;
+			echo "</br>";
 			$countFile = 1;
 		}
 
