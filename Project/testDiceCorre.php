@@ -18,8 +18,12 @@ if($NumFile > 1)
 		$countFile = $countFile+1;
 		if($countFile > 2)
 		{
+			exec("./File/Dice",$out1,$re1);
+			print_r($re1);
+			echo $out1;
 			$countFile = 1;
 		}
+
 	}	
 }
 
