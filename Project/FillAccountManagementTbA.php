@@ -30,6 +30,10 @@
       $EM = $row['Email'];
       $UID = $row['uid'];
       $UT = $row['u_type'];
+
+      $UN1 = '"' .$UN. '"';
+      $FN1 = '"' .$FN. '"';
+      $LN1 = '"' .$LN. '"';
       echo "<tr>";
       echo "<td style='width:15%'>";
       echo "$UN";
@@ -50,7 +54,7 @@
       echo "$EM";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$UN,$FN,$LN)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
+      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$UN1,$FN1,$LN1)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
       echo "</td>";
       echo "<td style='width:5%'>";
       echo "<button type='button' class='btn btn-outline-danger btn-sm'><i class='fa fa-trash' aria-hidden='true'></i></button>";
