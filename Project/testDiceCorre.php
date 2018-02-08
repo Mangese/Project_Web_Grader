@@ -2,8 +2,8 @@
   $conn = mysql_connect("localhost","mangese","000000");
 	mysql_query("use grader;");
   $HID = $_REQUEST['hid'];
-  $NumberOfFile = mysql_query("select count(*) as num from submit where h_id = '$HID';");
-  $QueryName = mysql_query("select source_file as fileName from submit where h_id = '$HID';");
+  $NumberOfFile = mysql_query("select count(*) as num from submit where h_id = '$HID' and status = 'P';");
+  $QueryName = mysql_query("select source_file as fileName from submit where h_id = '$HID' and status = 'P';");
 while($row = mysql_fetch_assoc($NumberOfFile))
 {
 $NumFile = $row['num'];	
