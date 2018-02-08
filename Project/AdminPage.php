@@ -146,15 +146,15 @@ if(!isset($_SESSION["user"]))
     // editAccountManagementTb(this, $UID, $UN, $FN, $LN, $DM, $EM, $UT)
     // function editAccountManagementTb(th, uid, uname, fname, lname, depart, email, utype) {
     // editAccountManagementTb(this,$UID,$UN,$FN,$LN,$DM,$EM,$UT)
-    function editAccountManagementTb(th, uid, uname, fname, lname, depart, email, utype) {
+    function editAccountManagementTb(th, uid, uname, fname, lname) {
       alert("uid is:" + uid);
       alert("uname is:" + uname);
       // // alert("sid is:" + sid);
       alert("fname is:" + fname);
       alert("lname is:" + lname);
-      alert("depart is:" + depart);
-      alert("email is:" + email);
-      alert("utype is:" + utype);
+      // alert("depart is:" + depart);
+      // alert("email is:" + email);
+      // alert("utype is:" + utype);
       // alert("in fun fillaccountManagementTb");
 
       // typeSearch = $("#selectType").val();
