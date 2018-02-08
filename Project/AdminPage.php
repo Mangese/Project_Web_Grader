@@ -122,6 +122,21 @@ if(!isset($_SESSION["user"]))
       }
     }
 
+    function check() {
+      var password = document.getElementById("txtPassword")
+      var confirm_password = document.getElementById("txtPassword2");
+      var message = document.getElementById('message')
+      confirm_password.setCustomValidity('')
+      if (password.value == confirm_password.value) {
+        message.style.color = 'green';
+        message.innerHTML = '*matching*';
+      } else {
+        message.style.color = 'red';
+        message.innerHTML = "*Passwords Doesn't Match *";
+        confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+      }
+    }
+
     function fillaccountManagementTb() {
 
       // alert("in fun fillaccountManagementTb");
@@ -150,7 +165,7 @@ if(!isset($_SESSION["user"]))
       // alert("uname is:" + uname);
       // alert("fname is:" + fname);
       // alert("lname is:" + lname);
-      alert("depart is:" + depart);
+      // alert("depart is:" + depart);
       // alert("email is:" + email);
       // alert("utype is:" + utype);
       EditFN = document.getElementById("editFirstname").value = fname;
@@ -587,6 +602,11 @@ if(!isset($_SESSION["user"]))
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
                         minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-10">
+                      <p id="message"></p>
                     </div>
                   </div>
                 </div>
