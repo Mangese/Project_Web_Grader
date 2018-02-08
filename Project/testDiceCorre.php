@@ -8,7 +8,7 @@ while($row = mysql_fetch_assoc($NumberOfFile))
 {
 $NumFile = $row['num'];	
 }
-exec("cd File/");
+chdir('File');
 if($NumFile > 1)
 {
 	$countFile = 1;
