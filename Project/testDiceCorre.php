@@ -17,7 +17,7 @@ if($NumFile > 1)
 		exec("echo -n '$FN' > input.txt");
 		echo $FN;
 		echo "</br>";
-		exec("sudo ./File/FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
+		exec("sudo ./File/FingerPrintGenerator < ./File/input.txt > ./File/output$countFile.txt ",$out,$re);
 		print_r($out);
 		echo $re;
 		echo "</br>";
