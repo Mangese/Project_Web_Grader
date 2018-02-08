@@ -143,8 +143,8 @@ if(!isset($_SESSION["user"]))
       xmlhttp.send();
     }
 
-    editAccountManagementTb(this, $UID, $UN, $SID, $FN, $LN, $DM, $EM, $UT)
-    function editAccountManagementTb(th, uid, uname, sid, fname, lname, depart, email, utype) {
+    // editAccountManagementTb(this, $UID, $UN, $FN, $LN, $DM, $EM, $UT)
+    function editAccountManagementTb(th, uid, uname, fname, lname, depart, email, utype) {
       alert("uid is:" + uid);
       alert("uname is:" + uname);
       alert("sid is:" + sid);
