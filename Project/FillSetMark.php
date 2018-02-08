@@ -10,7 +10,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     //  echo "alert('in php');";
     // echo "alert($UID);";
     // echo "alert($PID);";
-     echo "alert('set mark sucess '+$TM);";
+     echo "alert('set mark sucess :'+$TM);";
 
      mysql_query("use grader;");
      mysql_query("update submit set TeacherMark = '$TM' where u_id = '$UID' and h_id = '$HID';");
