@@ -14,7 +14,7 @@ if($NumFile > 1)
 	while($row = mysql_fetch_assoc($QueryName))
 	{
 		$FN = $row['fileName'];
-		exec("./File/FingerPrintGenerator < input.txt > output$CountFile.txt ");
+		exec("./File/FingerPrintGenerator < input.txt > output$countFile.txt ");
 		$countFile = $countFile+1;
 		if($countFile > 2)
 		{
