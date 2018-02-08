@@ -123,8 +123,8 @@ if(!isset($_SESSION["user"]))
     }
 
     function check() {
-      var password = document.getElementById("txtPassword")
-      var confirm_password = document.getElementById("txtPassword2");
+      var password = document.getElementById("editPassword")
+      var confirm_password = document.getElementById("editPassword2");
       var message = document.getElementById('message')
       confirm_password.setCustomValidity('')
       if (password.value == confirm_password.value) {
