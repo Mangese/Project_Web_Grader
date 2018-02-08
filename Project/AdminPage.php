@@ -122,7 +122,7 @@ if(!isset($_SESSION["user"]))
       }
     }
 
-    function check() {
+    function checkPassEdit() {
       var password = document.getElementById("editPassword")
       var confirm_password = document.getElementById("editPassword2");
       var message = document.getElementById('message')
@@ -592,7 +592,7 @@ if(!isset($_SESSION["user"]))
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="editPassword" name="editPassword" disabled placeholder="New Password" minlength=6
                         maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
-                        onkeyup='check();' />
+                        onkeyup='checkPassEdit();' />
                     </div>
                     <div class="col-sm-2">
                       <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem;" value="" id="defaultCheckPass" onclick="checkBoxEdit(7)">
@@ -601,7 +601,7 @@ if(!isset($_SESSION["user"]))
                   <div class="form-group row">
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
-                        minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
+                        minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
                     </div>
                   </div>
                   <div class="form-group row">
