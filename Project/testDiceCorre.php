@@ -17,14 +17,14 @@ if($NumFile > 1)
 		exec("echo -n '$FN' > input.txt");
 		echo $FN;
 		echo "</br>";
-		exec("./File/FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
+		exec("sudo ./File/FingerPrintGenerator < input.txt > output$countFile.txt ",$out,$re);
 		print_r($out);
 		echo $re;
 		echo "</br>";
 		$countFile = $countFile+1;
 		if($countFile > 2)
 		{
-			exec("./File/Dice",$out1,$re1);
+			exec("sudo ./File/Dice",$out1,$re1);
 			print_r($out1);
 			echo $re1;
 			echo "</br>";
