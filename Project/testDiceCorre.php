@@ -3,7 +3,7 @@
 	mysql_query("use grader;");
   $HID = $_REQUEST['hid'];
   $NumberOfFile = mysql_query("select count(*) as num from submit where h_id = '$HID' and status = 'P';");
-  $QueryName = mysql_query("select source_file as fileName from submit where h_id = '$HID' and status = 'P';");
+  $QueryName = mysql_query("select source_file as fileName,u_id as uid from submit where h_id = '$HID' and status = 'P';");
 while($row = mysql_fetch_assoc($NumberOfFile))
 {
 $NumFile = $row['num'];	
@@ -12,9 +12,12 @@ chdir('File');
 if($NumFile > 1)
 {
 	$countFile = 1;
+	$UArray = array();
 	while($row = mysql_fetch_assoc($QueryName))
 	{
-		$FN = $row['fileName'];
+		$uid = $row['uid'];
+		array_push($UArray,"$uid");
+		/*$FN = $row['fileName'];
 		exec("echo -n '$FN' > input.txt");
 		echo $FN;
 		echo "</br>";
@@ -30,9 +33,10 @@ if($NumFile > 1)
 			echo $re1;
 			echo "</br>";
 			$countFile = 1;
-		}
+		}*/
 
 	}	
+	print_r($UArray);
 }
 
 ?>
