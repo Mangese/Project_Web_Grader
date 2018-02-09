@@ -183,14 +183,34 @@ if(!isset($_SESSION["user"]))
         alert("sid =" + sid);
         document.getElementById("defaultCheckStdID").disabled = false;
       }
-      // var xmlhttp = new XMLHttpRequest();
-      // xmlhttp.onreadystatechange = function () {
-      //   if (this.readyState == 4 && this.status == 200) {
-      //     $('#accountManagementTb').append(this.responseText);
-      //   }
-      // }
-      // xmlhttp.open("POST", "EditAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
-      // xmlhttp.send();
+
+      document.getElementById("uidmoc").value = uid;
+
+    }
+
+    function editAccountManagementOnClick() {
+      var check = 0;
+      // alert("save");
+      if (document.getElementById("defaultCheckPass").checked == true && document.getElementById("editPassword").value == document.getElementById("editPassword2").value && document.getElementById("editPassword").value != "") {
+        // alert("check pass");
+        check = 1;
+      } else if (document.getElementById("defaultCheckPass").checked == false) {
+        // alert("dont check pass");
+        check = 2;
+      }
+      if (check == 1 || check == 2) {
+        // alert("check is" + check);
+
+        // var xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onreadystatechange = function () {
+        //   if (this.readyState == 4 && this.status == 200) {
+        //     $('#accountManagementTb').append(this.responseText);
+        //   }
+        // }
+        // xmlhttp.open("POST", "EditAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
+        // xmlhttp.send();
+
+      }
     }
 
     function editClassManagementTb(th, cid) {
@@ -302,7 +322,8 @@ if(!isset($_SESSION["user"]))
       xmlhttp.send();
     }
   </script>
-
+  <input id="uidmoc" type="">
+  <!-- <input id="" type="hidden"> -->
   <div class="container-table">
 
     <!-- Nav tabs -->
@@ -612,7 +633,9 @@ if(!isset($_SESSION["user"]))
                 </div>
                 <!--End Modal Body-->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-success" onclick="">Save</button>
+                  <button type="submit" class="btn btn-success" onclick="editAccountManagementOnClick(); $('#modalID').modal('hide')">Save</button>
+                  <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
+
                 </div>
               </div>
             </div>
