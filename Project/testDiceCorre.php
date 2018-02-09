@@ -34,7 +34,7 @@ if($NumFile > 1)
 	echo "</br>";
 	echo count($FArray);
 	echo "</br>";
-	for ($i = 1; $i <= 10; $i++) {
+	for ($i = 1; $i <= count($FArray); $i++) {
 		for ($k = 1; $k < $i+1;$k++)
 		{
 			echo "Blank"; 	
