@@ -44,6 +44,7 @@ if($NumFile > 1)
 		}
     		for ($j = $i+1; $j <= count($FArray); $j++) 
 		{
+			echo $FArray[$j];
     			echo $i." ".$j;
 			if($j != count($FArray))
 			{
