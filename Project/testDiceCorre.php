@@ -47,7 +47,7 @@ if($NumFile > 1)
 			$FNF = $FArray[$i-1];
 			exec("echo -n '$FNF' > input.txt");
 			exec("./FingerPrintGenerator < input.txt > output1.txt ");
-			$FNF = $FArray[$i-2];
+			$FNF = $FArray[$j-1];
 			exec("echo -n '$FNF' > input.txt");
 			exec("./FingerPrintGenerator < input.txt > output2.txt ");
 			$out = array();
