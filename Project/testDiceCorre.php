@@ -34,10 +34,16 @@ if($NumFile > 1)
 	echo "</br>";
 	echo count($FArray);
 	for ($i = 1; $i <= 10; $i++) {
-    		for ($j = $i+1; $j <= count($FArray); $j++) {
-    			echo $i." ".$j;
-			echo "</br>";
+		for ($k = 1; $k < $i+1;$k++)
+		{
+			echo ","; 	
 		}
+    		for ($j = $i+1; $j <= count($FArray); $j++) 
+		{
+    			echo $i." ".$j;
+			echo ",";
+		}
+		echo "</br>";
 	}
 
 }
