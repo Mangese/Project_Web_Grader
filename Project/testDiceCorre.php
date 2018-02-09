@@ -33,6 +33,7 @@ if($NumFile > 1)
 	print_r($FArray);
 	echo "</br>";
 	echo count($FArray);
+	echo "</br>";
 	for ($i = 1; $i <= 10; $i++) {
 		for ($k = 1; $k < $i+1;$k++)
 		{
