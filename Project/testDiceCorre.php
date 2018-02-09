@@ -34,7 +34,7 @@ if($NumFile > 1)
 	echo "</br>";
 	echo count($FArray);
 	for ($i = 1; $i <= 10; $i++) {
-    		for ($j = $i; $j <= count($FArray); $j++) {
+    		for ($j = $i+1; $j <= count($FArray); $j++) {
     			echo $i." ".$j;
 			echo "</br>";
 		}
