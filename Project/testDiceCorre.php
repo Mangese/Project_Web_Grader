@@ -27,7 +27,13 @@ if($NumFile > 1)
 */
 	}	
 	
+	for ($x = 1; $x <= count($FArray); $x++)
+	{
+		echo ",";
+		echo $UArray[$x-1];	
+	}
 	for ($i = 1; $i <= count($FArray); $i++) {
+		echo $UArray[$i-1].",";
 		for ($k = 1; $k < $i+1;$k++)
 		{
 			if($k != count($FArray))
