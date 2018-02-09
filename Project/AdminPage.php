@@ -185,7 +185,6 @@ if(!isset($_SESSION["user"]))
       }
 
       document.getElementById("uidmoc").value = uid;
-
     }
 
     function editAccountManagementOnClick() {
@@ -200,7 +199,8 @@ if(!isset($_SESSION["user"]))
       }
       if (check == 1 || check == 2) {
         // alert("check is" + check);
-
+        var uidreq = document.getElementById("uidmoc").val();
+        alert(uidreq);
         // var xmlhttp = new XMLHttpRequest();
         // xmlhttp.onreadystatechange = function () {
         //   if (this.readyState == 4 && this.status == 200) {
