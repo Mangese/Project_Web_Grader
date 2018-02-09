@@ -44,7 +44,13 @@ if($NumFile > 1)
 		}
     		for ($j = $i+1; $j <= count($FArray); $j++) 
 		{
-    			echo $FArray[$i-1]." ".$FArray[$j-1];
+			exec("echo -n '$FArray[$i-1]' > input.txt");
+			exec("./FingerPrintGenerator < input.txt > output1.txt ");
+			exec("echo -n '$FArray[$i-2]' > input.txt");
+			exec("./FingerPrintGenerator < input.txt > output2.txt ");
+			$out = "";
+			exec("./Dice",$out,$re);
+    			echo $out[0];
 			if($j != count($FArray))
 			{
 				echo ",";
