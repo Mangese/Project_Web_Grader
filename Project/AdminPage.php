@@ -633,7 +633,8 @@ if(!isset($_SESSION["user"]))
                 </div>
                 <!--End Modal Body-->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-success" onclick="editAccountManagementOnClick(); $('#modalID').modal('hide')">Save</button>
+                  <!-- <button type="submit" class="btn btn-success" onclick="editAccountManagementOnClick(); $('#modalID').modal('hide')">Save</button> -->
+                  <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editAccountManagementOnClick();">Save</button>
                   <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
 
                 </div>
