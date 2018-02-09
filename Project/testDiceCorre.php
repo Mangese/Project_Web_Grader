@@ -32,6 +32,7 @@ if($NumFile > 1)
 		echo ",";
 		echo $UArray[$x-1];	
 	}
+	echo "\n";
 	for ($i = 1; $i <= count($FArray); $i++) {
 		echo $UArray[$i-1].",";
 		for ($k = 1; $k < $i+1;$k++)
