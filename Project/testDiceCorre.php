@@ -37,12 +37,12 @@ if($NumFile > 1)
 	for ($i = 1; $i <= 10; $i++) {
 		for ($k = 1; $k < $i+1;$k++)
 		{
-			echo ","; 	
+			echo "Blank"; 	
 		}
     		for ($j = $i+1; $j <= count($FArray); $j++) 
 		{
     			echo $i." ".$j;
-			echo ",";
+			echo "";
 		}
 		echo "</br>";
 	}
