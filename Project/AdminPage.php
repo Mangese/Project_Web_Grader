@@ -231,6 +231,7 @@ if(!isset($_SESSION["user"]))
           alert(fnamereq);
           fname = "&fnamereq=" + fnamereq;
         }
+        alert(fname);
 
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
