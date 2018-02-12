@@ -322,6 +322,9 @@ if(!isset($_SESSION["user"]))
     function deleteAccountManagement(th, uid) {
       alert("uid is:" + uid);
     }
+    function deleteClassManagement(th, cid) {
+      alert("cid is:" + cid);
+    }
 
     function checkBoxEdit(num) {
       EditFN = document.getElementById("editFirstname");
