@@ -219,7 +219,7 @@ if(!isset($_SESSION["user"]))
       if (check == 1 || check == 2) {
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").val();
-        alert('incheck');
+        alert("incheck");
         alert(uidreq);
         // var xmlhttp = new XMLHttpRequest();
         // xmlhttp.onreadystatechange = function () {
