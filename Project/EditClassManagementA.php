@@ -5,10 +5,12 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     
     $CID = $_REQUEST["cidreq"];
+    $CN = $_REQUEST["classnameEdit"];
     
     $CID = "'".$CID."'";
+    $CN = "'".$CN."'";
     
-    echo "alert('CID '+ $CID);";
+    echo "alert('CN '+ $CN);";
     
     
     
