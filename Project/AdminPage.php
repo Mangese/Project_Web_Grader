@@ -216,10 +216,10 @@ if(!isset($_SESSION["user"]))
         alert("dont check pass");
         check = 2;
       }
-      if (check == 1 || check == 2) {
+      if (check == '1' || check == '2') {
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").val();
-        alert("incheck");
+        alert("in check");
         alert(uidreq);
         // var xmlhttp = new XMLHttpRequest();
         // xmlhttp.onreadystatechange = function () {
