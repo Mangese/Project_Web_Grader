@@ -195,7 +195,7 @@ if(!isset($_SESSION["user"]))
       document.getElementById("editPassword2").disabled = true;
 
       document.getElementById("uidmoc").value = uid;
-      document.getElementById('message').value = "";
+      document.getElementById('message').innerHTML = "";
       if (sid == '') {
         alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
@@ -219,6 +219,7 @@ if(!isset($_SESSION["user"]))
       if (check == 1 || check == 2) {
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").val();
+        alert('incheck');
         alert(uidreq);
         // var xmlhttp = new XMLHttpRequest();
         // xmlhttp.onreadystatechange = function () {
