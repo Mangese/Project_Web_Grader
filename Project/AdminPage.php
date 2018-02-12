@@ -151,7 +151,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "AddClassManagementA.php?addNewClass=" + addNewClass, true);
       xmlhttp.send();
-      location.reload();
+      // location.reload();
     }
 
     function fillaccountManagementTb() {
