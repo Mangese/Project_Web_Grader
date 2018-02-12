@@ -336,7 +336,7 @@ if(!isset($_SESSION["user"]))
           eval(this.responseText);
         }
       }
-      xmlhttp.open("POST", "EditSectionManagementA.php?sidreq=" + sidreq + "&sectionnameEdit" + sectionnameEdit, true);
+      xmlhttp.open("POST", "EditSectionManagementA.php?sidreq=" + sidreq + "&sectionnameEdit=" + sectionnameEdit, true);
       xmlhttp.send();
 
     }
