@@ -177,13 +177,13 @@ if(!isset($_SESSION["user"]))
       EditP = document.getElementById("editPassword").value = "";
       EditP2 = document.getElementById("editPassword2").value = "";
 
-      document.getElementById("defaultCheckFirstname").checked == false;
-      document.getElementById("defaultCheckLastname").checked == false;
-      document.getElementById("defaultCheckUsername").checked == false;
-      document.getElementById("defaultCheckStdID").checked == false;
-      document.getElementById("defaultCheckDepart").checked == false;
-      document.getElementById("defaultCheckEmail").checked == false;
-      document.getElementById("defaultCheckPass").checked == false;
+      document.getElementById("defaultCheckFirstname").checked = false;
+      document.getElementById("defaultCheckLastname").checked = false;
+      document.getElementById("defaultCheckUsername").checked = false;
+      document.getElementById("defaultCheckStdID").checked = false;
+      document.getElementById("defaultCheckDepart").checked = false;
+      document.getElementById("defaultCheckEmail").checked = false;
+      document.getElementById("defaultCheckPass").checked = false;
 
       document.getElementById("editFirstname").disabled = true;
       document.getElementById("editLastname").disabled = true;
