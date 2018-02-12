@@ -3,6 +3,7 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
   $conn = mysql_connect("localhost","mangese","000000");
 	mysql_query("use grader;");
   $HID = $_REQUEST['hid'];
+$TESTREQUEEST = $_REQUEST['TESTREQUEST'];
   $NumberOfFile = mysql_query("select count(*) as num from submit where h_id = '$HID' and status = 'P';");
   $QueryName = mysql_query("select source_file as fileName,(select student_id from user where u_id = s.u_id) as uid from submit s where s.h_id = '$HID' and s.status = 'P';");
 while($row = mysql_fetch_assoc($NumberOfFile))
