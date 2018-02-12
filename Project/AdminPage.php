@@ -303,7 +303,7 @@ if(!isset($_SESSION["user"]))
       var cidreq = document.getElementById('cidmoc').value;
       var classnameEdit = document.getElementById('editClassName').value;
       // alert("cid : " + cidreq);
-      alert(classnameEdit);
+      // alert(classnameEdit);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -325,7 +325,9 @@ if(!isset($_SESSION["user"]))
     function editSectionManagementOnClick() {
       // alert("editSectionManagementOnClick()");
       var sidreq = document.getElementById('sidmoc').value;
+      var sectionnameEdit = document.getElementById('editSectionName').value;
       // alert("sid : " + sidreq);
+      alert(sectionnameEdit);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -334,7 +336,7 @@ if(!isset($_SESSION["user"]))
           eval(this.responseText);
         }
       }
-      xmlhttp.open("POST", "EditSectionManagementA.php?sidreq=" + sidreq, true);
+      xmlhttp.open("POST", "EditSectionManagementA.php?sidreq=" + sidreq + "&sectionnameEdit" + sectionnameEdit, true);
       xmlhttp.send();
 
     }
