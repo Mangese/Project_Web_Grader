@@ -58,10 +58,10 @@
       echo "$EM";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "<button type='button' class='btn btn-outline-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$SID1,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
+      echo "<button type='button' class='btn btn-warning btn-sm' data-toggle='modal' data-target='#editAccount' onclick = 'editAccountManagementTb(this,$UID,$SID1,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
       echo "</td>";
       echo "<td style='width:5%'>";
-      echo "<button type='button' class='btn btn-outline-danger btn-sm' onclick = 'deleteAccountManagement(this,$UID)';><i class='fa fa-trash' aria-hidden='true'></i></button>";
+      echo "<button type='button' class='btn btn-danger btn-sm' onclick = 'deleteAccountManagement(this,$UID)';><i class='fa fa-trash' aria-hidden='true'></i></button>";
       echo "</td>";
       echo "</tr>";
     }
