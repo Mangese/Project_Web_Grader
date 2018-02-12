@@ -222,7 +222,7 @@ if(!isset($_SESSION["user"]))
         var uidreq = document.getElementById("uidmoc").value;
         // document.getElementById("uidmoc").value = "eiei";
 
-        // alert(uidreq);
+        alert(uidreq);
 
 
         var fname = "";
