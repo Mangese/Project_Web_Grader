@@ -5,7 +5,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     
     $UID = $_REQUEST["uidreq"];
-    $FN = $_REQUEST["fnamereq"];
+    $FN = $_REQUEST["fname"];
     
 
     echo "alert('uid '+ $UID);";
