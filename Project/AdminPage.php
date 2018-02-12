@@ -222,25 +222,33 @@ if(!isset($_SESSION["user"]))
         var uidreq = document.getElementById("uidmoc").value;
         // document.getElementById("uidmoc").value = "eiei";
 
-        alert(uidreq);
+        // alert(uidreq);
 
 
         var fname = "";
+        var lname = "";
         if (document.getElementById("defaultCheckFirstname").checked == true) {
           var fnamereq = document.getElementById("editFirstname").value;
           alert(fnamereq);
           fname = "&fnamereq=" + fnamereq;
         }
-        alert(fname);
+        // alert(fname);
+        if (document.getElementById("defaultCheckLastname").checked == true) {
+          var lnamereq = document.getElementById("editLastname").value;
+          alert(lname);
+          lname = "&lnamereq=" + lnamereq;
+        }
+
+
 
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
-            	alert("success");
-		eval(this.responseText);
+            alert("success");
+            eval(this.responseText);
           }
         }
-        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fname, true);
+        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fname + lname, true);
         // xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
 
         xmlhttp.send();
