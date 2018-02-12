@@ -15,6 +15,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     
      mysql_query("use grader;");
-     mysql_query("update class set ContactName=$CN where c_id =$CID;");
+     mysql_query("update class set classname=$CN where c_id =$CID;");
   }
 ?>
