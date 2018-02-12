@@ -137,6 +137,11 @@ if(!isset($_SESSION["user"]))
       }
     }
 
+    function addClass() {
+      var addNewClass = document.getElementById('addClassName').value;
+      alert(addNewClass);
+    }
+
     function fillaccountManagementTb() {
 
       // alert("in fun fillaccountManagementTb");
@@ -808,7 +813,9 @@ if(!isset($_SESSION["user"]))
                 <input class="form-control mb-3" type="text" id="addClassName" name="addClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-success" onclick="">Create Class</button>
+                <!-- <button type="submit" class="btn btn-success" onclick="">Create Class</button> -->
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="addClass();">Save</button>
+
               </div>
             </div>
           </div>
