@@ -158,7 +158,7 @@ if(!isset($_SESSION["user"]))
       xmlhttp.send();
     }
 
-    // editAccountManagementTb(this,$UID,$UN1,$FN1,$LN1,$DM1,$EM1,$UT1)
+
     function editAccountManagementTb(th, uid, sid, uname, fname, lname, depart, email, utype) {
       // alert("uid is:" + uid);
       // alert("sid is:" + sid);
@@ -220,7 +220,6 @@ if(!isset($_SESSION["user"]))
       if (check == 1 || check == 2) {
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").value;
-        // document.getElementById("uidmoc").value = "eiei";
 
         // alert(uidreq);
 
@@ -302,6 +301,10 @@ if(!isset($_SESSION["user"]))
 
     function editSectionManagementTb(th, sid) {
       alert("sid is:" + sid);
+    }
+
+    function deleteAccountManagement(th, uid) {
+      alert("uid is:" + uid);
     }
 
     function checkBoxEdit(num) {
