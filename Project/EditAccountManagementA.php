@@ -5,9 +5,11 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     
     $UID = $_REQUEST["uidreq"];
+    $FN = $_REQUEST["fnamereq"];
     
 
     echo "alert('uid '+ $UID);";
+    echo "alert('fname '+ $FN);";
     
     
     // mysql_query("use grader;");
