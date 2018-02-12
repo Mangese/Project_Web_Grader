@@ -223,18 +223,21 @@ if(!isset($_SESSION["user"]))
         // document.getElementById("uidmoc").value = "eiei";
 
         alert(uidreq);
-        // var xmlhttp = new XMLHttpRequest();
-        // xmlhttp.onreadystatechange = function () {
-        //   if (this.readyState == 4 && this.status == 200) {
-        //     $('#accountManagementTb').append(this.responseText);
-        //   }
-        // }
-        // xmlhttp.open("POST", "EditAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
-        // xmlhttp.send();
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            eval(this.responseText);
+          }
+        }
+        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq, true);
+        // xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
+
+        xmlhttp.send();
 
       }
       else {
         document.getElementById("uidmoc").value = "";
+        alert("Please Contact Developer");
       }
     }
 
