@@ -240,7 +240,7 @@ if(!isset($_SESSION["user"]))
 		eval(this.responseText);
           }
         }
-        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq, true);
+        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fname, true);
         // xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
 
         xmlhttp.send();
