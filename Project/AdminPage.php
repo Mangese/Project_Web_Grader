@@ -294,14 +294,16 @@ if(!isset($_SESSION["user"]))
     }
 
     function editClassManagementTb(th, cid) {
-      alert("cid is:" + cid);
+      // alert("cid is:" + cid);
       document.getElementById('cidmoc').value = cid;
     }
 
     function editClassManagementOnClick() {
-      alert("editClassManagementOnClick()");
+      // alert("editClassManagementOnClick()");
       var cidreq = document.getElementById('cidmoc').value;
-      alert("cid : " + cidreq);
+      var classnameEdit = document.getElementById('editClassName').value;
+      // alert("cid : " + cidreq);
+      alert(classnameEdit);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -310,20 +312,20 @@ if(!isset($_SESSION["user"]))
           eval(this.responseText);
         }
       }
-      xmlhttp.open("POST", "EditClassManagementA.php?cidreq=" + cidreq, true);
+      xmlhttp.open("POST", "EditClassManagementA.php?cidreq=" + cidreq + "&classnameEdit=" + classnameEdit, true);
       xmlhttp.send();
 
     }
 
     function editSectionManagementTb(th, sid) {
-      alert("sid is:" + sid);
+      // alert("sid is:" + sid);
       document.getElementById('sidmoc').value = sid;
     }
 
     function editSectionManagementOnClick() {
-      alert("editSectionManagementOnClick()");
+      // alert("editSectionManagementOnClick()");
       var sidreq = document.getElementById('sidmoc').value;
-      alert("sid : " + sidreq);
+      // alert("sid : " + sidreq);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -343,7 +345,6 @@ if(!isset($_SESSION["user"]))
     function deleteClassManagement(th, cid) {
       alert("cid is:" + cid);
     }
-
     function deleteSectionManagement(th, sid) {
       alert("sid is:" + sid);
     }
