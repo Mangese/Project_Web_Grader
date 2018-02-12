@@ -176,6 +176,26 @@ if(!isset($_SESSION["user"]))
       EditMail = document.getElementById("editEmail").value = email;
       EditP = document.getElementById("editPassword").value = "";
       EditP2 = document.getElementById("editPassword2").value = "";
+
+      document.getElementById("defaultCheckFirstname").checked == false
+      document.getElementById("defaultCheckLastname").checked == false
+      document.getElementById("defaultCheckUsername").checked == false
+      document.getElementById("defaultCheckStdID").checked == false
+      document.getElementById("defaultCheckDepart").checked == false
+      document.getElementById("defaultCheckEmail").checked == false
+      document.getElementById("defaultCheckPass").checked == false
+
+      document.getElementById("editFirstname").disabled = true;
+      document.getElementById("editLastname").disabled = true;
+      document.getElementById("editUsername").disabled = true;
+      document.getElementById("editStudentID").disabled = true;
+      document.getElementById("editDepartment").disabled = true;
+      document.getElementById("editEmail").disabled = true;
+      document.getElementById("editPassword").disabled = true;
+      document.getElementById("editPassword2").disabled = true;
+
+      document.getElementById("uidmoc").value = uid;
+      document.getElementById('message').value = "";
       if (sid == '') {
         alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
@@ -184,7 +204,6 @@ if(!isset($_SESSION["user"]))
         document.getElementById("defaultCheckStdID").disabled = false;
       }
 
-      document.getElementById("uidmoc").value = uid;
     }
 
     function editAccountManagementOnClick() {
