@@ -5,10 +5,13 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     
     $SID = $_REQUEST["sidreq"];
+    $SN = $_REQUEST["sectionnameEdit"];
     
     $SID = "'".$SID."'";
+    $SN = "'".$SN."'";
     
     echo "alert('SID '+ $SID);";
+    echo "alert('SN '+ $SN);";
     
     
     
