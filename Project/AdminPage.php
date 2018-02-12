@@ -189,12 +189,12 @@ if(!isset($_SESSION["user"]))
 
     function editAccountManagementOnClick() {
       var check = 0;
-      // alert("save");
+      alert("save");
       if (document.getElementById("defaultCheckPass").checked == true && document.getElementById("editPassword").value == document.getElementById("editPassword2").value && document.getElementById("editPassword").value != "") {
-        // alert("check pass");
+        alert("check pass");
         check = 1;
       } else if (document.getElementById("defaultCheckPass").checked == false) {
-        // alert("dont check pass");
+        alert("dont check pass");
         check = 2;
       }
       if (check == 1 || check == 2) {
@@ -210,6 +210,9 @@ if(!isset($_SESSION["user"]))
         // xmlhttp.open("POST", "EditAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
         // xmlhttp.send();
 
+      }
+      else{
+        document.getElementById("uidmoc").value="";
       }
     }
 
