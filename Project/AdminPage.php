@@ -225,18 +225,54 @@ if(!isset($_SESSION["user"]))
         // alert(uidreq);
 
 
-        var fname = "";
-        var lname = "";
+        var fnamesend = "";
+        var lnamesend = "";
+        var unamesend = "";
+        var sidsend = "";
+        var departsend = "";
+        var emailsend = "";
+        var passSend = "";
+
         if (document.getElementById("defaultCheckFirstname").checked == true) {
           var fnamereq = document.getElementById("editFirstname").value;
           alert(fnamereq);
-          fname = "&fnamereq=" + fnamereq;
+          fnamesend = "&fnamereq=" + fnamereq;
         }
         // alert(fname);
         if (document.getElementById("defaultCheckLastname").checked == true) {
           var lnamereq = document.getElementById("editLastname").value;
-          alert(lname);
-          lname = "&lnamereq=" + lnamereq;
+          alert(lnamereq);
+          lnamesend = "&lnamereq=" + lnamereq;
+        }
+
+        if (document.getElementById("defaultCheckUsername").checked == true) {
+          var unamereq = document.getElementById("editUsername").value;
+          alert(unamereq);
+          unamesend = "&unamereq=" + unamereq;
+        }
+
+        if (document.getElementById("defaultCheckStdID").checked == true) {
+          var sidreq = document.getElementById("editStudentID").value;
+          alert(sidreq);
+          sidsend = "&sidreq=" + sidreq;
+        }
+
+        if (document.getElementById("defaultCheckDepart").checked == true) {
+          var departreq = document.getElementById("editDepartment").value;
+          alert(departreq);
+          departsend = "&departreq=" + departreq;
+        }
+
+        if (document.getElementById("defaultCheckEmail").checked == true) {
+          var emailreq = document.getElementById("editEmail").value;
+          alert(emailreq);
+          emailsend = "&emailreq=" + emailreq;
+        }
+
+        if (document.getElementById("defaultCheckPass").checked == true) {
+          var passreq = document.getElementById("editPassword").value;
+          alert(passreq);
+          passSend = "&passreq=" + passreq;
         }
 
 
@@ -248,7 +284,7 @@ if(!isset($_SESSION["user"]))
             eval(this.responseText);
           }
         }
-        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fname + lname, true);
+        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend, true);
         // xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
 
         xmlhttp.send();
