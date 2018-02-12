@@ -6,9 +6,9 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     $NC = $_REQUEST["addNewClass"];
     
-    // $NC = "'".$NC."'";
-    echo "alert('in php');";
-    // echo "alert('NC '+ $NC);";
+    $NC = "'".$NC."'";
+    // echo "alert('in php');";
+    echo "alert('NC '+ $NC);";
     
     
     
