@@ -12,8 +12,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     
     
-    //  mysql_query("use grader;");
-    //  mysql_query("iNSERT INTO class (classname) VALUES ($NC);");
+     mysql_query("use grader;");
+     mysql_query("iNSERT INTO class (classname) VALUES ($NC);");
      
   }
 ?>
