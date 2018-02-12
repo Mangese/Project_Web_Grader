@@ -297,6 +297,14 @@ if(!isset($_SESSION["user"]))
 
     function editClassManagementTb(th, cid) {
       alert("cid is:" + cid);
+      document.getElementById('cidmoc').value = cid;
+    }
+
+    function editClassManagementOnClick() {
+      alert("editClassManagementOnClick()");
+      var cidreq = document.getElementById('cidmoc').value;
+      alert(cidreq);
+
     }
 
     function editSectionManagementTb(th, sid) {
@@ -409,6 +417,7 @@ if(!isset($_SESSION["user"]))
     }
   </script>
   <input id="uidmoc" type="hidden">
+  <input id="cidmoc" type="">
   <!-- <input id="" type="hidden"> -->
   <div class="container-table">
 
@@ -821,7 +830,9 @@ if(!isset($_SESSION["user"]))
                 <input class="form-control mb-3" type="text" id="editClassName" name="editClassName" placeholder="Class Name">
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-success" onclick="">Save</button>
+                <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editClassManagementOnClick();">Save</button>
+
               </div>
             </div>
           </div>
