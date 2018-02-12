@@ -836,7 +836,7 @@ if(!isset($_SESSION["user"]))
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- <tr>
                 <td style="width:20%">
                   1
                 </td>
@@ -849,7 +849,7 @@ if(!isset($_SESSION["user"]))
                 <td style="width:15%">
                   <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -923,7 +923,7 @@ if(!isset($_SESSION["user"]))
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- <tr>
                 <td style="width:15%">
                   1
                 </td>
@@ -942,7 +942,7 @@ if(!isset($_SESSION["user"]))
                 <td style="width:10%">
                   <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
