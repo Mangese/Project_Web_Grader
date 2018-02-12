@@ -6,13 +6,14 @@
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
     $TFS = $_REQUEST["tFilesearch"];
-    // $SIDSR = $_REQUEST["sidSearch"];
-    // $NSR = $_REQUEST["nameSearch"];
+    $DS = $_REQUEST["dateStart"];
+    $DE = $_REQUEST["dateEnd"];
+    
     $message = "test alert in php";
     echo "<script type='text/javascript'>alert('$message');</script>";
-    // echo "<script type='text/javascript'>alert('$TSR');</script>";
-    // echo "<script type='text/javascript'>alert('$SIDSR');</script>";
-    // echo "<script type='text/javascript'>alert('$NSR');</script>";
+    echo "<script type='text/javascript'>alert('$TFS');</script>";
+    echo "<script type='text/javascript'>alert('$DS');</script>";
+    echo "<script type='text/javascript'>alert('$DE');</script>";
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     // if($SIDSR == ''){
     //   $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
