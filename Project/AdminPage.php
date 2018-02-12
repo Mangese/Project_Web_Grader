@@ -216,13 +216,13 @@ if(!isset($_SESSION["user"]))
         alert("dont check pass");
         check = 2;
       }
-      alert(check);
+
       if (check == 1 || check == 2) {
-        // alert("check is" + check);
-        // var uidreq = document.getElementById("uidmoc").val();
-        document.getElementById("uidmoc").value = "eiei";
-        alert("in check");
-        // alert(uidreq);
+        alert("check is" + check);
+        var uidreq = document.getElementById("uidmoc").val();
+        // document.getElementById("uidmoc").value = "eiei";
+
+        alert(uidreq);
         // var xmlhttp = new XMLHttpRequest();
         // xmlhttp.onreadystatechange = function () {
         //   if (this.readyState == 4 && this.status == 200) {
