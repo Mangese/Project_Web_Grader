@@ -219,7 +219,7 @@ if(!isset($_SESSION["user"]))
 
       if (check == 1 || check == 2) {
         alert("check is" + check);
-        var uidreq = document.getElementById("uidmoc");
+        var uidreq = document.getElementById("uidmoc").value;
         // document.getElementById("uidmoc").value = "eiei";
 
         alert(uidreq);
