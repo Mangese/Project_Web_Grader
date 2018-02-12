@@ -344,6 +344,10 @@ if(!isset($_SESSION["user"]))
       alert("cid is:" + cid);
     }
 
+    function deleteSectionManagement(th, sid) {
+      alert("sid is:" + sid);
+    }
+
     function checkBoxEdit(num) {
       EditFN = document.getElementById("editFirstname");
       EditLN = document.getElementById("editLastname");
@@ -447,7 +451,7 @@ if(!isset($_SESSION["user"]))
   </script>
   <input id="uidmoc" type="hidden">
   <input id="cidmoc" type="hidden">
-  <input id="sidmoc" type="">
+  <input id="sidmoc" type="hidden">
   <!-- <input id="" type="hidden"> -->
   <div class="container-table">
 
