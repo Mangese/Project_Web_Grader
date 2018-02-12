@@ -174,8 +174,8 @@ if(!isset($_SESSION["user"]))
       EditsID = document.getElementById("editStudentID").value = sid;
       EditDM = document.getElementById("editDepartment").value = depart;
       EditMail = document.getElementById("editEmail").value = email;
-      // EditP = document.getElementById("editPassword");
-      // EditP2 = document.getElementById("editPassword2");
+      EditP = document.getElementById("editPassword").value = "";
+      EditP2 = document.getElementById("editPassword2").value = "";
       if (sid == '') {
         alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
@@ -211,8 +211,8 @@ if(!isset($_SESSION["user"]))
         // xmlhttp.send();
 
       }
-      else{
-        document.getElementById("uidmoc").value="";
+      else {
+        document.getElementById("uidmoc").value = "";
       }
     }
 
