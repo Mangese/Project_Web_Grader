@@ -1056,7 +1056,7 @@ if(!isset($_SESSION["user"]))
                   $('#SectionManagementTb').append(this.responseText);
                 }
               }
-              xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch, true);
+              xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
               xmlhttp.send();
 
 
