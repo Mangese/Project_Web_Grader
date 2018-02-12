@@ -317,6 +317,24 @@ if(!isset($_SESSION["user"]))
 
     function editSectionManagementTb(th, sid) {
       alert("sid is:" + sid);
+      document.getElementById('sidmoc').value = sid;
+    }
+
+    function editSectionManagementOnClick() {
+      alert("editSectionManagementOnClick()");
+      var sidreq = document.getElementById('sidmoc').value;
+      alert("sid : " + sidreq);
+
+      // var xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onreadystatechange = function () {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     alert("success");
+      //     eval(this.responseText);
+      //   }
+      // }
+      // xmlhttp.open("POST", "EditClassManagementA.php?cidreq=" + cidreq, true);
+      // xmlhttp.send();
+
     }
 
     function deleteAccountManagement(th, uid) {
@@ -429,6 +447,7 @@ if(!isset($_SESSION["user"]))
   </script>
   <input id="uidmoc" type="hidden">
   <input id="cidmoc" type="hidden">
+  <input id="sidmoc" type="">
   <!-- <input id="" type="hidden"> -->
   <div class="container-table">
 
@@ -934,7 +953,8 @@ if(!isset($_SESSION["user"]))
                 <input class="form-control mb-3" type="text" id="editSectionName" name="editSectionName" placeholder="Section Name">
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-success" onclick="">Save</button>
+                <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editSectionManagementOnClick();">Save</button>
               </div>
             </div>
           </div>
