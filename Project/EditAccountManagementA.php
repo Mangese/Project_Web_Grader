@@ -4,7 +4,7 @@ $conn = mysql_connect("localhost","mangese","000000");
   {
     session_start();
     
-    $UID = $_REQUEST["uid"];
+    $UID = $_REQUEST["uidreq"];
     
 
     $message = "test alert in php";
