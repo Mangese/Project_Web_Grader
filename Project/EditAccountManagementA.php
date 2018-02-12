@@ -6,8 +6,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     $UID = $_REQUEST["uidreq"];
     $FN = $_REQUEST["fnamereq"];
-    
-
+    $UID = "'".$UID."'";
+    $FN = "'".$FN."'";
     echo "alert('uid '+ $UID);";
     echo "alert('fname '+ $FN);";
     
