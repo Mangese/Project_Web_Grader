@@ -223,6 +223,15 @@ if(!isset($_SESSION["user"]))
         // document.getElementById("uidmoc").value = "eiei";
 
         // alert(uidreq);
+
+
+        var fname = "";
+        if (document.getElementById("defaultCheckFirstname").checked == true) {
+          var fnamereq = document.getElementById("editFirstname").value;
+          alert(fnamereq);
+          fname = "&fnamereq=" + fnamereq;
+        }
+
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
