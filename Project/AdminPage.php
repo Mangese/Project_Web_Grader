@@ -197,10 +197,10 @@ if(!isset($_SESSION["user"]))
       document.getElementById("uidmoc").value = uid;
       document.getElementById('message').innerHTML = "";
       if (sid == '') {
-        alert("no sid");
+        // alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
       } else {
-        alert("sid =" + sid);
+        // alert("sid =" + sid);
         document.getElementById("defaultCheckStdID").disabled = false;
       }
 
@@ -208,21 +208,21 @@ if(!isset($_SESSION["user"]))
 
     function editAccountManagementOnClick() {
       var check = 0;
-      alert("save");
+      // alert("save");
       if (document.getElementById("defaultCheckPass").checked == true && document.getElementById("editPassword").value == document.getElementById("editPassword2").value && document.getElementById("editPassword").value != "") {
-        alert("check pass");
+        // alert("check pass");
         check = 1;
       } else if (document.getElementById("defaultCheckPass").checked == false) {
-        alert("dont check pass");
+        // alert("dont check pass");
         check = 2;
       }
 
       if (check == 1 || check == 2) {
-        alert("check is" + check);
+        // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").value;
         // document.getElementById("uidmoc").value = "eiei";
 
-        alert(uidreq);
+        // alert(uidreq);
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
@@ -237,7 +237,7 @@ if(!isset($_SESSION["user"]))
       }
       else {
         document.getElementById("uidmoc").value = "";
-        alert("Please Contact Developer");
+        alert("password fail");
       }
     }
 
