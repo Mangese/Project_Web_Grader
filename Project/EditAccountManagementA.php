@@ -7,7 +7,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UID = $_REQUEST["uidreq"];
     
 
-    echo "alert('uid ' $UID);";
+    echo "alert('uid '+ $UID);";
     
     
     // mysql_query("use grader;");
