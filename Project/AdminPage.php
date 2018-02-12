@@ -284,8 +284,6 @@ if(!isset($_SESSION["user"]))
           }
         }
         xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend, true);
-        // xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
-
         xmlhttp.send();
 
       }
@@ -303,7 +301,17 @@ if(!isset($_SESSION["user"]))
     function editClassManagementOnClick() {
       alert("editClassManagementOnClick()");
       var cidreq = document.getElementById('cidmoc').value;
-      alert(cidreq);
+      alert("cid : " + cidreq);
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          alert("success");
+          eval(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "EditClassManagementA.php?cidreq=" + cidreq, true);
+      xmlhttp.send();
 
     }
 
@@ -417,7 +425,7 @@ if(!isset($_SESSION["user"]))
     }
   </script>
   <input id="uidmoc" type="hidden">
-  <input id="cidmoc" type="">
+  <input id="cidmoc" type="hidden">
   <!-- <input id="" type="hidden"> -->
   <div class="container-table">
 
