@@ -8,7 +8,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     $NC = "'".$NC."'";
     // echo "alert('in php');";
-    echo "alert('NC '+ $NC);";
+    // echo "alert('NC '+ $NC);";
     
     
     
