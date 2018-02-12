@@ -6,10 +6,13 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     $UID = $_REQUEST["uidreq"];
     $FN = $_REQUEST["fnamereq"];
+    $LN = $_REQUEST["lnamereq"];
     $UID = "'".$UID."'";
     $FN = "'".$FN."'";
+    $LN = "'".$LN."'";
     echo "alert('uid '+ $UID);";
     echo "alert('fname '+ $FN);";
+    echo "alert('lname '+ $LN);";
     
     
     // mysql_query("use grader;");
