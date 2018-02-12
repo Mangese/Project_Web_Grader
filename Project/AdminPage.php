@@ -1038,14 +1038,26 @@ if(!isset($_SESSION["user"]))
               // }
               if ($('input[name=typeFile]:checked').val() == 'flag') {
                 tFile = document.getElementById('typeFilemoc').value = 'flag';
-                alert(tFile);
+                // alert(tFile);
               } else {
                 tFile = document.getElementById('typeFilemoc').value = 'fileSubmit';
-                alert(tFile);
+                // alert(tFile);
               }
+
+              var tFilesearch = document.getElementById('typeFilemoc').value;
               alert("start date is: " + sdate);
               alert("end date is: " + edate);
               // alert("type file is: " + tFile);
+              alert(tFilesearch);
+
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                  $('#SectionManagementTb').append(this.responseText);
+                }
+              }
+              xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch, true);
+              xmlhttp.send();
 
 
             }
