@@ -216,7 +216,8 @@ if(!isset($_SESSION["user"]))
         alert("dont check pass");
         check = 2;
       }
-      if (check == '1' || check == '2') {
+      alert(check);
+      if (check == 1 || check == 2) {
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").val();
         alert("in check");
