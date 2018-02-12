@@ -7,8 +7,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UID = $_REQUEST["uidreq"];
     
 
-    $message = "test alert in php";
-    echo "alert($message);";
+    // $message = "test alert in php";
+    echo "alert('eiei');";
     
     
     // mysql_query("use grader;");
