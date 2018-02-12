@@ -408,7 +408,7 @@ if(!isset($_SESSION["user"]))
       xmlhttp.send();
     }
   </script>
-  <input id="uidmoc" type="">
+  <input id="uidmoc" type="hidden">
   <!-- <input id="" type="hidden"> -->
   <div class="container-table">
 
@@ -587,7 +587,7 @@ if(!isset($_SESSION["user"]))
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- <tr>
                 <td style="width:15%">
                   Student ID
                 </td>
@@ -612,7 +612,7 @@ if(!isset($_SESSION["user"]))
                 <td style="width:5%">
                   <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
