@@ -35,16 +35,16 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM);";
     // echo "alert('PW '+ $PW);";
     
-    $tor="1111"
-    ."22222";
+    // $tor="1111"
+    // ."22222";
      
-      //  $subquery="uPDATE user"
-      // ." set "
-     if ($FN!=''){
-      // ." Firstname = '$FN' ";
-      
-      echo "alert($tor);";
-     }
+    $subquery="uPDATE user";
+    $subquery=$subquery." set ";
+
+    if ($FN!=''){
+      $subquery=$subquery." Firstname = $FN ";
+      echo "alert($subquery);";
+    }
 
     //  echo "alert($subquery);";
     //  $result= mysql_query(" $subquery "
