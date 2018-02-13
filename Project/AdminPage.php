@@ -1135,22 +1135,13 @@ if(!isset($_SESSION["user"]))
 
   <div class="modal fade" id="modalChackDeleteAM" role="dialog">
     <div class="modal-dialog modal-sm">
-
       <!-- Modal content-->
       <div class="modal-content">
-        <form name="from5" method="post">
-
-
-          <div class="modal-body " style="text-align: center; margin-bottom:20px;">
-
-            <h5 style="margin-bottom:20px">Do you want to delete?</h5>
-            <button type="button" class="btn btn-success" onclick="ChackDeleteAM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
-
-
-          </div>
-
-        </form>
+        <div class="modal-body " style="text-align: center; margin-bottom:20px;">
+          <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+          <button type="button" class="btn btn-success" onclick="ChackDeleteAM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
       </div>
     </div>
   </div>
