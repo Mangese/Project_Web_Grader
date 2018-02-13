@@ -3,7 +3,8 @@ $conn = mysql_connect("localhost","mangese","000000");
   if($conn != FALSE)
   {
     session_start();
-    
+    mysql_query("use grader;");
+    mysql_query("set NAMES UTF8;");
     $UID = $_REQUEST["uidreq"];
     $FN = $_REQUEST["fnamereq"];
     $LN = $_REQUEST["lnamereq"];
@@ -34,13 +35,14 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM);";
     // echo "alert('PW '+ $PW);";
     
-    $tor="1111"
-    ."22222";
-    //  mysql_query("use grader;");
+    // $tor="1111"
+    // ."22222";
+     $result= mysql_query("uPDATE user"
+      ." set "
      if ($UID!=''){
-      echo "alert($tor);";
+      ." Firstname = $FN "
      }
-     
+     ." WHERE U_ID =$UID; ");
     // mysql_query("insert into homework (P_ID,LANGUAGE,S_ID,AssignDate,AssignTime,DeadlineDate,DeadlineTime,FullMark) values ($PID,(select Language from problem where p_id = '1'),$SID,now(),now(),'$DATE','$TIME','$FULLMARK');");
   }
 ?>
