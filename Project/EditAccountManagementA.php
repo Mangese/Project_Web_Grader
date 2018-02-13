@@ -30,7 +30,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $PW1 = "'".$PW."'";
 
     // echo "alert('uid '+ $UID1);";
-    echo "alert('utype '+ $UT1);";
+    // echo "alert('utype '+ $UT1);";
     // echo "alert('fname '+ $FN1);";
     // echo "alert('lname '+ $LN1);";
     // echo "alert('uname '+ $UN1);";
@@ -42,9 +42,10 @@ $conn = mysql_connect("localhost","mangese","000000");
      
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
+    $subquery=$subquery. ' USER_TYPE =  "'.$UT.'"';
     
     if ($FN!=''){
-        $subquery=$subquery. ' Firstname =  "'.$FN.'"';
+        $subquery=$subquery. ' ,Firstname =  "'.$FN.'"';
       echo "alert('FN OK');";
     }
     if ($LN!=''){
