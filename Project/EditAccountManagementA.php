@@ -26,7 +26,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $PW1 = "'".$PW."'";
 
     // echo "alert('uid '+ $UID);";
-    echo "alert('fname '+ $FN1);";
+    // echo "alert('fname '+ $FN1);";
     // echo "alert('lname '+ $LN);";
     // echo "alert('uname '+ $UN);";
 
@@ -34,9 +34,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('dp '+ $DP);";
     // echo "alert('email '+ $EM);";
     // echo "alert('PW '+ $PW);";
-    
-    // $tor="1111"
-    // ."22222";
      
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
@@ -48,7 +45,27 @@ $conn = mysql_connect("localhost","mangese","000000");
     if ($LN1!=''){
       $subquery=$subquery. ' ,Lastname =  "'.$LN.'"';
     echo "alert('LN OK');";
-  }
+    }
+    if ($UN1!=''){
+      $subquery=$subquery. ' ,Username =  "'.$UN.'"';
+    echo "alert('UN OK');";
+    }
+    if ($SID1!=''){
+      $subquery=$subquery. ' ,Student_ID =  "'.$SID.'"';
+    echo "alert('SID OK');";
+    }
+    if ($DP1!=''){
+      $subquery=$subquery. ' ,Department =  "'.$DP.'"';
+    echo "alert('DP OK');";
+    }
+    if ($EM1!=''){
+      $subquery=$subquery. ' ,Email =  "'.$EM.'"';
+    echo "alert('EM OK');";
+    }
+    if ($PW1!=''){
+      $subquery=$subquery. ' ,Password   =  md5("'.$EM.'")';
+    echo "alert('PW OK');";
+    }
     
 
       // echo "alert('$subquery');";
