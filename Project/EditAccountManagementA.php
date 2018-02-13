@@ -41,7 +41,7 @@ $conn = mysql_connect("localhost","mangese","000000");
        $subquery="uPDATE user"
       ." set "
      if ($UID!=''){
-      ." Firstname = $FN "
+      ." Firstname = '$FN' ";
      }
      $result= mysql_query(" $subquery "
      ." WHERE U_ID =$UID; ");
