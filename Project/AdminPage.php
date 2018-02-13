@@ -302,7 +302,7 @@ if(!isset($_SESSION["user"]))
         }
         xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend, true);
         xmlhttp.send();
-        location.reload();
+        // location.reload();
       }
       else {
         document.getElementById("uidmoc").value = "";
@@ -331,7 +331,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "EditClassManagementA.php?cidreq=" + cidreq + "&classnameEdit=" + classnameEdit, true);
       xmlhttp.send();
-      location.reload();
+      // location.reload();
 
     }
 
@@ -356,7 +356,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "EditSectionManagementA.php?sidreq=" + sidreq + "&sectionnameEdit=" + sectionnameEdit, true);
       xmlhttp.send();
-      location.reload();
+      // location.reload();
 
     }
 
