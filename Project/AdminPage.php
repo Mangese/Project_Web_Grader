@@ -254,43 +254,43 @@ if(!isset($_SESSION["user"]))
 
         if (document.getElementById("defaultCheckFirstname").checked == true) {
           var fnamereq = document.getElementById("editFirstname").value;
-          alert(fnamereq);
+          // alert(fnamereq);
           fnamesend = "&fnamereq=" + fnamereq;
         }
         // alert(fname);
         if (document.getElementById("defaultCheckLastname").checked == true) {
           var lnamereq = document.getElementById("editLastname").value;
-          alert(lnamereq);
+          // alert(lnamereq);
           lnamesend = "&lnamereq=" + lnamereq;
         }
 
         if (document.getElementById("defaultCheckUsername").checked == true) {
           var unamereq = document.getElementById("editUsername").value;
-          alert(unamereq);
+          // alert(unamereq);
           unamesend = "&unamereq=" + unamereq;
         }
 
         if (document.getElementById("defaultCheckStdID").checked == true) {
           var sidreq = document.getElementById("editStudentID").value;
-          alert(sidreq);
+          // alert(sidreq);
           sidsend = "&sidreq=" + sidreq;
         }
 
         if (document.getElementById("defaultCheckDepart").checked == true) {
           var departreq = document.getElementById("editDepartment").value;
-          alert(departreq);
+          // alert(departreq);
           departsend = "&departreq=" + departreq;
         }
 
         if (document.getElementById("defaultCheckEmail").checked == true) {
           var emailreq = document.getElementById("editEmail").value;
-          alert(emailreq);
+          // alert(emailreq);
           emailsend = "&emailreq=" + emailreq;
         }
 
         if (document.getElementById("defaultCheckPass").checked == true) {
           var passreq = document.getElementById("editPassword").value;
-          alert(passreq);
+          // alert(passreq);
           passSend = "&passreq=" + passreq;
         }
 
@@ -299,7 +299,7 @@ if(!isset($_SESSION["user"]))
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
           if (this.readyState == 4 && this.status == 200) {
-            alert("success");
+            // alert("success");
             eval(this.responseText);
           }
         }
