@@ -26,7 +26,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $PW = "'".$PW."'";
 
     // echo "alert('uid '+ $UID);";
-    // echo "alert('fname '+ $FN);";
+    echo "alert('fname '+ $FN);";
     // echo "alert('lname '+ $LN);";
     // echo "alert('uname '+ $UN);";
 
