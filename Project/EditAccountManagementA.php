@@ -38,31 +38,31 @@ $conn = mysql_connect("localhost","mangese","000000");
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
     
-    if ($FN1!=""){
+    if ($FN!=''){
         $subquery=$subquery. ' Firstname =  "'.$FN.'"';
       echo "alert('FN OK');";
     }
-    if ($LN1!=""){
+    if ($LN!=''){
       $subquery=$subquery. ' ,Lastname =  "'.$LN.'"';
     echo "alert('LN OK');";
     }
-    if ($UN1!=""){
+    if ($UN!=''){
       $subquery=$subquery. ' ,Username =  "'.$UN.'"';
     echo "alert('UN OK');";
     }
-    if ($SID1!=""){
+    if ($SID!=''){
       $subquery=$subquery. ' ,Student_ID =  "'.$SID.'"';
     echo "alert('SID OK');";
     }
-    if ($DP1!=""){
+    if ($DP!=''){
       $subquery=$subquery. ' ,Department =  "'.$DP.'"';
     echo "alert('DP OK');";
     }
-    if ($EM1!=""){
+    if ($EM!=''){
       $subquery=$subquery. ' ,Email =  "'.$EM.'"';
     echo "alert('EM OK');";
     }
-    if ($PW1!=""){
+    if ($PW!=''){
       $subquery=$subquery. ' ,Password   =  md5("'.$EM.'")';
     echo "alert('PW OK');";
     }
