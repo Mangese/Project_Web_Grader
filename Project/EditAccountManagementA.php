@@ -6,6 +6,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
     $UID = $_REQUEST["uidreq"];
+    $UT = $_REQUEST["utypereq"];
+
     $FN = $_REQUEST["fnamereq"];
     $LN = $_REQUEST["lnamereq"];
     $UN = $_REQUEST["unamereq"];
@@ -25,15 +27,16 @@ $conn = mysql_connect("localhost","mangese","000000");
     $EM1 = "'".$EM."'";
     $PW1 = "'".$PW."'";
 
-    echo "alert('uid '+ $UID1);";
-    echo "alert('fname '+ $FN1);";
-    echo "alert('lname '+ $LN1);";
-    echo "alert('uname '+ $UN1);";
+    // echo "alert('uid '+ $UID1);";
+    echo "alert('uid '+ $UT);";
+    // echo "alert('fname '+ $FN1);";
+    // echo "alert('lname '+ $LN1);";
+    // echo "alert('uname '+ $UN1);";
 
-    echo "alert('sid '+ $SID1);";
-    echo "alert('dp '+ $DP1);";
-    echo "alert('email '+ $EM1);";
-    echo "alert('PW '+ $PW1);";
+    // echo "alert('sid '+ $SID1);";
+    // echo "alert('dp '+ $DP1);";
+    // echo "alert('email '+ $EM1);";
+    // echo "alert('PW '+ $PW1);";
      
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
