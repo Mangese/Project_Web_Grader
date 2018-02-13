@@ -69,7 +69,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     echo "alert('EM OK');";
     }
     if ($PW!=''){
-      $subquery=$subquery. ' ,Password   =  md5("'.$EM.'")';
+      $subquery=$subquery. ' ,Password   =  md5("'.$PW.'")';
     echo "alert('PW OK');";
     }
     
