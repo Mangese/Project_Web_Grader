@@ -32,7 +32,7 @@
       echo "<button type='button' class='btn btn-warning btn-sm' data-toggle='modal' data-target='#editClass' onclick = 'editClassManagementTb(this,$CIDT)';><i class='fa fa-edit' aria-hidden='true' ></i></button>";
       echo "</td>";
       echo "<td style='width:15%'>";
-      echo "<button type='button' class='btn btn-danger btn-sm' onclick = 'deleteClassManagement(this,$CIDT)';><i class='fa fa-trash' aria-hidden='true'></i></button>";
+      echo "<button type='button' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#modalChackDeleteCM' onclick = 'deleteClassManagement(this,$CIDT)';><i class='fa fa-trash' aria-hidden='true'></i></button>";
       echo "</td>";
       echo "</tr>";
     }
