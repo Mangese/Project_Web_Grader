@@ -18,6 +18,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     $PW = $_REQUEST["passreq"];
 
     $UID1 = "'".$UID."'";
+    $UT1 = "'".$UT."'";
+
     $FN1 = "'".$FN."'";
     $LN1 = "'".$LN."'";
     $UN1 = "'".$UN."'";
@@ -28,7 +30,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $PW1 = "'".$PW."'";
 
     // echo "alert('uid '+ $UID1);";
-    echo "alert('uid '+ $UT);";
+    echo "alert('utype '+ $UT1);";
     // echo "alert('fname '+ $FN1);";
     // echo "alert('lname '+ $LN1);";
     // echo "alert('uname '+ $UN1);";
