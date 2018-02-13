@@ -213,12 +213,12 @@ if(!isset($_SESSION["user"]))
 
       document.getElementById("uidmoc").value = uid;
       document.getElementById('message').innerHTML = "";
-      if (sid == '') {
-        // alert("no sid");
-        document.getElementById("defaultCheckStdID").disabled = true;
-      } else {
+      if (utype == 'S') {
         // alert("sid =" + sid);
         document.getElementById("defaultCheckStdID").disabled = false;
+      } else {
+        // alert("no sid");
+        document.getElementById("defaultCheckStdID").disabled = true;
       }
 
     }
