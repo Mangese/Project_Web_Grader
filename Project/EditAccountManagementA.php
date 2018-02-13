@@ -35,15 +35,18 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM);";
     // echo "alert('PW '+ $PW);";
     
-    // $tor="1111"
-    // ."22222";
+    $tor="1111"
+    
      
-       $subquery="uPDATE user"
-      ." set "
+      //  $subquery="uPDATE user"
+      // ." set "
      if ($UID!=''){
-      ." Firstname = '$FN' ";
+      // ." Firstname = '$FN' ";
+      ."22222";
+      echo "alert($tor);";
      }
-     echo "alert($subquery);";
+
+    //  echo "alert($subquery);";
     //  $result= mysql_query(" $subquery "
     //  ." WHERE U_ID =$UID; ");
     // mysql_query("insert into homework (P_ID,LANGUAGE,S_ID,AssignDate,AssignTime,DeadlineDate,DeadlineTime,FullMark) values ($PID,(select Language from problem where p_id = '1'),$SID,now(),now(),'$DATE','$TIME','$FULLMARK');");
