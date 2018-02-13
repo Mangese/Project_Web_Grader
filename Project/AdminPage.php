@@ -370,7 +370,7 @@ if(!isset($_SESSION["user"]))
 
     function ChackDeleteAM() {
       var uidDelete = document.getElementById('uidmoc').value;
-      alert(uidDelete);
+      // alert(uidDelete);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
