@@ -369,8 +369,18 @@ if(!isset($_SESSION["user"]))
     }
 
     function ChackDeleteAM() {
-      var uid = document.getElementById('uidmoc').value;
-      alert(uid);
+      var uidDelete = document.getElementById('uidmoc').value;
+      alert(uidDelete);
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          alert("success");
+          eval(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "DeleteAccountManagementA.php?uidDelete=" + uidDelete, true);
+      xmlhttp.send();
 
     }
 
