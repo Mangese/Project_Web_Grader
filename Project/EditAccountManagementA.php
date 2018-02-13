@@ -39,21 +39,20 @@ $conn = mysql_connect("localhost","mangese","000000");
     // ."22222";
      
     $subquery="uPDATE user" ;
+    $subquery=$subquery. " set ";
     
-    // alert('update user''set');
-     $subquery=$subquery. " set ";
-    //  'uPdate user '' set '
-    // echo "alert($subquery);";
     if ($FN1!=''){
         $subquery=$subquery. ' Firstname =  "'.$FN.'"';
-      echo "alert('eiei');";
+      echo "alert('FN OK');";
     }
-    // $subquery=$subquery."'";
+    if ($LN1!=''){
+      $subquery=$subquery. ' ,Lastname =  "'.$LN.'"';
+    echo "alert('LN OK');";
+  }
+    
 
-      echo "alert('$subquery');";
-    //  $result= mysql_query(" $subquery "
-    //  ." WHERE U_ID =$UID; ");
-      echo "alert('$subquery WHERE U_ID =$UID;');";
+      // echo "alert('$subquery');";
+      // echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
   }
 ?>
