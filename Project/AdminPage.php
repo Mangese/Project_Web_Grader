@@ -212,6 +212,7 @@ if(!isset($_SESSION["user"]))
       document.getElementById("editPassword2").disabled = true;
 
       document.getElementById("uidmoc").value = uid;
+      document.getElementById("utypemoc").value = utype;
       document.getElementById('message').innerHTML = "";
       if (utype == 'S') {
         // alert("sid =" + sid);
@@ -237,6 +238,8 @@ if(!isset($_SESSION["user"]))
       if (check == 1 || check == 2) {
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").value;
+        var utypereq = document.getElementById("utypemoc").value;
+        alert(utypereq);
 
         // alert(uidreq);
 
@@ -472,6 +475,7 @@ if(!isset($_SESSION["user"]))
     }
   </script>
   <input id="uidmoc" type="hidden">
+  <input id="utypemoc" type="hidden">
   <input id="cidmoc" type="hidden">
   <input id="sidmoc" type="hidden">
   <!-- <input id="" type="hidden"> -->
