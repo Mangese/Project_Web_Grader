@@ -35,15 +35,15 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM);";
     // echo "alert('PW '+ $PW);";
     
-    $tor="1111"
-    ."22222";
-    echo "alert($tor);";
+    $tor="1111";
+    
      
       //  $subquery="uPDATE user"
       // ." set "
      if ($UID!=''){
       // ." Firstname = '$FN' ";
-      
+      ."22222";
+      echo "alert($tor);";
      }
 
     //  echo "alert($subquery);";
