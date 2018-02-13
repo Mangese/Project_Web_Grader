@@ -391,7 +391,7 @@ if(!isset($_SESSION["user"]))
 
     function ChackDeleteCM() {
       var cidDelete = document.getElementById('cidmoc').value;
-      alert(cidDelete);
+      // alert(cidDelete);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
@@ -408,6 +408,24 @@ if(!isset($_SESSION["user"]))
 
     function deleteSectionManagement(th, sid) {
       alert("sid is:" + sid);
+      document.getElementById('sidmoc').value = sid;
+    }
+
+    function ChackDeleteSM() {
+      var sidDelete = document.getElementById('sidmoc').value;
+      alert(cidDelete);
+
+      // var xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onreadystatechange = function () {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     alert("success");
+      //     eval(this.responseText);
+      //   }
+      // }
+      // xmlhttp.open("POST", "DeleteClassManagementA.php?cidDelete=" + cidDelete, true);
+      // xmlhttp.send();
+
+
     }
 
     function checkBoxEdit(num) {
@@ -1172,6 +1190,19 @@ if(!isset($_SESSION["user"]))
         <div class="modal-body " style="text-align: center; margin-bottom:20px;">
           <h5 style="margin-bottom:20px">Do you want to delete?</h5>
           <button type="button" class="btn btn-success" onclick="ChackDeleteCM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalChackDeleteSM" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body " style="text-align: center; margin-bottom:20px;">
+          <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+          <button type="button" class="btn btn-success" onclick="ChackDeleteSM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
       </div>
