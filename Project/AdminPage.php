@@ -364,8 +364,16 @@ if(!isset($_SESSION["user"]))
     }
 
     function deleteAccountManagement(th, uid) {
-      alert("uid is:" + uid);
+      // alert("uid is:" + uid);
+      document.getElementById('uidmoc').value = uid;
     }
+
+    function ChackDeleteAM() {
+      var uid = document.getElementById('uidmoc').value;
+      alert(uid);
+
+    }
+
     function deleteClassManagement(th, cid) {
       alert("cid is:" + cid);
     }
@@ -1126,7 +1134,7 @@ if(!isset($_SESSION["user"]))
           <div class="modal-body " style="text-align: center; margin-bottom:20px;">
 
             <h5 style="margin-bottom:20px">Do you want to delete?</h5>
-            <button type="button" class="btn btn-success" onclick="" data-dismiss="modal" style="margin-right:5px">Yes</button>
+            <button type="button" class="btn btn-success" onclick="ChackDeleteAM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 
 
