@@ -34,7 +34,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM);";
     // echo "alert('PW '+ $PW);";
     
-    $tor="1111";
+    $tor="1111"
     ."22222";
     //  mysql_query("use grader;");
      if ($UID!=''){
