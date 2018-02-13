@@ -53,6 +53,6 @@ $conn = mysql_connect("localhost","mangese","000000");
       echo "alert('$subquery');";
     //  $result= mysql_query(" $subquery "
     //  ." WHERE U_ID =$UID; ");
-     echo 'alert("$subquery WHERE U_ID =$UID;");';
+     echo "alert('$subquery WHERE U_ID =$UID;');";
   }
 ?>
