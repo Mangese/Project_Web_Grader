@@ -24,18 +24,23 @@ $conn = mysql_connect("localhost","mangese","000000");
     $EM = "'".$EM."'";
     $PW = "'".$PW."'";
 
-    echo "alert('uid '+ $UID);";
-    echo "alert('fname '+ $FN);";
-    echo "alert('lname '+ $LN);";
-    echo "alert('uname '+ $UN);";
+    // echo "alert('uid '+ $UID);";
+    // echo "alert('fname '+ $FN);";
+    // echo "alert('lname '+ $LN);";
+    // echo "alert('uname '+ $UN);";
 
-    echo "alert('sid '+ $SID);";
-    echo "alert('dp '+ $DP);";
-    echo "alert('email '+ $EM);";
-    echo "alert('PW '+ $PW);";
+    // echo "alert('sid '+ $SID);";
+    // echo "alert('dp '+ $DP);";
+    // echo "alert('email '+ $EM);";
+    // echo "alert('PW '+ $PW);";
     
     
-    // mysql_query("use grader;");
+    //  mysql_query("use grader;");
+     if ($UID!=''){
+      echo "alert('uid '+".
+      
+     }
+     " $UID);";
     // mysql_query("insert into homework (P_ID,LANGUAGE,S_ID,AssignDate,AssignTime,DeadlineDate,DeadlineTime,FullMark) values ($PID,(select Language from problem where p_id = '1'),$SID,now(),now(),'$DATE','$TIME','$FULLMARK');");
   }
 ?>
