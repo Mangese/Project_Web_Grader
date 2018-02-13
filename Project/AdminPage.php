@@ -239,7 +239,7 @@ if(!isset($_SESSION["user"]))
         // alert("check is" + check);
         var uidreq = document.getElementById("uidmoc").value;
         var utypereq = document.getElementById("utypemoc").value;
-        alert(utypereq);
+        // alert(utypereq);
 
         // alert(uidreq);
 
@@ -303,7 +303,7 @@ if(!isset($_SESSION["user"]))
             eval(this.responseText);
           }
         }
-        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend, true);
+        xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
         xmlhttp.send();
         // location.reload();
       }
