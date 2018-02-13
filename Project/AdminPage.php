@@ -407,13 +407,13 @@ if(!isset($_SESSION["user"]))
     }
 
     function deleteSectionManagement(th, sid) {
-      alert("sid is:" + sid);
+      // alert("sid is:" + sid);
       document.getElementById('sidmoc').value = sid;
     }
 
     function ChackDeleteSM() {
       var sidDelete = document.getElementById('sidmoc').value;
-      alert(sidDelete);
+      // alert(sidDelete);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
