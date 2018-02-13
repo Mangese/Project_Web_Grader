@@ -39,7 +39,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // ."22222";
      
     $subquery="'"."uPDATE user" ."'";
-    // $subquery=$subquery. "'". " set " ."'";
+    $subquery=$subquery. " set " ;
     echo "alert($subquery);";
     if ($FN!=''){
       // $subquery=$subquery. "'". " Firstname = $FN "."'";
