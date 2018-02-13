@@ -7,6 +7,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("set NAMES UTF8;");
     $SID = $_REQUEST["sidDelete"];
     $SID1 = "'".$SID."'";
-    echo "alert('in DeleteSectionManagementA.php uid:' + $SID1);";
+    echo "alert('in DeleteSectionManagementA.php sid:' + $SID1);";
   }
 ?>
