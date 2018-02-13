@@ -25,15 +25,15 @@ $conn = mysql_connect("localhost","mangese","000000");
     $EM1 = "'".$EM."'";
     $PW1 = "'".$PW."'";
 
-    // echo "alert('uid '+ $UID);";
-    // echo "alert('fname '+ $FN1);";
-    // echo "alert('lname '+ $LN);";
-    // echo "alert('uname '+ $UN);";
+    echo "alert('uid '+ $UID);";
+    echo "alert('fname '+ $FN1);";
+    echo "alert('lname '+ $LN);";
+    echo "alert('uname '+ $UN);";
 
-    // echo "alert('sid '+ $SID);";
-    // echo "alert('dp '+ $DP);";
-    // echo "alert('email '+ $EM);";
-    // echo "alert('PW '+ $PW);";
+    echo "alert('sid '+ $SID);";
+    echo "alert('dp '+ $DP);";
+    echo "alert('email '+ $EM);";
+    echo "alert('PW '+ $PW);";
      
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
