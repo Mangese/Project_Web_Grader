@@ -45,7 +45,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     //  'uPdate user '' set '
     // echo "alert($subquery);";
     if ($FN1!=''){
-        $subquery=$subquery. " Firstname =  $FN";
+        $subquery=$subquery. " Firstname =  '$FN'";
       echo "alert('eiei');";
     }
     $subquery=$subquery."'";
@@ -53,6 +53,6 @@ $conn = mysql_connect("localhost","mangese","000000");
      echo "alert($subquery);";
     //  $result= mysql_query(" $subquery "
     //  ." WHERE U_ID =$UID; ");
-     mysql_query("$subquery WHERE U_ID =$UID;");
+     mysql_query("$subquery WHERE U_ID ='$UID';");
   }
 ?>
