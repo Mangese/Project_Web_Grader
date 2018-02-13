@@ -7,6 +7,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("set NAMES UTF8;");
     $CID = $_REQUEST["cidDelete"];
     $CID1 = "'".$CID."'";
-    echo "alert('in DeleteClassManagementA.php uid:' + $CID1);";
+    echo "alert('in DeleteClassManagementA.php cid:' + $CID1);";
   }
 ?>
