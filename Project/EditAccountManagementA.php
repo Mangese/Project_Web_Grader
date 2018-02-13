@@ -37,7 +37,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     
     //  mysql_query("use grader;");
      if ($UID!=''){
-      echo "alert('uid '+"
+      echo "alert('uid '+";
       ." $UID);";
      }
      
