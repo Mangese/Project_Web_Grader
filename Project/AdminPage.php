@@ -413,17 +413,17 @@ if(!isset($_SESSION["user"]))
 
     function ChackDeleteSM() {
       var sidDelete = document.getElementById('sidmoc').value;
-      alert(cidDelete);
+      alert(sidDelete);
 
-      // var xmlhttp = new XMLHttpRequest();
-      // xmlhttp.onreadystatechange = function () {
-      //   if (this.readyState == 4 && this.status == 200) {
-      //     alert("success");
-      //     eval(this.responseText);
-      //   }
-      // }
-      // xmlhttp.open("POST", "DeleteClassManagementA.php?cidDelete=" + cidDelete, true);
-      // xmlhttp.send();
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          alert("success");
+          eval(this.responseText);
+        }
+      }
+      xmlhttp.open("POST", "DeleteSectionManagementA.php?sidDelete=" + sidDelete, true);
+      xmlhttp.send();
 
 
     }
