@@ -41,11 +41,11 @@ $conn = mysql_connect("localhost","mangese","000000");
     $subquery="'"."uPDATE user" ;
     
     // alert('update user''set');
-     $subquery=$subquery. " set " ."'";
+     $subquery=$subquery. " set ";
     //  'uPdate user '' set '
     // echo "alert($subquery);";
     if ($FN!=''){
-      //  $subquery=$subquery. " Firstname = $FN ";
+       $subquery=$subquery. " Firstname = $FN ";
       echo "alert('eiei');";
     }
     $subquery=$subquery."'";
