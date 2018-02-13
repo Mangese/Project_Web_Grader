@@ -45,7 +45,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     //  'uPdate user '' set '
     // echo "alert($subquery);";
     if ($FN!=''){
-        $subquery=$subquery. " Firstname = '$FN' ";
+        $subquery=$subquery. " Firstname =  ";
       echo "alert('eiei');";
     }
     $subquery=$subquery."'";
