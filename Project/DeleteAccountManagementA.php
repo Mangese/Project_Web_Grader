@@ -6,6 +6,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
     $UID = $_REQUEST["uidDelete"];
-    echo "alert('in DeleteAccountManagementA.php');";
+    $UID1 = "'".$UID."'";
+    echo "alert('in DeleteAccountManagementA.php uid:' + $UID1);";
   }
 ?>
