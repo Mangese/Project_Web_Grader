@@ -385,8 +385,27 @@ if(!isset($_SESSION["user"]))
     }
 
     function deleteClassManagement(th, cid) {
-      alert("cid is:" + cid);
+      // alert("cid is:" + cid);
+      document.getElementById('cidmoc').value = cid;
     }
+
+    function ChackDeleteCM() {
+      var cidDelete = document.getElementById('cidmoc').value;
+      alert(cidDelete);
+
+      // var xmlhttp = new XMLHttpRequest();
+      // xmlhttp.onreadystatechange = function () {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     alert("success");
+      //     eval(this.responseText);
+      //   }
+      // }
+      // xmlhttp.open("POST", "DeleteAccountManagementA.php?uidDelete=" + uidDelete, true);
+      // xmlhttp.send();
+
+
+    }
+
     function deleteSectionManagement(th, sid) {
       alert("sid is:" + sid);
     }
@@ -1140,6 +1159,19 @@ if(!isset($_SESSION["user"]))
         <div class="modal-body " style="text-align: center; margin-bottom:20px;">
           <h5 style="margin-bottom:20px">Do you want to delete?</h5>
           <button type="button" class="btn btn-success" onclick="ChackDeleteAM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalChackDeleteCM" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body " style="text-align: center; margin-bottom:20px;">
+          <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+          <button type="button" class="btn btn-success" onclick="ChackDeleteCM();" data-dismiss="modal" style="margin-right:5px">Yes</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
       </div>
