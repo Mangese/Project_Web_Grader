@@ -15,18 +15,18 @@ $conn = mysql_connect("localhost","mangese","000000");
     $EM = $_REQUEST["emailreq"];
     $PW = $_REQUEST["passreq"];
 
-    $UID = "'".$UID."'";
-    $FN = "'".$FN."'";
-    $LN = "'".$LN."'";
-    $UN = "'".$UN."'";
+    $UID1 = "'".$UID."'";
+    $FN1 = "'".$FN."'";
+    $LN1 = "'".$LN."'";
+    $UN1 = "'".$UN."'";
     
-    $SID = "'".$SID."'";
-    $DP = "'".$DP."'";
-    $EM = "'".$EM."'";
-    $PW = "'".$PW."'";
+    $SID1 = "'".$SID."'";
+    $DP1 = "'".$DP."'";
+    $EM1 = "'".$EM."'";
+    $PW1 = "'".$PW."'";
 
     // echo "alert('uid '+ $UID);";
-    echo "alert('fname '+ $FN);";
+    echo "alert('fname '+ $FN1);";
     // echo "alert('lname '+ $LN);";
     // echo "alert('uname '+ $UN);";
 
@@ -44,8 +44,8 @@ $conn = mysql_connect("localhost","mangese","000000");
      $subquery=$subquery. " set ";
     //  'uPdate user '' set '
     // echo "alert($subquery);";
-    if ($FN!=''){
-        $subquery=$subquery. " Firstname =  ";
+    if ($FN1!=''){
+        $subquery=$subquery. " Firstname =  $FN";
       echo "alert('eiei');";
     }
     $subquery=$subquery."'";
