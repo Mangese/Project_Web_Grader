@@ -69,7 +69,7 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
-  <!-- echo "<script> alert($_SESSION["user"]);  </script>"; -->
+  
 ?>
 
   <body>
@@ -387,27 +387,27 @@
 
     <input type="hidden" id="DeleteModalCheck" />
     <script>
-                 (function ($) {
-                   var doc = document,
-                     supportsMultipleFiles = "multiple" in doc.createElement("input");
-                   $(doc).on("change", ".file > input[type=file]", function () {
-                     var input = this,
-                       fileNames = [],
-                       label = input.nextElementSibling,
-                       files, len, i = -1, labelValue;
-                     if (supportsMultipleFiles) {
-                       len = (files = input.files).length;
-                       while (++i < len) {
-                         fileNames.push(files[i].name);
-                       }
-                     }
-                     else {
-                       fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
-                     }
-                     label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
-                     label.setAttribute("title", labelValue);
-                   });
-                 })(jQuery);
+                  (function ($) {
+                    var doc = document,
+                      supportsMultipleFiles = "multiple" in doc.createElement("input");
+                    $(doc).on("change", ".file > input[type=file]", function () {
+                      var input = this,
+                        fileNames = [],
+                        label = input.nextElementSibling,
+                        files, len, i = -1, labelValue;
+                      if (supportsMultipleFiles) {
+                        len = (files = input.files).length;
+                        while (++i < len) {
+                          fileNames.push(files[i].name);
+                        }
+                      }
+                      else {
+                        fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+                      }
+                      label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+                      label.setAttribute("title", labelValue);
+                    });
+                  })(jQuery);
     </script>
     <script>
       function logout() {
