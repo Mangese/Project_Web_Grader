@@ -138,8 +138,8 @@ if(!isset($_SESSION["user"]))
     }
 
     function checkPassAdd() {
-      var password = document.getElementById("editPassword")
-      var confirm_password = document.getElementById("editPassword2");
+      var password = document.getElementById("addPassword")
+      var confirm_password = document.getElementById("addPassword2");
       var message = document.getElementById('message1');
       confirm_password.setCustomValidity('');
       if (password.value == confirm_password.value) {
