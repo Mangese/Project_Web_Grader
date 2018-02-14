@@ -39,10 +39,10 @@
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
-      <label class="ml-auto " id="SessionUser"></label>
-      <!-- <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick="logout()" type="button">Logout</button> -->
+      <i class="far fa-user-circle ml-auto"></i>
+      <label class="ml-2" id="SessionUser"></label>
       <div class="dropdown">
-        <i class="fas fa-chevron-down ml-4" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+        <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right">
           <button class="dropdown-item" type="button" style="width: 70%">Account</button>
           <div class="dropdown-divider"></div>
