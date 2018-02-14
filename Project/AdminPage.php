@@ -575,7 +575,7 @@ if(!isset($_SESSION["user"]))
 
         </form>
 
-        <form name="addAccount" method="post" action="">
+        <form name="addAccount" method="post" action="Register.php">
           <!-- Modal -->
           <div class="modal fade" id="addAccount" role="dialog">
             <div class="modal-dialog modal-sm">
@@ -598,33 +598,33 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" id="addFirstname" name="addFirstname" placeholder="Firstname" disabled required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
+                      <input type="text" class="form-control" id="addFirstname" name="txtFirstname" placeholder="Firstname" disabled required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addLastname" id="addLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                      <input type="text" class="form-control" name="addLastname" id="txtLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                         oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addUsername" id="addUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                      <input type="text" class="form-control" name="addUsername" id="txtUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                         oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}"
                       />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="text" class="form-control" name="addStudentID" id="addStudentID" placeholder="Student ID (EX. 5713XXX)" disabled
+                      <input type="text" class="form-control" name="addStudentID" id="txtStudentID" placeholder="Student ID (EX. 5713XXX)" disabled
                         required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
                         minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <select class="form-control" id="addDepartment" name="addDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
+                      <select class="form-control" id="addDepartment" name="sel1" disabled required oninvalid="this.setCustomValidity('Please select some department');"
                         oninput="setCustomValidity('')">
                         <option value="">Department</option>
                         <option value="BE">Biomedical Engineering</option>
@@ -639,27 +639,28 @@ if(!isset($_SESSION["user"]))
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="email" class="form-control" name="addEmail" id="addEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
+                      <input type="email" class="form-control" name="txtEmail" id="addEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
                         oninput="setCustomValidity('')" maxlength=30/>
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="password" class="form-control" id="addPassword" name="addPassword" placeholder="Password" minlength=6 maxlength=30
+                      <input type="password" class="form-control" id="addPassword" name="txtPassword" placeholder="Password" minlength=6 maxlength=30
                         disabled required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                         onkeyup='check();' />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
-                      <input type="password" class="form-control" id="addPassword2" name="addPassword2" placeholder="Confirm Password" minlength=6
+                      <input type="password" class="form-control" id="addPassword2" name="txtPassword2" placeholder="Confirm Password" minlength=6
                         maxlength=30 disabled required oninput="setCustomValidity('')" onkeyup='check();' />
                     </div>
                   </div>
                 </div>
                 <!--End Modal Body-->
                 <div class="modal-footer">
-                  <button type="submit" class="btn btn-success" onclick="">Create Account</button>
+                  <!-- <button type="submit" class="btn btn-success" onclick="">Create Account</button> -->
+                  <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Create Account</button>
                 </div>
               </div>
             </div>
