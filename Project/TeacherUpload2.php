@@ -39,7 +39,7 @@
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
-      <i class="far fa-user-circle ml-auto"></i>
+      <i class="far fa-user-circle h4 ml-auto"></i>
       <label class="ml-2" id="SessionUser"></label>
       <div class="dropdown">
         <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
