@@ -66,26 +66,32 @@ $DE = $_POST["sel1"];
 $EM = $_POST["txtEmail"];
 $PW = $_POST["txtPassword"];
 // mysql_query("use grader;");
-// mysql_query("INSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
-
+if($AT=='S'){
+// mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
 echo "UserType :".$_POST["addUserType"];
-echo "<br>";
-echo "Firstname :".$_POST["txtFirstname"];
-echo "<br>";
-echo "Lastname :".$_POST["txtLastname"];
-echo "<br>";
-echo "Username :".$_POST["txtUsername"];
-echo "<br>";
-echo "Student ID :".$_POST["txtStudentID"];
-echo "<br>";
-echo "Department :".$_POST["sel1"];
-echo "<br>";
-echo "E-mail :".$_POST["txtEmail"];
-echo "<br>";
-echo "Password :".$_POST["txtPassword"];
-echo "<br>";
-echo "Password2 :".$_POST["txtPassword2"]."  **Confirm Password but now dont check**";
-echo "<br>";
+}
+else{
+  echo "elselsesese";
+
+}
+// echo "UserType :".$_POST["addUserType"];
+// echo "<br>";
+// echo "Firstname :".$_POST["txtFirstname"];
+// echo "<br>";
+// echo "Lastname :".$_POST["txtLastname"];
+// echo "<br>";
+// echo "Username :".$_POST["txtUsername"];
+// echo "<br>";
+// echo "Student ID :".$_POST["txtStudentID"];
+// echo "<br>";
+// echo "Department :".$_POST["sel1"];
+// echo "<br>";
+// echo "E-mail :".$_POST["txtEmail"];
+// echo "<br>";
+// echo "Password :".$_POST["txtPassword"];
+// echo "<br>";
+// echo "Password2 :".$_POST["txtPassword2"]."  **Confirm Password but now dont check**";
+// echo "<br>";
 // echo $_POST["inputEmail3"];
 // echo "<br>";
 // if(trim($_POST["txtFirstname"]) == "")
