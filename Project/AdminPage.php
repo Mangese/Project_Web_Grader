@@ -137,6 +137,21 @@ if(!isset($_SESSION["user"]))
       }
     }
 
+    function checkPassAdd() {
+      var password = document.getElementById("editPassword")
+      var confirm_password = document.getElementById("editPassword2");
+      var message = document.getElementById('message1');
+      confirm_password.setCustomValidity('');
+      if (password.value == confirm_password.value) {
+        message.style.color = 'green';
+        message.innerHTML = '*matching*';
+      } else {
+        message.style.color = 'red';
+        message.innerHTML = "*Passwords Doesn't Match *";
+        confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+      }
+    }
+
     function addClass() {
       var addNewClass = document.getElementById('addClassName').value;
       alert("in add class");
@@ -647,13 +662,18 @@ if(!isset($_SESSION["user"]))
                     <div class="col-sm-12">
                       <input type="password" class="form-control" id="addPassword" name="txtPassword" placeholder="Password" minlength=6 maxlength=30
                         disabled required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
-                        onkeyup='check();' />
+                        onkeyup='checkPassAdd();' />
                     </div>
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-12">
                       <input type="password" class="form-control" id="addPassword2" name="txtPassword2" placeholder="Confirm Password" minlength=6
-                        maxlength=30 disabled required oninput="setCustomValidity('')" onkeyup='check();' />
+                        maxlength=30 disabled required oninput="setCustomValidity('')" onkeyup='checkPassAdd();' />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <p id="message1"></p>
                     </div>
                   </div>
                 </div>
