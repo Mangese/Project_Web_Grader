@@ -53,9 +53,9 @@
          <?php
          session_start();
 // echo "Hello World!";
-$conn = mysql_connect("localhost","mangese","000000");
-if($conn != FALSE)
-{
+// $conn = mysql_connect("localhost","mangese","000000");
+// if($conn != FALSE)
+// {
 $FN = $_POST["txtFirstname"];
 $LN = $_POST["txtLastname"];
 $UN = $_POST["txtUsername"];
@@ -63,9 +63,9 @@ $SID= $_POST["txtStudentID"];
 $DE = $_POST["sel1"];
 $EM = $_POST["txtEmail"];
 $PW = $_POST["txtPassword"];
-mysql_query("use grader;");
-mysql_query("INSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
-/*echo "Firstname :".$_POST["txtFirstname"];
+// mysql_query("use grader;");
+// mysql_query("INSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
+echo "Firstname :".$_POST["txtFirstname"];
 echo "<br>";
 echo "Lastname :".$_POST["txtLastname"];
 echo "<br>";
@@ -82,19 +82,19 @@ echo "<br>";
 echo "Password2 :".$_POST["txtPassword2"]."  **Confirm Password but now dont check**";
 echo "<br>";
 echo $_POST["inputEmail3"];
-echo "<br>";*/
-if(trim($_POST["txtFirstname"]) == "")
-	{
-		echo"<body onload=\"window.alert('Please input Name!'); 
-		return history.back();\">";
-		exit();
-	}
-echo "<script> alert('Success'); window.location = 'login.php'; </script>";
-}
-else
-{
-echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
-}
+echo "<br>";
+// if(trim($_POST["txtFirstname"]) == "")
+// 	{
+// 		echo"<body onload=\"window.alert('Please input Name!'); 
+// 		return history.back();\">";
+// 		exit();
+// 	}
+// echo "<script> alert('Success'); window.location = 'login.php'; </script>";
+// }
+// else
+// {
+// echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
+// }
 ?> 
   </form>
 </div>
