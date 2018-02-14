@@ -53,9 +53,9 @@
          <?php
          session_start();
 // echo "Hello World!";
-// $conn = mysql_connect("localhost","mangese","000000");
-// if($conn != FALSE)
-// {
+$conn = mysql_connect("localhost","mangese","000000");
+if($conn != FALSE)
+{
   
 $AT = $_POST["addUserType"];
 $FN = $_POST["txtFirstname"];
@@ -65,14 +65,13 @@ $SID= $_POST["txtStudentID"];
 $DE = $_POST["sel1"];
 $EM = $_POST["txtEmail"];
 $PW = $_POST["txtPassword"];
-// mysql_query("use grader;");
+mysql_query("use grader;");
 if($AT=='S'){
-// mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
-echo "UserType :".$_POST["addUserType"];
+mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
+// echo "UserType :".$_POST["addUserType"];
 }
 else{
-  echo "elselsesese";
-
+  // echo "elselsesese";
 }
 // echo "UserType :".$_POST["addUserType"];
 // echo "<br>";
@@ -94,18 +93,18 @@ else{
 // echo "<br>";
 // echo $_POST["inputEmail3"];
 // echo "<br>";
-// if(trim($_POST["txtFirstname"]) == "")
-// 	{
-// 		echo"<body onload=\"window.alert('Please input Name!'); 
-// 		return history.back();\">";
-// 		exit();
-// 	}
-// echo "<script> alert('Success'); window.location = 'login.php'; </script>";
-// }
-// else
-// {
-// echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
-// }
+if(trim($_POST["txtFirstname"]) == "")
+	{
+		echo"<body onload=\"window.alert('Please input Name!'); 
+		return history.back();\">";
+		exit();
+	}
+echo "<script> alert('Success'); window.location = 'login.php'; </script>";
+}
+else
+{
+echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
+}
 ?> 
   </form>
 </div>
