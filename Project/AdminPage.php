@@ -125,8 +125,8 @@ if(!isset($_SESSION["user"]))
     function checkPassEdit() {
       var password = document.getElementById("editPassword")
       var confirm_password = document.getElementById("editPassword2");
-      var message = document.getElementById('message')
-      confirm_password.setCustomValidity('')
+      var message = document.getElementById('message');
+      confirm_password.setCustomValidity('');
       if (password.value == confirm_password.value) {
         message.style.color = 'green';
         message.innerHTML = '*matching*';
