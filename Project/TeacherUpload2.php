@@ -69,345 +69,345 @@
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
-  echo "<script> alert($_SESSION["user"]);  </script>";
+  <!-- echo "<script> alert($_SESSION["user"]);  </script>"; -->
 ?>
 
   <body>
     <!--Start script-->
 
     <script>
-                 $(document).ready(function () {
-                   fillDropDownSection();
-                   fillDropHw();
-                   fillTable();
-                   fillTableHw();
-                   fillTableResult();
-                   fillDropCreateClass();
-                   fillDropResult();
-                   fillGetTableProblem();
+                  $(document).ready(function () {
+                    fillDropDownSection();
+                    fillDropHw();
+                    fillTable();
+                    fillTableHw();
+                    fillTableResult();
+                    fillDropCreateClass();
+                    fillDropResult();
+                    fillGetTableProblem();
 
 
-                 });
-                 $('#myTab a').click(function (e) {
-                   e.preventDefault()
-                   $(this).tab('show')
-                 })
-                 //                   $(function () {
-                 //                     $('#datetimepicker1').datepicker({
-                 //                       format: 'DD/MM/YYYY'
-                 //                     });
-                 //                   });
-                 function DMYpicker(x) {
-                   //alert(x);
+                  });
+                  $('#myTab a').click(function (e) {
+                    e.preventDefault()
+                    $(this).tab('show')
+                  })
+                  //                   $(function () {
+                  //                     $('#datetimepicker1').datepicker({
+                  //                       format: 'DD/MM/YYYY'
+                  //                     });
+                  //                   });
+                  function DMYpicker(x) {
+                    //alert(x);
 
-                   $('#' + x).datetimepicker({
-                     minDate: new Date(),
-                     format: 'YYYY-MM-DD'
-
-
-                   });
-                 }
-                 //                   $(function () {
-                 //                     $('#datetimepicker3').datepicker({
-                 //                       format: 'LT'
-                 //                     });
-                 //                   });
-                 function Timepicker(y) {
-                   //alert(y);
-                   $('#' + y).datetimepicker({
-                     format: 'HH:mm'
-
-                   });
-
-                 }
-                 function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
-                   // alert(x);
-                   // // alert(y);
-                   // // alert(submitcount);
-                   // alert(qq);
-                   // alert(getFullMark);
-                   $("#idmoc").val(x);
-                   $("#pidmoc").val(y);
-                   $("#fullmarkmoc").val(getFullMark);
+                    $('#' + x).datetimepicker({
+                      minDate: new Date(),
+                      format: 'YYYY-MM-DD'
 
 
-                   var fullMarkV = document.getElementById("fullMark");
-                   var setMarkV = document.getElementById("setMark");
-                   var markSubBtnV = document.getElementById("markSubBtn");
-                   document.getElementById('fullMark').innerHTML = "/ " + getFullMark;
-                   if (getFullMark != "") {
-                     fullMarkV.style.display = "block";
-                     setMarkV.style.display = "block";
-                     markSubBtnV.style.display = "block";
-                   } else {
-                     fullMarkV.style.display = "none";
-                     setMarkV.style.display = "none";
-                     markSubBtnV.style.display = "none";
-                   }
-                   document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
-                   document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
-                   //submitCount
-                   $('#tb3LastSendFile tbody tr').remove();
-                   str = $("#selSectionHw").val();
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       $('#tb3LastSendFile').append(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
-                   xmlhttp.send();
-                 }
+                    });
+                  }
+                  //                   $(function () {
+                  //                     $('#datetimepicker3').datepicker({
+                  //                       format: 'LT'
+                  //                     });
+                  //                   });
+                  function Timepicker(y) {
+                    //alert(y);
+                    $('#' + y).datetimepicker({
+                      format: 'HH:mm'
 
-                 function markSubfunc() {
+                    });
 
-                   var uidreq = $("#idmoc").val();
-                   var pidreq = $("#pidmoc").val();
-                   var setMark = $("#setMark").val();
-                   var fullmark = $("#fullmarkmoc").val();
-
-                   // alert(uidreq);
-                   // alert(pidreq);
-                   // alert(fullmark);
-
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       eval(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
-                   xmlhttp.send();
-                   fillTableResult();
-                   // location.reload();
-
-                 }
+                  }
+                  function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
+                    // alert(x);
+                    // // alert(y);
+                    // // alert(submitcount);
+                    // alert(qq);
+                    // alert(getFullMark);
+                    $("#idmoc").val(x);
+                    $("#pidmoc").val(y);
+                    $("#fullmarkmoc").val(getFullMark);
 
 
-                 function fillDropDownSection() {
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       eval(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "DropDownForT.php", true);
-                   xmlhttp.send();
-                 }
-                 function RealDelete() {
-                   y = $('#DeleteModalCheck').val();
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                     }
-                   }
-                   xmlhttp.open("POST", "DeleteProblem.php?pid=" + y, true);
-                   xmlhttp.send();
-                   fillTable();
-                 }
-                 function DeleteProblem(x, y) {
-                   $('#DeleteModalCheck').val(y);
-                 }
-                 function RealDeleteHw() {
-                   y = $('#DeleteModalCheck').val();
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                     }
-                   }
-                   xmlhttp.open("POST", "DeleteHw.php?hid=" + y, true);
-                   xmlhttp.send();
-                   fillTableHw();
-                 }
-                 function DeleteHw(x, y) {
-                   $('#DeleteModalCheck').val(y);
-                 }
-                 function check() {
-                   var x = 0;
-                   $('table [type="checkbox"]').each(function (i, chk) {
-                     if (chk.checked) {
-                       num = i + 1;
-                       dateName = "datetimepicker" + num.toString() + "Name";
-                       timeName = "timepicker" + num.toString() + "Name";
-                       fullMarkName = "fullMark" + num.toString() + "Name";
-                       if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
-                         x = 1;
-                       }
-                     }
-                   });
-                   if (x == 1) {
-                     alert("Please input all detail");
-                   }
-                   else {
-                     $('table [type="checkbox"]').each(function (i, chk) {
-                       if (chk.checked) {
-                         num = i + 1;
-                         dateName = "datetimepicker" + num.toString() + "Name";
-                         timeName = "timepicker" + num.toString() + "Name";
-                         fullMarkName = "fullMark" + num.toString() + "Name";
-                         str = $("#selSectionHw").val();
-                         var xmlhttp = new XMLHttpRequest();
-                         xmlhttp.onreadystatechange = function () {
-                           if (this.readyState == 4 && this.status == 200) {
-                             eval(this.responseText);
-                           }
-                         }
-                         xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value + "&fullMark=" + document.getElementById(fullMarkName).value, true);
-                         xmlhttp.send();
-                         location.reload();
-                         // alert(dateName);
-                         // alert(timeName);
-                         // alert(fullMarkName);
-                         // alert(document.getElementById(dateName).value);
-                         // alert(document.getElementById(timeName).value);
-                         // alert(document.getElementById(fullMarkName).value);
+                    var fullMarkV = document.getElementById("fullMark");
+                    var setMarkV = document.getElementById("setMark");
+                    var markSubBtnV = document.getElementById("markSubBtn");
+                    document.getElementById('fullMark').innerHTML = "/ " + getFullMark;
+                    if (getFullMark != "") {
+                      fullMarkV.style.display = "block";
+                      setMarkV.style.display = "block";
+                      markSubBtnV.style.display = "block";
+                    } else {
+                      fullMarkV.style.display = "none";
+                      setMarkV.style.display = "none";
+                      markSubBtnV.style.display = "none";
+                    }
+                    document.getElementById('modalValueResult').innerHTML = "StudentID. " + stuid + " Homework " + qq;
+                    document.getElementById('submitCount').innerHTML = "Total submission : " + submitcount;
+                    //submitCount
+                    $('#tb3LastSendFile tbody tr').remove();
+                    str = $("#selSectionHw").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#tb3LastSendFile').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
+                    xmlhttp.send();
+                  }
 
-                       }
-                     });
-                   }
-                 }
-                 function fillTable() {
-                   x = document.getElementById("selectClass").value;
-                   y = document.getElementById("UploadButton");
-                   if (x != "") {
-                     y.style.display = 'block';
-                   }
-                   else {
-                     y.style.display = 'none';
-                   }
-                   $('#DataFromAjax tbody tr').remove();
-                   str = $("#selectClass").val();
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       $('#DataFromAjax').append(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
-                   xmlhttp.send();
+                  function markSubfunc() {
 
-                 }
-                 function fillGetTableProblem() {
-                   x = document.getElementById("selSectionHw").value;
-                   y = document.getElementById("AssignButton");
+                    var uidreq = $("#idmoc").val();
+                    var pidreq = $("#pidmoc").val();
+                    var setMark = $("#setMark").val();
+                    var fullmark = $("#fullmarkmoc").val();
 
-                   $('#getProblem tbody tr').remove();
-                   str = $("#selSectionHw").val();
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       $('#getProblem').append(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + str, true);
-                   xmlhttp.send();
+                    // alert(uidreq);
+                    // alert(pidreq);
+                    // alert(fullmark);
 
-                 }
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
+                    xmlhttp.send();
+                    fillTableResult();
+                    // location.reload();
 
-                 function fillDropCreateClass() {
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       eval(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillDropCreateClass.php", true);
-                   xmlhttp.send();
-                 }
-                 function fillDropHw() {
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       eval(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillDropHW.php", true);
-                   xmlhttp.send();
-                 }
-                 function fillDropResult() {
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       eval(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillDropResult.php", true);
-                   xmlhttp.send();
-                 }
-                 function fillUploadCID() {
-                   $("#ClassID").val($("#selectClass").val());
-                 }
-                 function fillTableHw() {
-                   x = document.getElementById("selSectionHw").value;
-                   y = document.getElementById("AssignButton");
-
-                   if (x != "") {
-
-                     y.style.display = 'block';
-                   }
-                   else {
-                     y.style.display = 'none';
-                   }
-
-                   $('#TableHw tbody tr').remove();
-                   str = $("#selSectionHw").val();
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       $('#TableHw').append(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
-                   xmlhttp.send();
-                 }
-                 function fillTableResult() {
-                   // x = document.getElementById("selSectionRs").value;
-                   $('#Result thead tr').remove();
-                   $('#Result tbody tr').remove();
-                   str = $("#selSectionRs").val();
-
-                   uidreq = $("#idmoc").val();
-                   hidreq = $("#pidmoc").val();
-                   setMark = $("#setMark").val();
-                   // alert("uid from fillTable " + uidreq);
-                   // alert("hid from fillTable " + hidreq);
-                   // alert("mark from fillTable " + setMark);
-                   var xmlhttp = new XMLHttpRequest();
-                   xmlhttp.onreadystatechange = function () {
-                     if (this.readyState == 4 && this.status == 200) {
-                       $('#Result').append(this.responseText);
-                     }
-                   }
-                   xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
-                   xmlhttp.send();
+                  }
 
 
-                 }
+                  function fillDropDownSection() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "DropDownForT.php", true);
+                    xmlhttp.send();
+                  }
+                  function RealDelete() {
+                    y = $('#DeleteModalCheck').val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                      }
+                    }
+                    xmlhttp.open("POST", "DeleteProblem.php?pid=" + y, true);
+                    xmlhttp.send();
+                    fillTable();
+                  }
+                  function DeleteProblem(x, y) {
+                    $('#DeleteModalCheck').val(y);
+                  }
+                  function RealDeleteHw() {
+                    y = $('#DeleteModalCheck').val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                      }
+                    }
+                    xmlhttp.open("POST", "DeleteHw.php?hid=" + y, true);
+                    xmlhttp.send();
+                    fillTableHw();
+                  }
+                  function DeleteHw(x, y) {
+                    $('#DeleteModalCheck').val(y);
+                  }
+                  function check() {
+                    var x = 0;
+                    $('table [type="checkbox"]').each(function (i, chk) {
+                      if (chk.checked) {
+                        num = i + 1;
+                        dateName = "datetimepicker" + num.toString() + "Name";
+                        timeName = "timepicker" + num.toString() + "Name";
+                        fullMarkName = "fullMark" + num.toString() + "Name";
+                        if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
+                          x = 1;
+                        }
+                      }
+                    });
+                    if (x == 1) {
+                      alert("Please input all detail");
+                    }
+                    else {
+                      $('table [type="checkbox"]').each(function (i, chk) {
+                        if (chk.checked) {
+                          num = i + 1;
+                          dateName = "datetimepicker" + num.toString() + "Name";
+                          timeName = "timepicker" + num.toString() + "Name";
+                          fullMarkName = "fullMark" + num.toString() + "Name";
+                          str = $("#selSectionHw").val();
+                          var xmlhttp = new XMLHttpRequest();
+                          xmlhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                              eval(this.responseText);
+                            }
+                          }
+                          xmlhttp.open("POST", "AssignHW.php?pid=" + chk.value + "&sid=" + str + "&date=" + document.getElementById(dateName).value + "&time=" + document.getElementById(timeName).value + "&fullMark=" + document.getElementById(fullMarkName).value, true);
+                          xmlhttp.send();
+                          location.reload();
+                          // alert(dateName);
+                          // alert(timeName);
+                          // alert(fullMarkName);
+                          // alert(document.getElementById(dateName).value);
+                          // alert(document.getElementById(timeName).value);
+                          // alert(document.getElementById(fullMarkName).value);
+
+                        }
+                      });
+                    }
+                  }
+                  function fillTable() {
+                    x = document.getElementById("selectClass").value;
+                    y = document.getElementById("UploadButton");
+                    if (x != "") {
+                      y.style.display = 'block';
+                    }
+                    else {
+                      y.style.display = 'none';
+                    }
+                    $('#DataFromAjax tbody tr').remove();
+                    str = $("#selectClass").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#DataFromAjax').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
+                    xmlhttp.send();
+
+                  }
+                  function fillGetTableProblem() {
+                    x = document.getElementById("selSectionHw").value;
+                    y = document.getElementById("AssignButton");
+
+                    $('#getProblem tbody tr').remove();
+                    str = $("#selSectionHw").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#getProblem').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + str, true);
+                    xmlhttp.send();
+
+                  }
+
+                  function fillDropCreateClass() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillDropCreateClass.php", true);
+                    xmlhttp.send();
+                  }
+                  function fillDropHw() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillDropHW.php", true);
+                    xmlhttp.send();
+                  }
+                  function fillDropResult() {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillDropResult.php", true);
+                    xmlhttp.send();
+                  }
+                  function fillUploadCID() {
+                    $("#ClassID").val($("#selectClass").val());
+                  }
+                  function fillTableHw() {
+                    x = document.getElementById("selSectionHw").value;
+                    y = document.getElementById("AssignButton");
+
+                    if (x != "") {
+
+                      y.style.display = 'block';
+                    }
+                    else {
+                      y.style.display = 'none';
+                    }
+
+                    $('#TableHw tbody tr').remove();
+                    str = $("#selSectionHw").val();
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#TableHw').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
+                    xmlhttp.send();
+                  }
+                  function fillTableResult() {
+                    // x = document.getElementById("selSectionRs").value;
+                    $('#Result thead tr').remove();
+                    $('#Result tbody tr').remove();
+                    str = $("#selSectionRs").val();
+
+                    uidreq = $("#idmoc").val();
+                    hidreq = $("#pidmoc").val();
+                    setMark = $("#setMark").val();
+                    // alert("uid from fillTable " + uidreq);
+                    // alert("hid from fillTable " + hidreq);
+                    // alert("mark from fillTable " + setMark);
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        $('#Result').append(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
+                    xmlhttp.send();
+
+
+                  }
     </script>
 
     <input type="hidden" id="DeleteModalCheck" />
     <script>
-                  (function ($) {
-                    var doc = document,
-                      supportsMultipleFiles = "multiple" in doc.createElement("input");
-                    $(doc).on("change", ".file > input[type=file]", function () {
-                      var input = this,
-                        fileNames = [],
-                        label = input.nextElementSibling,
-                        files, len, i = -1, labelValue;
-                      if (supportsMultipleFiles) {
-                        len = (files = input.files).length;
-                        while (++i < len) {
-                          fileNames.push(files[i].name);
-                        }
-                      }
-                      else {
-                        fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
-                      }
-                      label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
-                      label.setAttribute("title", labelValue);
-                    });
-                  })(jQuery);
+                 (function ($) {
+                   var doc = document,
+                     supportsMultipleFiles = "multiple" in doc.createElement("input");
+                   $(doc).on("change", ".file > input[type=file]", function () {
+                     var input = this,
+                       fileNames = [],
+                       label = input.nextElementSibling,
+                       files, len, i = -1, labelValue;
+                     if (supportsMultipleFiles) {
+                       len = (files = input.files).length;
+                       while (++i < len) {
+                         fileNames.push(files[i].name);
+                       }
+                     }
+                     else {
+                       fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+                     }
+                     label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+                     label.setAttribute("title", labelValue);
+                   });
+                 })(jQuery);
     </script>
     <script>
       function logout() {
