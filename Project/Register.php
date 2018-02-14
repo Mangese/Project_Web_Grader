@@ -66,12 +66,13 @@ $DE = $_POST["sel1"];
 $EM = $_POST["txtEmail"];
 $PW = $_POST["txtPassword"];
 mysql_query("use grader;");
-if($AT=='S'){
-mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
+if($AT=='T'){
 // echo "UserType :".$_POST["addUserType"];
 }
 else{
   // echo "elselsesese";
+  mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn);
+  
 }
 // echo "UserType :".$_POST["addUserType"];
 // echo "<br>";
