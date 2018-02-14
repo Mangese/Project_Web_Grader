@@ -33,6 +33,7 @@
 
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
   <link rel="stylesheet" href="TeacherUpload.css">
 
@@ -40,7 +41,15 @@
     <form class="form-inline">
       <span class="h3" class="navbar-brand mb-0">Teacher</span>
       <label class="ml-auto " id="SessionUser"></label>
-      <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick="logout()" type="button">Logout</button>
+      <!-- <button class="btn btn-outline-secondary logout-btn ml-4 my-2 my-sm-0" onclick="logout()" type="button">Logout</button> -->
+      <div class="dropdown">
+        <i class="fas fa-chevron-down" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button class="dropdown-item" type="button">Account</button>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item" type="button" onclick="logout()">Logout</button>
+        </div>
+      </div>
     </form>
   </nav>
 </head>
