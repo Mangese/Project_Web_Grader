@@ -43,7 +43,8 @@
       <i class="far fa-user-circle h3 ml-auto mt-1"></i>
       <label class="ml-2 mb-1" id="SessionUser"></label>
       <div class="dropdown">
-        <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+        <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          onclick="getValueForEdit()"></i>
         <div class="dropdown-menu dropdown-menu-right">
           <button class="dropdown-item" type="button" style="width: 70%">Account</button>
           <div class="dropdown-divider"></div>
@@ -120,6 +121,12 @@
                     });
 
                   }
+
+                  function getValueForEdit() {
+                    alert("click getValueForEdit");
+
+                  }
+
                   function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
                     // alert(x);
                     // // alert(y);
