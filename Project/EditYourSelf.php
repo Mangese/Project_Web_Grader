@@ -1,7 +1,7 @@
 <?php
-// $conn = mysql_connect("localhost","mangese","000000");
-//   if($conn != FALSE)
-//   {
+ $conn = mysql_connect("localhost","mangese","000000");
+   if($conn != FALSE)
+   {
     // $SID = $_REQUEST["sidreq"];
     // $SN = $_REQUEST["sectionnameEdit"];
     session_start();
@@ -13,5 +13,5 @@
     // mysql_query("use grader;");
     // mysql_query("update section set name=$SN where s_id =$SID;");
     
-    // }
+     }
 ?>
