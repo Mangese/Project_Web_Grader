@@ -6,7 +6,9 @@
     // $SN = $_REQUEST["sectionnameEdit"];
     session_start();
     $UID = $_SESSION["uid"];
+    $UT = $_SESSION["utype"];
     echo "alert('$UID');";
+    echo "alert('$UT');";
     echo "alert('inphp');";
     // echo "alert('SN '+ $SN);";
   
