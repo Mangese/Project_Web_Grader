@@ -45,7 +45,7 @@
       <div class="dropdown">
         <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button" style="width: 70%" onclick="" data-toggle="modal" data-target="#editAccount">Account</button>
+          <button class="dropdown-item" type="button" style="width: 70%" onclick="getValueForEdit()" data-toggle="modal" data-target="#editAccount">Account</button>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" type="button" style="width: 70%" onclick="logout()">Logout</button>
         </div>
