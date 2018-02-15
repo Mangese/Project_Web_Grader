@@ -45,7 +45,7 @@
       <div class="dropdown">
         <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button" style="width: 70%" onclick="getValueForEdit()" data-toggle="modal" data-target="#editAccount">Account</button>
+          <button class="dropdown-item" type="button" style="width: 70%" onclick="" data-toggle="modal" data-target="#editAccount">Account</button>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" type="button" style="width: 70%" onclick="logout()">Logout</button>
         </div>
@@ -528,27 +528,27 @@
 
     <input type="hidden" id="DeleteModalCheck" />
     <script>
-      (function ($) {
-        var doc = document,
-          supportsMultipleFiles = "multiple" in doc.createElement("input");
-        $(doc).on("change", ".file > input[type=file]", function () {
-          var input = this,
-            fileNames = [],
-            label = input.nextElementSibling,
-            files, len, i = -1, labelValue;
-          if (supportsMultipleFiles) {
-            len = (files = input.files).length;
-            while (++i < len) {
-              fileNames.push(files[i].name);
-            }
-          }
-          else {
-            fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
-          }
-          label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
-          label.setAttribute("title", labelValue);
-        });
-      })(jQuery);
+                  (function ($) {
+                    var doc = document,
+                      supportsMultipleFiles = "multiple" in doc.createElement("input");
+                    $(doc).on("change", ".file > input[type=file]", function () {
+                      var input = this,
+                        fileNames = [],
+                        label = input.nextElementSibling,
+                        files, len, i = -1, labelValue;
+                      if (supportsMultipleFiles) {
+                        len = (files = input.files).length;
+                        while (++i < len) {
+                          fileNames.push(files[i].name);
+                        }
+                      }
+                      else {
+                        fileNames.push(input.value.replace(/\\/g, "/").replace(/.*\//, "")); // Removes the path info ("C:\fakepath\" or sth like that)
+                      }
+                      label.textContent = labelValue = fileNames.length === 0 ? "" : fileNames.join(", ");
+                      label.setAttribute("title", labelValue);
+                    });
+                  })(jQuery);
     </script>
     <script>
       function logout() {
@@ -1220,65 +1220,65 @@
 
           <!--Start Sort Script-->
           <script>
-                  function exportExcel() {
-                    alert("exportExcel");
+                    function exportExcel() {
+                      alert("exportExcel");
 
-                  }
+                    }
 
-                  function sortTable(col) {
-                    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-                    table = document.getElementById("Result");
-                    switching = true;
-                    //Set the sorting direction to ascending:
-                    dir = "asc";
-                    /*Make a loop that will continue until
-                    no switching has been done:*/
-                    while (switching) {
-                      //start by saying: no switching is done:
-                      switching = false;
-                      rows = table.getElementsByTagName("TR");
-                      /*Loop through all table rows (except the
-                      first, which contains table headers):*/
-                      for (i = 1; i < (rows.length - 2); i++) {
-                        //start by saying there should be no switching:
-                        shouldSwitch = false;
-                        /*Get the two elements you want to compare,
-                        one from current row and one from the next:*/
-                        x = rows[i].getElementsByTagName("TD")[col];
-                        y = rows[i + 1].getElementsByTagName("TD")[col];
-                        /*check if the two rows should switch place,
-                        based on the direction, asc or desc:*/
-                        if (dir == "asc") {
-                          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                            //if so, mark as a switch and break the loop:
-                            shouldSwitch = true;
-                            break;
-                          }
-                        } else if (dir == "desc") {
-                          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                            //if so, mark as a switch and break the loop:
-                            shouldSwitch = true;
-                            break;
+                    function sortTable(col) {
+                      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                      table = document.getElementById("Result");
+                      switching = true;
+                      //Set the sorting direction to ascending:
+                      dir = "asc";
+                      /*Make a loop that will continue until
+                      no switching has been done:*/
+                      while (switching) {
+                        //start by saying: no switching is done:
+                        switching = false;
+                        rows = table.getElementsByTagName("TR");
+                        /*Loop through all table rows (except the
+                        first, which contains table headers):*/
+                        for (i = 1; i < (rows.length - 2); i++) {
+                          //start by saying there should be no switching:
+                          shouldSwitch = false;
+                          /*Get the two elements you want to compare,
+                          one from current row and one from the next:*/
+                          x = rows[i].getElementsByTagName("TD")[col];
+                          y = rows[i + 1].getElementsByTagName("TD")[col];
+                          /*check if the two rows should switch place,
+                          based on the direction, asc or desc:*/
+                          if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                              //if so, mark as a switch and break the loop:
+                              shouldSwitch = true;
+                              break;
+                            }
+                          } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                              //if so, mark as a switch and break the loop:
+                              shouldSwitch = true;
+                              break;
+                            }
                           }
                         }
-                      }
-                      if (shouldSwitch) {
-                        /*If a switch has been marked, make the switch
-                        and mark that a switch has been done:*/
-                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                        switching = true;
-                        //Each time a switch is done, increase this count by 1:
-                        switchcount++;
-                      } else {
-                        /*If no switching has been done AND the direction is "asc",
-                        set the direction to "desc" and run the while loop again.*/
-                        if (switchcount == 0 && dir == "asc") {
-                          dir = "desc";
+                        if (shouldSwitch) {
+                          /*If a switch has been marked, make the switch
+                          and mark that a switch has been done:*/
+                          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                           switching = true;
+                          //Each time a switch is done, increase this count by 1:
+                          switchcount++;
+                        } else {
+                          /*If no switching has been done AND the direction is "asc",
+                          set the direction to "desc" and run the while loop again.*/
+                          if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                          }
                         }
                       }
                     }
-                  }
           </script>
           <!--End Script-->
 
