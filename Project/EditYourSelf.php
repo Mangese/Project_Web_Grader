@@ -2,8 +2,6 @@
 // $conn = mysql_connect("localhost","mangese","000000");
 //   if($conn != FALSE)
 //   {
-    session_start();
-    
     // $SID = $_REQUEST["sidreq"];
     // $SN = $_REQUEST["sectionnameEdit"];
     if(!isset($_SESSION["uid"]))
