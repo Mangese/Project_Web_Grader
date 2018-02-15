@@ -21,11 +21,11 @@
       echo "alert('5555555');";
       // $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
     }
-    if(mysql_num_rows($result)==1)
+    if($result)
     {
     // while($row = mysql_fetch_assoc($result))
     // {
-      echo "alert('in while');";
+      echo "alert('sucess');";
       
     //   $UN = $row['userName'];
     //   $SID = $row['Student_ID'];
