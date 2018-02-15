@@ -6,9 +6,8 @@
     
     // $SID = $_REQUEST["sidreq"];
     // $SN = $_REQUEST["sectionnameEdit"];
-    
-    $UID = $_SESSION["uid"];
-    echo "alert('$UID');";
+    $UT = $_SESSION["utype"];
+    echo "alert('$UT');";
     echo "alert('inphp');";
     // echo "alert('SN '+ $SN);";
   
