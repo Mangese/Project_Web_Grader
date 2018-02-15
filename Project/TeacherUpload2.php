@@ -1050,7 +1050,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper">
+          <div class="table-wrapper" style="height: 235px;">
             <table class="table table-bordered table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
