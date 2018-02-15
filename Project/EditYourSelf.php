@@ -6,7 +6,15 @@
     
     // $SID = $_REQUEST["sidreq"];
     // $SN = $_REQUEST["sectionnameEdit"];
-    $UT = $_SESSION["utype"];
+    if(!isset($_SESSION["uid"]))
+  {
+        echo "alert('notset');";
+  }
+  else
+  {
+      $UT = $_SESSION["uid"];
+    echo "alert('$UT');";
+  }
     echo "alert('$UT');";
     echo "alert('inphp');";
     // echo "alert('SN '+ $SN);";
