@@ -733,13 +733,13 @@
                                 </label><br>
 
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "" value="C" required>C
+                                    <input type="radio" name="optradio" value="C" required>C
                                 </label>
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "" value="Cpp">C++
+                                    <input type="radio" name="optradio"  value="Cpp">C++
                                 </label>
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "" value="Java">Java
+                                    <input type="radio" name="optradio"  value="Java">Java
                                 </label>
                   </div>
 
