@@ -374,15 +374,15 @@
                     $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
 
-                    // var exp = document.getElementById('exportExcel').value;
+                    var exp = document.getElementById('exportExcel');
 
-                    // if (str != "") {
+                    if (str != "") {
 
-                    //   exp.style.display = 'block';
-                    // }
-                    // else {
-                    //   exp.style.display = 'none';
-                    // }
+                      exp.style.display = 'block';
+                    }
+                    else {
+                      exp.style.display = 'none';
+                    }
 
                     uidreq = $("#idmoc").val();
                     hidreq = $("#pidmoc").val();
