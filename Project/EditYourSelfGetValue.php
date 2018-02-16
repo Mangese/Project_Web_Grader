@@ -61,6 +61,30 @@
       echo " document.getElementById('editStudentID').value = $SID1; ";
       echo " document.getElementById('editDepartment').value = $DM1; ";
       echo " document.getElementById('editEmail').value = $EM1; ";
+      echo " document.getElementById('editPassword').value = ''; ";
+      echo " document.getElementById('editPassword2').value = ''; ";
+
+      echo " document.getElementById('defaultCheckFirstname').checked = false; ";
+      echo " document.getElementById('defaultCheckLastname').checked = false; ";
+      echo " document.getElementById('defaultCheckUsername').checked = false; ";
+      echo " document.getElementById('defaultCheckStdID').checked = false; ";
+      echo " document.getElementById('defaultCheckDepart').checked = false; ";
+      echo " document.getElementById('defaultCheckEmail').checked = false; ";
+      echo " document.getElementById('defaultCheckPass').checked = false; ";
+
+      echo " document.getElementById('editFirstname').disabled = true; ";
+      echo " document.getElementById('editLastname').disabled = true; ";
+      echo " document.getElementById('editUsername').disabled = true; ";
+      echo " document.getElementById('editStudentID').disabled = true; ";
+      echo " document.getElementById('editDepartment').disabled = true; ";
+      echo " document.getElementById('editEmail').disabled = true; ";
+      echo " document.getElementById('editPassword').disabled = true; ";
+      echo " document.getElementById('editPassword2').disabled = true; ";
+
+      echo " document.getElementById('uidmoc').value = $UN1; ";
+      echo " document.getElementById('utypemoc').value = $UT; ";
+      echo " document.getElementById('message').innerHTML = ''; ";
+
       if ($UT1 == 'S') {
         // echo "alert('ssssssssss');";
         echo " document.getElementById('defaultCheckStdID').disabled = false; ";
