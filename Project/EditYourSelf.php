@@ -53,6 +53,15 @@
       echo "alert('DM1:'+$DM1);";
       echo "alert('EM1:'+$EM1);";
       echo "alert('UT1:'+$UT1);";
+
+      echo " <script> ";
+      echo " EditFN = document.getElementById('editFirstname').value = $FN1; ";
+      echo " EditLN = document.getElementById('editLastname').value = $LN1; ";
+      echo " EditUN = document.getElementById('editUsername').value = $UN1; ";
+      echo " EditsID = document.getElementById('editStudentID').value = $SID1; ";
+      echo " EditDM = document.getElementById('editDepartment').value = $DM1; ";
+      echo " EditMail = document.getElementById('editEmail').value = $EM1; ";
+    echo " </script> ";
       
       
      }
