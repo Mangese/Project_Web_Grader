@@ -181,7 +181,7 @@
             <!--End Modal Body-->
             <div class="modal-footer">
               <!-- <button type="submit" class="btn btn-success" onclick="editAccountManagementOnClick(); $('#modalID').modal('hide')">Save</button> -->
-              <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editAccountManagementOnClick();">Save</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editAccountOnClick();">Save</button>
               <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
 
             </div>
@@ -317,6 +317,95 @@
                       message.style.color = 'red';
                       message.innerHTML = "*Passwords Doesn't Match *";
                       confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+                    }
+                  }
+
+                  function editAccountOnClick() {
+                    var check = 0;
+                    alert("save");
+                    if (document.getElementById("defaultCheckPass").checked == true && document.getElementById("editPassword").value == document.getElementById("editPassword2").value && document.getElementById("editPassword").value != "") {
+                      alert("check pass");
+                      check = 1;
+                    } else if (document.getElementById("defaultCheckPass").checked == false) {
+                      alert("dont check pass");
+                      check = 2;
+                    }
+
+                    if (check == 1 || check == 2) {
+                      alert("check is" + check);
+                      // var uidreq = document.getElementById("uidmoc").value;
+                      // var utypereq = document.getElementById("utypemoc").value;
+                      // // alert(utypereq);
+
+                      // // alert(uidreq);
+
+
+                      // var fnamesend = "";
+                      // var lnamesend = "";
+                      // var unamesend = "";
+                      // var sidsend = "";
+                      // var departsend = "";
+                      // var emailsend = "";
+                      // var passSend = "";
+
+                      // if (document.getElementById("defaultCheckFirstname").checked == true) {
+                      //   var fnamereq = document.getElementById("editFirstname").value;
+                      //   // alert(fnamereq);
+                      //   fnamesend = "&fnamereq=" + fnamereq;
+                      // }
+                      // // alert(fname);
+                      // if (document.getElementById("defaultCheckLastname").checked == true) {
+                      //   var lnamereq = document.getElementById("editLastname").value;
+                      //   // alert(lnamereq);
+                      //   lnamesend = "&lnamereq=" + lnamereq;
+                      // }
+
+                      // if (document.getElementById("defaultCheckUsername").checked == true) {
+                      //   var unamereq = document.getElementById("editUsername").value;
+                      //   // alert(unamereq);
+                      //   unamesend = "&unamereq=" + unamereq;
+                      // }
+
+                      // if (document.getElementById("defaultCheckStdID").checked == true) {
+                      //   var sidreq = document.getElementById("editStudentID").value;
+                      //   // alert(sidreq);
+                      //   sidsend = "&sidreq=" + sidreq;
+                      // }
+
+                      // if (document.getElementById("defaultCheckDepart").checked == true) {
+                      //   var departreq = document.getElementById("editDepartment").value;
+                      //   // alert(departreq);
+                      //   departsend = "&departreq=" + departreq;
+                      // }
+
+                      // if (document.getElementById("defaultCheckEmail").checked == true) {
+                      //   var emailreq = document.getElementById("editEmail").value;
+                      //   // alert(emailreq);
+                      //   emailsend = "&emailreq=" + emailreq;
+                      // }
+
+                      // if (document.getElementById("defaultCheckPass").checked == true) {
+                      //   var passreq = document.getElementById("editPassword").value;
+                      //   // alert(passreq);
+                      //   passSend = "&passreq=" + passreq;
+                      // }
+
+
+
+                      // var xmlhttp = new XMLHttpRequest();
+                      // xmlhttp.onreadystatechange = function () {
+                      //   if (this.readyState == 4 && this.status == 200) {
+                      //     // alert("success");
+                      //     eval(this.responseText);
+                      //   }
+                      // }
+                      // xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
+                      // xmlhttp.send();
+                      // location.reload();
+                    }
+                    else {
+                      // document.getElementById("uidmoc").value = "";
+                      alert("password fail");
                     }
                   }
 
