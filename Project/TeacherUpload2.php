@@ -334,62 +334,62 @@
 
                     if (check == 1 || check == 2) {
                       alert("check is" + check);
-                      // var uidreq = document.getElementById("uidmoc").value;
-                      // var utypereq = document.getElementById("utypemoc").value;
-                      // // alert(utypereq);
+                      var uidreq = document.getElementById("uidmoc").value;
+                      var utypereq = document.getElementById("utypemoc").value;
+                      alert(utypereq);
 
-                      // // alert(uidreq);
+                      alert(uidreq);
 
 
-                      // var fnamesend = "";
-                      // var lnamesend = "";
-                      // var unamesend = "";
-                      // var sidsend = "";
-                      // var departsend = "";
-                      // var emailsend = "";
-                      // var passSend = "";
+                      var fnamesend = "";
+                      var lnamesend = "";
+                      var unamesend = "";
+                      var sidsend = "";
+                      var departsend = "";
+                      var emailsend = "";
+                      var passSend = "";
 
-                      // if (document.getElementById("defaultCheckFirstname").checked == true) {
-                      //   var fnamereq = document.getElementById("editFirstname").value;
-                      //   // alert(fnamereq);
-                      //   fnamesend = "&fnamereq=" + fnamereq;
-                      // }
-                      // // alert(fname);
-                      // if (document.getElementById("defaultCheckLastname").checked == true) {
-                      //   var lnamereq = document.getElementById("editLastname").value;
-                      //   // alert(lnamereq);
-                      //   lnamesend = "&lnamereq=" + lnamereq;
-                      // }
+                      if (document.getElementById("defaultCheckFirstname").checked == true) {
+                        var fnamereq = document.getElementById("editFirstname").value;
+                        alert(fnamereq);
+                        fnamesend = "&fnamereq=" + fnamereq;
+                      }
+                      // alert(fname);
+                      if (document.getElementById("defaultCheckLastname").checked == true) {
+                        var lnamereq = document.getElementById("editLastname").value;
+                        alert(lnamereq);
+                        lnamesend = "&lnamereq=" + lnamereq;
+                      }
 
-                      // if (document.getElementById("defaultCheckUsername").checked == true) {
-                      //   var unamereq = document.getElementById("editUsername").value;
-                      //   // alert(unamereq);
-                      //   unamesend = "&unamereq=" + unamereq;
-                      // }
+                      if (document.getElementById("defaultCheckUsername").checked == true) {
+                        var unamereq = document.getElementById("editUsername").value;
+                        alert(unamereq);
+                        unamesend = "&unamereq=" + unamereq;
+                      }
 
-                      // if (document.getElementById("defaultCheckStdID").checked == true) {
-                      //   var sidreq = document.getElementById("editStudentID").value;
-                      //   // alert(sidreq);
-                      //   sidsend = "&sidreq=" + sidreq;
-                      // }
+                      if (document.getElementById("defaultCheckStdID").checked == true) {
+                        var sidreq = document.getElementById("editStudentID").value;
+                        alert(sidreq);
+                        sidsend = "&sidreq=" + sidreq;
+                      }
 
-                      // if (document.getElementById("defaultCheckDepart").checked == true) {
-                      //   var departreq = document.getElementById("editDepartment").value;
-                      //   // alert(departreq);
-                      //   departsend = "&departreq=" + departreq;
-                      // }
+                      if (document.getElementById("defaultCheckDepart").checked == true) {
+                        var departreq = document.getElementById("editDepartment").value;
+                        alert(departreq);
+                        departsend = "&departreq=" + departreq;
+                      }
 
-                      // if (document.getElementById("defaultCheckEmail").checked == true) {
-                      //   var emailreq = document.getElementById("editEmail").value;
-                      //   // alert(emailreq);
-                      //   emailsend = "&emailreq=" + emailreq;
-                      // }
+                      if (document.getElementById("defaultCheckEmail").checked == true) {
+                        var emailreq = document.getElementById("editEmail").value;
+                        alert(emailreq);
+                        emailsend = "&emailreq=" + emailreq;
+                      }
 
-                      // if (document.getElementById("defaultCheckPass").checked == true) {
-                      //   var passreq = document.getElementById("editPassword").value;
-                      //   // alert(passreq);
-                      //   passSend = "&passreq=" + passreq;
-                      // }
+                      if (document.getElementById("defaultCheckPass").checked == true) {
+                        var passreq = document.getElementById("editPassword").value;
+                        alert(passreq);
+                        passSend = "&passreq=" + passreq;
+                      }
 
 
 
@@ -405,7 +405,7 @@
                       // location.reload();
                     }
                     else {
-                      // document.getElementById("uidmoc").value = "";
+                      document.getElementById("uidmoc").value = "";
                       alert("password fail");
                     }
                   }
