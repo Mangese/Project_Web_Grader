@@ -23,8 +23,8 @@
     }
      if($result)
      {
-     while($row = mysql_fetch_assoc($result))
-     {
+    //  while($row = mysql_fetch_assoc($result))
+    //  {
       echo "alert('sucess');";
       
       // $UN = $row['userName'];
@@ -55,6 +55,6 @@
       // echo "alert('UT1:'+$UT1);";
       
       
-     }
+    //  }
      }
 ?>
