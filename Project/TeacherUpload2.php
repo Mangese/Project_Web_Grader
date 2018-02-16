@@ -244,7 +244,7 @@
                         eval(this.responseText);
                       }
                     }
-                    xmlhttp.open("POST", "EditYourSelf.php", true);
+                    xmlhttp.open("POST", "EditYourSelfGetValue.php", true);
                     xmlhttp.send();
                   }
 
