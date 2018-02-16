@@ -73,7 +73,8 @@
 ?>
 
   <body>
-
+    <input id="uidmoc" type="">
+    <input id="utypemoc" type="">
     <form name="addAccount" method="post" action="">
       <!-- Modal -->
       <div class="modal fade" id="editAccount" role="dialog">
