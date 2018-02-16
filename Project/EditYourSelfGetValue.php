@@ -81,8 +81,8 @@
       echo " document.getElementById('editPassword').disabled = true; ";
       echo " document.getElementById('editPassword2').disabled = true; ";
 
-      echo " document.getElementById('uidmoc').value = $UN1; ";
-      echo " document.getElementById('utypemoc').value = $UT; ";
+      echo " document.getElementById('uidmoc').value = $UID1; ";
+      echo " document.getElementById('utypemoc').value = $UT1; ";
       echo " document.getElementById('message').innerHTML = ''; ";
 
       if ($UT1 == 'S') {
