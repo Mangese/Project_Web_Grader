@@ -311,13 +311,15 @@
                     var confirm_password = document.getElementById("editPassword2");
                     var message = document.getElementById('message');
                     confirm_password.setCustomValidity('');
-                    if (password.value == confirm_password.value) {
-                      message.style.color = 'green';
-                      message.innerHTML = '*matching*';
-                    } else {
-                      message.style.color = 'red';
-                      message.innerHTML = "*Passwords Doesn't Match *";
-                      confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+                    if (password.value != '' && confirm_password.value != '') {
+                      if (password.value == confirm_password.value) {
+                        message.style.color = 'green';
+                        message.innerHTML = '*matching*';
+                      } else {
+                        message.style.color = 'red';
+                        message.innerHTML = "*Passwords Doesn't Match *";
+                        confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+                      }
                     }
                   }
 
