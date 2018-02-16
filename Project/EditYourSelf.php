@@ -45,14 +45,14 @@
       $EM1 = '"' .$EM. '"';
       $UT1 = '"' .$UT. '"';
 
-      echo "alert('UID1:'+$UID1);";
-      echo "alert('SID1:'+$SID1);";
-      echo "alert('UN1:'+$UN1);";
-      echo "alert('FN1:'+$FN1);";
-      echo "alert('LN1:'+$LN1);";
-      echo "alert('DM1:'+$DM1);";
-      echo "alert('EM1:'+$EM1);";
-      echo "alert('UT1:'+$UT1);";
+      // echo "alert('UID1:'+$UID1);";
+      // echo "alert('SID1:'+$SID1);";
+      // echo "alert('UN1:'+$UN1);";
+      // echo "alert('FN1:'+$FN1);";
+      // echo "alert('LN1:'+$LN1);";
+      // echo "alert('DM1:'+$DM1);";
+      // echo "alert('EM1:'+$EM1);";
+      // echo "alert('UT1:'+$UT1);";
 
       // echo " <script> ";
       echo " document.getElementById('editFirstname').value = $FN1; ";
