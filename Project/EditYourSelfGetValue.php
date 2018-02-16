@@ -14,13 +14,13 @@
   
      mysql_query("use grader;");
     
-    if($UTS == 'T'){
-      echo "alert('eieieieiei');";
-        $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where u_id like '1' ; ");
-    }else{
-      echo "alert('5555555');";
+    // if($UTS == 'T'){
+      // echo "alert('eieieieiei');";
+        $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where u_id like '$UIDS' ; ");
+    // }else{
+      // echo "alert('5555555');";
       // $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and student_id like '%$SIDSR%' and firstname like '%$NSR%' ; ");
-    }
+    // }
      if($result)
      {
      while($row = mysql_fetch_assoc($result))
