@@ -61,6 +61,13 @@
       echo " document.getElementById('editStudentID').value = $SID1; ";
       echo " document.getElementById('editDepartment').value = $DM1; ";
       echo " document.getElementById('editEmail').value = $EM1; ";
+      if ($UT1 == 'S') {
+        echo "alert('ssssssssss');";
+        // document.getElementById('defaultCheckStdID').disabled = false;
+      } else {
+        echo "alert('ttttttttt'); ";
+        // document.getElementById('defaultCheckStdID').disabled = true;
+      }
     // echo " </script> ";
       
       
