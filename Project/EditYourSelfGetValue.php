@@ -7,9 +7,9 @@
     session_start();
     $UIDS = $_SESSION["uid"];
     $UTS = $_SESSION["utype"];
-    echo "alert('$UIDS');";
-    echo "alert('$UTS');";
-    echo "alert('inphp');";
+    // echo "alert('$UIDS');";
+    // echo "alert('$UTS');";
+    // echo "alert('inphp');";
     // echo "alert('SN '+ $SN);";
   
      mysql_query("use grader;");
