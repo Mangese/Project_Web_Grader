@@ -54,14 +54,14 @@
       echo "alert('EM1:'+$EM1);";
       echo "alert('UT1:'+$UT1);";
 
-      echo " <script> ";
+      // echo " <script> ";
       echo " document.getElementById('editFirstname').value = $FN1; ";
       echo " document.getElementById('editLastname').value = $LN1; ";
       echo " document.getElementById('editUsername').value = $UN1; ";
       echo " document.getElementById('editStudentID').value = $SID1; ";
       echo " document.getElementById('editDepartment').value = $DM1; ";
       echo " document.getElementById('editEmail').value = $EM1; ";
-    echo " </script> ";
+    // echo " </script> ";
       
       
      }
