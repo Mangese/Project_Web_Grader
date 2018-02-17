@@ -10,10 +10,10 @@
     $DE = $_REQUEST["dateEnd"];
     
     $message = "test alert in php";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    echo "<script type='text/javascript'>alert('$TFS');</script>";
-    echo "<script type='text/javascript'>alert('$DS');</script>";
-    echo "<script type='text/javascript'>alert('$DE');</script>";
+   // echo "<script type='text/javascript'>alert('$message');</script>";
+   // echo "<script type='text/javascript'>alert('$TFS');</script>";
+   // echo "<script type='text/javascript'>alert('$DS');</script>";
+  //  echo "<script type='text/javascript'>alert('$DE');</script>";
     $SQL = '';
     if($TFS == 'flag')
     {
@@ -21,7 +21,7 @@
     }
     else
     {
-      echo "<script type='text/javascript'>alert('2');</script>";
+ //     echo "<script type='text/javascript'>alert('2');</script>";
     }
     
     if($DS != '')
