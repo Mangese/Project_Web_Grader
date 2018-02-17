@@ -1176,11 +1176,11 @@ if(!isset($_SESSION["user"]))
 			if(a == 'flag')
 			{
 				
-				b.style.display = 'none';  
+				b.style.visibility = 'hidden'; 
 			}
 			else
 			{
-				b.style.display = 'block';  
+				b.style.visibility = 'visible'; 
 			}
 		}
         </script>
