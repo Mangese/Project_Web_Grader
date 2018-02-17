@@ -403,8 +403,8 @@
                       xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
                       xmlhttp.send();
                       location.reload();
-                      var SU = document.getElementById('SessionUser').value = fnamereq + '' + lnamereq;
-                      alert('SU =' + SU);
+                      var SU = document.getElementById('SessionUser').value = fnamereq + ' ' + lnamereq;
+                      alert('SU = ' + SU);
                     }
                     else {
                       document.getElementById("uidmoc").value = "";
