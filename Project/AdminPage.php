@@ -1142,28 +1142,33 @@ if(!isset($_SESSION["user"]))
 
 
             }
-		function selectallFile(source) {
-  		checkboxes = document.getElementsByName('foo');
-  		for(var i=0, n=checkboxes.length;i<n;i++) {
-    		checkboxes[i].checked = source.checked;
-  		}
+		function selectallFile(source) 
+		{
+			checkboxes = document.getElementsByName('foo');
+			for(var i=0, n=checkboxes.length;i<n;i++) 
+			{
+			checkboxes[i].checked = source.checked;
+			}
 		}
 		function checkFileDelete()
 		{
 			checkboxes = document.getElementsByName('foo');
-  		for(var i=0, n=checkboxes.length;i<n;i++) {
-			if(checkboxes[i].checked)
-		{
-			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
-      			xmlhttp.send();
-     			 xmlhttp.onreadystatechange = function () {
-       		 if (this.readyState == 4 && this.status == 200) {
-         	 alert(checkboxes[i].value);
-        		}
-      			}
-		}
-  		}
+			for(var i=0, n=checkboxes.length;i<n;i++) 
+			{
+				if(checkboxes[i].checked)
+				{
+					var xmlhttp = new XMLHttpRequest();
+					xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, true);
+					xmlhttp.send();
+					xmlhttp.onreadystatechange = function () 
+					{
+						if (this.readyState == 4 && this.status == 200) 
+						{
+							alert(checkboxes[i].value);
+						}
+					}
+				}
+			}
 		}
         </script>
 
