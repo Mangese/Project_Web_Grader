@@ -6,10 +6,8 @@ if($conn != FALSE)
   mysql_query("use grader;");
 
   echo "alert('$F');";
-  mysql_query("delete from submit where source_file = '$F';",$ERR);
+  mysql_query("delete from submit where source_file = '$F';");
   exec("rm File/$F ",$out,$err);
   echo "alert('$err');";
-  $EM = mysql_error($ERR);
-  echo "alert('$ERR');";
 }
 ?>
