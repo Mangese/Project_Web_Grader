@@ -355,6 +355,8 @@
                       var passSend = "";
                       var fnameEdit = document.getElementById("editFirstname").value;
                       var lnameEdit = document.getElementById("editLastname").value;
+                      alert(fnameEdit);
+                      alert(fnameEdit);
 
 
                       if (document.getElementById("defaultCheckFirstname").checked == true) {
