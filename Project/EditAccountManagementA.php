@@ -81,6 +81,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     if($MYTYPE=='T'){
       echo "alert('imteacher');";
     }else {
+      echo "alert('eiei');";
       echo "alert($MYTYPE);";
     }
 
