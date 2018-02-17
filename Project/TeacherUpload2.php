@@ -52,8 +52,8 @@
       </div>
     </form>
   </nav>
-  <input id="SessionUsermoc" type="">
-  <input id="SessionUserEditmoc" type="">
+  <!-- <input id="SessionUsermoc" type=""> -->
+  <!-- <input id="SessionUserEditmoc" type=""> -->
 </head>
 <?php
   session_start();
@@ -64,8 +64,8 @@
   }
   else
   {
-  /* echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>"; */
-  echo "<script> document.getElementById('SessionUsermoc').value = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+  /* echo "<script> document.getElementById('SessionUsermoc').value = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>"; */
   
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
@@ -206,7 +206,7 @@
                     fillDropResult();
                     fillGetTableProblem();
 
-                    document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
+                    // document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
 
                   });
                   $('#myTab a').click(function (e) {
@@ -328,22 +328,22 @@
 
                   function editAccountOnClick() {
                     var check = 0;
-                    alert("save");
+                    // alert("save");
                     if (document.getElementById("defaultCheckPass").checked == true && document.getElementById("editPassword").value == document.getElementById("editPassword2").value && document.getElementById("editPassword").value != "") {
-                      alert("check pass");
+                      // alert("check pass");
                       check = 1;
                     } else if (document.getElementById("defaultCheckPass").checked == false) {
-                      alert("dont check pass");
+                      // alert("dont check pass");
                       check = 2;
                     }
 
                     if (check == 1 || check == 2) {
-                      alert("check is" + check);
+                      // alert("check is" + check);
                       var uidreq = document.getElementById("uidmoc").value;
                       var utypereq = document.getElementById("utypemoc").value;
-                      alert(utypereq);
+                      // alert(utypereq);
 
-                      alert(uidreq);
+                      // alert(uidreq);
 
 
                       var fnamesend = "";
@@ -355,8 +355,8 @@
                       var passSend = "";
                       var fnameEdit = document.getElementById("editFirstname").value;
                       var lnameEdit = document.getElementById("editLastname").value;
-                      alert(fnameEdit);
-                      alert(lnameEdit);
+                      // alert(fnameEdit);
+                      // alert(lnameEdit);
 
 
                       if (document.getElementById("defaultCheckFirstname").checked == true) {
@@ -418,7 +418,7 @@
                       // document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
                       // document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;
 
-                      // location.reload();
+
                       //alert('SU = ' + SU);
                     }
                     else {
