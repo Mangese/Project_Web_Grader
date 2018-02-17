@@ -1157,16 +1157,16 @@ if(!isset($_SESSION["user"]))
 			{
 				if(checkboxes[i].checked)
 				{
-					var xmlhttp = new XMLHttpRequest();
+					/*var xmlhttp = new XMLHttpRequest();
 					xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, true);
 					xmlhttp.send();
 					xmlhttp.onreadystatechange = function () 
 					{
 						if (this.readyState == 4 && this.status == 200) 
-						{
+						{*/
 							alert(checkboxes[i].value);
-						}
-					}
+					//	}
+					//}
 				}
 			}
 		}
