@@ -7,7 +7,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("set NAMES UTF8;");
 
     $MYTYPE = $_SESSION["utype"];
-    //  $MYTYPE = "'".$MYTYPE."'";
+     $MYTYPE = "'".$MYTYPE."'";
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
 
@@ -78,8 +78,10 @@ $conn = mysql_connect("localhost","mangese","000000");
       $subquery=$subquery. ' ,Password   =  md5("'.$PW.'")';
     // echo "alert('PW OK');";
     }
-    if($MYTYPE=='T'){
+
+    if($MYTYPE!='T'){
       echo "alert('imteacher');";
+      echo "alert($MYTYPE);";
     }else {
       echo "alert('eiei');";
       echo "alert($MYTYPE);";
