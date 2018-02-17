@@ -16,8 +16,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UT = $_REQUEST["utypereq"];
 
     echo "console.log('testlog');";
-     echo "console.log($FNE);";
-     echo "console.log($LNE);";
+     echo "console.log('$FNE');";
+     echo "console.log('$LNE');";
 
     
     // echo "alert('$MYTYPE');";
