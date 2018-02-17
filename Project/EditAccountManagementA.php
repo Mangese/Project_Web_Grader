@@ -87,15 +87,15 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('PW OK');";
     }
 
-    if($MYTYPE=='T'){
+    // if($MYTYPE=='T'){
 
-      echo "alert('$MYTYPE');";
-      echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
-      echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
+    //   echo "alert('$MYTYPE');";
+    //   echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
+    //   echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
 
-    }else {
-      echo "alert('$MYTYPE');";
-    }
+    // }else {
+    //   echo "alert('$MYTYPE');";
+    // }
 
       // echo "alert('$subquery');";
       echo "alert('$subquery WHERE U_ID =$UID;');";
