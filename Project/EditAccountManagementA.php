@@ -11,8 +11,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     $LNE = $_REQUEST["lnameEdit"];
 
     echo "alert('in php');";
-    echo "alert('$FNE')";
-    echo "alert('$LNE')";
+    // echo "alert('$FNE')";
+    // echo "alert('$LNE')";
     
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
