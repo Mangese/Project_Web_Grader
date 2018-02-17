@@ -7,6 +7,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("set NAMES UTF8;");
 
     $MYTYPE = $_SESSION["utype"];
+    $FNE = $_REQUEST["fnameEdit"];
+    $LNE = $_REQUEST["lnameEdit"];
   
     echo "alert('in php');";
     
@@ -14,8 +16,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UT = $_REQUEST["utypereq"];
 
     echo "console.log('testlog');";
-    // echo "console.log(fnameEdit);";
-    // echo "console.log(lnameEdit);";
+     echo "console.log($FNE);";
+     echo "console.log($LNE);";
 
     
     // echo "alert('$MYTYPE');";
