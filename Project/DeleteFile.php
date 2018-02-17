@@ -1,4 +1,9 @@
 <?php
   $F = $_REQUEST["file"];
-  echo "alert('$F');";
+  $conn = mysql_connect("localhost","mangese","000000");
+if($conn != FALSE)
+{
+  mysql_query("delete from submit where source_file = '$F';";
+  exec("rm File/$F ");
+}
 ?>
