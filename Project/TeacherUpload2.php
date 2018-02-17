@@ -64,8 +64,6 @@
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
-  <!-- echo "<script> document.getElementById('SessionUsermoc').value = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>"; -->
-  
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
   {
