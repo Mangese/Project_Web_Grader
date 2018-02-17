@@ -18,6 +18,10 @@ $conn = mysql_connect("localhost","mangese","000000");
     echo "console.log('testlog');";
      echo "console.log('$FNE');";
      echo "console.log('$LNE');";
+     $FNE1 = "'".$FNE."'";
+     $LNE1 = "'".$LNE."'";
+     echo "console.log($FNE1);";
+     echo "console.log($LNE1);";
 
     
     // echo "alert('$MYTYPE');";
@@ -56,7 +60,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM1);";
     // echo "alert('PW '+ $PW1);";
     $topEdit="asdf";
-      $topEdit=$topEdit=. ' USER_TYPE =  "'.$FNE.'"';
+      // $topEdit=$topEdit=. ' USER_TYPE =  "'.$FNE.'"';
     echo "console.log('$topEdit');";
 
      
