@@ -61,7 +61,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('PW '+ $PW1);";
     $topEdit='asdf';
        $topEdit=$topEdit=. ' USER_TYPE =  ';
-    echo "console.log('$topEdit');";
+    echo "console.log($topEdit);";
 
      
     $subquery="uPDATE user" ;
