@@ -176,7 +176,7 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                   <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
                     minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
                 </div>
