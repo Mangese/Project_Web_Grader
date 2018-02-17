@@ -59,9 +59,9 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('dp '+ $DP1);";
     // echo "alert('email '+ $EM1);";
     // echo "alert('PW '+ $PW1);";
-    $topEdit='asdf';
-        $topEdit=$topEdit. ' USER_TYPE =  '.$FNE;
-      echo "alert('$topEdit');";
+    $topEdit='';
+    
+    
 
      
     $subquery="uPDATE user" ;
@@ -100,6 +100,15 @@ $conn = mysql_connect("localhost","mangese","000000");
     if($MYTYPE!='A'){
 
       echo "alert('eieiei');";
+      if ($FN!=''){
+        $topEdit=$topEdit.$FNE.' ';
+      }
+      else{
+        $topEdit=$topEdit.$FN.' ';
+      }
+    if ($LN!=''){
+      
+    }
       // echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
       // echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
     }else {
@@ -107,6 +116,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     }
 
       // echo "alert('$subquery');";
+      echo "alert('$topEdit');";
       echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
 
