@@ -1142,6 +1142,12 @@ if(!isset($_SESSION["user"]))
 
 
             }
+		function selectallFile(source) {
+  		checkboxes = document.getElementsByName('foo');
+  		for(var i=0, n=checkboxes.length;i<n;i++) {
+    		checkboxes[i].checked = source.checked;
+  		}
+		}
         </script>
 
         <!--Table-->
@@ -1151,7 +1157,7 @@ if(!isset($_SESSION["user"]))
               <tr>
                 <th style="width:10%" onclick="sortTable1(0)">
                   <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input">
+                      <input type="checkbox" onclick = "selectallFile(this);" class="form-check-input">
                       All
                     </label>
                 </th>
