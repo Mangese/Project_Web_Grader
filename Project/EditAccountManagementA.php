@@ -55,9 +55,9 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('dp '+ $DP1);";
     // echo "alert('email '+ $EM1);";
     // echo "alert('PW '+ $PW1);";
-    $topEdit="";
-    $topEdit=$topEdit=.'$FNE';
-    echo "console.log($topEdit);";
+    // $topEdit="";
+    // $topEdit=$topEdit=.'$FNE';
+    // echo "console.log($topEdit);";
 
      
     $subquery="uPDATE user" ;
