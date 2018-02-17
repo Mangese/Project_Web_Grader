@@ -55,7 +55,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('dp '+ $DP1);";
     // echo "alert('email '+ $EM1);";
     // echo "alert('PW '+ $PW1);";
-    $topEdit="55555555";
+    $topEdit="asdf";
     // $topEdit=$topEdit=.'$FNE';
     echo "console.log($topEdit);";
 
