@@ -46,7 +46,7 @@
       <div class="dropdown">
         <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button" style="width: 70%">Account</button>
+          <button class="dropdown-item" type="button" style="width: 70%" onclick="getValueForEdit()" data-toggle="modal" data-target="#editAccount">Account</button>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" type="button" style="width: 70%" onclick="logout()">Logout</button>
         </div>
@@ -80,6 +80,127 @@
   <body>
     <input type="hidden" id="TableUploadHeader" />
     <input type="hidden" id="TableUploadHeader1" />
+
+    <input id="uidmoc" type="hidden">
+    <input id="utypemoc" type="hidden">
+
+    <form name="addAccount" method="post" action="">
+      <!-- Modal -->
+      <div class="modal fade" id="editAccount" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Account</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" disabled required
+                    oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');" oninput="setCustomValidity('')"
+                    minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckFirstname"
+                    onclick="checkBoxEdit(1)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editLastname" name="editLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                    oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckLastname"
+                    onclick="checkBoxEdit(2)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                    oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckUsername"
+                    onclick="checkBoxEdit(3)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editStudentID" name="editStudentID" disabled placeholder="Student ID (EX. 5713XXX)"
+                    required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
+                    minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckStdID"
+                    onclick="checkBoxEdit(4)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
+                    oninput="setCustomValidity('')">
+                    <option value="">Department</option>
+                    <option value="BE">Biomedical Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                    <option value="CHE">Chemical Engineering</option>
+                    <option value="CO">Computer Engineering</option>
+                    <option value="EE">Electrical Engineering</option>
+                    <option value="IE">Industrial Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                  </select>
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 1.3rem; float: right" value="" id="defaultCheckDepart"
+                    onclick="checkBoxEdit(5)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
+                    oninput="setCustomValidity('')" maxlength=30/>
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckEmail"
+                    onclick="checkBoxEdit(6)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="password" class="form-control" id="editPassword" name="editPassword" disabled placeholder="New Password" minlength=6
+                    maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
+                    onkeyup='checkPassEdit();' />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckPass" onclick="checkBoxEdit(7)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
+                    minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <p id="message"></p>
+                </div>
+              </div>
+            </div>
+            <!--End Modal Body-->
+            <div class="modal-footer">
+              <!-- <button type="submit" class="btn btn-success" onclick="editAccountManagementOnClick(); $('#modalID').modal('hide')">Save</button> -->
+              <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editAccountOnClick();">Save</button>
+              <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
     <script>
                 function logout() {
                   window.location = "logout.php";
@@ -117,6 +238,18 @@
                     }
                   }
                   xmlhttp.open("POST", "testDropDown.php", true);
+                  xmlhttp.send();
+                }
+
+                function getValueForEdit() {
+                  // alert("click getValueForEdit");
+                  var xmlhttp = new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                      eval(this.responseText);
+                    }
+                  }
+                  xmlhttp.open("POST", "EditYourSelfGetValue.php", true);
                   xmlhttp.send();
                 }
                 function fillTable() {
@@ -168,9 +301,9 @@
     </script>
 
     <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
+                $(document).ready(function () {
+                  $('[data-toggle="tooltip"]').tooltip();
+                });
     </script>
 
     <div class="container-table">
