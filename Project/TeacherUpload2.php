@@ -207,6 +207,7 @@
                     fillGetTableProblem();
                     if (document.getElementById('SessionUserEditmoc').value != '') {
                       alert("no null");
+                      document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value
                     } else {
                       alert("null");
                       document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
