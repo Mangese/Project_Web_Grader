@@ -32,7 +32,7 @@
     {
       $SQL = $SQL." and submit_date <= '$DE' "; 
     }
-    echo "<script> alert('$SQL'); </script>";
+    echo '<script> alert("$SQL"); </script>';
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     // if($SIDSR == ''){
     //   $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
