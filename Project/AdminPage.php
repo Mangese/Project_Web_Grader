@@ -606,6 +606,7 @@ if(!isset($_SESSION["user"]))
                       <select class="form-control" id="addUserType" name="addUserType" onchange="userType()" required oninvalid="this.setCustomValidity('Please select some type');"
                         oninput="setCustomValidity('')">
                         <option value="">User type</option>
+                        <option value="A">Admin</option>
                         <option value="T">Lecturer</option>
                         <option value="S">Student</option>
                       </select>
@@ -1077,8 +1078,8 @@ if(!isset($_SESSION["user"]))
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
-            <input type="radio" name="typeFile"  value="flag" checked> Flag &emsp;
-            <input type="radio" name="typeFile"  value="fileSubmit"> File Submit &emsp;
+            <input type="radio" name="typeFile" value="flag" checked> Flag &emsp;
+            <input type="radio" name="typeFile" value="fileSubmit"> File Submit &emsp;
             <label class="mr-3">Start Date :</label>
             <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
@@ -1129,12 +1130,12 @@ if(!isset($_SESSION["user"]))
               //alert("end date is: " + edate);
               //alert("type file is: " + tFile);
               //alert(tFilesearch);
-		$('#FileManagementTb tbody tr').remove();
+              $('#FileManagementTb tbody tr').remove();
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                 
-			$('#FileManagementTb').append(this.responseText);
+
+                  $('#FileManagementTb').append(this.responseText);
                 }
               }
               xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
@@ -1142,65 +1143,55 @@ if(!isset($_SESSION["user"]))
 
 
             }
-		function selectallFile(source) 
-		{
-			checkboxes = document.getElementsByName('foo');
-			for(var i=0, n=checkboxes.length;i<n;i++) 
-			{
-			checkboxes[i].checked = source.checked;
-			}
-		}
-		function checkFileDelete()
-		{
-			checkboxes = document.getElementsByName('foo');
-			for(var i=0, n=checkboxes.length;i<n;i++) 
-			{
-				if(checkboxes[i].checked)
-				{
-					var xmlhttp = new XMLHttpRequest();
-					xmlhttp.onreadystatechange = function () 
-					{
-						if (this.readyState == 4 && this.status == 200) 
-						{
-							eval(this.responseText);
-						}
-					}
-					xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
-					xmlhttp.send();
-				}
-			}
-		}
-		function toggleTableHeader(a)
-		{
-			var b = document.getElementById("fileSearchRadio");
-			if(a == 'flag')
-			{
-				
-				b.style.visibility = 'hidden'; 
-			}
-			else
-			{
-				b.style.visibility = 'visible'; 
-			}
-		}
+            function selectallFile(source) {
+              checkboxes = document.getElementsByName('foo');
+              for (var i = 0, n = checkboxes.length; i < n; i++) {
+                checkboxes[i].checked = source.checked;
+              }
+            }
+            function checkFileDelete() {
+              checkboxes = document.getElementsByName('foo');
+              for (var i = 0, n = checkboxes.length; i < n; i++) {
+                if (checkboxes[i].checked) {
+                  var xmlhttp = new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                      eval(this.responseText);
+                    }
+                  }
+                  xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
+                  xmlhttp.send();
+                }
+              }
+            }
+            function toggleTableHeader(a) {
+              var b = document.getElementById("fileSearchRadio");
+              if (a == 'flag') {
+
+                b.style.visibility = 'hidden';
+              }
+              else {
+                b.style.visibility = 'visible';
+              }
+            }
         </script>
 
         <!--Table-->
         <div class="table-wrapper-account">
           <table class="table table-striped table-hover main" id="FileManagementTb">
             <thead class="thead">
-              <tr id = "fileSearchRadio">
+              <tr id="fileSearchRadio">
                 <th style="width:10%" onclick="sortTable1(0)">
                   <label class="form-check-label">
                       <input type="checkbox" onclick = "selectallFile(this);" class="form-check-input">
                       All
                     </label>
                 </th>
-		      <th style="width:10%" onclick="sortTable1(1)">
+                <th style="width:10%" onclick="sortTable1(1)">
                   User ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-		      <th style="width:20%" onclick="sortTable1(1)">
+                <th style="width:20%" onclick="sortTable1(1)">
                   Homework ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
@@ -1215,13 +1206,13 @@ if(!isset($_SESSION["user"]))
               </tr>
             </thead>
             <tbody>
-             
+
             </tbody>
           </table>
         </div>
         <!--End Table-->
 
-        <button type="button" class="btn btn-danger" onclick = "checkFileDelete();"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+        <button type="button" class="btn btn-danger" onclick="checkFileDelete();"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
 
       </div>
       <!-- End Tab4 -->
