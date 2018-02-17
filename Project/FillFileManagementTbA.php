@@ -17,7 +17,7 @@
     $SQL = '';
     if($TFS == 'flag')
     {
-      $SQL = $SQL."select * from submit where 1=1 ";
+      $SQL = $SQL."select submit_date as date,source_file as file,u_id as uid,h_id as h_id from submit where 1=1 ";
     }
     else
     {
@@ -32,7 +32,34 @@
     {
       $SQL = $SQL." and submit_date <= '$DE' "; 
     }
-    echo "$SQL";
+    $SQL = $SQL.";";
+    $count = 0;
+    $result = mysql_query($SQL);
+    while($row = mysql_fetch_assoc($result))
+     {
+      $count = $count+1;
+      $UID = $row['uid'];
+      $TI = $row['date'];
+      $HID = $row['hid'];
+      $F = $row['file'];
+      echo "<tr>";
+       echo "<td style='width:15%'>";
+       echo "$count";
+       echo "</td>";
+      echo "<td style='width:15%'>";
+       echo "$UID";
+       echo "</td>";
+      echo "<td style='width:15%'>";
+       echo "$HID";
+       echo "</td>";
+      echo "<td style='width:15%'>";
+       echo "$F";
+       echo "</td>";
+      echo "<td style='width:15%'>";
+       echo "$TI";
+       echo "</td>";
+      echo "</tr>";
+    }
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     // if($SIDSR == ''){
     //   $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
