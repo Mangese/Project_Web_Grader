@@ -62,7 +62,9 @@
   }
   else
   {
-  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+  <!-- echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>"; -->
+  echo "<script> document.getElementById('mocSessionUser').value = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
   {
@@ -73,6 +75,7 @@
 ?>
 
   <body>
+    <input id="mocSessionUser" type="">
     <input id="uidmoc" type="hidden">
     <input id="utypemoc" type="hidden">
     <form name="addAccount" method="post" action="">
