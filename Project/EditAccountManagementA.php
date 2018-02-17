@@ -60,7 +60,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('email '+ $EM1);";
     // echo "alert('PW '+ $PW1);";
     $topEdit='asdf';
-        $topEdit=$topEdit. ' USER_TYPE =  ';
+        $topEdit=$topEdit. ' USER_TYPE =  '.$FNE1;
       echo "alert('$topEdit');";
 
      
