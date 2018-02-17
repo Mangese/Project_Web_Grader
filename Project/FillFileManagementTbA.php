@@ -17,7 +17,7 @@
     $SQL = '';
     if($TFS == 'flag')
     {
-      $SQL = $SQL."select submit_date as date,source_file as file,u_id as uid,h_id as h_id from submit where 1=1 ";
+      $SQL = $SQL."select submit_date as date,source_file as file,u_id as uid,h_id as hid from submit where 1=1 ";
     }
     else
     {
