@@ -10,11 +10,11 @@ $conn = mysql_connect("localhost","mangese","000000");
     $FNE = $_REQUEST["fnameEdit"];
     $LNE = $_REQUEST["lnameEdit"];
 
-    // $FNE1 = "'".$FNE."'";
-    // $LNE1 = "'".$LNE."'";
+    $FNE1 = "'".$FNE."'";
+    $LNE1 = "'".$LNE."'";
     echo "alert('in php');";
-      echo "alert('$FNE')";
-      echo "alert('$LNE')";
+      echo "alert('fne : ' +$FNE1)";
+      echo "alert('lne : ' +$LNE1)";
     
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
