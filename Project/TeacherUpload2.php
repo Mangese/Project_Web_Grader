@@ -414,7 +414,7 @@
                       xmlhttp.send();
 
                       document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
-                      location.reload();
+                      // location.reload();
                       //alert('SU = ' + SU);
                     }
                     else {
