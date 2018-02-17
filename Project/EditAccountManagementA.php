@@ -101,10 +101,11 @@ $conn = mysql_connect("localhost","mangese","000000");
 
       echo "alert('eieiei');";
       if ($FN!=''){
-        $topEdit=$topEdit.$FNE.' ';
+        $topEdit=$topEdit.$FN.' ';
+        
       }
       else{
-        $topEdit=$topEdit.$FN.' ';
+        $topEdit=$topEdit.$FNE.' ';
       }
     if ($LN!=''){
       
