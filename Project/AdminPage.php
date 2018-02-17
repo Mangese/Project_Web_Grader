@@ -1077,8 +1077,8 @@ if(!isset($_SESSION["user"]))
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
-            <input type="radio" name="typeFile" onchange = "toggleTableHeader(this.value);" value="flag" checked> Flag &emsp;
-            <input type="radio" name="typeFile" onchange = "toggleTableHeader(this.value);" value="fileSubmit"> File Submit &emsp;
+            <input type="radio" name="typeFile"  value="flag" checked> Flag &emsp;
+            <input type="radio" name="typeFile"  value="fileSubmit"> File Submit &emsp;
             <label class="mr-3">Start Date :</label>
             <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
