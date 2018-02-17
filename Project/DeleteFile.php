@@ -8,6 +8,6 @@ if($conn != FALSE)
   exec("rm File/$F ");
   echo "alert('rm File/$F ');";
   $EM = mysql_error($ERR);
-  echo "alert('$EM');";
+  echo "alert('$ERR');";
 }
 ?>
