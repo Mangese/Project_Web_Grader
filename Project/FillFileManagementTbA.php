@@ -33,18 +33,16 @@
       $SQL = $SQL." and submit_date <= '$DE' "; 
     }
     $SQL = $SQL.";";
-    $count = 0;
     $result = mysql_query($SQL);
     while($row = mysql_fetch_assoc($result))
      {
-      $count = $count+1;
       $UID = $row['uid'];
       $TI = $row['date'];
       $HID = $row['hid'];
       $F = $row['file'];
       echo "<tr>";
        echo "<td style='width:15%'>";
-       echo "$count";
+       echo "<input type='checkbox' class='form-check-input'>";
        echo "</td>";
       echo "<td style='width:15%'>";
        echo "$UID";
