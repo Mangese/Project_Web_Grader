@@ -42,7 +42,9 @@
       $F = $row['file'];
       echo "<tr>";
        echo "<td style='width:10%'>";
-       echo "<input type='checkbox' class='form-check-input'>";
+       echo "<label class='form-check-label'>";
+       echo "      <input type='checkbox' class='form-check-input'>";
+       echo "     </label>";
         echo "</td>";
       echo "<td style='width:10%'>";
        echo "$UID";
