@@ -52,7 +52,7 @@
       </div>
     </form>
   </nav>
-  <input id="SessionUsermoc" type="">
+  <label id="SessionUsermoc"></label>
 </head>
 <?php
   session_start();
@@ -63,7 +63,9 @@
   }
   else
   {
-  echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+  <!-- echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>"; -->
+  echo "<script> document.getElementById('SessionUsermoc').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+  
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
   {
