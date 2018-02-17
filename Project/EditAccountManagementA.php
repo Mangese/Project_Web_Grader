@@ -78,14 +78,14 @@ $conn = mysql_connect("localhost","mangese","000000");
       $subquery=$subquery. ' ,Password   =  md5("'.$PW.'")';
     // echo "alert('PW OK');";
     }
-    
+    if($MYTYPE=='T'){
+      echo "alert('i'm teacher);";
+    }
 
       // echo "alert('$subquery');";
       echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
 
-    // if($MYTYPE=='T'){
-    //   echo "alert('i'm teacher);";
-    // }
+    
   }
 ?>
