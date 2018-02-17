@@ -404,7 +404,7 @@
                       xmlhttp.send();
                       location.reload();
                       var SU = document.getElementById('SessionUser').value;
-                      alert(SU);
+                      alert('SU =' + SU);
                     }
                     else {
                       document.getElementById("uidmoc").value = "";
