@@ -5,6 +5,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
+
+    $MYTYPE = $_SESSION["utype"];
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
 
@@ -77,5 +79,9 @@ $conn = mysql_connect("localhost","mangese","000000");
       // echo "alert('$subquery');";
       echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
+
+    if($MYTYPE=='T'){
+      echo "alert('i'm teacher);";
+    }
   }
 ?>
