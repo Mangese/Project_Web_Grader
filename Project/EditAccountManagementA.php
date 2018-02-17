@@ -78,8 +78,8 @@ $conn = mysql_connect("localhost","mangese","000000");
       $subquery=$subquery. ' ,Password   =  md5("'.$PW.'")';
     // echo "alert('PW OK');";
     }
-    if($MYTYPE=="T"){
-      echo "alert('i m teacher');";
+    if($MYTYPE=='T'){
+      echo "alert('imteacher');";
     }else {
       echo "alert($MYTYPE);";
     }
