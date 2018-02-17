@@ -43,7 +43,7 @@
       echo "<tr>";
        echo "<td style='width:10%'>";
        echo "<label class='form-check-label'>";
-       echo "      <input type='checkbox' class='form-check-input'>";
+       echo "      <input type='checkbox' name = 'foo' class='form-check-input'>";
        echo "     </label>";
         echo "</td>";
       echo "<td style='width:10%'>";
