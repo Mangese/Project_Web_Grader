@@ -7,8 +7,8 @@ if($conn != FALSE)
 
   echo "alert('$F');";
   mysql_query("delete from submit where source_file = '$F';",$ERR);
-  exec("rm File/$F ");
-  echo "alert('rm File/$F ');";
+  exec("rm File/$F ",$out,$err);
+  echo "alert('$err');";
   $EM = mysql_error($ERR);
   echo "alert('$ERR');";
 }
