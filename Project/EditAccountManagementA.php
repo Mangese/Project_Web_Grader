@@ -113,7 +113,7 @@ $conn = mysql_connect("localhost","mangese","000000");
 
     }
        echo "document.getElementById('SessionUserEditmoc').value = '$topEdit';";
-       echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
+       echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;";
     }else {
       echo "alert('$MYTYPE');";
     }
