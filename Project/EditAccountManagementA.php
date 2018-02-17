@@ -112,14 +112,14 @@ $conn = mysql_connect("localhost","mangese","000000");
         $topEdit=$topEdit.$LNE; 
 
     }
-       echo "document.getElementById('SessionUserEditmoc').value = '$topEdit'";
+      //  echo "document.getElementById('SessionUserEditmoc').value = '$topEdit'";
       //  echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
     }else {
       echo "alert('$MYTYPE');";
     }
 
       // echo "alert('$subquery');";
-      // echo "alert('$topEdit');";
+      echo "alert('$topEdit');";
       echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
 
