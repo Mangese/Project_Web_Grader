@@ -1077,8 +1077,8 @@ if(!isset($_SESSION["user"]))
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
-            <input type="radio" name="typeFile" value="flag" checked> Flag &emsp;
-            <input type="radio" name="typeFile" value="fileSubmit"> File Submit &emsp;
+            <input type="radio" name="typeFile" onchange = "toggleTableHeader(this.value);" value="flag" checked> Flag &emsp;
+            <input type="radio" name="typeFile" onchange = "toggleTableHeader(this.value);" value="fileSubmit"> File Submit &emsp;
             <label class="mr-3">Start Date :</label>
             <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
@@ -1170,13 +1170,26 @@ if(!isset($_SESSION["user"]))
 				}
 			}
 		}
+		function toggleTableHeader(a)
+		{
+			var b = document.getElementById("fileSearchRadio");
+			if(a == 'flag')
+			{
+				
+				b.style.display = 'none';  
+			}
+			else
+			{
+				b.style.display = 'block';  
+			}
+		}
         </script>
 
         <!--Table-->
         <div class="table-wrapper-account">
           <table class="table table-striped table-hover main" id="FileManagementTb">
             <thead class="thead">
-              <tr>
+              <tr id = "fileSearchRadio">
                 <th style="width:10%" onclick="sortTable1(0)">
                   <label class="form-check-label">
                       <input type="checkbox" onclick = "selectallFile(this);" class="form-check-input">
