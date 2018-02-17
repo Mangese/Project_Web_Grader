@@ -1159,34 +1159,22 @@ if(!isset($_SESSION["user"]))
                   User ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-		      <th style="width:10%" onclick="sortTable1(1)">
+		      <th style="width:20%" onclick="sortTable1(1)">
                   Homework ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:35%" onclick="sortTable1(1)">
+                <th style="width:30%" onclick="sortTable1(1)">
                   File Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:35%" onclick="sortTable1(2)">
+                <th style="width:30%" onclick="sortTable1(2)">
                   Submit Date
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="width:10%">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
-                  </label>
-                </td>
-                <td style="width:30%">
-                  PrintStar.c
-                </td>
-                <td style="width:35%">
-                  August 2, 2013
-                </td>
-              </tr>
+             
             </tbody>
           </table>
         </div>
