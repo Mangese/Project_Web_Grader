@@ -7,12 +7,18 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("set NAMES UTF8;");
 
     $MYTYPE = $_SESSION["utype"];
-    //  $MYTYPE = "'".$MYTYPE."'";
+    $FNE = $_REQUEST["fnameEdit"];
+    $LNE = $_REQUEST["lnameEdit"];
+
+    echo "alert('in php');";
+    echo "alert('$FNE')";
+    echo "alert('$LNE')";
+    
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
 
-    echo "alert('in php');";
-    echo "alert('$MYTYPE');";
+    
+    // echo "alert('$MYTYPE');";
 
     $FN = $_REQUEST["fnamereq"];
     $LN = $_REQUEST["lnamereq"];
@@ -34,6 +40,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     $DP1 = "'".$DP."'";
     $EM1 = "'".$EM."'";
     $PW1 = "'".$PW."'";
+
+    
 
     // echo "alert('uid '+ $UID1);";
     // echo "alert('utype '+ $UT1);";
@@ -80,10 +88,12 @@ $conn = mysql_connect("localhost","mangese","000000");
     }
 
     if($MYTYPE=='T'){
-      echo "alert('imteacher');";
+
       echo "alert('$MYTYPE');";
+      echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
+      echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
+
     }else {
-      echo "alert('eiei');";
       echo "alert('$MYTYPE');";
     }
 
