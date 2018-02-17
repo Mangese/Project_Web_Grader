@@ -1159,11 +1159,11 @@ if(!isset($_SESSION["user"]))
                   User ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-		      <th style="width:5%" onclick="sortTable1(1)">
+		      <th style="width:10%" onclick="sortTable1(1)">
                   Homework ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:65%" onclick="sortTable1(1)">
+                <th style="width:35%" onclick="sortTable1(1)">
                   File Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
@@ -1180,7 +1180,7 @@ if(!isset($_SESSION["user"]))
                     <input type="checkbox" class="form-check-input">
                   </label>
                 </td>
-                <td style="width:65%">
+                <td style="width:30%">
                   PrintStar.c
                 </td>
                 <td style="width:35%">
