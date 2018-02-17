@@ -205,6 +205,8 @@
                     fillDropResult();
                     fillGetTableProblem();
 
+                    document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
+
 
                   });
                   $('#myTab a').click(function (e) {
