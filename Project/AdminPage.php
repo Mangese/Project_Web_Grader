@@ -1154,7 +1154,7 @@ if(!isset($_SESSION["user"]))
   		for(var i=0, n=checkboxes.length;i<n;i++) {
     		if(checkboxes[i].checked)
 		{
-			alert(i);	
+			alert(checkboxes[i].value);	
 		}
   		}
 		}
