@@ -13,8 +13,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     // $FNE1 = "'".$FNE."'";
     // $LNE1 = "'".$LNE."'";
     echo "alert('in php');";
-      // echo "alert('fne : ' +$FNE1)";
-      // echo "alert('lne : ' +$LNE1)";
+      echo "alert('fne : ' +$FNE)";
+      echo "alert('lne : ' +$LNE)";
     
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
