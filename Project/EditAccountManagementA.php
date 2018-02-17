@@ -105,10 +105,10 @@ $conn = mysql_connect("localhost","mangese","000000");
       }
       if ($LN!=''){
         // $topEdit=$topEdit.$LN; 
-        $_SESSION["firstname"] = $LN;
+        $_SESSION["lastname"] = $LN;
       }else{
         // $topEdit=$topEdit.$LNE; 
-        $_SESSION["firstname"] = $LNE;
+        $_SESSION["lastname"] = $LNE;
     }
       //  echo "document.getElementById('SessionUserEditmoc').value = '$topEdit';";
       //  echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;";
