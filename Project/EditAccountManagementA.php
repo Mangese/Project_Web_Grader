@@ -80,6 +80,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     }
     if($MYTYPE=='T'){
       echo "alert('i'm teacher);";
+    }else {
+      echo "alert($MYTYPE);";
     }
 
       // echo "alert('$subquery');";
