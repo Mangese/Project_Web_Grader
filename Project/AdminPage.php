@@ -1196,7 +1196,7 @@ if(!isset($_SESSION["user"]))
         </div>
         <!--End Table-->
 
-        <button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+        <button type="button" class="btn btn-danger" onclick = "checkFileDelete();"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
 
       </div>
       <!-- End Tab4 -->
