@@ -353,46 +353,49 @@
                       var departsend = "";
                       var emailsend = "";
                       var passSend = "";
+                      var fnameEdit = document.getElementById("editFirstname").value;
+                      var lnameEdit = document.getElementById("editLastname").value;
+
 
                       if (document.getElementById("defaultCheckFirstname").checked == true) {
                         var fnamereq = document.getElementById("editFirstname").value;
-                        alert(fnamereq);
+                        // alert(fnamereq);
                         fnamesend = "&fnamereq=" + fnamereq;
                       }
                       // alert(fname);
                       if (document.getElementById("defaultCheckLastname").checked == true) {
                         var lnamereq = document.getElementById("editLastname").value;
-                        alert(lnamereq);
+                        // alert(lnamereq);
                         lnamesend = "&lnamereq=" + lnamereq;
                       }
 
                       if (document.getElementById("defaultCheckUsername").checked == true) {
                         var unamereq = document.getElementById("editUsername").value;
-                        alert(unamereq);
+                        // alert(unamereq);
                         unamesend = "&unamereq=" + unamereq;
                       }
 
                       if (document.getElementById("defaultCheckStdID").checked == true) {
                         var sidreq = document.getElementById("editStudentID").value;
-                        alert(sidreq);
+                        // alert(sidreq);
                         sidsend = "&sidreq=" + sidreq;
                       }
 
                       if (document.getElementById("defaultCheckDepart").checked == true) {
                         var departreq = document.getElementById("editDepartment").value;
-                        alert(departreq);
+                        // alert(departreq);
                         departsend = "&departreq=" + departreq;
                       }
 
                       if (document.getElementById("defaultCheckEmail").checked == true) {
                         var emailreq = document.getElementById("editEmail").value;
-                        alert(emailreq);
+                        // alert(emailreq);
                         emailsend = "&emailreq=" + emailreq;
                       }
 
                       if (document.getElementById("defaultCheckPass").checked == true) {
                         var passreq = document.getElementById("editPassword").value;
-                        alert(passreq);
+                        // alert(passreq);
                         passSend = "&passreq=" + passreq;
                       }
 
@@ -408,8 +411,8 @@
                       xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
                       xmlhttp.send();
 
-                      document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
-                      document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value
+                      // document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
+                      // document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;
 
                       // location.reload();
                       //alert('SU = ' + SU);
