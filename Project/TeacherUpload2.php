@@ -53,6 +53,7 @@
     </form>
   </nav>
   <input id="SessionUsermoc" type="">
+  <input id="SessionUserEditmoc" type="">
 </head>
 <?php
   session_start();
@@ -408,7 +409,7 @@
                       xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
                       xmlhttp.send();
                       location.reload();
-                      document.getElementById('SessionUsermoc').innerText = fnamereq + ' ' + lnamereq;
+                      document.getElementById('SessionUsermoc').value = fnamereq + ' ' + lnamereq;
                       //alert('SU = ' + SU);
                     }
                     else {
