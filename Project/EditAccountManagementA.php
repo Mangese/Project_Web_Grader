@@ -10,18 +10,18 @@ $conn = mysql_connect("localhost","mangese","000000");
     $FNE = $_REQUEST["fnameEdit"];
     $LNE = $_REQUEST["lnameEdit"];
   
-    echo "alert('in php');";
+    // echo "alert('in php');";
     
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
 
-    echo "console.log('testlog');";
-     echo "console.log('$FNE');";
-     echo "console.log('$LNE');";
+    // echo "console.log('testlog');";
+    //  echo "console.log('$FNE');";
+    //  echo "console.log('$LNE');";
      $FNE1 = "'".$FNE."'";
      $LNE1 = "'".$LNE."'";
-     echo "console.log($FNE1);";
-     echo "console.log($LNE1);";
+    //  echo "console.log($FNE1);";
+    //  echo "console.log($LNE1);";
 
     
     // echo "alert('$MYTYPE');";
@@ -47,8 +47,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     $EM1 = "'".$EM."'";
     $PW1 = "'".$PW."'";
 
-    
-
     // echo "alert('uid '+ $UID1);";
     // echo "alert('utype '+ $UT1);";
     // echo "alert('fname '+ $FN1);";
@@ -61,9 +59,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('PW '+ $PW1);";
     $topEdit='';
     
-    
-
-     
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
     $subquery=$subquery. ' USER_TYPE =  "'.$UT.'"';
@@ -110,17 +105,16 @@ $conn = mysql_connect("localhost","mangese","000000");
         $topEdit=$topEdit.$LN; 
       }else{
         $topEdit=$topEdit.$LNE; 
-
     }
        echo "document.getElementById('SessionUserEditmoc').value = '$topEdit';";
        echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;";
     }else {
-      echo "alert('$MYTYPE');";
+      // echo "alert('$MYTYPE');";
     }
 
       // echo "alert('$subquery');";
-      echo "alert('$topEdit');";
-      echo "alert('$subquery WHERE U_ID =$UID;');";
+      // echo "alert('$topEdit');";
+      // echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
 
     
