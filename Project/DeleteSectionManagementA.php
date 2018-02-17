@@ -4,9 +4,12 @@ $conn = mysql_connect("localhost","mangese","000000");
   {
     session_start();
     mysql_query("use grader;");
-    mysql_query("set NAMES UTF8;");
     $SID = $_REQUEST["sidDelete"];
-    $SID1 = "'".$SID."'";
-    echo "alert('in DeleteSectionManagementA.php sid:' + $SID1);";
+    $result = mysql_query("select source_file as file from homework h join submit su on su.h_id = h.h_id where s_id = '$SID'; ");
+    while($row = mysql_fetch_assoc($result))
+    {
+        $F = $row["file"];
+        echo "<script> console.log('$F'); </script>";
+    }
   }
 ?>
