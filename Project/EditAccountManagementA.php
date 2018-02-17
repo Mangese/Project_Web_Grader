@@ -79,7 +79,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('PW OK');";
     }
     if($MYTYPE=="T"){
-      echo "alert('i'm teacher);";
+      echo "alert('i m teacher');";
     }else {
       echo "alert($MYTYPE);";
     }
