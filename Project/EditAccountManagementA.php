@@ -93,8 +93,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     }
 
     if($MYTYPE!='A'){
-
-      echo "alert('eieiei');";
       if ($FN!=''){
         // $topEdit=$topEdit.$FN.' ';
         $_SESSION["firstname"] = $FN;
@@ -110,11 +108,7 @@ $conn = mysql_connect("localhost","mangese","000000");
         // $topEdit=$topEdit.$LNE; 
         $_SESSION["lastname"] = $LNE;
     }
-      //  echo "document.getElementById('SessionUserEditmoc').value = '$topEdit';";
-      //  echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;";
-      echo "location.reload();";
-    }else {
-      // echo "alert('$MYTYPE');";
+        echo "location.reload();";
     }
 
       // echo "alert('$subquery');";
