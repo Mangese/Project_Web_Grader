@@ -26,11 +26,11 @@
     
     if($DS != '')
     {
-      $SQL = $SQL." and submit_date >= $DS ";
+      $SQL = $SQL." and submit_date >= '$DS' ";
     }
     if($DE != '')
     {
-      $SQL = $SQL." and submit_date <= $DE "; 
+      $SQL = $SQL." and submit_date <= '$DE' "; 
     }
     echo "<script> alert('$SQL'); </script>";
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
