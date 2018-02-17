@@ -91,7 +91,7 @@ $conn = mysql_connect("localhost","mangese","000000");
 
     if($MYTYPE!='A'){
 
-      echo "alert('$MYTYPE');";
+      echo "alert('eieiei');";
       // echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
       // echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
 
