@@ -107,7 +107,7 @@ if(!isset($_SESSION["user"]))
     function userType() {
       // alert("inusertype");
       typeSelect = $("#addUserType").val();
-      if (typeSelect == 'T') {
+      if (typeSelect == 'T' || typeSelect == 'A') {
         // alert("addUserType =T");
         addUserDisableTrue();
         addUserDisableFalse();
