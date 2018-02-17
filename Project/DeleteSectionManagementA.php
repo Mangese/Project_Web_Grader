@@ -9,7 +9,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     while($row = mysql_fetch_assoc($result))
     {
         $F = $row["file"];
-        echo "<script> console.log('$F'); </script>";
+        echo " console.log('$F');";
     }
   }
 ?>
