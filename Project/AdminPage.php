@@ -1152,9 +1152,16 @@ if(!isset($_SESSION["user"]))
 		{
 			checkboxes = document.getElementsByName('foo');
   		for(var i=0, n=checkboxes.length;i<n;i++) {
-    		if(checkboxes[i].checked)
+			if(checkboxes[i].checked)
 		{
-			alert(checkboxes[i].value);	
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
+      			xmlhttp.send();
+     			 xmlhttp.onreadystatechange = function () {
+       		 if (this.readyState == 4 && this.status == 200) {
+         	 alert(checkboxes[i].value);
+        		}
+      			}
 		}
   		}
 		}
