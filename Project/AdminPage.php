@@ -1109,7 +1109,7 @@ if(!isset($_SESSION["user"]))
 
         <script>
             function fillFileManagement() {
-              alert("in testDate");
+              //alert("in testDate");
               var sdate = $('#startDate').datepicker().val();
               var edate = $('#endDate').datepicker().val();
               // if (document.getElementById('flag').checked) {
@@ -1125,10 +1125,10 @@ if(!isset($_SESSION["user"]))
               }
 
               var tFilesearch = document.getElementById('typeFilemoc').value;
-              alert("start date is: " + sdate);
-              alert("end date is: " + edate);
-              // alert("type file is: " + tFile);
-              alert(tFilesearch);
+              //alert("start date is: " + sdate);
+              //alert("end date is: " + edate);
+              //alert("type file is: " + tFile);
+              //alert(tFilesearch);
 
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange = function () {
