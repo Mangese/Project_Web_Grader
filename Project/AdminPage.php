@@ -1148,6 +1148,16 @@ if(!isset($_SESSION["user"]))
     		checkboxes[i].checked = source.checked;
   		}
 		}
+		function checkFileDelete()
+		{
+			checkboxes = document.getElementsByName('foo');
+  		for(var i=0, n=checkboxes.length;i<n;i++) {
+    		if(checkboxes[i].checked)
+		{
+			alert(i);	
+		}
+  		}
+		}
         </script>
 
         <!--Table-->
