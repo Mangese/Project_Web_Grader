@@ -102,13 +102,15 @@ $conn = mysql_connect("localhost","mangese","000000");
       echo "alert('eieiei');";
       if ($FN!=''){
         $topEdit=$topEdit.$FN.' ';
-        
       }
       else{
         $topEdit=$topEdit.$FNE.' ';
       }
-    if ($LN!=''){
-      
+      if ($LN!=''){
+        $topEdit=$topEdit.$LN; 
+      }else{
+        $topEdit=$topEdit.$LNE; 
+
     }
       // echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
       // echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
