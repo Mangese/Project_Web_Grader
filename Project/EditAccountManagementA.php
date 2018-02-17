@@ -7,12 +7,12 @@ $conn = mysql_connect("localhost","mangese","000000");
     mysql_query("set NAMES UTF8;");
 
     $MYTYPE = $_SESSION["utype"];
-    // $MYTYPE = "'".$MYTYPE."'";
+     $MYTYPE = "'".$MYTYPE."'";
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
 
     echo "alert('in php');";
-    echo "alert('$MYTYPE');";
+    echo "alert($MYTYPE);";
 
     $FN = $_REQUEST["fnamereq"];
     $LN = $_REQUEST["lnamereq"];
