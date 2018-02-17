@@ -1133,8 +1133,8 @@ if(!isset($_SESSION["user"]))
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                  alert(this.responseText);
-			//$('#SectionManagementTb').append(this.responseText);
+                 
+			$('#FileManagementTb').append(this.responseText);
                 }
               }
               xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
@@ -1146,7 +1146,7 @@ if(!isset($_SESSION["user"]))
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="SectionManagementTb">
+          <table class="table table-striped table-hover main" id="FileManagementTb">
             <thead class="thead">
               <tr>
                 <th style="width:10%" onclick="sortTable1(0)">
