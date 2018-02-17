@@ -1155,6 +1155,14 @@ if(!isset($_SESSION["user"]))
                       All
                     </label>
                 </th>
+		      <th style="width:10%" onclick="sortTable1(1)">
+                  User ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+		      <th style="width:5%" onclick="sortTable1(1)">
+                  Homework ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
                 <th style="width:65%" onclick="sortTable1(1)">
                   File Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
