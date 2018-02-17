@@ -33,5 +33,7 @@ $conn = mysql_connect("localhost","mangese","000000");
       mysql_query("delete from register where s_id = '$SID';");
       mysql_query("delete from section where s_id = '$SID';");
     }
+    mysql_query("delete from class where c_id = '$CID';");
+    echo "fillclassManagementTb();";
   }
 ?>
