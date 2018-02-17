@@ -1165,7 +1165,7 @@ if(!isset($_SESSION["user"]))
 							eval(this.responseText);
 						}
 					}
-					xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, true);
+					xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
 					xmlhttp.send();
 				}
 			}
