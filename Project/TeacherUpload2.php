@@ -205,9 +205,12 @@
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
-
-                    document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
-
+                    if (document.getElementById('SessionUserEditmoc').value != '') {
+                      alert("no null");
+                    } else {
+                      alert("null");
+                      document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
+                    }
 
                   });
                   $('#myTab a').click(function (e) {
@@ -409,7 +412,7 @@
                       xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
                       xmlhttp.send();
                       location.reload();
-                      document.getElementById('SessionUsermoc').value = fnamereq + ' ' + lnamereq;
+                      document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
                       //alert('SU = ' + SU);
                     }
                     else {
