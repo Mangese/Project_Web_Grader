@@ -410,7 +410,7 @@
                           eval(this.responseText);
                         }
                       }
-                      xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
+                      xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq + "&fnameEdit=" + fnameEdit + "&lnameEdit=" + lnameEdit, true);
                       xmlhttp.send();
                       console.log(fnameEdit);
                       console.log(lnameEdit);
