@@ -240,6 +240,78 @@
                   xmlhttp.send();
                 }
 
+                function checkBoxEdit(num) {
+                  EditFN = document.getElementById("editFirstname");
+                  EditLN = document.getElementById("editLastname");
+                  EditUN = document.getElementById("editUsername");
+                  EditsID = document.getElementById("editStudentID");
+                  EditDM = document.getElementById("editDepartment");
+                  EditMail = document.getElementById("editEmail");
+                  EditP = document.getElementById("editPassword");
+                  EditP2 = document.getElementById("editPassword2");
+
+                  if (num == 1) {
+                    if (document.getElementById("defaultCheckFirstname").checked == true) {
+                      EditFN.disabled = false;
+                    } else {
+                      EditFN.disabled = true;
+                    }
+                  } else if (num == 2) {
+                    if (document.getElementById("defaultCheckLastname").checked == true) {
+                      EditLN.disabled = false;
+                    } else {
+                      EditLN.disabled = true;
+                    }
+                  } else if (num == 3) {
+                    if (document.getElementById("defaultCheckUsername").checked == true) {
+                      EditUN.disabled = false;
+                    } else {
+                      EditUN.disabled = true;
+                    }
+                  } else if (num == 4) {
+                    if (document.getElementById("defaultCheckStdID").checked == true) {
+                      EditsID.disabled = false;
+                    } else {
+                      EditsID.disabled = true;
+                    }
+                  } else if (num == 5) {
+                    if (document.getElementById("defaultCheckDepart").checked == true) {
+                      EditDM.disabled = false;
+                    } else {
+                      EditDM.disabled = true;
+                    }
+                  } else if (num == 6) {
+                    if (document.getElementById("defaultCheckEmail").checked == true) {
+                      EditMail.disabled = false;
+                    } else {
+                      EditMail.disabled = true;
+                    }
+                  } else if (num == 7) {
+                    if (document.getElementById("defaultCheckPass").checked == true) {
+                      EditP.disabled = false;
+                      EditP2.disabled = false;
+                    } else {
+                      EditP.disabled = true;
+                      EditP2.disabled = true;
+                    }
+                  }
+                }
+
+                function checkPassEdit() {
+                  var password = document.getElementById("editPassword")
+                  var confirm_password = document.getElementById("editPassword2");
+                  var message = document.getElementById('message');
+                  confirm_password.setCustomValidity('');
+                  if (password.value == confirm_password.value) {
+                    message.style.color = 'green';
+                    message.innerHTML = '*matching*';
+                  } else {
+                    message.style.color = 'red';
+                    message.innerHTML = "*Passwords Doesn't Match *";
+                    confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+                  }
+                }
+
                 function getValueForEdit() {
                   // alert("click getValueForEdit");
                   var xmlhttp = new XMLHttpRequest();
