@@ -52,6 +52,7 @@
       </div>
     </form>
   </nav>
+  <input id="SessionUsermoc" type="">
 </head>
 <?php
   session_start();
