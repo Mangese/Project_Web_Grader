@@ -205,13 +205,8 @@
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
-                    if (document.getElementById('SessionUserEditmoc').value != '') {
-                      alert("no null");
-                      document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value
-                    } else {
-                      alert("null");
-                      document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
-                    }
+
+                    document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
 
                   });
                   $('#myTab a').click(function (e) {
@@ -414,6 +409,8 @@
                       xmlhttp.send();
 
                       document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
+                      document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value
+
                       // location.reload();
                       //alert('SU = ' + SU);
                     }
