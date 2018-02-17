@@ -112,8 +112,8 @@ $conn = mysql_connect("localhost","mangese","000000");
         $topEdit=$topEdit.$LNE; 
 
     }
-      // echo "document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq; ";
-      // echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
+       echo "document.getElementById('SessionUserEditmoc').value = $topEdit";
+      //  echo "document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;"
     }else {
       echo "alert('$MYTYPE');";
     }
