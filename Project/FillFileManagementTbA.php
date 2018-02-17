@@ -49,13 +49,13 @@
       echo "<td style='width:10%'>";
        echo "$UID";
        echo "</td>";
-      echo "<td style='width:10%'>";
+      echo "<td style='width:20%'>";
        echo "$HID";
        echo "</td>";
-      echo "<td style='width:35%'>";
+      echo "<td style='width:30%'>";
        echo "$F";
        echo "</td>";
-      echo "<td style='width:35%'>";
+      echo "<td style='width:30%'>";
        echo "$TI";
        echo "</td>";
       echo "</tr>";
