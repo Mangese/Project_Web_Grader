@@ -412,8 +412,9 @@
                       }
                       xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
                       xmlhttp.send();
-                      location.reload();
+
                       document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
+                      location.reload();
                       //alert('SU = ' + SU);
                     }
                     else {
