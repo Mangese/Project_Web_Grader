@@ -410,7 +410,7 @@
                           eval(this.responseText);
                         }
                       }
-                      xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq + "&fnameEdit=" + fnameEdit + "&lnameEdit=" + lnameEdit, true);
+                      xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
                       xmlhttp.send();
 
                       // document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
