@@ -1162,7 +1162,7 @@ if(!isset($_SESSION["user"]))
 					{
 						if (this.readyState == 4 && this.status == 200) 
 						{
-							alert(checkboxes[i].value);
+							eval(this.responseText);
 						}
 					}
 					xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, true);
