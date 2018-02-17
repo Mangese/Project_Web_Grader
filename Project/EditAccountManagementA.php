@@ -13,6 +13,10 @@ $conn = mysql_connect("localhost","mangese","000000");
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
 
+    echo "console.log(testlog);";
+    // echo "console.log(fnameEdit);";
+    // echo "console.log(lnameEdit);";
+
     
     // echo "alert('$MYTYPE');";
 
