@@ -796,13 +796,57 @@
         <div class="tab-pane active" id="tab1" role="tabpanel">
           <!--Selection-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
-            <div class="form-group mx-sm-4">
+            <div class="form-group mx-sm-3">
               <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()" style="height:20px">
                 <option value="">Please Select Class</option>
               </select>
             </div>
-            <i class="fa fa-info-circle" style="color:#5bc0de; font-size:1.5rem;"></i>
+            <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;" data-toggle="modal" data-target="#info1"></i>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="info1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header" hidden>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modelTitleId">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      </ol>
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                          <img class="d-block img-fluid" src="./images/t-ploblem.JPG" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem1.JPG" alt="Second slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="modal-footer" hidden>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </form>
+
           <!--Table-->
           <div class="table-wrapper-problem">
             <table class="table table-striped table-hover main" id="DataFromAjax">
@@ -954,11 +998,11 @@
 
           <!--Head part-->
           <div class="form-inline ml-auto mr-3" style="margin-top:20px;">
-            <i class="fa fa-info-circle ml-auto mr-2" style="color:#5bc0de; font-size:2rem;"></i>
+            <i class="fa fa-info-circle ml-auto mr-2" style="color:#5bc0de; font-size:1.5rem;"></i>
           </div>
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
             <!--Head 1-->
-            <div class="form-group mx-sm-4">
+            <div class="form-group mx-sm-3">
               <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()" style="height:20px">
                   <option value="">
                       Please Select Section
@@ -967,14 +1011,14 @@
             </div>
 
             <!--Head 2-->
-            <div class="form-group mx-sm-4">
+            <div class="form-group mx-sm-3">
               <label for="staticPassword" style="margin-right:12px">Password  </label>
               <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px" data-toggle="tooltip" data-placement="bottom"
                 title="Password for students to join Section">
             </div>
 
             <!--Head 3-->
-            <div class="form-group mx-sm-4">
+            <div class="form-group mx-sm-3">
               <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Create Section</button>
               <!-- Modal3 -->
               <div class="modal fade" id="myModal3" role="dialog">
@@ -1357,12 +1401,12 @@
         <div class="tab-pane" id="tab3" role="tabpanel">
           <!--Head part-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px">
-            <div class="form-group mx-sm-4">
+            <div class="form-group mx-sm-3">
               <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();" style="height:20px">
                   <option value="">Please Select Section</option>
               </select>
             </div>
-            <i class="fa fa-info-circle" style="color:#5bc0de; font-size:1.5rem;"></i>
+            <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;"></i>
 
           </form>
 
