@@ -504,9 +504,7 @@
                     // alert(uidreq);
                     // alert(pidreq);
                     // alert(fullmark);
-			  setMark = parseInt(setMark);
-			  fullmark = parseInt(fullmark);
-		    if(isNaN(setMark) || setMark > fullmark)
+		    if(isNaN(setMark) || parseInt(setMark) > parseInt(fullmark))
 		    {
 			    alert("Invalid Mark");
 		    }
