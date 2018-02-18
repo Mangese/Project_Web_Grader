@@ -94,7 +94,7 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
       $result4 = mysql_query("select count(*) as sumbyproblem from submit su join homework h on h.h_id = su.h_id join problem p on p.p_id = h.p_id where su.status = 'P' and su.h_id = '$HID' and p.deleteflag is null and h.deleteflag is null;"); 
       while($row = mysql_fetch_assoc($result4)){
         $sumByPloblem = $row['sumbyproblem'];
-          echo "$sumByPloblem";
+          echo "$sumByPloblem,";
       }
     }
   }
