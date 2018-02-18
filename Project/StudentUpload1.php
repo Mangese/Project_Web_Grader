@@ -509,8 +509,8 @@
               </div>
               <div class="modal-footer mx-2" style="justify-content:space-between">
                 <p class="mb-0" style="font-weight: 500; color:#5bc0de;">
-                  <i class="fa fa-info-circle"></i>
-                  *Section Password from Lecturer
+                  <i class="fa fa-info-circle mr-2"></i>
+                  Section Password from Lecturer
                 </p>
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="sectionRegister()">Join</button>
               </div>
