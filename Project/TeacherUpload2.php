@@ -795,7 +795,9 @@
 
         <div class="tab-pane active" id="tab1" role="tabpanel">
           <!--Selection-->
-          <i class="fa fa-info-circle ml-auto mr-2"></i>
+          <div>
+            <i class="fa fa-info-circle ml-auto mr-2" style="color:#5bc0de; font-size:2rem;"></i>
+          </div>
           <form class="form-inline" style="margin-top:20px; margin-bottom:20px;">
             <div class="form-group mx-sm-4">
               <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()" style="height:20px">
