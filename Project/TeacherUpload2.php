@@ -61,7 +61,6 @@
 </head>
 <?php
   session_start();
-
   if(!isset($_SESSION["user"]))
   {
   echo "<script> alert('Please Login First'); window.location = 'logout.php'; </script>";
@@ -237,9 +236,7 @@
                     fillDropCreateClass();
                     fillDropResult();
                     fillGetTableProblem();
-
                     // document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
-
                   });
                   $('#myTab a').click(function (e) {
                     e.preventDefault()
@@ -252,12 +249,9 @@
                   //                   });
                   function DMYpicker(x) {
                     //alert(x);
-
                     $('#' + x).datetimepicker({
                       minDate: new Date(),
                       format: 'YYYY-MM-DD'
-
-
                     });
                   }
                   //                   $(function () {
@@ -269,11 +263,8 @@
                     //alert(y);
                     $('#' + y).datetimepicker({
                       format: 'HH:mm'
-
                     });
-
                   }
-
                   function getValueForEdit() {
                     // alert("click getValueForEdit");
                     var xmlhttp = new XMLHttpRequest();
@@ -285,7 +276,6 @@
                     xmlhttp.open("POST", "EditYourSelfGetValue.php", true);
                     xmlhttp.send();
                   }
-
                   function checkBoxEdit(num) {
                     EditFN = document.getElementById("editFirstname");
                     EditLN = document.getElementById("editLastname");
@@ -295,7 +285,6 @@
                     EditMail = document.getElementById("editEmail");
                     EditP = document.getElementById("editPassword");
                     EditP2 = document.getElementById("editPassword2");
-
                     if (num == 1) {
                       if (document.getElementById("defaultCheckFirstname").checked == true) {
                         EditFN.disabled = false;
@@ -342,7 +331,6 @@
                       }
                     }
                   }
-
                   function checkPassEdit() {
                     var password = document.getElementById("editPassword")
                     var confirm_password = document.getElementById("editPassword2");
@@ -357,7 +345,6 @@
                       confirm_password.setCustomValidity("Passwords Doesn't Match!!");
                     }
                   }
-
                   function editAccountOnClick() {
                     var check = 0;
                     // alert("save");
@@ -368,16 +355,12 @@
                       // alert("dont check pass");
                       check = 2;
                     }
-
                     if (check == 1 || check == 2) {
                       // alert("check is" + check);
                       var uidreq = document.getElementById("uidmoc").value;
                       var utypereq = document.getElementById("utypemoc").value;
                       // alert(utypereq);
-
                       // alert(uidreq);
-
-
                       var fnamesend = "";
                       var lnamesend = "";
                       var unamesend = "";
@@ -389,8 +372,6 @@
                       var lnameEdit = document.getElementById("editLastname").value;
                       // alert(fnameEdit);
                       // alert(lnameEdit);
-
-
                       if (document.getElementById("defaultCheckFirstname").checked == true) {
                         var fnamereq = document.getElementById("editFirstname").value;
                         // alert(fnamereq);
@@ -402,39 +383,31 @@
                         // alert(lnamereq);
                         lnamesend = "&lnamereq=" + lnamereq;
                       }
-
                       if (document.getElementById("defaultCheckUsername").checked == true) {
                         var unamereq = document.getElementById("editUsername").value;
                         // alert(unamereq);
                         unamesend = "&unamereq=" + unamereq;
                       }
-
                       if (document.getElementById("defaultCheckStdID").checked == true) {
                         var sidreq = document.getElementById("editStudentID").value;
                         // alert(sidreq);
                         sidsend = "&sidreq=" + sidreq;
                       }
-
                       if (document.getElementById("defaultCheckDepart").checked == true) {
                         var departreq = document.getElementById("editDepartment").value;
                         // alert(departreq);
                         departsend = "&departreq=" + departreq;
                       }
-
                       if (document.getElementById("defaultCheckEmail").checked == true) {
                         var emailreq = document.getElementById("editEmail").value;
                         // alert(emailreq);
                         emailsend = "&emailreq=" + emailreq;
                       }
-
                       if (document.getElementById("defaultCheckPass").checked == true) {
                         var passreq = document.getElementById("editPassword").value;
                         // alert(passreq);
                         passSend = "&passreq=" + passreq;
                       }
-
-
-
                       var xmlhttp = new XMLHttpRequest();
                       xmlhttp.onreadystatechange = function () {
                         if (this.readyState == 4 && this.status == 200) {
@@ -446,11 +419,8 @@
                       xmlhttp.send();
                       console.log(fnameEdit);
                       console.log(lnameEdit);
-
                       // document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
                       // document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;
-
-
                       //alert('SU = ' + SU);
                     }
                     else {
@@ -458,7 +428,6 @@
                       alert("password fail");
                     }
                   }
-
                   function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
                     // alert(x);
                     // // alert(y);
@@ -468,8 +437,6 @@
                     $("#idmoc").val(x);
                     $("#pidmoc").val(y);
                     $("#fullmarkmoc").val(getFullMark);
-
-
                     var fullMarkV = document.getElementById("fullMark");
                     var setMarkV = document.getElementById("setMark");
                     var markSubBtnV = document.getElementById("markSubBtn");
@@ -497,32 +464,35 @@
                     xmlhttp.open("POST", "FillLastSendFileResult.php?uidreq=" + x + "&hidreq=" + y + "&countrow=" + z, true);
                     xmlhttp.send();
                   }
-
                   function markSubfunc() {
-
                     var uidreq = $("#idmoc").val();
                     var pidreq = $("#pidmoc").val();
                     var setMark = $("#setMark").val();
                     var fullmark = $("#fullmarkmoc").val();
-
                     // alert(uidreq);
                     // alert(pidreq);
                     // alert(fullmark);
-
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function () {
-                      if (this.readyState == 4 && this.status == 200) {
-                        eval(this.responseText);
-                      }
-                    }
-                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
-                    xmlhttp.send();
-                    fillTableResult();
+		    if(isNaN(setMark) || parseInt(setMark) > parseInt(fullmark)|| parseInt(setMark) < 0)
+		    {
+			    alert("Invalid Mark");
+		    }
+		    else
+		    {
+			  var xmlhttp = new XMLHttpRequest();
+			    xmlhttp.onreadystatechange = function () {
+			      if (this.readyState == 4 && this.status == 200) {
+				eval(this.responseText);
+				      fillTableResult();
+			      }
+			    }
+			    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
+			    xmlhttp.send();
+			    
+		    }
+                    
+                    
                     // location.reload();
-
                   }
-
-
                   function fillDropDownSection() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -572,11 +542,19 @@
                         if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
+			else if(document.getElementById(fullMarkName).value <= 0 || document.getElementById(fullMarkName).value > 100 || isNaN(document.getElementById(fullMarkName).value))
+			{
+			  x = 2;	
+			}
                       }
                     });
                     if (x == 1) {
-                      alert("Please input all detail");
+                      	alert("Please input all detail");
                     }
+		    else if(x == 2)
+		    {
+			alert("Invalid Mark");     
+		    }
                     else {
                       $('table [type="checkbox"]').each(function (i, chk) {
                         if (chk.checked) {
@@ -600,7 +578,6 @@
                           // alert(document.getElementById(dateName).value);
                           // alert(document.getElementById(timeName).value);
                           // alert(document.getElementById(fullMarkName).value);
-
                         }
                       });
                     }
@@ -624,12 +601,10 @@
                     }
                     xmlhttp.open("POST", "FillTableT.php?class=" + str, true);
                     xmlhttp.send();
-
                   }
                   function fillGetTableProblem() {
                     x = document.getElementById("selSectionHw").value;
                     y = document.getElementById("AssignButton");
-
                     $('#getProblem tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
@@ -640,9 +615,7 @@
                     }
                     xmlhttp.open("POST", "FillGetTableProblemT.php?class=" + str, true);
                     xmlhttp.send();
-
                   }
-
                   function fillDropCreateClass() {
                     var xmlhttp = new XMLHttpRequest();
                     xmlhttp.onreadystatechange = function () {
@@ -679,15 +652,12 @@
                   function fillTableHw() {
                     x = document.getElementById("selSectionHw").value;
                     y = document.getElementById("AssignButton");
-
                     if (x != "") {
-
                       y.style.display = 'block';
                     }
                     else {
                       y.style.display = 'none';
                     }
-
                     $('#TableHw tbody tr').remove();
                     str = $("#selSectionHw").val();
                     var xmlhttp = new XMLHttpRequest();
@@ -703,25 +673,19 @@
 			
 			  str = $("#selSectionRs").val();	
 			 window.location.href =  'ExportResult.php?sid='+str;
-
 		  }
                   function fillTableResult() {
                     // x = document.getElementById("selSectionRs").value;
-
                     $('#Result thead tr').remove();
                     $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
-
                     var exp = document.getElementById('exportExcel');
-
                     if (str != "") {
-
                       exp.style.display = 'block';
                     }
                     else {
                       exp.style.display = 'none';
                     }
-
                     uidreq = $("#idmoc").val();
                     hidreq = $("#pidmoc").val();
                     setMark = $("#setMark").val();
@@ -736,8 +700,6 @@
                     }
                     xmlhttp.open("POST", "FillTableResult.php?section=" + str, true);
                     xmlhttp.send();
-
-
                   }
     </script>
 
@@ -770,7 +732,6 @@
         window.location = "logout.php";
       }
       function createSec() {
-
         var x = document.getElementById("selSectionHw");
         var pClass = $('select[name="createClass"] option:selected').text();
         var pSection = document.getElementById("createSection").value;
@@ -798,7 +759,6 @@
         else {
           alert("Please input all detail");
         }
-
       }
     </script>
 
@@ -1231,7 +1191,6 @@
           <!-- Sort Number Script -->
           <script type="text/javascript">
             var TableIDvalue = "TableHw";
-
             var TableLastSortedColumn = -1;
             function SortNumber() {
               var sortColumn = parseInt(arguments[0]);
@@ -1268,19 +1227,16 @@
               }
               table.replaceChild(newTableBody, tbody);
             } // function SortTable()
-
             function CompareRowOfText(a, b) {
               var aval = a.value;
               var bval = b.value;
               return (aval == bval ? 0 : (aval > bval ? 1 : -1));
             } // function CompareRowOfText()
-
             function CompareRowOfNumbers(a, b) {
               var aval = /\d/.test(a.value) ? parseFloat(a.value) : 0;
               var bval = /\d/.test(b.value) ? parseFloat(b.value) : 0;
               return (aval == bval ? 0 : (aval > bval ? 1 : -1));
             } // function CompareRowOfNumbers()
-
             function GetDateSortingKey(format, text) {
               if (format.length < 1) { return ""; }
               format = format.toLowerCase();
@@ -1409,10 +1365,8 @@
                             C++
                           </td>
                           <td style="width:25%">
-
                           </td>
                           <td style="width:25%">
-
                           </td>
                           <td style="width:10%">
                             <input type="checkbox" name="vehicle" value="test1C"><br>
@@ -1487,9 +1441,7 @@
           <script>
                     function exportExcel() {
                       alert("exportExcel");
-
                     }
-
                     function sortTable(col) {
                       var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
                       table = document.getElementById("Result");
