@@ -848,7 +848,7 @@
           </form>
 
           <!--Table-->
-          <div class="table-wrapper-problem">
+          <div class="table-wrapper-problem" style="height:245px">
             <table class="table table-striped table-hover main" id="DataFromAjax">
               <thead class="thead">
                 <tr>
@@ -1088,7 +1088,7 @@
           <!--End Head part-->
 
           <!--Table part-->
-          <div class="table-wrapper-problem">
+          <div class="table-wrapper-problem" style="height:200px">
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
@@ -1411,7 +1411,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper">
+          <div class="table-wrapper" style="height:245px">
             <table class="table table-bordered table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
