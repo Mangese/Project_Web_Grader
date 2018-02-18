@@ -151,7 +151,7 @@
                 </div>
                 <div class="col-sm-5 px-0">
                   <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
-                    oninput="setCustomValidity('')">
+                    oninput="setCustomValidity('')" style="height:20px">
                     <option value="">Department</option>
                     <option value="BE">Biomedical Engineering</option>
                     <option value="CE">Civil Engineering</option>
