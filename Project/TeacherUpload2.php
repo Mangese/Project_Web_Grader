@@ -1276,7 +1276,7 @@
                             Deadline
                           </th>
                           <th style="width:25%; text-align:center;">
-                            Time
+                            Deadline Time
                           </th>
                           <th style="width:9%; text-align:center;">
                             Select
