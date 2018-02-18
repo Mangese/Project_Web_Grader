@@ -1608,7 +1608,16 @@
                   <h4 class="modal-title" id='modalValueResult'></h4>
                   <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body left">
+                <div class="modal-body mx-2">
+                  <div class="form-inline mx-2 justify-content-between">
+                    <!-- <div class="col-xs-1 col-sm-1 col-md-5 col-lg-5"> -->
+                      <h6 id='submitCount'></h6>
+                    <!-- </div> -->
+                    <div class="form-inline">
+                      <input type="text" class="form-control mr-1" style="width:50px; text-align:right;" name="setMark" id='setMark' placeholder="Mark">
+                      <h6 id='fullMark' name='fullMark'>/ Full mark</h6>
+                    </div>
+                  </div>
                   <table class="table table-striped table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
@@ -1634,20 +1643,6 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <div class="container">
-
-                      <div class="form-inline mx-2 justify-content-between">
-                        <!-- <div class="col-xs-1 col-sm-1 col-md-5 col-lg-5"> -->
-                          <h6 id='submitCount'></h6>
-                        <!-- </div> -->
-                        <div class="form-inline">
-                          <input type="text" style="width:50px; text-align:right;" name="setMark" id='setMark' placeholder="Mark">
-                          <h6 id='fullMark' name='fullMark'>/Full mark</h6>
-                        </div>
-                      </div>
-
-                    </div>
-                    <br>
                   </table>
                 </div>
                 <!-- <div class="modal-footer">
