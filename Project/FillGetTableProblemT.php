@@ -49,6 +49,7 @@
       // echo "</div>";
       // echo "</div>";
       echo "<input id='datepicker' />";
+      echo "<script>$('#datepicker').datepicker();</script>";
       echo "</td>";
       echo "<td style='width:25%'>";
       echo "<div class='form-group'>";
