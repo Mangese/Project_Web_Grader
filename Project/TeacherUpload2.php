@@ -985,21 +985,21 @@
                       </div>
                       <div class="modal-body left">
                         <label class="mb-2">Class</label>
-                        <select class="form-control mb-4" name="createClass" id="createClass" style="width:80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some class');"
+                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some class');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Please Select Classroom</option>
                                             </select>
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
                         <label class="mb-2">Section</label>
-                        <input type="text" class="form-control mb-4" name="createSection" id="createSection" style="width:80%" placeholder="Section" required
+                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:80%" placeholder="Section" required
                           oninvalid="this.setCustomValidity('Section is empty,\nInput only (A-Z,a-z,0-9)');" oninput="setCustomValidity('')"
                           minlength=1 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{1,}" />
 
                         <label class="mb-2">Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control mb-4" name="semester" id="semester" style="width: 80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some semester');"
+                        <select class="form-control mb-3" name="semester" id="semester" style="width: 80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some semester');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Semester</option>
                                                 <script>
