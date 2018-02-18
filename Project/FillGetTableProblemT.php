@@ -49,7 +49,7 @@
       // echo "</div>";
       // echo "</div>";
       echo "<input id='datepicker' />";
-      echo "<script>$('#datepicker').datepicker({uiLibrary: 'bootstrap4',zIndex: 2048});</script>";
+      echo "<script>$('#datepicker').datepicker({uiLibrary: 'bootstrap4', autoHide: true, zIndex: 2048,});</script>";
       echo "</td>";
       echo "<td style='width:25%'>";
       echo "<div class='form-group'>";
