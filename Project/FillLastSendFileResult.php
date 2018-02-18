@@ -38,7 +38,7 @@ if($conn != FALSE)
     echo "$TC";
     echo "</td>";
     echo "<td style='width:18%; text-align:center;'>";
-    echo "<a href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
+    echo "<a class='btn btn-info btn-sm' href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
     echo "<button type='button' class='btn btn-info btn-sm' href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></button>";
     echo "</td>";
    
