@@ -13,7 +13,7 @@
     {
       $RowNum = $RowNum+1;
       echo "<tr>";
-      echo "<td style='width:6%'>";
+      echo "<td style='width:6%; text-align:center;'>";
       echo "$RowNum";
       echo "</td>";
       echo "<td style='width:18%' class = 'use'>";
