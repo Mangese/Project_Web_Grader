@@ -48,7 +48,7 @@
       // echo "</span>";
       // echo "</div>";
       // echo "</div>";
-      echo "<input id='datepicker' />"
+      echo "<input id='datepicker' />";
       echo "</td>";
       echo "<td style='width:25%'>";
       echo "<div class='form-group'>";
