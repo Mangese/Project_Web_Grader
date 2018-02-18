@@ -35,6 +35,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
+  <!-- Light box -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
+
   <link rel="stylesheet" href="TeacherUpload.css">
 
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
@@ -1594,6 +1597,43 @@
         </div>
       </div>
     </div>
+
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="row">
+            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
+            </a>
+        </div>
+        <div class="row">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
+            </a>
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light box -->
+    <script>
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox();
+              });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
   </body>
 
 </html>
