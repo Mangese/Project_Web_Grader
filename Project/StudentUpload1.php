@@ -93,7 +93,8 @@
             </div>
             <div class="modal-body">
               <div class="form-group row">
-                <div class="col-sm-10">
+                <label class="col-sm-5 col-form-label">Firstname</label>
+                <div class="col-sm-6">
                   <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" disabled required
                     oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');" oninput="setCustomValidity('')"
                     minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
