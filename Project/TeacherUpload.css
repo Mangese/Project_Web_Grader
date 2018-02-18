@@ -208,6 +208,6 @@ tr {
   overflow-x: scroll;
 }
 
-select.form-control:not([size]):not([multiple]) {
+.form-group select {
   height: 20px;
 }
