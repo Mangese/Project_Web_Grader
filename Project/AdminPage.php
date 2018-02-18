@@ -723,10 +723,10 @@ if(!isset($_SESSION["user"]))
                   Email
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:5%">
+                <th style="width:5% text-align:center;">
                   Edit
                 </th>
-                <th style="width:5%">
+                <th style="width:5% text-align:center;">
                   Delete
                 </th>
               </tr>
@@ -985,10 +985,10 @@ if(!isset($_SESSION["user"]))
                   Class Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:15%">
+                <th style="width:15%; text-align:center;">
                   Edit
                 </th>
-                <th style="width:15%">
+                <th style="width:15%; text-align:center;">
                   Delete
                 </th>
               </tr>
@@ -1009,6 +1009,65 @@ if(!isset($_SESSION["user"]))
                 </td>
               </tr> -->
             </tbody>
+
+            <!-- Start script -->
+            <script>
+              function sortTable1(col) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("classManagementTb");
+                switching = true;
+                //Set the sorting direction to ascending:
+                dir = "asc";
+                /*Make a loop that will continue until
+                no switching has been done:*/
+                while (switching) {
+                  //start by saying: no switching is done:
+                  switching = false;
+                  rows = table.getElementsByTagName("TR");
+                  /*Loop through all table rows (except the
+                  first, which contains table headers):*/
+                  for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[col];
+                    y = rows[i + 1].getElementsByTagName("TD")[col];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == "asc") {
+                      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                      }
+                    } else if (dir == "desc") {
+                      if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                      }
+                    }
+                  }
+                  if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                  } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                      dir = "desc";
+                      switching = true;
+                    }
+                  }
+                }
+              }
+            </script>
+            <!--End Script-->
           </table>
         </div>
         <!--End Table-->
@@ -1056,26 +1115,26 @@ if(!isset($_SESSION["user"]))
           <table class="table table-striped table-hover main" id="SectionManagementTb">
             <thead class="thead">
               <tr>
-                <th style="width:15%" onclick="sortTable1(0)">
+                <th style="width:15%" onclick="sortTable2(0)">
                   Section ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:35%" onclick="sortTable1(1)">
+                <th style="width:35%" onclick="sortTable2(1)">
                   Section Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:15%" onclick="sortTable1(2)">
+                <th style="width:15%" onclick="sortTable2(2)">
                   Password
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:15%" onclick="sortTable1(3)">
+                <th style="width:15%" onclick="sortTable2(3)">
                   Create by
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:10%">
+                <th style="width:10%; text-align:center;">
                   Edit
                 </th>
-                <th style="width:10%">
+                <th style="width:10%; text-align:center;">
                   Delete
                 </th>
               </tr>
@@ -1102,6 +1161,65 @@ if(!isset($_SESSION["user"]))
                 </td>
               </tr> -->
             </tbody>
+
+            <!-- Start script -->
+            <script>
+              function sortTable2(col) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("SectionManagementTb");
+                switching = true;
+                //Set the sorting direction to ascending:
+                dir = "asc";
+                /*Make a loop that will continue until
+                no switching has been done:*/
+                while (switching) {
+                  //start by saying: no switching is done:
+                  switching = false;
+                  rows = table.getElementsByTagName("TR");
+                  /*Loop through all table rows (except the
+                  first, which contains table headers):*/
+                  for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[col];
+                    y = rows[i + 1].getElementsByTagName("TD")[col];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == "asc") {
+                      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                      }
+                    } else if (dir == "desc") {
+                      if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                      }
+                    }
+                  }
+                  if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                  } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                      dir = "desc";
+                      switching = true;
+                    }
+                  }
+                }
+              }
+            </script>
+            <!--End Script-->
           </table>
         </div>
         <!--End Table-->
@@ -1239,25 +1357,25 @@ if(!isset($_SESSION["user"]))
           <table class="table table-striped table-hover main" id="FileManagementTb">
             <thead class="thead">
               <tr id="fileSearchRadio">
-                <th style="width:10%" onclick="sortTable1(0)">
+                <th style="width:10%">
                   <label class="form-check-label">
                       <input type="checkbox" onclick = "selectallFile(this);" class="form-check-input">
                       All
                     </label>
                 </th>
-                <th style="width:10%" onclick="sortTable1(1)">
+                <th style="width:10%" onclick="sortTable3(1)">
                   User ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:20%" onclick="sortTable1(1)">
+                <th style="width:20%" onclick="sortTable3(2)">
                   Homework ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:30%" onclick="sortTable1(1)">
+                <th style="width:30%" onclick="sortTable3(3)">
                   File Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:30%" onclick="sortTable1(2)">
+                <th style="width:30%" onclick="sortTable3(4)">
                   Submit Date
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
@@ -1266,6 +1384,65 @@ if(!isset($_SESSION["user"]))
             <tbody>
 
             </tbody>
+
+            <!-- Start script -->
+            <script>
+              function sortTable3(col) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("FileManagementTb");
+                switching = true;
+                //Set the sorting direction to ascending:
+                dir = "asc";
+                /*Make a loop that will continue until
+                no switching has been done:*/
+                while (switching) {
+                  //start by saying: no switching is done:
+                  switching = false;
+                  rows = table.getElementsByTagName("TR");
+                  /*Loop through all table rows (except the
+                  first, which contains table headers):*/
+                  for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[col];
+                    y = rows[i + 1].getElementsByTagName("TD")[col];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == "asc") {
+                      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                      }
+                    } else if (dir == "desc") {
+                      if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        //if so, mark as a switch and break the loop:
+                        shouldSwitch = true;
+                        break;
+                      }
+                    }
+                  }
+                  if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                  } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                      dir = "desc";
+                      switching = true;
+                    }
+                  }
+                }
+              }
+            </script>
+            <!--End Script-->
           </table>
         </div>
         <!--End Table-->
