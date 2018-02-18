@@ -15,5 +15,7 @@ $conn = mysql_connect("localhost","mangese","000000");
         mysql_query("delete from submit where u_id = '$UID';");
         mysql_query("delete from register where u_id = '$UID';");
         mysql_query("delete from user where u_id = '$UID';");
+        echo "fillaccountManagementTb();";
+
   }
 ?>
