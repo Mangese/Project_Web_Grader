@@ -1068,7 +1068,8 @@
                                                       }
                                                     </script>
                                             </select>
-
+                        <input id='datepicker' />";
+                        <script>$('#datepicker').datepicker({uiLibrary: 'bootstrap4',zIndex: '2048'});</script>";
                       </div>
                       <div class="modal-footer">
                         <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
