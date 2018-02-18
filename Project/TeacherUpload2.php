@@ -468,7 +468,7 @@
                     // alert(uidreq);
                     // alert(pidreq);
                     // alert(fullmark);
-		    if(isNaN(setMark) || parseInt(setMark) > parseInt(fullmark))
+		    if(isNaN(setMark) || parseInt(setMark) > parseInt(fullmark)|| parseInt(setMark) < 0)
 		    {
 			    alert("Invalid Mark");
 		    }
