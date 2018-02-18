@@ -8,7 +8,7 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
   while($row = mysql_fetch_assoc($NumberOfFile))
   {
   $NumFile = $row['num'];
-	  for ($x = 1; $x <= count($NumFile); $x++)
+	  for ($x = 1; $x <= $NumFile; $x++)
 	{
 	  echo "Ex".$x.",";
 	  echo "Full Mark For Ex".$x.",";
