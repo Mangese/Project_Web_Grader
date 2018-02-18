@@ -206,7 +206,7 @@
                 <div class="col-sm-4">
 
                 </div>
-                <div class="col-sm-5 px-0">
+                <div class="col-sm-7 px-0">
                   <p id="message" style="font-weight: 500;"></p>
                 </div>
               </div>
