@@ -568,11 +568,19 @@
                         if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
+			else if(document.getElementById(fullMarkName).value < 0 || document.getElementById(fullMarkName).value > 100)
+			{
+			  x = 2;	
+			}
                       }
                     });
                     if (x == 1) {
-                      alert("Please input all detail");
+                      	alert("Please input all detail");
                     }
+		    else if(x == 2)
+		    {
+			alert("Invalid Mark");     
+		    }
                     else {
                       $('table [type="checkbox"]').each(function (i, chk) {
                         if (chk.checked) {
