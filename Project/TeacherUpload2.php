@@ -100,7 +100,7 @@
                     oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');" oninput="setCustomValidity('')"
                     minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckFirstname"
                     onclick="checkBoxEdit(1)">
                 </div>
@@ -113,7 +113,7 @@
                   <input type="text" class="form-control" id="editLastname" name="editLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                     oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckLastname"
                     onclick="checkBoxEdit(2)">
                 </div>
@@ -126,21 +126,21 @@
                   <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                     oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckUsername"
                     onclick="checkBoxEdit(3)">
                 </div>
               </div>
-              <div class="form-group row">
+              <div class="form-group row" hidden>
                 <div class="col-sm-4">
-                  <label class="mt-2">Student ID</label>
+                  <label class="mt-2" >Student ID</label>
                 </div>
                 <div class="col-sm-5 px-0">
                   <input type="text" class="form-control" id="editStudentID" name="editStudentID" disabled placeholder="Student ID (EX. 5713XXX)"
                     required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
                     minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckStdID"
                     onclick="checkBoxEdit(4)">
                 </div>
@@ -162,7 +162,7 @@
                     <option value="ME">Mechanical Engineering</option>
                   </select>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckDepart"
                     onclick="checkBoxEdit(5)">
                 </div>
@@ -175,7 +175,7 @@
                   <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
                     oninput="setCustomValidity('')" maxlength=30/>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckEmail"
                     onclick="checkBoxEdit(6)">
                 </div>
@@ -189,7 +189,7 @@
                     maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                     onkeyup='checkPassEdit();' />
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-1 ml-3">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckPass" onclick="checkBoxEdit(7)">
                 </div>
               </div>
