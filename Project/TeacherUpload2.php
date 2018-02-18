@@ -1411,7 +1411,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper" style="height: 200px;">
+          <div class="table-wrapper">
             <table class="table table-bordered table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
