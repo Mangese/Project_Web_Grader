@@ -84,7 +84,7 @@
     <form name="addAccount" method="post" action="">
       <!-- Modal -->
       <div class="modal fade" id="editAccount" role="dialog">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-md">
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
