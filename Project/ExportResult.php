@@ -27,7 +27,7 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
           }
           $sortLastCol = $sumPlob+2;
             echo "Pass,";
-            echo "SumPoints,";
+            echo "SumPoints\n";
     }
     $CountRowForModal = 0;
     while($row = mysql_fetch_assoc($result1)){
@@ -57,7 +57,6 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
           }
           $sumMark = $sumMark + $teacherMark;
           $sumFullMark = $sumFullMark + $fullMarkModal;
-          echo "<td style='min-width:30px' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
