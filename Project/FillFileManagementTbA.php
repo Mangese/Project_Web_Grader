@@ -9,20 +9,14 @@
     $DS = $_REQUEST["dateStart"];
     $DE = $_REQUEST["dateEnd"];
     
-    $message = "test alert in php";
    // echo "<script type='text/javascript'>alert('$message');</script>";
    // echo "<script type='text/javascript'>alert('$TFS');</script>";
    // echo "<script type='text/javascript'>alert('$DS');</script>";
   //  echo "<script type='text/javascript'>alert('$DE');</script>";
     $SQL = '';
-    if($TFS == 'flag')
-    {
+
       $SQL = $SQL."select submit_date as date,source_file as file,u_id as uid,h_id as hid from submit where 1=1 ";
-    }
-    else
-    {
- //     echo "<script type='text/javascript'>alert('2');</script>";
-    }
+
     
     if($DS != '')
     {
