@@ -766,7 +766,7 @@ if(!isset($_SESSION["user"]))
           <script>
             function sortTable(col) {
               var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-              table = document.getElementById("DataFromAjax");
+              table = document.getElementById("accountManagementTb");
               switching = true;
               //Set the sorting direction to ascending:
               dir = "asc";
