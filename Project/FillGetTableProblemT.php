@@ -30,13 +30,13 @@
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
       echo "<td style='width:13%'>";
-      echo "<input type='text' class='form-control' style='width:50%' id = '$fullMarkName' placeholder='Mark'";
+      echo "<input type='text' class='form-control' style='width:50%' id = '$fullMarkName' placeholder='Mark'/>";
       echo "</td>";
       echo "<td style='width:10%; text-align:center;'>";
       echo "$LN";
       echo "</td>";
       echo "<td style='width:25%'>";
-      echo "<div class='form-group'>";
+      echo "<div class='form-group mb-0'>";
       $tempdate = 'datetimepicker'.$RowNum;
       $tempdateName = 'datetimepicker'.$RowNum.'Name';
       $temptime = 'timepicker'.$RowNum;
@@ -52,7 +52,7 @@
       // echo "<script>$('#datepicker').datepicker({uiLibrary: 'bootstrap4', autoHide: true, zIndex: 2048,});</script>";
       echo "</td>";
       echo "<td style='width:25%'>";
-      echo "<div class='form-group'>";
+      echo "<div class='form-group mb-0'>";
       echo "<div class='input-group date' id='$temptime' onclick = 'Timepicker(this.id)'>";
       echo "<input type='text' class='form-control' id = '$temptimeName' placeholder='Time Send' />";
       echo "<span class='input-group-addon'>";
