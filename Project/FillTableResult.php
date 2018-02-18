@@ -86,13 +86,13 @@
               $sumPass = $sumPass+1;
               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71; margin-right:5px' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
-                echo "<label style='min-width:40px; text-align:right; color:#2ECC71';>($teacherMark pt.)</label>";
+                echo "<label style='width:50px; text-align:right; color:#2ECC71';>($teacherMark pt.)</label>";
               }
             }
             else {
               echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C; margin-right:5px' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
-                 echo "<label style='min-width:40px; text-align:right; color:#E74C3C';>($teacherMark pt.)</label>";
+                 echo "<label style='width:50px; text-align:right; color:#E74C3C';>($teacherMark pt.)</label>";
               }
 //               echo '<i class="fa fa-times" aria-hidden="true" style="color:#E74C3C" onclick = ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,"' . $NAME. '"); data-toggle="modal" data-target="#modalSourceFileSend">''</i>';
               
