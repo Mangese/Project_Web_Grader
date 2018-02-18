@@ -30,7 +30,7 @@
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
       echo "<td style='width:13%'>";
-      echo "<input type='text' class='form-control' style='width:50%' id = '$fullMarkName' placeholder='Mark'/>";
+      echo "<input type='text' class='form-control' style='width:50%; text-align:right;' id = '$fullMarkName' placeholder='Mark'/>";
       echo "</td>";
       echo "<td style='width:10%; text-align:center;'>";
       echo "$LN";

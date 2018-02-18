@@ -829,7 +829,7 @@
                           <img class="d-block img-fluid" src="./images/t-problem.JPG" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem1.JPG" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem.JPG" alt="Second slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -1019,7 +1019,8 @@
                     <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li> 
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li> 
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -1027,6 +1028,9 @@
                         </div>
                         <div class="carousel-item">
                           <img class="d-block img-fluid" src="./images/t-modal-createSection.JPG" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid" src="./images/t-modal-assignHomework.JPG" alt="Third slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -1449,7 +1453,49 @@
                   <option value="">Please Select Section</option>
               </select>
             </div>
-            <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;"></i>
+            <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;" data-toggle="modal" data-target="#info3"></i>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="info3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-lg-custom" role="document">
+                <div class="modal-content">
+                  <div class="modal-header" hidden>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modelTitleId">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li> 
+                      </ol>
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                          <img class="d-block img-fluid" src="./images/t-result.JPG" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem.JPG" alt="Second slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="modal-footer" hidden>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </form>
 
@@ -1590,15 +1636,13 @@
                     </tbody>
                     <div class="container">
 
-                      <div class="row">
-                        <div class="col-xs-1 col-sm-1 col-md-5 col-lg-5">
-                          <h5 id='submitCount'></h5>
-                        </div>
-                        <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
-                          <input type="text" style="border:none; text-align:right;" name="setMark" id='setMark' placeholder="Mark">
-                        </div>
-                        <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
-                          <h5 id='fullMark' name='fullMark'>/Full mark</h5>
+                      <div class="form-inline mx-2 justify-content-between">
+                        <!-- <div class="col-xs-1 col-sm-1 col-md-5 col-lg-5"> -->
+                          <h6 id='submitCount'></h6>
+                        <!-- </div> -->
+                        <div class="form-inline">
+                          <input type="text" style="width:50px; text-align:right;" name="setMark" id='setMark' placeholder="Mark">
+                          <h6 id='fullMark' name='fullMark'>/Full mark</h6>
                         </div>
                       </div>
 
