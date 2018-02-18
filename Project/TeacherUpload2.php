@@ -804,7 +804,7 @@
             
             <!-- Modal -->
             <div class="modal fade" id="info1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-              <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-dialog modal-lg" width="1080px" role="document">
                 <div class="modal-content">
                   <div class="modal-header" hidden>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
