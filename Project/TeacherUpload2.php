@@ -1476,7 +1476,7 @@
                           <img class="d-block img-fluid" src="./images/t-result.JPG" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem.JPG" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/t-modal-lastFileSend.JPG" alt="Second slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
