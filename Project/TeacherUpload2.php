@@ -1430,7 +1430,7 @@
 
                   <div class="modal-footer">
                     <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
-                    <button type="button" class="btn btn-success" onclick="check();">OK</button>
+                    <button type="button" class="btn btn-success" onclick="check();">Assign</button>
                   </div>
                 </form>
               </div>
