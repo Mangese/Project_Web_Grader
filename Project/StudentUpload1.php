@@ -508,7 +508,7 @@
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
               <div class="modal-footer mx-2" style="justify-content:space-between">
-                <p class="mb-0" style="font-weight: 500">*Section Password from Lecturer</p>
+                <p class="mb-0" style="font-weight: 500; color:#5bc0de;">*Section Password from Lecturer</p>
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="sectionRegister()">Join</button>
               </div>
             </div>
