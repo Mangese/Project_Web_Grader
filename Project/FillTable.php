@@ -26,16 +26,16 @@
       $DD = $row['deadline'];
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:11%'>";
+      echo "<td style='width:11%; text-align:center;'>";
       echo "$LA";
       echo "</td>";
-      echo "<td style='width:22%'>";
+      echo "<td style='width:22%; text-align:center;'>";
       echo "$DD";
       echo "</td>";
-      echo "<td style='width:21%'>";
+      echo "<td style='width:21%; text-align:center;'>";
       echo "$QTY";
       echo "</td>";
-      echo "<td style='width:10%'>";
+      echo "<td style='width:10%; text-align:center;'>";
       $Status = $row['status'];
       if(!strcmp($Status, "F"))
       {
@@ -46,7 +46,7 @@
         echo "<div style='color:#2ECC71'>Pass";
       }
       echo "</td>";
-      echo "<td style='width:12%'>";
+      echo "<td style='width:12%; text-align:center;'>";
       if(!strcmp($Status, "F"))
       {
       if(!strcmp($LA, "Java")){
