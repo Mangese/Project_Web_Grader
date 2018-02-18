@@ -1419,7 +1419,7 @@
                   <script>
                     var numOfProb = 5
                     for (var i = 1; i <= numOfProb; i++)
-                      document.write('<th style="min-width:30px; text-align:center;">Ex ' + i + '</th>')
+                      document.write('<th style="min-width:73px; text-align:center;">Ex ' + i + '</th>')
                   </script>
                   <th style="width:100px" onclick="sortTable(22)">
                     Pass
