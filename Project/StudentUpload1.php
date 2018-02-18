@@ -193,7 +193,7 @@
               </div>
               <div class="form-group row mb-0">
                 <div class="col-sm-4">
-                  
+
                 </div>
                 <div class="col-sm-7">
                   <p id="message" style="font-weight: 500;"></p>
@@ -316,8 +316,12 @@
                   var message = document.getElementById('message');
                   confirm_password.setCustomValidity('');
                   if (password.value == confirm_password.value) {
-                    message.style.color = 'green';
-                    message.innerHTML = '*Matching*';
+                    if (password.value == '' || confirm_password.value == '') {
+                      message.innerHTML = '';
+                    } else {
+                      message.style.color = 'green';
+                      message.innerHTML = '*Matching*';
+                    }
                   } else {
                     message.style.color = 'red';
                     message.innerHTML = "*Passwords Doesn't Match*";
@@ -511,8 +515,8 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body mx-2">
-              
-                <div class="form-inline" >
+
+                <div class="form-inline">
                   <label>Please Enter Section Password</label>
                   <!-- <div data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer">
                     <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;"></i>
@@ -522,8 +526,7 @@
               </div>
               <div class="modal-footer mx-2" style="justify-content:space-between">
                 <p class="mb-0" style="font-weight: 500; color:#5bc0de;">
-                  <i class="fa fa-info-circle mr-2"></i>
-                  Section Password from Lecturer
+                  <i class="fa fa-info-circle mr-2"></i> Section Password from Lecturer
                 </p>
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="sectionRegister()">Join</button>
               </div>
