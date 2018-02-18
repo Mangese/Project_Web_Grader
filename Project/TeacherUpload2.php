@@ -805,7 +805,7 @@
             
             <!-- Modal -->
             <div class="modal fade" id="info1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-              <div class="modal-dialog" role="document">
+              <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header" hidden>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -821,7 +821,7 @@
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                          <img class="d-block img-fluid" src="./images/t-ploblem.JPG" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/t-problem.JPG" alt="First slide">
                         </div>
                         <div class="carousel-item">
                           <img class="d-block img-fluid" src="./images/t-modal-uploadProblem1.JPG" alt="Second slide">
