@@ -80,13 +80,14 @@
           }
           $sumMark = $sumMark + $teacherMark;
           $sumFullMark = $sumFullMark + $fullMarkModal;
-          echo "<td style='min-width:30px; justify-content:space-between;' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
+          echo "<td style='min-width:30px;' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
+          echo "<div class='form-inline justify-content-between'>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
 //               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71'></i>";
-              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
+              echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71; margin-right:5px' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
-                echo "<p style='color:#2ECC71'>($teacherMark pt.)</p>";
+                echo "<p style='min-width:30px; text-align:right; color:#2ECC71';>($teacherMark pt.)</p>";
               }
             }
             else {
