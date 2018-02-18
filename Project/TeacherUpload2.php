@@ -985,8 +985,8 @@
                       </div>
                       <div class="modal-body left">
                         <label>Class</label>
-                        <select class="form-control" name="createClass" id="createClass" style="width:80%" required oninvalid="this.setCustomValidity('Please select some class');"
-                          oninput="setCustomValidity('')" style="height:20px">
+                        <select class="form-control" name="createClass" id="createClass" style="width:80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some class');"
+                          oninput="setCustomValidity('')">
                                                 <option value="">Please Select Classroom</option>
                                             </select>
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
@@ -999,8 +999,8 @@
                         <label>Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control" name="semester" id="semester" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some semester');"
-                          oninput="setCustomValidity('')" style="height:20px">
+                        <select class="form-control" name="semester" id="semester" style="width: 80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some semester');"
+                          oninput="setCustomValidity('')">
                                                 <option value="">Semester</option>
                                                 <script>
                                                   for (var j = 1; j < 4; j++) {
@@ -1011,8 +1011,8 @@
                         <!-- </div> -->
 
                         <label>Year</label>
-                        <select class="form-control" name="year" id="year" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some year');"
-                          oninput="setCustomValidity('')" style="height:20px">
+                        <select class="form-control" name="year" id="year" style="width: 80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some year');"
+                          oninput="setCustomValidity('')">
                                                 <option value="">Year</option>
                                                     <script>
                                                       var cyear = new Date().getFullYear();
