@@ -698,7 +698,7 @@
 	    	  function ExportExcel(){
 			
 			  str = $("#selSectionRs").val();	
-			 window.open ('ExportResult.php?sid='+str,'_blank',false)
+			 window.open ('ExportResult.php?sid='+str,'_none',false)
 
 		  }
                   function fillTableResult() {
