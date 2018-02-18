@@ -79,7 +79,7 @@
   <body>
     <input id="uidmoc" type="hidden">
     <input id="utypemoc" type="hidden">
-    
+
     <form name="addAccount" method="post" action="">
       <!-- Modal -->
       <div class="modal fade" id="editAccount" role="dialog">
@@ -91,7 +91,7 @@
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body m-2 pb-0">
-              <div class="form-group row">
+              <div class="form-inline">
                 <div class="col-sm-4">
                   <label class="mt-2">Firstname</label>
                 </div>
