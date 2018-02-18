@@ -24,7 +24,7 @@
 
 body {
   background-color: #f5f5f5;
-  font-family: Poppins-Regular, sans-serif;
+  font-family: Poppins-Regular, sans-serif !important; 
 }
 .inputstl {
   padding: 9px;
