@@ -792,6 +792,12 @@
       <!-- Tab panes -->
       <div class="tab-content">
 
+        <style>
+          .modal-lg {
+            max-width: 1080px;
+          }
+        </style>
+
         <div class="tab-pane active" id="tab1" role="tabpanel">
           <!--Selection-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
