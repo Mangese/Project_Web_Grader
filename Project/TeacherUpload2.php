@@ -793,7 +793,7 @@
       <div class="tab-content">
 
         <style>
-          .modal-lg {
+          .modal-lg-custom {
             max-width: 1080px;
           }
         </style>
@@ -810,7 +810,7 @@
             
             <!-- Modal -->
             <div class="modal fade" id="info1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-              <div class="modal-dialog modal-lg" width="1080px" role="document">
+              <div class="modal-dialog modal-lg-custom" role="document">
                 <div class="modal-content">
                   <div class="modal-header" hidden>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -826,7 +826,7 @@
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                          <img class="d-block img-fluid" src="./images/t-homwork.JPG" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/t-problem.JPG" alt="First slide">
                         </div>
                         <div class="carousel-item">
                           <img class="d-block img-fluid" src="./images/t-modal-uploadProblem1.JPG" alt="Second slide">
@@ -1003,8 +1003,52 @@
 
           <!--Head part-->
           <div class="form-inline ml-auto mr-3" style="margin-top:20px;">
-            <i class="fa fa-info-circle ml-auto mr-2" style="color:#5bc0de; font-size:1.5rem;"></i>
+            <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;" data-toggle="modal" data-target="#info2"></i>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="info2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <div class="modal-dialog modal-lg" width="1080px" role="document">
+                <div class="modal-content">
+                  <div class="modal-header" hidden>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modelTitleId">Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li> 
+                      </ol>
+                      <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                          <img class="d-block img-fluid" src="./images/t-problem.JPG" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem1.JPG" alt="Second slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="modal-footer" hidden>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
             <!--Head 1-->
             <div class="form-group mx-sm-3">
