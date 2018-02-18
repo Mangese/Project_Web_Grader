@@ -115,24 +115,6 @@ tr {
   color: #ffffff;
   background-color: #1c9c95;
 }
-.fileContainer {
-  overflow: hidden;
-  position: relative;
-}
-
-.fileContainer [type='file'] {
-  cursor: inherit;
-  display: block;
-  font-size: 999px;
-  filter: alpha(opacity=0);
-  min-height: 100%;
-  min-width: 100%;
-  opacity: 0;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  top: 0;
-}
 
 .logout-btn {
   color: #ffffff !important;
@@ -224,4 +206,8 @@ tr {
   height: 235px;
   overflow-y: scroll;
   overflow-x: scroll;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 20px;
 }
