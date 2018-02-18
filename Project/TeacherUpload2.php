@@ -800,7 +800,7 @@
 
         <div class="tab-pane active" id="tab1" role="tabpanel">
           <!--Selection-->
-          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
+          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px; align-items:unset;">
             <div class="form-group mx-sm-3">
               <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()" style="height:20px">
                 <option value="">Please Select Class</option>
@@ -1137,7 +1137,7 @@
           <!--End Head part-->
 
           <!--Table part-->
-          <div class="table-wrapper-problem" style="height:200px">
+          <div class="table-wrapper-problem" style="height:205px">
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
@@ -1443,7 +1443,7 @@
 
         <div class="tab-pane" id="tab3" role="tabpanel">
           <!--Head part-->
-          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px">
+          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px; align-items:unset;">
             <div class="form-group mx-sm-3">
               <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();" style="height:20px">
                   <option value="">Please Select Section</option>
