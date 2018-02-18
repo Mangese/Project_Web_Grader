@@ -153,7 +153,8 @@
                   </select>
                 </div>
                 <div class="col-sm-1">
-                  <input class="form-check-input" type="checkbox" style=" float: right" value="" id="defaultCheckDepart" onclick="checkBoxEdit(5)">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckDepart"
+                    onclick="checkBoxEdit(5)">
                 </div>
               </div>
               <div class="form-group row">
