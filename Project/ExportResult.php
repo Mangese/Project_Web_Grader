@@ -4,7 +4,7 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
 	mysql_query("use grader;");
   $SID = $_REQUEST['sid'];
   echo "ID,Name";
-  $NumberOfFile = mysql_query("select count(*) as num from homework where s_id = '$SID';");
+  $NumberOfFile = mysql_query("select count(*) as num from homework where s_id = '$SID' and deleteflag is null;");
   while($row = mysql_fetch_assoc($NumberOfFile))
   {
   $NumFile = $row['num'];
