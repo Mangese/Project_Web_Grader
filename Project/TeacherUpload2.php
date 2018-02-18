@@ -909,14 +909,14 @@
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
 
-                    <label class="radio-inline">
-                                    <input type="radio" name="optradio" value="C" required>C
+                    <label class="radio-inline mr-2">
+                                    <input type="radio" class="mr-1" name="optradio" value="C" required>C
+                                </label>
+                    <label class="radio-inline mr-2">
+                                    <input type="radio" class="mr-1" name="optradio"  value="Cpp">C++
                                 </label>
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio"  value="Cpp">C++
-                                </label>
-                    <label class="radio-inline">
-                                    <input type="radio" name="optradio"  value="Java">Java
+                                    <input type="radio" class="mr-1" name="optradio"  value="Java">Java
                                 </label>
                   </div>
 
