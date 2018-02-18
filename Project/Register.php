@@ -69,7 +69,9 @@ mysql_query("use grader;");
 if($AT=='T'){
 // echo "UserType :".$_POST["addUserType"];
 mysql_query("iNSERT INTO user (USERNAME,PASSWORD,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'T','$FN','$LN','$DE','$EM','$SID');",$conn); 
-
+}
+else if($AT=='A'){
+   mysql_query("iNSERT INTO user (USERNAME,PASSWORD,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'A','$FN','$LN','$DE','$EM','$SID');",$conn);   
 }
 else{
   // echo "elselsesese";

@@ -21,7 +21,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
     crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+  />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 
@@ -44,13 +45,15 @@
       <div class="dropdown">
         <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button" style="width: 70%">Account</button>
+          <button class="dropdown-item" type="button" style="width: 70%" onclick="getValueForEdit()" data-toggle="modal" data-target="#editAccount">Account</button>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" type="button" style="width: 70%" onclick="logout()">Logout</button>
         </div>
       </div>
     </form>
   </nav>
+  <!-- <input id="SessionUsermoc" type=""> -->
+  <!-- <input id="SessionUserEditmoc" type=""> -->
 </head>
 <?php
   session_start();
@@ -62,17 +65,136 @@
   else
   {
   echo "<script> document.getElementById('SessionUser').innerText = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>";
+  /* echo "<script> document.getElementById('SessionUsermoc').value = '".$_SESSION["firstname"]." ".$_SESSION["lastname"]."'; </script>"; */
+  
   $UT = $_SESSION["utype"];
   if(strcmp($UT,"T"))
   {
 	  echo "<script> alert('Invalid Page'); window.location = 'StudentUpload1.php'; </script>";
   }
   }
+  
 ?>
 
   <body>
-    <!--Start script-->
+    <input id="uidmoc" type="hidden">
+    <input id="utypemoc" type="hidden">
+    <form name="addAccount" method="post" action="">
+      <!-- Modal -->
+      <div class="modal fade" id="editAccount" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Edit Account</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" disabled required
+                    oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');" oninput="setCustomValidity('')"
+                    minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckFirstname"
+                    onclick="checkBoxEdit(1)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editLastname" name="editLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
+                    oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckLastname"
+                    onclick="checkBoxEdit(2)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
+                    oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckUsername"
+                    onclick="checkBoxEdit(3)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="editStudentID" name="editStudentID" disabled placeholder="Student ID (EX. 5713XXX)"
+                    required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
+                    minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckStdID"
+                    onclick="checkBoxEdit(4)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
+                    oninput="setCustomValidity('')">
+                    <option value="">Department</option>
+                    <option value="BE">Biomedical Engineering</option>
+                    <option value="CE">Civil Engineering</option>
+                    <option value="CHE">Chemical Engineering</option>
+                    <option value="CO">Computer Engineering</option>
+                    <option value="EE">Electrical Engineering</option>
+                    <option value="IE">Industrial Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                  </select>
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 1.3rem; float: right" value="" id="defaultCheckDepart"
+                    onclick="checkBoxEdit(5)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
+                    oninput="setCustomValidity('')" maxlength=30/>
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckEmail"
+                    onclick="checkBoxEdit(6)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="password" class="form-control" id="editPassword" name="editPassword" disabled placeholder="New Password" minlength=6
+                    maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
+                    onkeyup='checkPassEdit();' />
+                </div>
+                <div class="col-sm-1">
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckPass" onclick="checkBoxEdit(7)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-8">
+                  <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
+                    minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <p id="message"></p>
+                </div>
+              </div>
+            </div>
+            <!--End Modal Body-->
+            <div class="modal-footer">
+              <!-- <button type="submit" class="btn btn-success" onclick="editAccountManagementOnClick(); $('#modalID').modal('hide')">Save</button> -->
+              <button type="button" class="btn btn-success" data-dismiss="modal" onclick="editAccountOnClick();">Save</button>
+              <!-- <button type="submit" class="btn btn-success" onclick="">Save</button> -->
 
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!--Start script-->
     <script>
                   $(document).ready(function () {
                     fillDropDownSection();
@@ -84,6 +206,7 @@
                     fillDropResult();
                     fillGetTableProblem();
 
+                    // document.getElementById('SessionUser').innerText = document.getElementById('SessionUsermoc').value
 
                   });
                   $('#myTab a').click(function (e) {
@@ -118,6 +241,192 @@
                     });
 
                   }
+
+                  function getValueForEdit() {
+                    // alert("click getValueForEdit");
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "EditYourSelfGetValue.php", true);
+                    xmlhttp.send();
+                  }
+
+                  function checkBoxEdit(num) {
+                    EditFN = document.getElementById("editFirstname");
+                    EditLN = document.getElementById("editLastname");
+                    EditUN = document.getElementById("editUsername");
+                    EditsID = document.getElementById("editStudentID");
+                    EditDM = document.getElementById("editDepartment");
+                    EditMail = document.getElementById("editEmail");
+                    EditP = document.getElementById("editPassword");
+                    EditP2 = document.getElementById("editPassword2");
+
+                    if (num == 1) {
+                      if (document.getElementById("defaultCheckFirstname").checked == true) {
+                        EditFN.disabled = false;
+                      } else {
+                        EditFN.disabled = true;
+                      }
+                    } else if (num == 2) {
+                      if (document.getElementById("defaultCheckLastname").checked == true) {
+                        EditLN.disabled = false;
+                      } else {
+                        EditLN.disabled = true;
+                      }
+                    } else if (num == 3) {
+                      if (document.getElementById("defaultCheckUsername").checked == true) {
+                        EditUN.disabled = false;
+                      } else {
+                        EditUN.disabled = true;
+                      }
+                    } else if (num == 4) {
+                      if (document.getElementById("defaultCheckStdID").checked == true) {
+                        EditsID.disabled = false;
+                      } else {
+                        EditsID.disabled = true;
+                      }
+                    } else if (num == 5) {
+                      if (document.getElementById("defaultCheckDepart").checked == true) {
+                        EditDM.disabled = false;
+                      } else {
+                        EditDM.disabled = true;
+                      }
+                    } else if (num == 6) {
+                      if (document.getElementById("defaultCheckEmail").checked == true) {
+                        EditMail.disabled = false;
+                      } else {
+                        EditMail.disabled = true;
+                      }
+                    } else if (num == 7) {
+                      if (document.getElementById("defaultCheckPass").checked == true) {
+                        EditP.disabled = false;
+                        EditP2.disabled = false;
+                      } else {
+                        EditP.disabled = true;
+                        EditP2.disabled = true;
+                      }
+                    }
+                  }
+
+                  function checkPassEdit() {
+                    var password = document.getElementById("editPassword")
+                    var confirm_password = document.getElementById("editPassword2");
+                    var message = document.getElementById('message');
+                    confirm_password.setCustomValidity('');
+                    if (password.value == confirm_password.value) {
+                      message.style.color = 'green';
+                      message.innerHTML = '*matching*';
+                    } else {
+                      message.style.color = 'red';
+                      message.innerHTML = "*Passwords Doesn't Match *";
+                      confirm_password.setCustomValidity("Passwords Doesn't Match!!");
+                    }
+                  }
+
+                  function editAccountOnClick() {
+                    var check = 0;
+                    // alert("save");
+                    if (document.getElementById("defaultCheckPass").checked == true && document.getElementById("editPassword").value == document.getElementById("editPassword2").value && document.getElementById("editPassword").value != "") {
+                      // alert("check pass");
+                      check = 1;
+                    } else if (document.getElementById("defaultCheckPass").checked == false) {
+                      // alert("dont check pass");
+                      check = 2;
+                    }
+
+                    if (check == 1 || check == 2) {
+                      // alert("check is" + check);
+                      var uidreq = document.getElementById("uidmoc").value;
+                      var utypereq = document.getElementById("utypemoc").value;
+                      // alert(utypereq);
+
+                      // alert(uidreq);
+
+
+                      var fnamesend = "";
+                      var lnamesend = "";
+                      var unamesend = "";
+                      var sidsend = "";
+                      var departsend = "";
+                      var emailsend = "";
+                      var passSend = "";
+                      var fnameEdit = document.getElementById("editFirstname").value;
+                      var lnameEdit = document.getElementById("editLastname").value;
+                      // alert(fnameEdit);
+                      // alert(lnameEdit);
+
+
+                      if (document.getElementById("defaultCheckFirstname").checked == true) {
+                        var fnamereq = document.getElementById("editFirstname").value;
+                        // alert(fnamereq);
+                        fnamesend = "&fnamereq=" + fnamereq;
+                      }
+                      // alert(fname);
+                      if (document.getElementById("defaultCheckLastname").checked == true) {
+                        var lnamereq = document.getElementById("editLastname").value;
+                        // alert(lnamereq);
+                        lnamesend = "&lnamereq=" + lnamereq;
+                      }
+
+                      if (document.getElementById("defaultCheckUsername").checked == true) {
+                        var unamereq = document.getElementById("editUsername").value;
+                        // alert(unamereq);
+                        unamesend = "&unamereq=" + unamereq;
+                      }
+
+                      if (document.getElementById("defaultCheckStdID").checked == true) {
+                        var sidreq = document.getElementById("editStudentID").value;
+                        // alert(sidreq);
+                        sidsend = "&sidreq=" + sidreq;
+                      }
+
+                      if (document.getElementById("defaultCheckDepart").checked == true) {
+                        var departreq = document.getElementById("editDepartment").value;
+                        // alert(departreq);
+                        departsend = "&departreq=" + departreq;
+                      }
+
+                      if (document.getElementById("defaultCheckEmail").checked == true) {
+                        var emailreq = document.getElementById("editEmail").value;
+                        // alert(emailreq);
+                        emailsend = "&emailreq=" + emailreq;
+                      }
+
+                      if (document.getElementById("defaultCheckPass").checked == true) {
+                        var passreq = document.getElementById("editPassword").value;
+                        // alert(passreq);
+                        passSend = "&passreq=" + passreq;
+                      }
+
+
+
+                      var xmlhttp = new XMLHttpRequest();
+                      xmlhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                          // alert("success");
+                          eval(this.responseText);
+                        }
+                      }
+                      xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq + "&fnameEdit=" + fnameEdit + "&lnameEdit=" + lnameEdit, true);
+                      xmlhttp.send();
+                      console.log(fnameEdit);
+                      console.log(lnameEdit);
+
+                      // document.getElementById('SessionUserEditmoc').value = fnamereq + ' ' + lnamereq;
+                      // document.getElementById('SessionUser').innerText = document.getElementById('SessionUserEditmoc').value;
+
+
+                      //alert('SU = ' + SU);
+                    }
+                    else {
+                      document.getElementById("uidmoc").value = "";
+                      alert("password fail");
+                    }
+                  }
+
                   function ResultModalHeader(x, y, z, qq, stuid, submitcount, getFullMark) {
                     // alert(x);
                     // // alert(y);
@@ -360,9 +669,20 @@
                   }
                   function fillTableResult() {
                     // x = document.getElementById("selSectionRs").value;
+
                     $('#Result thead tr').remove();
                     $('#Result tbody tr').remove();
                     str = $("#selSectionRs").val();
+
+                    var exp = document.getElementById('exportExcel');
+
+                    if (str != "") {
+
+                      exp.style.display = 'block';
+                    }
+                    else {
+                      exp.style.display = 'none';
+                    }
 
                     uidreq = $("#idmoc").val();
                     hidreq = $("#pidmoc").val();
@@ -445,8 +765,8 @@
     </script>
 
     <script>
-      $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();   
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
     <!--End script-->
@@ -590,13 +910,13 @@
                                 </label><br>
 
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "optradio" value="C" required>C
+                                    <input type="radio" name="optradio" value="C" required>C
                                 </label>
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "optradio" value="Cpp">C++
+                                    <input type="radio" name="optradio"  value="Cpp">C++
                                 </label>
                     <label class="radio-inline">
-                                    <input type="radio" name="optradio" id = "optradio" value="Java">Java
+                                    <input type="radio" name="optradio"  value="Java">Java
                                 </label>
                   </div>
 
@@ -645,7 +965,8 @@
             <!--Head 2-->
             <div class="form-group mx-sm-4">
               <label for="staticPassword" style="margin-right:12px">Password  </label>
-              <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px" data-toggle="tooltip" data-placement="bottom" title="Password for students to join Section">
+              <input type="text" readonly class="form-control" id="sectionPassword" style="width:150px" data-toggle="tooltip" data-placement="bottom"
+                title="Password for students to join Section">
             </div>
 
             <!--Head 3-->
@@ -1040,7 +1361,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper">
+          <div class="table-wrapper" style="height: 235px;">
             <table class="table table-bordered table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
@@ -1069,8 +1390,18 @@
           </div>
           <!--End Table part-->
 
+          <!--Foot part-->
+          <div class="foot-t left" style="margin-top:20px;">
+            <button type="button" class="btn btn-secondary" id="exportExcel" onclick="exportExcel()">Export Excel</button>
+          </div>
+
           <!--Start Sort Script-->
           <script>
+                    function exportExcel() {
+                      alert("exportExcel");
+
+                    }
+
                     function sortTable(col) {
                       var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
                       table = document.getElementById("Result");

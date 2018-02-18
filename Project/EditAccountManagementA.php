@@ -5,8 +5,26 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
+
+    $MYTYPE = $_SESSION["utype"];
+    $FNE = $_REQUEST["fnameEdit"];
+    $LNE = $_REQUEST["lnameEdit"];
+  
+    // echo "alert('in php');";
+    
     $UID = $_REQUEST["uidreq"];
     $UT = $_REQUEST["utypereq"];
+
+    // echo "console.log('testlog');";
+    //  echo "console.log('$FNE');";
+    //  echo "console.log('$LNE');";
+     $FNE1 = "'".$FNE."'";
+     $LNE1 = "'".$LNE."'";
+    //  echo "console.log($FNE1);";
+    //  echo "console.log($LNE1);";
+
+    
+    // echo "alert('$MYTYPE');";
 
     $FN = $_REQUEST["fnamereq"];
     $LN = $_REQUEST["lnamereq"];
@@ -39,7 +57,8 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('dp '+ $DP1);";
     // echo "alert('email '+ $EM1);";
     // echo "alert('PW '+ $PW1);";
-     
+    $topEdit='';
+    
     $subquery="uPDATE user" ;
     $subquery=$subquery. " set ";
     $subquery=$subquery. ' USER_TYPE =  "'.$UT.'"';
@@ -72,10 +91,31 @@ $conn = mysql_connect("localhost","mangese","000000");
       $subquery=$subquery. ' ,Password   =  md5("'.$PW.'")';
     // echo "alert('PW OK');";
     }
-    
+
+    if($MYTYPE!='A'){
+      if ($FN!=''){
+        // $topEdit=$topEdit.$FN.' ';
+        $_SESSION["firstname"] = $FN;
+      }
+      else{
+        // $topEdit=$topEdit.$FNE.' ';
+        $_SESSION["firstname"] = $FNE;
+      }
+      if ($LN!=''){
+        // $topEdit=$topEdit.$LN; 
+        $_SESSION["lastname"] = $LN;
+      }else{
+        // $topEdit=$topEdit.$LNE; 
+        $_SESSION["lastname"] = $LNE;
+    }
+        echo "location.reload();";
+    }
 
       // echo "alert('$subquery');";
+      // echo "alert('$topEdit');";
       // echo "alert('$subquery WHERE U_ID =$UID;');";
     $result = mysql_query("$subquery WHERE U_ID =$UID;");
+
+    
   }
 ?>

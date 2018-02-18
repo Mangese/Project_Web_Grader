@@ -107,7 +107,7 @@ if(!isset($_SESSION["user"]))
     function userType() {
       // alert("inusertype");
       typeSelect = $("#addUserType").val();
-      if (typeSelect == 'T') {
+      if (typeSelect == 'T' || typeSelect == 'A') {
         // alert("addUserType =T");
         addUserDisableTrue();
         addUserDisableFalse();
@@ -606,6 +606,7 @@ if(!isset($_SESSION["user"]))
                       <select class="form-control" id="addUserType" name="addUserType" onchange="userType()" required oninvalid="this.setCustomValidity('Please select some type');"
                         oninput="setCustomValidity('')">
                         <option value="">User type</option>
+                        <option value="A">Admin</option>
                         <option value="T">Lecturer</option>
                         <option value="S">Student</option>
                       </select>
@@ -1109,7 +1110,7 @@ if(!isset($_SESSION["user"]))
 
         <script>
             function fillFileManagement() {
-              alert("in testDate");
+              //alert("in testDate");
               var sdate = $('#startDate').datepicker().val();
               var edate = $('#endDate').datepicker().val();
               // if (document.getElementById('flag').checked) {
@@ -1125,15 +1126,16 @@ if(!isset($_SESSION["user"]))
               }
 
               var tFilesearch = document.getElementById('typeFilemoc').value;
-              alert("start date is: " + sdate);
-              alert("end date is: " + edate);
-              // alert("type file is: " + tFile);
-              alert(tFilesearch);
-
+              //alert("start date is: " + sdate);
+              //alert("end date is: " + edate);
+              //alert("type file is: " + tFile);
+              //alert(tFilesearch);
+              $('#FileManagementTb tbody tr').remove();
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                  $('#SectionManagementTb').append(this.responseText);
+
+                  $('#FileManagementTb').append(this.responseText);
                 }
               }
               xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
@@ -1141,49 +1143,76 @@ if(!isset($_SESSION["user"]))
 
 
             }
+            function selectallFile(source) {
+              checkboxes = document.getElementsByName('foo');
+              for (var i = 0, n = checkboxes.length; i < n; i++) {
+                checkboxes[i].checked = source.checked;
+              }
+            }
+            function checkFileDelete() {
+              checkboxes = document.getElementsByName('foo');
+              for (var i = 0, n = checkboxes.length; i < n; i++) {
+                if (checkboxes[i].checked) {
+                  var xmlhttp = new XMLHttpRequest();
+                  xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                      eval(this.responseText);
+                    }
+                  }
+                  xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
+                  xmlhttp.send();
+                }
+              }
+            }
+            function toggleTableHeader(a) {
+              var b = document.getElementById("fileSearchRadio");
+              if (a == 'flag') {
+
+                b.style.visibility = 'hidden';
+              }
+              else {
+                b.style.visibility = 'visible';
+              }
+            }
         </script>
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="SectionManagementTb">
+          <table class="table table-striped table-hover main" id="FileManagementTb">
             <thead class="thead">
-              <tr>
+              <tr id="fileSearchRadio">
                 <th style="width:10%" onclick="sortTable1(0)">
                   <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input">
+                      <input type="checkbox" onclick = "selectallFile(this);" class="form-check-input">
                       All
                     </label>
                 </th>
-                <th style="width:65%" onclick="sortTable1(1)">
+                <th style="width:10%" onclick="sortTable1(1)">
+                  User ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:20%" onclick="sortTable1(1)">
+                  Homework ID
+                  <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                </th>
+                <th style="width:30%" onclick="sortTable1(1)">
                   File Name
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
-                <th style="width:35%" onclick="sortTable1(2)">
+                <th style="width:30%" onclick="sortTable1(2)">
                   Submit Date
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="width:10%">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
-                  </label>
-                </td>
-                <td style="width:65%">
-                  PrintStar.c
-                </td>
-                <td style="width:35%">
-                  August 2, 2013
-                </td>
-              </tr>
+
             </tbody>
           </table>
         </div>
         <!--End Table-->
 
-        <button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+        <button type="button" class="btn btn-danger" onclick="checkFileDelete();"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
 
       </div>
       <!-- End Tab4 -->

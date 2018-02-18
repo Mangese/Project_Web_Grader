@@ -177,9 +177,9 @@ tr {
 }
 
 .file-custom:before {
-  top: -.075rem;
-  right: -.075rem;
-  bottom: -.075rem;
+  top: -0.075rem;
+  right: -0.075rem;
+  bottom: -0.075rem;
   z-index: 6;
   display: block;
   content: 'Browse';
@@ -221,7 +221,7 @@ tr {
 }
 
 .table-wrapper {
-  height: 285px;
+  height: 235px;
   overflow-y: scroll;
   overflow-x: scroll;
 }

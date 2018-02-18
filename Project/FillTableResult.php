@@ -25,7 +25,7 @@
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
-            echo "<th style='min-width:30px'>";
+            echo "<th style='min-width:70px'>";
               echo "Ex$i ";
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];

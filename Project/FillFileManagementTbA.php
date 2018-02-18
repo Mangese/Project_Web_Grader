@@ -10,10 +10,56 @@
     $DE = $_REQUEST["dateEnd"];
     
     $message = "test alert in php";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    echo "<script type='text/javascript'>alert('$TFS');</script>";
-    echo "<script type='text/javascript'>alert('$DS');</script>";
-    echo "<script type='text/javascript'>alert('$DE');</script>";
+   // echo "<script type='text/javascript'>alert('$message');</script>";
+   // echo "<script type='text/javascript'>alert('$TFS');</script>";
+   // echo "<script type='text/javascript'>alert('$DS');</script>";
+  //  echo "<script type='text/javascript'>alert('$DE');</script>";
+    $SQL = '';
+    if($TFS == 'flag')
+    {
+      $SQL = $SQL."select submit_date as date,source_file as file,u_id as uid,h_id as hid from submit where 1=1 ";
+    }
+    else
+    {
+ //     echo "<script type='text/javascript'>alert('2');</script>";
+    }
+    
+    if($DS != '')
+    {
+      $SQL = $SQL." and submit_date >= '$DS' ";
+    }
+    if($DE != '')
+    {
+      $SQL = $SQL." and submit_date <= '$DE' "; 
+    }
+    $SQL = $SQL.";";
+    $result = mysql_query($SQL);
+    while($row = mysql_fetch_assoc($result))
+     {
+      $UID = $row['uid'];
+      $TI = $row['date'];
+      $HID = $row['hid'];
+      $F = $row['file'];
+      echo "<tr>";
+       echo "<td style='width:10%'>";
+       echo "<label class='form-check-label'>";
+       echo "      <input type='checkbox' name = 'foo' value = '$F' class='form-check-input'>";
+       echo "     </label>";
+        echo "</td>";
+      echo "<td style='width:10%'>";
+       echo "$UID";
+       echo "</td>";
+      echo "<td style='width:20%'>";
+       echo "$HID";
+       echo "</td>";
+      echo "<td style='width:30%'>";
+       echo "$F";
+       echo "</td>";
+      echo "<td style='width:30%'>";
+       echo "$TI";
+       echo "</td>";
+      echo "</tr>";
+    }
     // $result = mysql_query(" select username as userName,student_id as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user  ;");
     // if($SIDSR == ''){
     //   $result = mysql_query("select u_id as uid,user_type as u_type,username as userName,(case when student_id is null then '' else student_id end) as Student_ID,firstname as firstName,lastname as lastName,department as department,email as Email from user where user_type like '%$TSR%' and firstname like '%$NSR%' ; ");
