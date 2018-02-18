@@ -4,9 +4,16 @@ $conn = mysql_connect("localhost","mangese","000000");
   {
     session_start();
     mysql_query("use grader;");
-    mysql_query("set NAMES UTF8;");
     $UID = $_REQUEST["uidDelete"];
-    $UID1 = "'".$UID."'";
-    echo "alert('in DeleteAccountManagementA.php uid:' + $UID1);";
+    $result = mysql_query("select source_file as filename from submit where u_id = $UID;");
+    while($row = mysql_fetch_assoc($result))
+    {
+    $F = $row["filename"];
+      exec("rm File/$F1 ");
+
+    }
+        mysql_query("delete from submit where u_id = '$UID';");
+        mysql_query("delete from register where u_id = '$UID';");
+        mysql_query("delete from user where u_id = '$UID';");
   }
 ?>
