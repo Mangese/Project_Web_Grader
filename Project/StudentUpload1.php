@@ -203,8 +203,11 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-12">
-                  <p id="message"></p>
+                <div class="col-sm-4">
+                  
+                </div>
+                <div class="col-sm-7">
+                  <p id="message" style="font-weight: 500;"></p>
                 </div>
               </div>
             </div>
@@ -325,10 +328,10 @@
                   confirm_password.setCustomValidity('');
                   if (password.value == confirm_password.value) {
                     message.style.color = 'green';
-                    message.innerHTML = '*matching*';
+                    message.innerHTML = '*Matching*';
                   } else {
                     message.style.color = 'red';
-                    message.innerHTML = "*Passwords Doesn't Match *";
+                    message.innerHTML = "*Passwords Doesn't Match*";
                     confirm_password.setCustomValidity("Passwords Doesn't Match!!");
                   }
                 }
