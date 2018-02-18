@@ -78,12 +78,13 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
             }
         }
           $passPerSum = $sumPass.'/'.$sumPlob;
-          echo "=$passPerSum,";
+          echo '"'.'$passPerSum'.'",';
           
           $passPerSum = $sumPass.'/'.$sumPlob;
-          echo "=$sumMark";
+          echo '"'.'$sumMark';
           echo "/";
-          echo "$sumFullMark\n";
+          echo "$sumFullMark".'"';
+	    echo "\n";
       
     }
     
