@@ -11,5 +11,5 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
   echo "Ex".$NumFile.",";
   echo "Full Mark For Ex".$NumFile.",";
   }
-  echo "TotalPass,SumPoints";
+  echo "TotalPass,SumPoints\n";
 ?>
