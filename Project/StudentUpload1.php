@@ -25,6 +25,7 @@
 
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
   <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>
 
@@ -176,15 +177,17 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body mx-2">
-                <div class="form-inline" style="justify-content:space-between">
+              <!-- style="justify-content:space-between" -->
+                <div class="form-inline" >
                   <label>Please Enter Section Password</label>
-                  <div data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer">
+                  <!-- <div data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer">
                     <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;"></i>
-                  </div>
+                  </div> -->
                 </div>
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
               <div class="modal-footer">
+                <p>Section Password from Lecturer</p>
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="sectionRegister()">Join</button>
               </div>
             </div>
