@@ -897,17 +897,17 @@
                     <label class="file mb-3">
                                 <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required />
                                 <span class="file-custom" style="width:132%"></span>
-                                </label><br><br>
+                                </label><br>
                     <label>Input</label><br>
                     <label class="file mb-3">
                                 <input type="file" id = "InFile" name = "InFile" accept=".zip" required  />
                                 <span class="file-custom" style="width:132%"></span>
-                                </label><br><br>
+                                </label><br>
                     <label>Output</label><br>
                     <label class="file mb-3">
                                 <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required />
                                 <span class="file-custom" style="width:132%"></span>
-                                </label><br>
+                                </label>
                     <label>Language</label><br>
                     <label class="radio-inline ml-2 mr-4">
                                     <input type="radio" class="mr-1" name="optradio" value="C" required>C
