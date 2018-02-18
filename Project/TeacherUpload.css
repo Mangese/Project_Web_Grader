@@ -198,7 +198,7 @@ tr {
 }
 
 .table-wrapper-problem {
-  height: 235px;
+  height: 245px;
   overflow-y: scroll;
 }
 
@@ -209,6 +209,3 @@ tr {
 }
 
 
-.modal-lg {
-    max-width: 1000px;
-}
