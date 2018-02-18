@@ -130,10 +130,10 @@
                     required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
                     minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                 </div>
-                <div class="col-sm-1">
+                <!-- <div class="col-sm-1">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckStdID"
                     onclick="checkBoxEdit(4)">
-                </div>
+                </div> -->
               </div>
               <div class="form-group row">
                 <div class="col-sm-4">
@@ -281,13 +281,15 @@
                     } else {
                       EditUN.disabled = true;
                     }
-                  } else if (num == 4) {
-                    if (document.getElementById("defaultCheckStdID").checked == true) {
-                      EditsID.disabled = false;
-                    } else {
-                      EditsID.disabled = true;
-                    }
-                  } else if (num == 5) {
+                  }
+                  // else if (num == 4) {
+                  //   if (document.getElementById("defaultCheckStdID").checked == true) {
+                  //     EditsID.disabled = false;
+                  //   } else {
+                  //     EditsID.disabled = true;
+                  //   }
+                  // }
+                  else if (num == 5) {
                     if (document.getElementById("defaultCheckDepart").checked == true) {
                       EditDM.disabled = false;
                     } else {
