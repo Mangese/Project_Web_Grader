@@ -889,27 +889,27 @@
 
                   <div class="modal-body left">
                     <input type='hidden' name="ClassID" id="ClassID">
-                    <label>Problem name : </label><br>
-                    <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control" style="width:90%" placeholder="Problem Name"
+                    <label>Problem name</label><br>
+                    <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control mb-3" style="width:90%" placeholder="Problem Name"
                       required oninvalid="this.setCustomValidity('Problem name is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 4');"
-                      oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" /><br>
-                    <label>File : </label><br>
-                    <label class="file">
+                      oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" />
+                    <label>File</label><br>
+                    <label class="file mb-3">
                                 <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br><br>
-                    <label>Input : </label><br>
-                    <label class="file">
+                    <label>Input</label><br>
+                    <label class="file mb-3">
                                 <input type="file" id = "InFile" name = "InFile" accept=".zip" required  />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br><br>
-                    <label>Output : </label><br>
-                    <label class="file">
+                    <label>Output</label><br>
+                    <label class="file mb-3">
                                 <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required />
                                 <span class="file-custom" style="width:132%"></span>
-                                </label><br><br>
-
-                    <label class="radio-inline mr-4">
+                                </label><br>
+                    <label>Language</label><br>
+                    <label class="radio-inline ml-2 mr-4">
                                     <input type="radio" class="mr-1" name="optradio" value="C" required>C
                                 </label>
                     <label class="radio-inline mr-4">
