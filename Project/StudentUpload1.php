@@ -91,12 +91,12 @@
               <h4 class="modal-title">Edit Account</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body mx-2">
+            <div class="modal-body mx-3">
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Firstname</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="text" class="form-control" id="editFirstname" name="editFirstname" placeholder="Firstname" disabled required
                     oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');" oninput="setCustomValidity('')"
                     minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
@@ -107,10 +107,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Lastname</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="text" class="form-control" id="editLastname" name="editLastname" placeholder="Lastname" disabled required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                     oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                 </div>
@@ -120,10 +120,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Username</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Username" disabled required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                     oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
                 </div>
@@ -133,10 +133,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Student ID</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="text" class="form-control" id="editStudentID" name="editStudentID" disabled placeholder="Student ID (EX. 5713XXX)"
                     required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');" oninput="setCustomValidity('')"
                     minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
@@ -147,10 +147,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Department</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
                     oninput="setCustomValidity('')">
                     <option value="">Department</option>
@@ -168,10 +168,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Email</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
                     oninput="setCustomValidity('')" maxlength=30/>
                 </div>
@@ -181,10 +181,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>New Password</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="password" class="form-control" id="editPassword" name="editPassword" disabled placeholder="New Password" minlength=6
                     maxlength=30 required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                     onkeyup='checkPassEdit();' />
@@ -194,10 +194,10 @@
                 </div>
               </div>
               <div class="form-group row">
-                <div class="col-sm-5">
+                <div class="col-sm-4">
                   <label>Confirm Password</label>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="password" class="form-control" id="editPassword2" name="editPassword2" disabled placeholder="Confirm New Password"
                     minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
                 </div>
