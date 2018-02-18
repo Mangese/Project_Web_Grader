@@ -21,13 +21,13 @@
       echo "<td style='width:40%' class = 'use'>";
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:20%'>";
+      echo "<td style='width:20%; text-align:center;'>";
       echo "$UD";
       echo "</td>";
-      echo "<td style='width:20%'>";
+      echo "<td style='width:20%; text-align:center;'>";
       echo "$LN";
       echo "</td>";
-      echo "<td style='width:20%'>";
+      echo "<td style='width:20%; text-align:center;'>";
       echo "<button type='button' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#modalChackDelete' data-backdrop='static' data-keyboard='false' onclick = 'DeleteProblem(this,$PID)';>Delete</button>";
       echo "</td>";
       echo "</tr>";

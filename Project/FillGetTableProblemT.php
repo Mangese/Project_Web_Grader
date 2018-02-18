@@ -32,7 +32,7 @@
       echo "<td style='width:13%'>";
       echo "<input type='text' class='form-control' style='width:50%' id = '$fullMarkName' placeholder='Mark'";
       echo "</td>";
-      echo "<td style='width:10%'>";
+      echo "<td style='width:10%; text-align:center;'>";
       echo "$LN";
       echo "</td>";
       echo "<td style='width:25%'>";
@@ -60,7 +60,7 @@
       echo "</div>";
       echo "</td>";
       echo "<td style='width:9%' >";
-      echo "<input type='checkbox' name='selectedProblemToAssign' value = '$PID' ><br>";
+      echo "<input type='checkbox' name='selectedProblemToAssign' value = '$PID' style='text-align:center;'><br>";
       echo "</td>";
       echo "</tr>";
     }

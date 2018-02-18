@@ -25,20 +25,21 @@ if($conn != FALSE)
     echo "<td style='width:7%'>";
     echo "$RowNum";
     echo "</td>";
-    echo "<td style='width:23%'>";
+    echo "<td style='width:23%; text-align:center;'>";
     echo "$SD";
     echo "</td>";
-    echo "<td style='width:23%'>";
+    echo "<td style='width:23%; text-align:center;'>";
     echo "$ST";
     echo "</td>";
-    echo "<td style='width:14%'>";
+    echo "<td style='width:14%; text-align:center;'>";
     echo "$STA";
     echo "</td>";
-    echo "<td style='width:15%'>";
+    echo "<td style='width:15%; text-align:center;'>";
     echo "$TC";
     echo "</td>";
-    echo "<td style='width:18%'>";
-    echo "<a href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
+    echo "<td style='width:18%; text-align:center;'>";
+    // echo "<a href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
+    echo "<button type='button' class='btn btn-info btn-sm' href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></button>"
     echo "</td>";
    
     echo "</tr>";

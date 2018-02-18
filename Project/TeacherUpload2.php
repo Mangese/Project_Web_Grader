@@ -819,7 +819,7 @@
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%">
+                  <th style="width:20%; text-align:center;">
                     Delete
                   </th>
                 </tr>
@@ -1072,7 +1072,7 @@
                     Due Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:10%">
+                  <th style="width:10%; text-align:center;">
                     Delete
                   </th>
                 </tr>
@@ -1266,19 +1266,19 @@
                           <th style="width:18%">
                             Exam name
                           </th>
-                          <th style="width:13%">
+                          <th style="width:13%; text-align:center;">
                             Full mark
                           </th>
                           <th style="width:10%">
                             Language
                           </th>
-                          <th style="width:25%">
+                          <th style="width:25%; text-align:center;">
                             Deadline
                           </th>
-                          <th style="width:25%">
+                          <th style="width:25%; text-align:center;">
                             Time
                           </th>
-                          <th style="width:9%">
+                          <th style="width:9%; text-align:center;">
                             Select
                           </th>
                         </tr>
@@ -1376,7 +1376,7 @@
                   <script>
                     var numOfProb = 5
                     for (var i = 1; i <= numOfProb; i++)
-                      document.write('<th style="min-width:30px">ex ' + i + '</th>')
+                      document.write('<th style="min-width:30px; text-align:center;">Ex ' + i + '</th>')
                   </script>
                   <th style="width:100px" onclick="sortTable(22)">
                     Pass
@@ -1490,7 +1490,7 @@
                         <th style="width:15%">
                           Test case
                         </th>
-                        <th style="width:18%">
+                        <th style="width:18%; text-align:center;">
                           Download
                         </th>
                       </tr>
