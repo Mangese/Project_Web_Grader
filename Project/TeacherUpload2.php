@@ -795,15 +795,13 @@
 
         <div class="tab-pane active" id="tab1" role="tabpanel">
           <!--Selection-->
-          <div>
-            <i class="fa fa-info-circle ml-auto mr-2" style="color:#5bc0de; font-size:2rem;"></i>
-          </div>
-          <form class="form-inline" style="margin-top:20px; margin-bottom:20px;">
+          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
             <div class="form-group mx-sm-4">
               <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()" style="height:20px">
                 <option value="">Please Select Class</option>
               </select>
             </div>
+            <i class="fa fa-info-circle" style="color:#5bc0de; font-size:1.5rem;"></i>
           </form>
           <!--Table-->
           <div class="table-wrapper-problem">
@@ -955,6 +953,9 @@
           </script>
 
           <!--Head part-->
+          <div class="form-inline ml-auto mr-3" style="margin-top:20px;">
+            <i class="fa fa-info-circle ml-auto mr-2" style="color:#5bc0de; font-size:2rem;"></i>
+          </div>
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px;">
             <!--Head 1-->
             <div class="form-group mx-sm-4">
@@ -1355,12 +1356,14 @@
 
         <div class="tab-pane" id="tab3" role="tabpanel">
           <!--Head part-->
-          <form class="form-inline" style="margin-top:20px; margin-bottom:20px">
+          <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px">
             <div class="form-group mx-sm-4">
               <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();" style="height:20px">
-                              <option value="">Please Select Section</option>
-                          </select>
+                  <option value="">Please Select Section</option>
+              </select>
             </div>
+            <i class="fa fa-info-circle" style="color:#5bc0de; font-size:1.5rem;"></i>
+
           </form>
 
           <!--Table part-->
