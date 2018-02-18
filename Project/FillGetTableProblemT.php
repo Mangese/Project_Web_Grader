@@ -59,7 +59,7 @@
       echo "</div>";
       echo "</div>";
       echo "</td>";
-      echo "<td style='width:9%' >";
+      echo "<td style='width:9%; text-align:center;'>";
       echo "<input type='checkbox' name='selectedProblemToAssign' value = '$PID' style='text-align:center;'><br>";
       echo "</td>";
       echo "</tr>";
