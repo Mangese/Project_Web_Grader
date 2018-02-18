@@ -48,7 +48,7 @@
       // echo "</span>";
       // echo "</div>";
       // echo "</div>";
-      echo "<input id='datepicker' />";
+      echo "<input id='datepicker' style='z-index:2048'/>";
       echo "<script>$('#datepicker').datepicker({uiLibrary: 'bootstrap4', autoHide: true, zIndex: 2048,});</script>";
       echo "</td>";
       echo "<td style='width:25%'>";
