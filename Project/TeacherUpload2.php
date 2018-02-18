@@ -79,6 +79,7 @@
   <body>
     <input id="uidmoc" type="hidden">
     <input id="utypemoc" type="hidden">
+    
     <form name="addAccount" method="post" action="">
       <!-- Modal -->
       <div class="modal fade" id="editAccount" role="dialog">
@@ -105,7 +106,7 @@
                 </div>
               </div>
               <div class="form-group row">
-              <div class="col-sm-4">
+                <div class="col-sm-4">
                   <label class="mt-2">Lastname</label>
                 </div>
                 <div class="col-sm-7">
@@ -150,7 +151,7 @@
                 </div>
                 <div class="col-sm-7">
                   <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
-                    oninput="setCustomValidity('')" style="height:20px">
+                    oninput="setCustomValidity('')">
                     <option value="">Department</option>
                     <option value="BE">Biomedical Engineering</option>
                     <option value="CE">Civil Engineering</option>
@@ -162,7 +163,7 @@
                   </select>
                 </div>
                 <div class="col-sm-1">
-                  <input class="form-check-input" type="checkbox" style="margin-top: 1.3rem; float: right" value="" id="defaultCheckDepart"
+                  <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckDepart"
                     onclick="checkBoxEdit(5)">
                 </div>
               </div>
@@ -201,9 +202,9 @@
                     minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
                 </div>
               </div>
-              <div class="form-group row">
+              <div class="form-group row mb-0">
                 <div class="col-sm-4">
-                  
+
                 </div>
                 <div class="col-sm-7">
                   <p id="message" style="font-weight: 500;"></p>
