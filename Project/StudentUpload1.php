@@ -91,7 +91,7 @@
               <h4 class="modal-title">Edit Account</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body m-2">
+            <div class="modal-body m-2 pb-0">
               <div class="form-group row">
                 <div class="col-sm-4">
                   <label class="mt-2">Firstname</label>
