@@ -88,7 +88,7 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
       
     }
     
-          echo "Conclusion,";
+          echo ",Conclusion,";
     while($row = mysql_fetch_assoc($result3)){
       $HID = $row['hid'];
       $result4 = mysql_query("select count(*) as sumbyproblem from submit su join homework h on h.h_id = su.h_id join problem p on p.p_id = h.p_id where su.status = 'P' and su.h_id = '$HID' and p.deleteflag is null and h.deleteflag is null;"); 
