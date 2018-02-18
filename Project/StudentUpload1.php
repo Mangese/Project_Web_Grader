@@ -91,7 +91,7 @@
               <h4 class="modal-title">Edit Account</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div class="modal-body mx-2">
+            <div class="modal-body m-2">
               <div class="form-group row">
                 <div class="col-sm-4">
                   <label class="mt-2">Firstname</label>
@@ -202,7 +202,7 @@
                     minlength=6 maxlength=30 required oninput="setCustomValidity('')" onkeyup='checkPassEdit();' />
                 </div>
               </div>
-              <div class="form-group row">
+              <div class="form-group row mb-0">
                 <div class="col-sm-4">
                   
                 </div>
