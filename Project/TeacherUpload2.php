@@ -468,15 +468,25 @@
                     // alert(uidreq);
                     // alert(pidreq);
                     // alert(fullmark);
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function () {
-                      if (this.readyState == 4 && this.status == 200) {
-                        eval(this.responseText);
-                      }
-                    }
-                    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
-                    xmlhttp.send();
-                    fillTableResult();
+		    if(isNaN(setMark) || parseInt(setMark) > parseInt(fullmark))
+		    {
+			    alert("Invalid Mark");
+		    }
+		    else
+		    {
+			  var xmlhttp = new XMLHttpRequest();
+			    xmlhttp.onreadystatechange = function () {
+			      if (this.readyState == 4 && this.status == 200) {
+				eval(this.responseText);
+				      fillTableResult();
+			      }
+			    }
+			    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
+			    xmlhttp.send();
+			    
+		    }
+                    
+                    
                     // location.reload();
                   }
                   function fillDropDownSection() {
@@ -528,11 +538,19 @@
                         if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
+			else if(document.getElementById(fullMarkName).value <= 0 || document.getElementById(fullMarkName).value > 100 || isNaN(document.getElementById(fullMarkName).value))
+			{
+			  x = 2;	
+			}
                       }
                     });
                     if (x == 1) {
-                      alert("Please input all detail");
+                      	alert("Please input all detail");
                     }
+		    else if(x == 2)
+		    {
+			alert("Invalid Mark");     
+		    }
                     else {
                       $('table [type="checkbox"]').each(function (i, chk) {
                         if (chk.checked) {
