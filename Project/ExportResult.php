@@ -70,8 +70,9 @@ header('Content-Disposition: attachment; filename="default-filename.csv"');
               echo "Not Pass";
               if($teacherMark != ''){
                  echo "$teacherMark pt.";
-		      echo ",";
+		     
               }
+		     echo ",";
 //               echo '<i class="fa fa-times" aria-hidden="true" style="color:#E74C3C" onclick = ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,"' . $NAME. '"); data-toggle="modal" data-target="#modalSourceFileSend">''</i>';
               
             }
