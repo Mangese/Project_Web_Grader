@@ -695,6 +695,12 @@
                     xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
                     xmlhttp.send();
                   }
+	    	  function ExportExcel(){
+			
+			  str = $("#selSectionRs").val();	
+			 window.open ('ExportResult.php?sid='+str,'_blank',false)
+
+		  }
                   function fillTableResult() {
                     // x = document.getElementById("selSectionRs").value;
 
@@ -1470,7 +1476,7 @@
 
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
-            <button type="button" class="btn btn-secondary" id="exportExcel" onclick="exportExcel()">Export Excel</button>
+            <button type="button" class="btn btn-secondary" id="exportExcel" onclick="ExportExcel()">Export Excel</button>
           </div>
 
           <!--Start Sort Script-->
