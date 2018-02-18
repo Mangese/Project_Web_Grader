@@ -568,7 +568,7 @@
                         if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
-			else if(document.getElementById(fullMarkName).value < 0 || document.getElementById(fullMarkName).value > 100)
+			else if(document.getElementById(fullMarkName).value <= 0 || document.getElementById(fullMarkName).value > 100 || isNaN(document.getElementById(fullMarkName).value))
 			{
 			  x = 2;	
 			}
