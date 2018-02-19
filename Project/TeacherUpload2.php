@@ -1619,7 +1619,7 @@
                   <table class="table table-striped table-bordered table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
-                        <th style="width:7%" onclick="sortTable3(0)">
+                        <th style="width:10%" onclick="sortTable3(0)">
                           No.
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
@@ -1639,7 +1639,7 @@
                           Test case
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:18%; text-align:center;" onclick="sortTable1(0)">
+                        <th style="width:15%; text-align:center;" onclick="sortTable1(0)">
                           Download
                         </th>
                       </tr>

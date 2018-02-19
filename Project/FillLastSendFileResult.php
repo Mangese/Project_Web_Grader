@@ -22,7 +22,7 @@ if($conn != FALSE)
     $TC = $row['testCase'];
     $RowNum =  $RowNum + 1 ;
     echo "<tr>";
-    echo "<td style='width:7%'>";
+    echo "<td style='width:10%'>";
     echo "$RowNum";
     echo "</td>";
     echo "<td style='width:23%; text-align:center;'>";
@@ -37,7 +37,7 @@ if($conn != FALSE)
     echo "<td style='width:15%; text-align:center;'>";
     echo "$TC";
     echo "</td>";
-    echo "<td style='width:18%; text-align:center;'>";
+    echo "<td style='width:15%; text-align:center;'>";
     echo "<a class='btn btn-info btn-sm' href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></a>";
     //echo "<button type='button' class='btn btn-info btn-sm' href='$Target$FN' download><i class='fa fa-download' aria-hidden='true'></i></button>";
     echo "</td>";
