@@ -545,7 +545,11 @@
                         }
 			else if(document.getElementById(fullMarkName).value <= 0 || document.getElementById(fullMarkName).value > 100 || isNaN(document.getElementById(fullMarkName).value))
 			{
-			  x = 2;	
+			  x = 2;
+				if (document.getElementById(fullMarkName).value == "")
+				{
+					x=3;
+				}
 			}
                       }
                     });
