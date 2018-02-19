@@ -28,7 +28,8 @@
 
   <!-- Date Picker -->
   <script src="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
-  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css"
+  />
 
 
   <!--Font Awesome-->
@@ -1254,8 +1255,8 @@ if(!isset($_SESSION["user"]))
 
         <form class="form-inline mx-2 mb-3" style="margin-top:20px">
           <div class="form-inline">
-            <input type="radio" name="typeFile" value="flag" checked> Flag &emsp;
-            <input type="radio" name="typeFile" value="fileSubmit"> File Submit &emsp;
+            <input type="radio" style="display:none;" name="typeFile" value="flag" checked> Flag &emsp;
+            <input type="radio" style="display:none;" name="typeFile" value="fileSubmit"> File Submit &emsp;
             <label class="mr-3">Start Date :</label>
             <input id="startDate" width="200" />
             <label class="ml-3 mr-3">End Date :</label>
@@ -1263,93 +1264,93 @@ if(!isset($_SESSION["user"]))
           </div>
           <input id="typeFilemoc" type="hidden">
           <script>
-            var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-            $('#startDate').datepicker({
-              uiLibrary: 'bootstrap4',
-              iconsLibrary: 'fontawesome',
-              format: 'yyyy-mm-dd',
-              maxDate: function () {
-                return $('#endDate').val();
-              }
-            });
-            $('#endDate').datepicker({
-              uiLibrary: 'bootstrap4',
-              iconsLibrary: 'fontawesome',
-              format: 'yyyy-mm-dd',
-              minDate: function () {
-                return $('#startDate').val();
-              }
-            });
+              var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+              $('#startDate').datepicker({
+                uiLibrary: 'bootstrap4',
+                iconsLibrary: 'fontawesome',
+                format: 'yyyy-mm-dd',
+                maxDate: function () {
+                  return $('#endDate').val();
+                }
+              });
+              $('#endDate').datepicker({
+                uiLibrary: 'bootstrap4',
+                iconsLibrary: 'fontawesome',
+                format: 'yyyy-mm-dd',
+                minDate: function () {
+                  return $('#startDate').val();
+                }
+              });
           </script>
           <button type="button" class="btn btn-secondary ml-3" onclick="fillFileManagement()">Search</button>
         </form>
 
         <script>
-            function fillFileManagement() {
-              //alert("in testDate");
-              var sdate = $('#startDate').datepicker().val();
-              var edate = $('#endDate').datepicker().val();
-              // if (document.getElementById('flag').checked) {
-              //   aler("flag on");
-              //   // rate_value = document.getElementById('r1').value;
-              // }
-              if ($('input[name=typeFile]:checked').val() == 'flag') {
-                tFile = document.getElementById('typeFilemoc').value = 'flag';
-                // alert(tFile);
-              } else {
-                tFile = document.getElementById('typeFilemoc').value = 'fileSubmit';
-                // alert(tFile);
-              }
-
-              var tFilesearch = document.getElementById('typeFilemoc').value;
-              //alert("start date is: " + sdate);
-              //alert("end date is: " + edate);
-              //alert("type file is: " + tFile);
-              //alert(tFilesearch);
-              $('#FileManagementTb tbody tr').remove();
-              var xmlhttp = new XMLHttpRequest();
-              xmlhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-
-                  $('#FileManagementTb').append(this.responseText);
+              function fillFileManagement() {
+                //alert("in testDate");
+                var sdate = $('#startDate').datepicker().val();
+                var edate = $('#endDate').datepicker().val();
+                // if (document.getElementById('flag').checked) {
+                //   aler("flag on");
+                //   // rate_value = document.getElementById('r1').value;
+                // }
+                if ($('input[name=typeFile]:checked').val() == 'flag') {
+                  tFile = document.getElementById('typeFilemoc').value = 'flag';
+                  // alert(tFile);
+                } else {
+                  tFile = document.getElementById('typeFilemoc').value = 'fileSubmit';
+                  // alert(tFile);
                 }
-              }
-              xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
-              xmlhttp.send();
 
+                var tFilesearch = document.getElementById('typeFilemoc').value;
+                //alert("start date is: " + sdate);
+                //alert("end date is: " + edate);
+                //alert("type file is: " + tFile);
+                //alert(tFilesearch);
+                $('#FileManagementTb tbody tr').remove();
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                  if (this.readyState == 4 && this.status == 200) {
 
-            }
-            function selectallFile(source) {
-              checkboxes = document.getElementsByName('foo');
-              for (var i = 0, n = checkboxes.length; i < n; i++) {
-                checkboxes[i].checked = source.checked;
-              }
-            }
-            function checkFileDelete() {
-              checkboxes = document.getElementsByName('foo');
-              for (var i = 0, n = checkboxes.length; i < n; i++) {
-                if (checkboxes[i].checked) {
-                  var xmlhttp = new XMLHttpRequest();
-                  xmlhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                      eval(this.responseText);
-                    }
+                    $('#FileManagementTb').append(this.responseText);
                   }
-                  xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
-                  xmlhttp.send();
+                }
+                xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
+                xmlhttp.send();
+
+
+              }
+              function selectallFile(source) {
+                checkboxes = document.getElementsByName('foo');
+                for (var i = 0, n = checkboxes.length; i < n; i++) {
+                  checkboxes[i].checked = source.checked;
                 }
               }
-            }
-            function toggleTableHeader(a) {
-              var b = document.getElementById("fileSearchRadio");
-              if (a == 'flag') {
+              function checkFileDelete() {
+                checkboxes = document.getElementsByName('foo');
+                for (var i = 0, n = checkboxes.length; i < n; i++) {
+                  if (checkboxes[i].checked) {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                      if (this.readyState == 4 && this.status == 200) {
+                        eval(this.responseText);
+                      }
+                    }
+                    xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
+                    xmlhttp.send();
+                  }
+                }
+              }
+              function toggleTableHeader(a) {
+                var b = document.getElementById("fileSearchRadio");
+                if (a == 'flag') {
 
-                b.style.visibility = 'hidden';
+                  b.style.visibility = 'hidden';
+                }
+                else {
+                  b.style.visibility = 'visible';
+                }
               }
-              else {
-                b.style.visibility = 'visible';
-              }
-            }
         </script>
 
         <!--Table-->
