@@ -537,8 +537,8 @@
           </div>
         </div>
       </div>
-      <div class="tabel-wrapper">
-        <div class="table-scroll">
+      <div class="tabel-wrapper" style="height:450px;">
+        <div class="table-scroll" style="height:450px; overflow-y:scroll;">
           <table class="table table-striped table-hover main" id="DataFromAjax">
             <thead class="thead">
               <tr>
