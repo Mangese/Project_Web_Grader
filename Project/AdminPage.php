@@ -235,8 +235,6 @@ if(!isset($_SESSION["user"]))
       } else {
         // alert("no sid");
         document.getElementById("defaultCheckStdID").disabled = true;
-        document.getElementById("defaultCheckStdID").style.display = "none";
-        document.getElementById("editStudentID").style.display = "none";
       }
 
     }
