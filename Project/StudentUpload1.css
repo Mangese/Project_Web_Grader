@@ -100,7 +100,8 @@ tr {
 }
 
 .table-wrapper {
-  position: relative;
+  /* position: relative; */
+  height: 500px;
 }
 .table-scroll {
   height: 500px;
