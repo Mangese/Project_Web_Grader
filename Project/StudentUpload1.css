@@ -92,6 +92,7 @@ tr {
   height: 500px;
   margin: 0px auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   padding: 30px 20px;
   border-radius: 5px;
   color: #008080;
@@ -101,12 +102,12 @@ tr {
 
 .table-wrapper {
   /* position: relative; */
-  height: 500px;
+  height: 450px;
 }
 .table-scroll {
-  height: 500px;
+  height: 450px;
   overflow-y: scroll;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .table-wrapper table {
   width: 100%;
