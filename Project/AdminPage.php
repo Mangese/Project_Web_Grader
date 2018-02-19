@@ -76,7 +76,7 @@ if(!isset($_SESSION["user"]))
     function selectTypeOnChange() {
       typeSearch = $("#selectType").val();
       // alert(typeSearch);
-      if (typeSearch == 'T') {
+      if (typeSearch == 'T' || typeSearch == 'A') {
         document.getElementById("stdIDSearch").disabled = true;
         document.getElementById('stdIDSearch').value = '';
       }
