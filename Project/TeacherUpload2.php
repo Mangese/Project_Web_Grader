@@ -33,7 +33,8 @@
 
   <!-- Date Picker -->
   <script src="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
-  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.8.0/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css"
+  />
 
 
   <!--Font Awesome-->
@@ -137,7 +138,7 @@
               </div>
               <div class="form-group row" hidden>
                 <div class="col-sm-4">
-                  <label class="mt-2" >Student ID</label>
+                  <label class="mt-2">Student ID</label>
                 </div>
                 <div class="col-sm-5 px-0">
                   <input type="text" class="form-control" id="editStudentID" name="editStudentID" disabled placeholder="Student ID (EX. 5713XXX)"
@@ -338,8 +339,12 @@
                     var message = document.getElementById('message');
                     confirm_password.setCustomValidity('');
                     if (password.value == confirm_password.value) {
-                      message.style.color = 'green';
-                      message.innerHTML = '*Matching*';
+                      if (password.value == '' || confirm_password.value == '') {
+                        message.innerHTML = '';
+                      } else {
+                        message.style.color = 'green';
+                        message.innerHTML = '*Matching*';
+                      }
                     } else {
                       message.style.color = 'red';
                       message.innerHTML = "*Passwords Doesn't Match *";
@@ -473,25 +478,23 @@
                     // alert(uidreq);
                     // alert(pidreq);
                     // alert(fullmark);
-		    if(isNaN(setMark) || parseInt(setMark) > parseInt(fullmark)|| parseInt(setMark) < 0)
-		    {
-			    alert("Invalid Mark");
-		    }
-		    else
-		    {
-			  var xmlhttp = new XMLHttpRequest();
-			    xmlhttp.onreadystatechange = function () {
-			      if (this.readyState == 4 && this.status == 200) {
-				eval(this.responseText);
-				      fillTableResult();
-			      }
-			    }
-			    xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
-			    xmlhttp.send();
-			    
-		    }
-                    
-                    
+                    if (isNaN(setMark) || parseInt(setMark) > parseInt(fullmark) || parseInt(setMark) < 0) {
+                      alert("Invalid Mark");
+                    }
+                    else {
+                      var xmlhttp = new XMLHttpRequest();
+                      xmlhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                          eval(this.responseText);
+                          fillTableResult();
+                        }
+                      }
+                      xmlhttp.open("POST", "FillSetMark.php?uidreq=" + uidreq + "&pidreq=" + pidreq + "&setMark=" + setMark, true);
+                      xmlhttp.send();
+
+                    }
+
+
                     // location.reload();
                   }
                   function fillDropDownSection() {
@@ -543,23 +546,20 @@
                         if (document.getElementById(dateName).value == "" || document.getElementById(timeName).value == "") {
                           x = 1;
                         }
-			else if(document.getElementById(fullMarkName).value <= 0 || document.getElementById(fullMarkName).value > 100 || isNaN(document.getElementById(fullMarkName).value))
-			{
-			  x = 2;
-				if (document.getElementById(fullMarkName).value == "")
-				{
-					x=3;
-				}
-			}
+                        else if (document.getElementById(fullMarkName).value <= 0 || document.getElementById(fullMarkName).value > 100 || isNaN(document.getElementById(fullMarkName).value)) {
+                          x = 2;
+                          if (document.getElementById(fullMarkName).value == "") {
+                            x = 3;
+                          }
+                        }
                       }
                     });
                     if (x == 1) {
-                      	alert("Please input all detail");
+                      alert("Please input all detail");
                     }
-		    else if(x == 2)
-		    {
-			alert("Invalid Mark");     
-		    }
+                    else if (x == 2) {
+                      alert("Invalid Mark");
+                    }
                     else {
                       $('table [type="checkbox"]').each(function (i, chk) {
                         if (chk.checked) {
@@ -674,11 +674,11 @@
                     xmlhttp.open("POST", "FillTableHwT.php?class=" + str, true);
                     xmlhttp.send();
                   }
-	    	  function ExportExcel(){
-			
-			  str = $("#selSectionRs").val();	
-			 window.location.href =  'ExportResult.php?sid='+str;
-		  }
+                  function ExportExcel() {
+
+                    str = $("#selSectionRs").val();
+                    window.location.href = 'ExportResult.php?sid=' + str;
+                  }
                   function fillTableResult() {
                     // x = document.getElementById("selSectionRs").value;
                     $('#Result thead tr').remove();
@@ -811,7 +811,7 @@
               </select>
             </div>
             <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;" data-toggle="modal" data-target="#info1"></i>
-            
+
             <!-- Modal -->
             <div class="modal fade" id="info1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
               <div class="modal-dialog modal-lg-custom" role="document">
@@ -826,7 +826,7 @@
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -1008,7 +1008,7 @@
           <!--Head part-->
           <div class="form-inline" style="margin-top:20px;">
             <i class="fa fa-info-circle ml-auto mr-3" style="color:#5bc0de; font-size:1.5rem;" data-toggle="modal" data-target="#info2"></i>
-            
+
             <!-- Modal -->
             <div class="modal fade" id="info2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
               <div class="modal-dialog modal-lg-custom" role="document">
@@ -1024,7 +1024,7 @@
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li> 
+                        <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -1097,8 +1097,8 @@
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
                         <label class="mb-2">Section</label>
-                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:80%" placeholder="Section" required
-                          oninvalid="this.setCustomValidity('Section is empty,\nInput only (A-Z,a-z,0-9)');" oninput="setCustomValidity('')"
+                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:80%" placeholder="Section"
+                          required oninvalid="this.setCustomValidity('Section is empty,\nInput only (A-Z,a-z,0-9)');" oninput="setCustomValidity('')"
                           minlength=1 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{1,}" />
 
                         <label class="mb-2">Semester</label>
@@ -1127,7 +1127,7 @@
                                                       }
                                                     </script>
                                             </select>
-                        
+
                       </div>
                       <div class="modal-footer">
                         <!--<button type="button" class="btn btn-success" data-dismiss="modal" onclick="myFunction()">Create</button>-->
@@ -1458,7 +1458,7 @@
               </select>
             </div>
             <i class="fa fa-info-circle mx-3" style="color:#5bc0de; font-size:1.5rem;" data-toggle="modal" data-target="#info3"></i>
-            
+
             <!-- Modal -->
             <div class="modal fade" id="info3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
               <div class="modal-dialog modal-lg-custom" role="document">
@@ -1473,7 +1473,7 @@
                     <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li> 
+                        <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
@@ -1652,7 +1652,7 @@
                     </tbody>
                   </table>
                 </div>
-                
+
                 <div class="modal-footer">
                   <!--<button type="button" class="btn btn-success" data-dismiss="modal">OK</button>-->
                   <button type="button" id='markSubBtn' name='markSubBtn' class="btn btn-success" onclick="markSubfunc(); " data-dismiss="modal">Mark submit</button>
@@ -1660,60 +1660,60 @@
 
                 <!-- Start script -->
                 <script>
-                  function sortTable3(col) {
-                    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-                    table = document.getElementById("tb3LastSendFile");
-                    switching = true;
-                    //Set the sorting direction to ascending:
-                    dir = "asc";
-                    /*Make a loop that will continue until
-                    no switching has been done:*/
-                    while (switching) {
-                      //start by saying: no switching is done:
-                      switching = false;
-                      rows = table.getElementsByTagName("TR");
-                      /*Loop through all table rows (except the
-                      first, which contains table headers):*/
-                      for (i = 1; i < (rows.length - 1); i++) {
-                        //start by saying there should be no switching:
-                        shouldSwitch = false;
-                        /*Get the two elements you want to compare,
-                        one from current row and one from the next:*/
-                        x = rows[i].getElementsByTagName("TD")[col];
-                        y = rows[i + 1].getElementsByTagName("TD")[col];
-                        /*check if the two rows should switch place,
-                        based on the direction, asc or desc:*/
-                        if (dir == "asc") {
-                          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                            //if so, mark as a switch and break the loop:
-                            shouldSwitch = true;
-                            break;
-                          }
-                        } else if (dir == "desc") {
-                          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                            //if so, mark as a switch and break the loop:
-                            shouldSwitch = true;
-                            break;
+                    function sortTable3(col) {
+                      var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                      table = document.getElementById("tb3LastSendFile");
+                      switching = true;
+                      //Set the sorting direction to ascending:
+                      dir = "asc";
+                      /*Make a loop that will continue until
+                      no switching has been done:*/
+                      while (switching) {
+                        //start by saying: no switching is done:
+                        switching = false;
+                        rows = table.getElementsByTagName("TR");
+                        /*Loop through all table rows (except the
+                        first, which contains table headers):*/
+                        for (i = 1; i < (rows.length - 1); i++) {
+                          //start by saying there should be no switching:
+                          shouldSwitch = false;
+                          /*Get the two elements you want to compare,
+                          one from current row and one from the next:*/
+                          x = rows[i].getElementsByTagName("TD")[col];
+                          y = rows[i + 1].getElementsByTagName("TD")[col];
+                          /*check if the two rows should switch place,
+                          based on the direction, asc or desc:*/
+                          if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                              //if so, mark as a switch and break the loop:
+                              shouldSwitch = true;
+                              break;
+                            }
+                          } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                              //if so, mark as a switch and break the loop:
+                              shouldSwitch = true;
+                              break;
+                            }
                           }
                         }
-                      }
-                      if (shouldSwitch) {
-                        /*If a switch has been marked, make the switch
-                        and mark that a switch has been done:*/
-                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                        switching = true;
-                        //Each time a switch is done, increase this count by 1:
-                        switchcount++;
-                      } else {
-                        /*If no switching has been done AND the direction is "asc",
-                        set the direction to "desc" and run the while loop again.*/
-                        if (switchcount == 0 && dir == "asc") {
-                          dir = "desc";
+                        if (shouldSwitch) {
+                          /*If a switch has been marked, make the switch
+                          and mark that a switch has been done:*/
+                          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                           switching = true;
+                          //Each time a switch is done, increase this count by 1:
+                          switchcount++;
+                        } else {
+                          /*If no switching has been done AND the direction is "asc",
+                          set the direction to "desc" and run the while loop again.*/
+                          if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                          }
                         }
                       }
                     }
-                  }
                 </script>
                 <!--End Script-->
               </div>
