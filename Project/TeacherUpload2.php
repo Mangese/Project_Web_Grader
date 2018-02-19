@@ -854,7 +854,7 @@
 
           <!--Table-->
           <div class="table-wrapper-problem" style="height:245px">
-            <table class="table table-striped table-hover main" id="DataFromAjax">
+            <table class="table table-striped table-bordered table-hover main" id="DataFromAjax">
               <thead class="thead">
                 <tr>
                   <th style="width:40%" onclick="sortTable1(0)">
@@ -1142,7 +1142,7 @@
 
           <!--Table part-->
           <div class="table-wrapper-problem" style="height:205px">
-            <table class="table table-striped table-hover main" id="TableHw">
+            <table class="table table-striped table-bordered table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:10%" onclick="SortNumber(0,'N')">
@@ -1357,7 +1357,7 @@
                   </div>
 
                   <div class="modal-body">
-                    <table class="table table-striped table-hover main" id="getProblem">
+                    <table class="table table-striped table-bordered table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
                           <th style="width:18%">
@@ -1616,7 +1616,7 @@
                       <h5 id='fullMark' name='fullMark'>/ Full mark</h5>
                     </div>
                   </div>
-                  <table class="table table-striped table-hover main" id="tb3LastSendFile">
+                  <table class="table table-striped table-bordered table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
                         <th style="width:7%" onclick="sortTable3(0)">
