@@ -41,9 +41,20 @@
   </nav>
 
   <style>
-    .header-table{
-      position: fixed;
-      z-index: 1;
+    .table-fixed thead {
+      width: 97%;
+    }
+    .table-fixed tbody {
+      height: 230px;
+      overflow-y: auto;
+      width: 100%;
+    }
+    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+      display: block;
+    }
+    .table-fixed tbody td, .table-fixed thead > tr> th {
+      float: left;
+      border-bottom-width: 0;
     }
   </style>
 
@@ -546,8 +557,8 @@
       </div>
       <div class="tabel-wrapper" style="height:400px;">
         <div class="table-scroll" style="height:400px; overflow-y:scroll;">
-          <table class="table table-striped table-bordered table-hover main" id="DataFromAjax">
-            <thead class="thead header-table">
+          <table class="table table-striped table-bordered table-hover table-fixed" id="DataFromAjax">
+            <thead class="thead">
               <tr>
                 <th style="width6%" onclick="sortTable(0)">
                   ID
