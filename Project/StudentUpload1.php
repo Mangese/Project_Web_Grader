@@ -44,6 +44,7 @@
     .table-fixed thead {
       width: 100%;
       background-color: #20b2aa;
+      color: #fff;
     }
     .table-fixed tbody {
       height: 230px;
@@ -555,8 +556,8 @@
       </div>
       <!-- <div class="tabel-wrapper" style="height:400px;">
         <div class="table-scroll" style="height:400px; overflow-y:scroll;"> -->
-      <div class="tabel-wrapper">
-        <div class="table-scroll">
+      <!-- <div class="tabel-wrapper">
+        <div class="table-scroll"> -->
           <table class="table table-striped table-bordered table-hover main table-fixed" id="DataFromAjax">
             <thead class="thead">
               <tr>
@@ -716,8 +717,8 @@
           </script>
           <!--End Script-->
 
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
     </div>
 
     <!-- <h1>Examples of CSS ToolTips!</h1> -->
