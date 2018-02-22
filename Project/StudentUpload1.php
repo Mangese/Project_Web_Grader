@@ -47,7 +47,7 @@
       color: #fff;
     }
     .table-fixed tbody {
-      height: 230px;
+      height: 200px;
       overflow-y: auto;
       width: 100%;
     }
