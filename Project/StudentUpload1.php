@@ -54,7 +54,7 @@
     .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
       display: block;
     }
-    .table-fixed tbody tr:nth-child(odd) {
+    .table-fixed tbody tr:nth-child(odd) > td {
       background-color: rgba(0,0,0,.05);
     }
     .table-fixed tbody td, .table-fixed thead > tr> th {
