@@ -51,7 +51,7 @@
       overflow-y: auto;
       width: 100%;
     }
-    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
       display: block;
     }
     .table-fixed tbody td, .table-fixed thead > tr> th {
@@ -558,7 +558,7 @@
         <div class="table-scroll" style="height:400px; overflow-y:scroll;"> -->
       <!-- <div class="tabel-wrapper">
         <div class="table-scroll"> -->
-          <table class="table table-striped table-bordered table-hover main table-fixed" id="DataFromAjax">
+          <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
             <thead class="thead">
               <tr>
                 <th style="width6%" onclick="sortTable(0)">
