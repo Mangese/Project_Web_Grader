@@ -40,6 +40,13 @@
     </form>
   </nav>
 
+  <style>
+    .header-table{
+      position: fixed;
+      z-index: 1;
+    }
+  </style>
+
 </head>
 <?php
   session_start();
@@ -540,7 +547,7 @@
       <div class="tabel-wrapper" style="height:400px;">
         <div class="table-scroll" style="height:400px; overflow-y:scroll;">
           <table class="table table-striped table-bordered table-hover main" id="DataFromAjax">
-            <thead class="thead">
+            <thead class="thead header-table">
               <tr>
                 <th style="width6%" onclick="sortTable(0)">
                   ID
