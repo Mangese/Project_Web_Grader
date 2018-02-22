@@ -124,10 +124,10 @@
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Register</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-              <div class="modal-body m-2">
+              <div class="modal-body mx-2 mt-2 pb-0">
                 <div class="form-group row">
                   <div class="col-sm-5">
                     <label class="mt-2">Firstname</label>
@@ -210,7 +210,7 @@
                       maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                   </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row mb-0">
                   <div class="col-sm-5">
                     
                   </div>
