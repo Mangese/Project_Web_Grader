@@ -540,9 +540,6 @@
 
                 <div class="form-inline">
                   <label>Please Enter Section Password</label>
-                  <!-- <div data-toggle="tooltip" data-placement="bottom" title="Section Password from Lecturer">
-                    <i class="fa fa-info-circle" style="color:#5bc0de; font-size:2rem;"></i>
-                  </div> -->
                 </div>
                 <input class="form-control mt-3" type="text" placeholder="Password" id="SectionPassword">
               </div>
@@ -556,9 +553,11 @@
           </div>
         </div>
       </div>
-      <div class="tabel-wrapper" style="height:400px;">
-        <div class="table-scroll" style="height:400px; overflow-y:scroll;">
-          <table class="table table-striped table-bordered table-hover table-fixed" id="DataFromAjax">
+      <!-- <div class="tabel-wrapper" style="height:400px;">
+        <div class="table-scroll" style="height:400px; overflow-y:scroll;"> -->
+      <div class="tabel-wrapper">
+        <div class="table-scroll">
+          <table class="table table-striped table-bordered table-hover main table-fixed" id="DataFromAjax">
             <thead class="thead">
               <tr>
                 <th style="width6%" onclick="sortTable(0)">
