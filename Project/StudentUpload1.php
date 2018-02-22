@@ -42,7 +42,8 @@
 
   <style>
     .table-fixed thead {
-      width: 97%;
+      width: 100%;
+      background-color: #20b2aa;
     }
     .table-fixed tbody {
       height: 230px;
