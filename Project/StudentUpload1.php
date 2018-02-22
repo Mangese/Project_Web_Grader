@@ -51,7 +51,7 @@
       overflow-y: auto;
       width: 100%;
     }
-    .table-fixed tr:nth-of-type(odd) {
+    .table-fixed tbody tr:nth-child(odd) {
       background-color: rgba(0,0,0,.05);
     }
     .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
