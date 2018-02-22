@@ -59,7 +59,7 @@
     border-style: none !important;
   }
   
-  .table td,
+  /* .table td,
   .table th {
     padding: 0.75rem;
     vertical-align: top;
@@ -86,7 +86,7 @@
   tr {
     border-style: none;
   }
-  
+   */
   .container-table {
     width: 80%;
     height: 500px;
