@@ -13,10 +13,10 @@
     {
       $RowNum = $RowNum+1;
       echo "<tr>";
-      echo "<td style='width:6%; text-align:center;'>";
+      echo "<td style='width:6%; text-align:center; padding: .6555555rem;'>";
       echo "$RowNum";
       echo "</td>";
-      echo "<td style='width:18%' class = 'use'>";
+      echo "<td style='width:18% padding: .6555555rem;' class = 'use'>";
       $PN = $row['problemName'];
       $LA = $row['language'];
       $FN = $row['fileName'];
@@ -26,16 +26,16 @@
       $DD = $row['deadline'];
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:11%; text-align:center;'>";
+      echo "<td style='width:11%; text-align:center; padding: .6555555rem;'>";
       echo "$LA";
       echo "</td>";
-      echo "<td style='width:22%; text-align:center;'>";
+      echo "<td style='width:22%; text-align:center; padding: .6555555rem;'>";
       echo "$DD";
       echo "</td>";
-      echo "<td style='width:21%; text-align:center;'>";
+      echo "<td style='width:21%; text-align:center; padding: .6555555rem;'>";
       echo "$QTY";
       echo "</td>";
-      echo "<td style='width:10%; text-align:center;'>";
+      echo "<td style='width:10%; text-align:center; padding: .6555555rem;'>";
       $Status = $row['status'];
       if(!strcmp($Status, "F"))
       {
@@ -46,7 +46,7 @@
         echo "<div style='color:#2ECC71'>Pass";
       }
       echo "</td>";
-      echo "<td style='width:12%; text-align:center;'>";
+      echo "<td style='width:12%; text-align:center; padding: .6555555rem;'>";
       if(!strcmp($Status, "F"))
       {
       if(!strcmp($LA, "Java")){
