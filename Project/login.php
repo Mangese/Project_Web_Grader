@@ -70,7 +70,7 @@
     }
   </script>
   <div class="login-container">
-    <h1>STUDENT WEB GRADER</h1>
+    <h1 class="my-3">STUDENT WEB GRADER</h1>
     <?php
   	session_start();
 	if(isset($_SESSION["user"]) && isset($_SESSION["utype"]))
