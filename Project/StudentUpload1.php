@@ -561,7 +561,7 @@
           <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
             <thead class="thead">
               <tr>
-                <th style="width6%" onclick="sortTable(0)">
+                <th style="width:6%" onclick="sortTable(0)">
                   ID
                   <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                 </th>
