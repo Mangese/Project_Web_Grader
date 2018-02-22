@@ -22,7 +22,7 @@
 
   <script type="text/javascript" src="js/bootstrap-filestyle.min.js"></script>
 
-  <link rel="stylesheet" href="StudentUpload1.css">
+  <link rel="stylesheet" href="StudentPage.css">
 
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
