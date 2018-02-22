@@ -54,11 +54,11 @@
         }
         else {
           message.style.color = 'green';
-          message.innerHTML = '*matching*';
+          message.innerHTML = '*Matching*';
         }
       } else {
         message.style.color = 'red';
-        message.innerHTML = "*Passwords Doesn't Match *";
+        message.innerHTML = "*Passwords Doesn't Match*";
         confirm_password.setCustomValidity("Passwords Doesn't Match!!");
       }
     }
@@ -114,40 +114,55 @@
       <form name="from2" method="post" action="Register.php">
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog modal-sm">
+          <div class="modal-dialog modal-md">
             <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Register</h4>
               </div>
-              <div class="modal-body">
+              <div class="modal-body m-2">
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Firstname</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="text" class="form-control" id="txtFirstname" name="txtFirstname" placeholder="Firstname" required oninvalid="this.setCustomValidity('Firstname is empty,\nInput only (A-Z,a-z)');"
                       oninput="setCustomValidity('')" minlength=2 maxlength=50 pattern="[A-Za-z]{2,}" />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Lastname</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="text" class="form-control" name="txtLastname" placeholder="Lastname" required oninvalid="this.setCustomValidity('Lastname is empty,\nInput only (A-Z,a-z)');"
                       oninput="setCustomValidity('')" minlength=3 maxlength=50 pattern="[A-Za-z]{3,}" />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Username</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="text" class="form-control" name="txtUsername" placeholder="Username" required oninvalid="this.setCustomValidity('Username is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 6');"
                       oninput="setCustomValidity('')" minlength=6 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{6,}" />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Student ID</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="text" class="form-control" name="txtStudentID" placeholder="Student ID (EX. 5713XXX)" required oninvalid="this.setCustomValidity('Student ID is empty,,\nInput only (0-9)');"
                       oninput="setCustomValidity('')" minlength=7 maxlength=7 pattern="[0,1,2,3,4,5,6,7,8,9]{7}" />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Department</label>
+                  </div>
+                  <div class="col-sm-7">
                     <select class="form-control" id="sel1" name="sel1" required oninvalid="this.setCustomValidity('Please select some department');"
                       oninput="setCustomValidity('')">
 		        <option value="">Department</option>
@@ -162,35 +177,44 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Email</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="email" class="form-control" name="txtEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
                       oninput="setCustomValidity('')" maxlength=30/>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Password</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="password" class="form-control" id="txtPassword" name="txtPassword" placeholder="Password" minlength=6 maxlength=30
                       required oninvalid="this.setCustomValidity('Enter your password,\nmin length: 6');" oninput="setCustomValidity('')"
                       onkeyup='check();' />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
+                  <div class="col-sm-5">
+                    <label class="mt-2">Confirm Password</label>
+                  </div>
+                  <div class="col-sm-7">
                     <input type="password" class="form-control" id="txtPassword2" name="txtPassword2" placeholder="Confirm Password" minlength=6
                       maxlength=30 required oninput="setCustomValidity('')" onkeyup='check();' />
                   </div>
                 </div>
                 <div class="form-group row">
-                  <div class="col-sm-12">
-                    <p id="message"></p>
+                  <div class="col-sm-5">
+                    
+                  </div>
+                  <div class="col-sm-7">
+                    <p id="message" style="font-weight: 500;"></p>
                   </div>
                 </div>
-                <!-- <p>Some text in the modal.</p> -->
 
               </div>
               <div class="modal-footer">
-                <!--<button type="button" onclick="goRegister()" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
-                <!--<button type="submit" class="btn btn-success" data-dismiss="modal">Create Account</button>-->
                 <button type="submit" class="btn btn-success" onclick="$('#modalID').modal('hide')">Create Account</button>
               </div>
             </div>
