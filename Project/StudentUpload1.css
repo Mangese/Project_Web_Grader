@@ -102,11 +102,11 @@ tr {
 
 .table-wrapper {
   /* position: relative; */
-  height: 450px;
+  /* height: 450px; */
 }
 .table-scroll {
-  height: 450px;
-  overflow-y: scroll;
+  /* height: 450px; */
+  /* overflow-y: scroll; */
   /* margin-top: 10px; */
 }
 .table-wrapper table {
