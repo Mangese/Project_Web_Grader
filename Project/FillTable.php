@@ -16,7 +16,7 @@
       echo "<td style='width:6%; text-align:center; padding: .6555555rem;'>";
       echo "$RowNum";
       echo "</td>";
-      echo "<td style='width:18% padding: .6555555rem;' class = 'use'>";
+      echo "<td style='width:18%; padding: .6555555rem;' class = 'use'>";
       $PN = $row['problemName'];
       $LA = $row['language'];
       $FN = $row['fileName'];
@@ -46,7 +46,7 @@
         echo "<div style='color:#2ECC71'>Pass";
       }
       echo "</td>";
-      echo "<td style='width:12%; text-align:center; padding: .6555555rem;'>";
+      echo "<td style='width:12%; text-align:center;'>";
       if(!strcmp($Status, "F"))
       {
       if(!strcmp($LA, "Java")){
