@@ -706,7 +706,7 @@ if(!isset($_SESSION["user"]))
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="accountManagementTb">
+          <table class="table table-striped table-bordered table-hover main" id="accountManagementTb">
             <thead class="thead">
               <tr>
                 <th style="width:15%" onclick="sortTable(0)">
@@ -984,7 +984,7 @@ if(!isset($_SESSION["user"]))
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="classManagementTb">
+          <table class="table table-striped table-bordered table-hover main" id="classManagementTb">
             <thead class="thead">
               <tr>
                 <th style="width:20%" onclick="sortTable1(0)">
@@ -1122,7 +1122,7 @@ if(!isset($_SESSION["user"]))
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="SectionManagementTb">
+          <table class="table table-striped table-bordered table-hover main" id="SectionManagementTb">
             <thead class="thead">
               <tr>
                 <th style="width:15%" onclick="sortTable2(0)">
@@ -1364,7 +1364,7 @@ if(!isset($_SESSION["user"]))
 
         <!--Table-->
         <div class="table-wrapper-account">
-          <table class="table table-striped table-hover main" id="FileManagementTb">
+          <table class="table table-striped table-bordered table-hover main" id="FileManagementTb">
             <thead class="thead">
               <tr id="fileSearchRadio">
                 <th style="width:10%">
