@@ -57,7 +57,7 @@
   
   .table {
     border-style: none !important;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
   }
   
    .table td,
