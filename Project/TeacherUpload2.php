@@ -858,7 +858,7 @@
 
           <!--Table-->
           <div class="table-wrapper-problem" style="height:245px">
-            <table class="table table-striped table-bordered table-hover main" id="DataFromAjax">
+            <table class="table table-striped table-hover main" id="DataFromAjax">
               <thead class="thead">
                 <tr>
                   <th style="width:40%" onclick="SortNumberTable(0,'T')">
@@ -1379,6 +1379,12 @@
           </script>
           <!-- End Sort Number Script -->
 
+          <style>
+            .modal-lg-assign {
+              max-width: 900px;
+            }
+          </style>
+
           <!--Foot part-->
           <div class="foot-t left" style="margin-top:20px;">
             <button type="button" class="btn btn-secondary" id="AssignButton" data-toggle="modal" data-target="#modalAssignHomework"
@@ -1386,7 +1392,7 @@
           </div>
           <!-- modalAssignHomework -->
           <div class="modal fade" id="modalAssignHomework" role="dialog">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg-assign">
 
               <!-- Modal content-->
               <div class="modal-content">
