@@ -35,11 +35,11 @@
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
-          echo "<th style='min-width:60px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
+          echo "<th style='min-width:65px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
             echo "Pass";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-      echo "<th style='min-width:115px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
+          echo "<th style='min-width:120px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
             echo "Sum Points";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";

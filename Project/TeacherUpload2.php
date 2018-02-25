@@ -888,19 +888,19 @@
             <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
               <thead class="thead">
                 <tr>
-                  <th style="width:40%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumberTable(0,'T')">
+                  <th style="width:40%; border-right:1px solid #eceeef;" onclick="SortNumberTable(0,'T')">
                     Ploblem name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumberTable(1,'T')">
+                  <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(1,'T')">
                     Upload Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumberTable(2,'T')">
+                  <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(2,'T')">
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                  <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
                     Delete
                   </th>
                 </tr>
@@ -1064,7 +1064,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                   </div>
 
-                  <div class="modal-body left">
+                  <div class="modal-body left" style="margin-left:35px;">
                     <input type='hidden' name="ClassID" id="ClassID">
                     <label>Problem name</label><br>
                     <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control mb-3" style="width:90%" placeholder="Problem Name"
@@ -1268,8 +1268,8 @@
           <!--End Head part-->
 
           <!--Table part-->
-          <div class="table-wrapper-problem" style="height:205px">
-            <table class="table table-striped table-hover main" id="TableHw">
+          <!-- <div class="table-wrapper-problem" style="height:205px"> -->
+            <table class="table table-striped table-hover main table-fixed" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:10%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(0,'N')">
@@ -1308,7 +1308,7 @@
               <tbody>
               </tbody>
             </table>
-          </div>
+          <!-- </div> -->
           <!--End Table-->
 
           <!-- Sort Number Script -->
