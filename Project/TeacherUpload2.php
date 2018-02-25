@@ -1344,7 +1344,7 @@
           <!--End Script-->
 
           <!-- Sort Number Script -->
-          <script type="text/javascript">
+          <!-- <script type="text/javascript">
             var TableIDvalue = "TableHw";
             var TableLastSortedColumn = -1;
             function SortNumber() {
@@ -1435,7 +1435,7 @@
               if (y < 100) { y = parseInt(y) + 2000; }
               return "" + String(y) + "" + String(m) + "" + String(d) + "";
             } // function GetDateSortingKey()
-          </script>
+          </script> -->
           <!-- End Sort Number Script -->
 
           <!--Foot part-->
