@@ -1670,7 +1670,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper" style="height:245px">
+          <!-- <div class="table-wrapper" style="height:245px"> -->
             <table class="table table-striped table-hover main table-fixed" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
@@ -1696,7 +1696,7 @@
               <tbody>
               </tbody>
             </table>
-          </div>
+          <!-- </div> -->
           <!--End Table part-->
 
           <!--Foot part-->
