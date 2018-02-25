@@ -51,9 +51,9 @@
       <div class="dropdown">
         <i class="fas fa-chevron-down ml-4 mr-2" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button" style="width: 70%" onclick="getValueForEdit()" data-toggle="modal" data-target="#editAccount">Account</button>
+          <button class="dropdown-item" type="button" style="width: 100%" onclick="getValueForEdit()" data-toggle="modal" data-target="#editAccount">Account</button>
           <div class="dropdown-divider"></div>
-          <button class="dropdown-item" type="button" style="width: 70%" onclick="logout()">Logout</button>
+          <button class="dropdown-item" type="button" style="width: 100%" onclick="logout()">Logout</button>
         </div>
       </div>
     </form>
@@ -1066,7 +1066,7 @@
 
                   <div class="modal-body left" style="margin-left:35px;">
                     <input type='hidden' name="ClassID" id="ClassID">
-                    <label>Problem name</label><br>
+                    <label>Problem Name</label><br>
                     <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control mb-3" style="width:92%" placeholder="Problem Name"
                       required oninvalid="this.setCustomValidity('Problem name is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 4');"
                       oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" />
@@ -1297,7 +1297,7 @@
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:12%; border-right:1px solid #eceeef;" onclick="SortNumber(6,'T')">
-                    Due Date
+                    Deadline Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:10%; border-right:1px solid #eceeef; text-align:center;">
@@ -1445,17 +1445,17 @@
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
                           <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
-                            Deadline
+                            Deadline Date
                           </th>
                           <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
                             Deadline Time
                           </th>
-                          <th style="width:9%; border-right:1px solid #eceeef; text-align:center;">
+                          <th style="width:9%; text-align:center;">
                             Select
                           </th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody style="height:230px;">
                         <!-- <tr>
                           <td style="width:30%">
                             Exam1
@@ -1794,11 +1794,11 @@
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
                         <th style="width:23%; border-right:1px solid #eceeef;" onclick="sortTable3(1)">
-                          Submit date
+                          Submit Date
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
                         <th style="width:23%; border-right:1px solid #eceeef;" onclick="sortTable3(2)">
-                          Submit time
+                          Submit Time
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
                         <th style="width:14%; border-right:1px solid #eceeef;" onclick="sortTable3(3)">
@@ -1806,7 +1806,7 @@
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
                         <th style="width:15%; border-right:1px solid #eceeef;" onclick="sortTable3(4)">
-                          Test case
+                          Test Case
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
                         <th style="width:15%; border-right:1px solid #eceeef; text-align:center;">
