@@ -1893,34 +1893,6 @@
       </div>
       <!-- Tab panes -->
 
-      <!--Table-->
-      <div class="table-container" style="width:100%">
-            <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
-              <thead class="thead">
-                <tr>
-                  <th style="width:40%" onclick="SortNumberTable(0,'T')">
-                    Ploblem name
-                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                  </th>
-                  <th style="width:20%" onclick="SortNumberTable(1,'T')">
-                    Upload Date
-                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                  </th>
-                  <th style="width:20%" onclick="SortNumberTable(2,'T')">
-                    Language
-                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                  </th>
-                  <th style="width:20%; text-align:center;">
-                    Delete
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
-          </div>
-          <!--End Table-->
-
     </div>
     <!--container-table-->
     <div class="modal fade" id="modalChackDelete" role="dialog">
