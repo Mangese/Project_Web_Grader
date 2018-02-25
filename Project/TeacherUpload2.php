@@ -881,7 +881,7 @@
           </form>
 
           <!--Table-->
-          <!-- <div class="table-wrapper-problem" style="height:245px"> -->
+          <div class="table-container" style="width:100%">
             <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
               <thead class="thead">
                 <tr>
@@ -905,7 +905,7 @@
               <tbody>
               </tbody>
             </table>
-          <!-- </div> -->
+          </div>
           <!--End Table-->
 
           <!--Start Sort Script-->
