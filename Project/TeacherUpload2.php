@@ -885,7 +885,7 @@
           <!--End Table-->
 
           <!--Start Sort Script-->
-          <script>
+          <!-- <script>
             function sortTable1(col) {
               var table, rows, switching, i, x, y, shouldSwitch;
               table = document.getElementById("DataFromAjax");
@@ -920,7 +920,7 @@
                 }
               }
             }
-          </script>
+          </script> -->
           <!--End Script-->
 
           <!-- Sort Number Script -->
@@ -1285,7 +1285,7 @@
           <!--End Table-->
 
           <!--Start Sort Script-->
-          <script>
+          <!-- <script>
                                                       function sortTable2(col) {
                                                         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
                                                         table = document.getElementById("TableHw");
@@ -1340,7 +1340,7 @@
                                                           }
                                                         }
                                                       }
-          </script>
+          </script> -->
           <!--End Script-->
 
           <!-- Sort Number Script -->
