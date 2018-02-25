@@ -1242,7 +1242,7 @@
 
           <!--Table part-->
           <div class="table-wrapper-problem" style="height:205px">
-            <table class="table table-striped table-bordered table-hover main" id="TableHw">
+            <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:10%" onclick="SortNumber(0,'N')">
@@ -1397,17 +1397,17 @@
                   </div>
 
                   <div class="modal-body">
-                    <table class="table table-striped table-bordered table-hover main" id="getProblem">
+                    <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
                           <th style="width:18%;" onclick="SortNumberTable2(0,'T')">
                             Exam name
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
-                          <th style="width:13%; text-align:center;">
+                          <th style="width:12%; text-align:center;">
                             Full mark
                           </th>
-                          <th style="width:10%;" onclick="SortNumberTable2(2,'T')">
+                          <th style="width:11%;" onclick="SortNumberTable2(2,'T')">
                             Language
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
