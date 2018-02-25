@@ -1272,40 +1272,40 @@
             <table class="table table-striped table-hover main table-fixed" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
-                  <th style="width:10%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(0,'N')">
+                  <th style="width:10%; border-right:1px solid #eceeef;" onclick="SortNumber(0,'N')">
                     Exam No.
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(1,'T')">
+                  <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumber(1,'T')">
                     Exam Name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:10%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(2,'T')">
+                  <th style="width:10%; border-right:1px solid #eceeef;" onclick="SortNumber(2,'T')">
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:13%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(3,'N')">
+                  <th style="width:13%; border-right:1px solid #eceeef;" onclick="SortNumber(3,'N')">
                     Total Submit
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:13%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(4,'N')">
+                  <th style="width:13%; border-right:1px solid #eceeef;" onclick="SortNumber(4,'N')">
                     Total Pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:12%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(5,'T')">
+                  <th style="width:12%; border-right:1px solid #eceeef;" onclick="SortNumber(5,'T')">
                     Assign Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:12%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumber(6,'T')">
+                  <th style="width:12%; border-right:1px solid #eceeef;" onclick="SortNumber(6,'T')">
                     Due Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:10%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                  <th style="width:10%; border-right:1px solid #eceeef; text-align:center;">
                     Delete
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style="height:165px;">
               </tbody>
             </table>
           <!-- </div> -->
