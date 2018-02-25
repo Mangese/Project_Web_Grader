@@ -80,7 +80,7 @@
           }
           $sumMark = $sumMark + $teacherMark;
           $sumFullMark = $sumFullMark + $fullMarkModal;
-          echo "<td style='min-width:30px;' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
+          echo "<td style='min-width:50px;' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
           echo "<div class='form-inline '>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;

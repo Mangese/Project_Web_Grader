@@ -26,10 +26,10 @@
       $fullMarkName = 'fullMark'.$RowNum.'Name';
       
       echo "<tr>";
-      echo "<td style='width:24%'>";
+      echo "<td style='width:24%;'>";
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:12%'>";
+      echo "<td style='width:12%;'>";
       echo "<input type='text' class='form-control' style='width:50%; text-align:right;' id = '$fullMarkName' placeholder='Mark'/>";
       echo "</td>";
       echo "<td style='width:15%; text-align:center;'>";
@@ -51,7 +51,7 @@
       // echo "<input id='datepicker' style='z-index:2048'/>";
       // echo "<script>$('#datepicker').datepicker({uiLibrary: 'bootstrap4', autoHide: true, zIndex: 2048,});</script>";
       echo "</td>";
-      echo "<td style='width:20%'>";
+      echo "<td style='width:20%;'>";
       echo "<div class='form-group mb-0'>";
       echo "<div class='input-group date' id='$temptime' onclick = 'Timepicker(this.id)'>";
       echo "<input type='text' class='form-control' id = '$temptimeName' placeholder='Time Send' />";
