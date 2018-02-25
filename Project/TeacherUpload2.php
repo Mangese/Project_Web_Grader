@@ -1644,7 +1644,7 @@
 
           <!--Table part-->
           <div class="table-wrapper" style="height:245px">
-            <table class="table table-bordered table-striped table-hover main" id="Result">
+            <table class="table table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:100px" onclick="sortTable(0)">
