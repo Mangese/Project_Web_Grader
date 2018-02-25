@@ -925,32 +925,32 @@
 
           <!-- Sort Number Script -->
           <script type="text/javascript">
-            var TableIDvalue = "DataFromAjax";
-            var TableLastSortedColumn = -1;
+            var TableIDvalue1 = "DataFromAjax";
+            var TableLastSortedColumn1 = -1;
             function SortNumberTable() {
-              var sortColumn = parseInt(arguments[0]);
-              var type = arguments.length > 1 ? arguments[1] : 'T';
-              var dateformat = arguments.length > 2 ? arguments[2] : '';
-              var table = document.getElementById(TableIDvalue);
+              var sortColumn1 = parseInt(arguments[0]);
+              var type1 = arguments.length > 1 ? arguments[1] : 'T';
+              var dateformat1 = arguments.length > 2 ? arguments[2] : '';
+              var table = document.getElementById(TableIDvalue1);
               var tbody = table.getElementsByTagName("tbody")[0];
               var rows = tbody.getElementsByTagName("tr");
               var arrayOfRows = new Array();
-              type = type.toUpperCase();
-              dateformat = dateformat.toLowerCase();
+              type1 = type1.toUpperCase();
+              dateformat1 = dateformat1.toLowerCase();
               for (var i = 0, len = rows.length; i < len; i++) {
                 arrayOfRows[i] = new Object;
                 arrayOfRows[i].oldIndex = i;
-                var celltext = rows[i].getElementsByTagName("td")[sortColumn].innerHTML.replace(/<[^>]*>/g, "");
-                if (type == 'D') { arrayOfRows[i].value = GetDateSortingKey(dateformat, celltext); }
+                var celltext = rows[i].getElementsByTagName("td")[sortColumn1].innerHTML.replace(/<[^>]*>/g, "");
+                if (type1 == 'D') { arrayOfRows[i].value = GetDateSortingKey(dateformat1, celltext); }
                 else {
-                  var re = type == "N" ? /[^\.\-\+\d]/g : /[^a-zA-Z0-9]/g;
+                  var re = type1 == "N" ? /[^\.\-\+\d]/g : /[^a-zA-Z0-9]/g;
                   arrayOfRows[i].value = celltext.replace(re, "").substr(0, 25).toLowerCase();
                 }
               }
-              if (sortColumn == TableLastSortedColumn) { arrayOfRows.reverse(); }
+              if (sortColumn1 == TableLastSortedColumn1) { arrayOfRows.reverse(); }
               else {
-                TableLastSortedColumn = sortColumn;
-                switch (type) {
+                TableLastSortedColumn1 = sortColumn1;
+                switch (type1) {
                   case "N": arrayOfRows.sort(CompareRowOfNumbers); break;
                   case "D": arrayOfRows.sort(CompareRowOfNumbers); break;
                   default: arrayOfRows.sort(CompareRowOfText);
@@ -1474,13 +1474,13 @@
 
                     <!-- Sort Number Script -->
                     <script type="text/javascript">
-                      var TableIDvalue = "getProblem";
+                      var TableIDvalue2 = "getProblem";
                       var TableLastSortedColumn = -1;
                       function SortNumberTable2() {
                         var sortColumn = parseInt(arguments[0]);
                         var type = arguments.length > 1 ? arguments[1] : 'T';
                         var dateformat = arguments.length > 2 ? arguments[2] : '';
-                        var table = document.getElementById(TableIDvalue);
+                        var table = document.getElementById(TableIDvalue2);
                         var tbody = table.getElementsByTagName("tbody")[0];
                         var rows = tbody.getElementsByTagName("tr");
                         var arrayOfRows = new Array();
