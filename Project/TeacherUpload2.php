@@ -62,6 +62,9 @@
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
   <style>
+    *, ::after, ::before {
+        box-sizing: inherit;
+    }
     .table-fixed thead {
       width: 100%;
       background-color: #20b2aa;
@@ -180,7 +183,7 @@
                 </div>
                 <div class="col-sm-5 px-0">
                   <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
-                    oninput="setCustomValidity('')" style="height:20px">
+                    oninput="setCustomValidity('')">
                     <option value="">Department</option>
                     <option value="BE">Biomedical Engineering</option>
                     <option value="CE">Civil Engineering</option>
@@ -830,7 +833,7 @@
           <!--Selection-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px; align-items:unset;">
             <div class="form-group mx-sm-3">
-              <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()" style="height:20px">
+              <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()">
                 <option value="">Please Select Class</option>
               </select>
             </div>
@@ -1180,7 +1183,7 @@
           <form class="form-inline justify-content-between" style="margin-top:16px; margin-bottom:20px;">
             <!--Head 1-->
             <div class="form-group mx-sm-3">
-              <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()" style="height:20px">
+              <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()">
                   <option value="">
                       Please Select Section
                   </option>
@@ -1210,7 +1213,7 @@
                       </div>
                       <div class="modal-body left">
                         <label class="mb-2">Class</label>
-                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some class');"
+                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:80%;" required oninvalid="this.setCustomValidity('Please select some class');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Please Select Classroom</option>
                                             </select>
@@ -1224,7 +1227,7 @@
                         <label class="mb-2">Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control mb-3" name="semester" id="semester" style="width: 80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some semester');"
+                        <select class="form-control mb-3" name="semester" id="semester" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some semester');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Semester</option>
                                                 <script>
@@ -1236,7 +1239,7 @@
                         <!-- </div> -->
 
                         <label class="mb-2">Year</label>
-                        <select class="form-control mb-2" name="year" id="year" style="width: 80%; height:20px;" required oninvalid="this.setCustomValidity('Please select some year');"
+                        <select class="form-control mb-2" name="year" id="year" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some year');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Year</option>
                                                     <script>
@@ -1616,7 +1619,7 @@
           <!--Head part-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px; align-items:unset;">
             <div class="form-group mx-sm-3">
-              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();" style="height:20px">
+              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();">
                   <option value="">Please Select Section</option>
               </select>
             </div>
