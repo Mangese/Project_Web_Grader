@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
-  <link rel="stylesheet" href="TeacherUpload.css">
+  <link rel="stylesheet" href="TeacherPage.css">
 
   <nav class="navbar navbar-light bg-light" style="background-color: #0C3343; color:#ffffff">
     <form class="form-inline">
@@ -71,7 +71,7 @@
       color: #fff;
     }
     .table-fixed tbody {
-      height: 320px;
+      height: 210px;
       overflow-y: auto;
       width: 100%;
     }

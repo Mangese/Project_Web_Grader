@@ -18,13 +18,13 @@
       $LN = $row['lang'];
       $FN = $row['fileName'];
       echo "<tr>";
-      echo "<td style='width:40%' class = 'use'>";
+      echo "<td style='width:40%; padding: 10.655555px;' class = 'use'>";
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
-      echo "<td style='width:20%; text-align:center;'>";
+      echo "<td style='width:20%; padding: 10.655555px; text-align:center;'>";
       echo "$UD";
       echo "</td>";
-      echo "<td style='width:20%; text-align:center;'>";
+      echo "<td style='width:20%; padding: 10.655555px; text-align:center;'>";
       echo "$LN";
       echo "</td>";
       echo "<td style='width:20%; text-align:center;'>";
