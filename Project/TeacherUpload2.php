@@ -1670,7 +1670,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper" style="height:245px">
+          <div class="table-wrapper" style="height:264px">
             <table class="table table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
@@ -1786,7 +1786,7 @@
                       <h5 id='fullMark' name='fullMark'>/ Full mark</h5>
                     </div>
                   </div>
-                  <table class="table table-striped table-hover main" id="tb3LastSendFile">
+                  <table class="table table-striped table-bordered table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
                         <th style="width:10%; border-right:1px solid #eceeef;" onclick="sortTable3(0)">
@@ -1814,8 +1814,8 @@
                         </th>
                       </tr>
                     </thead>
-                    <!-- <tbody>
-                    </tbody> -->
+                    <tbody>
+                    </tbody>
                   </table>
                 </div>
 
