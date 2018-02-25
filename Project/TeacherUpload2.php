@@ -1672,7 +1672,7 @@
           <!--Table part-->
           <!-- <div class="table-wrapper" style="height:245px"> -->
             <table class="table table-striped table-hover main table-fixed" id="Result">
-              <thead class="thead">
+              <!-- <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:100px" onclick="sortTable(0)">
                     ID
@@ -1692,9 +1692,9 @@
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                 </tr>
-              </thead>
-              <tbody>
-              </tbody>
+              </thead> -->
+              <!-- <tbody>
+              </tbody> -->
             </table>
           <!-- </div> -->
           <!--End Table part-->
