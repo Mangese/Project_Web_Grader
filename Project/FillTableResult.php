@@ -25,7 +25,7 @@
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
-            echo "<th style='min-width:50px'>";
+            echo "<th style='min-width:50px; width:70px;'>";
               echo "Ex$i ";
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];
@@ -40,7 +40,7 @@
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
       echo "<th style='width:50px' onclick='sortTable($sortLastCol)'>";
-            echo "SumPoints";
+            echo "Sum Points";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
         echo "</tr>";
