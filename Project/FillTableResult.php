@@ -16,16 +16,16 @@
       $sumPlob = $row['sumPloblem'];
       echo "<thead class='thead'>";
         echo "<tr style='width:100%'>";
-          echo "<th style='width:100px' onclick='sortTable(0)'>";
+          echo "<th style='min-width:80px' onclick='sortTable(0)'>";
             echo "ID";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-          echo "<th style='width:250px' onclick='sortTable(1)'>";
+          echo "<th style='min-width:205px' onclick='sortTable(1)'>";
             echo "Name";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
-            echo "<th style='min-width:50px; width:70px;'>";
+            echo "<th style='min-width:70px;'>";
               echo "Ex$i ";
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];
@@ -35,11 +35,11 @@
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
-          echo "<th style='width:50px' onclick='sortTable($sortLastCol)'>";
+          echo "<th style='min-width:60px' onclick='sortTable($sortLastCol)'>";
             echo "Pass";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-      echo "<th style='width:50px' onclick='sortTable($sortLastCol)'>";
+      echo "<th style='min-width:115px' onclick='sortTable($sortLastCol)'>";
             echo "Sum Points";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
@@ -54,10 +54,10 @@
       $CountRowForModal = $CountRowForModal + 1 ;
       $sumPass = 0;
       echo "<tr style='width:100%'>";
-        echo "<td style='width:100px'>";
+        echo "<td style='min-width:80px'>";
           echo "$StdID";
         echo "</td>";
-        echo "<td style='width:250px'>";
+        echo "<td style='min-width:205px'>";
           echo "$NAME";
         echo "</td>";
 //         $result2 = mysql_query("select h_id as hid,(case when (select status from submit where h_id = h.h_id and status = 'P' and u_id = '$ID' limit 1) is null then 'F' else 'P' end)  as status,(case when fullMark is null then '' else fullMark end) as fullMark from homework h join problem p on h.p_id = p.p_id  where s_id = '$SID' and h.deleteflag is null and p.deleteflag is null;");
@@ -80,19 +80,19 @@
           }
           $sumMark = $sumMark + $teacherMark;
           $sumFullMark = $sumFullMark + $fullMarkModal;
-          echo "<td style='min-width:50px;' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
+          echo "<td style='min-width:70px;' data-toggle='tooltip' data-placement='bottom' title='Click for view submission details'>";
           echo "<div class='form-inline '>";
             if (!strcmp($STATUS,"P")){
               $sumPass = $sumPass+1;
               echo "<i class='fa fa-check' aria-hidden='true' style='color:#2ECC71; margin-right:4px' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
-                echo "<p style='width:50px; text-align:right; margin-bottom:0px; color:#2ECC71';>($teacherMark pt.)</p>";
+                echo "<p style='width:70px; text-align:right; margin-bottom:0px; color:#2ECC71';>($teacherMark pt.)</p>";
               }
             }
             else {
               echo "<i class='fa fa-times' aria-hidden='true' style='color:#E74C3C; margin-right:4px' onclick = 'ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,$ID,$submitCount,$fullMarkModal1);' data-toggle='modal' data-target='#modalSourceFileSend'></i>";
               if($teacherMark != ''){
-                 echo "<p style='width:50px; text-align:right; margin-bottom:0px; color:#E74C3C';>($teacherMark pt.)</p>";
+                 echo "<p style='width:70px; text-align:right; margin-bottom:0px; color:#E74C3C';>($teacherMark pt.)</p>";
               }
 //               echo '<i class="fa fa-times" aria-hidden="true" style="color:#E74C3C" onclick = ResultModalHeader($ID,$HidModal,$CountRowForModal,$numprob,"' . $NAME. '"); data-toggle="modal" data-target="#modalSourceFileSend">''</i>';
               
@@ -100,12 +100,12 @@
           echo "</div>";
           echo "</td>";
         }
-        echo "<td style='width:50px; text-align:center;'>";
+        echo "<td style='min-width:60px; text-align:center;'>";
           $passPerSum = $sumPass.'/'.$sumPlob;
           echo "$passPerSum";
           
         echo "</td>";
-       echo "<td style='width:50px; text-align:center;'>";
+       echo "<td style='min-width:115px; text-align:center;'>";
           $passPerSum = $sumPass.'/'.$sumPlob;
           echo "$sumMark";
           echo "/";
