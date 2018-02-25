@@ -72,7 +72,7 @@
       overflow-y: auto;
       width: 100%;
     }
-    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
       display: block;
     }
     .table-fixed tbody tr:nth-child(odd) > td {
@@ -1889,6 +1889,34 @@
 
       </div>
       <!-- Tab panes -->
+
+      <!--Table-->
+      <div class="table-container" style="width:100%">
+            <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
+              <thead class="thead">
+                <tr>
+                  <th style="width:40%" onclick="SortNumberTable(0,'T')">
+                    Ploblem name
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:20%" onclick="SortNumberTable(1,'T')">
+                    Upload Date
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:20%" onclick="SortNumberTable(2,'T')">
+                    Language
+                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                  </th>
+                  <th style="width:20%; text-align:center;">
+                    Delete
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+          <!--End Table-->
 
     </div>
     <!--container-table-->
