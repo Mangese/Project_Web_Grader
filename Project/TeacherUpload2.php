@@ -1406,21 +1406,21 @@
                     <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
-                          <th style="width:18%;" onclick="SortNumberTable2(0,'T')">
+                          <th style="width:24%;" onclick="SortNumberTable2(0,'T')">
                             Exam name
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
                           <th style="width:12%; text-align:center;">
                             Full mark
                           </th>
-                          <th style="width:11%;" onclick="SortNumberTable2(2,'T')">
+                          <th style="width:15%;" onclick="SortNumberTable2(2,'T')">
                             Language
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
-                          <th style="width:25%; text-align:center;">
+                          <th style="width:20%; text-align:center;">
                             Deadline
                           </th>
-                          <th style="width:25%; text-align:center;">
+                          <th style="width:20%; text-align:center;">
                             Deadline Time
                           </th>
                           <th style="width:9%; text-align:center;">
