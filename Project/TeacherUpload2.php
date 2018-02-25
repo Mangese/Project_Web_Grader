@@ -861,15 +861,15 @@
             <table class="table table-striped table-bordered table-hover main" id="DataFromAjax">
               <thead class="thead">
                 <tr>
-                  <th style="width:40%" onclick="sortTable1(0)">
+                  <th style="width:40%" onclick="SortNumberTable(0,'T')">
                     Ploblem name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%" onclick="sortTable1(1)">
+                  <th style="width:20%" onclick="SortNumberTable(1,'T')">
                     Upload Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:20%" onclick="sortTable1(2)">
+                  <th style="width:20%" onclick="SortNumberTable(2,'T')">
                     Language
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -923,6 +923,102 @@
           </script>
           <!--End Script-->
 
+          <!-- Sort Number Script -->
+          <script type="text/javascript">
+            var TableIDvalue = "DataFromAjax";
+            var TableLastSortedColumn = -1;
+            function SortNumberTable() {
+              var sortColumn = parseInt(arguments[0]);
+              var type = arguments.length > 1 ? arguments[1] : 'T';
+              var dateformat = arguments.length > 2 ? arguments[2] : '';
+              var table = document.getElementById(TableIDvalue);
+              var tbody = table.getElementsByTagName("tbody")[0];
+              var rows = tbody.getElementsByTagName("tr");
+              var arrayOfRows = new Array();
+              type = type.toUpperCase();
+              dateformat = dateformat.toLowerCase();
+              for (var i = 0, len = rows.length; i < len; i++) {
+                arrayOfRows[i] = new Object;
+                arrayOfRows[i].oldIndex = i;
+                var celltext = rows[i].getElementsByTagName("td")[sortColumn].innerHTML.replace(/<[^>]*>/g, "");
+                if (type == 'D') { arrayOfRows[i].value = GetDateSortingKey(dateformat, celltext); }
+                else {
+                  var re = type == "N" ? /[^\.\-\+\d]/g : /[^a-zA-Z0-9]/g;
+                  arrayOfRows[i].value = celltext.replace(re, "").substr(0, 25).toLowerCase();
+                }
+              }
+              if (sortColumn == TableLastSortedColumn) { arrayOfRows.reverse(); }
+              else {
+                TableLastSortedColumn = sortColumn;
+                switch (type) {
+                  case "N": arrayOfRows.sort(CompareRowOfNumbers); break;
+                  case "D": arrayOfRows.sort(CompareRowOfNumbers); break;
+                  default: arrayOfRows.sort(CompareRowOfText);
+                }
+              }
+              var newTableBody = document.createElement("tbody");
+              for (var i = 0, len = arrayOfRows.length; i < len; i++) {
+                newTableBody.appendChild(rows[arrayOfRows[i].oldIndex].cloneNode(true));
+              }
+              table.replaceChild(newTableBody, tbody);
+            } // function SortTable()
+            function CompareRowOfText(a, b) {
+              var aval = a.value;
+              var bval = b.value;
+              return (aval == bval ? 0 : (aval > bval ? 1 : -1));
+            } // function CompareRowOfText()
+            function CompareRowOfNumbers(a, b) {
+              var aval = /\d/.test(a.value) ? parseFloat(a.value) : 0;
+              var bval = /\d/.test(b.value) ? parseFloat(b.value) : 0;
+              return (aval == bval ? 0 : (aval > bval ? 1 : -1));
+            } // function CompareRowOfNumbers()
+            function GetDateSortingKey(format, text) {
+              if (format.length < 1) { return ""; }
+              format = format.toLowerCase();
+              text = text.toLowerCase();
+              text = text.replace(/^[^a-z0-9]*/, "");
+              text = text.replace(/[^a-z0-9]*$/, "");
+              if (text.length < 1) { return ""; }
+              text = text.replace(/[^a-z0-9]+/g, ",");
+              var date = text.split(",");
+              if (date.length < 3) { return ""; }
+              var d = 0, m = 0, y = 0;
+              for (var i = 0; i < 3; i++) {
+                var ts = format.substr(i, 1);
+                if (ts == "d") { d = date[i]; }
+                else if (ts == "m") { m = date[i]; }
+                else if (ts == "y") { y = date[i]; }
+              }
+              d = d.replace(/^0/, "");
+              if (d < 10) { d = "0" + d; }
+              if (/[a-z]/.test(m)) {
+                m = m.substr(0, 3);
+                switch (m) {
+                  case "jan": m = String(1); break;
+                  case "feb": m = String(2); break;
+                  case "mar": m = String(3); break;
+                  case "apr": m = String(4); break;
+                  case "may": m = String(5); break;
+                  case "jun": m = String(6); break;
+                  case "jul": m = String(7); break;
+                  case "aug": m = String(8); break;
+                  case "sep": m = String(9); break;
+                  case "oct": m = String(10); break;
+                  case "nov": m = String(11); break;
+                  case "dec": m = String(12); break;
+                  default: m = String(0);
+                }
+              }
+              m = m.replace(/^0/, "");
+              if (m < 10) { m = "0" + m; }
+              y = parseInt(y);
+              if (y < 100) { y = parseInt(y) + 2000; }
+              return "" + String(y) + "" + String(m) + "" + String(d) + "";
+            } // function GetDateSortingKey()
+          </script>
+          <!-- End Sort Number Script -->
+          
+
           <!--Foot Part-->
           <div class="foot-t left">
             <button type="button" class="btn btn-secondary" id="UploadButton" onclick="fillUploadCID();" data-toggle="modal" data-target="#myModal1">Upload Problem</button>
@@ -947,17 +1043,17 @@
                     <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control mb-3" style="width:90%" placeholder="Problem Name"
                       required oninvalid="this.setCustomValidity('Problem name is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 4');"
                       oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" />
-                    <label>File</label><br>
+                    <label>Problem File</label><br>
                     <label class="file mb-3">
                                 <input type="file" id = "PDFFile" name = "PDFFile" accept=".pdf" required />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
-                    <label>Input</label><br>
+                    <label>Input File</label><br>
                     <label class="file mb-3">
                                 <input type="file" id = "InFile" name = "InFile" accept=".zip" required  />
                                 <span class="file-custom" style="width:132%"></span>
                                 </label><br>
-                    <label>Output</label><br>
+                    <label>Output File</label><br>
                     <label class="file mb-3">
                                 <input type="file" id = "OutFile" name = "OutFile" accept=".zip" required />
                                 <span class="file-custom" style="width:132%"></span>
@@ -1340,7 +1436,6 @@
               return "" + String(y) + "" + String(m) + "" + String(d) + "";
             } // function GetDateSortingKey()
           </script>
-
           <!-- End Sort Number Script -->
 
           <!--Foot part-->
@@ -1643,7 +1738,7 @@
                           Test case
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:15%; text-align:center;" onclick="sortTable1(0)">
+                        <th style="width:15%; text-align:center;">
                           Download
                         </th>
                       </tr>
@@ -1742,7 +1837,7 @@
 
             <div class="modal-body " style="text-align: center; margin-bottom:20px;">
 
-              <h5 style="margin-bottom:20px">Do you want to delete?</h5>
+              <h5 style="margin-top:10px; margin-bottom:20px;">Do you want to delete?</h5>
               <button type="button" class="btn btn-success" onclick="RealDelete();" data-dismiss="modal" style="margin-right:5px">Yes</button>
               <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
 
