@@ -1305,7 +1305,7 @@
                   </th>
                 </tr>
               </thead>
-              <tbody style="height:165px;">
+              <tbody style="height:170px;">
               </tbody>
             </table>
           <!-- </div> -->
@@ -1430,27 +1430,27 @@
                   </div>
 
                   <div class="modal-body">
-                    <table class="table table-striped table-hover main" id="getProblem">
+                    <table class="table table-striped table-hover main table-fixed" id="getProblem">
                       <thead class="thead">
                         <tr>
-                          <th style="width:24%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumberTable2(0,'T')">
+                          <th style="width:24%; border-right:1px solid #eceeef;" onclick="SortNumberTable2(0,'T')">
                             Exam name
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
-                          <th style="width:12%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                          <th style="width:12%; border-right:1px solid #eceeef; text-align:center;">
                             Full mark
                           </th>
-                          <th style="width:15%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="SortNumberTable2(2,'T')">
+                          <th style="width:15%; border-right:1px solid #eceeef;" onclick="SortNumberTable2(2,'T')">
                             Language
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
-                          <th style="width:20%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                          <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
                             Deadline
                           </th>
-                          <th style="width:20%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                          <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
                             Deadline Time
                           </th>
-                          <th style="width:9%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                          <th style="width:9%; border-right:1px solid #eceeef; text-align:center;">
                             Select
                           </th>
                         </tr>
@@ -1671,7 +1671,7 @@
 
           <!--Table part-->
           <div class="table-wrapper" style="height:245px">
-            <table class="table table-striped table-hover main" id="Result">
+            <table class="table table-striped table-hover main table-fixed" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:100px" onclick="sortTable(0)">
@@ -1789,27 +1789,27 @@
                   <table class="table table-striped table-hover main" id="tb3LastSendFile">
                     <thead class="thead">
                       <tr>
-                        <th style="width:10%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="sortTable3(0)">
+                        <th style="width:10%; border-right:1px solid #eceeef;" onclick="sortTable3(0)">
                           No.
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:23%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="sortTable3(1)">
+                        <th style="width:23%; border-right:1px solid #eceeef;" onclick="sortTable3(1)">
                           Submit date
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:23%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="sortTable3(2)">
+                        <th style="width:23%; border-right:1px solid #eceeef;" onclick="sortTable3(2)">
                           Submit time
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:14%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="sortTable3(3)">
+                        <th style="width:14%; border-right:1px solid #eceeef;" onclick="sortTable3(3)">
                           Status
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:15%; border-left:1px solid #eceeef; border-right:1px solid #eceeef;" onclick="sortTable3(4)">
+                        <th style="width:15%; border-right:1px solid #eceeef;" onclick="sortTable3(4)">
                           Test case
                           <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                         </th>
-                        <th style="width:15%; border-left:1px solid #eceeef; border-right:1px solid #eceeef; text-align:center;">
+                        <th style="width:15%; border-right:1px solid #eceeef; text-align:center;">
                           Download
                         </th>
                       </tr>

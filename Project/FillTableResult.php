@@ -16,16 +16,16 @@
       $sumPlob = $row['sumPloblem'];
       echo "<thead class='thead'>";
         echo "<tr style='width:100%'>";
-          echo "<th style='min-width:80px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable(0)'>";
+          echo "<th style='min-width:80px; border-right:1px solid #eceeef;' onclick='sortTable(0)'>";
             echo "ID";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-          echo "<th style='min-width:205px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable(1)'>";
+          echo "<th style='min-width:205px; border-right:1px solid #eceeef;' onclick='sortTable(1)'>";
             echo "Name";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
           for ($i = 1; $i <= $sumPlob; $i++){
-            echo "<th style='min-width:86px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;'>";
+            echo "<th style='min-width:86px; border-right:1px solid #eceeef;'>";
               echo "Ex$i ";
             $rowFullMark = mysql_fetch_assoc($fullMark);
             $Full = $rowFullMark['Mark'];
@@ -35,11 +35,11 @@
             echo "</th>";
           }
           $sortLastCol = $sumPlob+2;
-          echo "<th style='min-width:65px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
+          echo "<th style='min-width:65px; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
             echo "Pass";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
-          echo "<th style='min-width:120px; border-left:1px solid #eceeef; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
+          echo "<th style='min-width:120px; border-right:1px solid #eceeef;' onclick='sortTable($sortLastCol)'>";
             echo "Sum Points";
             echo "<i class='fa fa-sort' aria-hidden='true' style='float:right; padding-top:3px;'></i>";
           echo "</th>";
