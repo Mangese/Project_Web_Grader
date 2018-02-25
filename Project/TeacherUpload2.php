@@ -60,6 +60,30 @@
   </nav>
   <!-- <input id="SessionUsermoc" type=""> -->
   <!-- <input id="SessionUserEditmoc" type=""> -->
+
+  <style>
+    .table-fixed thead {
+      width: 100%;
+      background-color: #20b2aa;
+      color: #fff;
+    }
+    .table-fixed tbody {
+      height: 320px;
+      overflow-y: auto;
+      width: 100%;
+    }
+    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+      display: block;
+    }
+    .table-fixed tbody tr:nth-child(odd) > td {
+      background-color: rgba(0,0,0,.05);
+    }
+    .table-fixed tbody td, .table-fixed thead > tr> th {
+      float: left;
+      border-bottom-width: 0;
+    }
+  </style>
+
 </head>
 <?php
   session_start();
@@ -858,7 +882,7 @@
 
           <!--Table-->
           <div class="table-wrapper-problem" style="height:245px">
-            <table class="table table-striped table-hover main" id="DataFromAjax">
+            <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
               <thead class="thead">
                 <tr>
                   <th style="width:40%" onclick="SortNumberTable(0,'T')">
