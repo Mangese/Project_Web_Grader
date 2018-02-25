@@ -1067,7 +1067,7 @@
                   <div class="modal-body left" style="margin-left:35px;">
                     <input type='hidden' name="ClassID" id="ClassID">
                     <label>Problem name</label><br>
-                    <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control mb-3" style="width:90%" placeholder="Problem Name"
+                    <input type="text" name="ProblemNameUp" id="ProblemNameUp" class="form-control mb-3" style="width:92%" placeholder="Problem Name"
                       required oninvalid="this.setCustomValidity('Problem name is empty,\nInput only (A-Z,a-z,0-9)\nmin length: 4');"
                       oninput="setCustomValidity('')" minlength=4 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{4,}" />
                     <label>Problem File</label><br>
@@ -1211,23 +1211,23 @@
                         <h4 class="modal-title">Create Section</h4>
                         <button type="button" align='right' class="close" data-dismiss="modal">&times;</button>
                       </div>
-                      <div class="modal-body left">
+                      <div class="modal-body mx-3">
                         <label class="mb-2">Class</label>
-                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:80%;" required oninvalid="this.setCustomValidity('Please select some class');"
+                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:100%;" required oninvalid="this.setCustomValidity('Please select some class');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Please Select Classroom</option>
                                             </select>
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
                         <label class="mb-2">Section</label>
-                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:80%" placeholder="Section"
+                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:100%" placeholder="Section"
                           required oninvalid="this.setCustomValidity('Section is empty,\nInput only (A-Z,a-z,0-9)');" oninput="setCustomValidity('')"
                           minlength=1 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{1,}" />
 
                         <label class="mb-2">Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control mb-3" name="semester" id="semester" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some semester');"
+                        <select class="form-control mb-3" name="semester" id="semester" style="width: 100%;" required oninvalid="this.setCustomValidity('Please select some semester');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Semester</option>
                                                 <script>
@@ -1239,7 +1239,7 @@
                         <!-- </div> -->
 
                         <label class="mb-2">Year</label>
-                        <select class="form-control mb-2" name="year" id="year" style="width: 80%;" required oninvalid="this.setCustomValidity('Please select some year');"
+                        <select class="form-control mb-2" name="year" id="year" style="width: 100%;" required oninvalid="this.setCustomValidity('Please select some year');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Year</option>
                                                     <script>

@@ -26,13 +26,13 @@
       $fullMarkName = 'fullMark'.$RowNum.'Name';
       
       echo "<tr>";
-      echo "<td style='width:24%;'>";
+      echo "<td style='width:24%; padding: 1rem;'>";
       echo "<a href = 'Problem/$FN' target = '_blank' data-toggle='tooltip' data-placement='bottom' title='Click for view problem'>$PN</a>";
       echo "</td>";
       echo "<td style='width:12%;'>";
-      echo "<input type='text' class='form-control' style='width:50%; text-align:right;' id = '$fullMarkName' placeholder='Mark'/>";
+      echo "<input type='text' class='form-control' style='width:70px; text-align:right; margin-left:auto;' id = '$fullMarkName' placeholder='Mark'/>";
       echo "</td>";
-      echo "<td style='width:15%; text-align:center;'>";
+      echo "<td style='width:15%; padding: 1rem; text-align:center;'>";
       echo "$LN";
       echo "</td>";
       echo "<td style='width:20%'>";
@@ -61,7 +61,7 @@
       echo "</div>";
       echo "</div>";
       echo "</td>";
-      echo "<td style='width:9%; text-align:center;'>";
+      echo "<td style='width:9%; padding: 1rem; text-align:center;'>";
       echo "<input type='checkbox' name='selectedProblemToAssign' value = '$PID' style='text-align:center;'><br>";
       echo "</td>";
       echo "</tr>";
