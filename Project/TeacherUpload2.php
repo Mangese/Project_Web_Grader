@@ -889,7 +889,7 @@
               <thead class="thead">
                 <tr>
                   <th style="width:40%; border-right:1px solid #eceeef;" onclick="SortNumberTable(0,'T')">
-                    Ploblem name
+                    Problem Name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(1,'T')">
@@ -1288,7 +1288,7 @@
                     Total Submit
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:13%; border-right:1px solid #eceeef;" onclick="SortNumber(4,'N')">
+                  <th style="width:11%; border-right:1px solid #eceeef;" onclick="SortNumber(4,'N')">
                     Total Pass
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -1296,7 +1296,7 @@
                     Assign Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
-                  <th style="width:12%; border-right:1px solid #eceeef;" onclick="SortNumber(6,'T')">
+                  <th style="width:14%; border-right:1px solid #eceeef;" onclick="SortNumber(6,'T')">
                     Deadline Date
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
@@ -1434,11 +1434,11 @@
                       <thead class="thead">
                         <tr>
                           <th style="width:24%; border-right:1px solid #eceeef;" onclick="SortNumberTable2(0,'T')">
-                            Exam name
+                            Exam Name
                             <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                           </th>
                           <th style="width:12%; border-right:1px solid #eceeef; text-align:center;">
-                            Full mark
+                            Full Mark
                           </th>
                           <th style="width:15%; border-right:1px solid #eceeef;" onclick="SortNumberTable2(2,'T')">
                             Language
