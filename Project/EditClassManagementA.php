@@ -10,7 +10,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     $CID = "'".$CID."'";
     $CN = "'".$CN."'";
     
-    echo "alert('CN '+ $CN);";
+    //echo "alert('CN '+ $CN);";
     
     
     
