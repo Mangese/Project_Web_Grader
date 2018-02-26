@@ -11,7 +11,7 @@ $conn = mysql_connect("localhost","mangese","000000");
         $F = $row["file"];
         exec("rm File/$F ",$out,$err);
         mysql_query("delete from submit where source_file = '$F';");
-        echo " console.log('$F');";
+        //echo " console.log('$F');";
     }
       mysql_query("delete from homework where s_id = '$SID';");
       mysql_query("delete from register where s_id = '$SID';");
