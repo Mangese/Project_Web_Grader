@@ -1,5 +1,5 @@
 <?php
-header('Content-Disposition: attachment; filename="default-filename.csv"');
+header('Content-Disposition: attachment; filename="ResultSummary.csv"');
  $conn = mysql_connect("localhost","mangese","000000");
   if($conn != FALSE)
   {
