@@ -196,7 +196,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "FillAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
       xmlhttp.send();
-      location.reload();
+      // location.reload();
     }
 
 
@@ -531,7 +531,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
       xmlhttp.send();
-      location.reload();
+      // location.reload();
     }
 
     function fillSectionManagementTb() {
@@ -555,7 +555,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "FillSectionManagementTbA.php?sectionIDSearch=" + sectionIDSearch + "&sectionNameSearch=" + sectionNameSearch + "&createBySearch=" + createBySearch, true);
       xmlhttp.send();
-      location.reload();
+      // location.reload();
     }
   </script>
   <input id="uidmoc" type="hidden">
@@ -1332,7 +1332,7 @@ if(!isset($_SESSION["user"]))
                 }
                 xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
                 xmlhttp.send();
-                location.reload();
+                // location.reload();
 
 
               }
