@@ -42,10 +42,10 @@
 <body>
   <script>
     function testalert() {
-      alert("test alert");
+      //alert("test alert");
     }
     function goRegister() {
-      alert("go register page");
+    //  alert("go register page");
       window.location.assign("Register.php");
     }
 
