@@ -105,11 +105,6 @@
       margin: 0;
       background-color: rgba(0,0,0,.05);
     }
-	  .bootstrap-datetimepicker-widget table tr {
-      width: 120%;
-      margin: 0;
- 
-    }
 
 
   </style>
