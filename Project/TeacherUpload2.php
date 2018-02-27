@@ -62,24 +62,19 @@
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
   <style>
-    *, ::after, ::before {
+     *, ::after, ::before {
         box-sizing: inherit;
     }
-
-
-    .table-fixed:not(.Datepiker) thead  {
+    .table-fixed:not(#getProblem) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
-
     }
-    .table-fixed:not(.Datepiker) tbody {
+    .table-fixed:not(#getProblem) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
-
 	  }
-
     .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th  {
       display: block;
     }
@@ -101,8 +96,6 @@
       border-spacing: 0;
       border-collapse: collapse;
     }
-
-
 
   </style>
 
