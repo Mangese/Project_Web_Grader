@@ -110,11 +110,7 @@
       margin: 0;
  
     }
-	    .bootstrap-datetimepicker-widget table td {
-      width: 120%;
-      margin: 0;
- 
-    }
+
 
   </style>
 
