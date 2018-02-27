@@ -1670,13 +1670,13 @@
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active" >
-                          <img class="d-block img-fluid" src="./images/results.jpg" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/tresult.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
                           <img class="d-block img-fluid" src="./images/lastFileSent.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/csv.jpg" alt="Third slide">
+                          <img class="d-block img-fluid" src="./images/copyDetection.jpg" alt="Third slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
