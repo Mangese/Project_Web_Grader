@@ -70,6 +70,8 @@
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
+	    padding-right:0px !important;
+
     }
     .table-fixed tbody {
       height: 210px;
@@ -89,8 +91,6 @@
     .bootstrap-datetimepicker-widget{
       box-sizing: initial;
       max-width: 290px;
-	    padding-right:0px !important;
-
     }
     
 
