@@ -74,7 +74,7 @@
     }
 	  #getProblem.table-fixed tbody
 	  {
-		  width: 500%;
+		  width: 150%;
 	  }
     .table-fixed:not(#getProblem) tbody {
       height: 210px;
