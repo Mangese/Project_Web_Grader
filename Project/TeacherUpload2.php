@@ -61,7 +61,7 @@
   <!-- <input id="SessionUsermoc" type=""> -->
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
-  <style>
+  <!-- <style>
      *, ::after, ::before {
         box-sizing: inherit;
     }
@@ -109,7 +109,7 @@
 		  background-color: red;
     }
 
-  </style>
+  </style> -->
 
 </head>
 <?php
@@ -909,7 +909,7 @@
 
           <!--Table-->
           <div class="table-container" style="width:100%">
-            <table class="table table-striped table-hover main table-fixed" id="DataFromAjax">
+            <table class="table table-striped table-hover main" id="DataFromAjax">
               <thead class="thead">
                 <tr>
                   <th style="width:40%; border-right:1px solid #eceeef;" onclick="SortNumberTable(0,'T')">
@@ -1293,7 +1293,7 @@
 
           <!--Table part-->
           <!-- <div class="table-wrapper-problem" style="height:205px"> -->
-            <table class="table table-striped table-hover main table-fixed" id="TableHw">
+            <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:10%; border-right:1px solid #eceeef;" onclick="SortNumber(0,'N')">
@@ -1454,7 +1454,7 @@
                   </div>
 
                   <div class="modal-body">
-                    <table class="table table-striped table-hover main table-fixed" id="getProblem">
+                    <table class="table table-striped table-hover main" id="getProblem">
                       <thead class="thead">
                         <tr>
                           <th style="width:24%; border-right:1px solid #eceeef;" onclick="SortNumberTable2(0,'T')">
