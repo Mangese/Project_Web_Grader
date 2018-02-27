@@ -85,10 +85,6 @@
       float: left;
       border-bottom-width: 0;
     }
-	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom{
-      box-sizing: initial;
-      max-width: 2000px;
-    }
 
     .bootstrap-datetimepicker-widget table {
       width: 106.5%;
