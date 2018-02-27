@@ -73,7 +73,7 @@
 
     }
     .table-fixed tbody {
-      height: 100px;
+      height: 10px;
       overflow-y: auto;
       width: 100%;
 
