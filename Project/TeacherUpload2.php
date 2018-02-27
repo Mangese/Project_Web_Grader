@@ -72,7 +72,7 @@
       color: #fff;
 
     }
-	  .boostrap-datetimepicker-widget thead {
+	  .boostrap-datetimepicker-widget table {
 		  width: 1000%;
 	  }
     .table-fixed:not(#getProblem) tbody {
