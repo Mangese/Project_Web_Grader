@@ -62,7 +62,10 @@
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
   <style>
-   
+    *, ::after, ::before {
+        box-sizing: inherit;
+    }
+
 
     .table-fixed:not(.Datepiker) thead  {
       width: 100%;
