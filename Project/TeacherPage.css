@@ -46,7 +46,7 @@ body {
     display: inherit;
   }
   
-  .table {
+  .table:not(.Datepiker) {
     border-style: none !important;
   }
   
@@ -60,19 +60,19 @@ body {
     margin-right: 1px;
   }
   
-  .table td,
-  .table th {
+  .table:not(.Datepiker) td,
+  .table:not(.Datepiker) th {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #eceeef;
   }
   
-  .table > tbody > tr > td,
-  .table > tbody > tr > th,
-  .table > tfoot > tr > td,
-  .table > tfoot > tr > th,
-  .table > thead > tr > td,
-  .table > thead > tr > th {
+  .table:not(.Datepiker) > tbody > tr > td,
+  .table:not(.Datepiker) > tbody > tr > th,
+  .table:not(.Datepiker) > tfoot > tr > td,
+  .table:not(.Datepiker) > tfoot > tr > th,
+  .table:not(.Datepiker) > thead > tr > td,
+  .table:not(.Datepiker) > thead > tr > th {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
@@ -93,7 +93,7 @@ body {
     border-style: none;
   }
   
-  .container-table {
+  .container-table:not(.Datepiker) {
     width: 80%;
     height: 500px;
     margin: 0px auto;
@@ -197,12 +197,12 @@ body {
     display: inherit;
   }
   
-  .table-wrapper-problem {
+  .table-wrapper-problem:not(.Datepiker) {
     height: 245px;
     overflow-y: scroll;
   }
   
-  .table-wrapper {
+  .table-wrapper:not(.Datepiker) {
     height: 264px;
           overflow-x: scroll;
           overflow-y: scroll;
