@@ -70,14 +70,15 @@
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
-	    padding-right:0px !important;
 
     }
     .table-fixed tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
-    }
+padding-right:0px !important;
+
+	  }
     .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
       display: block;
     }
