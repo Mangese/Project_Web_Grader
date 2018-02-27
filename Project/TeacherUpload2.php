@@ -95,7 +95,7 @@
 	    display: inline-block;
     }
 	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr th {
-      width: 1000px;
+      width: auto;
 	    display: inline-block;
     }
 
