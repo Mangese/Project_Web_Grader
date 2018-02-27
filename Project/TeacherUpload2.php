@@ -207,7 +207,7 @@
                 </div>
                 <div class="col-sm-5 px-0">
                   <select class="form-control" id="editDepartment" name="editDepartment" disabled required oninvalid="this.setCustomValidity('Please select some department');"
-                    oninput="setCustomValidity('')">
+                    oninput="setCustomValidity('')"  style="height:20px">
                     <option value="">Department</option>
                     <option value="BE">Biomedical Engineering</option>
                     <option value="CE">Civil Engineering</option>
@@ -857,7 +857,7 @@
           <!--Selection-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px; align-items:unset;">
             <div class="form-group mx-sm-3">
-              <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()">
+              <select class="form-control" name="selectClass" id="selectClass" onchange="fillTable()"  style="height:20px">
                 <option value="">Please Select Class</option>
               </select>
             </div>
@@ -1209,7 +1209,7 @@
           <form class="form-inline justify-content-between" style="margin-top:16px; margin-bottom:20px;">
             <!--Head 1-->
             <div class="form-group mx-sm-3">
-              <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()">
+              <select class="form-control" name="selSectionHw" id="selSectionHw" onchange="changePassword()" style="height:20px">
                   <option value="">
                       Please Select Section
                   </option>
@@ -1239,7 +1239,7 @@
                       </div>
                       <div class="modal-body mx-3">
                         <label class="mb-2">Class</label>
-                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:100%;" required oninvalid="this.setCustomValidity('Please select some class');"
+                        <select class="form-control mb-3" name="createClass" id="createClass" style="width:100%; height:20px" required oninvalid="this.setCustomValidity('Please select some class');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Please Select Classroom</option>
                                             </select>
@@ -1253,7 +1253,7 @@
                         <label class="mb-2">Semester</label>
 
                         <!-- <div class="dropdown"> -->
-                        <select class="form-control mb-3" name="semester" id="semester" style="width: 100%;" required oninvalid="this.setCustomValidity('Please select some semester');"
+                        <select class="form-control mb-3" name="semester" id="semester" style="width: 100%; height: 20px;" required oninvalid="this.setCustomValidity('Please select some semester');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Semester</option>
                                                 <script>
@@ -1265,7 +1265,7 @@
                         <!-- </div> -->
 
                         <label class="mb-2">Year</label>
-                        <select class="form-control mb-2" name="year" id="year" style="width: 100%;" required oninvalid="this.setCustomValidity('Please select some year');"
+                        <select class="form-control mb-2" name="year" id="year" style="width: 100%; height: 20px;" required oninvalid="this.setCustomValidity('Please select some year');"
                           oninput="setCustomValidity('')">
                                                 <option value="">Year</option>
                                                     <script>
@@ -1294,7 +1294,7 @@
           <!--End Head part-->
 
           <!--Table part-->
-          <!-- <div class="table-wrapper-problem" style="height:205px"> -->
+          <div class="table-wrapper-problem" style="height:205px">
             <table class="table table-striped table-hover main" id="TableHw">
               <thead class="thead">
                 <tr style="width:100%">
@@ -1334,7 +1334,7 @@
               <tbody style="height:170px;">
               </tbody>
             </table>
-          <!-- </div> -->
+          </div>
           <!--End Table--> 
 
           <!-- Sort Number Script -->
@@ -1645,7 +1645,7 @@
           <!--Head part-->
           <form class="form-inline justify-content-between" style="margin-top:20px; margin-bottom:20px; align-items:unset;">
             <div class="form-group mx-sm-3">
-              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();">
+              <select class="form-control" name="selSectionRs" id="selSectionRs" onchange="fillTableResult();" style="height:20px">
                   <option value="">Please Select Section</option>
               </select>
             </div>
