@@ -72,9 +72,6 @@
       color: #fff;
 
     }
-	  .boostrap-datetimepicker-widget table {
-		  width: 1000%;
-	  }
     .table-fixed:not(#getProblem) tbody {
       height: 210px;
       overflow-y: auto;
