@@ -94,7 +94,7 @@
       max-width: 290px;
     }
     .bootstrap-datetimepicker-widget table {
-      width: 120%;
+      width: 110%;
       margin: 0;
       background-color: red;
       border-spacing: 0;
