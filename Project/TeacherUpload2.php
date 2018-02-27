@@ -70,7 +70,7 @@
       background-color: #20b2aa;
       color: #fff;
     }
-    .table-fixed:not(.bootstrap-datetimepicker-widget) tbody {
+    .table-fixed tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
@@ -85,6 +85,11 @@
       float: left;
       border-bottom-width: 0;
     }
+	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom{
+      box-sizing: initial;
+      max-width: 2000px;
+    }
+
     .bootstrap-datetimepicker-widget table {
       width: 106.5%;
       margin: 0;
