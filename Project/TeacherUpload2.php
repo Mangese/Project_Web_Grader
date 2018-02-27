@@ -89,6 +89,8 @@
     .bootstrap-datetimepicker-widget{
       box-sizing: initial;
       max-width: 290px;
+	    padding-right:0px !important;
+
     }
     
 
