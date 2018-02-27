@@ -66,7 +66,7 @@
         box-sizing: inherit;
     }
 
-    .table-fixed thead  {
+    .table-fixed:not(#getProblem) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
@@ -90,7 +90,7 @@
     }
     .bootstrap-datetimepicker-widget{
       box-sizing: initial;
-      max-width: 6000px;
+      max-width: 290px;
     }
     
 
