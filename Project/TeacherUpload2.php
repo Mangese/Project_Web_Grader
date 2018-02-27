@@ -908,30 +908,32 @@
           </form>
 
           <!--Table-->
-          <div class="table-container" style="width:100%">
-            <table class="table table-striped table-hover main" id="DataFromAjax">
-              <thead class="thead">
-                <tr>
-                  <th style="width:40%; border-right:1px solid #eceeef;" onclick="SortNumberTable(0,'T')">
-                    Problem Name
-                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                  </th>
-                  <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(1,'T')">
-                    Upload Date
-                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                  </th>
-                  <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(2,'T')">
-                    Language
-                    <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
-                  </th>
-                  <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
-                    Delete
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
+          <div class="table-wrapper-problem">
+            <div class="table-container" style="width:100%">
+              <table class="table table-striped table-hover main" id="DataFromAjax">
+                <thead class="thead">
+                  <tr>
+                    <th style="width:40%; border-right:1px solid #eceeef;" onclick="SortNumberTable(0,'T')">
+                      Problem Name
+                      <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                    </th>
+                    <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(1,'T')">
+                      Upload Date
+                      <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                    </th>
+                    <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumberTable(2,'T')">
+                      Language
+                      <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
+                    </th>
+                    <th style="width:20%; border-right:1px solid #eceeef; text-align:center;">
+                      Delete
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
           </div>
           <!--End Table-->
 
