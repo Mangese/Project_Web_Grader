@@ -62,7 +62,7 @@
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
   <style>
-    *:not(#getProblem), ::after, ::before {
+    *, ::after, ::before {
         box-sizing: inherit;
     }
 
