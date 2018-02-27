@@ -62,7 +62,7 @@
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
   <style>
-    *, ::after, ::before {
+    *:not(#getProblem), ::after, ::before {
         box-sizing: inherit;
     }
 
@@ -78,14 +78,6 @@
       width: 100%;
 
 	  }
-	  .ui-datepicker {
-    width: 300px;
-    height: 300px;
-    margin: 5px auto 0;
-    font: 12pt Arial, sans-serif;
-    /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);*/
-}
 
     .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th  {
       display: block;
