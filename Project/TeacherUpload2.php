@@ -65,7 +65,7 @@
      *, ::after, ::before {
         box-sizing: inherit;
     }
-    .table-fixed:not(#getProblem) thead  {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
