@@ -91,9 +91,8 @@
     }
 	
     .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr {
-      width: auto;
+      width: 150%;
 	    display: inline-block;
-	  justify-content: space-between;
     }
 
   </style>
