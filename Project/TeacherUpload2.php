@@ -67,7 +67,7 @@
     }
 
 
-    .table-fixed thead  {
+    .table-fixed:not(.Datepicker) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
