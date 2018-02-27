@@ -67,13 +67,13 @@
     }
 
 
-    .table-fixed:not(.Datepicker) thead  {
+    .table-fixed:not(.Datepiker) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
 
     }
-    .table-fixed:not(.Datepicker) tbody {
+    .table-fixed:not(.Datepiker) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
