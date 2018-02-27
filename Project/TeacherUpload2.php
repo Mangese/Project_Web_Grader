@@ -66,40 +66,30 @@
         box-sizing: inherit;
     }
 
-    .table-fixed:not(#getProblem) thead  {
+    .table-fixed:not(.Datepiker) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
 
     }
-    .table-fixed:not(#getProblem) tbody {
+    .table-fixed:not(.Datepiker) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
 
 	  }
 
-    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th  {
+    .table-fixed:not(.Datepiker) tbody, .table-fixed:not(.Datepiker) tr, .table-fixed:not(.Datepiker) td, .table-fixed:not(.Datepiker) th  {
       display: block;
     }
-    .table-fixed tbody tr:nth-child(odd) > td {
+    .table-fixed:not(.Datepiker) tbody tr:nth-child(odd) > td {
       background-color: rgba(0,0,0,.05);
     }
-    .table-fixed tbody td, .table-fixed thead > tr> th {
+    .table-fixed:not(.Datepiker) tbody td, .table-fixed:not(.Datepiker) thead > tr> th {
       float: left;
       border-bottom-width: 0;
     }
-    .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom{
-      box-sizing: initial;
-      max-width: 290px;
-    }
-    .bootstrap-datetimepicker-widget table {
-      width: 106.5%;
-      margin: 0;
-      background-color: rgba(0,0,0,.05);
-      border-spacing: 0;
-      border-collapse: collapse;
-    }
+    
 
 
   </style>
