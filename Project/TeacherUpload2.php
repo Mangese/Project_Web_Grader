@@ -72,6 +72,10 @@
       color: #fff;
 
     }
+	  #getProblem.table-fixed tbody
+	  {
+		  width: 500%;
+	  }
     .table-fixed:not(#getProblem) tbody {
       height: 210px;
       overflow-y: auto;
