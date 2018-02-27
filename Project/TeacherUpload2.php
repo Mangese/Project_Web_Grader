@@ -66,7 +66,7 @@
         box-sizing: inherit;
     }
 
-    .table-fixed thead {
+    .table-fixed thead,.table-fixed:not(#getProblem)  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
@@ -78,13 +78,13 @@
       width: 100%;
 
 	  }
-    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th,.table-fixed:not(#getProblem)  {
       display: block;
     }
-    .table-fixed tbody tr:nth-child(odd) > td {
+    .table-fixed tbody tr:nth-child(odd) > td ,.table-fixed:not(#getProblem) {
       background-color: rgba(0,0,0,.05);
     }
-    .table-fixed tbody td, .table-fixed thead > tr> th {
+    .table-fixed tbody td, .table-fixed thead ,.table-fixed:not(#getProblem) > tr> th {
       float: left;
       border-bottom-width: 0;
     }
