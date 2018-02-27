@@ -89,8 +89,8 @@
 	box-sizing: initial;
 	width: 197%;
     }
-    .bootstrap-datetimepicker-widget table {
-      width: 100%;
+    .bootstrap-datetimepicker-widget thead {
+      width: 197%;
       margin: 0;
       background-color: rgba(0,0,0,.05);
       border-spacing: 0;
