@@ -495,7 +495,7 @@
                     $("#pidmoc").val(y);
                     $("#fullmarkmoc").val(getFullMark);
                    var fullMarkV = document.getElementById("fullMark");
-// 			  document.getElementById("fullMark").value()="";
+			  document.getElementById("fullMark").value="";
                     var setMarkV = document.getElementById("setMark");
                     var markSubBtnV = document.getElementById("markSubBtn");
                     document.getElementById('fullMark').innerHTML = "/ " + getFullMark;
