@@ -871,7 +871,7 @@
                     <h4 class="modal-title" id="modelTitleId">Modal title</h4>
                   </div>
                   <div class="modal-body">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -1164,7 +1164,7 @@
                     <h4 class="modal-title" id="modelTitleId">Modal title</h4>
                   </div>
                   <div class="modal-body">
-                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" data-interval="false">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
@@ -1657,7 +1657,7 @@
                     <h4 class="modal-title" id="modelTitleId">Modal title</h4>
                   </div>
                   <div class="modal-body">
-                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="false">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel" data-interval="false">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
