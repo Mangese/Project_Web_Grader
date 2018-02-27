@@ -99,7 +99,7 @@
     .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr {
       
 	    width: 197% !important;
-	    display: inline-block;
+	     background-color: yellow !important;
     }
 	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr th{
       
