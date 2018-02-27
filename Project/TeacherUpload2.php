@@ -96,7 +96,7 @@
     .bootstrap-datetimepicker-widget table {
       width: 120%;
       margin: 0;
-      background-color: #20b2aa;
+      background-color: red;
       border-spacing: 0;
       border-collapse: collapse;
     }
