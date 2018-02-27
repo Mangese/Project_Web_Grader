@@ -65,12 +65,12 @@
      *, ::after, ::before {
         box-sizing: inherit;
     }
-    .table-fixed:not(.bootstrap-datetimepicker-widget) thead  {
+    .table-fixed thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
     }
-    .table-fixed:not(#getProblem) tbody {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
@@ -84,10 +84,6 @@
     .table-fixed tbody td, .table-fixed thead > tr> th {
       float: left;
       border-bottom-width: 0;
-    }
-    .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom{
-      box-sizing: initial;
-      max-width: 290px;
     }
     .bootstrap-datetimepicker-widget table {
       width: 106.5%;
