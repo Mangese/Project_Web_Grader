@@ -92,7 +92,11 @@
 	
     .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr {
       
-	    box-sizing: border box;
+	    width: auto;
+	    display: inline-block;
+    }
+	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr th{
+      
 	    width: auto;
 	    display: inline-block;
     }
