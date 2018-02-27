@@ -94,7 +94,7 @@
       
 	    width: auto;
 	    display: inline-block;
-		  background-color: blue;
+		  background-color: blue !important;
     }
     .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr {
       
