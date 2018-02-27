@@ -78,7 +78,7 @@
       width: 100%;
 
 	  }
-    .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th  {
+    .table-fixed:not(#getProblem) tbody, .table-fixed:not(#getProblem) tr, .table-fixed:not(#getProblem) td, .table-fixed:not(#getProblem) th  {
       display: block;
     }
     .table-fixed tbody tr:nth-child(odd) > td {
