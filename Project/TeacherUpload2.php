@@ -884,7 +884,7 @@
                           <img class="d-block img-fluid" src="./images/problem.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/t-modal-uploadProblem.JPG" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/uploadProblem.jpg" alt="Second slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -1245,8 +1245,8 @@
                                             </select>
                         <!-- <label for="staticEmail" class="col-sm-2 col-form-label">Password</label> -->
 
-                        <label class="mb-2">Section</label>
-                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:100%" placeholder="Section"
+                        <label class="mb-2">Section Name</label>
+                        <input type="text" class="form-control mb-3" name="createSection" id="createSection" style="width:100%" placeholder="Section Name"
                           required oninvalid="this.setCustomValidity('Section is empty,\nInput only (A-Z,a-z,0-9)');" oninput="setCustomValidity('')"
                           minlength=1 maxlength=20 pattern="[A-Za-z,0,1,2,3,4,5,6,7,8,9]{1,}" />
 
@@ -1666,13 +1666,17 @@
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active" >
-                          <img class="d-block img-fluid" src="./images/result.jpg" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/results.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/csv.jpg" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/lastFileSent.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block img-fluid" src="./images/csv.jpg" alt="Third slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
