@@ -73,7 +73,7 @@
       color: #fff;
 
     }
-    .table-fixed tbody {
+    .table-fixed:not(.Datepicker) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
