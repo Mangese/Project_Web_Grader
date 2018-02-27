@@ -93,6 +93,19 @@
       box-sizing: initial;
       max-width: 290px;
     }
+    .bootstrap-datetimepicker-widget table {
+      width: 130%;
+      margin: 0;
+      background-color: transparent;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    .bootstrap-datetimepicker-widget table thead {
+      width: 100%;
+      margin: 0;
+      background-color: rgba(0,0,0,.05);
+    }
+
   </style>
 
 </head>
@@ -1644,17 +1657,17 @@
                     <h4 class="modal-title" id="modelTitleId">Modal title</h4>
                   </div>
                   <div class="modal-body">
-                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+                    <div id="carouselExampleIndicators3" class="carousel slide" data-ride="false">
                       <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
                       </ol>
                       <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                          <img class="d-block " src="./images/result.jpg" alt="First slide">
+                        <div class="carousel-item active" >
+                          <img class="d-block img-fluid" src="./images/result.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block " src="./images/csv.jpg" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/csv.jpg" alt="Second slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
