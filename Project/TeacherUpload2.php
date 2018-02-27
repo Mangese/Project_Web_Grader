@@ -89,7 +89,7 @@
 	box-sizing: initial;
 	width: 197%;
     }
-    .bootstrap-datetimepicker-widget thead {
+    .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom thead {
       width: 197%;
       margin: 0;
       background-color: rgba(0,0,0,.05);
