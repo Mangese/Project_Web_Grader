@@ -44,7 +44,7 @@
 <script >
 
   function testalert() {
-    alert("test alert");
+    //alert("test alert");
 }
 </script>
 <div class="login-container" >

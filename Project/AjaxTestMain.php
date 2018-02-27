@@ -79,12 +79,12 @@ window.location = "logout.php";
 function showText()
 {
 	str = $("#selectClass").val();
-	alert(str);
+	//alert(str);
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function(){
 	if(this.readyState == 4 && this.status == 200){
 	document.getElementById("txtHint").innerHTML = this.responseText;
-	alert("success");
+	//alert("success");
 	}
 	}
 	xmlhttp.open("GET","AjaxTest.php?q="+str,true);

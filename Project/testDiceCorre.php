@@ -1,5 +1,5 @@
 <?php
-header('Content-Disposition: attachment; filename="default-filename.csv"');
+header('Content-Disposition: attachment; filename="Plagiarism.csv"');
   $conn = mysql_connect("localhost","mangese","000000");
 	mysql_query("use grader;");
   $HID = $_REQUEST['hid'];

@@ -23,8 +23,8 @@ if($conn != FALSE)
 	}
 	$temp = $tempName;
 	$file_name = $tempName;
-	echo "<script> alert('$temp'); </script>";
-	echo "<script> alert('$MC'); </script>";
+	//echo "<script> alert('$temp'); </script>";
+	//echo "<script> alert('$MC'); </script>";
 	$UnzipTarget = "UnzipPlace/";
 	
 	$baseTargetToCompile = "File/";
@@ -100,7 +100,7 @@ if($conn != FALSE)
 			$count = $count+1;
 			$countNameIn = $count.".in";
 			$countNameOut = $count.".out";
-			echo "<script> alert('Result = $status') </script>";
+//			echo "<script> alert('Result = $status') </script>";
 			
 		}
 		if($countAll == 0)

@@ -11,7 +11,6 @@
     $result1 = mysql_query("select concat(firstname,' ',lastname) as name,u.u_id as u_id,student_id as std_id from user u join register r on r.u_id = u.u_id where r.s_id = '$SID';");
     $result3 = mysql_query("select h_id as hid from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and h.deleteflag is null and p.deleteflag is null order by h.h_id;");
     $fullMark = mysql_query("select (case when fullMark is null then '' else fullMark end) as Mark from homework h join problem p on p.p_id = h.p_id where h.s_id = '$SID' and p.deleteflag is null and h.deleteflag is null order by h.h_id;");
-    
     while($row = mysql_fetch_assoc($sumPb)){
       $sumPlob = $row['sumPloblem'];
       echo "<thead class='thead'>";
@@ -123,11 +122,26 @@
         echo "</td>";
     while($row = mysql_fetch_assoc($result3)){
       $HID = $row['hid'];
+      $FileType = mysql_query("select language as lan from homework where h_id = '$HID'");
+      while($rowFT = mysql_fetch_assoc($FileType))
+      {
+        $FT = $rowFT['lan'];	
+      }
+
       $result4 = mysql_query("select count(*) as sumbyproblem from submit su join homework h on h.h_id = su.h_id join problem p on p.p_id = h.p_id where su.status = 'P' and su.h_id = '$HID' and p.deleteflag is null and h.deleteflag is null;"); 
       while($row = mysql_fetch_assoc($result4)){
         $sumByPloblem = $row['sumbyproblem'];
         echo "<td style='min-width:30px; font-weight:bold';>";
-          echo "<a href = 'testDiceCorre.php?hid=$HID>' target = '_blank'>$sumByPloblem</a>";
+          if($FT != 'Java')
+          {
+                      echo "<a href = 'testDiceCorre.php?hid=$HID>' target = '_blank'>$sumByPloblem</a>";
+
+          }
+          else
+          {
+                      echo "$sumByPloblem";
+
+          }
         echo "</td>";
       }
     }

@@ -162,19 +162,19 @@ if(!isset($_SESSION["user"]))
 
     function addClass() {
       var addNewClass = document.getElementById('addClassName').value;
-      alert("in add class");
-      alert(addNewClass);
+      // alert("in add class");
+      // alert(addNewClass);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert("success");
+          // alert("success");
           eval(this.responseText);
         }
       }
       xmlhttp.open("POST", "AddClassManagementA.php?addNewClass=" + addNewClass, true);
       xmlhttp.send();
-      // location.reload();
+      location.reload();
     }
 
     function fillaccountManagementTb() {
@@ -196,6 +196,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "FillAccountManagementTbA.php?typeSearch=" + typeSearch + "&sidSearch=" + sidSearch + "&nameSearch=" + nameSearch, true);
       xmlhttp.send();
+      // location.reload();
     }
 
 
@@ -328,7 +329,7 @@ if(!isset($_SESSION["user"]))
         }
         xmlhttp.open("POST", "EditAccountManagementA.php?uidreq=" + uidreq + fnamesend + lnamesend + unamesend + sidsend + departsend + emailsend + passSend + "&utypereq=" + utypereq, true);
         xmlhttp.send();
-        // location.reload();
+        location.reload();
       }
       else {
         document.getElementById("uidmoc").value = "";
@@ -351,13 +352,13 @@ if(!isset($_SESSION["user"]))
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert("success");
+          // alert("success");
           eval(this.responseText);
         }
       }
       xmlhttp.open("POST", "EditClassManagementA.php?cidreq=" + cidreq + "&classnameEdit=" + classnameEdit, true);
       xmlhttp.send();
-      // location.reload();
+      location.reload();
 
     }
 
@@ -371,18 +372,18 @@ if(!isset($_SESSION["user"]))
       var sidreq = document.getElementById('sidmoc').value;
       var sectionnameEdit = document.getElementById('editSectionName').value;
       // alert("sid : " + sidreq);
-      alert(sectionnameEdit);
+      // alert(sectionnameEdit);
 
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert("success");
+          // alert("success");
           eval(this.responseText);
         }
       }
       xmlhttp.open("POST", "EditSectionManagementA.php?sidreq=" + sidreq + "&sectionnameEdit=" + sectionnameEdit, true);
       xmlhttp.send();
-      // location.reload();
+      location.reload();
 
     }
 
@@ -398,12 +399,13 @@ if(!isset($_SESSION["user"]))
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert("success");
+          // alert("success");
           eval(this.responseText);
         }
       }
       xmlhttp.open("POST", "DeleteAccountManagementA.php?uidDelete=" + uidDelete, true);
       xmlhttp.send();
+      location.reload();
 
     }
 
@@ -419,12 +421,13 @@ if(!isset($_SESSION["user"]))
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert("success");
+          // alert("success");
           eval(this.responseText);
         }
       }
       xmlhttp.open("POST", "DeleteClassManagementA.php?cidDelete=" + cidDelete, true);
       xmlhttp.send();
+      location.reload();
 
 
     }
@@ -441,12 +444,13 @@ if(!isset($_SESSION["user"]))
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert("success");
+          // alert("success");
           eval(this.responseText);
         }
       }
       xmlhttp.open("POST", "DeleteSectionManagementA.php?sidDelete=" + sidDelete, true);
       xmlhttp.send();
+      location.reload();
 
 
     }
@@ -527,6 +531,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "FillClassManagementTbA.php?CIDSearch=" + CIDSearch + "&classNameSearch=" + classNameSearch, true);
       xmlhttp.send();
+      // location.reload();
     }
 
     function fillSectionManagementTb() {
@@ -550,6 +555,7 @@ if(!isset($_SESSION["user"]))
       }
       xmlhttp.open("POST", "FillSectionManagementTbA.php?sectionIDSearch=" + sectionIDSearch + "&sectionNameSearch=" + sectionNameSearch + "&createBySearch=" + createBySearch, true);
       xmlhttp.send();
+      // location.reload();
     }
   </script>
   <input id="uidmoc" type="hidden">
@@ -1326,6 +1332,7 @@ if(!isset($_SESSION["user"]))
                 }
                 xmlhttp.open("POST", "FillFileManagementTbA.php?tFilesearch=" + tFilesearch + "&dateStart=" + sdate + "&dateEnd=" + edate, true);
                 xmlhttp.send();
+                // location.reload();
 
 
               }
@@ -1347,6 +1354,7 @@ if(!isset($_SESSION["user"]))
                     }
                     xmlhttp.open("POST", "DeleteFile.php?file=" + checkboxes[i].value, false);
                     xmlhttp.send();
+                    location.reload();
                   }
                 }
               }
