@@ -65,12 +65,12 @@
      *, ::after, ::before {
         box-sizing: inherit;
     }
-    .table-fixed thead  {
+    .table-fixed:not(#getProblem) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
     }
-    .table-fixed tbody {
+    .table-fixed:not(#getProblem) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
