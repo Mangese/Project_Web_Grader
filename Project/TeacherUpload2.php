@@ -89,11 +89,13 @@
 	box-sizing: initial;
 	width: 197%;
     }
-	  .picker-switch{
-	width: 1000%;	  
-	  }
+	
     .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr {
       width: auto;
+	    display: inline-block;
+    }
+	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr th {
+      width: 1000px;
 	    display: inline-block;
     }
 
