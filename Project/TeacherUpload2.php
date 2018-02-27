@@ -85,6 +85,10 @@
       float: left;
       border-bottom-width: 0;
     }
+    .bootstrap-datetimepicker-widget{
+      box-sizing: initial;
+    }
+
   </style>
 
 </head>
