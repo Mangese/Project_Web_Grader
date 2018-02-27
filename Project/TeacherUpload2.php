@@ -98,7 +98,7 @@
     }
     .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr {
       
-	    width: auto;
+	    width: 197%;
 	    display: inline-block;
     }
 	  .bootstrap-datetimepicker-widget.dropdown-menu.usetwentyfour.bottom table thead tr th{
