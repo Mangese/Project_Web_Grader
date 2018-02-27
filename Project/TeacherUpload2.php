@@ -101,9 +101,19 @@
       border-collapse: collapse;
     }
     .bootstrap-datetimepicker-widget table thead {
-      width: 100%;
+      width: 120%;
       margin: 0;
       background-color: rgba(0,0,0,.05);
+    }
+	  .bootstrap-datetimepicker-widget table tr {
+      width: 120%;
+      margin: 0;
+ 
+    }
+	    .bootstrap-datetimepicker-widget table td {
+      width: 120%;
+      margin: 0;
+ 
     }
 
   </style>
