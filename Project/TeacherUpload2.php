@@ -67,26 +67,26 @@
     }
 
 
-    .table-fixed:not(.Datepiker) thead  {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) thead  {
       width: 100%;
       background-color: #20b2aa;
       color: #fff;
 
     }
-    .table-fixed:not(.Datepiker) tbody {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) tbody {
       height: 210px;
       overflow-y: auto;
       width: 100%;
 
 	  }
 
-    .table-fixed:not(.Datepiker) tbody, .table-fixed:not(.Datepiker) tr, .table-fixed:not(.Datepiker) td, .table-fixed:not(.Datepiker) th  {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) tbody, .table-fixed:not(.bootstrap-datetimepicker-widget) tr, .table-fixed:not(.bootstrap-datetimepicker-widget) td, .table-fixed:not(.bootstrap-datetimepicker-widget) th  {
       display: block;
     }
-    .table-fixed:not(.Datepiker) tbody tr:nth-child(odd) > td {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) tbody tr:nth-child(odd) > td {
       background-color: rgba(0,0,0,.05);
     }
-    .table-fixed:not(.Datepiker) tbody td, .table-fixed:not(.Datepiker) thead > tr> th {
+    .table-fixed:not(.bootstrap-datetimepicker-widget) tbody td, .table-fixed:not(.bootstrap-datetimepicker-widget) thead > tr> th {
       float: left;
       border-bottom-width: 0;
     }
