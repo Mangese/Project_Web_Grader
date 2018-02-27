@@ -65,7 +65,6 @@
     *, ::after, ::before {
         box-sizing: inherit;
     }
-	.ui-datepicker { width: 200em; font-size: 2em; padding: .2em .2em 0; display: none; }
 
     .table-fixed thead {
       width: 100%;
