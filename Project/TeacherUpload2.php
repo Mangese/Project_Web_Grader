@@ -85,7 +85,10 @@
       float: left;
       border-bottom-width: 0;
     }
-    .bootstrap-datetimepicker-widget{
+    /* .bootstrap-datetimepicker-widget{
+      box-sizing: initial;
+    } */
+    div:not(#datetimepicker1Name){
       box-sizing: initial;
     }
 
