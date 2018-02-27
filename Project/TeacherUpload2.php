@@ -1299,11 +1299,11 @@
               <thead class="thead">
                 <tr style="width:100%">
                   <th style="width:10%; border-right:1px solid #eceeef;" onclick="SortNumber(0,'N')">
-                    Exam No.
+                    No.
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:20%; border-right:1px solid #eceeef;" onclick="SortNumber(1,'T')">
-                    Exam Name
+                    Problem Name
                     <i class="fa fa-sort" aria-hidden="true" style="float: right; padding-top:3px;"></i>
                   </th>
                   <th style="width:10%; border-right:1px solid #eceeef;" onclick="SortNumber(2,'T')">
@@ -1696,7 +1696,7 @@
           </form>
 
           <!--Table part-->
-          <div class="table-wrapper" style="height:264px">
+          <div class="table-wrapper" style="height:245px">
             <table class="table table-striped table-hover main" id="Result">
               <thead class="thead">
                 <tr style="width:100%">
