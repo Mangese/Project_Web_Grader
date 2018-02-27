@@ -62,7 +62,7 @@
   <!-- <input id="SessionUserEditmoc" type=""> -->
 
   <style>
-    *, ::after, ::before {
+    *:not(.Datepiker), ::after, ::before {
         box-sizing: inherit;
     }
 
