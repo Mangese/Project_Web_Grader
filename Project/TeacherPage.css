@@ -60,8 +60,8 @@ body {
     margin-right: 1px;
   }
   
-  .table td,
-  .table th {
+  .table:not(#getProblem) td,
+  .table:not(#getProblem) th {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #eceeef;
