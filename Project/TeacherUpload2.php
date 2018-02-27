@@ -877,7 +877,7 @@
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                          <img class="d-block img-fluid" src="./images/t-problem2.jpg" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/problem.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
                           <img class="d-block img-fluid" src="./images/t-modal-uploadProblem.JPG" alt="Second slide">
@@ -1171,13 +1171,13 @@
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                          <img class="d-block img-fluid" src="./images/t-homework.JPG" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/homework.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/t-modal-createSection.JPG" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/createSection.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/t-modal-assignHomework.JPG" alt="Third slide">
+                          <img class="d-block img-fluid" src="./images/assignHomework.jpg" alt="Third slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -1663,10 +1663,10 @@
                       </ol>
                       <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                          <img class="d-block img-fluid" src="./images/t-result.JPG" alt="First slide">
+                          <img class="d-block img-fluid" src="./images/result.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                          <img class="d-block img-fluid" src="./images/t-modal-lastFileSend.JPG" alt="Second slide">
+                          <img class="d-block img-fluid" src="./images/csv.jpg" alt="Second slide">
                         </div>
                       </div>
                       <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
