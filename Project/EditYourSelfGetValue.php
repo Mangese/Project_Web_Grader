@@ -25,7 +25,7 @@
      {
      while($row = mysql_fetch_assoc($result))
      {
-      echo "alert('sucess');";
+      //echo "alert('sucess');";
       
       $UN = $row['userName'];
       $SID = $row['Student_ID'];
