@@ -67,7 +67,7 @@ $EM = $_POST["txtEmail"];
 $PW = $_POST["txtPassword"];
 mysql_query("use grader;");
 $CheckUser = 0;
-$result = mysql_query("select username as un from user where username = $UN;");
+$result = mysql_query("select username as un from user where username = '$UN';");
     while($row = mysql_fetch_assoc($result))
     {
 	    $CheckUser = 1;
