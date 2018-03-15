@@ -85,18 +85,7 @@ if($CheckUser == 0)
 	  // echo "elselsesese";
 	  mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn); 
 	}
-	if(trim($_POST["txtFirstname"]) == "")
-	{
-		echo"<body onload=\"window.alert('Please input Name!'); 
-		return history.back();\">";
-		exit();
-	}
 	echo "<script> alert('Success'); window.location = 'login.php'; </script>";
-	}
-	else
-	{
-	echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
-	}
 }
 else
 {
@@ -122,7 +111,11 @@ else
 // echo "<br>";
 // echo $_POST["inputEmail3"];
 // echo "<br>";
-
+}
+	else
+	{
+	echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
+	}
 ?> 
   </form>
 </div>
