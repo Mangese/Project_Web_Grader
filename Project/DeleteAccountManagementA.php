@@ -23,12 +23,12 @@ $conn = mysql_connect("localhost","mangese","000000");
         exec("rm File/$F ");
         }
        $result2 = mysql_query("select file_name as f1,inputfile as f2,outputfile as f3,p_id as pid from problem where u_id = '$UID';");
-       while($row = mysql_fetch_assoc($result2))
+       while($row3 = mysql_fetch_assoc($result2))
        {
-         $F1 = $row["f1"];
-         $F2 = $row["f2"];
-         $PID = $row["pid"];
-         $F3 = $row["f3"];
+         $F1 = $row3["f1"];
+         $F2 = $row3["f2"];
+         $PID = $row3["pid"];
+         $F3 = $row3["f3"];
          exec("rm Problem/$F1 ");
          exec("rm Problem/$F2 ");
          exec("rm Problem/$F3 ");
