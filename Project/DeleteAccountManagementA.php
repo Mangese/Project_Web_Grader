@@ -17,7 +17,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     {
     $SID = $row["sid"];
     $result1 = mysql_query("select source_file as filename from submit where s_id = $SID;");
-    while($row1 = mysql_fetch_assoc($result))
+    while($row1 = mysql_fetch_assoc($result1))
     {
       $F = $row1["filename"];
       exec("rm File/$F ");
