@@ -66,16 +66,41 @@ $DE = $_POST["sel1"];
 $EM = $_POST["txtEmail"];
 $PW = $_POST["txtPassword"];
 mysql_query("use grader;");
-if($AT=='T'){
-// echo "UserType :".$_POST["addUserType"];
-mysql_query("iNSERT INTO user (USERNAME,PASSWORD,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'T','$FN','$LN','$DE','$EM','$SID');",$conn); 
+$CheckUser = 0;
+$result = mysql_query("select username as un from user where username = $UN;");
+    while($row = mysql_fetch_assoc($result))
+    {
+	    $CheckUser = 1;
+    }
+if($CheckUser == 0)
+{
+	if($AT=='T'){
+	// echo "UserType :".$_POST["addUserType"];
+	mysql_query("iNSERT INTO user (USERNAME,PASSWORD,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'T','$FN','$LN','$DE','$EM','$SID');",$conn); 
+	}
+	else if($AT=='A'){
+	   mysql_query("iNSERT INTO user (USERNAME,PASSWORD,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'A','$FN','$LN','$DE','$EM','$SID');",$conn);   
+	}
+	else{
+	  // echo "elselsesese";
+	  mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn); 
+	}
+	if(trim($_POST["txtFirstname"]) == "")
+	{
+		echo"<body onload=\"window.alert('Please input Name!'); 
+		return history.back();\">";
+		exit();
+	}
+	echo "<script> alert('Success'); window.location = 'login.php'; </script>";
+	}
+	else
+	{
+	echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
+	}
 }
-else if($AT=='A'){
-   mysql_query("iNSERT INTO user (USERNAME,PASSWORD,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'A','$FN','$LN','$DE','$EM','$SID');",$conn);   
-}
-else{
-  // echo "elselsesese";
-  mysql_query("iNSERT INTO user (USERNAME,PASSWORD,STUDENT_ID,USER_TYPE,FIRSTNAME,LASTNAME,DEPARTMENT,EMAIL,U_ID) VALUE ('$UN',MD5('$PW'),'$SID','S','$FN','$LN','$DE','$EM','$SID');",$conn); 
+else
+{
+	echo "<script> alert('Error Username Already Taken'); window.location = 'login.php'; </script>";	
 }
 // echo "UserType :".$_POST["addUserType"];
 // echo "<br>";
@@ -97,18 +122,7 @@ else{
 // echo "<br>";
 // echo $_POST["inputEmail3"];
 // echo "<br>";
-if(trim($_POST["txtFirstname"]) == "")
-	{
-		echo"<body onload=\"window.alert('Please input Name!'); 
-		return history.back();\">";
-		exit();
-	}
-echo "<script> alert('Success'); window.location = 'login.php'; </script>";
-}
-else
-{
-echo "ERROR CONNECT TO DATABASE PLESE CONTACT ADMIN";
-}
+
 ?> 
   </form>
 </div>
