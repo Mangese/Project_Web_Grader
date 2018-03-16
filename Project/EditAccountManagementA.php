@@ -5,7 +5,6 @@ $conn = mysql_connect("localhost","mangese","000000");
     session_start();
     mysql_query("use grader;");
     mysql_query("set NAMES UTF8;");
-
     $MYTYPE = $_SESSION["utype"];
     $FNE = $_REQUEST["fnameEdit"];
     $LNE = $_REQUEST["lnameEdit"];
@@ -72,8 +71,16 @@ $conn = mysql_connect("localhost","mangese","000000");
     // echo "alert('LN OK');";
     }
     if ($UN!=''){
-      $subquery=$subquery. ' ,Username =  "'.$UN.'"';
-    // echo "alert('UN OK');";
+      $result = mysql_query("select username as un from user where username = '$UN';");
+      while($row = mysql_fetch_assoc($result))
+      {
+        $CheckUser = 1;
+      }
+      if($CheckUser == 0)
+      {
+       $subquery=$subquery. ' ,Username =  "'.$UN.'"';
+       echo "alert('Username Already Taken');";
+      }
     }
     if ($SID!=''){
       $subquery=$subquery. ' ,Student_ID =  "'.$SID.'"';
@@ -110,7 +117,7 @@ $conn = mysql_connect("localhost","mangese","000000");
     }
         echo "location.reload();";
     }
-
+      
       // echo "alert('$subquery');";
       // echo "alert('$topEdit');";
       // echo "alert('$subquery WHERE U_ID =$UID;');";
