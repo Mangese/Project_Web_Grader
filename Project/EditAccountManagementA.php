@@ -79,7 +79,10 @@ $conn = mysql_connect("localhost","mangese","000000");
       if($CheckUser == 0)
       {
        $subquery=$subquery. ' ,Username =  "'.$UN.'"';
-       echo "alert('Username Already Taken');";
+      }
+      else
+      {
+        echo "alert('Username Already Taken');";       
       }
     }
     if ($SID!=''){
