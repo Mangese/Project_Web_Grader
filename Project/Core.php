@@ -48,9 +48,7 @@ if($conn != FALSE)
 		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
 		exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
 		exec("find . -type f -print0 | xargs -0 dos2unix");
-		echo "<script type = 'text/javascript'>";
-		echo "alert('$rere');";
-		echo "</script>";
+
 		$count = 1;
 		$countNameIn = $count.".in";
 		$countNameOut = $count.".out";
