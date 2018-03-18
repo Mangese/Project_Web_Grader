@@ -45,7 +45,7 @@ if($conn != FALSE)
 		$rm = "*";
 		exec("rm $baseTarget$UnzipTargetIn$rm");
 		exec("rm $baseTarget$UnzipTargetOut$rm");
-		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
+		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn; chmod 777 $baseTarget$UnzipTargetIn$FileNameIn");
 		exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
 		exec("dos2unix $baseTarget$UnzipTargetIn$FileNameIn",$outre,$rere);
 		echo "<script type = 'text/javascript'>";
