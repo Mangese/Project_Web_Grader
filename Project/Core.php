@@ -47,6 +47,7 @@ if($conn != FALSE)
 		exec("rm $baseTarget$UnzipTargetOut$rm");
 		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
 		exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
+		exec("dos2unix $baseTarget$UnzipTargetIn$FileNameIn");
 		$count = 1;
 		$countNameIn = $count.".in";
 		$countNameOut = $count.".out";
