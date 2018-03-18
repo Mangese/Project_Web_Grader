@@ -45,8 +45,9 @@ if($conn != FALSE)
 		$rm = "*";
 		exec("rm $baseTarget$UnzipTargetIn$rm");
 		exec("rm $baseTarget$UnzipTargetOut$rm");
-		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn; dos2unix $baseTarget$UnzipTargetIn$FileNameIn",$outout,$rere);
+		exec("unzip $baseTarget$FileNameIn -d $baseTarget$UnzipTargetIn");
 		exec("unzip $baseTarget$FileNameOut -d $baseTarget$UnzipTargetOut");
+		exec("find . -type f -print0 | xargs -0 dos2unix",$outout,$rere);
 		echo "<script type = 'text/javascript'>";
 		echo "alert('$rere');";
 		echo "</script>";
