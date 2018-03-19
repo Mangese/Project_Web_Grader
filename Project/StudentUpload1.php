@@ -186,7 +186,7 @@
                 </div>
                 <div class="col-sm-7">
                   <input type="email" class="form-control" name="editEmail" id="editEmail" placeholder="E-mail" disabled required oninvalid="this.setCustomValidity('Enter your email');"
-                    oninput="setCustomValidity('')" maxlength=30/>
+                    oninput="setCustomValidity('')" maxlength=50/>
                 </div>
                 <div class="col-sm-1">
                   <input class="form-check-input" type="checkbox" style="margin-top: 0.7rem; float: right" value="" id="defaultCheckEmail"
