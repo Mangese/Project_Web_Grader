@@ -188,7 +188,7 @@
                   </div>
                   <div class="col-sm-7">
                     <input type="email" class="form-control" name="txtEmail" placeholder="E-mail" required oninvalid="this.setCustomValidity('Enter your email');"
-                      oninput="setCustomValidity('')" maxlength=30/>
+                      oninput="setCustomValidity('')" maxlength=50/>
                   </div>
                 </div>
                 <div class="form-group row">
