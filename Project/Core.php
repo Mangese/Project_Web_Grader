@@ -7,10 +7,10 @@ $conn = mysql_connect("localhost","mangese","000000");
 if($conn != FALSE)
 {
 	$FT = substr($_FILES['Uploaded_file']['name'],-2);
-	//echo "<script> alert('$FT'); </script>";
+	echo "<script> alert('$FT'); </script>";
 	mysql_query("use grader;");
-	//echo "<script> alert('UID = $UID'); </script>";
-	//echo "<script> alert('PID = $PN'); </script>";
+	echo "<script> alert('UID = $UID'); </script>";
+	echo "<script> alert('PID = $PN'); </script>";
 	$QueryName = mysql_query("select concat($UID,$PN,count(*),'.c') as name from submit where u_id = '$UID' and h_id = '$PN';");
 	while($row = mysql_fetch_assoc($QueryName))
 	{
@@ -19,10 +19,10 @@ if($conn != FALSE)
 	$target = "File/";
 	$temp = $_FILES['Uploaded_file']['name'];
 	$SC = $_POST["SectionValue"];
-	//echo "<script> alert('Filename = $temp'); </script>";
-		//echo "<script> alert('$SC'); </script>";
+	echo "<script> alert('Filename = $temp'); </script>";
+	echo "<script> alert('$SC'); </script>";
 	$tempName = $GenFilename;
-	//echo "<script> alert('GenFileName = $tempName'); </script>";
+	echo "<script> alert('GenFileName = $tempName'); </script>";
 	if(!move_uploaded_file($_FILES['Uploaded_file']['tmp_name'],$target.$tempName))
 	{
 		echo "<script> alert('error'); </script>";
