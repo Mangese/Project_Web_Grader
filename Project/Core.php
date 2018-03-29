@@ -1,5 +1,9 @@
 <?php
+	echo "<script> alert('beforeSession'); </script>";
+
 session_start();
+	echo "<script> alert('AfterSession'); </script>";
+
 $UID = $_SESSION['uid'];
 $PN = $_POST["ProblemName"];
 $page = 0;
