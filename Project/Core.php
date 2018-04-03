@@ -3,7 +3,7 @@
 
 session_start();
 	echo "<script> alert('AfterSession'); </script>";
-
+/*
 $UID = $_SESSION['uid'];
 $PN = $_POST["ProblemName"];
 $page = 0;
@@ -137,5 +137,5 @@ if($conn != FALSE)
 		echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
 	}
 	echo "</script>";
-}
+}*/
 ?>
