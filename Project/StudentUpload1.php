@@ -643,7 +643,7 @@
                       <label class='file'>
                   <input type='hidden' name = "ProblemName" id = "ProblemName1">
 		  <input type='hidden' name = "SectionValue" id = "SectionValue1">
-		  <input type='file' name = "Uploaded_file" id = "Uploaded_file1" accept=".c,.cpp" required>
+		  <input type='file' name = "fileToUpload" id = "fileToUpload" accept=".c,.cpp" required>
                   <span class='file-custom'></span>
                   </label>
                       <!-- <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class"> -->
