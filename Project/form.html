@@ -1,0 +1,29 @@
+<form class="form-horizontal" role="form" action="upload.php" method="post" enctype="multipart/form-data">
+
+  <div class='modal-body' style='margin:auto;'>
+
+
+
+    <label class='file'>
+
+      <input type='hidden' name="ProblemName" id="ProblemName1">
+
+      <input type='hidden' name="SectionValue" id="SectionValue1">
+
+      <input type='file' name="fileToUpload" id="fileToUpload" accept=".c,.cpp" required>
+
+      <span class='file-custom'></span>
+
+    </label>
+
+    <!-- <input class="form-control" type='text' name="Main_file" id="Main_file" placeholder="File name of main class"> -->
+
+  </div>
+
+  <div class='modal-footer'>
+
+    <button type='submit' class='btn btn-secondary' name="submit" value="Upload File">Upload</button>
+
+  </div>
+
+</form>
