@@ -131,7 +131,7 @@ data += "--" + boundary + "\r\n";
   });
 });
 </script>
-<form class="form-horizontal" role="form" action="upload.php" method="post" enctype="multipart/form-data">
+<form>
 
   <div class='modal-body' style='margin:auto;'>
 
@@ -155,7 +155,7 @@ data += "--" + boundary + "\r\n";
 
   <div class='modal-footer'>
 
-    <button type='submit' class='btn btn-secondary' name="submit" value="Upload File">Upload</button>
+    <button onclick = "sendData();">Upload</button>
 
   </div>
 
