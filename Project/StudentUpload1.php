@@ -637,7 +637,7 @@
                     <h4 class='modal-title' id='modalValue1'></h4>
                     <button type='button' class='close' data-dismiss='modal'>&times;</button>
                   </div>
-                  <form class="form-horizontal" role="form" action="Core.php" method="get" enctype="multipart/form-data">
+                  <form class="form-horizontal" role="form" action="Core.php" method="post">
                     <div class='modal-body' style='margin:auto;'>
 
                       <label class='file'>
