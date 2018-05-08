@@ -9,7 +9,7 @@ if(isset($_POST["submit"])) {
     echo "upload ok";
 }
 	echo "<script> alert('Success'); </script>";
-/*
+
 session_start();
 	echo "<script> alert('AfterSession'); </script>";
 
@@ -146,5 +146,5 @@ if($conn != FALSE)
 		echo "window.location = 'STUDENT_WEB_GRADER_STATUS3.html';";
 	}
 	echo "</script>";
-}*/
+}
 ?>
